@@ -212,14 +212,9 @@ const featuredGrid = featuredOffers.slice(0, 4);
             <div class="hidden sm:flex items-stretch">
 
               <!-- Left: % OFF panel -->
-              <div class="flex-shrink-0 w-32 bg-gradient-to-br from-slate-50 to-white border-r border-slate-100 flex flex-col items-center justify-center p-4 relative">
-                {i === 0 && (
-                  <span class="absolute top-2.5 inset-x-0 flex justify-center">
-                    <span class="bg-gradient-to-r from-orange-500 to-amber-400 text-white text-[9px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded-full leading-tight shadow-sm">Best Deal</span>
-                  </span>
-                )}
-                <div class="mt-3 w-full rounded-2xl border-2 border-teal-200 bg-teal-50 flex flex-col items-center justify-center py-3 px-2">
-                  <span class="text-3xl font-black text-teal-600 leading-none">{percent}%</span>
+              <div class="flex-shrink-0 w-28 bg-gradient-to-br from-slate-50 to-white border-r border-slate-100 flex flex-col items-center justify-center p-3">
+                <div class="w-full rounded-2xl border-2 border-teal-200 bg-teal-50 flex flex-col items-center justify-center py-3 px-1">
+                  <span class="text-2xl font-black text-teal-600 leading-none">{percent}%</span>
                   <span class="text-[9px] font-bold uppercase tracking-widest text-teal-400 mt-0.5">OFF</span>
                 </div>
               </div>
@@ -286,26 +281,21 @@ const featuredGrid = featuredOffers.slice(0, 4);
 
             {/* ── MOBILE layout (below sm) ── */}
             <div class="sm:hidden p-4">
-              <!-- Top row: badge + firm name -->
+              <!-- Top row: discount + firm name -->
               <div class="flex items-center gap-3 mb-3">
                 <div class="flex-shrink-0 rounded-xl border-2 border-teal-200 bg-teal-50 flex flex-col items-center justify-center w-16 h-16">
                   <span class="text-xl font-black text-teal-600 leading-none">{percent}%</span>
                   <span class="text-[7px] font-bold uppercase tracking-widest text-teal-400 mt-0.5">OFF</span>
                 </div>
                 <div class="min-w-0 flex-1">
-                  <div class="flex items-center gap-2">
-                    {i === 0 && (
-                      <span class="bg-gradient-to-r from-orange-500 to-amber-400 text-white text-[8px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full leading-tight">Best Deal</span>
-                    )}
-                  </div>
-                  <div class="flex items-center gap-2 mt-0.5">
-                    <FirmAvatar name={firm.name} logoUrl={firm.media?.logo ? `${base}${firm.media.logo}` : undefined} size="sm" />
+                  <div class="flex items-center gap-2.5">
+                    <FirmAvatar name={firm.name} logoUrl={firm.media?.logo ? `${base}${firm.media.logo}` : undefined} />
                     <div class="min-w-0">
-                      <p class="font-extrabold text-slate-900 text-base leading-tight truncate">{firm.name}</p>
+                      <p class="font-extrabold text-slate-900 text-lg leading-tight truncate">{firm.name}</p>
                       {firm.trust.trustpilotRating && (
-                        <div class="flex items-center gap-1">
-                          <span class="text-amber-400 text-[10px]">{'★'.repeat(Math.round(firm.trust.trustpilotRating))}</span>
-                          <span class="text-[10px] text-slate-400">{firm.trust.trustpilotRating}</span>
+                        <div class="flex items-center gap-1 mt-0.5">
+                          <span class="text-amber-400 text-xs">{'★'.repeat(Math.round(firm.trust.trustpilotRating))}</span>
+                          <span class="text-[11px] text-slate-400">{firm.trust.trustpilotRating}</span>
                         </div>
                       )}
                     </div>
