@@ -6,7 +6,7 @@
   "foundedYear": 2023,
   "hqCountry": "CY",
   "evaluation": {
-    "types": ["1-step"],
+    "types": ["1-step", "other"],
     "profitTargets": { "phase1": 6, "phase2": 0 },
     "dailyDrawdown": 3,
     "maxDrawdown": 5,

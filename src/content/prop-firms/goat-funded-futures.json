@@ -6,7 +6,7 @@
   "foundedYear": 2023,
   "hqCountry": "AE",
   "evaluation": {
-    "types": ["other"],
+    "types": ["1-step"],
     "profitTargets": { "phase1": 9 },
     "dailyDrawdown": 3,
     "maxDrawdown": 5,

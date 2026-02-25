@@ -6,7 +6,7 @@
   "foundedYear": 2022,
   "hqCountry": "US",
   "evaluation": {
-    "types": ["other"],
+    "types": ["1-step"],
     "profitTargets": { "phase1": 6 },
     "dailyDrawdown": 2.4,
     "maxDrawdown": 5,

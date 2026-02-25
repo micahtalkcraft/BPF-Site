@@ -62,7 +62,12 @@ interface RankedRow {
   hasReview: boolean;
   verified: boolean;
   flagged: boolean;
+  isAwardWinner: boolean;
+  isBrokerBacked: boolean;
 }
+
+const awardWinnerSlugs = new Set(["dna-funded", "blueberry-funded", "fundednext", "brightfunded", "fxify"]);
+const brokerBackedSlugs = new Set(["dna-funded", "blueberry-funded", "fundednext", "ic-funded", "fxify-futures", "fxify", "oanda", "fundednext-futures", "hantec-trader"]);
 
 const rows: RankedRow[] = sorted.map(({ firm, review }, i) => {
   const rank = i + 1;
@@ -100,6 +105,8 @@ const rows: RankedRow[] = sorted.map(({ firm, review }, i) => {
     hasReview: review !== undefined,
     verified: review?.verified !== false,
     flagged: review?.flagged === true,
+    isAwardWinner: awardWinnerSlugs.has(firm.slug),
+    isBrokerBacked: brokerBackedSlugs.has(firm.slug),
   };
 });
 
@@ -169,6 +176,9 @@ const uniqueEvalTypes = [...new Set(rows.flatMap((r) => r.evalTypes))].filter(
             {typeLabelMap[type]}
           </button>
         ))}
+        <button data-filter="broker-backed" class="filter-chip rounded-full border px-3 py-1 text-xs font-semibold transition-colors bg-white text-slate-600 border-slate-200 hover:border-teal-300 hover:text-teal-600">
+          Broker Backed
+        </button>
       </div>
       <p id="results-count" class="text-xs text-slate-400 whitespace-nowrap sm:ml-auto"></p>
     </div>
@@ -183,6 +193,7 @@ const uniqueEvalTypes = [...new Set(rows.flatMap((r) => r.evalTypes))].filter(
           data-firm-card
           data-name={row.name.toLowerCase()}
           data-types={row.evalTypes.join(" ")}
+          data-broker-backed={row.isBrokerBacked ? "true" : ""}
         >
           <div class="flex flex-col lg:flex-row">
 
@@ -221,8 +232,9 @@ const uniqueEvalTypes = [...new Set(rows.flatMap((r) => r.evalTypes))].filter(
                             <svg class="h-[18px] w-[18px] text-[#1d9bf0]" viewBox="0 0 22 22" fill="currentColor" aria-label="Verified">
                               <path d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.855-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.69-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.607-.274 1.264-.144 1.897.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681.132-.637.075-1.299-.165-1.903.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"/>
                             </svg>
-                            <span class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-gray-900 px-2 py-1 text-[11px] font-semibold text-white opacity-0 group-hover/verified:opacity-100 transition-opacity duration-150 shadow-lg z-10">
+                            <span class="pointer-events-none absolute top-7 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-gray-900 px-2 py-1 text-[11px] font-semibold text-white opacity-0 group-hover/verified:opacity-100 transition-opacity duration-150 shadow-lg z-10">
                               Verified
+                              <span class="absolute -top-1 left-1/2 -translate-x-1/2 h-2 w-2 rotate-45 bg-gray-900"></span>
                             </span>
                           </span>
                         )}
@@ -233,6 +245,19 @@ const uniqueEvalTypes = [...new Set(rows.flatMap((r) => r.evalTypes))].filter(
                             </svg>
                             <span class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-gray-900 px-2 py-1 text-[11px] font-semibold text-white opacity-0 group-hover/unverified:opacity-100 transition-opacity duration-150 shadow-lg z-10">
                               Unverified
+                            </span>
+                          </span>
+                        )}
+                        {row.isAwardWinner && (
+                          <span class="relative group/award flex-shrink-0">
+                            <span class="inline-flex items-center justify-center h-[18px] w-[18px] rounded-full bg-gradient-to-br from-amber-400 via-yellow-300 to-amber-500 shadow-sm shadow-amber-400/40">
+                              <svg class="h-2.5 w-2.5 text-amber-900" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/>
+                              </svg>
+                            </span>
+                            <span class="pointer-events-none absolute top-7 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md bg-gradient-to-r from-amber-500 to-amber-600 px-2.5 py-1 text-[10px] font-bold text-white opacity-0 group-hover/award:opacity-100 transition-opacity duration-150 shadow-lg z-10">
+                              2026 Award Winner
+                              <span class="absolute -top-1 left-1/2 -translate-x-1/2 h-2 w-2 rotate-45 bg-amber-500"></span>
                             </span>
                           </span>
                         )}
@@ -441,36 +466,95 @@ const uniqueEvalTypes = [...new Set(rows.flatMap((r) => r.evalTypes))].filter(
         </article>
       ))}
     </div>
+
+    <!-- Pagination -->
+    <nav id="pagination" class="flex items-center justify-center gap-1.5 mt-8" aria-label="Pagination"></nav>
   </section>
 
   <script>
+    const ITEMS_PER_PAGE = 10;
     const searchInput = document.getElementById("firm-search") as HTMLInputElement | null;
     const filterBtns = document.querySelectorAll<HTMLButtonElement>(".filter-chip");
-    const cards = document.querySelectorAll<HTMLElement>("[data-firm-card]");
+    const cards = Array.from(document.querySelectorAll<HTMLElement>("[data-firm-card]"));
     const countEl = document.getElementById("results-count");
+    const paginationEl = document.getElementById("pagination");
 
     let activeFilters = new Set<string>();
     let searchQuery = "";
+    let currentPage = 1;
 
-    function applyFilters() {
-      let visible = 0;
-      cards.forEach((card) => {
+    function getMatchingCards(): HTMLElement[] {
+      return cards.filter((card) => {
         const name = card.dataset.name ?? "";
         const types = (card.dataset.types ?? "").split(" ").filter(Boolean);
         const matchesSearch = name.includes(searchQuery);
+        const isBrokerBacked = card.dataset.brokerBacked === "true";
+        const hasBrokerFilter = activeFilters.has("broker-backed");
+        const typeFilters = [...activeFilters].filter((f) => f !== "broker-backed");
         const matchesFilter =
           activeFilters.size === 0 ||
-          [...activeFilters].some((f) => types.includes(f));
-        const show = matchesSearch && matchesFilter;
-        card.style.display = show ? "" : "none";
-        if (show) visible++;
+          ((typeFilters.length === 0 || typeFilters.some((f) => types.includes(f))) &&
+           (!hasBrokerFilter || isBrokerBacked));
+        return matchesSearch && matchesFilter;
       });
+    }
+
+    function applyFilters() {
+      const matching = getMatchingCards();
+      const totalPages = Math.max(1, Math.ceil(matching.length / ITEMS_PER_PAGE));
+      if (currentPage > totalPages) currentPage = totalPages;
+
+      const start = (currentPage - 1) * ITEMS_PER_PAGE;
+      const end = start + ITEMS_PER_PAGE;
+      const matchingSet = new Set(matching);
+
+      cards.forEach((card) => {
+        if (!matchingSet.has(card)) {
+          card.style.display = "none";
+        } else {
+          const idx = matching.indexOf(card);
+          card.style.display = idx >= start && idx < end ? "" : "none";
+        }
+      });
+
       if (countEl) {
-        countEl.textContent =
-          visible === cards.length
-            ? `${cards.length} firms`
-            : `${visible} of ${cards.length} firms`;
+        if (matching.length === 0) {
+          countEl.textContent = "0 firms";
+        } else {
+          countEl.textContent = `${start + 1}–${Math.min(end, matching.length)} of ${matching.length} firms`;
+        }
       }
+
+      renderPagination(totalPages);
+    }
+
+    function renderPagination(totalPages: number) {
+      if (!paginationEl) return;
+      if (totalPages <= 1) { paginationEl.innerHTML = ""; return; }
+
+      let html = "";
+      // Prev arrow
+      html += `<button data-page="${currentPage - 1}" ${currentPage <= 1 ? "disabled" : ""} class="inline-flex items-center justify-center w-9 h-9 rounded-lg border border-slate-200 bg-white text-slate-500 hover:border-teal-300 hover:text-teal-600 transition-colors disabled:opacity-30 disabled:pointer-events-none" aria-label="Previous page"><svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg></button>`;
+      // Page numbers
+      for (let p = 1; p <= totalPages; p++) {
+        const active = p === currentPage;
+        html += `<button data-page="${p}" class="inline-flex items-center justify-center w-9 h-9 rounded-lg text-sm font-semibold border transition-colors ${active ? "bg-teal-500 border-teal-500 text-white shadow-sm" : "bg-white border-slate-200 text-slate-600 hover:border-teal-300 hover:text-teal-600"}">${p}</button>`;
+      }
+      // Next arrow
+      html += `<button data-page="${currentPage + 1}" ${currentPage >= totalPages ? "disabled" : ""} class="inline-flex items-center justify-center w-9 h-9 rounded-lg border border-slate-200 bg-white text-slate-500 hover:border-teal-300 hover:text-teal-600 transition-colors disabled:opacity-30 disabled:pointer-events-none" aria-label="Next page"><svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></button>`;
+
+      paginationEl.innerHTML = html;
+
+      paginationEl.querySelectorAll<HTMLButtonElement>("button[data-page]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const p = parseInt(btn.dataset.page ?? "1", 10);
+          if (p >= 1 && p <= totalPages) {
+            currentPage = p;
+            applyFilters();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }
+        });
+      });
     }
 
     function updateChipStyles() {
@@ -489,6 +573,7 @@ const uniqueEvalTypes = [...new Set(rows.flatMap((r) => r.evalTypes))].filter(
 
     searchInput?.addEventListener("input", () => {
       searchQuery = (searchInput.value ?? "").trim().toLowerCase();
+      currentPage = 1;
       applyFilters();
     });
 
@@ -504,6 +589,7 @@ const uniqueEvalTypes = [...new Set(rows.flatMap((r) => r.evalTypes))].filter(
             activeFilters.add(f);
           }
         }
+        currentPage = 1;
         updateChipStyles();
         applyFilters();
       });

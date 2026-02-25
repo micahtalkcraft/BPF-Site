@@ -6,7 +6,7 @@
   "foundedYear": 2023,
   "hqCountry": "GB",
   "evaluation": {
-    "types": ["1-step", "2-step", "instant"],
+    "types": ["1-step", "2-step", "instant", "other"],
     "profitTargets": { "phase1": 10, "phase2": 5 },
     "dailyDrawdown": 5,
     "maxDrawdown": 10,

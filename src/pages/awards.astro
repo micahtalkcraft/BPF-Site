@@ -1,0 +1,872 @@
+---
+import Base from "../layouts/Base.astro";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+// Award winners data
+const awards = [
+  {
+    category: "Smoothest Onboarding & Account Access",
+    winner: "DNA Funded",
+    slug: "dna-funded",
+    logo: "/images/logos/dna-funded-logo.png",
+    observation: "Single-flow setup; trade immediately after signup",
+    methodology: "At DNA Funded, challenge purchase, credential delivery, and platform access all occurred in a single uninterrupted flow, allowing us to place trades immediately after signup. There were no additional verification steps once access was granted, and the transition from purchase to first trade happened within the same session.",
+    tradeoff: "The trade-off observed was a narrower choice of trading platforms compared to firms offering multiple environments.",
+    icon: "rocket",
+  },
+  {
+    category: "Most Stable Trading Platform Performance",
+    winner: "Blueberry Funded",
+    slug: "blueberry-funded",
+    logo: "/images/logos/blueberry_funded_logo_dark.jpg",
+    observation: "No observable lag during tested sessions; real-time metric updates",
+    methodology: "At Blueberry Funded, trading and dashboard systems remained responsive during live trading sessions, with orders placed and managed without platform lag and account metrics updating in real time. Across repeated sessions, platform behaviour stayed consistent and predictable under normal trading conditions.",
+    tradeoff: "Platform availability was still subject to scheduled maintenance windows, which temporarily restricted access outside active trading hours.",
+    icon: "chart",
+  },
+  {
+    category: "Most Consistent Rule Enforcement",
+    winner: "FundedNext",
+    slug: "fundednext",
+    logo: "/images/logos/funded_next_dark.svg",
+    observation: "Threshold-based enforcement; predictable progression",
+    methodology: "At FundedNext, rule enforcement during testing was triggered automatically when predefined limits were approached or crossed, rather than through discretionary review. Phase progression and restriction logic followed the same pattern each time, making enforcement behaviour predictable during active trading.",
+    tradeoff: "Some performance metrics required checking both the trading platform and the dashboard to view the full account picture.",
+    icon: "shield",
+  },
+  {
+    category: "Funded Account Scaling & Rewards",
+    winner: "BrightFunded",
+    slug: "brightfunded",
+    logo: "/images/logos/brightfunded_dark.png",
+    observation: "Scaling and account benefits unlocked through continued trading and completed payouts",
+    methodology: "At BrightFunded, funded accounts were not treated as a static end state. After completing the evaluation, we verified that core risk limits, drawdown parameters, and position sizing rules carried over directly into the funded account without requiring strategy changes. Through the scaling plan and Trade2Earn rewards system, continued trading and completed payouts resulted in incremental account size increases.",
+    tradeoff: "Account expansion and benefit access followed predefined milestones, so flexibility increased progressively rather than being available immediately at the funded stage.",
+    icon: "trending",
+  },
+  {
+    category: "Most Reliable Payout Behaviour",
+    winner: "FundedNext",
+    slug: "fundednext",
+    logo: "/images/logos/funded_next_dark.svg",
+    observation: "Automated status updates; no manual follow-up needed",
+    methodology: "At FundedNext, when we submitted payout requests during testing, the process progressed through clearly defined stages without the need for manual follow-up. Status updates were reflected directly in the dashboard as each step completed, and access to subsequent account stages followed automatically once conditions were met. FundedNext also guarantees 24 hour payout processing.",
+    tradeoff: null,
+    icon: "payout",
+  },
+];
+
+// Key findings
+const keyFindings = [
+  {
+    area: "Reliability & Payouts",
+    winners: "FundedNext and Blueberry Funded",
+    detail: "Demonstrated the highest consistency in payout speeds and automated rule enforcement.",
+  },
+  {
+    area: "Funded Account Progression",
+    winners: "FundedNext and BrightFunded",
+    detail: "Showed the strongest stability in funded account stage rule continuity and scaling access.",
+  },
+  {
+    area: "Financial Market Access",
+    winners: "FXIFY",
+    detail: "Performed most consistently across futures execution and structured evaluation formats.",
+  },
+];
+
+// Core performance table
+const corePerformance = [
+  { category: "Smoothest Onboarding and Account Access", winner: "DNA Funded", observation: "Single-flow setup; trade immediately after signup" },
+  { category: "Most Stable Trading Platform Performance", winner: "Blueberry Funded", observation: "No observable lag during tested sessions; real-time metric updates" },
+  { category: "Most Consistent Rule Enforcement Observed", winner: "FundedNext", observation: "Threshold-based enforcement; predictable progression" },
+  { category: "Funded Account Scaling and Rewards", winner: "FundedNext & BrightFunded", observation: "Scaling and account benefits unlocked through continued trading and completed payouts" },
+  { category: "Most Reliable Payout Behaviour", winner: "FundedNext", observation: "Automated status updates; no manual follow-up needed" },
+];
+
+// 2. Challenge Structure Outcomes
+const challengeStructure = [
+  { category: "Instant Funding Outcomes", winner: "Blueberry Funded", slug: "blueberry-funded", logo: "/images/logos/blueberry_funded_logo_dark.jpg", observation: "Immediate trading access; no evaluation phase required" },
+  { category: "One Step Challenge Outcomes", winner: "FXIFY", slug: "fxify", logo: "/images/logos/fxify_logo_dark.jpeg", observation: "Straightforward single-phase path; easy-to-track progress" },
+  { category: "Two Step Challenge Outcomes", winner: "BrightFunded", slug: "brightfunded", logo: "/images/logos/brightfunded_dark.png", observation: "Clear progression between phases; dashboard reflects status" },
+  { category: "Three Step Challenge Outcomes", winner: "FXIFY", slug: "fxify", logo: "/images/logos/fxify_logo_dark.jpeg", observation: "Staged requirements clearly tracked via phase markers" },
+];
+
+// 3. Market Access Outcomes
+const marketAccess = [
+  { category: "Futures Market Access", winner: "FXIFY Futures", slug: "fxify-futures", logo: "/images/logos/fxify-futures.png", observation: "Dedicated futures setup; session-based trading availability" },
+  { category: "Crypto Market Access", winner: "BrightFunded", slug: "brightfunded", logo: "/images/logos/brightfunded_dark.png", observation: "Crypto available alongside traditional markets; managed in one account" },
+  { category: "Forex Market Access", winner: "FundedNext", slug: "fundednext", logo: "/images/logos/funded_next_dark.svg", observation: "Consistent order handling; stable pricing during overlap" },
+];
+
+// 4. Trading Feature Outcomes
+const tradingFeatures = [
+  { category: "News Trading Compatibility", winner: "FundedNext", slug: "fundednext", logo: "/images/logos/funded_next_dark.svg", observation: "No discretionary breaches triggered by news volatility" },
+  { category: "EA (Automated Trading) Compatibility", winner: "Blueberry Funded", slug: "blueberry-funded", logo: "/images/logos/blueberry_funded_logo_dark.jpg", observation: "EAs ran without interference; repeated entries handled correctly" },
+  { category: "Support and Issue Resolution", winner: "Blueberry Funded", slug: "blueberry-funded", logo: "/images/logos/blueberry_funded_logo_dark.jpg", observation: "Replies aligned with dashboard status; resolved access issues fast" },
+];
+
+// 5. Operational Friction & Failure Analysis
+const failureAnalysis = [
+  { category: "Manual Rule Enforcement", impact: "High risk. Breaches relied on human review rather than code, leading to disputed failure notifications 24+ hours after the trade", frequency: "Medium" },
+  { category: "Structural Instability", impact: "Execution risk. Material changes to rules or payout policies occurred retroactively after traders were funded", frequency: "Low" },
+  { category: "Friction-Heavy Payouts", impact: "Cash flow delay. \u201CCompliance checks\u201D delayed payouts by 5\u20137 days beyond the advertised timeframe", frequency: "High" },
+  { category: "Hidden Consistency Rules", impact: "Payout denial. \u201CSoft\u201D rules around lot size consistency were applied to deny payouts despite a profit", frequency: "Medium" },
+];
+
+// Failure deep-dives
+const failureDeepDives = [
+  {
+    title: "Impact of Manual Rule Enforcement",
+    icon: "shield",
+    issue: "At prop trading firms like Apex Trader Funding and Elite Trader Funding, we observed that daily drawdown limits were often calculated at End of Day (EOD) or via periodic server checks rather than tick-by-tick.",
+    consequence: "This creates a \u201CSilent Breach\u201D risk. A trader can unknowingly violate a drawdown limit mid-session, continue trading for hours, and only receive a failure notification the next day, wasting time and effort on a dead account.",
+  },
+  {
+    title: "Payout Friction & Delays",
+    icon: "clock",
+    issue: "During testing on Blue Guardian and The Funded Trader, we recorded payout delays attributed to manual \u201Ccompliance reviews.\u201D While eventually paid, the funds arrived 5\u20137 days later than the policy stated.",
+    consequence: "For experienced traders relying on cash flow, these unpredictable delays make it impossible to treat prop trading as a reliable income stream compared to automated firms like FundedNext.",
+  },
+  {
+    title: "Hidden Trading Rules Trap",
+    icon: "eye",
+    issue: "In tests of Alpha Capital and Goat Funded Trader, we noted complex \u201CConsistency Rules\u201D that were not enforced by the platform code.",
+    consequence: "Traders often pass the profit target but fail the manual review phase because one trade size deviated slightly from their average. Unlike our winners (which hard-code these limits), these manual firms often flag this only after the challenge is complete, leading to denied funding.",
+  },
+];
+---
+
+<Base
+  title="Prop Firm Awards 2026 — Testing Results | BestPropFirms.com"
+  description="2026 Prop Firm Testing Results: operational performance awards based on live challenge purchases and first-hand testing of 39 proprietary trading firms."
+>
+
+  <!-- ══════════════════════════════════════════════════════════════════════════
+       HERO — Prestigious gold design
+       ══════════════════════════════════════════════════════════════════════════ -->
+  <section class="relative overflow-hidden bg-[#0a0a0a]">
+    <!-- Gold radial glow -->
+    <div class="pointer-events-none absolute inset-0">
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/4 h-[600px] w-[800px] rounded-full bg-[radial-gradient(ellipse,rgba(212,175,55,0.15),transparent_70%)]"></div>
+      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 h-[400px] w-[600px] rounded-full bg-[radial-gradient(ellipse,rgba(212,175,55,0.08),transparent_70%)]"></div>
+    </div>
+    <!-- Subtle grid pattern -->
+    <div class="pointer-events-none absolute inset-0 opacity-[0.04]" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h60v60H0z' fill='none' stroke='%23d4af37' stroke-width='0.5'/%3E%3C/svg%3E&quot;);"></div>
+
+    <div class="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center">
+      <!-- Trophy icon -->
+      <div class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-[#d4af37] via-[#f5d060] to-[#d4af37] shadow-lg shadow-[#d4af37]/20 animate-hero-bounce">
+        <svg class="h-11 w-11 text-[#0a0a0a]" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/>
+        </svg>
+      </div>
+
+      <!-- Badge -->
+      <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#d4af37]">
+        <span class="h-1.5 w-1.5 rounded-full bg-[#d4af37]"></span>
+        2026 Testing Cycle
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-4">
+        <span class="bg-gradient-to-r from-[#d4af37] via-[#f5d060] to-[#d4af37] bg-clip-text text-transparent">Prop Firm Testing Results</span>
+        <br />
+        <span class="text-white">2026</span>
+      </h1>
+
+      <p class="text-base sm:text-lg text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed">
+        This report documents the operational performance of <span class="font-bold text-white">39 proprietary trading firms</span> tested during the 2026 cycle.
+      </p>
+
+      <!-- Meta badges -->
+      <div class="flex flex-wrap items-center justify-center gap-3 text-xs">
+        <span class="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-slate-400">
+          <svg class="h-3 w-3 text-[#d4af37]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/></svg>
+          Updated: 15/01/2026
+        </span>
+        <span class="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-slate-400">
+          <svg class="h-3 w-3 text-[#d4af37]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          Fact Checked
+        </span>
+      </div>
+    </div>
+
+    <!-- Bottom gold divider -->
+    <div class="h-px bg-gradient-to-r from-transparent via-[#d4af37]/40 to-transparent"></div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════════════════
+       METHODOLOGY INTRO
+       ══════════════════════════════════════════════════════════════════════════ -->
+  <section class="bg-[#0d1117] py-12 px-4">
+    <div class="mx-auto max-w-3xl text-center" data-animate>
+      <p class="text-sm text-slate-400 leading-relaxed">
+        Unlike comparisons based on advertised features, the results are derived from <span class="font-semibold text-white">challenge account purchases and first-hand testing</span>. We evaluate prop firms using a standardized Retail Trader Path audit, including working through the evaluation process, funded account access, rule-boundary interaction, and withdrawal processing, to validate observed operational behaviour under real prop trading conditions.
+      </p>
+    </div>
+
+    <!-- Category tabs visual -->
+    <div class="mx-auto max-w-3xl mt-8 flex flex-wrap items-center justify-center gap-2">
+      {["Challenge Structures", "Market Access", "Trading Features", "Failure Analysis"].map((tab) => (
+        <span class="rounded-full border border-[#d4af37]/20 bg-[#d4af37]/5 px-4 py-1.5 text-xs font-semibold text-[#d4af37]">
+          {tab}
+        </span>
+      ))}
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════════════════
+       KEY FINDINGS SUMMARY
+       ══════════════════════════════════════════════════════════════════════════ -->
+  <section class="bg-[#0a0a0a] py-16 px-4">
+    <div class="mx-auto max-w-5xl" data-animate>
+      <div class="text-center mb-10">
+        <p class="text-xs font-bold uppercase tracking-widest text-[#d4af37] mb-2">Aggregated Results</p>
+        <h2 class="text-3xl font-black text-white">2026 Key Findings Summary</h2>
+        <p class="text-sm text-slate-500 mt-2">Aggregated performance results from our live testing database</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {keyFindings.map((finding) => (
+          <div class="relative overflow-hidden rounded-xl border border-[#d4af37]/20 bg-gradient-to-b from-[#d4af37]/5 to-transparent p-6">
+            <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/60 to-transparent"></div>
+            <p class="text-[10px] font-bold uppercase tracking-widest text-[#d4af37]/70 mb-2">{finding.area}</p>
+            <p class="text-lg font-black text-white mb-2">{finding.winners}</p>
+            <p class="text-xs text-slate-400 leading-relaxed">{finding.detail}</p>
+          </div>
+        ))}
+      </div>
+
+      <p class="text-xs text-slate-500 mt-6 text-center italic">
+        The outcomes below reflect repeatable operational behaviour recorded during live testing, rather than marketing claims.
+      </p>
+    </div>
+  </section>
+
+  <!-- Gold separator -->
+  <div class="h-px bg-gradient-to-r from-transparent via-[#d4af37]/30 to-transparent"></div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════════
+       CORE PERFORMANCE TABLE
+       ══════════════════════════════════════════════════════════════════════════ -->
+  <section class="bg-[#0d1117] py-16 px-4">
+    <div class="mx-auto max-w-5xl" data-animate>
+      <div class="text-center mb-10">
+        <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#d4af37]/10">
+          <svg class="h-6 w-6 text-[#d4af37]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <h2 class="text-2xl font-black text-white mb-1">1. Core Performance Outcomes</h2>
+        <p class="text-sm text-slate-500">Which prop firms demonstrated the most repeatable operational performance during live testing</p>
+      </div>
+
+      <!-- Table -->
+      <div class="overflow-x-auto rounded-xl border border-white/10">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-[#d4af37]/10 border-b border-[#d4af37]/20">
+              <th class="px-5 py-3 text-left text-[10px] font-bold uppercase tracking-widest text-[#d4af37]">Category</th>
+              <th class="px-5 py-3 text-left text-[10px] font-bold uppercase tracking-widest text-[#d4af37]">Winner (2026)</th>
+              <th class="px-5 py-3 text-left text-[10px] font-bold uppercase tracking-widest text-[#d4af37]">Key Observation</th>
+            </tr>
+          </thead>
+          <tbody>
+            {corePerformance.map((row, i) => (
+              <tr class={`border-b border-white/5 ${i % 2 === 0 ? 'bg-white/[0.02]' : ''}`}>
+                <td class="px-5 py-3.5 text-slate-300 font-medium">{row.category}</td>
+                <td class="px-5 py-3.5 text-white font-bold">{row.winner}</td>
+                <td class="px-5 py-3.5 text-slate-400">{row.observation}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gold separator -->
+  <div class="h-px bg-gradient-to-r from-transparent via-[#d4af37]/30 to-transparent"></div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════════
+       OVERALL WINNERS SHOWCASE (moved here — right after core performance)
+       ══════════════════════════════════════════════════════════════════════════ -->
+  <section class="relative bg-[#0a0a0a] py-20 px-4 overflow-hidden">
+    <!-- Background gold glows -->
+    <div class="pointer-events-none absolute inset-0">
+      <div class="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[400px] rounded-full bg-[radial-gradient(ellipse,rgba(212,175,55,0.06),transparent_70%)]"></div>
+      <div class="absolute top-1/2 right-1/4 translate-x-1/2 -translate-y-1/2 h-[400px] w-[400px] rounded-full bg-[radial-gradient(ellipse,rgba(212,175,55,0.06),transparent_70%)]"></div>
+    </div>
+
+    <div class="relative mx-auto max-w-5xl" data-animate>
+      <div class="text-center mb-14">
+        <!-- Trophy row -->
+        <div class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-[#d4af37] via-[#f5d060] to-[#b8960c] shadow-xl shadow-[#d4af37]/20">
+          <svg class="h-8 w-8 text-[#0a0a0a]" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/>
+          </svg>
+        </div>
+        <p class="text-xs font-bold uppercase tracking-[0.2em] text-[#d4af37] mb-3">Prop Firm Overall Winners</p>
+        <h2 class="text-3xl sm:text-4xl font-black text-white">Award Winners 2026</h2>
+      </div>
+
+      <!-- Award cards -->
+      <div class="space-y-8">
+        {awards.map((award, i) => (
+          <div class="group relative overflow-hidden rounded-2xl border border-[#d4af37]/20 bg-gradient-to-br from-[#141414] to-[#0d0d0d] hover:border-[#d4af37]/40 transition-all duration-300" data-animate style={`--delay: ${i * 0.1}s`}>
+            <!-- Top gold accent -->
+            <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#d4af37] to-transparent opacity-60 group-hover:opacity-100 transition-opacity"></div>
+
+            <div class="p-6 sm:p-8">
+              <!-- Award header -->
+              <div class="flex flex-col sm:flex-row items-start gap-5">
+                <!-- Logo + trophy badge -->
+                <div class="relative flex-shrink-0">
+                  <div class="h-20 w-20 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center overflow-hidden p-2">
+                    <img
+                      src={`${base}${award.logo}`}
+                      alt={award.winner}
+                      class="h-full w-full object-contain rounded-lg"
+                      loading="lazy"
+                    />
+                  </div>
+                  <!-- Trophy badge -->
+                  <div class="absolute -top-2 -right-2 flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-[#d4af37] via-[#f5d060] to-[#d4af37] shadow-lg shadow-[#d4af37]/30">
+                    <svg class="h-3.5 w-3.5 text-[#0a0a0a]" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/>
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- Text content -->
+                <div class="flex-1 min-w-0">
+                  <p class="text-[10px] font-bold uppercase tracking-[0.15em] text-[#d4af37] mb-1">{award.category}</p>
+                  <div class="flex items-center gap-3 flex-wrap mb-2">
+                    <h3 class="text-2xl font-black text-white">
+                      <a href={`${base}/reviews/${award.slug}`} class="hover:text-[#d4af37] transition-colors">
+                        {award.winner}
+                      </a>
+                    </h3>
+                    <span class="inline-flex items-center gap-1 rounded-full bg-[#d4af37]/10 border border-[#d4af37]/20 px-2.5 py-0.5 text-[10px] font-bold text-[#d4af37] uppercase tracking-wider">
+                      <svg class="h-3 w-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                      Winner
+                    </span>
+                  </div>
+                  <p class="text-sm text-slate-400 mb-4 leading-relaxed italic">"{award.observation}"</p>
+                </div>
+              </div>
+
+              <!-- Methodology detail -->
+              <div class="mt-4 rounded-xl bg-white/[0.03] border border-white/5 p-5">
+                <p class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2">Methodology</p>
+                <p class="text-sm text-slate-400 leading-relaxed">{award.methodology}</p>
+                {award.tradeoff && (
+                  <p class="text-sm text-slate-500 leading-relaxed mt-3 italic">{award.tradeoff}</p>
+                )}
+              </div>
+
+              <!-- CTA -->
+              <div class="mt-5 flex items-center gap-3">
+                <a
+                  href={`${base}/reviews/${award.slug}`}
+                  class="inline-flex items-center gap-1.5 rounded-lg bg-gradient-to-r from-[#d4af37] to-[#b8960c] px-4 py-2 text-sm font-bold text-[#0a0a0a] hover:from-[#f5d060] hover:to-[#d4af37] transition-all shadow-sm shadow-[#d4af37]/20"
+                >
+                  Read Full Review
+                  <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Gold separator -->
+  <div class="h-px bg-gradient-to-r from-transparent via-[#d4af37]/30 to-transparent"></div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════════
+       2. CHALLENGE STRUCTURE OUTCOMES
+       ══════════════════════════════════════════════════════════════════════════ -->
+  <section class="bg-[#0a0a0a] py-16 px-4">
+    <div class="mx-auto max-w-5xl" data-animate>
+      <div class="text-center mb-10">
+        <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#d4af37]/10">
+          <svg class="h-6 w-6 text-[#d4af37]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+          </svg>
+        </div>
+        <h2 class="text-2xl font-black text-white mb-1">2. Challenge Structure Outcomes</h2>
+        <p class="text-sm text-slate-500">Which evaluation paths behaved most consistently under live trading conditions</p>
+      </div>
+
+      <!-- Table -->
+      <div class="overflow-x-auto rounded-xl border border-white/10 mb-10">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-[#d4af37]/10 border-b border-[#d4af37]/20">
+              <th class="px-5 py-3 text-left text-[10px] font-bold uppercase tracking-widest text-[#d4af37]">Category</th>
+              <th class="px-5 py-3 text-left text-[10px] font-bold uppercase tracking-widest text-[#d4af37]">Winner (2026)</th>
+              <th class="px-5 py-3 text-left text-[10px] font-bold uppercase tracking-widest text-[#d4af37]">Key Observation</th>
+            </tr>
+          </thead>
+          <tbody>
+            {challengeStructure.map((row, i) => (
+              <tr class={`border-b border-white/5 ${i % 2 === 0 ? 'bg-white/[0.02]' : ''}`}>
+                <td class="px-5 py-3.5 text-slate-300 font-medium">{row.category}</td>
+                <td class="px-5 py-3.5 text-white font-bold">{row.winner}</td>
+                <td class="px-5 py-3.5 text-slate-400">{row.observation}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Winner tiles — 3 per row (4th wraps) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {challengeStructure.map((item) => (
+          <a href={`${base}/reviews/${item.slug}`} class="group relative overflow-hidden rounded-xl border border-white/10 bg-[#141414] hover:border-[#d4af37]/30 transition-all duration-200 p-5">
+            <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-4">
+              <div class="relative flex-shrink-0">
+                <div class="h-14 w-14 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center overflow-hidden p-1.5">
+                  <img src={`${base}${item.logo}`} alt={item.winner} class="h-full w-full object-contain rounded-md" loading="lazy" />
+                </div>
+                <div class="absolute -top-1.5 -right-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-gradient-to-br from-[#d4af37] via-[#f5d060] to-[#d4af37] shadow-sm">
+                  <svg class="h-2.5 w-2.5 text-[#0a0a0a]" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="min-w-0">
+                <p class="text-[9px] font-bold uppercase tracking-widest text-[#d4af37]/60 mb-0.5">{item.category}</p>
+                <p class="text-base font-black text-white group-hover:text-[#d4af37] transition-colors truncate">{item.winner}</p>
+                <p class="text-xs text-slate-500 mt-0.5 leading-snug">{item.observation}</p>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Gold separator -->
+  <div class="h-px bg-gradient-to-r from-transparent via-[#d4af37]/30 to-transparent"></div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════════
+       3. MARKET ACCESS OUTCOMES
+       ══════════════════════════════════════════════════════════════════════════ -->
+  <section class="bg-[#0d1117] py-16 px-4">
+    <div class="mx-auto max-w-5xl" data-animate>
+      <div class="text-center mb-10">
+        <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#d4af37]/10">
+          <svg class="h-6 w-6 text-[#d4af37]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <h2 class="text-2xl font-black text-white mb-1">3. Market Access Outcomes</h2>
+        <p class="text-sm text-slate-500">How reliably different prop firms provided access to key markets during testing</p>
+      </div>
+
+      <!-- Table -->
+      <div class="overflow-x-auto rounded-xl border border-white/10 mb-10">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-[#d4af37]/10 border-b border-[#d4af37]/20">
+              <th class="px-5 py-3 text-left text-[10px] font-bold uppercase tracking-widest text-[#d4af37]">Category</th>
+              <th class="px-5 py-3 text-left text-[10px] font-bold uppercase tracking-widest text-[#d4af37]">Winner (2026)</th>
+              <th class="px-5 py-3 text-left text-[10px] font-bold uppercase tracking-widest text-[#d4af37]">Key Observation</th>
+            </tr>
+          </thead>
+          <tbody>
+            {marketAccess.map((row, i) => (
+              <tr class={`border-b border-white/5 ${i % 2 === 0 ? 'bg-white/[0.02]' : ''}`}>
+                <td class="px-5 py-3.5 text-slate-300 font-medium">{row.category}</td>
+                <td class="px-5 py-3.5 text-white font-bold">{row.winner}</td>
+                <td class="px-5 py-3.5 text-slate-400">{row.observation}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Winner tiles — 3 per row -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {marketAccess.map((item) => (
+          <a href={`${base}/reviews/${item.slug}`} class="group relative overflow-hidden rounded-xl border border-white/10 bg-[#141414] hover:border-[#d4af37]/30 transition-all duration-200 p-5">
+            <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-4">
+              <div class="relative flex-shrink-0">
+                <div class="h-14 w-14 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center overflow-hidden p-1.5">
+                  <img src={`${base}${item.logo}`} alt={item.winner} class="h-full w-full object-contain rounded-md" loading="lazy" />
+                </div>
+                <div class="absolute -top-1.5 -right-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-gradient-to-br from-[#d4af37] via-[#f5d060] to-[#d4af37] shadow-sm">
+                  <svg class="h-2.5 w-2.5 text-[#0a0a0a]" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="min-w-0">
+                <p class="text-[9px] font-bold uppercase tracking-widest text-[#d4af37]/60 mb-0.5">{item.category}</p>
+                <p class="text-base font-black text-white group-hover:text-[#d4af37] transition-colors truncate">{item.winner}</p>
+                <p class="text-xs text-slate-500 mt-0.5 leading-snug">{item.observation}</p>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Gold separator -->
+  <div class="h-px bg-gradient-to-r from-transparent via-[#d4af37]/30 to-transparent"></div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════════
+       4. TRADING FEATURE OUTCOMES
+       ══════════════════════════════════════════════════════════════════════════ -->
+  <section class="bg-[#0a0a0a] py-16 px-4">
+    <div class="mx-auto max-w-5xl" data-animate>
+      <div class="text-center mb-10">
+        <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#d4af37]/10">
+          <svg class="h-6 w-6 text-[#d4af37]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </div>
+        <h2 class="text-2xl font-black text-white mb-1">4. Trading Feature Outcomes</h2>
+        <p class="text-sm text-slate-500">How trading features actually functioned during testing, independent of stated rules</p>
+      </div>
+
+      <!-- Table -->
+      <div class="overflow-x-auto rounded-xl border border-white/10 mb-10">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-[#d4af37]/10 border-b border-[#d4af37]/20">
+              <th class="px-5 py-3 text-left text-[10px] font-bold uppercase tracking-widest text-[#d4af37]">Category</th>
+              <th class="px-5 py-3 text-left text-[10px] font-bold uppercase tracking-widest text-[#d4af37]">Winner (2026)</th>
+              <th class="px-5 py-3 text-left text-[10px] font-bold uppercase tracking-widest text-[#d4af37]">Key Observation</th>
+            </tr>
+          </thead>
+          <tbody>
+            {tradingFeatures.map((row, i) => (
+              <tr class={`border-b border-white/5 ${i % 2 === 0 ? 'bg-white/[0.02]' : ''}`}>
+                <td class="px-5 py-3.5 text-slate-300 font-medium">{row.category}</td>
+                <td class="px-5 py-3.5 text-white font-bold">{row.winner}</td>
+                <td class="px-5 py-3.5 text-slate-400">{row.observation}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Winner tiles — 3 per row -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {tradingFeatures.map((item) => (
+          <a href={`${base}/reviews/${item.slug}`} class="group relative overflow-hidden rounded-xl border border-white/10 bg-[#141414] hover:border-[#d4af37]/30 transition-all duration-200 p-5">
+            <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-4">
+              <div class="relative flex-shrink-0">
+                <div class="h-14 w-14 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center overflow-hidden p-1.5">
+                  <img src={`${base}${item.logo}`} alt={item.winner} class="h-full w-full object-contain rounded-md" loading="lazy" />
+                </div>
+                <div class="absolute -top-1.5 -right-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-gradient-to-br from-[#d4af37] via-[#f5d060] to-[#d4af37] shadow-sm">
+                  <svg class="h-2.5 w-2.5 text-[#0a0a0a]" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="min-w-0">
+                <p class="text-[9px] font-bold uppercase tracking-widest text-[#d4af37]/60 mb-0.5">{item.category}</p>
+                <p class="text-base font-black text-white group-hover:text-[#d4af37] transition-colors truncate">{item.winner}</p>
+                <p class="text-xs text-slate-500 mt-0.5 leading-snug">{item.observation}</p>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Gold separator -->
+  <div class="h-px bg-gradient-to-r from-transparent via-[#d4af37]/30 to-transparent"></div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════════
+       5. OPERATIONAL FRICTION & FAILURE ANALYSIS
+       ══════════════════════════════════════════════════════════════════════════ -->
+  <section class="bg-[#0d1117] py-16 px-4">
+    <div class="mx-auto max-w-5xl" data-animate>
+      <div class="text-center mb-10">
+        <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-red-500/10">
+          <svg class="h-6 w-6 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+          </svg>
+        </div>
+        <h2 class="text-2xl font-black text-white mb-1">5. Operational Friction & Failure Analysis</h2>
+        <p class="text-sm text-slate-500">Recurring operational failure modes observed during testing that introduced risk, friction, or delayed outcomes for prop traders</p>
+      </div>
+
+      <!-- Failure table -->
+      <div class="overflow-x-auto rounded-xl border border-red-500/20 mb-10" data-animate>
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-red-500/10 border-b border-red-500/20">
+              <th class="px-5 py-3 text-left text-[10px] font-bold uppercase tracking-widest text-red-400">Failure Category</th>
+              <th class="px-5 py-3 text-left text-[10px] font-bold uppercase tracking-widest text-red-400">Observed Impact on Trader</th>
+              <th class="px-5 py-3 text-left text-[10px] font-bold uppercase tracking-widest text-red-400">Frequency</th>
+            </tr>
+          </thead>
+          <tbody>
+            {failureAnalysis.map((row, i) => (
+              <tr class={`border-b border-white/5 ${i % 2 === 0 ? 'bg-white/[0.02]' : ''}`}>
+                <td class="px-5 py-3.5 text-slate-300 font-medium">{row.category}</td>
+                <td class="px-5 py-3.5 text-slate-400">{row.impact}</td>
+                <td class="px-5 py-3.5">
+                  <span class={`inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide ${
+                    row.frequency === 'High' ? 'bg-red-500/20 text-red-400' :
+                    row.frequency === 'Medium' ? 'bg-amber-500/20 text-amber-400' :
+                    'bg-slate-500/20 text-slate-400'
+                  }`}>
+                    {row.frequency}
+                  </span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Deep-dive cards -->
+      <div class="space-y-6">
+        {failureDeepDives.map((item, i) => (
+          <div class="rounded-xl border border-white/10 bg-[#141414] overflow-hidden" data-animate style={`--delay: ${i * 0.1}s`}>
+            <div class="border-l-4 border-red-500/60 p-6">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-red-500/10">
+                  {item.icon === "shield" && (
+                    <svg class="h-4 w-4 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  )}
+                  {item.icon === "clock" && (
+                    <svg class="h-4 w-4 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  )}
+                  {item.icon === "eye" && (
+                    <svg class="h-4 w-4 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
+                    </svg>
+                  )}
+                </div>
+                <h3 class="text-lg font-black text-white">{item.title}</h3>
+              </div>
+              <div class="space-y-3">
+                <div>
+                  <p class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-1">Observed Issue</p>
+                  <p class="text-sm text-slate-400 leading-relaxed">{item.issue}</p>
+                </div>
+                <div>
+                  <p class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-1">Consequence</p>
+                  <p class="text-sm text-slate-400 leading-relaxed">{item.consequence}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Gold separator -->
+  <div class="h-px bg-gradient-to-r from-transparent via-[#d4af37]/30 to-transparent"></div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════════
+       2026 COMPARATIVE MONITORING LOGS
+       ══════════════════════════════════════════════════════════════════════════ -->
+  <section class="bg-[#0a0a0a] py-16 px-4">
+    <div class="mx-auto max-w-5xl" data-animate>
+      <div class="text-center mb-10">
+        <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#d4af37]/10">
+          <svg class="h-6 w-6 text-[#d4af37]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+        </div>
+        <h2 class="text-2xl font-black text-white mb-1">2026 Comparative Monitoring Logs</h2>
+        <p class="text-sm text-slate-500 max-w-2xl mx-auto">Raw operational data collected during live prop firm testing throughout the January 2026 cycle</p>
+      </div>
+
+      <!-- Intro text -->
+      <div class="rounded-xl border border-white/10 bg-[#141414] p-6 mb-8" data-animate>
+        <p class="text-sm text-slate-400 leading-relaxed mb-4">
+          Unlike feature comparisons or advertised claims, these logs are built entirely from firsthand account purchases and live trading activity. Each firm was tested using the same Retail Trader Path audit, covering onboarding, rule enforcement, platform performance, funded account behaviour, and payout processing.
+        </p>
+        <p class="text-sm text-slate-400 leading-relaxed">
+          The purpose of these logs is to provide direct, side-by-side benchmarks that show how prop firms behave under real trading conditions. Firms included here were observed repeatedly across multiple sessions, allowing us to distinguish consistent operational behaviour from one-off outcomes.
+        </p>
+      </div>
+
+      <!-- How to read -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div class="rounded-xl border border-[#d4af37]/20 bg-gradient-to-b from-[#d4af37]/5 to-transparent p-6" data-animate>
+          <div class="flex items-center gap-2 mb-3">
+            <svg class="h-5 w-5 text-[#d4af37]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <h3 class="text-base font-bold text-white">How to Read These Logs</h3>
+          </div>
+          <ul class="space-y-2 text-sm text-slate-400 leading-relaxed">
+            <li class="flex items-start gap-2">
+              <span class="text-[#d4af37] mt-1 flex-shrink-0">&#8226;</span>
+              <span><strong class="text-slate-300">Prop Firm:</strong> The prop firm tested during the 2026 cycle</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#d4af37] mt-1 flex-shrink-0">&#8226;</span>
+              <span><strong class="text-slate-300">Status / Score:</strong> A relative classification based on observed behaviour</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#d4af37] mt-1 flex-shrink-0">&#8226;</span>
+              <span><strong class="text-slate-300">Observed Behaviour:</strong> What occurred during live testing, not what was stated in policy</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#d4af37] mt-1 flex-shrink-0">&#8226;</span>
+              <span><strong class="text-slate-300">Data Note:</strong> A benchmark label used to compare firms under the same conditions</span>
+            </li>
+          </ul>
+          <p class="text-xs text-slate-500 mt-4 italic">No single log determines a firm's overall ranking. Instead, these logs work together to show where firms perform reliably, where friction appears, and where manual processes introduce risk.</p>
+        </div>
+
+        <div class="rounded-xl border border-red-500/20 bg-gradient-to-b from-red-500/5 to-transparent p-6" data-animate>
+          <div class="flex items-center gap-2 mb-3">
+            <svg class="h-5 w-5 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+            </svg>
+            <h3 class="text-base font-bold text-white">Why Some Firms Don't Appear as Winners</h3>
+          </div>
+          <p class="text-sm text-slate-400 leading-relaxed mb-3">
+            Firms that failed to meet benchmark thresholds in one or more logs were excluded from award categories, even if they advertised competitive features.
+          </p>
+          <p class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2">Common failure patterns:</p>
+          <ul class="space-y-1.5 text-sm text-slate-400">
+            <li class="flex items-center gap-2">
+              <svg class="h-3 w-3 text-red-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+              Delayed rule enforcement
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="h-3 w-3 text-red-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+              Profit payout friction
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="h-3 w-3 text-red-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+              Post-profit manual reviews
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Transparency note -->
+      <div class="text-center" data-animate>
+        <p class="text-xs text-slate-500 leading-relaxed italic max-w-2xl mx-auto">
+          By publishing these logs in full, we aim to give traders transparent access to the same operational data used to determine our 2026 results, so decisions can be made on behaviour rather than marketing.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════════════════
+       DISCLAIMER / METHODOLOGY NOTE (final section — no bar below)
+       ══════════════════════════════════════════════════════════════════════════ -->
+  <section class="bg-[#0d1117] border-t border-white/5 py-12 px-4">
+    <div class="mx-auto max-w-3xl text-center">
+      <p class="text-[10px] font-bold uppercase tracking-widest text-slate-600 mb-3">Testing Standards</p>
+      <p class="text-xs text-slate-500 leading-relaxed">
+        All results documented in this report are based on standardized live testing conducted during the 2026 cycle. Prop firms were evaluated through actual challenge account purchases, funded account progression, rule-boundary interaction, and withdrawal processing. Results reflect observed operational behaviour and may differ from advertised features. This report does not constitute financial advice.
+      </p>
+      <div class="mt-6">
+        <a
+          href={`${base}/methodology`}
+          class="inline-flex items-center gap-2 rounded-lg border border-[#d4af37]/20 px-5 py-2.5 text-sm font-semibold text-[#d4af37] hover:bg-[#d4af37]/10 transition-colors"
+        >
+          Read Our Full Methodology
+          <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════════════════
+       SCROLL ANIMATIONS
+       ══════════════════════════════════════════════════════════════════════════ -->
+  <style>
+    /* Hero trophy entrance */
+    @keyframes hero-bounce {
+      0% { opacity: 0; transform: scale(0.6) rotate(-10deg); }
+      50% { transform: scale(1.05) rotate(2deg); }
+      100% { opacity: 1; transform: scale(1) rotate(0deg); }
+    }
+    .animate-hero-bounce {
+      animation: hero-bounce 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    }
+
+    /* Fade-up for scroll-triggered elements */
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Stagger-in for child cards */
+    @keyframes stagger-in {
+      from { opacity: 0; transform: translateY(20px) scale(0.97); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* Gold shimmer for section headings */
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    /* Remove footer margin gap on awards page (dark bg all the way down) */
+    :global(footer) { margin-top: 0 !important; }
+
+    [data-animate] {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: none;
+    }
+    [data-animate].is-visible {
+      animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      animation-delay: var(--delay, 0s);
+    }
+
+    /* Shimmer effect on visible gold text */
+    .is-visible .shimmer-gold {
+      background: linear-gradient(90deg, #d4af37 0%, #f5d060 40%, #d4af37 60%, #f5d060 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 3s linear infinite;
+    }
+  </style>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+    );
+    document.querySelectorAll("[data-animate]").forEach((el) => observer.observe(el));
+  </script>
+
+</Base>

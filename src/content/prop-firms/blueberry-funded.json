@@ -6,7 +6,7 @@
   "foundedYear": 2023,
   "hqCountry": "AU",
   "evaluation": {
-    "types": ["instant", "1-step", "2-step", "rapid", "synthetic"],
+    "types": ["instant", "1-step", "2-step", "rapid", "synthetic", "other"],
     "profitTargets": { "phase1": 10, "phase2": 5 },
     "dailyDrawdown": 5,
     "maxDrawdown": 10,

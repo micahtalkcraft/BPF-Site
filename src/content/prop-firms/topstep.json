@@ -6,7 +6,7 @@
   "foundedYear": 2012,
   "hqCountry": "US",
   "evaluation": {
-    "types": ["2-step", "other"],
+    "types": ["2-step"],
     "profitTargets": { "phase1": 6 },
     "dailyDrawdown": 2,
     "maxDrawdown": 4,

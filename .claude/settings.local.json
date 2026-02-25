@@ -34,7 +34,14 @@
       "Bash(python:*)",
       "Bash(head:*)",
       "Bash(CI=true npm run build:*)",
-      "Bash(unset:*)"
+      "Bash(unset:*)",
+      "Bash(where:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(git push:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git pull:*)",
+      "Bash(git stash:*)"
     ]
   }
 }

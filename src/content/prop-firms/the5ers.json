@@ -6,7 +6,7 @@
   "foundedYear": 2016,
   "hqCountry": "IL",
   "evaluation": {
-    "types": ["1-step", "2-step", "other"],
+    "types": ["1-step", "2-step"],
     "profitTargets": { "phase1": 8, "phase2": 5 },
     "dailyDrawdown": 5,
     "maxDrawdown": 10,

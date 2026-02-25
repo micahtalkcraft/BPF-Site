@@ -45,6 +45,12 @@ const jsonLd = [
   },
 ];
 
+// Slugs of firms that won 2026 awards
+const awardWinnerSlugs = new Set(["dna-funded", "blueberry-funded", "fundednext", "brightfunded", "fxify"]);
+
+// Broker-backed firms
+const brokerBackedSlugs = new Set(["dna-funded", "blueberry-funded", "fundednext", "ic-funded", "fxify-futures", "fxify", "oanda", "fundednext-futures", "hantec-trader"]);
+
 const firmItems: FirmItem[] = sortedFirms.map((f, idx) => {
   const review = reviewMap[f.data.id];
   const fees = f.data.pricing.challengeFees;
@@ -70,6 +76,8 @@ const firmItems: FirmItem[] = sortedFirms.map((f, idx) => {
     website: f.data.links?.website,
     hasReview: !!review,
     flagged: review?.flagged === true,
+    isAwardWinner: awardWinnerSlugs.has(f.data.slug),
+    isBrokerBacked: brokerBackedSlugs.has(f.data.slug),
     foundedYear: f.data.foundedYear,
     hqCountry: f.data.hqCountry,
     flagDataUri: f.data.hqCountry

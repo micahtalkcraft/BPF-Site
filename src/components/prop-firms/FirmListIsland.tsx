@@ -24,6 +24,8 @@ export interface FirmItem {
   hqCountry?: string;
   flagDataUri?: string;
   flagged?: boolean;
+  isAwardWinner?: boolean;
+  isBrokerBacked?: boolean;
 }
 
 const SORT_OPTIONS = [
@@ -39,6 +41,7 @@ const EVAL_FILTERS = [
   { value: "2-step", label: "2-Step" },
   { value: "instant", label: "Instant" },
   { value: "other", label: "Futures" },
+  { value: "broker-backed", label: "Broker Backed" },
 ];
 
 function scoreColor(score: number): string {
@@ -99,8 +102,9 @@ function VerifiedBadge() {
       <svg className="h-[18px] w-[18px] text-[#1d9bf0]" viewBox="0 0 22 22" fill="currentColor" aria-label="Verified">
         <path d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.855-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.69-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.607-.274 1.264-.144 1.897.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681.132-.637.075-1.299-.165-1.903.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"/>
       </svg>
-      <span className="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-gray-900 px-2 py-1 text-[11px] font-semibold text-white opacity-0 group-hover/verified:opacity-100 transition-opacity duration-150 shadow-lg z-10">
+      <span className="pointer-events-none absolute top-7 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-gray-900 px-2 py-1 text-[11px] font-semibold text-white opacity-0 group-hover/verified:opacity-100 transition-opacity duration-150 shadow-lg z-10">
         Verified
+        <span className="absolute -top-1 left-1/2 -translate-x-1/2 h-2 w-2 rotate-45 bg-gray-900"></span>
       </span>
     </span>
   );
@@ -138,7 +142,7 @@ function MedalIcon() {
 function RankBadge({ rank }: { rank: number }) {
   if (rank === 1) {
     return (
-      <span className="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wide bg-amber-500 text-white px-2 py-0.5 rounded-full shadow-sm">
+      <span className="inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-wider bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-400 text-amber-900 px-2.5 py-0.5 rounded-md shadow-sm shadow-amber-400/30 border border-amber-400/40">
         <TrophyIcon />
         #1 Ranked
       </span>
@@ -146,7 +150,7 @@ function RankBadge({ rank }: { rank: number }) {
   }
   if (rank === 2) {
     return (
-      <span className="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wide bg-slate-400 text-white px-2 py-0.5 rounded-full shadow-sm">
+      <span className="inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-wider bg-gradient-to-r from-slate-300 via-slate-200 to-slate-300 text-slate-700 px-2.5 py-0.5 rounded-md shadow-sm shadow-slate-300/30 border border-slate-300/50">
         <MedalIcon />
         #2 Ranked
       </span>
@@ -154,13 +158,29 @@ function RankBadge({ rank }: { rank: number }) {
   }
   if (rank === 3) {
     return (
-      <span className="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wide bg-amber-700 text-white px-2 py-0.5 rounded-full shadow-sm">
+      <span className="inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-wider bg-gradient-to-r from-amber-700 via-amber-600 to-amber-700 text-amber-100 px-2.5 py-0.5 rounded-md shadow-sm shadow-amber-700/30 border border-amber-600/40">
         <MedalIcon />
         #3 Ranked
       </span>
     );
   }
   return null;
+}
+
+function AwardBadge() {
+  return (
+    <span className="relative group/award flex-shrink-0">
+      <span className="inline-flex items-center justify-center h-[18px] w-[18px] rounded-full bg-gradient-to-br from-amber-400 via-yellow-300 to-amber-500 shadow-sm shadow-amber-400/40">
+        <svg className="h-2.5 w-2.5 text-amber-900" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/>
+        </svg>
+      </span>
+      <span className="pointer-events-none absolute top-7 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md bg-gradient-to-r from-amber-500 to-amber-600 px-2.5 py-1 text-[10px] font-bold text-white opacity-0 group-hover/award:opacity-100 transition-opacity duration-150 shadow-lg z-10">
+        2026 Award Winner
+        <span className="absolute -top-1 left-1/2 -translate-x-1/2 h-2 w-2 rotate-45 bg-amber-500"></span>
+      </span>
+    </span>
+  );
 }
 
 function CountryFlag({ dataUri, code }: { dataUri: string; code: string }) {
@@ -202,10 +222,13 @@ function CouponBlock({ code, percent }: { code: string; percent?: number }) {
   );
 }
 
+const ITEMS_PER_PAGE = 10;
+
 export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmItem[]; basePath?: string }) {
   const [search, setSearch] = useState("");
   const [evalFilter, setEvalFilter] = useState("all");
   const [sort, setSort] = useState("score-desc");
+  const [page, setPage] = useState(1);
 
   const filtered = useMemo(() => {
     let list = [...firms];
@@ -215,7 +238,9 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
       list = list.filter((f) => f.name.toLowerCase().includes(q));
     }
 
-    if (evalFilter !== "all") {
+    if (evalFilter === "broker-backed") {
+      list = list.filter((f) => f.isBrokerBacked);
+    } else if (evalFilter !== "all") {
       list = list.filter((f) => f.evaluationTypes.includes(evalFilter));
     }
 
@@ -229,6 +254,15 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
 
     return list;
   }, [firms, search, evalFilter, sort]);
+
+  const totalPages = Math.max(1, Math.ceil(filtered.length / ITEMS_PER_PAGE));
+  const safePage = Math.min(page, totalPages);
+  const paginatedFirms = filtered.slice((safePage - 1) * ITEMS_PER_PAGE, safePage * ITEMS_PER_PAGE);
+
+  // Reset to page 1 when filters change
+  const handleFilterChange = (val: string) => { setEvalFilter(val); setPage(1); };
+  const handleSearch = (val: string) => { setSearch(val); setPage(1); };
+  const handleSort = (val: string) => { setSort(val); setPage(1); };
 
   return (
     <div>
@@ -246,7 +280,7 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
             <input
               type="text"
               value={search}
-              onChange={(e) => setSearch(e.target.value)}
+              onChange={(e) => handleSearch(e.target.value)}
               placeholder="Search prop firms..."
               className="w-full pl-10 pr-4 py-2.5 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
             />
@@ -254,7 +288,7 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
           <div className="relative">
             <select
               value={sort}
-              onChange={(e) => setSort(e.target.value)}
+              onChange={(e) => handleSort(e.target.value)}
               className="appearance-none pl-3 pr-8 py-2.5 text-sm border border-slate-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-teal-500 cursor-pointer font-medium text-slate-700"
             >
               {SORT_OPTIONS.map((o) => (
@@ -273,7 +307,7 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
           {EVAL_FILTERS.map((f) => (
             <button
               key={f.value}
-              onClick={() => setEvalFilter(f.value)}
+              onClick={() => handleFilterChange(f.value)}
               className={`px-3 py-1 rounded-full text-xs font-semibold border transition-all ${
                 evalFilter === f.value
                   ? "bg-teal-500 border-teal-500 text-white shadow-sm"
@@ -288,7 +322,7 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
 
       {/* Count */}
       <p className="text-sm text-slate-500 mb-4">
-        Showing <span className="font-semibold text-slate-800">{filtered.length}</span> prop firm{filtered.length !== 1 ? "s" : ""}
+        Showing <span className="font-semibold text-slate-800">{(safePage - 1) * ITEMS_PER_PAGE + 1}–{Math.min(safePage * ITEMS_PER_PAGE, filtered.length)}</span> of <span className="font-semibold text-slate-800">{filtered.length}</span> prop firm{filtered.length !== 1 ? "s" : ""}
       </p>
 
       {/* Firm list */}
@@ -302,7 +336,7 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
             <p className="font-medium">No firms match your filters</p>
           </div>
         ) : (
-          filtered.map((firm) => (
+          paginatedFirms.map((firm) => (
             <div
               key={firm.id}
               className="relative group bg-white border border-slate-200 rounded-xl px-6 py-5 shadow-sm hover:shadow-md hover:border-teal-200 transition-all duration-200 overflow-hidden"
@@ -329,6 +363,7 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
                       {firm.name}
                     </a>
                     {firm.flagged ? <CautionBadge /> : firm.hasReview && <VerifiedBadge />}
+                    {firm.isAwardWinner && <AwardBadge />}
                     <RankBadge rank={firm.rank} />
                     {firm.status !== "active" && (
                       <span className="text-[10px] font-bold uppercase tracking-wide bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded">
@@ -350,14 +385,14 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
                     </p>
                   )}
                   {/* Tags row */}
-                  <div className="flex flex-wrap items-center gap-1.5 mt-1.5">
+                  <div className="flex items-center gap-1.5 mt-1.5 overflow-hidden">
                     {firm.evaluationTypes.map((t) => (
-                      <span key={t} className="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-medium capitalize">
+                      <span key={t} className="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-medium capitalize whitespace-nowrap flex-shrink-0">
                         {t === "other" ? "Futures" : t}
                       </span>
                     ))}
                     {(firm.tags ?? []).slice(0, 3).map((tag) => (
-                      <span key={tag} className="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-medium">
+                      <span key={tag} className="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-medium whitespace-nowrap flex-shrink-0">
                         {tag}
                       </span>
                     ))}
@@ -437,6 +472,45 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
           ))
         )}
       </div>
+
+      {/* Pagination */}
+      {totalPages > 1 && (
+        <nav className="flex items-center justify-center gap-1.5 mt-8" aria-label="Pagination">
+          <button
+            onClick={() => { setPage(Math.max(1, safePage - 1)); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+            disabled={safePage <= 1}
+            className="inline-flex items-center justify-center w-9 h-9 rounded-lg border border-slate-200 bg-white text-slate-500 hover:border-teal-300 hover:text-teal-600 transition-colors disabled:opacity-30 disabled:pointer-events-none"
+            aria-label="Previous page"
+          >
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
+            <button
+              key={p}
+              onClick={() => { setPage(p); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+              className={`inline-flex items-center justify-center w-9 h-9 rounded-lg text-sm font-semibold border transition-colors ${
+                p === safePage
+                  ? "bg-teal-500 border-teal-500 text-white shadow-sm"
+                  : "bg-white border-slate-200 text-slate-600 hover:border-teal-300 hover:text-teal-600"
+              }`}
+            >
+              {p}
+            </button>
+          ))}
+          <button
+            onClick={() => { setPage(Math.min(totalPages, safePage + 1)); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+            disabled={safePage >= totalPages}
+            className="inline-flex items-center justify-center w-9 h-9 rounded-lg border border-slate-200 bg-white text-slate-500 hover:border-teal-300 hover:text-teal-600 transition-colors disabled:opacity-30 disabled:pointer-events-none"
+            aria-label="Next page"
+          >
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </nav>
+      )}
     </div>
   );
 }
