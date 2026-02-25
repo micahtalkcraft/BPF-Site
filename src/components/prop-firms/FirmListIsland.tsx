@@ -142,7 +142,7 @@ function MedalIcon() {
 function RankBadge({ rank }: { rank: number }) {
   if (rank === 1) {
     return (
-      <span className="inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-wider bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-400 text-amber-900 px-2.5 py-0.5 rounded-md shadow-sm shadow-amber-400/30 border border-amber-400/40">
+      <span className="hidden sm:inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-wider bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-400 text-amber-900 px-2.5 py-0.5 rounded-md shadow-sm shadow-amber-400/30 border border-amber-400/40">
         <TrophyIcon />
         #1 Ranked
       </span>
@@ -150,7 +150,7 @@ function RankBadge({ rank }: { rank: number }) {
   }
   if (rank === 2) {
     return (
-      <span className="inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-wider bg-gradient-to-r from-slate-300 via-slate-200 to-slate-300 text-slate-700 px-2.5 py-0.5 rounded-md shadow-sm shadow-slate-300/30 border border-slate-300/50">
+      <span className="hidden sm:inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-wider bg-gradient-to-r from-slate-300 via-slate-200 to-slate-300 text-slate-700 px-2.5 py-0.5 rounded-md shadow-sm shadow-slate-300/30 border border-slate-300/50">
         <MedalIcon />
         #2 Ranked
       </span>
@@ -158,7 +158,7 @@ function RankBadge({ rank }: { rank: number }) {
   }
   if (rank === 3) {
     return (
-      <span className="inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-wider bg-gradient-to-r from-amber-700 via-amber-600 to-amber-700 text-amber-100 px-2.5 py-0.5 rounded-md shadow-sm shadow-amber-700/30 border border-amber-600/40">
+      <span className="hidden sm:inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-wider bg-gradient-to-r from-amber-700 via-amber-600 to-amber-700 text-amber-100 px-2.5 py-0.5 rounded-md shadow-sm shadow-amber-700/30 border border-amber-600/40">
         <MedalIcon />
         #3 Ranked
       </span>
@@ -355,10 +355,10 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
 
                 {/* Name + subtitle + tags */}
                 <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 flex-wrap">
+                  <div className="flex items-center gap-2 flex-nowrap min-w-0">
                     <a
                       href={`${basePath}/reviews/${firm.slug}`}
-                      className="text-lg font-extrabold text-slate-900 hover:text-teal-600 transition-colors"
+                      className="text-lg font-extrabold text-slate-900 hover:text-teal-600 transition-colors truncate"
                     >
                       {firm.name}
                     </a>
