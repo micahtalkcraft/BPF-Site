@@ -202,83 +202,75 @@ const featuredGrid = featuredOffers.slice(0, 4);
         <p class="text-sm text-slate-500 mt-1">Click any code to copy it instantly</p>
       </div>
 
-      <div class="space-y-3">
+      <div class="space-y-4">
         {featuredOffers.map(({ firm, code, percent, desc }, i) => (
-          <div class="group bg-white border border-slate-200 rounded-2xl overflow-hidden hover:border-teal-200 hover:shadow-lg transition-all duration-200">
-            <div class="flex items-stretch">
+          <div class="group relative bg-white border border-slate-200 rounded-2xl overflow-hidden hover:border-teal-300 hover:shadow-lg hover:shadow-teal-500/10 transition-all duration-200">
+            <!-- Left accent bar -->
+            <span class="absolute left-0 top-6 bottom-6 w-1 rounded-r-full bg-gradient-to-b from-teal-400 to-teal-600 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+
+            {/* ── DESKTOP layout (sm+) ── */}
+            <div class="hidden sm:flex items-stretch">
 
               <!-- Left: % OFF panel -->
-              <div class="flex-shrink-0 w-24 sm:w-28 bg-white border-r border-slate-100 flex flex-col items-center justify-center p-3 relative">
+              <div class="flex-shrink-0 w-32 bg-gradient-to-br from-slate-50 to-white border-r border-slate-100 flex flex-col items-center justify-center p-4 relative">
                 {i === 0 && (
-                  <span class="absolute top-2 inset-x-0 flex justify-center">
-                    <span class="bg-orange-400 text-white text-[8px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full leading-tight">Top Deal</span>
+                  <span class="absolute top-2.5 inset-x-0 flex justify-center">
+                    <span class="bg-gradient-to-r from-orange-500 to-amber-400 text-white text-[9px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded-full leading-tight shadow-sm">Best Deal</span>
                   </span>
                 )}
-                <div class="mt-4 w-full rounded-2xl border-2 border-teal-200 bg-teal-50 flex flex-col items-center justify-center py-2.5 px-1">
-                  <span class="text-xl sm:text-2xl font-black text-teal-600 leading-none">{percent}%</span>
-                  <span class="text-[8px] font-bold uppercase tracking-widest text-teal-400 mt-0.5">OFF</span>
+                <div class="mt-3 w-full rounded-2xl border-2 border-teal-200 bg-teal-50 flex flex-col items-center justify-center py-3 px-2">
+                  <span class="text-3xl font-black text-teal-600 leading-none">{percent}%</span>
+                  <span class="text-[9px] font-bold uppercase tracking-widest text-teal-400 mt-0.5">OFF</span>
                 </div>
               </div>
 
               <!-- Middle: firm info -->
-              <div class="flex-1 min-w-0 px-4 sm:px-6 py-4 flex flex-col justify-center">
-                <div class="flex items-center gap-3 mb-1.5">
+              <div class="flex-1 min-w-0 px-6 py-5 flex flex-col justify-center">
+                <div class="flex items-center gap-3 mb-2">
                   <FirmAvatar name={firm.name} logoUrl={firm.media?.logo ? `${base}${firm.media.logo}` : undefined} />
                   <div class="min-w-0">
-                    <p class="font-bold text-slate-900 text-base leading-tight truncate">{firm.name}</p>
+                    <p class="font-extrabold text-slate-900 text-lg leading-tight truncate">{firm.name}</p>
                     {firm.trust.trustpilotRating && (
                       <div class="flex items-center gap-1 mt-0.5">
                         <span class="text-amber-400 text-xs">{'★'.repeat(Math.round(firm.trust.trustpilotRating))}</span>
-                        <span class="text-[10px] text-slate-400">{firm.trust.trustpilotRating} · {firm.trust.trustpilotCount?.toLocaleString()} reviews</span>
+                        <span class="text-[11px] text-slate-400">{firm.trust.trustpilotRating} · {firm.trust.trustpilotCount?.toLocaleString()} reviews</span>
                       </div>
                     )}
                   </div>
                 </div>
-                <!-- Offer description -->
                 {desc && (
                   <div class="mt-2 pt-2 border-t border-slate-100">
-                    <p class="text-xs text-slate-400">{desc}</p>
+                    <p class="text-sm text-slate-500">{desc}</p>
                   </div>
                 )}
-                <!-- Mobile code -->
-                <button
-                  class="sm:hidden mt-2 flex items-center gap-2 rounded-lg border border-dashed border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-black text-slate-800 tracking-wider cursor-pointer w-fit"
-                  onclick={`navigator.clipboard.writeText('${code}').then(()=>{const el=this.querySelector('.copy-label-m');el.textContent='Copied!';setTimeout(()=>{el.textContent='${code}'},1500)})`}
-                >
-                  <span class="copy-label-m">{code}</span>
-                  <svg class="h-3 w-3 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
-                </button>
               </div>
 
-              <!-- Code (desktop) -->
-              <div class="hidden sm:flex flex-shrink-0 items-center px-6 border-l border-slate-100">
+              <!-- Code button (desktop) -->
+              <div class="flex-shrink-0 flex items-center px-6 border-l border-slate-100">
                 <div>
-                  <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium mb-1.5">Coupon Code</p>
+                  <p class="text-[10px] text-slate-400 uppercase tracking-wide font-semibold mb-2 text-center">Coupon Code</p>
                   <button
-                    class="group/btn flex items-center gap-0 rounded-xl border-2 border-dashed border-slate-200 hover:border-teal-400 bg-white hover:bg-teal-50 overflow-hidden transition-all cursor-pointer shadow-sm"
+                    class="group/btn flex items-center gap-2 rounded-xl border-2 border-dashed border-amber-300 bg-amber-50 hover:bg-amber-100 hover:border-amber-400 px-5 py-2.5 transition-all cursor-pointer shadow-sm hover:shadow-md"
                     onclick={`navigator.clipboard.writeText('${code}').then(()=>{const el=this.querySelector('.copy-label');el.textContent='Copied!';setTimeout(()=>{el.textContent='${code}'},1500)})`}
                   >
-                    <span class="px-3 py-2 text-[10px] font-semibold text-slate-400 bg-slate-50 border-r border-dashed border-slate-200">Code</span>
-                    <span class="copy-label px-4 py-2 font-black text-slate-900 tracking-widest text-sm">{code}</span>
-                    <span class="px-2 py-2 border-l border-dashed border-slate-200">
-                      <svg class="h-4 w-4 text-slate-400 group-hover/btn:text-teal-500 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                      </svg>
-                    </span>
+                    <span class="copy-label font-black text-amber-700 tracking-widest text-base">{code}</span>
+                    <svg class="h-4 w-4 text-amber-500 group-hover/btn:text-amber-600 transition-colors flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
                   </button>
                 </div>
               </div>
 
               <!-- CTA column -->
-              <div class="flex-shrink-0 flex flex-col items-center justify-center gap-2 px-4 sm:px-6 border-l border-slate-100">
+              <div class="flex-shrink-0 flex flex-col items-center justify-center gap-2.5 px-6 border-l border-slate-100">
                 <a
                   href={firm.links?.website ?? '#'}
                   target="_blank"
                   rel="noopener noreferrer nofollow sponsored"
-                  class="inline-flex items-center justify-center gap-1.5 rounded-xl bg-teal-500 hover:bg-teal-600 px-4 py-2.5 text-sm font-bold text-white transition-colors whitespace-nowrap shadow-sm shadow-teal-500/20 w-full"
+                  class="inline-flex items-center justify-center gap-1.5 rounded-xl bg-teal-500 hover:bg-teal-600 px-5 py-3 text-sm font-bold text-white transition-colors whitespace-nowrap shadow-md shadow-teal-500/20 hover:shadow-lg hover:shadow-teal-500/30 w-full"
                 >
                   Claim Offer
-                  <svg class="h-3.5 w-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <svg class="h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
                 </a>
@@ -291,6 +283,72 @@ const featuredGrid = featuredOffers.slice(0, 4);
               </div>
 
             </div>
+
+            {/* ── MOBILE layout (below sm) ── */}
+            <div class="sm:hidden p-4">
+              <!-- Top row: badge + firm name -->
+              <div class="flex items-center gap-3 mb-3">
+                <div class="flex-shrink-0 rounded-xl border-2 border-teal-200 bg-teal-50 flex flex-col items-center justify-center w-16 h-16">
+                  <span class="text-xl font-black text-teal-600 leading-none">{percent}%</span>
+                  <span class="text-[7px] font-bold uppercase tracking-widest text-teal-400 mt-0.5">OFF</span>
+                </div>
+                <div class="min-w-0 flex-1">
+                  <div class="flex items-center gap-2">
+                    {i === 0 && (
+                      <span class="bg-gradient-to-r from-orange-500 to-amber-400 text-white text-[8px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full leading-tight">Best Deal</span>
+                    )}
+                  </div>
+                  <div class="flex items-center gap-2 mt-0.5">
+                    <FirmAvatar name={firm.name} logoUrl={firm.media?.logo ? `${base}${firm.media.logo}` : undefined} size="sm" />
+                    <div class="min-w-0">
+                      <p class="font-extrabold text-slate-900 text-base leading-tight truncate">{firm.name}</p>
+                      {firm.trust.trustpilotRating && (
+                        <div class="flex items-center gap-1">
+                          <span class="text-amber-400 text-[10px]">{'★'.repeat(Math.round(firm.trust.trustpilotRating))}</span>
+                          <span class="text-[10px] text-slate-400">{firm.trust.trustpilotRating}</span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {desc && (
+                <div class="border-t border-slate-100 pt-2 mb-3">
+                  <p class="text-xs text-slate-500">{desc}</p>
+                </div>
+              )}
+
+              <!-- Code + CTA row -->
+              <div class="flex gap-2">
+                <button
+                  class="group/btn flex-1 flex items-center justify-center gap-2 rounded-xl border-2 border-dashed border-amber-300 bg-amber-50 hover:bg-amber-100 px-3 py-3 cursor-pointer transition-all"
+                  onclick={`navigator.clipboard.writeText('${code}').then(()=>{const el=this.querySelector('.copy-label-m');el.textContent='Copied!';setTimeout(()=>{el.textContent='${code}'},1500)})`}
+                >
+                  <svg class="h-4 w-4 text-amber-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+                  <span class="copy-label-m font-black text-amber-700 tracking-widest text-sm">{code}</span>
+                </button>
+                <a
+                  href={firm.links?.website ?? '#'}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow sponsored"
+                  class="flex-shrink-0 inline-flex items-center justify-center gap-1.5 rounded-xl bg-teal-500 hover:bg-teal-600 px-5 py-3 text-sm font-bold text-white transition-colors shadow-md shadow-teal-500/20"
+                >
+                  Claim
+                  <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+
+              <a
+                href={`${base}/reviews/${firm.slug}`}
+                class="block text-center text-[11px] font-medium text-slate-400 hover:text-teal-600 transition-colors mt-2.5"
+              >
+                Read Full Review →
+              </a>
+            </div>
+
           </div>
         ))}
       </div>

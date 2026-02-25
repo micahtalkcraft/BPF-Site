@@ -51,6 +51,13 @@ const awardWinnerSlugs = new Set(["dna-funded", "blueberry-funded", "fundednext"
 // Broker-backed firms
 const brokerBackedSlugs = new Set(["dna-funded", "blueberry-funded", "fundednext", "ic-funded", "fxify-futures", "fxify", "oanda", "fundednext-futures", "hantec-trader"]);
 
+const videos = [
+  { id: "1otayPx_z1s", title: "The5ers Prop Firm Review | We Tested the Challenge", views: "2.5K", timeAgo: "3 weeks ago" },
+  { id: "oIPQPwGXGac", title: "BEST Futures Prop Firms in 2025", views: "5.1K", timeAgo: "1 month ago" },
+  { id: "dZ7gorgnMvU", title: "The BEST Prop Firms in 2025", views: "12K", timeAgo: "2 months ago" },
+  { id: "QHPnbIvv2qA", title: "The BEST 3 Prop Firms for CANADIAN Traders", views: "3.8K", timeAgo: "6 weeks ago" },
+];
+
 const firmItems: FirmItem[] = sortedFirms.map((f, idx) => {
   const review = reviewMap[f.data.id];
   const fees = f.data.pricing.challengeFees;
@@ -97,6 +104,7 @@ const firmItems: FirmItem[] = sortedFirms.map((f, idx) => {
     <div class="pointer-events-none absolute inset-0 flex items-center justify-center">
       <div class="h-[500px] w-[700px] rounded-full bg-teal-500/10 blur-3xl"></div>
     </div>
+    <div class="pointer-events-none absolute inset-0 opacity-[0.03]" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h80v80H0z' fill='none' stroke='white' stroke-width='0.5'/%3E%3C/svg%3E&quot;);"></div>
     <div class="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-24 text-center">
       <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-slate-300">
         <span class="h-1.5 w-1.5 rounded-full bg-teal-400"></span>
@@ -110,12 +118,25 @@ const firmItems: FirmItem[] = sortedFirms.map((f, idx) => {
         Every ranking is built from a single verified data record. Transparent scores across <span class="font-bold text-white">{totalFirms} evaluated firms</span> — no guesswork, no paid placements.
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-        <a href="#firms" class="w-full sm:w-auto rounded-lg bg-teal-500 px-6 py-3 font-semibold text-white hover:bg-teal-400 transition-colors shadow-lg shadow-teal-500/20">
+        <a href={`${base}/reviews`} class="w-full sm:w-auto rounded-lg bg-teal-500 px-6 py-3 font-semibold text-white hover:bg-teal-400 transition-colors shadow-lg shadow-teal-500/20">
           See All Rankings
         </a>
         <a href={`${base}/offers`} class="w-full sm:w-auto rounded-lg border border-white/20 px-6 py-3 font-semibold text-white hover:bg-white/10 transition-colors">
           View Exclusive Offers →
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── As Seen On ─────────────────────────────────────────────────────────── -->
+  <section class="border-b border-slate-200 bg-white">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-6">
+      <p class="text-[11px] font-semibold uppercase tracking-widest text-slate-400 text-center mb-5">As Seen On</p>
+      <div class="flex items-center justify-center gap-10 sm:gap-14 lg:gap-20 opacity-60 grayscale">
+        <img src={`${base}/images/press/cnn-logo.png`} alt="CNN" class="h-7 sm:h-9 w-auto object-contain" loading="lazy" />
+        <img src={`${base}/images/press/client-logo1.png`} alt="CBS News" class="h-7 sm:h-9 w-auto object-contain" loading="lazy" />
+        <img src={`${base}/images/press/client-logo6.png`} alt="Yahoo" class="h-7 sm:h-9 w-auto object-contain" loading="lazy" />
+        <img src={`${base}/images/press/afr-logo.png`} alt="Financial Review" class="h-6 sm:h-8 w-auto object-contain" loading="lazy" />
       </div>
     </div>
   </section>
@@ -136,8 +157,158 @@ const firmItems: FirmItem[] = sortedFirms.map((f, idx) => {
     <FirmListIsland firms={firmItems} basePath={import.meta.env.BASE_URL.replace(/\/$/, '')} client:load />
   </section>
 
+  <!-- ── Latest Videos ──────────────────────────────────────────────────── -->
+  <section class="bg-white border-t border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+      <div class="flex items-end justify-between mb-8">
+        <div>
+          <p class="text-xs font-bold uppercase tracking-widest text-teal-500 mb-1">Latest Videos</p>
+          <h2 class="text-3xl font-black text-slate-900">Watch Our Latest Content</h2>
+        </div>
+        <a href="https://www.youtube.com/@propfirms/videos" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-teal-600 hover:text-teal-500 transition-colors whitespace-nowrap hidden sm:block">
+          View all videos →
+        </a>
+      </div>
+
+      <!-- Video cards — horizontal scroll on mobile, grid on sm+ -->
+      <div class="relative">
+        <div id="video-scroll" class="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:overflow-visible scrollbar-hide" style="-ms-overflow-style:none;scrollbar-width:none;">
+          {videos.map((video) => (
+            <a
+              href={`https://www.youtube.com/watch?v=${video.id}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group flex-shrink-0 w-[75vw] sm:w-auto snap-start"
+            >
+              <!-- Thumbnail -->
+              <div class="relative aspect-video rounded-xl overflow-hidden bg-slate-100 mb-3 shadow-sm">
+                <img
+                  src={`https://i.ytimg.com/vi/${video.id}/mqdefault.jpg`}
+                  alt={video.title}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+                <!-- Dark overlay on hover -->
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-200" />
+                <!-- Play button -->
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <div class="h-11 w-11 rounded-full bg-red-600 flex items-center justify-center shadow-lg opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-200">
+                    <svg class="h-5 w-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                  </div>
+                </div>
+              </div>
+              <!-- Info -->
+              <h3 class="font-bold text-slate-900 text-sm leading-snug line-clamp-2 group-hover:text-teal-600 transition-colors mb-1">{video.title}</h3>
+              <p class="text-xs text-slate-400">{video.views} views · {video.timeAgo}</p>
+            </a>
+          ))}
+        </div>
+
+        <!-- Mobile scroll arrows -->
+        <button
+          id="vid-prev"
+          class="sm:hidden absolute -left-1 top-[25%] -translate-y-1/2 z-10 h-9 w-9 rounded-full bg-white border border-slate-200 shadow-md flex items-center justify-center text-slate-500 hover:text-teal-600 hover:border-teal-300 transition-colors"
+          aria-label="Previous video"
+        >
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <button
+          id="vid-next"
+          class="sm:hidden absolute -right-1 top-[25%] -translate-y-1/2 z-10 h-9 w-9 rounded-full bg-white border border-slate-200 shadow-md flex items-center justify-center text-slate-500 hover:text-teal-600 hover:border-teal-300 transition-colors"
+          aria-label="Next video"
+        >
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <!-- Mobile "View all" link -->
+      <div class="mt-4 text-center sm:hidden">
+        <a href="https://www.youtube.com/@propfirms/videos" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-teal-600 hover:text-teal-500 transition-colors">
+          View all videos →
+        </a>
+      </div>
+
+      <!-- YouTube channel bar -->
+      <div class="mt-8 flex items-center justify-between rounded-xl border border-slate-200 bg-slate-50 px-5 py-3.5">
+        <div class="flex items-center gap-3">
+          <!-- YouTube icon -->
+          <div class="flex-shrink-0 h-10 w-10 rounded-lg bg-red-600 flex items-center justify-center">
+            <svg class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="font-bold text-slate-900 text-sm">Best PropFirms</p>
+            <p class="text-xs text-slate-400">1.3K subscribers · 44 videos</p>
+          </div>
+        </div>
+        <a
+          href="https://www.youtube.com/@propfirms?sub_confirmation=1"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1.5 rounded-full bg-red-600 hover:bg-red-700 px-4 py-2 text-xs font-bold text-white transition-colors shadow-sm"
+        >
+          <svg class="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          Subscribe
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Video carousel scroll arrows (mobile only)
+    const scrollEl = document.getElementById("video-scroll");
+    const prevBtn = document.getElementById("vid-prev");
+    const nextBtn = document.getElementById("vid-next");
+    if (scrollEl && prevBtn && nextBtn) {
+      const getCardWidth = () => {
+        const card = scrollEl.querySelector("a");
+        if (!card) return 300;
+        return card.getBoundingClientRect().width + 16; // card width + gap
+      };
+      prevBtn.addEventListener("click", () => {
+        scrollEl.scrollBy({ left: -getCardWidth(), behavior: "smooth" });
+      });
+      nextBtn.addEventListener("click", () => {
+        scrollEl.scrollBy({ left: getCardWidth(), behavior: "smooth" });
+      });
+    }
+  </script>
+
+  <!-- ── How We Review ─────────────────────────────────────────────────────── -->
+  <section class="bg-slate-50 border-t border-slate-200 py-16 px-4">
+    <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <p class="text-xs font-bold uppercase tracking-widest text-teal-500 mb-2">Our Process</p>
+        <h2 class="text-3xl font-black text-slate-900">How We Review Prop Firms</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-teal-50 border border-teal-200 text-teal-600 text-lg font-black">1</div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Research</h3>
+          <p class="text-sm text-slate-500 leading-relaxed">We read the firm's official terms, challenge rules, payout policies, and T&Cs. All data sourced directly — no third-party aggregators.</p>
+        </div>
+        <div class="text-center">
+          <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-teal-50 border border-teal-200 text-teal-600 text-lg font-black">2</div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Score</h3>
+          <p class="text-sm text-slate-500 leading-relaxed">Each firm is scored across 7 categories: Trust, Conditions, Pricing, Platforms, Payouts, Support, and UX — using our published methodology.</p>
+        </div>
+        <div class="text-center">
+          <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-teal-50 border border-teal-200 text-teal-600 text-lg font-black">3</div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Publish</h3>
+          <p class="text-sm text-slate-500 leading-relaxed">Data stored in one canonical record. Every metric on every page flows from that source — no duplicated values, no stale data.</p>
+        </div>
+      </div>
+      <div class="mt-10 text-center">
+        <a href={`${base}/methodology`} class="inline-flex items-center gap-2 rounded-lg border border-slate-200 px-5 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 transition-colors">
+          Read the full methodology →
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- ── Discord Banner ────────────────────────────────────────────────────── -->
-  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-16">
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
     <div class="relative overflow-hidden rounded-2xl border border-[#5865F2]/20 shadow-xl">
       <!-- Background -->
       <div class="absolute inset-0 bg-gradient-to-br from-[#5865F2] via-[#4752C4] to-[#3C45A5]"></div>
@@ -181,38 +352,6 @@ const firmItems: FirmItem[] = sortedFirms.map((f, idx) => {
             <svg class="h-4 w-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
           </a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── How We Review ─────────────────────────────────────────────────────── -->
-  <section class="bg-slate-900 py-16 px-4">
-    <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <p class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-2">Our Process</p>
-        <h2 class="text-3xl font-black text-white">How We Review Prop Firms</h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="text-center">
-          <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-teal-500/20 text-teal-400 text-lg font-black">1</div>
-          <h3 class="text-lg font-bold text-white mb-2">Research</h3>
-          <p class="text-sm text-slate-400 leading-relaxed">We read the firm's official terms, challenge rules, payout policies, and T&Cs. All data sourced directly — no third-party aggregators.</p>
-        </div>
-        <div class="text-center">
-          <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-teal-500/20 text-teal-400 text-lg font-black">2</div>
-          <h3 class="text-lg font-bold text-white mb-2">Score</h3>
-          <p class="text-sm text-slate-400 leading-relaxed">Each firm is scored across 7 categories: Trust, Conditions, Pricing, Platforms, Payouts, Support, and UX — using our published methodology.</p>
-        </div>
-        <div class="text-center">
-          <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-teal-500/20 text-teal-400 text-lg font-black">3</div>
-          <h3 class="text-lg font-bold text-white mb-2">Publish</h3>
-          <p class="text-sm text-slate-400 leading-relaxed">Data stored in one canonical record. Every metric on every page flows from that source — no duplicated values, no stale data.</p>
-        </div>
-      </div>
-      <div class="mt-10 text-center">
-        <a href={`${base}/methodology`} class="inline-flex items-center gap-2 rounded-lg border border-white/20 px-5 py-2.5 text-sm font-semibold text-white hover:bg-white/10 transition-colors">
-          Read the full methodology →
-        </a>
       </div>
     </div>
   </section>
@@ -326,7 +465,7 @@ const firmItems: FirmItem[] = sortedFirms.map((f, idx) => {
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_70%_-10%,rgba(20,184,166,0.12),transparent)]"></div>
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_0%_100%,rgba(20,184,166,0.06),transparent)]"></div>
         <!-- Grid pattern -->
-        <div class="pointer-events-none absolute inset-0 opacity-[0.03]" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0z' fill='none' stroke='white' stroke-width='0.5'/%3E%3C/svg%3E&quot;);"></div>
+        <div class="pointer-events-none absolute inset-0 opacity-[0.03]" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h80v80H0z' fill='none' stroke='white' stroke-width='0.5'/%3E%3C/svg%3E&quot;);"></div>
         <!-- Glow orbs -->
         <div class="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-teal-500/10 blur-3xl"></div>
         <div class="pointer-events-none absolute -bottom-16 -left-16 h-56 w-56 rounded-full bg-teal-400/5 blur-3xl"></div>
