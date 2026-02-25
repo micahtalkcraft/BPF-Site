@@ -202,7 +202,7 @@ function CouponBlock({ code, percent }: { code: string; percent?: number }) {
   );
 }
 
-export default function FirmListIsland({ firms }: { firms: FirmItem[] }) {
+export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmItem[]; basePath?: string }) {
   const [search, setSearch] = useState("");
   const [evalFilter, setEvalFilter] = useState("all");
   const [sort, setSort] = useState("score-desc");
@@ -317,13 +317,13 @@ export default function FirmListIsland({ firms }: { firms: FirmItem[] }) {
                 </span>
 
                 {/* Avatar / Logo */}
-                <FirmAvatar name={firm.name} logoUrl={firm.logoUrl} />
+                <FirmAvatar name={firm.name} logoUrl={firm.logoUrl ? `${basePath}${firm.logoUrl}` : undefined} />
 
                 {/* Name + subtitle + tags */}
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 flex-wrap">
                     <a
-                      href={`/reviews/${firm.slug}`}
+                      href={`${basePath}/reviews/${firm.slug}`}
                       className="text-lg font-extrabold text-slate-900 hover:text-teal-600 transition-colors"
                     >
                       {firm.name}
@@ -409,7 +409,7 @@ export default function FirmListIsland({ firms }: { firms: FirmItem[] }) {
                   )}
                   <div className="hidden sm:flex flex-col gap-1.5">
                     <a
-                      href={`/reviews/${firm.slug}`}
+                      href={`${basePath}/reviews/${firm.slug}`}
                       className="inline-flex items-center justify-center gap-1 w-28 rounded-lg bg-teal-500 px-3 py-2.5 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap"
                     >
                       Read Review

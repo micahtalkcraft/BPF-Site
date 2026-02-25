@@ -7,7 +7,10 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.bestpropfirms.com',
+  site: process.env.CI
+    ? 'https://micahtalkcraft.github.io'
+    : 'https://www.bestpropfirms.com',
+  base: process.env.CI ? '/BPF-Site' : '/',
   output: 'static',
   integrations: [react(), sitemap()],
 
