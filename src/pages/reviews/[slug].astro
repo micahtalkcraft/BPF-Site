@@ -38,10 +38,12 @@ interface Props {
   offers: Awaited<ReturnType<typeof getCollection<"offers">>>[0]["data"][];
 }
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
 const { firm, review, offers } = Astro.props;
 
 if (!review) {
-  return Astro.redirect("/reviews");
+  return Astro.redirect(`${base}/reviews`);
 }
 
 const jsonLd = [
@@ -175,7 +177,7 @@ const youtubeId = review.youtubeUrl?.match(/(?:embed\/|v=|youtu\.be\/)([a-zA-Z0-
 
     <!-- Breadcrumb -->
     <nav class="text-sm text-slate-500 mb-6" aria-label="Breadcrumb">
-      <a href="/reviews" class="hover:text-teal-600 transition-colors">Reviews</a>
+      <a href={`${base}/reviews`} class="hover:text-teal-600 transition-colors">Reviews</a>
       <span class="mx-2">›</span>
       <span class="text-slate-800 font-medium">{firm.name}</span>
     </nav>
@@ -198,7 +200,7 @@ const youtubeId = review.youtubeUrl?.match(/(?:embed\/|v=|youtu\.be\/)([a-zA-Z0-
 
         <!-- Header: Name + avatar -->
         <div class="flex items-center gap-3 mb-3">
-          <FirmAvatar name={firm.name} logoUrl={firm.media?.logo} size="lg" />
+          <FirmAvatar name={firm.name} logoUrl={firm.media?.logo ? `${base}${firm.media.logo}` : undefined} size="lg" />
           <div>
             <div class="flex items-center gap-2 flex-wrap">
               <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight">{firm.name} Review</h1>
@@ -277,7 +279,7 @@ const youtubeId = review.youtubeUrl?.match(/(?:embed\/|v=|youtu\.be\/)([a-zA-Z0-
                 <p class="text-sm font-bold text-slate-900">BPF Score</p>
                 {firm.trust.trustpilotRating !== null && (
                   <p class="text-xs text-slate-500 mt-0.5 flex items-center gap-1 flex-wrap">
-                    <img src="/images/social/free-trustpilot-icon-svg-download-png-8715838.webp" alt="Trustpilot" class="w-3.5 h-3.5 inline-block" loading="lazy" />
+                    <img src={`${base}/images/social/free-trustpilot-icon-svg-download-png-8715838.webp`} alt="Trustpilot" class="w-3.5 h-3.5 inline-block" loading="lazy" />
                     Trustpilot: {firm.trust.trustpilotRating}/5
                     <span class="text-amber-500">★</span>
                     {firm.trust.trustpilotCount && (
@@ -547,7 +549,7 @@ const youtubeId = review.youtubeUrl?.match(/(?:embed\/|v=|youtu\.be\/)([a-zA-Z0-
                   <td class="px-4 py-3 font-semibold text-slate-900">{firm.rules.expertAdvisors === true ? "Allowed" : firm.rules.expertAdvisors === false ? "Not Allowed" : "—"}</td>
                 </tr>
                 <tr class="bg-slate-50">
-                  <td class="px-4 py-3 font-medium text-slate-600 flex items-center gap-1.5"><img src="/images/social/free-trustpilot-icon-svg-download-png-8715838.webp" alt="Trustpilot" class="w-4 h-4" loading="lazy" />Trustpilot</td>
+                  <td class="px-4 py-3 font-medium text-slate-600 flex items-center gap-1.5"><img src={`${base}/images/social/free-trustpilot-icon-svg-download-png-8715838.webp`} alt="Trustpilot" class="w-4 h-4" loading="lazy" />Trustpilot</td>
                   <td class="px-4 py-3 font-semibold text-slate-900">
                     {firm.trust.trustpilotRating !== null
                       ? `${firm.trust.trustpilotRating}/5 (${firm.trust.trustpilotCount?.toLocaleString()} reviews)`
@@ -758,7 +760,7 @@ const youtubeId = review.youtubeUrl?.match(/(?:embed\/|v=|youtu\.be\/)([a-zA-Z0-
                   <span class="text-amber-500 text-lg">★</span>
                 </div>
                 <p class="text-[11px] text-slate-500 flex items-center justify-center gap-1">
-                  <img src="/images/social/free-trustpilot-icon-svg-download-png-8715838.webp" alt="Trustpilot" class="w-3.5 h-3.5" loading="lazy" />
+                  <img src={`${base}/images/social/free-trustpilot-icon-svg-download-png-8715838.webp`} alt="Trustpilot" class="w-3.5 h-3.5" loading="lazy" />
                   Trustpilot
                   {firm.trust.trustpilotCount && ` · ${firm.trust.trustpilotCount.toLocaleString()} reviews`}
                 </p>

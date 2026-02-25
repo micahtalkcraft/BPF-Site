@@ -32,7 +32,9 @@
       "WebFetch(domain:www.forexpropfirms.com)",
       "WebFetch(domain:www.quantvps.com)",
       "Bash(python:*)",
-      "Bash(head:*)"
+      "Bash(head:*)",
+      "Bash(CI=true npm run build:*)",
+      "Bash(unset:*)"
     ]
   }
 }

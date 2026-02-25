@@ -2,6 +2,7 @@
 import Base from "../../layouts/Base.astro";
 import { getCollection } from "astro:content";
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const posts = await getCollection("blog");
 
 // Sort by date descending
@@ -44,7 +45,7 @@ function formatDate(dateStr: string) {
   {featured && (
     <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 -mt-8 relative z-10 mb-12">
       <a
-        href={`/blog/${featured.slug}`}
+        href={`${base}/blog/${featured.slug}`}
         class="group block bg-white border border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden"
       >
         <div class="flex flex-col md:flex-row">
@@ -141,7 +142,7 @@ function formatDate(dateStr: string) {
           data-category={post.data.category}
         >
           {/* Thumbnail */}
-          <a href={`/blog/${post.slug}`} class="block">
+          <a href={`${base}/blog/${post.slug}`} class="block">
             {post.data.coverImage ? (
               <img
                 src={post.data.coverImage}
@@ -165,7 +166,7 @@ function formatDate(dateStr: string) {
               </span>
             </div>
             <h3 class="text-base font-extrabold text-slate-900 group-hover:text-teal-600 transition-colors mb-2 leading-snug">
-              <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+              <a href={`${base}/blog/${post.slug}`}>{post.data.title}</a>
             </h3>
             <p class="text-sm text-slate-500 leading-relaxed line-clamp-2 mb-4 flex-1">
               {post.data.excerpt}
