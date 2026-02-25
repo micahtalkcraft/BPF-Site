@@ -1,0 +1,777 @@
+---
+// Static editorial content for IC Funded
+// Supports multiple sections via the `section` prop
+interface Props {
+  section: string;
+  fallbackBody?: string;
+}
+const { section, fallbackBody } = Astro.props;
+---
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* CHALLENGES SECTION                                                  */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "challenges" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    IC Funded now offers two models and you can choose between a <strong>one step</strong> or <strong>two step</strong> challenge. The one step challenge is built for speed, with a single profit target and tighter overall drawdown, while the two step challenge spreads the evaluation across two phases and allows more total loss, making it easier to manage consistency over time.
+  </p>
+  <p class="mb-6">
+    Both follow similar rules around daily loss limits and risk, but they differ in structure, time commitment, and drawdown allowance.
+  </p>
+
+  <!-- ─── Challenge Comparison Table ──────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Comparison</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-10">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-3 py-3 text-left">Evaluation Process</th>
+          <th class="px-3 py-3 text-center">One Step Challenge</th>
+          <th class="px-3 py-3 text-center">Two Step Challenge</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-medium text-slate-600">Challenge Fees</td>
+          <td class="px-3 py-3 text-center text-slate-900">$29.75 &ndash; $1,487.50</td>
+          <td class="px-3 py-3 text-center text-slate-900">$49 &ndash; $2,498</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-medium text-slate-600">Account Sizes</td>
+          <td class="px-3 py-3 text-center text-slate-900">5K &ndash; 250K</td>
+          <td class="px-3 py-3 text-center text-slate-900">5K &ndash; 500K</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-medium text-slate-600">Profit Target</td>
+          <td class="px-3 py-3 text-center text-slate-900">10%</td>
+          <td class="px-3 py-3 text-center text-slate-900">10% (Phase 1), 5% (Phase 2)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-medium text-slate-600">Max Daily Loss</td>
+          <td class="px-3 py-3 text-center text-slate-900">5%</td>
+          <td class="px-3 py-3 text-center text-slate-900">5%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-medium text-slate-600">Max Overall Loss</td>
+          <td class="px-3 py-3 text-center text-slate-900">6%</td>
+          <td class="px-3 py-3 text-center text-slate-900">10%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-medium text-slate-600">Minimum Trading Days</td>
+          <td class="px-3 py-3 text-center text-slate-900">5</td>
+          <td class="px-3 py-3 text-center text-slate-900">5</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-medium text-slate-600">Max Trading Days</td>
+          <td class="px-3 py-3 text-center text-slate-400">Unlimited</td>
+          <td class="px-3 py-3 text-center text-slate-400">Unlimited</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-medium text-slate-600">Profit Split (Funded)</td>
+          <td class="px-3 py-3 text-center font-semibold text-teal-600">75% to 80%</td>
+          <td class="px-3 py-3 text-center font-semibold text-teal-600">75% to 80%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-medium text-slate-600">Account Scaling</td>
+          <td class="px-3 py-3 text-center text-slate-900">Up to $500,000</td>
+          <td class="px-3 py-3 text-center text-slate-900">Up to $500,000</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-medium text-slate-600">Best For</td>
+          <td class="px-3 py-3 text-center text-slate-700 whitespace-normal">Faster path to funding</td>
+          <td class="px-3 py-3 text-center text-slate-700 whitespace-normal">Gradual evaluation with more drawdown room</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- ONE STEP CHALLENGE                                              -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">1</span>
+      One Step Challenge
+    </h3>
+
+    <p class="mb-3">
+      In the one step challenge, you must reach a <strong>10% profit target</strong> while staying within a 5% daily loss and <strong>6% maximum drawdown</strong>. There is only a single evaluation step, meaning once the profit target is hit and all rules are respected, the trader becomes eligible for a funded account. There is no maximum time limit, but a minimum of 5 trading days is required.
+    </p>
+    <p class="mb-4">
+      Because there is no second step, the one step challenge is designed to offer a faster route to funding, but with a tighter overall drawdown compared to the two step option. This structure tends to suit anyone who is confident in their execution and consistency and prefer to complete the evaluation in a single phase.
+    </p>
+
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">Fee (USD)</th>
+            <th class="px-4 py-3 text-right">Max Daily Loss</th>
+            <th class="px-4 py-3 text-right">Max Overall Loss</th>
+            <th class="px-4 py-3 text-right">Profit Target (10%)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$29.75</td>
+            <td class="px-4 py-3 text-right text-slate-700">$250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$300</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$59.50</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$600</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$148.75</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$297.50</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$595.00</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$6,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$250,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$1,487.50</td>
+            <td class="px-4 py-3 text-right text-slate-700">$12,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$15,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$25,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- TWO STEP CHALLENGE                                              -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">2</span>
+      Two Step Challenge
+    </h3>
+
+    <p class="mb-3">
+      The two step challenge requires traders to pass two consecutive steps &mdash; an <strong>Evaluation Phase</strong> followed by a <strong>Verification Phase</strong>. In step one, you must achieve a 10% profit target, and in step two, a reduced 5% profit target, while respecting the same core risk rules throughout.
+    </p>
+    <p class="mb-4">
+      Although the two step challenge takes longer to complete, it provides more breathing room overall due to the higher <strong>10% maximum drawdown</strong> allowance compared to the one step program. The two step structure is generally better suited to anyone who prioritises capital preservation and consistency over speed.
+    </p>
+
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">Fee (USD)</th>
+            <th class="px-4 py-3 text-right">Max Daily Loss</th>
+            <th class="px-4 py-3 text-right">Max Overall Loss</th>
+            <th class="px-4 py-3 text-right">Phase 1 Target (10%)</th>
+            <th class="px-4 py-3 text-right">Phase 2 Target (5%)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$49</td>
+            <td class="px-4 py-3 text-right text-slate-700">$250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$250</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$99</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$149</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,250</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$289</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$499</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$250,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$1,249</td>
+            <td class="px-4 py-3 text-right text-slate-700">$12,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$12,500</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$500,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$2,498</td>
+            <td class="px-4 py-3 text-right text-slate-700">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$25,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ─── Scaling Plan ────────────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">IC Funded Scaling Plan</h3>
+  <p class="mb-4">
+    IC Funded uses a performance-based scaling model that lets traders grow their capital over time, up to a maximum total allocation of <strong>$500,000</strong> (hence why scaling isn't available for this account size). Scaling is not automatic and doesn't follow a fixed step-up schedule &mdash; eligibility is based on consistent profitability, strict rule compliance, and successful payouts on a funded account.
+  </p>
+  <p class="mb-6">
+    There is no free retake or automatic upgrade to a larger account. In some cases, you may need to qualify again at a higher tier to access more capital, depending on IC Funded's criteria at the time.
+  </p>
+
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Scaling Type</p>
+      <p class="text-sm font-bold text-slate-800">Performance-Based</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Allocation</p>
+      <p class="text-sm font-bold text-teal-600">$500,000</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Automatic?</p>
+      <p class="text-sm font-bold text-slate-800">No</p>
+    </div>
+  </div>
+
+  <!-- ─── Trading Rules ───────────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules</h3>
+  <p class="mb-4">
+    IC Funded has clear and consistent rules across all challenge types. These are designed to encourage disciplined trading without over-restricting strategy choice.
+  </p>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Rule</th>
+          <th class="px-4 py-3 text-center">Status</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">EAs Allowed</td>
+          <td class="px-4 py-3 text-center"><span class="text-teal-600 font-bold">&#10003;</span> <span class="text-slate-600">Must own source code</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">Copy Trading</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span> <span class="text-slate-600">Not allowed</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">HFT</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span> <span class="text-slate-600">Not allowed</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">Scalping</td>
+          <td class="px-4 py-3 text-center"><span class="text-teal-600 font-bold">&#10003;</span> <span class="text-slate-600">Allowed</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">News Trading</td>
+          <td class="px-4 py-3 text-center"><span class="text-teal-600 font-bold">&#10003;</span> <span class="text-slate-600">Allowed</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">Weekend Holding</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span> <span class="text-slate-600">Close before Friday close</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">Stop Loss Required</td>
+          <td class="px-4 py-3 text-center"><span class="text-slate-400">Not required</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">Inactivity Policy</td>
+          <td class="px-4 py-3 text-center"><span class="text-slate-600">Closed after 30 days</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">KYC Verification</td>
+          <td class="px-4 py-3 text-center"><span class="text-slate-600">Required for withdrawals</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">Fee Refund</td>
+          <td class="px-4 py-3 text-center"><span class="text-teal-600 font-semibold">With first payout (after 30 days)</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Audition Process &amp; Challenges</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      IC Funded earns an 8/10 score for challenges thanks to its clear structure, competitive pricing, and flexibility across both one step and two step challenges. You can choose between a faster single step option with tighter drawdown limits, or a two step route that allows more overall loss and a more gradual path to funding. The rules are straightforward, with no maximum time limits, realistic profit targets, and consistent risk parameters. The score is only held back by the lack of automatic scaling beyond $500,000 and the limited range of challenge variations, but for a simple and well-priced evaluation setup, IC Funded remains a solid option.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SPREADS / COMMISSION FEES & PRICING SECTION                         */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "spreads" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    IC Funded provides forex spreads the same as those offered by forex broker <strong>IC Markets' Global Raw Account</strong>. These spreads are sourced directly from liquidity providers, ensuring competitive pricing across various asset classes.
+  </p>
+
+  <!-- Forex Spreads -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Forex Spreads</h3>
+  <p class="mb-4">
+    As per IC Markets ultra low raw spreads, when participating in the IC Funded challenge minimum spreads on popular forex pairs like EUR/USD are as low as <strong>0 pips</strong>, and average <strong>0.02 pips</strong>.
+  </p>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Forex Pair</th>
+          <th class="px-4 py-3 text-right">IC Funded Average Spread</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">EUR/USD</td>
+          <td class="px-4 py-3 text-right font-semibold text-teal-600">0.02 pips</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">AUD/USD</td>
+          <td class="px-4 py-3 text-right text-slate-900">0.17 pips</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">AUD/JPY</td>
+          <td class="px-4 py-3 text-right text-slate-900">0.50 pips</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">EUR/GBP</td>
+          <td class="px-4 py-3 text-right text-slate-900">0.27 pips</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">EUR/JPY</td>
+          <td class="px-4 py-3 text-right text-slate-900">0.30 pips</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Commission Fees -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Commission Fees</h3>
+  <p class="mb-4">
+    IC Funded charges a commission of <strong>$3.50 per lot per round turn</strong> for forex trading, commodities, and indices.
+  </p>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Commission Fee</th>
+          <th class="px-4 py-3 text-center">USD</th>
+          <th class="px-4 py-3 text-center">AUD</th>
+          <th class="px-4 py-3 text-center">GBP</th>
+          <th class="px-4 py-3 text-center">EUR</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">IC Funded</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">$3.50</td>
+          <td class="px-4 py-3 text-center text-slate-900">$3.50</td>
+          <td class="px-4 py-3 text-center text-slate-900">&pound;2.50</td>
+          <td class="px-4 py-3 text-center text-slate-900">&euro;2.75</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Spreads &amp; Commissions</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      IC Funded provides prop traders with tight spreads and a transparent, flat-rate commission structure. The combination of low spreads, commissions, and audition fees makes IC Funded one of the most competitively priced prop firms.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* MARKETS / FINANCIAL MARKETS & LEVERAGE SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "markets" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    IC Funded offers a wide range of financial markets with <strong>96 trading instruments</strong> in total over commodity, equity index, and forex markets. Although offered by IC Markets, shares and crypto trading instruments such as Bitcoin or Ethereum are not offered by IC Funded.
+  </p>
+
+  <!-- Leverage -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Leverage</h3>
+  <p class="mb-4">
+    IC Funded applies the same leverage limits across both one step and two step challenges, with leverage varying by asset class, not by evaluation type. There is no leverage advantage to choosing one challenge over another.
+  </p>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Asset Class</th>
+          <th class="px-4 py-3 text-center">Max Leverage</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Forex Pairs &amp; Gold</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">50:1</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Indices &amp; Other Commodities</td>
+          <td class="px-4 py-3 text-center text-slate-900">10:1</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Equities</td>
+          <td class="px-4 py-3 text-center text-slate-900">5:1</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Market stats -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Available Markets</h3>
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">96</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Total Instruments</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-teal-600">0 pips</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Min Spread</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">3</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Asset Classes</p>
+    </div>
+  </div>
+
+  <div class="space-y-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Forex</p>
+      <p>Full range of major, minor, and exotic currency pairs with up to 50:1 leverage.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Indices</p>
+      <p>Popular global indices with up to 10:1 leverage.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Commodities</p>
+      <p>Gold (50:1 leverage), plus oil, silver and other commodities at 10:1 leverage.</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Markets &amp; Leverage</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      IC Funded earns a 9/10 score for markets and leverage thanks to its broad access to core trading instruments and a simple, consistent leverage structure. Forex pairs and gold are available with up to 50:1 leverage, while indices and other commodities are capped at 10:1, and equities at 5:1. The lack of crypto and share trading limits the score slightly, but for traders focused on major FX and index markets, IC Funded offers a well-balanced and competitive setup.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PLATFORMS / TRADING PLATFORMS SECTION                                */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "platforms" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    IC Funded offers the three most popular platforms for prop trading being <strong>MetaTrader 4 (MT4)</strong>, <strong>MetaTrader 5 (MT5)</strong>, and <strong>cTrader</strong>. Each platform provides distinct features and tools that cater to different trading styles and preferences.
+  </p>
+
+  <!-- Platform cards -->
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">MetaTrader 4 (MT4)</p>
+      <p>A popular choice among forex traders for its user-friendly interface and extensive support for automated trading through Expert Advisors (EAs). It offers customisable charts, multiple timeframes, a variety of indicators, one-click trading, and a strong community of users who develop and share EAs and custom indicators.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">MetaTrader 5 (MT5)</p>
+      <p>Builds on the success of MT4 with additional features and improved performance. It supports more order types, additional timeframes, and an economic calendar integrated into the platform. MT5 also allows for deeper market analysis with more advanced charting tools and supports trading in a wider range of asset classes.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">cTrader</p>
+      <p>Known for its advanced charting and order execution capabilities. It offers a highly customisable trading environment with a focus on transparency and ease of use. cTrader provides access to <strong>Level II pricing</strong>, allowing traders to see market depth and make informed decisions based on liquidity. Also supports automated trading through cAlgo for custom trading algorithms.</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trading Platforms</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      IC Funded provides solid trading platform options with MT4, MT5, and cTrader, offering tools that suit different trading styles. Each platform supports automated trading with EAs, but copy trading is prohibited.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PAYOUTS / PAYMENTS & PROFIT PAYOUT SECTION                          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "payouts" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    To pay the one-off audition fee, IC Funded supports a variety of methods including cryptocurrency payments, Mastercard and Visa, and local currency options for specific regions including Africa (ZAR, NGN, GHS, KES) and Southeast Asia (THB, VND, MYR with PapayaPay).
+  </p>
+
+  <!-- Payout overview -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Starting Profit Split</p>
+      <p class="text-sm font-bold text-teal-600">75%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">After First Month</p>
+      <p class="text-sm font-bold text-teal-600">80%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Default Schedule</p>
+      <p class="text-sm font-bold text-slate-800">Monthly</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">On-Demand Available</p>
+      <p class="text-sm font-bold text-teal-600">After 14 days</p>
+    </div>
+  </div>
+
+  <!-- Payouts & Withdrawals -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payouts &amp; Withdrawals</h3>
+  <p class="mb-4">
+    After successfully completing the evaluation and starting on a funded account, IC Funded offers several options for withdrawing profits. The default payout schedule is <strong>monthly</strong>, where traders receive a 75% profit share, which increases to 80% after the first month. On-demand withdrawals are available <strong>14 days</strong> after the initial trade, and bi-weekly payouts are also an option.
+  </p>
+  <p class="mb-6">
+    Once traders make their first profit withdrawal, the <strong>evaluation fee is refunded</strong>, providing an added financial benefit.
+  </p>
+
+  <!-- Withdrawal Methods -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Withdrawal Methods</h3>
+  <p class="mb-4">
+    IC Funded processes payouts through standard bank wire, Skrill, or various cryptocurrency options. IC Funded does not charge withdrawal fees, though traders should be aware of potential fees imposed by their bank or payment provider.
+  </p>
+
+  <div class="space-y-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Bank Wire</p>
+      <p>Minimum net profit of <strong>$20</strong> required</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Crypto Payouts</p>
+      <p>Minimum net profit of <strong>$150</strong> required</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Skrill</p>
+      <p>Available as an alternative e-wallet option</p>
+    </div>
+  </div>
+
+  <!-- Payment method cards -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Accepted Payment Methods</h3>
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-sm font-bold text-slate-800">Visa / Mastercard</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-sm font-bold text-slate-800">Bank Wire</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-sm font-bold text-slate-800">Skrill</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-sm font-bold text-slate-800">Crypto</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Payments &amp; Payouts</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      IC Funded offers flexible and accessible withdrawal options, allowing traders to receive their profits through various methods without incurring internal fees. The option to request payouts monthly, bi-weekly, or on-demand gives traders control over their earnings. Additionally, the refund of the evaluation fee with the first profit withdrawal adds an extra benefit, making IC Funded one of the best prop firms for those wanting a reliable payout process.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SUPPORT / CUSTOMER SERVICE & EDUCATION SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "support" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    IC Funded offers <strong>24/7 customer support</strong> and comprehensive educational resources to help traders succeed in prop trading.
+  </p>
+
+  <!-- Customer Support -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Customer Support</h3>
+  <p class="mb-4">
+    IC Funded provides 24/7 customer service through live chat, offering quick and efficient responses to trader inquiries. The live chat feature is AI-assisted, ensuring that traders receive timely help for common questions and issues. For more complex matters, the support team is available to assist via email or live chat. No direct contact number is available on their website.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Live Chat (AI-Assisted)</p>
+      <p>Available 24/7 with quick responses to common questions</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Email Support</p>
+      <p>Available for more complex and account-related concerns</p>
+    </div>
+  </div>
+
+  <!-- Educational Resources -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Educational Resources</h3>
+  <p class="mb-4">
+    IC Funded offers a range of educational resources directly accessible through the client dashboard, designed to enhance traders' knowledge and skills. The dashboard features curated videos covering current market trends, trading strategies, platform navigation, and broader financial topics.
+  </p>
+
+  <div class="space-y-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Dashboard Videos</p>
+      <p>Curated videos covering market trends, financial topics, and practical trading strategies accessible directly from the client dashboard.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Platform Tutorials</p>
+      <p>Practical tutorials on platform navigation, key market analysis, and trading strategy development.</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Customer Service &amp; Education</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      IC Funded provides solid 24/7 support and well-rounded educational resources, making it a good prop firm for traders looking to improve their skills and receive timely assistance.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* TRUST / TRUST & COMMUNITY SECTION                                   */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "trust" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    IC Funded is closely connected to <strong>IC Markets</strong>, a well-established and top-tier regulated broker known for its transparency and reliability in the financial industry. This connection provides a solid foundation for trust, and while IC Funded is not a regulated broker or financial service provider, IC Markets has a strong reputation overseen by financial regulators like <strong>ASIC</strong> in Australia and <strong>CySEC</strong> in Europe.
+  </p>
+
+  <!-- Trustpilot -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">IC Funded TrustPilot Score</h3>
+
+  <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 mb-6 flex items-center gap-4">
+    <div class="flex-shrink-0">
+      <p class="text-3xl font-black text-slate-900">2.7<span class="text-lg text-slate-400">/5</span></p>
+      <p class="text-xs text-slate-500 font-semibold">Mixed</p>
+    </div>
+    <div>
+      <p class="text-sm text-slate-700">IC Funded has a Trustpilot score of <strong>2.7 out of 5 stars</strong>, which shows a mixed set of experiences. A noticeable portion of lower-rated reviews come from users who had not yet signed up, were still in the evaluation phase, or were waiting on their first payout, meaning some feedback is based on expectations rather than completed funded trading. Many verified reviews confirm successful payouts, tight spreads, and competitive conditions.</p>
+    </div>
+  </div>
+
+  <!-- Community -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Community</h3>
+  <p class="mb-4">
+    IC Funded does not use popular platforms like Discord for its community interactions; instead, it has established its own <strong>dedicated chat platform</strong>. This unique approach allows for a more secure and controlled environment, minimising the risk of scams and misinformation. The community is directly managed by IC Funded's team, with channels dedicated to different financial markets, sharing trading decisions, and payout proof for funded traders.
+  </p>
+
+  <!-- Social Media -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Social Media</h3>
+  <p class="mb-4">
+    IC Funded's social media presence is relatively small compared to competitors.
+  </p>
+
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">3.5K</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Twitter/X</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">2.8K</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Facebook</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">2.6K</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Instagram</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">230</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">LinkedIn</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trust &amp; Community</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      IC Funded is a trustworthy prop firm, backed by its connection to regulated broker IC Markets. While the Trustpilot rating of 2.7/5 is mixed, many verified reviews confirm successful payouts and competitive conditions. The dedicated chat community offers a secure alternative to open platforms like Discord. The relatively small social media presence is the main area for improvement.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* FALLBACK — sections not customised render the default text          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section !== "challenges" && section !== "spreads" && section !== "markets" && section !== "platforms" && section !== "payouts" && section !== "support" && section !== "trust" && fallbackBody && (
+  <div class="text-sm leading-relaxed text-slate-700 space-y-4">
+    {fallbackBody.split("\n\n").map((para) => (
+      <p set:html={para.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")} />
+    ))}
+  </div>
+)}

@@ -1,0 +1,1043 @@
+---
+// Static editorial content for MyFundedFutures
+// Supports multiple sections via the `section` prop
+interface Props {
+  section: string;
+  fallbackBody?: string;
+}
+const { section, fallbackBody } = Astro.props;
+---
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* CHALLENGES SECTION                                                  */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "challenges" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    MyFundedFutures offers three program types: <strong>Starter</strong>, <strong>Milestone</strong>, and <strong>Expert</strong>. Starter accounts keep it simple with monthly fees and lower contract limits, Milestone accounts have a multi-phase setup with a one-time fee for consistent growth, and Expert accounts offer higher contract limits and bi-weekly payouts for experienced traders.
+  </p>
+
+  <!-- Per-challenge summaries -->
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Starter – Monthly Fee</p>
+      <p>Account sizes of $50K, $100K, and $150K with monthly fees from $80 to $220. EOD drawdown mode with performance-based payouts and a $250 minimum payout threshold.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">40% consistency rule applies</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Milestone – One-Time Fee</p>
+      <p>Account sizes from $25K to $150K with one-time fees from $229 to $665. Multi-phase evaluation with profit targets per phase and a 20% consistency rule.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">No recurring monthly costs</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Expert – Monthly Fee (Higher Limits)</p>
+      <p>Account sizes of $50K, $100K, and $150K with monthly fees from $165 to $375. Higher contract limits with time-based bi-weekly payouts and a $1,000 minimum payout.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Payouts available every 14 days</p>
+    </div>
+  </div>
+
+  <!-- ─── Comparison Table ───────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Program Comparison</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-10">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Attribute</th>
+          <th class="px-4 py-3 text-center">Starter</th>
+          <th class="px-4 py-3 text-center">Milestone</th>
+          <th class="px-4 py-3 text-center">Expert</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Fee Type</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">Monthly</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">One-Time</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">Monthly</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Account Sizes</td>
+          <td class="px-4 py-3 text-center text-slate-900">$50K – $150K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$25K – $150K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$50K – $150K</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Fee Range</td>
+          <td class="px-4 py-3 text-center text-slate-900">$80 – $220/mo</td>
+          <td class="px-4 py-3 text-center text-slate-900">$229 – $665</td>
+          <td class="px-4 py-3 text-center text-slate-900">$165 – $375/mo</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Max Contracts</td>
+          <td class="px-4 py-3 text-center text-slate-900">3 – 9</td>
+          <td class="px-4 py-3 text-center text-slate-900">1 – 9</td>
+          <td class="px-4 py-3 text-center text-slate-900">5 – 15</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Drawdown Mode</td>
+          <td class="px-4 py-3 text-center text-slate-900">EOD</td>
+          <td class="px-4 py-3 text-center text-slate-900">Static / EOD</td>
+          <td class="px-4 py-3 text-center text-slate-900">EOD</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Daily Drawdown</td>
+          <td class="px-4 py-3 text-center text-slate-900">Yes</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Target</td>
+          <td class="px-4 py-3 text-center text-slate-900">$3K – $9K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$1.5K – $9K/phase</td>
+          <td class="px-4 py-3 text-center text-slate-900">$4K – $12K</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Payout Schedule</td>
+          <td class="px-4 py-3 text-center text-slate-900">Performance Based</td>
+          <td class="px-4 py-3 text-center text-slate-900">Phase Payouts</td>
+          <td class="px-4 py-3 text-center text-slate-900">Every 14 Days</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Min. Payout</td>
+          <td class="px-4 py-3 text-center text-slate-900">$250</td>
+          <td class="px-4 py-3 text-center text-slate-400">Varies</td>
+          <td class="px-4 py-3 text-center text-slate-900">$1,000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 1. STARTER ACCOUNTS                                            -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">1</span>
+      Starter Accounts
+    </h3>
+
+    <p class="mb-3">
+      Starter accounts are designed for traders looking to manage a lower-risk account with manageable monthly fees. These accounts feature low monthly fees starting at $80/month for a $50K account, providing a cost-effective entry.
+    </p>
+    <p class="mb-4">
+      Contract limits range from 3 contracts for the $50K account to 9 contracts for the $150K account. A straightforward profit target and performance-based payout model with a minimum payout threshold of $250 makes it suitable for traders seeking steady growth.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Fee Type</p>
+        <p class="text-sm font-bold text-slate-800">Monthly</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Drawdown Mode</p>
+        <p class="text-sm font-bold text-slate-800">EOD</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
+        <p class="text-sm font-bold text-teal-600">100% first $10K</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min. Payout</p>
+        <p class="text-sm font-bold text-slate-800">$250</p>
+      </div>
+    </div>
+
+    <!-- Suited For -->
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
+      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
+      <p class="text-sm text-teal-700">Newer traders and those looking for a low-commitment, flexible account with straightforward rules and monthly payment flexibility.</p>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">Monthly Fee</th>
+            <th class="px-4 py-3 text-right">Max Contracts</th>
+            <th class="px-4 py-3 text-right">Max Drawdown</th>
+            <th class="px-4 py-3 text-right">Profit Target</th>
+            <th class="px-4 py-3 text-right">Daily Drawdown</th>
+            <th class="px-4 py-3 text-right">Min. Payout</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$80/mo</td>
+            <td class="px-4 py-3 text-right text-slate-700">3</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,200</td>
+            <td class="px-4 py-3 text-right text-slate-700">$250</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$150/mo</td>
+            <td class="px-4 py-3 text-right text-slate-700">6</td>
+            <td class="px-4 py-3 text-right text-slate-700">$3,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$6,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,400</td>
+            <td class="px-4 py-3 text-right text-slate-700">$250</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$150,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$220/mo</td>
+            <td class="px-4 py-3 text-right text-slate-700">9</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$9,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$3,600</td>
+            <td class="px-4 py-3 text-right text-slate-700">$250</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 2. MILESTONE ACCOUNTS                                          -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">2</span>
+      Milestone Accounts
+    </h3>
+
+    <p class="mb-3">
+      Milestone accounts provide a structured multi-phase evaluation, focusing on consistent performance and offering one-time fees rather than monthly commitments. This eliminates recurring costs, making it ideal for traders who prefer a fixed upfront fee.
+    </p>
+    <p class="mb-4">
+      Each phase has a set profit target, with payouts increasing after successful completion of each stage. A 20% consistency rule emphasises steady performance across trades.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Fee Type</p>
+        <p class="text-sm font-bold text-slate-800">One-Time</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Drawdown Mode</p>
+        <p class="text-sm font-bold text-slate-800">Static / EOD</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Consistency Rule</p>
+        <p class="text-sm font-bold text-slate-800">20%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Payout</p>
+        <p class="text-sm font-bold text-slate-800">Phase-Based</p>
+      </div>
+    </div>
+
+    <!-- Suited For -->
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
+      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
+      <p class="text-sm text-teal-700">Traders who favour a structured, multi-phase evaluation process and are comfortable with an upfront commitment, ideal for disciplined traders focusing on systematic progress.</p>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">One-Time Fee</th>
+            <th class="px-4 py-3 text-right">Max Contracts</th>
+            <th class="px-4 py-3 text-right">Max Drawdown</th>
+            <th class="px-4 py-3 text-right">Drawdown Mode</th>
+            <th class="px-4 py-3 text-right">Profit Target/Phase</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$229</td>
+            <td class="px-4 py-3 text-right text-slate-700">1</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">Static</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$445</td>
+            <td class="px-4 py-3 text-right text-slate-700">3</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">EOD</td>
+            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$555</td>
+            <td class="px-4 py-3 text-right text-slate-700">6</td>
+            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">EOD</td>
+            <td class="px-4 py-3 text-right text-slate-700">$6,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$150,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$665</td>
+            <td class="px-4 py-3 text-right text-slate-700">9</td>
+            <td class="px-4 py-3 text-right text-slate-700">$4,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">EOD</td>
+            <td class="px-4 py-3 text-right text-slate-700">$9,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 3. EXPERT ACCOUNTS                                             -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">3</span>
+      Expert Accounts
+    </h3>
+
+    <p class="mb-3">
+      Expert accounts are tailored for advanced traders, offering higher contract limits and a time-based payout structure that allows more frequent withdrawals. Contract limits go up to 15 contracts for the $150K account.
+    </p>
+    <p class="mb-4">
+      Payouts can be requested every 14 days, supporting traders looking for consistent, bi-weekly income. With profit targets scaled up to $12K for the largest account, this option suits those seeking higher profitability potential.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Fee Type</p>
+        <p class="text-sm font-bold text-slate-800">Monthly</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Contracts</p>
+        <p class="text-sm font-bold text-slate-800">Up to 15</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Payout Cycle</p>
+        <p class="text-sm font-bold text-teal-600">Every 14 Days</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min. Payout</p>
+        <p class="text-sm font-bold text-slate-800">$1,000</p>
+      </div>
+    </div>
+
+    <!-- Suited For -->
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
+      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
+      <p class="text-sm text-teal-700">Experienced traders looking to manage larger accounts with high trading frequency, interested in frequent payouts and a larger trading scope.</p>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">Monthly Fee</th>
+            <th class="px-4 py-3 text-right">Max Contracts</th>
+            <th class="px-4 py-3 text-right">Max Drawdown</th>
+            <th class="px-4 py-3 text-right">Profit Target</th>
+            <th class="px-4 py-3 text-right">Payout Cycle</th>
+            <th class="px-4 py-3 text-right">Min. Payout</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$165/mo</td>
+            <td class="px-4 py-3 text-right text-slate-700">5</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$4,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">14 Days</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$265/mo</td>
+            <td class="px-4 py-3 text-right text-slate-700">10</td>
+            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$8,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">14 Days</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$150,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$375/mo</td>
+            <td class="px-4 py-3 text-right text-slate-700">15</td>
+            <td class="px-4 py-3 text-right text-slate-700">$4,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$12,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">14 Days</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Buffer Zone -->
+    <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-5">
+      <p class="text-sm font-bold text-amber-900 mb-1">Buffer Zone Policy (Expert Plan Only)</p>
+      <p class="text-sm text-amber-800">
+        The Expert plan's buffer zone policy is designed to stabilise account balances. Required buffer levels vary by account size — <strong>$52,100</strong> for 50K accounts, <strong>$103,100</strong> for 100K accounts, and <strong>$154,600</strong> for 150K accounts. Once this buffer is met, traders can withdraw up to 60% of their profits. Each withdrawal resets the buffer level, forfeiting any remaining drawdown protection.
+      </p>
+    </div>
+
+    <!-- Account Closure Payouts -->
+    <div class="rounded-xl border border-amber-200 bg-amber-50 p-4">
+      <p class="text-sm font-bold text-amber-900 mb-1">Account Closure Payouts (Expert Plan Only)</p>
+      <p class="text-sm text-amber-800">
+        For traders wishing to close their accounts: within <strong>45 days</strong> you receive 20% of net reserves, between <strong>46–90 days</strong> you receive 50%, and accounts active for <strong>90+ days</strong> return 90% of net reserves, favouring long-term commitment.
+      </p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SCALING PLANS                                                   -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3">Scaling Plans</h3>
+    <p class="mb-3">
+      MyFundedFutures' Starter and Starter Plus accounts offer a structured scaling plan that lets you increase your contract limits as you hit profit milestones. For example, in the $50,000 account, you start with 1 mini and 10 micros for profits under $1,000.
+    </p>
+    <p class="mb-3">
+      As your profits grow, contract limits increase, with a cap at 3 minis and 30 micros once you reach $2,000–$4,000 in profit. Higher account sizes like $100,000 and $150,000 follow similar scaling steps but with larger contract allowances.
+    </p>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- VERDICT                                                         -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Challenges</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      While MyFundedFutures offers a variety of account options tailored to different trading styles, restrictive rules like consistency requirements and limited payout schedules may hinder flexibility. This setup suits traders who prefer structured and performance-driven evaluations but may not appeal to those seeking more adaptable conditions.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SPREADS / PRICING AND COMMISSION FEES SECTION                       */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "spreads" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-3">
+    MyFundedFutures offers a structured pricing model that includes one-off fees, monthly fees, and commission fees, which vary based on account type and futures contracts traded.
+  </p>
+
+  <!-- One-Off Fees -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">One-Off Fees</h3>
+  <p class="mb-4">
+    One-off fees apply to Milestone accounts. These are charged once at the beginning and cover the full evaluation and funding phases. This single-payment model can appeal to those who prioritise a clear, upfront cost without the commitment of regular payments.
+  </p>
+
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">$25K Milestone</p>
+      <p class="text-sm font-bold text-slate-800">$229</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">$50K Milestone</p>
+      <p class="text-sm font-bold text-slate-800">$445</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">$100K Milestone</p>
+      <p class="text-sm font-bold text-slate-800">$555</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">$150K Milestone</p>
+      <p class="text-sm font-bold text-slate-800">$665</p>
+    </div>
+  </div>
+
+  <!-- Monthly Fees -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Monthly Fees</h3>
+  <p class="mb-4">
+    Starter and Expert accounts use a monthly fee structure. Monthly fees allow traders to access funded trading without a larger upfront payment, but ongoing costs will accumulate over time.
+  </p>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account</th>
+          <th class="px-4 py-3 text-right">$50K</th>
+          <th class="px-4 py-3 text-right">$100K</th>
+          <th class="px-4 py-3 text-right">$150K</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Starter</td>
+          <td class="px-4 py-3 text-right text-slate-900">$80/mo</td>
+          <td class="px-4 py-3 text-right text-slate-900">$150/mo</td>
+          <td class="px-4 py-3 text-right text-slate-900">$220/mo</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Expert</td>
+          <td class="px-4 py-3 text-right text-slate-900">$165/mo</td>
+          <td class="px-4 py-3 text-right text-slate-900">$265/mo</td>
+          <td class="px-4 py-3 text-right text-slate-900">$375/mo</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Commission Fees -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Commission Fees</h3>
+  <p class="mb-4">
+    Commission fees are charged on a round-trip basis for each trade, varying by exchange, product, and contract size. The rates differ between Tradovate and Rithmic platforms.
+  </p>
+
+  <!-- Tradovate Commissions -->
+  <h4 class="text-base font-bold text-slate-900 mb-3">Tradovate Commission Fees</h4>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Exchange / Product</th>
+          <th class="px-4 py-3 text-left">Contract</th>
+          <th class="px-4 py-3 text-right">Round Trip</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">CME Equity</td>
+          <td class="px-4 py-3 text-slate-900">E-mini NASDAQ 100 (NQ)</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$4.26</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">CME Equity</td>
+          <td class="px-4 py-3 text-slate-900">E-mini S&P 500 (ES)</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$4.26</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">CME Equity</td>
+          <td class="px-4 py-3 text-slate-900">Micro E-mini S&P (MES)</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$1.42</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">CME Commodity</td>
+          <td class="px-4 py-3 text-slate-900">Soybeans (ZS) / Corn (ZC)</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$5.80</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">CME FX</td>
+          <td class="px-4 py-3 text-slate-900">Euro FX (6E) / Yen (6J)</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$4.80</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">CME FX</td>
+          <td class="px-4 py-3 text-slate-900">Micro EUR/USD (M6E)</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$1.20</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">CME Energy</td>
+          <td class="px-4 py-3 text-slate-900">Crude Oil (CL)</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$4.60</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">CME Energy</td>
+          <td class="px-4 py-3 text-slate-900">Micro Crude Oil (MCL)</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$1.72</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Rithmic Commissions -->
+  <h4 class="text-base font-bold text-slate-900 mb-3">Rithmic Commission Fees</h4>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Exchange / Product</th>
+          <th class="px-4 py-3 text-left">Contract</th>
+          <th class="px-4 py-3 text-right">Round Trip</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">CME Equity</td>
+          <td class="px-4 py-3 text-slate-900">E-mini NASDAQ 100 (NQ)</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$4.30</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">CME Equity</td>
+          <td class="px-4 py-3 text-slate-900">Micro E-mini S&P (MES)</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$1.30</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">CME Commodity</td>
+          <td class="px-4 py-3 text-slate-900">Soybeans (ZS) / Corn (ZC)</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$5.80</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">CME FX</td>
+          <td class="px-4 py-3 text-slate-900">Euro FX (6E)</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$4.80</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">CME FX</td>
+          <td class="px-4 py-3 text-slate-900">Micro EUR/USD (M6E)</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$1.20</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">CME Energy</td>
+          <td class="px-4 py-3 text-slate-900">Crude Oil (CL)</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$4.40</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">CME Energy</td>
+          <td class="px-4 py-3 text-slate-900">Micro Crude Oil (MCL)</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$1.60</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Pricing and Fees</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      The pricing structure provides flexibility with both monthly and one-off fee options. However, recurring costs for Starter and Expert accounts can accumulate over time, making Milestone's one-time fee appealing for traders preferring upfront payments. Commission fees align with industry norms, though they vary significantly by product and platform.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* MARKETS / FUTURES MARKETS SECTION                                   */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "markets" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    MyFundedFutures offers a broad selection of futures contracts across key asset classes, including equity indices, commodities, interest rates, foreign exchange, and energy. This wide range gives you access to everything from stock index futures and agricultural commodities to forex pairs and energy products.
+  </p>
+
+  <!-- Market cards -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">CME Equity Futures</p>
+      <p>E-mini NASDAQ 100 (NQ), E-mini Russell 2000 (RTY), E-mini S&P 500 (ES), Micro E-mini S&P 500 (MES) and more</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">CBOT Commodity Futures</p>
+      <p>Corn (ZC), Soybeans (ZS), Soybean Meal (ZM), Soybean Oil (ZL), Wheat (ZW)</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">CBOT Financial / Interest Rate</p>
+      <p>2-Year (ZT), 5-Year (ZF), 10-Year (ZN), 30-Year Bond (ZB), Ultra Bond (UB)</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">COMEX Metals</p>
+      <p>Gold (GC), Silver (SI), Copper (HG), Micro Gold (MGC), Micro Silver (SIL)</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">CME Foreign Exchange</p>
+      <p>Australian Dollar (6A), British Pound (6B), Euro FX (6E), Japanese Yen (6J), Micro EUR/USD (M6E)</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">NYMEX Energy Futures</p>
+      <p>Crude Oil (CL), Heating Oil (HO), Natural Gas (NG), Gasoline (RB), Micro Crude Oil (MCL)</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">CME Agriculture</p>
+      <p>Lean Hogs (HE), Live Cattle (LE)</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">CME Interest Rate</p>
+      <p>Eurodollar (GE) — widely used for short-term interest rate speculation and hedging</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Futures Markets</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      With a broad range of futures contracts across major asset classes, MyFundedFutures caters well to diverse trading preferences. The inclusion of both standard and micro contracts provides opportunities for traders of varying experience levels, making it a strong choice for futures market specialists.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PLATFORMS / TRADING PLATFORMS SECTION                                */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "platforms" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    At MyFundedFutures, traders can choose from a variety of trading platforms, including NinjaTrader, Tradovate, TradingView, Quantower, and other specialised options like Volumetrica, Volsys/Volbook, and ATAS.
+  </p>
+
+  <!-- Platform cards -->
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">NinjaTrader</p>
+      <p class="mb-2">One of the most popular platforms on MFFU due to its flexibility and advanced toolset. Known for analysis tools, user-friendly interface, and extensive customisation with automated trading through add-ons.</p>
+      <div class="flex flex-wrap gap-2 mt-2">
+        <span class="text-xs bg-teal-100 text-teal-700 px-2 py-0.5 rounded-full font-semibold">Advanced Charting</span>
+        <span class="text-xs bg-teal-100 text-teal-700 px-2 py-0.5 rounded-full font-semibold">Custom Indicators</span>
+        <span class="text-xs bg-teal-100 text-teal-700 px-2 py-0.5 rounded-full font-semibold">Strategy Automation</span>
+        <span class="text-xs bg-slate-200 text-slate-600 px-2 py-0.5 rounded-full font-semibold">Desktop</span>
+      </div>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Tradovate</p>
+      <p class="mb-2">Designed with simplicity in mind, providing an intuitive interface. Integrates with TradingView, enabling users to execute trades directly from TradingView's charting environment.</p>
+      <div class="flex flex-wrap gap-2 mt-2">
+        <span class="text-xs bg-teal-100 text-teal-700 px-2 py-0.5 rounded-full font-semibold">Browser-Based</span>
+        <span class="text-xs bg-teal-100 text-teal-700 px-2 py-0.5 rounded-full font-semibold">TradingView Integration</span>
+        <span class="text-xs bg-slate-200 text-slate-600 px-2 py-0.5 rounded-full font-semibold">Web / Desktop / Mobile</span>
+      </div>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">TradingView</p>
+      <p class="mb-2">Popular among traders who value chart analysis with a large library of indicators and drawing tools. Offers direct trading capabilities through integration with Tradovate.</p>
+      <div class="flex flex-wrap gap-2 mt-2">
+        <span class="text-xs bg-teal-100 text-teal-700 px-2 py-0.5 rounded-full font-semibold">Extensive Indicators</span>
+        <span class="text-xs bg-teal-100 text-teal-700 px-2 py-0.5 rounded-full font-semibold">Social Trading</span>
+        <span class="text-xs bg-slate-200 text-slate-600 px-2 py-0.5 rounded-full font-semibold">Web</span>
+      </div>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Quantower</p>
+      <p class="mb-2">A relatively new platform with a modern interface combining technical analysis capabilities with customisable layouts. Appealing to traders who want an adaptable environment with cutting-edge features.</p>
+      <div class="flex flex-wrap gap-2 mt-2">
+        <span class="text-xs bg-teal-100 text-teal-700 px-2 py-0.5 rounded-full font-semibold">Customisable Interface</span>
+        <span class="text-xs bg-teal-100 text-teal-700 px-2 py-0.5 rounded-full font-semibold">Advanced Analytics</span>
+        <span class="text-xs bg-slate-200 text-slate-600 px-2 py-0.5 rounded-full font-semibold">Desktop</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Other platforms -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Other Specialised Platforms</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Volumetrica</p>
+      <p>Volume analysis capabilities for order flow and market behaviour insights</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Volsys / Volbook</p>
+      <p>Real-time volume data and market-depth insights for depth-of-market analysis</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">ATAS</p>
+      <p>In-depth market analytics with an intuitive layout for advanced market dynamics</p>
+    </div>
+  </div>
+
+  <!-- Trading Rules -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules</h3>
+  <p class="mb-4">
+    MFFU enforces trading rules designed to ensure fair and consistent practices across its platform.
+  </p>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Rule</th>
+          <th class="px-4 py-3 text-left">Details</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Automated Scalping</td>
+          <td class="px-4 py-3 text-slate-700">Ultra-high-frequency scalping (200+ trades/day) restricted</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">AI / Bots</td>
+          <td class="px-4 py-3 text-slate-700">AI, bots, or fully automated systems prohibited across all accounts</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Semi-Automated</td>
+          <td class="px-4 py-3 text-slate-700">Allowed only if traders actively monitor and manually manage trades</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">News Trading</td>
+          <td class="px-4 py-3 text-slate-700">Restricted during tier 1 economic data releases</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Order Manipulation</td>
+          <td class="px-4 py-3 text-slate-700">Multiple limit orders at same price to manipulate fills prohibited</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Collaborative Trading</td>
+          <td class="px-4 py-3 text-slate-700">Coordinating complementary/opposing strategies across accounts forbidden</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Bracket Exploits</td>
+          <td class="px-4 py-3 text-slate-700">Using tight brackets to exploit slippage-free fills not permitted</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Warning -->
+  <div class="rounded-xl border border-red-200 bg-red-50 p-4 mb-6">
+    <p class="text-xs font-bold text-red-800 uppercase tracking-wide mb-1">Rule Violations</p>
+    <p class="text-sm text-red-700">If traders violate MFFU's rules, they may face immediate account termination, confiscation of profits gained through prohibited practices, and a review of passed evaluations which could result in loss of funding eligibility or denial of refunds.</p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trading Platforms</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      MyFundedFutures excels in platform variety, supporting popular choices like NinjaTrader and TradingView alongside niche options. This selection allows traders to choose tools based on their expertise and style. The platforms offer excellent analysis tools, though advanced features may require additional learning for beginners.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PAYOUTS / PAYMENTS AND PAYOUTS SECTION                              */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "payouts" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    MyFundedFutures supports payments via credit card, ACH, and cryptocurrency, with both monthly and one-time fee options depending on the account. You get to keep <strong>100% of your first $10,000 in profits</strong>, with flexible payout schedules.
+  </p>
+
+  <!-- Payout overview -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">First $10K Profit</p>
+      <p class="text-sm font-bold text-teal-600">100% Yours</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">After $10K</p>
+      <p class="text-sm font-bold text-teal-600">90% Split</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Starter Payout</p>
+      <p class="text-sm font-bold text-slate-800">Every 5 Win Days</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Expert Payout</p>
+      <p class="text-sm font-bold text-slate-800">Every 14 Days</p>
+    </div>
+  </div>
+
+  <!-- Account Fee Payments -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Account Fee Payments</h3>
+  <p class="mb-4">
+    MyFundedFutures accepts payments via debit or credit card, cryptocurrency, and ACH. ACH offers a <strong>5% discount</strong> on fees, making it the most cost-effective payment method.
+  </p>
+
+  <!-- Profit Sharing -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Profit Sharing and Payouts</h3>
+  <p class="mb-3">
+    In both the Starter and Expert plans, you keep <strong>100% of your initial $10,000</strong> in profits. Beyond this amount, you receive a <strong>90% profit split</strong>.
+  </p>
+
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Starter Plan Payouts</p>
+      <p>Payouts can be requested every five winning days, with minimum withdrawal thresholds set by account size ($100, $200, or $300). Traders must adhere to a <strong>40% consistency rule</strong> to qualify.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Expert Plan Payouts</p>
+      <p>Payouts are available bi-weekly, contingent on meeting a required account buffer. Minimum payout of <strong>$1,000</strong>, which may suit experienced traders but restricts those preferring smaller withdrawals.</p>
+    </div>
+  </div>
+
+  <!-- Buffer Zone -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Buffer Zone Policy (Expert Plan)</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Size</th>
+          <th class="px-4 py-3 text-right">Required Buffer</th>
+          <th class="px-4 py-3 text-right">Max Withdrawal</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$52,100</td>
+          <td class="px-4 py-3 text-right text-slate-700">60% of profits</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$103,100</td>
+          <td class="px-4 py-3 text-right text-slate-700">60% of profits</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$150,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$154,600</td>
+          <td class="px-4 py-3 text-right text-slate-700">60% of profits</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Account Closure -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Account Closure Payouts (Expert Plan)</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Duration</th>
+          <th class="px-4 py-3 text-right">Payout of Net Reserves</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Within 45 days</td>
+          <td class="px-4 py-3 text-right text-slate-900">20%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">46 – 90 days</td>
+          <td class="px-4 py-3 text-right text-slate-900">50%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">90+ days</td>
+          <td class="px-4 py-3 text-right font-semibold text-teal-600">90%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Payments and Payouts</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      The payout structure is generous, especially with the 100% profit retention for the first $10,000. However, payout frequency limitations and buffer requirements in the Expert plan may deter traders seeking smaller, more frequent withdrawals. The payment options are varied, catering to different trader preferences.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SUPPORT / CUSTOMER SUPPORT AND EDUCATION SECTION                    */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "support" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    MyFundedFutures offers basic chat-based support and a library of educational content, including YouTube tutorials and trading strategies. However, the lack of phone support and in-depth platform-specific resources may leave advanced traders seeking additional guidance.
+  </p>
+
+  <!-- Customer Support -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Customer Service</h3>
+  <p class="mb-4">
+    MyFundedFutures primarily relies on chat-based and FAQ support, which can be limiting for traders needing quick or personalised assistance. Although the chat bot covers basic queries by drawing from the FAQ, it's often repetitive and lacks depth for more complex issues. There's also no direct phone support.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Chat Support</p>
+      <p>Chat-based support available for basic queries, powered by FAQ content</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">FAQ Section</p>
+      <p>Covers common questions about accounts, rules, and payouts</p>
+    </div>
+  </div>
+
+  <!-- Education -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Educational Resources</h3>
+  <p class="mb-4">
+    MyFundedFutures offers educational resources through its YouTube channel, which has over <strong>31,000 subscribers</strong> and <strong>800+ videos</strong>. Content includes trading strategies, platform tutorials, and funded trader success stories.
+  </p>
+  <p class="mb-6">
+    While the material is helpful, it's more focused on general trading insights than in-depth platform guidance, so traders may need to seek external resources for advanced learning.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Support</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      The reliance on chat-based and FAQ support limits real-time problem-solving, particularly for complex issues. Educational resources, while comprehensive, are more general than platform-specific, leaving gaps for traders needing in-depth guidance. Improved accessibility would enhance the overall experience.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* TRUST / TRUST AND COMMUNITY SECTION                                 */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "trust" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    MyFundedFutures earns a high TrustPilot score and has a large, active Discord community, showcasing strong trader engagement. While positive reviews highlight reliable payouts and responsive support, some traders note issues with policy changes and delayed responses.
+  </p>
+
+  <!-- TrustPilot -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">TrustPilot Score</h3>
+
+  <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 mb-4 flex items-center gap-4">
+    <div class="flex-shrink-0">
+      <p class="text-3xl font-black text-slate-900">4.9<span class="text-lg text-slate-400">/5</span></p>
+      <p class="text-xs text-slate-500 font-semibold">TrustScore</p>
+    </div>
+    <div>
+      <p class="text-sm text-slate-700">Based on <strong>14,900+ reviews</strong> on Trustpilot. Most reviews are positive, especially highlighting responsive customer support and a reliable payout process.</p>
+    </div>
+  </div>
+
+  <p class="mb-6">
+    Some critical reviews mention recent policy changes and occasional support delays. Overall, the strong Trustpilot score reflects positive customer sentiment.
+  </p>
+
+  <!-- Community -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Community</h3>
+  <p class="mb-4">
+    The firm's Discord group has over <strong>74,000 members</strong>, providing a platform for traders to share insights, discuss strategies, and receive support. This active community is helpful for new traders seeking advice from more experienced members.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">74K+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Discord Members</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">78.4K+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Twitter/X Followers</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">40.6K+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Instagram Followers</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trust and Community</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      A strong TrustPilot score and an active Discord community reflect positive customer sentiment and engagement. However, mixed feedback on recent policy changes and support response times highlight areas for improvement. The community aspect remains a valuable resource for new traders.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* FALLBACK — sections not customised render the default text          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section !== "challenges" && section !== "spreads" && section !== "markets" && section !== "platforms" && section !== "payouts" && section !== "support" && section !== "trust" && fallbackBody && (
+  <div class="text-sm leading-relaxed text-slate-700 space-y-4">
+    {fallbackBody.split("\n\n").map((para) => (
+      <p set:html={para.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")} />
+    ))}
+  </div>
+)}

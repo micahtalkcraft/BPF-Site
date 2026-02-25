@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run lint:data:*)",
+      "Bash(node -e:*)",
+      "Bash(npx tsx:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run dev:*)",
+      "WebFetch(domain:bestpropfirms.com)",
+      "WebFetch(domain:www.bestpropfirms.com)",
+      "Bash(curl:*)",
+      "Bash(npx astro build:*)",
+      "Bash(npx astro dev:*)",
+      "Bash(python3 -c \" import sys, re html = sys.stdin.read\\(\\) # Find the first article \\(first card\\) m = re.search\\(r''<article.*?</article>'', html, re.DOTALL\\) if m: print\\(m.group\\(\\)[:3000]\\) else: print\\(''No article found''\\) \")",
+      "Bash(npx kill-port:*)",
+      "Bash(npm install:*)",
+      "Bash(python3:*)",
+      "Bash(ls:*)",
+      "Bash(awk:*)",
+      "Bash(FILEPATH=\"C:/Users/Admin/.claude/projects/c--Users-Admin-OneDrive-Documents-BPF-Site/724f3f43-adce-461b-846a-fd6844715778.jsonl\")",
+      "Bash(THEFILE=\"C:/Users/Admin/.claude/projects/c--Users-Admin-OneDrive-Documents-BPF-Site/724f3f43-adce-461b-846a-fd6844715778.jsonl\")",
+      "Bash(sitemap \")",
+      "Bash(node:*)",
+      "WebFetch(domain:propfirmmatch.com)",
+      "WebFetch(domain:thetrustedprop.com)",
+      "WebFetch(domain:fxprop.com)",
+      "WebFetch(domain:www.trustpilot.com)",
+      "WebFetch(domain:help.the5ers.com)",
+      "WebFetch(domain:www.start-business-online.com)",
+      "WebFetch(domain:www.surgefunded.com)",
+      "WebFetch(domain:the5ers-funded.in)",
+      "WebFetch(domain:www.forexpropfirms.com)",
+      "WebFetch(domain:www.quantvps.com)",
+      "Bash(python:*)",
+      "Bash(head:*)"
+    ]
+  }
+}

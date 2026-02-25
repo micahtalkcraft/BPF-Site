@@ -1,0 +1,964 @@
+---
+// Static editorial content for Alpha Capital
+// Supports multiple sections via the `section` prop
+interface Props {
+  section: string;
+  fallbackBody?: string;
+}
+const { section, fallbackBody } = Astro.props;
+---
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* CHALLENGES SECTION                                                  */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "challenges" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    Alpha Capital offers traders evaluations to access funded accounts through its 1-Step, 2-Step, and 3-Step challenges, with all options offering an 80% profit split once you reach a funded account. The 2-Step evaluations are further divided into Alpha Pro and Swing trading accounts.
+  </p>
+
+  <!-- Per-challenge summaries -->
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Alpha One – 1 Step</p>
+      <p>The fastest route to funding with a single-phase evaluation. No profit caps, and traders can request payouts on demand.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Alpha Pro – 2 Step</p>
+      <p>A balance between a quick challenge and a verification step to prove your skills over two phases.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Swing – 2 Step</p>
+      <p>Ideal for swing traders who do not want to be restricted by daily market closures. Allows overnight and weekend holding.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Alpha Three – 3 Step</p>
+      <p>Suited for traders wanting to prove long-term consistency and risk management before qualifying for a funded account.</p>
+    </div>
+  </div>
+
+  <!-- ─── Challenge Comparison Table ───────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Comparison</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-10">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Attribute</th>
+          <th class="px-4 py-3 text-center">Alpha One</th>
+          <th class="px-4 py-3 text-center">Alpha Pro</th>
+          <th class="px-4 py-3 text-center">Swing</th>
+          <th class="px-4 py-3 text-center">Alpha Three</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Steps</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">1 Step</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">2 Step</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">2 Step</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">3 Step</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Account Sizes</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5K – $200K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5K – $200K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5K – $200K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$10K – $200K</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Fees</td>
+          <td class="px-4 py-3 text-center text-slate-900">$50 – $997</td>
+          <td class="px-4 py-3 text-center text-slate-900">$50 – $997</td>
+          <td class="px-4 py-3 text-center text-slate-900">$70 – $1,097</td>
+          <td class="px-4 py-3 text-center text-slate-900">$67 – $697</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Target</td>
+          <td class="px-4 py-3 text-center text-slate-900">10%</td>
+          <td class="px-4 py-3 text-center text-slate-900">10% / 5%</td>
+          <td class="px-4 py-3 text-center text-slate-900">10% / 5%</td>
+          <td class="px-4 py-3 text-center text-slate-900">8% / 4% / 4%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Max Drawdown</td>
+          <td class="px-4 py-3 text-center text-slate-900">6%</td>
+          <td class="px-4 py-3 text-center text-slate-900">10%</td>
+          <td class="px-4 py-3 text-center text-slate-900">10%</td>
+          <td class="px-4 py-3 text-center text-slate-900">6%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Max Daily Drawdown</td>
+          <td class="px-4 py-3 text-center text-slate-900">4%</td>
+          <td class="px-4 py-3 text-center text-slate-900">5%</td>
+          <td class="px-4 py-3 text-center text-slate-900">5%</td>
+          <td class="px-4 py-3 text-center text-slate-900">4%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Split</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">80%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">80%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">80%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">80%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Weekend Holding</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">No</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">No</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">No</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 1. ALPHA ONE                                                    -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">1</span>
+      Alpha One – 1 Step
+    </h3>
+
+    <p class="mb-3">
+      The Alpha One challenge is the quickest way to become a funded Alpha Trader. It requires traders to pass a single evaluation phase to qualify for a funded account. There are no profit caps, and traders can request payouts on demand.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">6%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Daily Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">4%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
+        <p class="text-sm font-bold text-teal-600">80%</p>
+      </div>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">Fee</th>
+            <th class="px-4 py-3 text-right">Profit Target</th>
+            <th class="px-4 py-3 text-right">Max Drawdown</th>
+            <th class="px-4 py-3 text-right">Max Daily DD</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$50</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$300</td>
+            <td class="px-4 py-3 text-right text-slate-700">$200</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$97</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$600</td>
+            <td class="px-4 py-3 text-right text-slate-700">$400</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$197</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$297</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$497</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$6,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$4,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$200,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$997</td>
+            <td class="px-4 py-3 text-right text-slate-700">$20,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$12,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$8,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 2. ALPHA PRO                                                    -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">2</span>
+      Alpha Pro – 2 Step
+    </h3>
+
+    <p class="mb-3">
+      The Alpha Pro challenge consists of two evaluation phases before you qualify for a funded trading account. This challenge allows you to prove your consistency over multiple phases with a structured path and gradual qualification criteria.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 1 Target</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 2 Target</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Daily DD</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-3 py-3 text-left">Account Size</th>
+            <th class="px-3 py-3 text-right">Fee</th>
+            <th class="px-3 py-3 text-right">Target P1</th>
+            <th class="px-3 py-3 text-right">Target P2</th>
+            <th class="px-3 py-3 text-right">Max Drawdown</th>
+            <th class="px-3 py-3 text-right">Max Daily DD</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$50</td>
+            <td class="px-3 py-3 text-right text-slate-700">$500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$250</td>
+            <td class="px-3 py-3 text-right text-slate-700">$500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$250</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$97</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$500</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$197</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,250</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,250</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$297</td>
+            <td class="px-3 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$497</td>
+            <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$5,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$200,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$997</td>
+            <td class="px-3 py-3 text-right text-slate-700">$20,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$20,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 3. SWING                                                        -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">3</span>
+      Swing – 2 Step
+    </h3>
+
+    <p class="mb-3">
+      The Swing challenge follows the same two-step evaluation process as Alpha Pro, but it is designed for those who want more flexibility in their trading strategy. It allows you to hold positions overnight and through weekends.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 1 Target</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 2 Target</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Weekend Holding</p>
+        <p class="text-sm font-bold text-teal-600">Allowed</p>
+      </div>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-3 py-3 text-left">Account Size</th>
+            <th class="px-3 py-3 text-right">Fee</th>
+            <th class="px-3 py-3 text-right">Target P1</th>
+            <th class="px-3 py-3 text-right">Target P2</th>
+            <th class="px-3 py-3 text-right">Max Drawdown</th>
+            <th class="px-3 py-3 text-right">Max Daily DD</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$70</td>
+            <td class="px-3 py-3 text-right text-slate-700">$500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$250</td>
+            <td class="px-3 py-3 text-right text-slate-700">$500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$250</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$147</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$500</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$247</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,250</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,250</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$357</td>
+            <td class="px-3 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$577</td>
+            <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$5,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$200,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$1,097</td>
+            <td class="px-3 py-3 text-right text-slate-700">$20,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$20,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 4. ALPHA THREE                                                  -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">4</span>
+      Alpha Three – 3 Step
+    </h3>
+
+    <p class="mb-3">
+      The Alpha Three challenge is a structured three-phase evaluation, requiring you to meet profit targets over an extended period. This plan is ideal if you are looking for a gradual, disciplined approach to becoming a funded trader.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Step 1 Target</p>
+        <p class="text-sm font-bold text-slate-800">8%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Step 2 Target</p>
+        <p class="text-sm font-bold text-slate-800">4%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Step 3 Target</p>
+        <p class="text-sm font-bold text-slate-800">4%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">6%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Daily DD</p>
+        <p class="text-sm font-bold text-slate-800">4%</p>
+      </div>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-3 py-3 text-left">Account Size</th>
+            <th class="px-3 py-3 text-right">Fee</th>
+            <th class="px-3 py-3 text-right">Target S1</th>
+            <th class="px-3 py-3 text-right">Target S2</th>
+            <th class="px-3 py-3 text-right">Target S3</th>
+            <th class="px-3 py-3 text-right">Max Drawdown</th>
+            <th class="px-3 py-3 text-right">Max Daily DD</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$67</td>
+            <td class="px-3 py-3 text-right text-slate-700">$800</td>
+            <td class="px-3 py-3 text-right text-slate-700">$400</td>
+            <td class="px-3 py-3 text-right text-slate-700">$400</td>
+            <td class="px-3 py-3 text-right text-slate-700">$600</td>
+            <td class="px-3 py-3 text-right text-slate-700">$400</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$157</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$247</td>
+            <td class="px-3 py-3 text-right text-slate-700">$4,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$3,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$397</td>
+            <td class="px-3 py-3 text-right text-slate-700">$8,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$4,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$4,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$6,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$4,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$200,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$697</td>
+            <td class="px-3 py-3 text-right text-slate-700">$16,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$8,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$8,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$12,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$8,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SCALING PLAN                                                    -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3">Scaling Plan</h3>
+    <p class="mb-3">
+      Alpha Capital offers a scaling plan designed for traders who consistently grow their accounts, with a maximum scaling of <strong>$2 million</strong> across all accounts.
+    </p>
+    <p class="mb-3">
+      The scaling plan works by rewarding traders with a <strong>10% increase</strong> in account size each time they achieve a 10% gain on their account balance. Unlike other prop firms, Alpha Capital allows traders to request their performance fee and scale up simultaneously.
+    </p>
+
+    <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 mb-4">
+      <p class="text-xs font-bold text-slate-800 uppercase tracking-wide mb-2">How Scaling Works</p>
+      <ol class="list-decimal list-inside space-y-1 text-sm text-slate-700">
+        <li>Achieve a 10% gain on the account balance</li>
+        <li>Request a scale-up — increases the account by 10% of the initial balance</li>
+        <li>Withdraw performance fees and scale at the same time</li>
+        <li>After the second scale-up, max lot size increases by 10%</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Challenges</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Alpha Capital offers flexible challenges and competitive challenge fees from $50. Alpha One is the fastest evaluation, Alpha Pro is structured, Swing allows overnight holds, and Alpha Three rewards consistency. The scaling plan supports growth up to $2 million, catering to those who want to continually build their funded accounts.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SPREADS / COMMISSION FEES & PRICING SECTION                         */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "spreads" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-3">
+    Alpha Capital is broker-backed through its partnership with <strong>ACG Markets</strong>, an FSA-regulated brokerage that provides liquidity, pricing, and trade execution.
+  </p>
+  <p class="mb-3">
+    It advertises raw spreads and commission-free trading, but these terms are somewhat contradictory. Typically, raw spreads come directly from liquidity providers with commissions added, while commission-free trading often involves spread markups.
+  </p>
+  <p class="mb-4">
+    Despite its brokerage backing, Alpha Capital does not disclose minimum or average spreads per instrument, only stating that spreads start from <strong>0.1 pips</strong>. Without transparency on true trading costs, traders cannot verify whether they are receiving consistently competitive pricing.
+  </p>
+
+  <!-- Warning -->
+  <div class="rounded-xl border border-red-200 bg-red-50 p-4 mb-6">
+    <p class="text-sm font-bold text-red-900 mb-1">Transparency Concern</p>
+    <p class="text-sm text-red-800">
+      Alpha Capital claims both "raw spreads" and "commission-free trading" simultaneously. These two claims are typically contradictory — raw spreads usually come with commission, while commission-free usually means wider spreads. No detailed spread data is published.
+    </p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-red-500 bg-red-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-red-800 mb-1">Verdict on Fees and Pricing</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Alpha Capital operates in a simulated environment, with no real-money trading at the funded stage. Their claim of raw spreads and commission-free trading is confusing, as these typically don't go together. Without published spread data, traders cannot assess the true cost of trading.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* MARKETS / FINANCIAL MARKETS & LEVERAGE SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "markets" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Alpha Capital offers trading across Forex, commodities, and indices, though the number of available instruments is more limited compared to some other proprietary firms.
+  </p>
+
+  <!-- Instrument cards -->
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+    <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900 mb-1">30+</p>
+      <p class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Forex Pairs</p>
+      <p class="text-xs text-slate-400 mt-1">Major, minor, and some exotics</p>
+    </div>
+    <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900 mb-1">4</p>
+      <p class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Commodities</p>
+      <p class="text-xs text-slate-400 mt-1">Gold, Silver, UKOIL, USSOIL</p>
+    </div>
+    <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900 mb-1">8</p>
+      <p class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Indices</p>
+      <p class="text-xs text-slate-400 mt-1">US30, NAS100, GER30 + more</p>
+    </div>
+  </div>
+
+  <!-- Leverage table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Leverage by Account Type</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Asset Class</th>
+          <th class="px-4 py-3 text-center">Pro Accounts</th>
+          <th class="px-4 py-3 text-center">Swing Accounts</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Forex</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">1:100</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:30</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Metals</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:30</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:9</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Oil</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:20</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:10</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Indices</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:20</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:10</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-red-500 bg-red-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-red-800 mb-1">Verdict on Markets</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      While Alpha Capital provides access to multiple asset classes, its total number of available instruments is lower than many competitors. Forex traders benefit from high leverage on Pro accounts, but commodity, index, and metal traders have limited financial markets to choose from.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PLATFORMS / TRADING PLATFORMS SECTION                                */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "platforms" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Alpha Capital provides access to <strong>MetaTrader 5 (MT5)</strong>, <strong>cTrader</strong>, and <strong>DXTrade</strong> as its trading platforms. However, U.S. residents are restricted to using DXTrade only, and Expert Advisors and automated trading are only available on MT5.
+  </p>
+
+  <!-- Platform cards -->
+  <div class="space-y-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">MetaTrader 5 (MT5)</p>
+      <p>A widely used trading platform with advanced charting tools, algorithmic trading support, and multiple timeframes. Best suited for traders who rely on expert advisors (EAs) and automated strategies.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">cTrader</p>
+      <p>Known for its user-friendly interface, one-click trading, and Level II pricing. Favored by scalpers and day traders who need fast execution and market depth visibility.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">DXTrade</p>
+      <p>A less common platform providing basic charting and order execution. Since it is the only available platform for U.S. residents, traders from the U.S. must adapt to its more limited functionalities.</p>
+      <p class="text-xs text-red-600 font-semibold mt-1">US residents restricted to DXTrade only</p>
+    </div>
+  </div>
+
+  <!-- Additional tools -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Additional Tools</h3>
+  <p class="mb-4">
+    In addition to platform access, Alpha Capital integrates <strong>Autochartist</strong>, providing automated technical analysis, chart pattern recognition, and key market insights. Traders also have access to a market screener, economic calendar, trading journal, and live market data tools.
+  </p>
+
+  <!-- Simulated environment warning -->
+  <div class="rounded-xl border border-red-200 bg-red-50 p-4 mb-6">
+    <p class="text-sm font-bold text-red-900 mb-1">Simulated Environment</p>
+    <p class="text-sm text-red-800">
+      While Alpha Capital offers multiple platforms and trading tools, it does not provide direct broker-backed accounts or real-money execution at the funded stage. All trading takes place in a simulated environment.
+    </p>
+  </div>
+
+  <!-- Trading rules -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Rule</th>
+          <th class="px-4 py-3 text-center">Status</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Expert Advisors (EAs)</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Allowed (MT5 only)</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Copy Trading</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">Not Allowed</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Weekend Holding</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Swing accounts only</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">HFT / Latency Arbitrage</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">Prohibited</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">40% Best Day Rule</td>
+          <td class="px-4 py-3 text-center"><span class="text-amber-600 font-semibold">Required</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trading Platforms</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Alpha Capital offers a solid selection of trading platforms, but the DXTrade restriction for US residents may be limiting. The addition of Autochartist and market analysis tools is a plus, though traders should consider that all executions occur in a simulated trading environment, not live markets.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PAYOUTS / PAYMENTS & PROFIT PAYOUT SECTION                          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "payouts" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Alpha Capital allows traders to withdraw their profits, referred to as performance fees. Traders can choose between <strong>on-demand payouts</strong> or <strong>bi-weekly scheduled withdrawals</strong>, but must meet specific conditions.
+  </p>
+
+  <!-- Payout overview grid -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
+      <p class="text-sm font-bold text-teal-600">80%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Payout Options</p>
+      <p class="text-sm font-bold text-slate-800">On-Demand / Bi-weekly</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Processing</p>
+      <p class="text-sm font-bold text-slate-800">2 business days</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Withdrawal</p>
+      <p class="text-sm font-bold text-slate-800">$100</p>
+    </div>
+  </div>
+
+  <!-- On-Demand payouts -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">On-Demand Profit Payouts</h3>
+  <p class="mb-3">Traders can request a profit withdrawal at any time, provided they meet these conditions:</p>
+  <ul class="list-disc list-inside space-y-1 mb-6 text-slate-700">
+    <li>Must follow the <strong>40% Best Day Rule</strong> — no single trading day can contribute more than 40% of total profits</li>
+    <li>A minimum of <strong>2% of gross profits</strong> must be in the account balance before withdrawal</li>
+  </ul>
+
+  <!-- Bi-Weekly payouts -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Bi-Weekly Profit Payouts</h3>
+  <p class="mb-6">
+    Scheduled withdrawals every <strong>14 days</strong>, with a minimum withdrawal of <strong>$100</strong> in virtual profit. The first withdrawal requires at least <strong>5 active trading days</strong>.
+  </p>
+
+  <!-- Payment methods -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payment Methods</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-5 py-3 text-left">Method</th>
+          <th class="px-5 py-3 text-left">Details</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">Rise (Riseworks)</td>
+          <td class="px-5 py-3 text-slate-700">Primary payout method; supports crypto via platform</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">Wise (TransferWise)</td>
+          <td class="px-5 py-3 text-slate-700">International bank transfers at competitive rates</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">Bank Wire</td>
+          <td class="px-5 py-3 text-slate-700">Standard bank wire transfer</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="mb-6 text-xs text-slate-500">
+    Direct cryptocurrency withdrawals are not supported, but traders can use Riseworks to facilitate crypto payouts.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Payments and Payouts</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Alpha Capital offers flexible withdrawal options and quick processing times, but traders must meet strict eligibility conditions such as the 40% Best Day Rule and minimum trading days. The lack of direct crypto withdrawals may be a downside, though multiple fiat payment options are available.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SUPPORT / CUSTOMER SERVICE & EDUCATION SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "support" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Alpha Capital provides customer support through email, live chat, and Discord, with service available <strong>Monday to Friday from 08:00 to 20:00 GMT</strong>. Response times may be delayed on weekends.
+  </p>
+
+  <!-- Support channels -->
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Email</p>
+      <p class="text-slate-700">Standard support inquiries</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Live Chat</p>
+      <p class="text-slate-700">Real-time assistance via website</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Discord</p>
+      <p class="text-slate-700">Community support and updates</p>
+    </div>
+  </div>
+
+  <!-- Education -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Educational Resources</h3>
+  <p class="mb-4">
+    The firm does not offer structured educational programs, but traders have access to market analysis tools like <strong>Autochartist</strong>, a trading journal, and an economic calendar to aid their decision-making.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Support</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Alpha Capital offers multiple support channels, but weekend response times may be slow. While traders have access to analysis tools, there is no formal educational content for skill development.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* TRUST / TRUST & COMMUNITY SECTION                                   */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "trust" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Alpha Capital promotes a strong trader community with an active Discord group and a 4.7 TrustPilot rating. However, a significant number of negative reviews raise concerns about payout denials, unexpected account closures, and strict KYC enforcement only after traders pass the challenge.
+  </p>
+
+  <!-- Trustpilot -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">TrustPilot Score</h3>
+  <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 mb-4 flex items-center gap-4">
+    <div class="flex-shrink-0">
+      <p class="text-3xl font-black text-slate-900">4.7<span class="text-lg text-slate-400">/5</span></p>
+      <p class="text-xs text-slate-500 font-semibold">TrustScore</p>
+    </div>
+    <div>
+      <p class="text-sm text-slate-700">While Alpha Capital holds a 4.7 rating on TrustPilot, <strong>7% of reviews are 1-star</strong>, with many traders reporting sudden account terminations and denied withdrawals.</p>
+    </div>
+  </div>
+
+  <!-- Complaint highlights -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Common Complaints</h3>
+  <div class="space-y-3 mb-6">
+    <div class="rounded-lg bg-red-50 border border-red-200 p-4">
+      <p class="font-bold text-red-900 mb-1">Payout Denials</p>
+      <p class="text-sm text-red-800">Some traders report that after passing the challenge, they were accused of KYC breaches or trading from multiple locations without clear evidence, leading to account closures with no refunds.</p>
+    </div>
+    <div class="rounded-lg bg-red-50 border border-red-200 p-4">
+      <p class="font-bold text-red-900 mb-1">Sudden Account Closures</p>
+      <p class="text-sm text-red-800">Others state that payout conditions changed after they became eligible, requiring unexpected risk interviews that resulted in disqualifications.</p>
+    </div>
+    <div class="rounded-lg bg-red-50 border border-red-200 p-4">
+      <p class="font-bold text-red-900 mb-1">KYC Enforcement Issues</p>
+      <p class="text-sm text-red-800">Strict KYC enforcement appears to be applied only after traders pass challenges, not during the sign-up process, raising concerns about fairness.</p>
+    </div>
+    <div class="rounded-lg bg-red-50 border border-red-200 p-4">
+      <p class="font-bold text-red-900 mb-1">Discord Censorship</p>
+      <p class="text-sm text-red-800">Traders who raise concerns about payout issues or account closures report being removed from the Discord server and blocked from further communication.</p>
+    </div>
+  </div>
+
+  <!-- Community stats -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Community & Social Media</h3>
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">106.5K</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Discord Members</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">87.8K</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Twitter/X Followers</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">90.4K</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Instagram Followers</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">35.5K</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">YouTube Subscribers</p>
+    </div>
+  </div>
+
+  <!-- Popularity note -->
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
+    <p class="text-sm font-bold text-amber-900 mb-1">Popularity vs Trust</p>
+    <p class="text-sm text-amber-800">
+      Alpha Capital averages <strong>49,500 monthly Google searches</strong> (10th globally) and over <strong>616,000 monthly visitors</strong> (12th in site traffic). However, its high visibility may be driven more by aggressive marketing and giveaway campaigns than long-term trader satisfaction.
+    </p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-red-500 bg-red-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-red-800 mb-1">Verdict on Trust and Community</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Despite its high TrustPilot rating and large community, Alpha Capital faces serious accusations regarding payout reliability and account closures. Many traders allege unfair enforcement of KYC and IP rules, often after passing challenges, with little opportunity to dispute decisions.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* FALLBACK — sections not customised render the default text          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section !== "challenges" && section !== "spreads" && section !== "markets" && section !== "platforms" && section !== "payouts" && section !== "support" && section !== "trust" && fallbackBody && (
+  <div class="text-sm leading-relaxed text-slate-700 space-y-4">
+    {fallbackBody.split("\n\n").map((para) => (
+      <p set:html={para.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")} />
+    ))}
+  </div>
+)}

@@ -1,0 +1,69 @@
+{
+  "id": "rev-funding-pips",
+  "propFirmId": "d0000021-0000-0000-0000-000000000021",
+  "summary": "Funding Pips scored 62/100 in our review, offering strong platform variety, multiple challenge types, and up to 100% profit splits. While rule clarity and support could improve, it's a decent option for traders who understand the prop firm's trading rules.",
+  "pros": [
+    "MT5, Match-Trader, and cTrader available",
+    "Profit splits scale up to 100%",
+    "Competitive leverage for Pro Account",
+    "Multiple challenge types including instant funding"
+  ],
+  "cons": [
+    "$20 fee required to access cTrader",
+    "Support is slow and often evasive",
+    "Limited time challenges have unclear or shifting rules",
+    "Post-funding rules are stricter than evaluation rules"
+  ],
+  "bestFor": "Experienced traders who understand prop firm rules and want multiple challenge options with scaling potential",
+  "notIdealFor": "Beginners or traders who want fully transparent, consistent rules from evaluation through to funded accounts",
+  "overallScore": 62,
+  "categoryScores": {
+    "challenges": 60,
+    "spreads": 60,
+    "markets": 60,
+    "payouts": 70,
+    "platforms": 60,
+    "trust": 60
+  },
+  "categorySections": {
+    "challenges": "custom",
+    "spreads": "custom",
+    "markets": "custom",
+    "platforms": "custom",
+    "payouts": "custom",
+    "support": "custom",
+    "trust": "custom"
+  },
+  "verdictBlocks": [
+    {
+      "heading": "Our Verdict: 62/100",
+      "body": "Funding Pips scored 62/100 overall in our review, with average or below-average ratings across every key category. The prop trading firm's challenge structure is a relative strength, offering variety and scaling potential. However, this is offset by ever-changing limited time models and stricter risk rules introduced only after traders are funded.\n\nThe firm also earned 6/10 for Trust due to a history of rule enforcement issues, negative trader reviews, and the temporary suspension of its Trustpilot account. Other categories like Platforms, Payouts, and Markets sit between 6/10 and 7/10, reflecting inconsistent experiences and lack of clear disclosures.\n\nOverall, while Funding Pips has scale and visibility, its operational inconsistencies, hidden conditions, and support issues make it difficult to recommend over more transparent, broker-backed alternatives like DNA Funded or BrightFunded."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is Funding Pips a good prop firm?",
+      "a": "Funding Pips received a 62/100 score in our review, making it an average-rated prop firm with both strengths and significant drawbacks. It offers multiple challenge types, scaling potential, and access to MT5, Match-Trader, and cTrader. However, inconsistent rule enforcement, payout clarity issues, and support concerns still affect overall trust."
+    },
+    {
+      "q": "Who is the owner of Funding Pips?",
+      "a": "The owner of Funding Pips is Khaled Ayesh, based in Dubai. In 2024, the firm faced major disruptions after MetaQuotes cut services due to regulatory issues, and it also lost its partnership with BlackBull Markets."
+    },
+    {
+      "q": "How long does Funding Pips payout take to process?",
+      "a": "Funding Pips processes most payouts within 1 to 3 business days, depending on your model and chosen withdrawal method. Instant payouts to Visa or Mastercard are now available and typically arrive within 30 minutes once approved."
+    },
+    {
+      "q": "How long has Funding Pips been around?",
+      "a": "Funding Pips launched in 2020 but temporarily shut down in 2024 due to MetaQuotes-related issues. It later resumed operations with alternative platforms."
+    },
+    {
+      "q": "What is the 10 lot rule for Funding Pips?",
+      "a": "The 10-lot rule previously limited traders to opening a total of 10 lots per day. However, this restriction no longer applies to new 1-Step accounts, as Funding Pips has officially removed the daily lot cap for those purchases."
+    }
+  ],
+  "verified": true,
+  "flagged": false,
+  "methodologyVersion": "1.0",
+  "lastReviewedAt": "2026-02-24"
+}

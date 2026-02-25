@@ -1,0 +1,1087 @@
+---
+// Static editorial content for Funded Trading Plus
+// Supports multiple sections via the `section` prop
+interface Props {
+  section: string;
+  fallbackBody?: string;
+}
+const { section, fallbackBody } = Astro.props;
+---
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* CHALLENGES SECTION                                                  */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "challenges" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    FTP offers six different prop models, ranging from instant funding to one step and two step challenges. You can choose between trailing or static drawdown models, depending on how you prefer risk to be calculated, and each program comes with different profit targets, loss limits, and payout structures.
+  </p>
+
+  <!-- Per-challenge summaries -->
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Master – Instant Funding</p>
+      <p>No evaluation or profit targets, but the strictest risk rules with tight trailing drawdown limits. Account sizes from $5,000 to $100,000.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Skip the evaluation entirely and start trading immediately</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Experienced – 1 Step Challenge</p>
+      <p>A one step challenge with trailing drawdown and a single 10% profit target. Account sizes from $12,500 to $200,000. FTP's most popular option.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">No minimum trading days, no consistency rules, no time limits</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Advanced – 2 Step (Trailing Drawdown)</p>
+      <p>Traditional two step structure with 10% and 5% profit targets. More relaxed drawdown rules with 5% daily trailing and 10% max trailing.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Best suited for swing traders or higher timeframe strategies</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Premium – 2 Step (Trailing Drawdown)</p>
+      <p>Lower profit targets of 8% and 5% but tighter drawdown limits of 4% daily and 8% max trailing. Requires 3 minimum profitable trading days.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">For traders who prioritise lower targets over drawdown flexibility</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Prestige Lite – 2 Step (Static Drawdown)</p>
+      <p>Fixed drawdown model with 6% profit targets in both steps, 3% daily and 6% overall static loss limits. Lower 80% profit split.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">For traders who dislike trailing drawdown and prefer known risk limits</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Prestige Pro – 2 Step (Static Drawdown)</p>
+      <p>Most generous static drawdown model with 10% and 5% targets, 5% daily and 10% overall static drawdown. Flexible payout options.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">65% every 7 days or 80% every 14 days payout options</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 1. MASTER TRADER PROGRAM                                        -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">1</span>
+      Master Trader Program – Instant Funding
+    </h3>
+
+    <p class="mb-3">
+      The Master account skips the evaluation entirely and provides instant access to a funded account. There are no profit targets and no time limits, but this comes with the strictest risk controls across all FTP programs.
+    </p>
+    <p class="mb-3">
+      Both the daily and maximum loss limits are set at 6% trailing drawdown, meaning the drawdown threshold moves up as your equity increases. This requires consistent risk management, as aggressive position sizing can quickly lead to a breach even on profitable accounts.
+    </p>
+    <p class="mb-4">
+      The Master account is best suited to experienced traders who are confident in their execution and want to start withdrawing profits immediately, rather than spending time in an evaluation phase.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Evaluation</p>
+        <p class="text-sm font-bold text-teal-600">None (Instant)</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
+        <p class="text-sm font-bold text-slate-800">No Target</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Daily Loss</p>
+        <p class="text-sm font-bold text-slate-800">6% (Trailing)</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Total Loss</p>
+        <p class="text-sm font-bold text-slate-800">6% (Trailing)</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Scaling Plan</p>
+        <p class="text-sm font-bold text-teal-600">Every 10% profit</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Stop Loss Required</p>
+        <p class="text-sm font-bold text-slate-800">No</p>
+      </div>
+    </div>
+
+    <!-- Suited For -->
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
+      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
+      <p class="text-sm text-teal-700">Experienced traders who are confident in their execution and want to start withdrawing profits immediately, rather than spending time in an evaluation phase.</p>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm whitespace-nowrap">
+        <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">Fee</th>
+            <th class="px-4 py-3 text-right">Profit Target</th>
+            <th class="px-4 py-3 text-right">Max Loss</th>
+            <th class="px-4 py-3 text-right">Daily Loss</th>
+            <th class="px-4 py-3 text-right">Scaling</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$225</td>
+            <td class="px-4 py-3 text-right text-slate-400">No target</td>
+            <td class="px-4 py-3 text-right text-slate-700">$300</td>
+            <td class="px-4 py-3 text-right text-slate-700">$300</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">Every 10%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$450</td>
+            <td class="px-4 py-3 text-right text-slate-400">No target</td>
+            <td class="px-4 py-3 text-right text-slate-700">$600</td>
+            <td class="px-4 py-3 text-right text-slate-700">$600</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">Every 10%</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$1,125</td>
+            <td class="px-4 py-3 text-right text-slate-400">No target</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">Every 10%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$2,250</td>
+            <td class="px-4 py-3 text-right text-slate-400">No target</td>
+            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">Every 10%</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$4,500</td>
+            <td class="px-4 py-3 text-right text-slate-400">No target</td>
+            <td class="px-4 py-3 text-right text-slate-700">$6,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$6,000</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">Every 10%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 2. EXPERIENCED                                                  -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">2</span>
+      Experienced – One Step
+    </h3>
+
+    <p class="mb-3">
+      The Experienced challenge is FTP's one step evaluation and also its most popular option. You need to hit a single 10% profit target while respecting a 4% daily trailing drawdown and 6% maximum trailing drawdown.
+    </p>
+    <p class="mb-3">
+      There are no minimum trading days, no consistency rules, and no time limits, allowing skilled traders to pass quickly if their strategy performs well. Once funded, traders can request withdrawals from day one and scale their account as profits grow.
+    </p>
+    <p class="mb-4">
+      This challenge is designed for traders who want a fast path to funding but are comfortable managing the tighter constraints of a trailing drawdown.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Drawdown Type</p>
+        <p class="text-sm font-bold text-slate-800">Trailing</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Daily Loss</p>
+        <p class="text-sm font-bold text-slate-800">4%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Total Loss</p>
+        <p class="text-sm font-bold text-slate-800">6%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Trading Days</p>
+        <p class="text-sm font-bold text-teal-600">None</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Time Limit</p>
+        <p class="text-sm font-bold text-teal-600">Unlimited</p>
+      </div>
+    </div>
+
+    <!-- Suited For -->
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
+      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
+      <p class="text-sm text-teal-700">Traders who want a fast path to funding with no time pressure, no minimum days, and no consistency rules. Ideal for confident manual traders comfortable managing trailing drawdown.</p>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm whitespace-nowrap">
+        <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">Fee</th>
+            <th class="px-4 py-3 text-right">Profit Target</th>
+            <th class="px-4 py-3 text-right">Max Total Loss</th>
+            <th class="px-4 py-3 text-right">Daily Loss</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$12,500</td>
+            <td class="px-4 py-3 text-right text-slate-900">$119</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$750</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$199</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$349</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$499</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$6,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$4,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$200,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$949</td>
+            <td class="px-4 py-3 text-right text-slate-700">$20,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$12,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$8,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 3. ADVANCED                                                     -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">3</span>
+      Advanced – Two Step (Trailing Drawdown)
+    </h3>
+
+    <p class="mb-3">
+      The Advanced challenge follows a traditional two step structure, with a 10% profit target in Phase 1 and 5% in Phase 2. Risk rules are more forgiving than the Experienced or Premium models, with a 5% daily trailing drawdown and 10% maximum trailing drawdown.
+    </p>
+    <p class="mb-4">
+      This extra drawdown buffer makes the Advanced challenge more suitable for swing traders or those trading higher timeframes, where equity fluctuations are more common. It's a good middle ground for traders who want more breathing room without switching to a static drawdown model.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 1 Target</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 2 Target</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Drawdown Type</p>
+        <p class="text-sm font-bold text-slate-800">Trailing</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Daily Loss</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Total Loss</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Trading Days</p>
+        <p class="text-sm font-bold text-teal-600">None</p>
+      </div>
+    </div>
+
+    <!-- Suited For -->
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
+      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
+      <p class="text-sm text-teal-700">Swing traders or those trading higher timeframes who want more drawdown breathing room without switching to a static drawdown model.</p>
+    </div>
+
+    <!-- Weekend restriction -->
+    <div class="rounded-xl bg-red-50 border border-red-200 p-4 mb-5">
+      <p class="text-xs font-bold text-red-800 uppercase tracking-wide mb-1">Restriction</p>
+      <p class="text-sm text-red-700">Positions must be closed before the Friday market close. Weekend holding is not allowed on Advanced accounts.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 4. PREMIUM                                                      -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">4</span>
+      Premium – Two Step (Trailing Drawdown)
+    </h3>
+
+    <p class="mb-3">
+      The Premium challenge is also a two step evaluation but lowers the profit targets to 8% in Phase 1 and 5% in Phase 2, while tightening the drawdown limits to 4% daily and 8% maximum trailing drawdown.
+    </p>
+    <p class="mb-4">
+      This structure reduces the performance hurdle but demands stricter risk control. Premium is aimed at traders who prioritise lower targets over drawdown flexibility, and who prefer a more controlled equity curve throughout the evaluation.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 1 Target</p>
+        <p class="text-sm font-bold text-slate-800">8%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 2 Target</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Drawdown Type</p>
+        <p class="text-sm font-bold text-slate-800">Trailing</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Daily Loss</p>
+        <p class="text-sm font-bold text-slate-800">4%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Total Loss</p>
+        <p class="text-sm font-bold text-slate-800">8%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Trading Days</p>
+        <p class="text-sm font-bold text-slate-800">3 profitable days</p>
+      </div>
+    </div>
+
+    <!-- Suited For -->
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
+      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
+      <p class="text-sm text-teal-700">Traders who prioritise lower profit targets over drawdown flexibility, and who prefer a more controlled equity curve throughout the evaluation.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 5. PRESTIGE LITE                                                -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">5</span>
+      Prestige Lite – Two Step (Static Drawdown)
+    </h3>
+
+    <p class="mb-3">
+      Prestige Lite is FTP's lower-cost static drawdown option. It uses a fixed drawdown model, meaning your maximum loss limit does not move up as your equity grows.
+    </p>
+    <p class="mb-4">
+      This challenge requires 6% profit targets in both steps, with 3% daily and 6% overall static loss limits. The trade-off is a lower 80% profit split, compared to the higher splits available on other programs. This model suits traders who dislike trailing drawdown and prefer knowing their maximum risk from the start.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 1 Target</p>
+        <p class="text-sm font-bold text-slate-800">6%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 2 Target</p>
+        <p class="text-sm font-bold text-slate-800">6%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Drawdown Type</p>
+        <p class="text-sm font-bold text-teal-600">Static</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Daily Loss</p>
+        <p class="text-sm font-bold text-slate-800">3%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Total Loss</p>
+        <p class="text-sm font-bold text-slate-800">6%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
+        <p class="text-sm font-bold text-slate-800">80%</p>
+      </div>
+    </div>
+
+    <!-- Suited For -->
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
+      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
+      <p class="text-sm text-teal-700">Traders who dislike trailing drawdown and prefer knowing their maximum risk from the start, even if it means a reduced payout percentage.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 6. PRESTIGE PRO                                                 -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">6</span>
+      Prestige Pro – Two Step (Static Drawdown)
+    </h3>
+
+    <p class="mb-3">
+      Prestige Pro is a newer addition and represents FTP's most generous static drawdown model. It features 10% and 5% profit targets, with 5% daily and 10% overall static drawdown, offering significantly more room than Prestige Lite.
+    </p>
+    <p class="mb-4">
+      Payouts are flexible, with options such as 65% every 7 days or 80% every 14 days, allowing traders to choose between faster access to capital or higher profit splits. This program is best suited if you want static drawdown with higher risk tolerance and more flexible withdrawal scheduling.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 1 Target</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 2 Target</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Drawdown Type</p>
+        <p class="text-sm font-bold text-teal-600">Static</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Daily Loss</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Total Loss</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Payout Options</p>
+        <p class="text-sm font-bold text-teal-600">65%/7d or 80%/14d</p>
+      </div>
+    </div>
+
+    <!-- Suited For -->
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
+      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
+      <p class="text-sm text-teal-700">Traders who want static drawdown with higher risk tolerance and more flexible withdrawal scheduling, choosing between faster payouts or higher profit splits.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- TRADING RULES                                                   -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules</h3>
+
+    <p class="mb-4">
+      Funded Trading Plus applies a generally flexible rule set across its challenge and instant funding models, but some restrictions and minimum requirements vary by program.
+    </p>
+
+    <div class="space-y-3 mb-6">
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">Stop Loss Orders</p>
+        <p>Stop losses are not mandatory by default. However, traders are still expected to manage risk responsibly, and stop losses may be required if accounts are flagged during risk reviews.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">News Trading</p>
+        <p>News trading is allowed across programs but you should follow FTP's Risk Review Policy, as excessive volatility exposure may trigger additional scrutiny.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">Expert Advisors (EAs)</p>
+        <p>EAs are allowed on MetaTrader 5, MetaTrader 4, and cTrader but are <strong>not supported</strong> on DXTrade or Match-Trader.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">Copy Trading</p>
+        <p>Copy trading is allowed from a personal account to an FTP account but copying trades between FTP accounts is <strong>not permitted</strong>.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">Weekend &amp; Overnight Trading</p>
+        <p>Overnight positions are allowed on all programs. Weekend holding varies: <strong>Experienced and Premium</strong> allow it, while <strong>Advanced and Master</strong> require closing before the Friday market close.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">Minimum Trading Days</p>
+        <p><strong>No minimum:</strong> Master, Experienced, Advanced. <strong>3 profitable days required:</strong> Premium, Prestige Lite, Prestige Pro (each achieving 0.5% minimum simulated profit per phase).</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">Consistency Rules</p>
+        <p>FTP does <strong>not</strong> enforce consistency rules. There are no requirements around fixed lot sizes, daily profit caps, or strategy uniformity between phases.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SCALING PLANS                                                   -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3">Scaling Plans</h3>
+    <p class="mb-3">
+      Scaling is available across all funded FTP accounts. When you reach the profit milestone set for your account type, you can request a scale-up, with total allocations reaching up to <strong>$5 million</strong> on certain models.
+    </p>
+    <p class="mb-4">
+      There are no minimum time requirements, no consistency rules, and no forced scaling schedule. You scale when you meet the criteria, not on a fixed timeline.
+    </p>
+
+    <div class="rounded-xl border border-amber-200 bg-amber-50 p-4">
+      <p class="text-sm font-bold text-amber-900 mb-1">Scaling Potential</p>
+      <p class="text-sm text-amber-800">
+        FTP offers one of the most aggressive scaling plans in the prop trading industry. Funded accounts can grow up to <strong>$5 million</strong> based on performance milestones, with no time-based requirements or forced schedules.
+      </p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- VERDICT ON FTP CHALLENGES                                       -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on FTP Challenges</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      FTP offers one of the most diverse challenge lineups in the prop firm space, covering instant funding, one step, and two step evaluations with both trailing and static drawdown options. The flexibility to choose how drawdown is calculated, combined with fast payouts and high scaling potential, makes FTP particularly attractive to experienced traders who already understand their preferred risk model.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SPREADS / COMMISSION FEES & PRICING SECTION                         */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "spreads" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Funded Trading Plus does not provide clear details on their spreads, making it difficult for traders to estimate their trading costs accurately. While their commission fees are straightforward, the lack of transparency on spreads leaves questions about the overall cost-effectiveness of trading with this prop firm.
+  </p>
+
+  <!-- Spreads -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Spreads</h3>
+  <p class="mb-4">
+    Funded Trading Plus provides limited transparency regarding spreads, as they do not disclose minimum or average spreads on their website. According to customer support, the only way to gauge spreads is by using their demo account. Without clear data, traders might struggle to determine how competitive these spreads are compared to other prop firms.
+  </p>
+
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-8">
+    <p class="text-sm font-bold text-amber-900 mb-1">Limited Spread Transparency</p>
+    <p class="text-sm text-amber-800">
+      FTP does not publish minimum or average spreads on their website. The only way to assess spread quality is through their demo account, which makes it harder to compare trading costs with other prop firms before committing to a challenge.
+    </p>
+  </div>
+
+  <!-- Commission Fees -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Commission Fees</h3>
+  <p class="mb-4">
+    Funded Trading Plus charges a $7 round-turn commission for forex and commodities trades, while indices and cryptocurrencies are commission-free. This commission structure appears competitive compared to industry standards, but the overall cost of trading remains unclear due to the lack of transparency on spreads.
+  </p>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-5 py-3 text-left">Asset Class</th>
+          <th class="px-5 py-3 text-right">Commission</th>
+          <th class="px-5 py-3 text-right">Spreads</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">Forex</td>
+          <td class="px-5 py-3 text-right text-slate-900">$7 round-turn</td>
+          <td class="px-5 py-3 text-right text-slate-400">Not disclosed</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">Commodities</td>
+          <td class="px-5 py-3 text-right text-slate-900">$7 round-turn</td>
+          <td class="px-5 py-3 text-right text-slate-400">Not disclosed</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">Indices</td>
+          <td class="px-5 py-3 text-right text-teal-600 font-semibold">Commission-free</td>
+          <td class="px-5 py-3 text-right text-slate-400">Not disclosed</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">Cryptocurrencies</td>
+          <td class="px-5 py-3 text-right text-teal-600 font-semibold">Commission-free</td>
+          <td class="px-5 py-3 text-right text-slate-400">Not disclosed</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Spreads and Commissions</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      While Funded Trading Plus offers a competitive commission structure, especially with no commissions on indices and cryptocurrencies, the lack of transparency regarding spreads is a significant drawback. Traders are left without a clear understanding of the true cost of trading, making it difficult to assess whether Funded Trading Plus provides a genuinely competitive pricing model.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* MARKETS / FINANCIAL MARKETS & LEVERAGE SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "markets" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Funded Trading Plus provides access to 53 financial markets across four major asset classes, including forex pairs, commodities, indices, and cryptocurrencies, with leverage options tailored to each asset class.
+  </p>
+
+  <!-- Asset class cards -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+    <div class="rounded-xl bg-blue-50 border border-blue-200 p-4 text-center">
+      <p class="text-2xl font-black text-blue-700">37</p>
+      <p class="text-xs font-bold text-blue-600 uppercase tracking-wide">Forex Pairs</p>
+      <p class="text-xs text-blue-500 mt-1">Up to 30:1</p>
+    </div>
+    <div class="rounded-xl bg-amber-50 border border-amber-200 p-4 text-center">
+      <p class="text-2xl font-black text-amber-700">4</p>
+      <p class="text-xs font-bold text-amber-600 uppercase tracking-wide">Commodities</p>
+      <p class="text-xs text-amber-500 mt-1">Up to 10:1</p>
+    </div>
+    <div class="rounded-xl bg-indigo-50 border border-indigo-200 p-4 text-center">
+      <p class="text-2xl font-black text-indigo-700">8</p>
+      <p class="text-xs font-bold text-indigo-600 uppercase tracking-wide">Indices</p>
+      <p class="text-xs text-indigo-500 mt-1">Up to 20:1</p>
+    </div>
+    <div class="rounded-xl bg-emerald-50 border border-emerald-200 p-4 text-center">
+      <p class="text-2xl font-black text-emerald-700">4</p>
+      <p class="text-xs font-bold text-emerald-600 uppercase tracking-wide">Crypto</p>
+      <p class="text-xs text-emerald-500 mt-1">Up to 2:1</p>
+    </div>
+  </div>
+
+  <!-- Forex Trading -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Forex Trading</h3>
+  <p class="mb-6">
+    Funded Trading Plus offers 37 currency pairs, providing extensive options for forex traders. These pairs include a mix of major, minor, and exotic forex pairs, allowing for diverse trading strategies. Leverage for currency trading is available up to 30:1.
+  </p>
+
+  <!-- Commodities -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Commodities</h3>
+  <p class="mb-6">
+    The commodities offered include Gold (XAUUSD), Silver (XAGUSD), and two major oil benchmarks, BRENT and WTI. These assets are popular for their liquidity and influence on global markets. Leverage for commodities is up to 10:1.
+  </p>
+
+  <!-- Indices -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Indices</h3>
+  <p class="mb-6">
+    FTP provides 8 indices, including NASDAQ 100, S&amp;P 500, DAX 40, and FTSE 100. Leverage for indices is up to 20:1 on most platforms, but reduced to <strong>10:1 on cTrader</strong>.
+  </p>
+
+  <!-- Crypto -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Cryptocurrencies</h3>
+  <p class="mb-6">
+    FTP offers 4 cryptocurrency pairs including Bitcoin, Bitcoin Cash, Ethereum, and Litecoin. With leverage set at 2:1, these instruments are accessible for traders who want to engage in the crypto markets.
+  </p>
+
+  <!-- Full markets table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Markets and Leverage Overview</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Asset Class</th>
+          <th class="px-4 py-3 text-center">Products</th>
+          <th class="px-4 py-3 text-center">Leverage</th>
+          <th class="px-4 py-3 text-left">Key Symbols</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Forex</td>
+          <td class="px-4 py-3 text-center font-bold text-slate-900">37</td>
+          <td class="px-4 py-3 text-center text-teal-600 font-semibold">Up to 30:1</td>
+          <td class="px-4 py-3 text-slate-700 text-xs">EUR/USD, GBP/USD, USD/JPY, AUD/USD, USD/CAD, NZD/USD + minors &amp; exotics</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Commodities</td>
+          <td class="px-4 py-3 text-center font-bold text-slate-900">4</td>
+          <td class="px-4 py-3 text-center text-slate-700">Up to 10:1</td>
+          <td class="px-4 py-3 text-slate-700 text-xs">XAU/USD, XAG/USD, BRENT, WTI</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Indices</td>
+          <td class="px-4 py-3 text-center font-bold text-slate-900">8</td>
+          <td class="px-4 py-3 text-center text-slate-700">Up to 20:1 (10:1 cTrader)</td>
+          <td class="px-4 py-3 text-slate-700 text-xs">NAS100, SPX500, US30, GER40, UK100, FRA40, JPN225, SPAIN35</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Crypto</td>
+          <td class="px-4 py-3 text-center font-bold text-slate-900">4</td>
+          <td class="px-4 py-3 text-center text-slate-700">Up to 2:1</td>
+          <td class="px-4 py-3 text-slate-700 text-xs">BTC/USD, ETH/USD, LTC/USD, BCH/USD</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- cTrader note -->
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
+    <p class="text-sm font-bold text-amber-900 mb-1">cTrader Leverage Note</p>
+    <p class="text-sm text-amber-800">
+      Leverage on indices is reduced to 10:1 when trading on cTrader, compared to 20:1 on other platforms. This lower leverage may appeal to traders seeking a more conservative approach.
+    </p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Markets and Leverage</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Funded Trading Plus offers a modest selection of markets, which may limit opportunities for traders looking for a broader range of assets, such as shares. The available products primarily cover forex, commodities, indices, and cryptocurrencies, with leverage options generally in line with industry standards. However, the reduced leverage on cTrader for indices may be a consideration for those looking for more aggressive trading strategies.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PLATFORMS / TRADING PLATFORMS SECTION                                */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "platforms" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Funded Trading Plus offers five trading platforms: Match-Trader, DXTrade, MetaTrader 4 (MT4), MetaTrader 5 (MT5), and cTrader. Each platform has its own strengths, allowing you to choose the one that best suits your needs. It's crucial to select the right platform during registration, as changes afterward incur a <strong>$25 fee</strong>.
+  </p>
+
+  <!-- Platform cards -->
+  <div class="space-y-4 mb-8">
+
+    <!-- Match-Trader -->
+    <div class="rounded-xl border border-emerald-200 bg-emerald-50/50 p-5">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-10 h-10 rounded-lg bg-emerald-500 text-white flex items-center justify-center font-black text-sm">MT</div>
+        <div>
+          <p class="font-bold text-slate-900 text-base">Match-Trader</p>
+          <p class="text-xs text-emerald-600 font-semibold">Recommended Platform</p>
+        </div>
+      </div>
+      <p class="mb-2">
+        Match-Trader is designed for both novice and experienced traders with cross-platform connectivity via web, mobile, and desktop. Key features include seamless <strong>TradingView integration</strong>, charting tools, API connectivity, and a user-friendly interface.
+      </p>
+      <p class="text-xs text-emerald-700 font-semibold">Best for: Discretionary traders who want TradingView integration and reliable execution.</p>
+    </div>
+
+    <!-- DXTrade -->
+    <div class="rounded-xl border border-red-200 bg-red-50/50 p-5">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-10 h-10 rounded-lg bg-red-500 text-white flex items-center justify-center font-black text-sm">DX</div>
+        <div>
+          <p class="font-bold text-slate-900 text-base">DXTrade</p>
+          <p class="text-xs text-red-600 font-semibold">Performance Issues Reported</p>
+        </div>
+      </div>
+      <p class="mb-2">
+        DXTrade offers essential tools for technical analysis but lacks more advanced functionalities. Notable issues include considerable lag with one-click trading (up to 15 minutes to process), connection losses requiring re-login, and <strong>chart setups are lost</strong> on each reconnection. EAs are not supported.
+      </p>
+      <p class="text-xs text-red-700 font-semibold">We recommend considering the $25 fee for cTrader instead for a more stable experience.</p>
+    </div>
+
+    <!-- MT4 -->
+    <div class="rounded-xl border border-blue-200 bg-blue-50/50 p-5">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-10 h-10 rounded-lg bg-blue-500 text-white flex items-center justify-center font-black text-sm">MT4</div>
+        <div>
+          <p class="font-bold text-slate-900 text-base">Platform 4 (MetaTrader 4)</p>
+          <p class="text-xs text-blue-600 font-semibold">Industry Standard</p>
+        </div>
+      </div>
+      <p class="mb-2">
+        MT4 is a great option with its intuitive interface and extensive trading tools. Features include robust charting with multiple chart types, 30+ technical indicators, Expert Advisors (EAs) support, customisation via MQL4, and various order types including trailing stops.
+      </p>
+      <p class="text-xs text-blue-700 font-semibold">Best for: Traders who use EAs, custom indicators, or prefer a familiar industry-standard platform.</p>
+    </div>
+
+    <!-- MT5 -->
+    <div class="rounded-xl border border-indigo-200 bg-indigo-50/50 p-5">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-10 h-10 rounded-lg bg-indigo-500 text-white flex items-center justify-center font-black text-sm">MT5</div>
+        <div>
+          <p class="font-bold text-slate-900 text-base">Platform 5 (MetaTrader 5)</p>
+          <p class="text-xs text-indigo-600 font-semibold">Advanced Successor to MT4</p>
+        </div>
+      </div>
+      <p class="mb-2">
+        MT5 builds on MT4 with 21 timeframes, 80+ technical indicators, additional order types (buy stop limit, sell stop limit), an integrated economic calendar, and more advanced EA capabilities with MQL5.
+      </p>
+      <p class="text-xs text-indigo-700 font-semibold">Best for: Traders who want the most advanced MetaTrader features with broader analytical tools.</p>
+    </div>
+
+    <!-- cTrader -->
+    <div class="rounded-xl border border-slate-200 bg-slate-50/50 p-5">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-10 h-10 rounded-lg bg-slate-700 text-white flex items-center justify-center font-black text-sm">cT</div>
+        <div>
+          <p class="font-bold text-slate-900 text-base">cTrader</p>
+          <p class="text-xs text-slate-600 font-semibold">$25 Platform Fee Applies</p>
+        </div>
+      </div>
+      <p class="mb-2">
+        cTrader is a more feature-rich platform compared to DXTrade, offering custom indicators, automated trading capabilities, and detailed market depth information. However, it comes with a <strong>$25 usage fee</strong> and reduced leverage to 10:1 on indices.
+      </p>
+      <p class="text-xs text-slate-600 font-semibold">Best for: Traders who need sophisticated tools and are willing to pay the platform fee.</p>
+    </div>
+  </div>
+
+  <!-- Platform switching warning -->
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
+    <p class="text-sm font-bold text-amber-900 mb-1">Platform Switching Fee</p>
+    <p class="text-sm text-amber-800">
+      Changing your trading platform after registration incurs a <strong>$25 fee</strong>. Choose carefully during signup, as the fee applies regardless of which platform you switch to.
+    </p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trading Platforms</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Funded Trading Plus offers five platforms. We recommend Match-Trader or MetaTrader 4 and 5 for their reliable performance and trading tools because DXTrade has issues with lag and connectivity, while cTrader, though feature rich, comes with a $25 fee. Overall, Match-Trader and the MetaTrader platforms provide the most balanced and cost-effective options.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PAYOUTS / PAYMENTS & PROFIT PAYOUT SECTION                          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "payouts" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Funded Trading Plus offers a flexible and trader-friendly payment system, with multiple ways to pay challenge fees and several payout cycle options once you reach a funded account. Rather than locking traders into a fixed weekly withdrawal schedule, FTP allows payouts on customisable 3-day, 5-day, or 7-day cycles, depending on the option selected at checkout.
+  </p>
+
+  <!-- Payout structure summary -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Base Profit Split</p>
+      <p class="text-sm font-bold text-teal-600">80%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Profit Split</p>
+      <p class="text-sm font-bold text-teal-600">90%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Payout Cycles</p>
+      <p class="text-sm font-bold text-slate-800">3 / 5 / 7 days</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Withdrawal</p>
+      <p class="text-sm font-bold text-slate-800">$50</p>
+    </div>
+  </div>
+
+  <!-- Fee Payments -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Fee Payments and Deposits</h3>
+  <p class="mb-4">
+    Funded Trading Plus accepts challenge fee payments via credit and debit cards (Visa and MasterCard) as well as cryptocurrency. Payments are processed quickly, and once completed, traders typically gain immediate access to their evaluation or instant funding account.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Cards</p>
+      <p>Visa and MasterCard accepted for challenge fee payments.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Cryptocurrency</p>
+      <p>Crypto payments accepted for faster processing.</p>
+    </div>
+  </div>
+
+  <!-- Profit Payouts -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Profit Payouts</h3>
+  <p class="mb-4">
+    Profit withdrawals are processed via bank transfer or cryptocurrency, with payments facilitated through FTP's payment partners including Triple A. The minimum payout amount is <strong>$50</strong>, making withdrawals accessible even for smaller funded accounts.
+  </p>
+  <p class="mb-4">
+    Instead of a fixed weekly schedule, you can choose payout cycles of every <strong>3 days, 5 days, or 7 days</strong>, depending on the account type and payout option selected. This gives you more control over how frequently you access profits.
+  </p>
+  <p class="mb-6">
+    The standard profit split begins at <strong>80%</strong>, with optional upgrades available at checkout that increase the profit share to <strong>85% or 90%</strong> on eligible programs. Higher payout percentages are not automatic and depend on the selected account model and add-ons.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Bank Transfer</p>
+      <p>Standard withdrawal method through FTP payment partners.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Cryptocurrency</p>
+      <p>Faster processing via crypto withdrawal options.</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Payments and Payouts</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Funded Trading Plus has one of the most flexible payout structures, allowing you to choose between 3-day, 5-day, or 7-day payout cycles rather than being locked into a rigid weekly schedule. Combined with multiple payment methods, low minimum withdrawal thresholds, and optional profit split upgrades, FTP offers a payout system that suits both active traders and those who prefer frequent access to profits.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SUPPORT / CUSTOMER SERVICE & EDUCATION SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "support" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Funded Trading Plus offers 24/7 customer support in English and basic educational resources through its blog and YouTube channel. While the support is responsive, the educational content may be too limited for beginners seeking more comprehensive guidance.
+  </p>
+
+  <!-- Customer Support -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Customer Support</h3>
+  <p class="mb-6">
+    Funded Trading Plus offers 24/7 customer service through email and live chat, yet support is not multilingual and only available in English. When testing the live chat function, the initial interaction is with a bot, but users are immediately transferred to a human representative who provides prompt and helpful assistance.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Live Chat</p>
+      <p>24/7 availability. Bot initial response followed by quick human handover. English only.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Email Support</p>
+      <p>24/7 email support with responsive turnaround times. English only.</p>
+    </div>
+  </div>
+
+  <!-- Educational Resources -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Educational Resources</h3>
+  <p class="mb-6">
+    FTP provides basic educational resources through its blog and YouTube channel. The blog covers trading strategies, comparisons with other prop firms, and insights from successful traders. The YouTube channel offers tutorials on platform usage, industry trend discussions, and trader interviews. While these resources can be helpful for traders with some experience, they remain fairly basic and may not offer the comprehensive education that beginners require.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Blog</p>
+      <p>Trading strategies, firm comparisons, and trader insights.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">YouTube Channel</p>
+      <p>Platform tutorials, industry trends, and trader interviews.</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Customer Service and Education</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Funded Trading Plus provides responsive 24/7 customer support, though the service is limited to English. The educational resources offered are basic and best suited for traders with some prior knowledge, potentially falling short for beginners or those seeking comprehensive learning tools.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* TRUST / TRUST & COMMUNITY SECTION                                   */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "trust" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Funded Trading Plus is an independent prop firm not affiliated with any regulated broker, meaning it does not fall under financial oversight bodies like ASIC or the FCA. Despite this, the firm has received positive feedback from users, indicating a strong level of trust within its community.
+  </p>
+
+  <!-- Company info -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Type</p>
+      <p class="text-sm font-bold text-slate-800">Independent</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Trustpilot</p>
+      <p class="text-sm font-bold text-teal-600">4.5 / 5</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Reviews</p>
+      <p class="text-sm font-bold text-slate-800">2,600+</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Regulatory</p>
+      <p class="text-sm font-bold text-slate-400">None</p>
+    </div>
+  </div>
+
+  <!-- Trading Community -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Community</h3>
+  <p class="mb-6">
+    The firm maintains an active online presence across various social media platforms. On Facebook, it has over 22,000 likes, and on Twitter/X, it has more than 31,500 followers. Their Discord community is particularly active, with over <strong>48,900 members</strong>, creating a space where traders can discuss strategies, share experiences, and support one another.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">48,900+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Discord Members</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">31,500+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Twitter/X Followers</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">22,000+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Facebook Likes</p>
+    </div>
+  </div>
+
+  <!-- Trustpilot -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">TrustPilot Customer Reviews</h3>
+
+  <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 mb-6 flex items-center gap-4">
+    <div class="flex-shrink-0">
+      <p class="text-3xl font-black text-slate-900">4.5<span class="text-lg text-slate-400">/5</span></p>
+      <p class="text-xs text-slate-500 font-semibold">TrustScore</p>
+    </div>
+    <div>
+      <p class="text-sm text-slate-700">Based on <strong>2,600+ reviews</strong> on Trustpilot. This rating is one of the highest among prop trading firms, reflecting a generally positive customer experience.</p>
+    </div>
+  </div>
+
+  <!-- No regulation warning -->
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
+    <p class="text-sm font-bold text-amber-900 mb-1">No Regulatory Oversight</p>
+    <p class="text-sm text-amber-800">
+      Funded Trading Plus is an independent prop firm not affiliated with any regulated broker. It does not fall under financial oversight bodies like ASIC or the FCA. This is common among prop firms, but traders should be aware that there is no regulatory backstop.
+    </p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trust and Community</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Although Funded Trading Plus operates without regulatory oversight, it has built a strong and engaged community. The positive customer reviews and active participation in social media platforms suggest that traders find value in the services provided. The 4.5/5 Trustpilot score from 2,600+ reviews is one of the strongest in the industry.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* FALLBACK — sections not customised render the default text          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section !== "challenges" && section !== "spreads" && section !== "markets" && section !== "platforms" && section !== "payouts" && section !== "support" && section !== "trust" && fallbackBody && (
+  <div class="text-sm leading-relaxed text-slate-700 space-y-4">
+    {fallbackBody.split("\n\n").map((para) => (
+      <p set:html={para.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")} />
+    ))}
+  </div>
+)}

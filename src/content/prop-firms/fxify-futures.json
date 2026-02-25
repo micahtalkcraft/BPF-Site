@@ -1,0 +1,64 @@
+{
+  "id": "d0000006-0000-0000-0000-000000000006",
+  "slug": "fxify-futures",
+  "name": "FXIFY Futures",
+  "status": "active",
+  "foundedYear": 2023,
+  "hqCountry": "CY",
+  "evaluation": {
+    "types": ["1-step"],
+    "profitTargets": { "phase1": 6, "phase2": 0 },
+    "dailyDrawdown": 3,
+    "maxDrawdown": 5,
+    "minTradingDays": 3,
+    "scalingPlan": false
+  },
+  "pricing": {
+    "challengeFees": [
+      { "accountSize": 50000, "fee": 89, "model": "1-step", "label": "Starter Plan" },
+      { "accountSize": 100000, "fee": 149, "model": "1-step", "label": "Starter Plan" },
+      { "accountSize": 150000, "fee": 225, "model": "1-step", "label": "Starter Plan" },
+      { "accountSize": 50000, "fee": 149, "model": "1-step", "label": "Expert Plan" },
+      { "accountSize": 100000, "fee": 249, "model": "1-step", "label": "Expert Plan" },
+      { "accountSize": 150000, "fee": 349, "model": "1-step", "label": "Expert Plan" }
+    ],
+    "resetFee": null,
+    "refundPolicy": "No recurring fees after funding"
+  },
+  "payouts": {
+    "splitMax": 100,
+    "schedule": "Bi-weekly (every 14 days)",
+    "processingTime": "24-48 hours",
+    "firstPayoutDays": 14,
+    "methods": ["bank transfer", "crypto"]
+  },
+  "rules": {
+    "newsTrading": true,
+    "weekendHolding": false,
+    "copyTrading": false,
+    "expertAdvisors": true,
+    "consistencyRule": "30% (Starter) / 40% (Expert) single-day profit cap",
+    "notes": "Copy trading not allowed. HFT and latency arbitrage prohibited. Trading within 2% of CME price limit not allowed. Trailing drawdown adjusts based on end-of-day balance. Funded accounts cannot be reset. EAs permitted but not currently supported on FFX Platform."
+  },
+  "markets": {
+    "platforms": ["FFX Platform"],
+    "instruments": "Futures (CME Equity, FX, Commodities, Bonds, Metals)"
+  },
+  "trust": {
+    "trustpilotRating": 3.9,
+    "trustpilotCount": 4,
+    "communitySize": "Discord",
+    "notableFlags": []
+  },
+  "links": { "website": "https://fxify.com/futures" },
+  "media": { "logo": "/images/logos/fxify-futures.png" },
+  "availability": { "restrictedCountries": [] },
+  "custom": {
+    "tags": ["Profit Split to 100%", "No Recurring Fees", "TradingView Charts", "Real-Time CME Data"],
+    "discountCode": "PROPFIRMS15",
+    "discountPercent": 15
+  },
+  "lastVerifiedAt": "2026-02-24",
+  "lastUpdatedAt": "2026-02-24",
+  "dataSources": ["https://fxify.com/futures"]
+}

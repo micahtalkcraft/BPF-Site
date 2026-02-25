@@ -1,0 +1,82 @@
+{
+  "id": "d0000021-0000-0000-0000-000000000021",
+  "slug": "funding-pips",
+  "name": "Funding Pips",
+  "status": "active",
+  "foundedYear": 2020,
+  "hqCountry": "AE",
+  "evaluation": {
+    "types": ["1-step", "2-step", "instant"],
+    "profitTargets": { "phase1": 10, "phase2": 5 },
+    "dailyDrawdown": 5,
+    "maxDrawdown": 10,
+    "minTradingDays": 3,
+    "scalingPlan": true
+  },
+  "pricing": {
+    "challengeFees": [
+      { "accountSize": 5000, "fee": 29, "model": "2-step-pro", "label": "Two Step Pro $5K" },
+      { "accountSize": 5000, "fee": 36, "model": "2-step", "label": "Two Step Standard $5K" },
+      { "accountSize": 5000, "fee": 59, "model": "1-step", "label": "One Step $5K" },
+      { "accountSize": 5000, "fee": 69, "model": "instant", "label": "Instant Funding $5K" },
+      { "accountSize": 10000, "fee": 55, "model": "2-step-pro", "label": "Two Step Pro $10K" },
+      { "accountSize": 10000, "fee": 66, "model": "2-step", "label": "Two Step Standard $10K" },
+      { "accountSize": 10000, "fee": 99, "model": "1-step", "label": "One Step $10K" },
+      { "accountSize": 10000, "fee": 99, "model": "instant", "label": "Instant Funding $10K" },
+      { "accountSize": 25000, "fee": 109, "model": "2-step-pro", "label": "Two Step Pro $25K" },
+      { "accountSize": 25000, "fee": 156, "model": "2-step", "label": "Two Step Standard $25K" },
+      { "accountSize": 25000, "fee": 199, "model": "1-step", "label": "One Step $25K" },
+      { "accountSize": 25000, "fee": 199, "model": "instant", "label": "Instant Funding $25K" },
+      { "accountSize": 50000, "fee": 219, "model": "2-step-pro", "label": "Two Step Pro $50K" },
+      { "accountSize": 50000, "fee": 289, "model": "2-step", "label": "Two Step Standard $50K" },
+      { "accountSize": 50000, "fee": 319, "model": "1-step", "label": "One Step $50K" },
+      { "accountSize": 50000, "fee": 299, "model": "instant", "label": "Instant Funding $50K" },
+      { "accountSize": 100000, "fee": 399, "model": "2-step-pro", "label": "Two Step Pro $100K" },
+      { "accountSize": 100000, "fee": 529, "model": "2-step", "label": "Two Step Standard $100K" },
+      { "accountSize": 100000, "fee": 555, "model": "1-step", "label": "One Step $100K" },
+      { "accountSize": 100000, "fee": 499, "model": "instant", "label": "Instant Funding $100K" }
+    ],
+    "resetFee": null,
+    "refundPolicy": "No refund policy disclosed"
+  },
+  "payouts": {
+    "splitMax": 100,
+    "schedule": "Bi-weekly",
+    "processingTime": "1–3 business days",
+    "firstPayoutDays": 14,
+    "methods": ["Visa/Mastercard (instant)", "Crypto", "Rise Platform", "Bank Transfer"]
+  },
+  "rules": {
+    "newsTrading": false,
+    "weekendHolding": false,
+    "copyTrading": true,
+    "expertAdvisors": false,
+    "consistencyRule": "15% on Zero (Instant) accounts, 45% on Pro accounts",
+    "notes": "HFT and latency arbitrage prohibited. Post-funding rules are stricter than evaluation rules."
+  },
+  "markets": {
+    "platforms": ["MetaTrader 5", "cTrader", "Match-Trader"],
+    "instruments": "Forex, Indices, Commodities, Oil, Crypto"
+  },
+  "trust": {
+    "trustpilotRating": 4.5,
+    "trustpilotCount": 43000,
+    "communitySize": "172,000+ Discord members",
+    "notableFlags": ["Trustpilot profile temporarily suspended June 2024", "MetaQuotes disruption in 2024"]
+  },
+  "links": { "website": "https://fundingpips.com" },
+  "media": { "logo": "/images/logos/funding-pips-1.png" },
+  "availability": { "restrictedCountries": [] },
+  "support": {
+    "liveChat": true,
+    "email": true,
+    "discord": true
+  },
+  "custom": {
+    "tags": ["Multiple Platforms", "Scaling Plan", "Dubai Based"],
+    "discountCode": null
+  },
+  "lastVerifiedAt": "2026-02-24",
+  "lastUpdatedAt": "2026-02-24",
+  "dataSources": ["https://fundingpips.com"]
+}

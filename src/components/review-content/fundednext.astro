@@ -1,0 +1,904 @@
+---
+// Static editorial content for FundedNext
+// Supports multiple sections via the `section` prop
+interface Props {
+  section: string;
+  fallbackBody?: string;
+}
+const { section, fallbackBody } = Astro.props;
+---
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* CHALLENGES SECTION                                                  */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "challenges" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    FundedNext offers two main models of prop challenges &ndash; <strong>Stellar</strong> and <strong>Stellar Lite</strong>. You can choose between one and two step evaluation processes for the Stellar Challenge, while Stellar Lite is two step only.
+  </p>
+
+  <!-- Challenge summaries -->
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Stellar (One Step)</p>
+      <p>A single-phase challenge with lower 30:1 leverage. Best for traders who want a fast track to funding.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Stellar (Two Step)</p>
+      <p>Two-phase challenge with full 100:1 leverage. Ideal if you want more flexibility while progressing steadily.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Stellar Lite (Two Step)</p>
+      <p>Also two-phase with 100:1 leverage, but lower-cost entry. Great for traders starting small or testing the waters.</p>
+    </div>
+  </div>
+
+  <!-- ─── Challenge Comparison Table ──────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Comparison</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-10">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-3 py-3 text-left">Attribute</th>
+          <th class="px-3 py-3 text-center">Stellar (1-Step)</th>
+          <th class="px-3 py-3 text-center">Stellar (2-Step)</th>
+          <th class="px-3 py-3 text-center">Stellar Lite</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-medium text-slate-600">Challenge Phases</td>
+          <td class="px-3 py-3 text-center text-slate-900">1 Phase</td>
+          <td class="px-3 py-3 text-center text-slate-900">2 Phases</td>
+          <td class="px-3 py-3 text-center text-slate-900">2 Phases</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-medium text-slate-600">Account Sizes</td>
+          <td class="px-3 py-3 text-center text-slate-900">6K &ndash; 200K</td>
+          <td class="px-3 py-3 text-center text-slate-900">6K &ndash; 200K</td>
+          <td class="px-3 py-3 text-center text-slate-900">5K &ndash; 100K</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-medium text-slate-600">Fees</td>
+          <td class="px-3 py-3 text-center text-slate-900">$65 &ndash; $1,099</td>
+          <td class="px-3 py-3 text-center text-slate-900">$59 &ndash; $999</td>
+          <td class="px-3 py-3 text-center text-slate-900">$32 &ndash; $399</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-medium text-slate-600">Leverage</td>
+          <td class="px-3 py-3 text-center text-slate-900">30:1</td>
+          <td class="px-3 py-3 text-center font-semibold text-teal-600">100:1</td>
+          <td class="px-3 py-3 text-center font-semibold text-teal-600">100:1</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-medium text-slate-600">Commission</td>
+          <td class="px-3 py-3 text-center text-slate-900">$5/lot</td>
+          <td class="px-3 py-3 text-center text-slate-900">$5/lot</td>
+          <td class="px-3 py-3 text-center text-slate-900">$7/lot</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-medium text-slate-600">Profit Target</td>
+          <td class="px-3 py-3 text-center text-slate-900">10%</td>
+          <td class="px-3 py-3 text-center text-slate-900">8%, 5%</td>
+          <td class="px-3 py-3 text-center text-slate-900">8%, 4%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-medium text-slate-600">Max Daily Loss</td>
+          <td class="px-3 py-3 text-center text-slate-900">3%</td>
+          <td class="px-3 py-3 text-center text-slate-900">5%</td>
+          <td class="px-3 py-3 text-center text-slate-900">4%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-medium text-slate-600">Max Overall Loss</td>
+          <td class="px-3 py-3 text-center text-slate-900">6%</td>
+          <td class="px-3 py-3 text-center text-slate-900">10%</td>
+          <td class="px-3 py-3 text-center text-slate-900">8%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-medium text-slate-600">Challenge Profit Share</td>
+          <td class="px-3 py-3 text-center font-semibold text-teal-600">15%</td>
+          <td class="px-3 py-3 text-center font-semibold text-teal-600">15%</td>
+          <td class="px-3 py-3 text-center text-slate-400">N/A</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-medium text-slate-600">Funded Profit Split</td>
+          <td class="px-3 py-3 text-center font-semibold text-teal-600">95%</td>
+          <td class="px-3 py-3 text-center font-semibold text-teal-600">95%</td>
+          <td class="px-3 py-3 text-center font-semibold text-teal-600">95%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-medium text-slate-600">Min Trading Days</td>
+          <td class="px-3 py-3 text-center text-slate-900">2</td>
+          <td class="px-3 py-3 text-center text-slate-900">5</td>
+          <td class="px-3 py-3 text-center text-slate-900">5</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-medium text-slate-600">Time Limit</td>
+          <td class="px-3 py-3 text-center text-slate-400">None</td>
+          <td class="px-3 py-3 text-center text-slate-400">None</td>
+          <td class="px-3 py-3 text-center text-slate-400">None</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- STELLAR 1-STEP                                                  -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">1</span>
+      Stellar One Step
+    </h3>
+
+    <p class="mb-3">
+      The Stellar One Step challenge is the most straightforward model FundedNext offers. You only need to hit a single 10% profit target with a 6% overall and 3% daily drawdown limit.
+    </p>
+    <p class="mb-4">
+      There's no time restriction, and you get a <strong>15% profit share from day one</strong>, even during the challenge phase. This model suits confident, experienced traders who want to skip the two-step grind and fast-track to a funded account.
+    </p>
+
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">Fee</th>
+            <th class="px-4 py-3 text-right">Daily Loss (3%)</th>
+            <th class="px-4 py-3 text-right">Overall Loss (6%)</th>
+            <th class="px-4 py-3 text-right">Profit Target (10%)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$6,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$65</td>
+            <td class="px-4 py-3 text-right text-slate-700">$180</td>
+            <td class="px-4 py-3 text-right text-slate-700">$360</td>
+            <td class="px-4 py-3 text-right text-slate-700">$600</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$15,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$129</td>
+            <td class="px-4 py-3 text-right text-slate-700">$450</td>
+            <td class="px-4 py-3 text-right text-slate-700">$900</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$219</td>
+            <td class="px-4 py-3 text-right text-slate-700">$750</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$329</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$569</td>
+            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$6,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$200,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$1,099</td>
+            <td class="px-4 py-3 text-right text-slate-700">$6,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$12,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$20,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- STELLAR 2-STEP                                                  -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">2</span>
+      Stellar Two Step
+    </h3>
+
+    <p class="mb-3">
+      The Stellar Two Step challenge adds an extra layer of verification but allows for more breathing room. You'll need to hit two separate profit targets (8% in Phase 1 and 5% in Phase 2) with wider loss limits (10% overall, 5% daily).
+    </p>
+    <p class="mb-4">
+      This model is a better fit if you value consistency over speed. Like the One Step, it offers a <strong>15% profit share during the challenge</strong>, and there's no time pressure to complete each phase.
+    </p>
+
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">Fee</th>
+            <th class="px-4 py-3 text-right">Daily Loss (5%)</th>
+            <th class="px-4 py-3 text-right">Overall Loss (10%)</th>
+            <th class="px-4 py-3 text-right">P1 Target (8%)</th>
+            <th class="px-4 py-3 text-right">P2 Target (5%)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$6,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$59</td>
+            <td class="px-4 py-3 text-right text-slate-700">$300</td>
+            <td class="px-4 py-3 text-right text-slate-700">$600</td>
+            <td class="px-4 py-3 text-right text-slate-700">$480</td>
+            <td class="px-4 py-3 text-right text-slate-700">$300</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$15,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$119</td>
+            <td class="px-4 py-3 text-right text-slate-700">$750</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,200</td>
+            <td class="px-4 py-3 text-right text-slate-700">$750</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$199</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,250</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$299</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$4,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$549</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$8,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$200,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$999</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$20,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$16,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- STELLAR LITE                                                    -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">3</span>
+      Stellar Lite
+    </h3>
+
+    <p class="mb-3">
+      Stellar Lite is the most affordable option, with fees starting at just <strong>$32</strong>. It's a two-phase model similar to Stellar Two Step, but with slightly tighter drawdowns and profit targets (8% and 4%).
+    </p>
+    <p class="mb-4">
+      You don't get a profit share during the challenge, but you do unlock a 95% split once funded. The Stellar Lite model also includes extra add-ons like higher loss limits and bi-weekly payouts, ideal if you want flexibility without spending a lot upfront.
+    </p>
+
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">Fee</th>
+            <th class="px-4 py-3 text-right">Daily Loss (4%)</th>
+            <th class="px-4 py-3 text-right">Overall Loss (8%)</th>
+            <th class="px-4 py-3 text-right">P1 Target (8%)</th>
+            <th class="px-4 py-3 text-right">P2 Target (4%)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$32</td>
+            <td class="px-4 py-3 text-right text-slate-700">$200</td>
+            <td class="px-4 py-3 text-right text-slate-700">$400</td>
+            <td class="px-4 py-3 text-right text-slate-700">$400</td>
+            <td class="px-4 py-3 text-right text-slate-700">$200</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$59</td>
+            <td class="px-4 py-3 text-right text-slate-700">$400</td>
+            <td class="px-4 py-3 text-right text-slate-700">$800</td>
+            <td class="px-4 py-3 text-right text-slate-700">$800</td>
+            <td class="px-4 py-3 text-right text-slate-700">$400</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$139</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$229</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$4,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$4,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$399</td>
+            <td class="px-4 py-3 text-right text-slate-700">$4,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$8,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$8,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$4,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ─── Challenge Add-Ons ───────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Add-Ons</h3>
+  <p class="mb-4">
+    FundedNext lets you tweak your challenge with optional add-ons, useful if you want fewer restrictions or faster access to profits.
+  </p>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-3 py-3 text-left">Add-On</th>
+          <th class="px-3 py-3 text-right">Fee</th>
+          <th class="px-3 py-3 text-center">Stellar 1-Step</th>
+          <th class="px-3 py-3 text-center">Stellar 2-Step</th>
+          <th class="px-3 py-3 text-center">Stellar Lite</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-semibold text-slate-900">Lifetime Payout 95%</td>
+          <td class="px-3 py-3 text-right text-slate-900">+30%</td>
+          <td class="px-3 py-3 text-center text-slate-700">All sizes</td>
+          <td class="px-3 py-3 text-center text-slate-700">All sizes</td>
+          <td class="px-3 py-3 text-center text-slate-700">All sizes</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-semibold text-slate-900">Double Up</td>
+          <td class="px-3 py-3 text-right text-slate-900">+40%</td>
+          <td class="px-3 py-3 text-center text-slate-700">All sizes</td>
+          <td class="px-3 py-3 text-center text-slate-700">All sizes</td>
+          <td class="px-3 py-3 text-center text-slate-700">All sizes</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-semibold text-slate-900">No Min Trading Days</td>
+          <td class="px-3 py-3 text-right text-slate-900">+20%</td>
+          <td class="px-3 py-3 text-center text-slate-700">&le;25K</td>
+          <td class="px-3 py-3 text-center text-slate-700">&le;25K</td>
+          <td class="px-3 py-3 text-center text-slate-700">All sizes</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-semibold text-slate-900">Overall Loss Limit 10%</td>
+          <td class="px-3 py-3 text-right text-slate-900">+25%</td>
+          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+          <td class="px-3 py-3 text-center text-slate-700">All sizes</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-semibold text-slate-900">Bi-Weekly Payout</td>
+          <td class="px-3 py-3 text-right text-slate-900">+15%</td>
+          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+          <td class="px-3 py-3 text-center text-slate-700">&le;25K</td>
+          <td class="px-3 py-3 text-center text-slate-700">All sizes</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-semibold text-slate-900">Swap Free Account</td>
+          <td class="px-3 py-3 text-right text-slate-900">+10%</td>
+          <td class="px-3 py-3 text-center text-slate-700">All sizes</td>
+          <td class="px-3 py-3 text-center text-slate-700">All sizes</td>
+          <td class="px-3 py-3 text-center text-slate-700">All sizes</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ─── Scaling Plan ────────────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Scaling Plan</h3>
+  <p class="mb-4">
+    FundedNext offers a Scale-Up Plan for traders who consistently demonstrate successful trading over a four-month period. Traders meeting specific criteria can see their account scaled up by <strong>40%</strong>, with a maximum allocation of <strong>$4 million</strong>.
+  </p>
+
+  <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-4">
+    <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-2">Scale-Up Eligibility</p>
+    <ul class="text-sm text-teal-700 space-y-1 list-disc list-inside">
+      <li>Minimum account growth of 10% over four consecutive months</li>
+      <li>At least two successful payouts during the four-month period</li>
+      <li>The final trading cycle must be profitable</li>
+    </ul>
+  </div>
+
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Scale-Up Amount</p>
+      <p class="text-sm font-bold text-teal-600">40%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Scaling Interval</p>
+      <p class="text-sm font-bold text-slate-800">Every 4 months</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Allocation</p>
+      <p class="text-sm font-bold text-teal-600">$4,000,000</p>
+    </div>
+  </div>
+
+  <!-- ─── Trading Rules ───────────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules</h3>
+
+  <div class="space-y-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Copy Trading</p>
+      <p>Permitted only between accounts owned by the same individual. Copying trades between different people is prohibited.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">News Trading</p>
+      <p>Allowed during challenges. Once funded, trades opened/closed within <strong>5 minutes</strong> of high-impact news count only <strong>40% of profit</strong> toward payout. Losses are fully counted.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Expert Advisors (EAs)</p>
+      <p><span class="text-emerald-600 font-semibold">Allowed on MT4 &amp; MT5</span> &mdash; not permitted on cTrader. You must customise EA settings to match your individual trading style.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Prohibited Strategies</p>
+      <p>Latency arbitrage, grid trading, hedging across accounts, HFT, tick scalping, one-sided betting, account sharing, and arbitrage trading.</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on FundedNext Accounts</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      FundedNext offers two main challenge models (Stellar and Stellar Lite) each with varying levels of flexibility and add-ons to choose from. The 15% profit share during challenges is a unique perk, and the 40% scaling plan up to $4M is one of the most generous in the industry.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SPREADS / COMMISSION FEES & PRICING SECTION                         */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "spreads" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    FundedNext now operates through its own brokerage, <strong>FNmarkets</strong>, launched in May 2025. This means spreads and execution are no longer handled via third-party brokers, but directly through FNmarkets' trading infrastructure.
+  </p>
+
+  <!-- Spread models -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">FNmarkets Spread Models</h3>
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Standard Account</p>
+      <p>Spreads from <strong>1.5 pips</strong>, no commission</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">ECN Account</p>
+      <p>Spreads from <strong>0.0 pips</strong>, $6 round-turn commission</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Cent Account</p>
+      <p>Spreads from <strong>1.5 pips</strong>, no commission</p>
+    </div>
+  </div>
+
+  <!-- Commission table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Commission Fees by Challenge</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Type</th>
+          <th class="px-4 py-3 text-center">Forex</th>
+          <th class="px-4 py-3 text-center">Commodities</th>
+          <th class="px-4 py-3 text-center">Indices</th>
+          <th class="px-4 py-3 text-center">Crypto</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Stellar 1-Step &amp; 2-Step</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5/lot</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5/lot</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">$0</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">$0</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Stellar Lite</td>
+          <td class="px-4 py-3 text-center text-slate-900">$7/lot</td>
+          <td class="px-4 py-3 text-center text-slate-900">$7/lot</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">$0</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">$0</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Spreads &amp; Commissions</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      FundedNext is now broker-backed via FNmarkets, which gives it full control over execution and pricing. While real-time spread data isn't published yet, the move away from third-party liquidity providers may allow for tighter spreads and improved order execution long term.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* MARKETS / FINANCIAL MARKETS & LEVERAGE SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "markets" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    FundedNext offers prop traders access to four main asset classes &ndash; forex, indices, commodities, and cryptocurrencies, with a total of <strong>83 different financial markets</strong> to choose from.
+  </p>
+
+  <!-- Markets table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Range of Markets</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Asset Class</th>
+          <th class="px-4 py-3 text-center">Total Markets</th>
+          <th class="px-4 py-3 text-left">Key Symbols</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Forex</td>
+          <td class="px-4 py-3 text-center text-slate-900">50</td>
+          <td class="px-4 py-3 text-slate-700">AUDCAD, EURUSD, USDJPY, NZDUSD, GBPUSD, etc.</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Indices</td>
+          <td class="px-4 py-3 text-center text-slate-900">18</td>
+          <td class="px-4 py-3 text-slate-700">AUS200, GER30, US30, SPX500, NDX100, etc.</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Commodities</td>
+          <td class="px-4 py-3 text-center text-slate-900">5</td>
+          <td class="px-4 py-3 text-slate-700">XAGUSD, XAUUSD, UKOUSD, USOUSD</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Crypto</td>
+          <td class="px-4 py-3 text-center text-slate-900">10</td>
+          <td class="px-4 py-3 text-slate-700">BTCUSD, ETHUSD, XRPUSD, LTCUSD, BCHUSD, etc.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Markets &amp; Leverage</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      FundedNext offers access to 83 markets across forex, indices, commodities, and cryptocurrencies, providing flexibility for different trading strategies and risk tolerances.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PLATFORMS / TRADING PLATFORMS SECTION                                */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "platforms" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    FundedNext provides traders with access to four of the most popular trading platforms &ndash; <strong>MetaTrader 4</strong>, <strong>MetaTrader 5</strong> with TradingView integration, <strong>cTrader</strong>, and <strong>Match-Trader</strong>.
+  </p>
+  <p class="mb-6">
+    Each platform offers distinct tools and features, but some come with fees, and not all platforms are available with all challenges.
+  </p>
+
+  <!-- Platform Fee table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Platform Fees by Challenge</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Platform</th>
+          <th class="px-4 py-3 text-center">Stellar 1-Step</th>
+          <th class="px-4 py-3 text-center">Stellar 2-Step</th>
+          <th class="px-4 py-3 text-center">Stellar Lite</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">MetaTrader 4</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">Free</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">Free</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">Free</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">MetaTrader 5</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">Free</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">Free</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">Free</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">cTrader</td>
+          <td class="px-4 py-3 text-center text-slate-900">$25 (not 100K/200K)</td>
+          <td class="px-4 py-3 text-center text-slate-900">$25 (not 100K/200K)</td>
+          <td class="px-4 py-3 text-center text-slate-900">$25 (not 100K)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Match-Trader</td>
+          <td class="px-4 py-3 text-center text-slate-900">$25 (not 100K/200K)</td>
+          <td class="px-4 py-3 text-center text-slate-900">$25 (not 100K/200K)</td>
+          <td class="px-4 py-3 text-center text-slate-900">$25 (not 100K)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Platform cards -->
+  <div class="space-y-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">MetaTrader 4 (MT4)</p>
+      <p>Widely used platform known for EA and indicator compatibility. Custom algorithm creation using MQL4, one-click trading, and advanced charting with multiple timeframes. Best suited for forex, commodities, and indices traders.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">MetaTrader 5 (MT5)</p>
+      <p>Advanced platform with additional order types, 38 technical indicators, 21 timeframes, and a built-in economic calendar. Supports TradingView integration and automated trading with MQL5.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">cTrader</p>
+      <p>Clean, intuitive interface with Level II market depth pricing and advanced order types. Cross-device functionality across desktop, web, and mobile. $25 platform fee applies.</p>
+      <p class="text-xs text-amber-600 font-semibold mt-1">EAs not permitted on cTrader</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Match-Trader</p>
+      <p>Browser-based platform with no downloads required. Fast execution with a simplified interface, mobile-friendly, and no additional platform fee beyond the $25 access charge. Good for traders who prefer minimal setup.</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trading Platforms</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      FundedNext offers a solid range of platforms, including MT4, MT5 (with TradingView), cTrader, and Match-Trader. This variety caters to different trading styles, ensuring traders can choose the platform that best suits their needs.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PAYOUTS / PAYMENTS & PROFIT PAYOUT SECTION                          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "payouts" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    FundedNext supports a broad range of payment methods for both deposits and withdrawals. Since launching their own broker, FNmarkets, payments are now processed through their connected payment provider, <strong>Incenteco Trading Ltd</strong>.
+  </p>
+
+  <!-- Payout overview -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Funded Profit Split</p>
+      <p class="text-sm font-bold text-teal-600">95%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Challenge Profit Share</p>
+      <p class="text-sm font-bold text-teal-600">15%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Withdrawal</p>
+      <p class="text-sm font-bold text-slate-800">$20</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Payout Processor</p>
+      <p class="text-sm font-bold text-slate-800">Deel</p>
+    </div>
+  </div>
+
+  <!-- Payment Methods -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Fee Payment Methods</h3>
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-sm font-bold text-slate-800">Visa / Mastercard</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-sm font-bold text-slate-800">Bank Transfer</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-sm font-bold text-slate-800">Perfect Money</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-sm font-bold text-slate-800">Crypto (BTC, ETH, USDT)</p>
+    </div>
+  </div>
+
+  <!-- Payout Policy -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Profit Payouts</h3>
+  <p class="mb-4">
+    Payouts are handled through <strong>Deel</strong>. The minimum withdrawal is $20, with restrictions based on amount:
+  </p>
+
+  <div class="space-y-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">$20 &ndash; $50 payouts</p>
+      <p>Must be withdrawn via crypto</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">$50+ payouts</p>
+      <p>Can be withdrawn via Deel using standard methods (bank, card, or e-wallet)</p>
+    </div>
+  </div>
+
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
+    <p class="text-sm font-bold text-amber-900 mb-1">KYC Required</p>
+    <p class="text-sm text-amber-800">
+      Before receiving any payout, you'll need to pass KYC verification (48&ndash;72 hours), which includes submitting a valid government-issued ID and address document via Veriff or Sumsub.
+    </p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Payment Methods &amp; Payouts</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      FundedNext offers a solid mix of modern and traditional payment options, including crypto, cards, and bank transfers. With payment processing now routed through their broker-backed setup, most traders should see smoother funding and reliable withdrawals through Deel.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SUPPORT / CUSTOMER SERVICE & EDUCATION SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "support" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    FundedNext offers <strong>24/7 customer support</strong> and a comprehensive suite of educational resources to help prop traders. With efficient live chat services to a solid YouTube channel, FundedNext are strong in this area.
+  </p>
+
+  <!-- Customer Support -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Customer Support</h3>
+  <p class="mb-4">
+    FundedNext provides 24/7 support through email and live chat. The live chat bot is generally efficient, backed by a comprehensive FAQ section. Funded traders benefit from <strong>Pro Support</strong>, connecting them with in-house technical experts for more tailored assistance.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Email &amp; Live Chat</p>
+      <p>Available 24/7 with quick responses to common questions</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Pro Support (Funded Traders)</p>
+      <p>Access to in-house technical experts for tailored assistance</p>
+    </div>
+  </div>
+
+  <!-- Educational Resources -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Educational Resources</h3>
+
+  <div class="space-y-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">YouTube Channel</p>
+      <p><strong>77K+ subscribers</strong> and 1,200+ educational videos covering strategies, risk management, and funded trader interviews via the "Meet The Traders" series.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Risk Reward Radio Podcast</p>
+      <p>Deeper insights into traders' journeys with valuable lessons and real-world experiences.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Dashboard Resources</p>
+      <p>Economic Calendar, Psychology Feed, Trading Psychology Sessions, and Meet The Traders content accessible from your trader dashboard.</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Customer Service &amp; Education</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      FundedNext provides excellent 24/7 customer support and a rich array of educational materials, including live chat, an extensive FAQ, trading guides, and an interactive Economic Calendar. Their YouTube channel and podcast further supplement learning, making it a strong choice for traders seeking comprehensive support and continuous learning opportunities.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* TRUST / TRUST & COMMUNITY SECTION                                   */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "trust" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    Recently FundedNext became a broker backed prop firm with the launch of its own brokerage, <strong>FNmarkets</strong>. While FNmarkets is licensed offshore, this change means FundedNext now handles its own execution and trading infrastructure instead of relying on external brokers.
+  </p>
+
+  <!-- Trustpilot -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">FundedNext TrustPilot Score</h3>
+
+  <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 mb-6 flex items-center gap-4">
+    <div class="flex-shrink-0">
+      <p class="text-3xl font-black text-slate-900">4.5<span class="text-lg text-slate-400">/5</span></p>
+      <p class="text-xs text-slate-500 font-semibold">Excellent</p>
+    </div>
+    <div>
+      <p class="text-sm text-slate-700">FundedNext has an <strong>'Excellent' ranking</strong> on Trustpilot with 4.5 out of 5 stars and is a verified company. Negative reviews are difficult to find, indicating strong customer satisfaction.</p>
+    </div>
+  </div>
+
+  <!-- Community -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Community</h3>
+  <p class="mb-4">
+    FundedNext has a strong community presence with active social media and an established Discord community. The Telegram channel has over 59,400 subscribers with thousands of views per post.
+  </p>
+
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">226K+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Discord</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">254K</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Instagram</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">167K</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Twitter/X</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">135K</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Facebook</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trust &amp; Community</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      We think FundedNext offers a great and vibrant community spanning various channels. This combined with their 'Excellent' ranking on Trustpilot and their move to become a broker-backed firm indicates a strong reputation and a clear investment in long-term trader support.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* FALLBACK — sections not customised render the default text          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section !== "challenges" && section !== "spreads" && section !== "markets" && section !== "platforms" && section !== "payouts" && section !== "support" && section !== "trust" && fallbackBody && (
+  <div class="text-sm leading-relaxed text-slate-700 space-y-4">
+    {fallbackBody.split("\n\n").map((para) => (
+      <p set:html={para.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")} />
+    ))}
+  </div>
+)}

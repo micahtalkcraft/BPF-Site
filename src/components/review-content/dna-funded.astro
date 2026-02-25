@@ -1,0 +1,1137 @@
+---
+// Static editorial content for DNA Funded
+// Supports multiple sections via the `section` prop
+interface Props {
+  section: string;
+  fallbackBody?: string;
+}
+const { section, fallbackBody } = Astro.props;
+---
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* CHALLENGES SECTION                                                  */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "challenges" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    DNA Funded is offering four main challenge types with 80% – 90% profit splits – a new Instant Funding Account, plus their Single Helix, Double Helix, and Rapid Challenge accounts.
+  </p>
+
+  <!-- Per-challenge summaries -->
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Single Helix – 1 Step Challenge</p>
+      <p>Account sizes range from $5,000 to $200,000 with fees starting at $59 for a $5K account and going up to $1,209 for a $200K account.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Add-on option for early payout from 14 days to 7 days</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Double Helix – 2 Step Challenge</p>
+      <p>Account sizes also range from $5,000 to $200,000, with fees starting at $49 for a $5K account and going up to $1,079 for a $200K account.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Add-on option to increase profit split from 80% to 90%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Rapid Challenge – 1 Step Challenge</p>
+      <p>Account sizes range from $10,000 to $100,000, with fees starting at $99 for a $10K account and going up to $549 for a $100K account.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Add-on option to increase both profit split from 80% to 90% and early payout of 7 days</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Instant Funding – No Evaluation</p>
+      <p>Account sizes range from $5,000 to $50,000, with fees starting at $199 for a $5K account and going up to $979 for a $50K account.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Starts with an 80% profit split, upgradeable to 90%, and payout every 14 days or 7 days with the add-on</p>
+    </div>
+  </div>
+
+  <!-- ─── Comparison Table ───────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Comparison</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-10">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Attribute</th>
+          <th class="px-4 py-3 text-center">Single Helix</th>
+          <th class="px-4 py-3 text-center">Double Helix</th>
+          <th class="px-4 py-3 text-center">Rapid Challenge</th>
+          <th class="px-4 py-3 text-center">Instant Funding</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Evaluation Process</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">1 Step</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">2 Step</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">1 Step</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">None (Instant Access)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">One-Off Fee</td>
+          <td class="px-4 py-3 text-center text-slate-900">$59 – $1,209</td>
+          <td class="px-4 py-3 text-center text-slate-900">$49 – $1,079</td>
+          <td class="px-4 py-3 text-center text-slate-900">$99 – $549</td>
+          <td class="px-4 py-3 text-center text-slate-900">$199 – $979</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Account Sizes</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5,000 – $200,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5,000 – $200,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$10,000 – $100,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5,000 – $50,000</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Fee for Add-Ons</td>
+          <td class="px-4 py-3 text-center text-slate-900">20%</td>
+          <td class="px-4 py-3 text-center text-slate-900">20%</td>
+          <td class="px-4 py-3 text-center text-slate-900">30%</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Add-On Options</td>
+          <td class="px-4 py-3 text-center text-slate-900">Early Payout</td>
+          <td class="px-4 py-3 text-center text-slate-900">Higher Profit Split</td>
+          <td class="px-4 py-3 text-center text-slate-900">Early Payout + Higher Profit Split</td>
+          <td class="px-4 py-3 text-center text-slate-900">Early Payout + Higher Profit Split</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Share</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">80%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">80%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">80%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">80%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Target</td>
+          <td class="px-4 py-3 text-center text-slate-900">10%</td>
+          <td class="px-4 py-3 text-center text-slate-900">10%, then 5%</td>
+          <td class="px-4 py-3 text-center text-slate-900">5%</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Max Daily Drawdown</td>
+          <td class="px-4 py-3 text-center text-slate-900">5%</td>
+          <td class="px-4 py-3 text-center text-slate-900">6%, then 5%</td>
+          <td class="px-4 py-3 text-center text-slate-900">4%</td>
+          <td class="px-4 py-3 text-center text-slate-900">4% (Trailing)</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Max Total Drawdown</td>
+          <td class="px-4 py-3 text-center text-slate-900">10%</td>
+          <td class="px-4 py-3 text-center text-slate-900">10%</td>
+          <td class="px-4 py-3 text-center text-slate-900">5%</td>
+          <td class="px-4 py-3 text-center text-slate-900">4% (Trailing)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Max Active Trading Days</td>
+          <td class="px-4 py-3 text-center text-slate-900">Unlimited</td>
+          <td class="px-4 py-3 text-center text-slate-900">Unlimited</td>
+          <td class="px-4 py-3 text-center text-slate-900">10 Calendar Days</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Crypto Trading Allowed</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">No</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 1. SINGLE HELIX                                                -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">1</span>
+      Single Helix Challenge
+    </h3>
+
+    <p class="mb-3">
+      The Single Helix challenge offers account sizes ranging from $5,000 to $200,000 and provides a straightforward path to funding.
+    </p>
+    <p class="mb-3">
+      This one-step challenge requires you to hit a 10% profit target, with a maximum daily drawdown of 5% and a total drawdown limit of 10%.
+    </p>
+    <p class="mb-4">
+      You have unlimited trading days, which allows for a more relaxed pace, perfect if you are focusing on consistency and long-term strategies like swing or position trading.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Drawdown Type</p>
+        <p class="text-sm font-bold text-slate-800">Static</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Daily Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Daily Loss</p>
+        <p class="text-sm font-bold text-slate-800">6%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Total Loss</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Trading Days</p>
+        <p class="text-sm font-bold text-slate-800">Unlimited</p>
+      </div>
+    </div>
+
+    <!-- Suited For -->
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
+      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
+      <p class="text-sm text-teal-700">Traders who prefer a simple, one-step challenge with no time pressure. This challenge will suit long-term trading strategies like swing trading or position trading.</p>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">One-Off Fee</th>
+            <th class="px-4 py-3 text-right">Profit Target</th>
+            <th class="px-4 py-3 text-right">Max Daily DD</th>
+            <th class="px-4 py-3 text-right">Max Drawdown</th>
+            <th class="px-4 py-3 text-right">Max Total Loss</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$59</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$300</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$89</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$600</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$179</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$319</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$619</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$6,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$200,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$1,209</td>
+            <td class="px-4 py-3 text-right text-slate-700">$20,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$20,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$12,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Add-on -->
+    <div class="rounded-xl border border-amber-200 bg-amber-50 p-4">
+      <p class="text-sm font-bold text-amber-900 mb-1">Single Helix Add-On – Early Payout</p>
+      <p class="text-sm text-amber-800">
+        The early payout add-on reduces the standard 14-day profit payout period to just 7 days for a 20% price increase. This option is ideal if you want faster access to your profits, offering greater financial flexibility for reinvesting or using funds without delay, especially if you are consistently hitting profit targets.
+      </p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 2. DOUBLE HELIX                                                -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">2</span>
+      Double Helix Challenge
+    </h3>
+
+    <p class="mb-3">
+      If you want more structure, the Double Helix Challenge involves a two-step evaluation process. Account sizes for this challenge also range from $5,000 to $200,000.
+    </p>
+    <p class="mb-3">
+      Phase 1 requires you to hit a 10% profit target with a 6% daily drawdown limit, while Phase 2 has a lower 5% target.
+    </p>
+    <p class="mb-4">
+      Like the Single Helix, this challenge has no time restrictions, which provides added flexibility if you manage your trades responsibly.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 1 Target</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 2 Target</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Drawdown Type</p>
+        <p class="text-sm font-bold text-slate-800">Static</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Daily Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Total Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Daily Loss</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Total Loss</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Trading Days</p>
+        <p class="text-sm font-bold text-slate-800">Unlimited</p>
+      </div>
+    </div>
+
+    <!-- Suited For -->
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
+      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
+      <p class="text-sm text-teal-700">Prop traders with a disciplined, systematic approach who prefer gradual growth, making it ideal for those using day trading or trend-following strategies.</p>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-3 py-3 text-left">Account Size</th>
+            <th class="px-3 py-3 text-right">Fee</th>
+            <th class="px-3 py-3 text-right">Target P1</th>
+            <th class="px-3 py-3 text-right">Target P2</th>
+            <th class="px-3 py-3 text-right">Daily DD P1</th>
+            <th class="px-3 py-3 text-right">Daily DD P2</th>
+            <th class="px-3 py-3 text-right">Max DD</th>
+            <th class="px-3 py-3 text-right">Max Loss</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$49</td>
+            <td class="px-3 py-3 text-right text-slate-700">$500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$250</td>
+            <td class="px-3 py-3 text-right text-slate-700">$300</td>
+            <td class="px-3 py-3 text-right text-slate-700">$250</td>
+            <td class="px-3 py-3 text-right text-slate-700">$500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$500</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$79</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$600</td>
+            <td class="px-3 py-3 text-right text-slate-700">$500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$159</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,250</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,250</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$289</td>
+            <td class="px-3 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$3,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$5,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$549</td>
+            <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$6,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$200,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$1,079</td>
+            <td class="px-3 py-3 text-right text-slate-700">$20,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$12,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$20,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$20,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Add-on -->
+    <div class="rounded-xl border border-amber-200 bg-amber-50 p-4">
+      <p class="text-sm font-bold text-amber-900 mb-1">Double Helix Add-On – Higher 90% Profit Share</p>
+      <p class="text-sm text-amber-800">
+        The profit split add-on boosts the standard 80% profit share to 90% for a 20% price increase. This is a great choice if you are looking to maximize your earnings, ensuring that a larger portion of profits is retained. It's particularly advantageous for long-term traders aiming for higher profitability over time.
+      </p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 3. RAPID CHALLENGE                                             -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">3</span>
+      Rapid Challenge
+    </h3>
+
+    <p class="mb-3">
+      The Rapid Challenge is designed for more experienced traders who are confident in their ability to hit a 5% profit target within a tighter time frame.
+    </p>
+    <p class="mb-3">
+      Unlike their other challenges, account sizes range from $10K to $100K and must be completed within 10 calendar days. It also has stricter drawdown rules, with a 4% daily drawdown and a 5% total loss limit.
+    </p>
+    <p class="mb-4">
+      Crypto trading is not allowed in this challenge, and the presence of a trailing drawdown makes it more suited if you are an advanced trader who can manage risk carefully.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Drawdown Type</p>
+        <p class="text-sm font-bold text-slate-800">Trailing</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Daily Loss</p>
+        <p class="text-sm font-bold text-slate-800">4%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Total Loss</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Trading Days</p>
+        <p class="text-sm font-bold text-slate-800">10 Calendar Days</p>
+      </div>
+    </div>
+
+    <!-- Suited For -->
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-4">
+      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
+      <p class="text-sm text-teal-700">Experienced traders who are confident in their ability to achieve results in a short period, making it ideal for high-frequency traders and scalpers.</p>
+    </div>
+    <div class="rounded-xl bg-red-50 border border-red-200 p-4 mb-5">
+      <p class="text-xs font-bold text-red-800 uppercase tracking-wide mb-1">Restriction</p>
+      <p class="text-sm text-red-700">No crypto trading available.</p>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">One-Off Fee</th>
+            <th class="px-4 py-3 text-right">Profit Target</th>
+            <th class="px-4 py-3 text-right">Max Daily DD</th>
+            <th class="px-4 py-3 text-right">Max Total DD</th>
+            <th class="px-4 py-3 text-right">Max Total Loss</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$99</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$400</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$189</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,250</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$329</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$549</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$4,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Add-on -->
+    <div class="rounded-xl border border-amber-200 bg-amber-50 p-4">
+      <p class="text-sm font-bold text-amber-900 mb-1">Rapid Challenge Add-On – Early Payout + 90% Profit Split</p>
+      <p class="text-sm text-amber-800">
+        This add-on combines two benefits, raising the profit split to 90% and reducing the payout time from 14 to 7 days, for a 30% price increase. The add-on includes both higher earnings and faster access to funds, making it perfect if you value both maximized profitability and financial flexibility, especially in high-frequency or high-volume trading.
+      </p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 4. INSTANT FUNDING                                             -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">4</span>
+      Instant Funding
+    </h3>
+
+    <p class="mb-3">
+      The Instant Funding account lets you skip the evaluation phase and start trading with live capital from day one. Account sizes range from $5,000 to $50,000, with one-off fees starting at $199 for a $5K account and going up to $979 for a $50K account.
+    </p>
+    <p class="mb-4">
+      The instant funding program includes a 4% trailing drawdown that moves with equity highs, ensuring steady risk control without a set profit target or trading time limit. Crypto trading is allowed, and leverage is capped at 1:30 for forex, 1:10 for indices and commodities, 1:5 for stocks, and 1:2 for crypto.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
+        <p class="text-sm font-bold text-slate-800">None</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Drawdown Type</p>
+        <p class="text-sm font-bold text-slate-800">Trailing</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Total DD</p>
+        <p class="text-sm font-bold text-slate-800">4%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
+        <p class="text-sm font-bold text-teal-600">80% → 90%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Payout Frequency</p>
+        <p class="text-sm font-bold text-slate-800">14 days (or 7)</p>
+      </div>
+    </div>
+
+    <!-- Suited For -->
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
+      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
+      <p class="text-sm text-teal-700">Traders who want instant access to capital without completing a challenge, ideal for consistent manual traders confident in managing live risk.</p>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">One-Off Fee</th>
+            <th class="px-4 py-3 text-right">Profit Target</th>
+            <th class="px-4 py-3 text-right">Max Daily DD</th>
+            <th class="px-4 py-3 text-right">Max Total DD</th>
+            <th class="px-4 py-3 text-right">Max Total Loss</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$199</td>
+            <td class="px-4 py-3 text-right text-slate-400">N/A</td>
+            <td class="px-4 py-3 text-right text-slate-400">N/A</td>
+            <td class="px-4 py-3 text-right text-slate-700">$200</td>
+            <td class="px-4 py-3 text-right text-slate-700">$200</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$309</td>
+            <td class="px-4 py-3 text-right text-slate-400">N/A</td>
+            <td class="px-4 py-3 text-right text-slate-400">N/A</td>
+            <td class="px-4 py-3 text-right text-slate-700">$400</td>
+            <td class="px-4 py-3 text-right text-slate-700">$400</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$559</td>
+            <td class="px-4 py-3 text-right text-slate-400">N/A</td>
+            <td class="px-4 py-3 text-right text-slate-400">N/A</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$979</td>
+            <td class="px-4 py-3 text-right text-slate-400">N/A</td>
+            <td class="px-4 py-3 text-right text-slate-400">N/A</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- CHALLENGE ADD-ONS                                              -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Add-Ons</h3>
+
+    <p class="mb-4">
+      As mentioned, DNA Funded provides optional add-ons for each challenge type to enhance flexibility and potential returns. For Single Helix and Rapid Challenge, traders can choose an early payout add-on, reducing the payout period from 14 days to just 7. The Double Helix and Rapid Challenge offer a profit split boost from 80% to 90%. These add-ons come at an additional fee — 20% for Single Helix and Double Helix, and 30% for Rapid Challenge.
+    </p>
+
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Challenge</th>
+            <th class="px-4 py-3 text-center">Early Payout (14→7 Days)</th>
+            <th class="px-4 py-3 text-center">Profit Split (80%→90%)</th>
+            <th class="px-4 py-3 text-center">Fee Increase</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">Single Helix (1 Step)</td>
+            <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+            <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+            <td class="px-4 py-3 text-center font-semibold text-slate-900">20%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">Double Helix (2 Step)</td>
+            <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+            <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+            <td class="px-4 py-3 text-center font-semibold text-slate-900">20%</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">Rapid Challenge</td>
+            <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+            <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+            <td class="px-4 py-3 text-center font-semibold text-slate-900">30%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- DAILY PROFIT CAP RULE                                          -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3">Daily Profit Cap Rule</h3>
+    <div class="rounded-xl border border-amber-200 bg-amber-50 p-4">
+      <p class="text-sm text-amber-800">
+        DNA Funded applies a <strong>40% daily profit cap</strong>, meaning no more than 40% of the total profit target can be credited in a single trading day. Profits above this threshold are not lost but do not count toward completing the challenge until subsequent days.
+      </p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SCALING PLANS                                                   -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3">Scaling Plans</h3>
+    <p class="mb-3">
+      Details on DNA Funded's scaling plan are still to be confirmed, but it's expected down the track, traders who meet certain profit milestones will have the opportunity to scale their account size.
+    </p>
+    <p class="mb-3">
+      The opportunity to scale up funded accounts will likely appeal to traders looking for long-term growth opportunities, allowing them to increase their capital as they prove their consistency and profitability.
+    </p>
+    <p class="text-xs text-slate-500 italic">We will update DNA Funded scaling plan information when we know more.</p>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- VERDICT ON DNA CHALLENGES                                       -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on DNA Challenges</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      DNA Funded's lineup suits all types of traders — the Single Helix is flexible, Double Helix adds structure, Rapid Challenge is for fast-paced traders, and Instant Funding gives direct access to capital. The 40% profit cap promotes steady, consistent trading, making DNA Funded one of the more balanced prop firms available.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SPREADS / COMMISSION FEES & PRICING SECTION                         */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "spreads" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-3">
+    DNA Funded has partnered with <strong>DNA Markets</strong>, a popular ASIC-regulated forex broker, to provide tight spreads and competitive trading conditions.
+  </p>
+  <p class="mb-4">
+    DNA Markets is known for offering some of the lowest spreads in the market, starting from as low as <strong>0 pips</strong> for major forex pairs like EUR/USD.
+  </p>
+
+  <p class="mb-4">
+    In addition to the low spreads, DNA Funded's commission structure is competitive. Traders are charged <strong>$5 per entry</strong>, which equates to $2.50 per side, making it a cost-effective choice for high-frequency traders and those trading larger volumes.
+  </p>
+
+  <!-- Spreads table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Typical Spreads on Popular Forex Pairs</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-5 py-3 text-left">Currency Pair</th>
+          <th class="px-5 py-3 text-right">Spread From (pips)</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">EUR/USD</td>
+          <td class="px-5 py-3 text-right font-bold text-teal-600">0.0</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">GBP/USD</td>
+          <td class="px-5 py-3 text-right font-bold text-teal-600">0.1</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">AUD/USD</td>
+          <td class="px-5 py-3 text-right font-bold text-teal-600">0.2</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">USD/JPY</td>
+          <td class="px-5 py-3 text-right font-bold text-teal-600">0.1</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Commissions & Pricing</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      The low spreads and straightforward $5 commission per entry provide a cost-effective trading environment for DNA Funded users. Partnering with DNA Markets also means forex spreads are very competitive.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* MARKETS / FINANCIAL MARKETS & LEVERAGE SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "markets" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-3">
+    DNA Funded provides you access to over <strong>800 financial markets</strong>, including major, minor, and exotic forex pairs, commodities, indices, stocks, and cryptocurrencies – one of the best selections of financial markets offered by a prop firm.
+  </p>
+  <p class="mb-4">
+    It's important to note that cryptocurrency trading is <strong>not permitted</strong> in the Rapid Challenge, but it is available for the Single Helix and Double Helix challenges.
+  </p>
+  <p class="mb-4">
+    As for leverage, DNA Funded offers a maximum of 50:1 for forex trading, though this differs between challenge type:
+  </p>
+
+  <!-- Leverage table -->
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Max Leverage</th>
+          <th class="px-4 py-3 text-center">Forex</th>
+          <th class="px-4 py-3 text-center">Commodities</th>
+          <th class="px-4 py-3 text-center">Indices</th>
+          <th class="px-4 py-3 text-center">Stocks</th>
+          <th class="px-4 py-3 text-center">Crypto</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Single Helix</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">1:30</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:10</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:10</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:5</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:2</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Double Helix</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">1:50</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:10</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:10</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:5</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:2</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Rapid Challenge</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">1:30</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:10</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:10</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:5</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="mb-3">
+    These leverage levels provide a balance between allowing flexibility in position sizing while maintaining a level of risk control.
+  </p>
+  <p class="mb-3">
+    The higher leverage of <strong>1:50 for the Double Helix challenge</strong> will appeal to traders looking for more aggressive short-term strategies, while the Single Helix and Rapid Challenge are more conservative with a 1:30 leverage limit. Maximum leverage for commodities and indices is 1:10 across all challenges, while stock leverage is 1:5 and cryptocurrency trading 1:2.
+  </p>
+  <p class="mb-4">
+    While leverage for shares used to be 10:1, DNA Funded has since reduced this in line with updates from its liquidity provider, DNA Markets. As a broker-backed prop firm, DNA Funded is actively aligning its trading conditions with regulatory standards from major jurisdictions like the <strong>FCA</strong> (UK) and <strong>ASIC</strong> (Australia). This change shows DNA Funded is focused on risk management and keeping things fair for long-term traders, not just chasing high-risk growth.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Financial Markets & Leverage</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      DNA Funded offers one of the strongest market ranges we've seen, covering everything from forex to crypto and stocks. The leverage across challenge types is well-balanced, giving you flexibility without overexposing you to risk. This setup suits both cautious and high-frequency traders depending on the challenge you choose.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PLATFORMS / TRADING PLATFORMS SECTION                                */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "platforms" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-3">
+    DNA Funded now focuses on delivering a better trading experience by offering just one platform, <strong>TradeLocker</strong> integrated with <strong>TradingView</strong>. With DXtrade no longer available, you'll find a smoother, more reliable setup for both charting and execution.
+  </p>
+
+  <!-- TradeLocker + TradingView -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">TradeLocker + TradingView</h3>
+
+  <p class="mb-3">
+    TradeLocker is a modern, web-based platform that integrates with TradingView, offering advanced charting tools and access to hundreds of customizable indicators.
+  </p>
+  <p class="mb-3">
+    This trading platform is particularly beneficial if you rely on technical analysis, as it allows for on-chart trading and seamless execution with its one-click trade feature.
+  </p>
+  <p class="mb-3">
+    One of TradeLocker's standout features is its user-friendly interface, which lets you manage risk effectively with built-in tools like stop-loss and take-profit calculators.
+  </p>
+  <p class="mb-3">
+    Its consistent performance across desktop and mobile devices ensures that you can stay connected and act quickly on market opportunities from anywhere.
+  </p>
+  <p class="mb-4">
+    However, it does <strong>not currently support Expert Advisors (EAs)</strong>, which may limit you if you prefer automated strategies.
+  </p>
+
+  <!-- Platform recommendation -->
+  <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-8">
+    <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Recommended For</p>
+    <p class="text-sm text-teal-700">Given its intuitive interface, strong charting capabilities, and smooth mobile experience, TradeLocker is the recommended platform for DNA Funded traders. It is best suited for manual traders looking for an efficient and reliable platform.</p>
+  </div>
+
+  <!-- Trading Rules -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules</h3>
+  <p class="mb-4">
+    DNA Funded enforces certain trading rules to ensure fairness and disciplined trading across all challenge types.
+  </p>
+
+  <div class="space-y-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Automated Trading</p>
+      <p>TradeLocker does not support Expert Advisors (EAs), so automated strategies cannot be used.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Restricted Copy Trading</p>
+      <p>Copy trading is only permitted between your own accounts. You cannot mirror trades from social platforms.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">News Trading Allowed</p>
+      <p>You must avoid opening or closing positions <strong>10 minutes before or after</strong> high-impact news events to manage volatility risks.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Weekend Trading</p>
+      <p>You are only allowed to hold <strong>cryptocurrency positions</strong> over the weekend.</p>
+    </div>
+  </div>
+
+  <p class="mb-6">
+    These rules offer a balanced level of flexibility while encouraging responsible trading practices, making the challenges accessible to both manual and automated trading styles.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trading Platforms</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      TradeLocker now provides the sole trading platform for DNA Funded, offering strong usability, advanced tools, and reliable execution. With DXtrade removed, the trading experience is more streamlined and focused on manual traders.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PAYOUTS / PAYMENTS & PROFIT PAYOUT SECTION                          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "payouts" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-3">
+    DNA Funded's payment structure offers a flexible standard <strong>14-day payout cycle</strong> and an <strong>80% profit split</strong>, upgradeable to <strong>90%</strong> with the profit split add-on.
+  </p>
+  <p class="mb-6">
+    For traders who want faster access to profits, an additional add-on is available to reduce the payout frequency from 14 days to <strong>7 days</strong>, further improving cash flow options.
+  </p>
+
+  <!-- Payout structure summary -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Base Profit Split</p>
+      <p class="text-sm font-bold text-teal-600">80%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">With Add-On</p>
+      <p class="text-sm font-bold text-teal-600">90%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Payout Cycle</p>
+      <p class="text-sm font-bold text-slate-800">14 Days</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">With Add-On</p>
+      <p class="text-sm font-bold text-teal-600">7 Days</p>
+    </div>
+  </div>
+
+  <!-- Payment Methods for Challenge Fees -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payment Methods for Challenge Fees</h3>
+  <p class="mb-4">
+    DNA Funded accepts <strong>cryptocurrency</strong> and <strong>bank transfers</strong> for paying challenge fees. There is a <strong>1% transaction fee</strong> for crypto payments and a flat <strong>$50 fee</strong> for bank transfers. These payment methods provide flexibility, especially for traders who prefer using digital currencies.
+  </p>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-5 py-3 text-left">Payment Method</th>
+          <th class="px-5 py-3 text-right">Fee</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">Cryptocurrency</td>
+          <td class="px-5 py-3 text-right text-slate-900">1% transaction fee</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">Bank Transfer</td>
+          <td class="px-5 py-3 text-right text-slate-900">$50 flat fee</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Payout Policy -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payout Policy and Profit Withdrawals</h3>
+  <p class="mb-4">
+    Once traders reach funded status, they can access their profits every <strong>14 days</strong> at an <strong>80% split</strong> or <strong>90%</strong> with the add-on. With the 7-day payout add-on, funded traders can enjoy weekly access to earnings. Note that <strong>refunds are not offered after the fourth withdrawal</strong>.
+  </p>
+
+  <!-- Funded traders proof image -->
+  <div class="rounded-xl border border-slate-200 overflow-hidden mb-6">
+    <img
+      src="https://www.bestpropfirms.com/wp-content/uploads/2024/10/funded-traders-proof.png"
+      alt="DNA Funded traders payout proof"
+      class="w-full"
+      loading="lazy"
+    />
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Payments and Profit Shares</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      DNA Funded's payout options, including the 7-day add-on and increased profit share to 90%, provide flexibility and consistent access to profits. With multiple payment methods and straightforward terms, DNA Funded offers an efficient approach to managing fees and withdrawals.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SUPPORT / CUSTOMER SERVICE & EDUCATION SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "support" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    As DNA Funded has just launched, the details regarding customer support and educational resources are still limited. It appears the prop firm will offer basic customer service through email to begin with. We expect this to expand as the prop firm develops.
+  </p>
+
+  <!-- Customer Support -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Customer Support</h3>
+  <p class="mb-6">
+    DNA Funded's primary support channel will be through email (<strong>support@dnafunded.com</strong>), and we anticipate they will eventually introduce additional support options, such as live chat or phone support.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Email Support</p>
+      <p>support@dnafunded.com</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Additional Channels</p>
+      <p class="text-slate-500">Expected as firm develops</p>
+    </div>
+  </div>
+
+  <!-- Educational Resources -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Educational Resources</h3>
+  <p class="mb-6">
+    Initially, DNA Funded will provide a light range of educational resources, likely starting with a FAQ section. We expect this will grow over time to include more comprehensive trading guides, webinars, and tutorials.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Customer Service and Education</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      The initial offerings appear to be standard for a new prop firm, but as the firm develops, we expect the range of educational resources and customer support channels to expand.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* TRUST / TRUST & COMMUNITY SECTION                                   */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "trust" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-3">
+    DNA Funded is a new prop trading firm, but being backed by <strong>DNA Markets</strong> as their liquidity provider adds a layer of trust. DNA Markets is a well-regulated forex broker, known for offering tight spreads and reliable execution, which strengthens DNA Funded's credibility within the industry.
+  </p>
+  <p class="mb-6">
+    Recent rule changes, such as the 40 percent daily profit cap and reduced stock CFD leverage, also reflect DNA Funded's effort to stay aligned with global compliance expectations. These updates are designed to encourage more consistent trading and show that DNA Funded is building a platform with long-term trader success in mind.
+  </p>
+
+  <!-- Trustpilot -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">DNA Funded Trustpilot Reviews</h3>
+
+  <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 mb-4 flex items-center gap-4">
+    <div class="flex-shrink-0">
+      <p class="text-3xl font-black text-slate-900">3.8<span class="text-lg text-slate-400">/5</span></p>
+      <p class="text-xs text-slate-500 font-semibold">TrustScore</p>
+    </div>
+    <div>
+      <p class="text-sm text-slate-700">Based on <strong>60+ reviews</strong> on Trustpilot. Around half are five-star ratings, often mentioning fast payouts, strong support, and fair rules.</p>
+    </div>
+  </div>
+
+  <p class="mb-3">
+    Some users did raise concerns about KYC delays and response times, but the firm has responded to most of the critical feedback and typically replies within a week.
+  </p>
+  <p class="mb-6">
+    What stands out is that DNA Funded has not relied on mass review campaigns or artificial feedback. The reviews appear to reflect real user experiences, both positive and critical, which gives a more accurate picture of the trader journey.
+  </p>
+
+  <!-- Trading Community -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Community</h3>
+
+  <p class="mb-3">
+    DNA Funded has fostered a growing community of traders, with over <strong>600 members</strong> on their Discord. They actively engage with their community, sharing valuable updates and insights.
+  </p>
+  <p class="mb-6">
+    Additionally, they maintain a presence on social media with Instagram and Twitter/X accounts. These platforms are used to post about promotions, trading tips, and prop firm updates, helping expand their community and keep members informed.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">600+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Discord Members</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">3.8/5</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Trustpilot Score</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">60+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Trustpilot Reviews</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trust and Community</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      While DNA Funded is still building their trading community, the focus on Discord and willingness to respond to user feedback shows a genuine effort to stay connected to traders. The broker-backed setup adds another layer of trust, and the measured approach to reviews and rule transparency suggests the firm is working toward long-term credibility rather than short-term hype.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* FALLBACK — sections not customised render the default text          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section !== "challenges" && section !== "spreads" && section !== "markets" && section !== "platforms" && section !== "payouts" && section !== "support" && section !== "trust" && fallbackBody && (
+  <div class="text-sm leading-relaxed text-slate-700 space-y-4">
+    {fallbackBody.split("\n\n").map((para) => (
+      <p set:html={para.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")} />
+    ))}
+  </div>
+)}

@@ -1,0 +1,64 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getCollection } from "astro:content";
+import PropFirmCard from "../../components/prop-firms/PropFirmCard.astro";
+
+const propFirms = await getCollection("prop-firms");
+const reviews = await getCollection("reviews");
+
+const reviewMap = Object.fromEntries(reviews.map((r) => [r.data.propFirmId, r.data]));
+
+// Sort: active firms with scores first (by score desc), then unscored active, then non-active
+const ranked = propFirms
+  .map((f) => ({ firm: f.data, review: reviewMap[f.data.id] }))
+  .filter((x) => x.review)
+  .sort((a, b) => {
+    // Non-active always last
+    if (a.firm.status !== "active" && b.firm.status === "active") return 1;
+    if (a.firm.status === "active" && b.firm.status !== "active") return -1;
+    return (b.review.overallScore ?? 0) - (a.review.overallScore ?? 0);
+  });
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Best Prop Trading Firms",
+  description: "Ranked list of top proprietary trading firms by BPF Reviews",
+  numberOfItems: ranked.filter((x) => x.firm.status === "active").length,
+  itemListElement: ranked
+    .filter((x) => x.firm.status === "active")
+    .map(({ firm }, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: `/reviews/${firm.slug}`,
+      name: firm.name,
+    })),
+};
+---
+
+<Base
+  title="Best Prop Trading Firms — Ranked & Reviewed | BPF Reviews"
+  description="Independent rankings of the best proprietary trading firms. Compare challenge fees, drawdown rules, payout splits, and trust scores."
+  jsonLd={jsonLd}
+>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+    <div class="mb-8">
+      <h1 class="text-3xl font-extrabold text-slate-900">Prop Trading Firm Rankings</h1>
+      <p class="mt-2 text-slate-600">
+        {ranked.filter((x) => x.firm.status === "active").length} active firms ranked by our editorial team.
+        Scores reflect trust, conditions, pricing, and payout reliability.
+      </p>
+    </div>
+
+    <div class="space-y-4">
+      {ranked.map(({ firm, review }, i) => (
+        <PropFirmCard firm={firm} review={review} rank={firm.status === "active" ? i + 1 : undefined} />
+      ))}
+    </div>
+
+    <p class="mt-10 text-sm text-slate-500 text-center">
+      Rankings use Methodology v1.0. Data verified as of each firm's <code>lastVerifiedAt</code> date.
+      <a href="/methodology" class="ml-1 text-blue-700 hover:underline">Learn more →</a>
+    </p>
+  </div>
+</Base>

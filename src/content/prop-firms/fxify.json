@@ -1,0 +1,99 @@
+{
+  "id": "d0000005-0000-0000-0000-000000000005",
+  "slug": "fxify",
+  "name": "FXIFY",
+  "status": "active",
+  "foundedYear": 2022,
+  "hqCountry": "CY",
+  "evaluation": {
+    "types": ["instant", "1-step", "2-step", "other"],
+    "profitTargets": { "phase1": 10, "phase2": 5 },
+    "dailyDrawdown": 3,
+    "maxDrawdown": 10,
+    "minTradingDays": 5,
+    "scalingPlan": true
+  },
+  "pricing": {
+    "challengeFees": [
+      { "accountSize": 1000, "fee": 69, "model": "instant", "label": "Instant Funding" },
+      { "accountSize": 2500, "fee": 119, "model": "instant", "label": "Instant Funding" },
+      { "accountSize": 5000, "fee": 229, "model": "instant", "label": "Instant Funding" },
+      { "accountSize": 10000, "fee": 449, "model": "instant", "label": "Instant Funding" },
+      { "accountSize": 25000, "fee": 899, "model": "instant", "label": "Instant Funding" },
+      { "accountSize": 50000, "fee": 1749, "model": "instant", "label": "Instant Funding" },
+      { "accountSize": 10000, "fee": 59, "model": "1-step", "label": "Lightning Challenge" },
+      { "accountSize": 25000, "fee": 119, "model": "1-step", "label": "Lightning Challenge" },
+      { "accountSize": 50000, "fee": 209, "model": "1-step", "label": "Lightning Challenge" },
+      { "accountSize": 100000, "fee": 399, "model": "1-step", "label": "Lightning Challenge" },
+      { "accountSize": 5000, "fee": 59, "model": "1-step", "label": "One Phase" },
+      { "accountSize": 10000, "fee": 89, "model": "1-step", "label": "One Phase" },
+      { "accountSize": 15000, "fee": 119, "model": "1-step", "label": "One Phase" },
+      { "accountSize": 25000, "fee": 199, "model": "1-step", "label": "One Phase" },
+      { "accountSize": 50000, "fee": 379, "model": "1-step", "label": "One Phase" },
+      { "accountSize": 100000, "fee": 549, "model": "1-step", "label": "One Phase" },
+      { "accountSize": 200000, "fee": 1049, "model": "1-step", "label": "One Phase" },
+      { "accountSize": 400000, "fee": 2950, "model": "1-step", "label": "One Phase" },
+      { "accountSize": 5000, "fee": 59, "model": "2-step", "label": "Two Phase" },
+      { "accountSize": 10000, "fee": 89, "model": "2-step", "label": "Two Phase" },
+      { "accountSize": 15000, "fee": 119, "model": "2-step", "label": "Two Phase" },
+      { "accountSize": 25000, "fee": 199, "model": "2-step", "label": "Two Phase" },
+      { "accountSize": 50000, "fee": 379, "model": "2-step", "label": "Two Phase" },
+      { "accountSize": 100000, "fee": 549, "model": "2-step", "label": "Two Phase" },
+      { "accountSize": 200000, "fee": 1049, "model": "2-step", "label": "Two Phase" },
+      { "accountSize": 400000, "fee": 2950, "model": "2-step", "label": "Two Phase" },
+      { "accountSize": 5000, "fee": 39, "model": "other", "label": "Three Phase" },
+      { "accountSize": 10000, "fee": 59, "model": "other", "label": "Three Phase" },
+      { "accountSize": 15000, "fee": 79, "model": "other", "label": "Three Phase" },
+      { "accountSize": 25000, "fee": 149, "model": "other", "label": "Three Phase" },
+      { "accountSize": 50000, "fee": 249, "model": "other", "label": "Three Phase" },
+      { "accountSize": 100000, "fee": 399, "model": "other", "label": "Three Phase" },
+      { "accountSize": 200000, "fee": 799, "model": "other", "label": "Three Phase" },
+      { "accountSize": 400000, "fee": 1599, "model": "other", "label": "Three Phase" }
+    ],
+    "resetFee": null,
+    "refundPolicy": "Challenge fee refunded with first profitable payout"
+  },
+  "payouts": {
+    "splitMax": 90,
+    "schedule": "Monthly (bi-weekly with add-on)",
+    "processingTime": "24-48 hours",
+    "firstPayoutDays": 14,
+    "methods": ["bank transfer", "crypto", "Deel"]
+  },
+  "rules": {
+    "newsTrading": true,
+    "weekendHolding": true,
+    "copyTrading": false,
+    "expertAdvisors": true,
+    "consistencyRule": null,
+    "notes": "Five challenge types: Instant Funding (no evaluation, 8% trailing drawdown), Lightning (7-day evaluation, 5% target, no weekend/news), One Phase (10% target, 6% trailing), Two Phase (10%/5% targets, 10% trailing), Three Phase (5% per phase, 10% static). Lightning: no weekend holding, no news trading within 5 min of events, stop-loss required. EAs allowed on MT4/MT5 only (not DXTrade or Lightning). Copy trading between own FXIFY accounts only. HFT, latency arbitrage, tick scalping prohibited. Add-ons: 90% profit split (+20% fee), bi-weekly payouts (+5%), performance protect (+15%), 50:1 leverage (+25%)."
+  },
+  "markets": {
+    "platforms": ["MT4", "MT5", "DXTrade"],
+    "instruments": "Forex, Indices, Commodities, Stocks, Crypto"
+  },
+  "trust": {
+    "trustpilotRating": 4.4,
+    "trustpilotCount": 4900,
+    "communitySize": "Active Discord",
+    "notableFlags": []
+  },
+  "links": { "website": "https://fxify.com" },
+  "media": { "logo": "/images/logos/fxify-1-1-1-1.png" },
+  "availability": { "restrictedCountries": [] },
+  "support": {
+    "hours": "24/7 weekdays",
+    "liveChat": true,
+    "email": true,
+    "discord": true
+  },
+  "custom": {
+    "tags": ["5 Challenge Types", "Scaling to $4M", "Up to 90% Split", "Backed by FXPIG"],
+    "discountCode": "PROPFIRMS15",
+    "discountPercent": 15
+  },
+  "notes": null,
+  "lastVerifiedAt": "2026-02-24",
+  "lastUpdatedAt": "2026-02-24",
+  "dataSources": ["https://fxify.com"]
+}

@@ -1,0 +1,1161 @@
+---
+// Static editorial content for The Trading Pit
+// Supports multiple sections via the `section` prop
+interface Props {
+  section: string;
+  fallbackBody?: string;
+}
+const { section, fallbackBody } = Astro.props;
+---
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* CHALLENGES SECTION                                                  */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "challenges" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    When you take a challenge with The Trading Pit, you can choose between CFD, futures, or stock trading. Only CFD challenges offer one or two step challenges, with both stocks and futures trading run on a one step challenge only.
+  </p>
+
+  <!-- Per-challenge summaries -->
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">CFD 1-Phase – One Step Challenge</p>
+      <p>Account sizes range from $10,000 to $100,000 with fees starting at $99 for a $10K account and going up to $999 for a $100K account. Requires a 10% profit target with a 4% daily drawdown.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">CFD 2-Phase – Two Step Challenge</p>
+      <p>Account sizes range from $5,000 to $100,000 with fees starting at $49 for a $5K account and going up to $569 for a $100K account. Requires 8% profit in Phase 1 and 5% in Phase 2.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Futures – One Step Challenge</p>
+      <p>Account sizes of $50K, $100K, or $150K with fees from $99 to $289, plus a $129 activation fee. Profit target of around 6% with a daily pause mechanism instead of percentage-based drawdown.</p>
+      <p class="text-xs text-amber-600 font-semibold mt-1">Additional $129 activation fee required</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Stocks – One Step Challenge</p>
+      <p>Account sizes of $25K or $50K with fees from $99 to $249. Requires a 7% profit target with a 2% daily pause and 5% maximum drawdown. Profit share is 70%.</p>
+      <p class="text-xs text-amber-600 font-semibold mt-1">Lower 70% profit share compared to other challenge types</p>
+    </div>
+  </div>
+
+  <!-- ─── Comparison Table ───────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Comparison</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-10">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Attribute</th>
+          <th class="px-4 py-3 text-center">CFD 1-Phase</th>
+          <th class="px-4 py-3 text-center">CFD 2-Phase</th>
+          <th class="px-4 py-3 text-center">Futures</th>
+          <th class="px-4 py-3 text-center">Stocks</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Evaluation Phases</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">One Step</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">Two Steps</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">One Step</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">One Step</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Markets</td>
+          <td class="px-4 py-3 text-center text-slate-900">CFDs</td>
+          <td class="px-4 py-3 text-center text-slate-900">CFDs</td>
+          <td class="px-4 py-3 text-center text-slate-900">Futures</td>
+          <td class="px-4 py-3 text-center text-slate-900">Stocks</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Account Sizes</td>
+          <td class="px-4 py-3 text-center text-slate-900">$10K – $100K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5K – $100K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$50K – $150K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$25K – $50K</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Challenge Fees</td>
+          <td class="px-4 py-3 text-center text-slate-900">$99 – $999</td>
+          <td class="px-4 py-3 text-center text-slate-900">$49 – $569</td>
+          <td class="px-4 py-3 text-center text-slate-900">$99 – $289 (+$129)</td>
+          <td class="px-4 py-3 text-center text-slate-900">$99 – $249</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Target</td>
+          <td class="px-4 py-3 text-center text-slate-900">10%</td>
+          <td class="px-4 py-3 text-center text-slate-900">8% / 5%</td>
+          <td class="px-4 py-3 text-center text-slate-900">~6%</td>
+          <td class="px-4 py-3 text-center text-slate-900">7%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Daily Loss Control</td>
+          <td class="px-4 py-3 text-center text-slate-900">4% daily DD</td>
+          <td class="px-4 py-3 text-center text-slate-900">5% daily DD</td>
+          <td class="px-4 py-3 text-center text-slate-900">~2% daily pause</td>
+          <td class="px-4 py-3 text-center text-slate-900">2% daily pause</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Max Drawdown</td>
+          <td class="px-4 py-3 text-center text-slate-900">7% static</td>
+          <td class="px-4 py-3 text-center text-slate-900">10% static</td>
+          <td class="px-4 py-3 text-center text-slate-900">~4%</td>
+          <td class="px-4 py-3 text-center text-slate-900">5%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Consistency Rule</td>
+          <td class="px-4 py-3 text-center text-slate-900">40%</td>
+          <td class="px-4 py-3 text-center text-slate-900">40%</td>
+          <td class="px-4 py-3 text-center text-slate-900">40%</td>
+          <td class="px-4 py-3 text-center text-slate-900">40%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Min Profitable Days</td>
+          <td class="px-4 py-3 text-center text-slate-900">5</td>
+          <td class="px-4 py-3 text-center text-slate-900">3 per phase</td>
+          <td class="px-4 py-3 text-center text-slate-900">3</td>
+          <td class="px-4 py-3 text-center text-slate-900">3</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Share</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">80%</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">80%</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">80%</td>
+          <td class="px-4 py-3 text-center font-semibold text-amber-600">70%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Inactivity Limit</td>
+          <td class="px-4 py-3 text-center text-slate-900">21 days</td>
+          <td class="px-4 py-3 text-center text-slate-900">21 days</td>
+          <td class="px-4 py-3 text-center text-slate-900">21 days</td>
+          <td class="px-4 py-3 text-center text-slate-900">14 days</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 1. CFD 1-PHASE                                                 -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-emerald-500 text-white text-xs font-black flex items-center justify-center">1</span>
+      CFD 1-Phase Challenge
+    </h3>
+
+    <p class="mb-3">
+      The one step CFD challenge comes with a higher profit target and tighter overall limits. It will suit if you prefer a shorter challenge but are comfortable operating close to drawdown thresholds.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">4%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">7% (static)</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Profitable Days</p>
+        <p class="text-sm font-bold text-slate-800">3 days + 5 total</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Share</p>
+        <p class="text-sm font-bold text-emerald-600">80%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Payout Frequency</p>
+        <p class="text-sm font-bold text-slate-800">Bi-weekly</p>
+      </div>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">One-Off Fee</th>
+            <th class="px-4 py-3 text-right">Profit Target (10%)</th>
+            <th class="px-4 py-3 text-right">Daily DD (4%)</th>
+            <th class="px-4 py-3 text-right">Max DD (7%)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$99</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$400</td>
+            <td class="px-4 py-3 text-right text-slate-700">$700</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$20,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$179</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$800</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,400</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$399</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$3,500</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$999</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$4,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$7,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 2. CFD 2-PHASE                                                 -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-emerald-500 text-white text-xs font-black flex items-center justify-center">2</span>
+      CFD 2-Phase Challenge
+    </h3>
+
+    <p class="mb-3">
+      The two step CFD challenge splits the evaluation into two stages with lower profit targets per phase. In exchange, the drawdown limits are wider, which can make managing risk easier if you prefer more room during the evaluation.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 1 Target</p>
+        <p class="text-sm font-bold text-slate-800">8%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 2 Target</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">10% (static)</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Profitable Days</p>
+        <p class="text-sm font-bold text-slate-800">3 per phase</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Share</p>
+        <p class="text-sm font-bold text-emerald-600">80%</p>
+      </div>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">One-Off Fee</th>
+            <th class="px-4 py-3 text-right">P1 Target (8%)</th>
+            <th class="px-4 py-3 text-right">P2 Target (5%)</th>
+            <th class="px-4 py-3 text-right">Daily DD (5%)</th>
+            <th class="px-4 py-3 text-right">Max DD (10%)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$49</td>
+            <td class="px-4 py-3 text-right text-slate-700">$400</td>
+            <td class="px-4 py-3 text-right text-slate-700">$250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$99</td>
+            <td class="px-4 py-3 text-right text-slate-700">$800</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$20,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$199</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,600</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$349</td>
+            <td class="px-4 py-3 text-right text-slate-700">$4,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$569</td>
+            <td class="px-4 py-3 text-right text-slate-700">$8,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 3. FUTURES CHALLENGE                                            -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-emerald-500 text-white text-xs font-black flex items-center justify-center">3</span>
+      Futures Challenge
+    </h3>
+
+    <p class="mb-3">
+      The Trading Pit offers a single Futures Challenge built around contract limits, a daily pause, and a maximum drawdown. Unlike CFDs, futures accounts do not use daily drawdown percentages but instead pause trading once daily losses hit a fixed dollar amount.
+    </p>
+    <p class="mb-4">
+      This structure matters if you trade index or commodity futures and size positions by contracts rather than lot size.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
+        <p class="text-sm font-bold text-slate-800">~6%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Pause</p>
+        <p class="text-sm font-bold text-slate-800">~2%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">~4%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Duration</p>
+        <p class="text-sm font-bold text-slate-800">30 days</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Activation Fee</p>
+        <p class="text-sm font-bold text-amber-600">$129</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Share</p>
+        <p class="text-sm font-bold text-emerald-600">80%</p>
+      </div>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">One-Off Fee</th>
+            <th class="px-4 py-3 text-right">Contracts</th>
+            <th class="px-4 py-3 text-right">Profit Target</th>
+            <th class="px-4 py-3 text-right">Daily Pause</th>
+            <th class="px-4 py-3 text-right">Max DD</th>
+            <th class="px-4 py-3 text-right">Activation</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$99</td>
+            <td class="px-4 py-3 text-right text-slate-700">5 / 50</td>
+            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-4 py-3 text-right text-amber-600">$129</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$189</td>
+            <td class="px-4 py-3 text-right text-slate-700">10 / 100</td>
+            <td class="px-4 py-3 text-right text-slate-700">$6,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+            <td class="px-4 py-3 text-right text-amber-600">$129</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$150,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$289</td>
+            <td class="px-4 py-3 text-right text-slate-700">15 / 150</td>
+            <td class="px-4 py-3 text-right text-slate-700">$9,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$4,500</td>
+            <td class="px-4 py-3 text-right text-amber-600">$129</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Activation fee warning -->
+    <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-5">
+      <p class="text-sm font-bold text-amber-900 mb-1">Futures Activation Fee</p>
+      <p class="text-sm text-amber-800">
+        All Futures challenges require a <strong>$129 activation fee</strong> on top of the challenge fee. This is charged after you pass the evaluation, before you can start trading the funded account.
+      </p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 4. STOCKS CHALLENGE                                             -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-emerald-500 text-white text-xs font-black flex items-center justify-center">4</span>
+      Stocks Challenge
+    </h3>
+
+    <p class="mb-3">
+      The Trading Pit's Stocks Challenge provides access to equity trading with a structure that sits between CFDs and futures. Risk is controlled through a daily pause and a maximum drawdown, rather than percentage-based daily limits.
+    </p>
+    <p class="mb-4">
+      The stock challenge has its own inactivity rule where you can't be inactive for more than 14 days, but overall there's no time limit.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
+        <p class="text-sm font-bold text-slate-800">7%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Pause</p>
+        <p class="text-sm font-bold text-slate-800">2%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Profitable Days</p>
+        <p class="text-sm font-bold text-slate-800">3</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Inactivity Limit</p>
+        <p class="text-sm font-bold text-slate-800">14 days</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Share</p>
+        <p class="text-sm font-bold text-amber-600">70%</p>
+      </div>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">One-Off Fee</th>
+            <th class="px-4 py-3 text-right">Profit Target (7%)</th>
+            <th class="px-4 py-3 text-right">Daily Pause (2%)</th>
+            <th class="px-4 py-3 text-right">Max DD (5%)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$99</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,750</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,250</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$249</td>
+            <td class="px-4 py-3 text-right text-slate-700">$3,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Lower profit share warning -->
+    <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-5">
+      <p class="text-sm font-bold text-amber-900 mb-1">Lower Profit Share on Stocks</p>
+      <p class="text-sm text-amber-800">
+        The Stocks Challenge has a <strong>70% profit share</strong>, which is lower than the 80% offered on CFD and Futures challenges. This is worth considering if maximizing your profit split is a priority.
+      </p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- TRADING RULES                                                   -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules</h3>
+    <p class="mb-4">
+      The Trading Pit applies the same core trading rules across all challenge types, with enforcement handled through both system checks and manual review.
+    </p>
+
+    <div class="space-y-3 mb-6">
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">News Trading</p>
+        <p>Two minute restricted window either side of major news events.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">Automation and EAs</p>
+        <p>Automated trading is allowed, but copy trading, latency arbitrage, and tick-scalping strategies are prohibited.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">Copy Trading</p>
+        <p>Not allowed across CFD challenges. Permitted on Futures only, with a limit of up to five linked accounts.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">Overnight Holding</p>
+        <p>Allowed on CFD and Stocks challenges on weekdays. Futures overnight rules depend on contract specifications.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">Inactivity</p>
+        <p>21 days for CFD and Futures challenges; 14 days for Stocks.</p>
+      </div>
+    </div>
+
+    <!-- Consistency Rule -->
+    <h3 class="text-lg font-bold text-slate-900 mb-3">Consistency Rule</h3>
+    <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-5">
+      <p class="text-sm text-amber-800">
+        The Trading Pit enforces a <strong>40% consistency rule</strong> during the evaluation process. No single trading day can account for more than 40% of the total profit target. If a trading day exceeds that threshold, the excess is added to the remaining profit target instead of counting toward completion. This extends the evaluation rather than causing an immediate failure.
+      </p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- VERDICT                                                         -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on The Trading Pit's Challenges</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      The Trading Pit scores 9/10 for challenges because you get a clearly structured multi-asset setup across CFDs, Futures, and Stocks. The trading rules are detailed and predictable, so you know exactly what's required at each stage of the evaluation. The score doesn't reach a perfect 10 because flexibility is limited — the 40% consistency rule, restricted news trading window, and tighter controls on automation and short-term strategies raise the difficulty compared to more relaxed firms.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SPREADS SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "spreads" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-3">
+    The Trading Pit uses different pricing models for CFD and Futures trading. CFD traders pay a spread-plus-commission, with forex spreads as low as 0.0 pips but a <strong>$5 per lot commission</strong>.
+  </p>
+  <p class="mb-4">
+    Futures traders avoid spreads, instead trading on raw exchange pricing, with free Level 1 market data and optional paid upgrades for deeper market access.
+  </p>
+
+  <!-- Forex Spreads Table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Forex Spreads and Commission Fees</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-5 py-3 text-left">Forex Pair</th>
+          <th class="px-5 py-3 text-right">Spread (As Low As)</th>
+          <th class="px-5 py-3 text-right">Commission per Lot</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">EUR/USD</td>
+          <td class="px-5 py-3 text-right font-bold text-emerald-600">0.0 pips</td>
+          <td class="px-5 py-3 text-right text-slate-900">$5.00</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">GBP/USD</td>
+          <td class="px-5 py-3 text-right font-bold text-emerald-600">0.0 pips</td>
+          <td class="px-5 py-3 text-right text-slate-900">$5.00</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">USD/JPY</td>
+          <td class="px-5 py-3 text-right font-bold text-emerald-600">0.0 pips</td>
+          <td class="px-5 py-3 text-right text-slate-900">$5.00</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">EUR/JPY</td>
+          <td class="px-5 py-3 text-right font-bold text-emerald-600">0.4 pips</td>
+          <td class="px-5 py-3 text-right text-slate-900">$5.00</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">GBP/JPY</td>
+          <td class="px-5 py-3 text-right font-bold text-emerald-600">0.5 pips</td>
+          <td class="px-5 py-3 text-right text-slate-900">$5.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Commission by asset class -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Commission Fees by Asset Class</h3>
+  <p class="mb-4">
+    Crypto trading is more expensive, with higher spreads and a <strong>0.20% commission per trade</strong>, making it pricier than some competitors. Metals and commodities have a flat $5 commission, while indices and energy are swap-free with standard spreads.
+  </p>
+
+  <!-- Futures Market Data Fees -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Futures Market Data Fees</h3>
+  <p class="mb-4">
+    The Trading Pit provides free Level 1 market data, covering top-of-book pricing. Traders who need Level 2 depth-of-market data can upgrade for an additional fee, depending on the exchange.
+  </p>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-5 py-3 text-left">Market Data Package</th>
+          <th class="px-5 py-3 text-right">Monthly Fee</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">Level 1 (Top of the Book)</td>
+          <td class="px-5 py-3 text-right font-bold text-emerald-600">Free</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">Level 2 (Chicago-based Exchange)</td>
+          <td class="px-5 py-3 text-right text-slate-900">$16/month</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">Level 2 (Comprehensive US Futures)</td>
+          <td class="px-5 py-3 text-right text-slate-900">$41/month</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">European Derivatives Exchange</td>
+          <td class="px-5 py-3 text-right text-slate-900">€23/month</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Spreads and Commissions</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      The Trading Pit provides tight forex spreads, making it an attractive option for currency traders. However commission fees and crypto trading costs are on the higher side compared to competitors. Futures traders benefit from free Level 1 market data, with optional Level 2 upgrades for those needing deeper market access.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* MARKETS SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "markets" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    The Trading Pit provides access to a wide range of markets, including forex, commodities, indices, stocks, and cryptocurrencies. Leverage options vary by asset class, with forex offering up to 1:50, while stocks and crypto have more conservative limits.
+  </p>
+
+  <!-- Markets Summary -->
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Forex</p>
+      <p class="text-sm font-bold text-slate-800">46 pairs</p>
+      <p class="text-[10px] text-slate-500">Up to 1:50</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Commodities</p>
+      <p class="text-sm font-bold text-slate-800">Metals & more</p>
+      <p class="text-[10px] text-slate-500">Up to 1:10</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Indices</p>
+      <p class="text-sm font-bold text-slate-800">Major global</p>
+      <p class="text-[10px] text-slate-500">Up to 1:10</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Stocks</p>
+      <p class="text-sm font-bold text-slate-800">US, UK, EU</p>
+      <p class="text-[10px] text-slate-500">Up to 1:2</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Crypto</p>
+      <p class="text-sm font-bold text-slate-800">BTC, ETH & more</p>
+      <p class="text-[10px] text-slate-500">Up to 1:2</p>
+    </div>
+  </div>
+
+  <!-- Leverage by asset class -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Leverage by Asset Class</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Asset Class</th>
+          <th class="px-4 py-3 text-center">Max Leverage</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Forex (46 pairs)</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">1:50</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Commodities (Gold, Silver, Platinum, Palladium)</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">1:10</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Indices (NASDAQ 100, S&P 500, DAX 30)</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">1:10</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Stocks (US, UK, EU equities)</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">1:2</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Crypto (BTC, ETH, XRP & others)</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">1:2</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Financial Markets</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      The Trading Pit offers a well-rounded selection of assets, making it a strong choice for traders who want to diversify. Forex traders have access to 46 currency pairs, while those interested in commodities, indices, and stocks will find a solid mix of major global markets. Crypto trading is available but limited to key assets like Bitcoin and Ethereum. While the range covers most trader needs, those looking for a wider selection of stocks or niche markets may find other firms more suitable.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PLATFORMS SECTION                                                   */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "platforms" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    The Trading Pit offers a wide selection of platforms tailored to both CFD and Futures traders. Platform availability depends on the chosen challenge type, with MetaTrader and cTrader supporting CFDs, while Futures traders can choose from multiple specialized platforms.
+  </p>
+
+  <!-- CFD Platforms -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">CFD Trading Platforms</h3>
+  <div class="space-y-3 mb-8">
+    <div class="rounded-xl border border-slate-200 overflow-hidden">
+      <div class="bg-slate-800 px-4 py-2">
+        <p class="font-bold text-white text-sm">MetaTrader 4 (MT4)</p>
+      </div>
+      <div class="p-4">
+        <p class="mb-2">A widely used forex and CFD platform with built-in technical indicators, Expert Advisor (EA) support, and mobile compatibility.</p>
+        <div class="flex flex-wrap gap-1.5 mt-2">
+          <span class="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700">Technical Indicators</span>
+          <span class="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700">EA Support</span>
+          <span class="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700">Mobile Compatible</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="rounded-xl border border-slate-200 overflow-hidden">
+      <div class="bg-slate-800 px-4 py-2">
+        <p class="font-bold text-white text-sm">MetaTrader 5 (MT5)</p>
+      </div>
+      <div class="p-4">
+        <p class="mb-2">An upgraded version of MT4 with more order types, additional timeframes, and integrated stock and futures trading.</p>
+        <div class="flex flex-wrap gap-1.5 mt-2">
+          <span class="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700">More Order Types</span>
+          <span class="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700">Additional Timeframes</span>
+          <span class="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700">Multi-Asset</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="rounded-xl border border-slate-200 overflow-hidden">
+      <div class="bg-slate-800 px-4 py-2">
+        <p class="font-bold text-white text-sm">cTrader</p>
+      </div>
+      <div class="p-4">
+        <p class="mb-2">A direct market access (DMA) platform offering Depth of Market (DOM), advanced order execution, and intuitive charting tools. Powered by Tickmill for liquidity.</p>
+        <div class="flex flex-wrap gap-1.5 mt-2">
+          <span class="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700">DMA Access</span>
+          <span class="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700">Depth of Market</span>
+          <span class="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700">Advanced Charting</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Futures Platforms -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Futures Trading Platforms</h3>
+  <p class="mb-4">
+    Futures traders can choose from a variety of platforms designed for low-latency execution, order flow analysis, and market depth visualization. Availability depends on the challenge type.
+  </p>
+
+  <div class="space-y-3 mb-8">
+    <div class="rounded-xl border border-slate-200 overflow-hidden">
+      <div class="bg-slate-800 px-4 py-2">
+        <p class="font-bold text-white text-sm">ATAS</p>
+      </div>
+      <div class="p-4">
+        <p>Specialized in order flow and volume analysis, ideal for professional futures traders.</p>
+      </div>
+    </div>
+
+    <div class="rounded-xl border border-slate-200 overflow-hidden">
+      <div class="bg-slate-800 px-4 py-2">
+        <p class="font-bold text-white text-sm">Quantower</p>
+      </div>
+      <div class="p-4">
+        <p>A multi-asset platform offering extensive market connectivity and custom trading features.</p>
+      </div>
+    </div>
+
+    <div class="rounded-xl border border-slate-200 overflow-hidden">
+      <div class="bg-slate-800 px-4 py-2">
+        <p class="font-bold text-white text-sm">Rithmic / R|Trader Pro</p>
+      </div>
+      <div class="p-4">
+        <p>A low-latency futures trading platform, often favored for scalping and high-speed execution.</p>
+      </div>
+    </div>
+
+    <div class="rounded-xl border border-slate-200 overflow-hidden">
+      <div class="bg-slate-800 px-4 py-2">
+        <p class="font-bold text-white text-sm">Prime-Only Platforms</p>
+      </div>
+      <div class="p-4">
+        <p class="mb-2">The following platforms are available exclusively on Prime challenges:</p>
+        <div class="flex flex-wrap gap-1.5 mt-2">
+          <span class="inline-flex items-center rounded-full bg-emerald-100 px-2.5 py-0.5 text-xs font-medium text-emerald-700">Tradovate</span>
+          <span class="inline-flex items-center rounded-full bg-emerald-100 px-2.5 py-0.5 text-xs font-medium text-emerald-700">NinjaTrader</span>
+          <span class="inline-flex items-center rounded-full bg-emerald-100 px-2.5 py-0.5 text-xs font-medium text-emerald-700">TradingView</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="rounded-xl border border-slate-200 overflow-hidden">
+      <div class="bg-slate-800 px-4 py-2">
+        <p class="font-bold text-white text-sm">Compatible Platforms (License Required)</p>
+      </div>
+      <div class="p-4">
+        <div class="flex flex-wrap gap-1.5">
+          <span class="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700">Sierra Chart (Rithmic only)</span>
+          <span class="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700">MotiveWave</span>
+          <span class="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700">Jigsaw (Rithmic only)</span>
+          <span class="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700">Volfix</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Trading Platforms</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      The Trading Pit provides a strong lineup of platforms catering to both traditional and algorithmic traders. CFD traders will find MT4, MT5, and cTrader familiar and feature-rich, while Futures traders have access to specialized platforms like ATAS and Quantower, alongside popular options like NinjaTrader and TradingView.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PAYOUTS SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "payouts" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    Payouts are structured based on the trader's challenge type (CFD or Futures, Prime or Classic), with clear schedules and minimum withdrawal requirements.
+  </p>
+
+  <!-- Payout summary grid -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Profit Split</p>
+      <p class="text-sm font-bold text-emerald-600">80%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Classic Starting Split</p>
+      <p class="text-sm font-bold text-amber-600">50%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Processing Time</p>
+      <p class="text-sm font-bold text-slate-800">1 business day</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Payout Schedule</p>
+      <p class="text-sm font-bold text-slate-800">Bi-weekly</p>
+    </div>
+  </div>
+
+  <!-- Challenge Fee Payment Methods -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Fee Payment Methods</h3>
+  <p class="mb-4">
+    The Trading Pit allows you to pay for challenge fees using credit/debit cards, cryptocurrencies, Binance Pay, Apple Pay, Google Pay, and region-specific bank transfers. Payments are processed securely, with crypto transactions offering faster processing times.
+  </p>
+
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-3 text-center">
+      <p class="text-sm font-bold text-slate-900">Credit/Debit Cards</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-3 text-center">
+      <p class="text-sm font-bold text-slate-900">Cryptocurrency</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-3 text-center">
+      <p class="text-sm font-bold text-slate-900">Binance Pay</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-3 text-center">
+      <p class="text-sm font-bold text-slate-900">Apple Pay</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-3 text-center">
+      <p class="text-sm font-bold text-slate-900">Google Pay</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-3 text-center">
+      <p class="text-sm font-bold text-slate-900">Bank Transfer</p>
+    </div>
+  </div>
+
+  <!-- Payout structure by challenge type -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payout Structure by Challenge Type</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Challenge</th>
+          <th class="px-4 py-3 text-center">Profit Split</th>
+          <th class="px-4 py-3 text-center">Min Trading Days</th>
+          <th class="px-4 py-3 text-center">Payout Schedule</th>
+          <th class="px-4 py-3 text-center">Min Withdrawal</th>
+          <th class="px-4 py-3 text-center">Processing</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Prime CFD</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">80%</td>
+          <td class="px-4 py-3 text-center text-slate-700">5 trading days</td>
+          <td class="px-4 py-3 text-center text-slate-700">Every 14 days</td>
+          <td class="px-4 py-3 text-center text-slate-700">$100</td>
+          <td class="px-4 py-3 text-center text-slate-700">1 business day</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Classic CFD</td>
+          <td class="px-4 py-3 text-center font-semibold text-amber-600">50–70%</td>
+          <td class="px-4 py-3 text-center text-slate-700">On target completion</td>
+          <td class="px-4 py-3 text-center text-slate-700">Every 14 days (Fridays)</td>
+          <td class="px-4 py-3 text-center text-slate-700">—</td>
+          <td class="px-4 py-3 text-center text-slate-700">1 business day</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Prime Futures</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">80%</td>
+          <td class="px-4 py-3 text-center text-slate-700">10 winning days + $200</td>
+          <td class="px-4 py-3 text-center text-slate-700">Every 14 days (Fridays)</td>
+          <td class="px-4 py-3 text-center text-slate-700">$200</td>
+          <td class="px-4 py-3 text-center text-slate-700">1 business day</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Classic Futures</td>
+          <td class="px-4 py-3 text-center font-semibold text-amber-600">Up to 70%</td>
+          <td class="px-4 py-3 text-center text-slate-700">3 trading days</td>
+          <td class="px-4 py-3 text-center text-slate-700">Every Friday</td>
+          <td class="px-4 py-3 text-center text-slate-700">$150</td>
+          <td class="px-4 py-3 text-center text-slate-700">1 business day</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Lower starting split warning -->
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-5">
+    <p class="text-sm font-bold text-amber-900 mb-1">Classic Profit Split Warning</p>
+    <p class="text-sm text-amber-800">
+      Classic challenges start with a <strong>50% profit split</strong> that scales up to 70–80% based on performance levels. This is significantly lower than the Prime 80% fixed split and below many competitor offerings.
+    </p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Payments and Payouts</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      The Trading Pit offers flexible payment options for challenge fees, including crypto, bank cards, and digital wallets. Payout schedules are transparent, with bi-weekly withdrawals processed quickly. Prime challenges offer higher, fixed profit splits, while Classic challenges scale based on trader performance.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SUPPORT SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "support" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    The Trading Pit provides multiple support channels and a range of educational resources. Support is available via email, phone, live chat, and an online inquiry form, and while response times are generally fast, some traders report occasional delays during busy periods.
+  </p>
+
+  <!-- Customer Support -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Customer Support</h3>
+  <p class="mb-4">
+    Feedback on customer service is mostly positive, with many traders reporting quick resolutions, though peak times may lead to slower response times.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Email Support</p>
+      <p>Available for general inquiries and account issues.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Phone Support</p>
+      <p>Direct phone line available for urgent matters.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Live Chat</p>
+      <p>Real-time chat support through the website.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Online Inquiry Form</p>
+      <p>Submit detailed requests through the contact form.</p>
+    </div>
+  </div>
+
+  <!-- Educational Resources -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Educational Resources</h3>
+  <p class="mb-4">
+    The Trading Pit provides a variety of free educational materials to help you develop your trading skills:
+  </p>
+
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Blog</p>
+      <p>Market insights, platform updates, and trading strategies.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Ebooks</p>
+      <p>Educational guides available through The Trading Pit Academy.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Webinars</p>
+      <p>Live sessions covering market analysis, risk management, and trading strategies.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Podcasts</p>
+      <p>Discussions on prop trading, fintech, and trading psychology with industry experts.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Videos and Infographics</p>
+      <p>Visual content designed to simplify complex trading concepts.</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Customer Support and Education</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      The Trading Pit offers accessible customer support, with email, phone, and live chat options, though response times can vary. Its educational resources cover a broad range of topics, making them useful at different experience levels. However, if you are looking for personalized coaching or one-on-one mentorship, you may find the content more generalized compared to other prop firms.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* TRUST SECTION                                                       */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "trust" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-3">
+    The Trading Pit operates as an independent proprietary trading firm, distinct from broker-backed prop firms like DNA Funded or FXIFY. However, it collaborates with established brokers for platform-specific liquidity and execution. For instance, cTrader users benefit from Tickmill's services.
+  </p>
+  <p class="mb-6">
+    This approach offers a blend of independence and access to real market conditions, differing from firms that operate solely in simulated environments.
+  </p>
+
+  <!-- Trustpilot -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trustpilot Score</h3>
+
+  <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 mb-4 flex items-center gap-4">
+    <div class="flex-shrink-0">
+      <p class="text-3xl font-black text-slate-900">4.2<span class="text-lg text-slate-400">/5</span></p>
+      <p class="text-xs text-slate-500 font-semibold">TrustScore</p>
+    </div>
+    <div>
+      <p class="text-sm text-slate-700">Based on <strong>700+ reviews</strong> on Trustpilot. About 75% of users rate it 5 stars, praising its transparent funding process, reliable payouts, and responsive support.</p>
+    </div>
+  </div>
+
+  <p class="mb-6">
+    Some users mention technical issues during high market volatility and feel that profit splits could be more competitive for entry-level accounts.
+  </p>
+
+  <!-- Community -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Prop Trading Community</h3>
+  <p class="mb-4">
+    The Trading Pit has built a growing trader network, engaging with prop traders across multiple platforms:
+  </p>
+
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">15,700+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Discord</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">6,800+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Twitter (X)</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">19,300+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Instagram</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">2,100+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Telegram</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Trust and Community</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      The Trading Pit is establishing itself as a respected prop firm, particularly with its CFD and Futures offerings. Its growing online presence and trader engagement are positives, especially on Discord. However, platform stability concerns and lower starting profit splits remain key areas for improvement.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* FALLBACK                                                            */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section !== "challenges" && section !== "spreads" && section !== "markets" && section !== "platforms" && section !== "payouts" && section !== "support" && section !== "trust" && fallbackBody && (
+  <div class="text-sm leading-relaxed text-slate-700 space-y-4">
+    {fallbackBody.split("\n\n").map((para) => (
+      <p set:html={para.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")} />
+    ))}
+  </div>
+)}

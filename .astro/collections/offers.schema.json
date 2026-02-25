@@ -1,0 +1,55 @@
+{
+  "$ref": "#/definitions/offers",
+  "definitions": {
+    "offers": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "propFirmIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "trackingUrl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "terms": {
+          "type": "string"
+        },
+        "startAt": {
+          "type": "string",
+          "format": "date"
+        },
+        "endAt": {
+          "type": "string",
+          "format": "date"
+        },
+        "regions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "propFirmIds",
+        "trackingUrl",
+        "terms"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

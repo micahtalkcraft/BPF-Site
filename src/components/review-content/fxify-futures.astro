@@ -1,0 +1,763 @@
+---
+// Static editorial content for FXIFY Futures
+// Supports multiple sections via the `section` prop
+interface Props {
+  section: string;
+  fallbackBody?: string;
+}
+const { section, fallbackBody } = Astro.props;
+---
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* CHALLENGES SECTION                                                  */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "challenges" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    FXIFY Futures allows you to choose from two challenge types for futures trading, designed to suit different experience levels:
+  </p>
+
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Starter Plan</p>
+      <p>Ideal if you prefer a structured futures evaluation with a lower entry fee and a step-by-step growth process.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Expert Plan</p>
+      <p>Best for experienced traders wanting higher trading limits, no activation fees, and faster payouts with a higher profit split.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- STARTER PLAN                                                     -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">1</span>
+      Starter Plan
+    </h3>
+
+    <p class="mb-3">
+      The Starter Plan is perfect if you're looking for a cost-effective challenge with structured risk management. You'll follow a <strong>one-step evaluation</strong>, with no time limits and a minimum of <strong>four trading days</strong> required to pass. Once you meet the objectives, you can get funded with up to $150,000 in simulated capital.
+    </p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-5">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
+        <p class="text-sm font-bold text-teal-600">80% (up to 90%)</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Trading Days</p>
+        <p class="text-sm font-bold text-slate-800">4 days</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Time Limit</p>
+        <p class="text-sm font-bold text-teal-600">Unlimited</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Position Size</p>
+        <p class="text-sm font-bold text-slate-800">Up to 12 contracts</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">First Payout</p>
+        <p class="text-sm font-bold text-slate-800">After 14 days</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Activation Fee</p>
+        <p class="text-sm font-bold text-slate-800">$125</p>
+      </div>
+    </div>
+
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm whitespace-nowrap">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-3 py-3 text-left">Account Size</th>
+            <th class="px-3 py-3 text-right">Monthly Fee</th>
+            <th class="px-3 py-3 text-right">Profit Target</th>
+            <th class="px-3 py-3 text-right">Daily Loss (2%)</th>
+            <th class="px-3 py-3 text-right">Max Loss (4%)</th>
+            <th class="px-3 py-3 text-center">Max Contracts</th>
+            <th class="px-3 py-3 text-right">Activation Fee</th>
+            <th class="px-3 py-3 text-right">Reset Fee</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$89</td>
+            <td class="px-3 py-3 text-right text-slate-700">$3,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-3 py-3 text-center text-slate-900">3</td>
+            <td class="px-3 py-3 text-right text-slate-700">$125</td>
+            <td class="px-3 py-3 text-right text-slate-700">$79</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$149</td>
+            <td class="px-3 py-3 text-right text-slate-700">$6,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$4,000</td>
+            <td class="px-3 py-3 text-center text-slate-900">7</td>
+            <td class="px-3 py-3 text-right text-slate-700">$125</td>
+            <td class="px-3 py-3 text-right text-slate-700">$125</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$150,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$225</td>
+            <td class="px-3 py-3 text-right text-slate-700">$9,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$3,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$6,000</td>
+            <td class="px-3 py-3 text-center text-slate-900">12</td>
+            <td class="px-3 py-3 text-right text-slate-700">$125</td>
+            <td class="px-3 py-3 text-right text-slate-700">$199</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- EXPERT PLAN                                                      -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">2</span>
+      Expert Plan
+    </h3>
+
+    <p class="mb-3">
+      The Expert Plan is a better option if you're looking for higher position limits, faster payouts, and <strong>no activation fees</strong>. This plan offers more flexibility, allowing you to scale up quickly while benefiting from higher profit splits. With a minimum of <strong>three trading days</strong>, you can pass the evaluation and start earning from your funded account faster.
+    </p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-5">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
+        <p class="text-sm font-bold text-teal-600">90% (up to 100%)</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Trading Days</p>
+        <p class="text-sm font-bold text-slate-800">3 days</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Time Limit</p>
+        <p class="text-sm font-bold text-teal-600">Unlimited</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Position Size</p>
+        <p class="text-sm font-bold text-slate-800">Up to 15 contracts</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">First Payout</p>
+        <p class="text-sm font-bold text-slate-800">After 14 days</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Activation Fee</p>
+        <p class="text-sm font-bold text-teal-600">$0</p>
+      </div>
+    </div>
+
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm whitespace-nowrap">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-3 py-3 text-left">Account Size</th>
+            <th class="px-3 py-3 text-right">Monthly Fee</th>
+            <th class="px-3 py-3 text-right">Profit Target</th>
+            <th class="px-3 py-3 text-right">Daily Loss (3%)</th>
+            <th class="px-3 py-3 text-right">Max Loss (4&ndash;5%)</th>
+            <th class="px-3 py-3 text-center">Max Contracts</th>
+            <th class="px-3 py-3 text-right">Activation Fee</th>
+            <th class="px-3 py-3 text-right">Reset Fee</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$149</td>
+            <td class="px-3 py-3 text-right text-slate-700">$3,500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-3 py-3 text-center text-slate-900">5</td>
+            <td class="px-3 py-3 text-right font-semibold text-teal-600">$0</td>
+            <td class="px-3 py-3 text-right text-slate-700">$125</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$249</td>
+            <td class="px-3 py-3 text-right text-slate-700">$7,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$3,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$4,500</td>
+            <td class="px-3 py-3 text-center text-slate-900">10</td>
+            <td class="px-3 py-3 text-right font-semibold text-teal-600">$0</td>
+            <td class="px-3 py-3 text-right text-slate-700">$225</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$150,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$349</td>
+            <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$4,500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$6,000</td>
+            <td class="px-3 py-3 text-center text-slate-900">15</td>
+            <td class="px-3 py-3 text-right font-semibold text-teal-600">$0</td>
+            <td class="px-3 py-3 text-right text-slate-700">$299</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ─── Add-Ons ─────────────────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Futures Account Add-Ons</h3>
+  <p class="mb-4">
+    FXIFY Futures offers two optional upgrades at checkout to give you more flexibility and maximize your earnings:
+  </p>
+
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Profit Split Increase <span class="text-xs font-normal text-slate-500">(+10% of account price)</span></p>
+      <p>Boosts your share by 10%, raising Starter accounts from 80% to 90% and Expert accounts from 90% to 100%.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Remove Daily Drawdown <span class="text-xs font-normal text-slate-500">(+10% of account price &mdash; Expert only)</span></p>
+      <p>Removes the daily drawdown restriction, allowing for more trading flexibility. Only available on Expert accounts.</p>
+    </div>
+  </div>
+
+  <!-- ─── Trading Rules ───────────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules</h3>
+  <p class="mb-4">
+    FXIFY Futures gives you the freedom to trade futures on your own terms, but you'll need to follow a few key rules to keep your account active and eligible for payouts.
+  </p>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Rule</th>
+          <th class="px-4 py-3 text-center">Status</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">Trailing Drawdown</td>
+          <td class="px-4 py-3 text-center"><span class="text-slate-600">Adjusts based on end-of-day balance</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">Consistency Rule</td>
+          <td class="px-4 py-3 text-center"><span class="text-slate-600">30% (Starter) / 40% (Expert) single-day cap</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">News Trading</td>
+          <td class="px-4 py-3 text-center"><span class="text-teal-600 font-bold">&#10003;</span> <span class="text-slate-600">Allowed (manage risk accordingly)</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">Expert Advisors (EAs)</td>
+          <td class="px-4 py-3 text-center"><span class="text-teal-600 font-bold">&#10003;</span> <span class="text-slate-600">Permitted (must follow FXIFY rules)</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">Copy Trading</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span> <span class="text-slate-600">Not allowed</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">HFT / Latency Arbitrage</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span> <span class="text-slate-600">Prohibited</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">CME Price Limit Trading</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span> <span class="text-slate-600">No trading within 2% of price limit</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">Funded Account Reset</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span> <span class="text-slate-600">Funded accounts cannot be reset</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">Inactivity Penalty</td>
+          <td class="px-4 py-3 text-center"><span class="text-teal-600 font-bold">&#10003;</span> <span class="text-slate-600">No penalty</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Futures Challenges &amp; Rules</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      FXIFY Futures offers a straightforward path to funded futures trading with flexible challenges, high profit splits, and no time limits. The clear risk rules and fair trading conditions make it one of the best futures prop firms if you can trade consistently and stay within the guidelines.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SPREADS / MARKETS & PRICING SECTION                                 */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "spreads" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    FXIFY Futures applies <strong>round-turn pricing</strong>, meaning the listed fees cover both opening and closing trades. These charges include a small regulatory fee ($0.04 per trade) and exchange-specific costs that vary by product type.
+  </p>
+
+  <!-- Pricing Table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Futures Round-Turn Pricing</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Product Category</th>
+          <th class="px-4 py-3 text-left">Example Products</th>
+          <th class="px-4 py-3 text-right">Total Fee (Round-Turn)</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">CME Equity Futures</td>
+          <td class="px-4 py-3 text-slate-700">E-mini S&amp;P 500 (ES), E-mini NASDAQ 100 (NQ)</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$2.80</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Micro Equity Futures</td>
+          <td class="px-4 py-3 text-slate-700">Micro S&amp;P (MES), Micro NASDAQ 100 (MNQ)</td>
+          <td class="px-4 py-3 text-right font-semibold text-teal-600">$0.74</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">CME Foreign Exchange</td>
+          <td class="px-4 py-3 text-slate-700">Euro FX (6E), British Pound (6B)</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$3.24</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Micro FX Futures</td>
+          <td class="px-4 py-3 text-slate-700">Micro EUR/USD (M6E), Micro AUD/USD (M6A)</td>
+          <td class="px-4 py-3 text-right font-semibold text-teal-600">$0.52</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Crude Oil &amp; Energy</td>
+          <td class="px-4 py-3 text-slate-700">Crude Oil (CL), Natural Gas (NG)</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$3.04 &ndash; $3.24</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">CBOT Commodity Futures</td>
+          <td class="px-4 py-3 text-slate-700">Corn (ZC), Wheat (ZW), Soybeans (ZS)</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$4.24</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">COMEX Metals</td>
+          <td class="px-4 py-3 text-slate-700">Gold (GC), Silver (SI), Copper (HG)</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$3.24</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Micro Metals</td>
+          <td class="px-4 py-3 text-slate-700">Micro Gold (MGC), Micro Silver (SIL)</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$1.04 &ndash; $2.04</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Interest Rate Futures</td>
+          <td class="px-4 py-3 text-slate-700">10-Year Note (ZN), 30-Year Bond (ZB)</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$1.64 &ndash; $1.78</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Comparison -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">How Does FXIFY Futures Compare?</h3>
+  <div class="space-y-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">CME Equity Futures ($2.80)</p>
+      <p>Slightly lower than Topstep's $3+ per round-turn, making FXIFY competitive for index futures traders.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Micro Contracts ($0.52 &ndash; $0.74)</p>
+      <p>Cost-effective rates aligning closely with Topstep's micro contract pricing.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Interest Rate Futures ($1.64 &ndash; $1.78)</p>
+      <p>Within industry standard, closely matching Topstep's $1.60 &ndash; $1.80 range.</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Futures Markets &amp; Pricing</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      FXIFY Futures offers transparent, competitive pricing that aligns with industry standards. With lower fees on index futures and cost-effective micro contract pricing, it stands out as a strong alternative to Topstep and other leading prop firms. Whether you're trading equities, commodities, or forex futures, FXIFY provides clear, predictable costs without hidden fees.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* MARKETS / FUTURES MARKETS SECTION                                   */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "markets" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    FXIFY Futures provides access to a wide range of CME futures markets spanning equities, foreign exchange, commodities, metals, and bonds. All markets use <strong>real-time CME data feeds</strong> for accurate price updates and execution.
+  </p>
+
+  <!-- Market Categories -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Available Futures Markets</h3>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">CME Equity Futures</p>
+      <p>E-mini S&amp;P 500 (ES), E-mini NASDAQ 100 (NQ), E-mini Dow (YM), E-mini Russell 2000 (RTY)</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Micro Equity Futures</p>
+      <p>Micro S&amp;P (MES), Micro NASDAQ 100 (MNQ), Micro Dow (MYM), Micro Russell 2000 (M2K)</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">CME Foreign Exchange</p>
+      <p>Euro FX (6E), British Pound (6B), Japanese Yen (6J), Australian Dollar (6A)</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Micro FX Futures</p>
+      <p>Micro EUR/USD (M6E), Micro AUD/USD (M6A), Micro GBP/USD (M6B)</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Crude Oil &amp; Energy</p>
+      <p>Crude Oil (CL), Natural Gas (NG), Micro Crude Oil (MCL)</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">CBOT Commodities</p>
+      <p>Corn (ZC), Wheat (ZW), Soybeans (ZS)</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">COMEX Metals</p>
+      <p>Gold (GC), Silver (SI), Copper (HG)</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Interest Rate Futures</p>
+      <p>10-Year Note (ZN), 30-Year Bond (ZB), 2-Year Note (ZT)</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Futures Markets</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      FXIFY Futures scores a perfect 10/10 for markets, offering comprehensive access to CME equity, FX, commodity, metals, and bond futures. The inclusion of micro contracts across most categories makes it accessible for smaller account sizes, while the real-time CME data feed ensures accurate pricing and execution.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PLATFORMS / TRADING PLATFORMS SECTION                                */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "platforms" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    FXIFY Futures operates exclusively on its proprietary <strong>FFX Platform</strong>, a web-based trading system designed for futures traders. Unlike other prop firms that support NinjaTrader, Rithmic, or Tradovate, FXIFY does not currently offer third-party platform integrations.
+  </p>
+
+  <!-- Platform Features -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">FFX Platform Features</h3>
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">TradingView-Powered Charting</p>
+      <p>Advanced indicators and drawing tools powered by TradingView's charting engine.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Real-Time CME Data Feed</p>
+      <p>Accurate price updates and execution directly from CME markets.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Simplified Order Management</p>
+      <p>Bracket orders and drag-and-drop controls for intuitive trade execution.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Automatic Risk Management</p>
+      <p>Automatic contract rollovers and daily position closures built into the platform.</p>
+    </div>
+  </div>
+
+  <!-- Data Levels -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Market Data Options</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Level 1 Data <span class="text-xs font-normal text-teal-600">(Free)</span></p>
+      <p>Basic market information including bid/ask prices and volume.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Level 2 Data <span class="text-xs font-normal text-slate-500">($39/month)</span></p>
+      <p>Detailed order book view showing liquidity at different price levels &mdash; useful for scalping and order flow analysis.</p>
+    </div>
+  </div>
+
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
+    <p class="text-sm font-bold text-amber-900 mb-1">No Third-Party Platform Support</p>
+    <p class="text-sm text-amber-800">
+      FXIFY Futures does not currently support NinjaTrader, Rithmic, or Tradovate. EAs are not currently supported on the FFX Platform, though FXIFY has indicated EA compatibility could be introduced in the future.
+    </p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trading Platforms</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      While the FFX Platform is built specifically for FXIFY traders and includes essential features like TradingView charting and real-time CME data, it lacks compatibility with popular futures platforms like NinjaTrader and Rithmic. Traders who prefer a web-based platform with built-in charting and execution tools will find it sufficient, but those looking for third-party integrations or EA support may find the options limited.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PAYOUTS / PAYMENTS & PROFIT PAYOUT SECTION                          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "payouts" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    FXIFY Futures offers structured and transparent payments for both challenge fees and profit withdrawals. Traders must complete <strong>KYC verification</strong> before receiving payouts, and all transactions are processed through <strong>Riseworks</strong> for security.
+  </p>
+
+  <!-- Payment Methods -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payment Methods for Challenge Fees</h3>
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-sm font-bold text-slate-800">Credit/Debit Cards</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-sm font-bold text-slate-800">Cryptocurrency</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-sm font-bold text-slate-800">Bank Transfers</p>
+    </div>
+  </div>
+  <p class="mb-8 text-xs text-slate-500">
+    Subscriptions are billed monthly until you pass the evaluation. If you cancel your subscription, it remains active until the end of the billing cycle.
+  </p>
+
+  <!-- Profit Splits -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Profit Splits &amp; Payout Policy</h3>
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Starter Split</p>
+      <p class="text-sm font-bold text-teal-600">80% &ndash; 90%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Expert Split</p>
+      <p class="text-sm font-bold text-teal-600">90% &ndash; 100%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Payout Frequency</p>
+      <p class="text-sm font-bold text-slate-800">Every 14 days</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Processor</p>
+      <p class="text-sm font-bold text-slate-800">Riseworks</p>
+    </div>
+  </div>
+
+  <!-- Buffer Zone -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Buffer Zone Requirements</h3>
+  <p class="mb-4">
+    FXIFY Futures enforces a <strong>buffer zone</strong>, meaning a portion of profits must remain in the account before a withdrawal. The buffer zone also serves as the new max drawdown limit after each payout. The minimum required profit above the buffer zone to request a withdrawal is <strong>$100</strong>.
+  </p>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Size</th>
+          <th class="px-4 py-3 text-center">Starter Buffer Zone</th>
+          <th class="px-4 py-3 text-center">Expert Buffer Zone</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$500</td>
+          <td class="px-4 py-3 text-center text-slate-900">$1,000</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$1,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$1,500</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$150,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$1,500</td>
+          <td class="px-4 py-3 text-center text-slate-900">$2,000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Tiered Payout System -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Tiered Payout System</h3>
+  <p class="mb-4">
+    FXIFY uses a tiered payout system, gradually increasing the percentage of profits you can withdraw:
+  </p>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Payout</th>
+          <th class="px-4 py-3 text-center">% of Profits Above Buffer</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">First Payout</td>
+          <td class="px-4 py-3 text-center text-slate-900">60%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">Second Payout</td>
+          <td class="px-4 py-3 text-center text-slate-900">70%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">Third Payout</td>
+          <td class="px-4 py-3 text-center text-slate-900">80%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">Fourth Payout</td>
+          <td class="px-4 py-3 text-center text-slate-900">90%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">Fifth &amp; Beyond</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">100%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
+    <p class="text-sm font-bold text-amber-900 mb-1">Buffer Zone Exception</p>
+    <p class="text-sm text-amber-800">
+      Traders are allowed one exception to withdraw while still within the buffer zone. Starter accounts can withdraw 60% of profits within the buffer, while Expert accounts can withdraw 70%. If you choose to withdraw all available profits, your account will be closed permanently.
+    </p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Payments &amp; Profit Shares</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      FXIFY Futures offers structured and progressive payouts, balancing risk management with trader profitability. The 14-day payout cycle and buffer zone system may require patience, but the scaling withdrawal model rewards consistency. While withdrawals are restricted at first, traders who maintain steady performance unlock full access to their earnings over time.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SUPPORT / CUSTOMER SERVICE & EDUCATION SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "support" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    FXIFY Futures provides multiple support channels, allowing you to get assistance through live chat, email, and Discord. While the prop firm does not offer structured educational content, you can access platform guides and community discussions for additional insights.
+  </p>
+
+  <!-- Customer Support -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Customer Support</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Live Chat</p>
+      <p>Available on the platform for quick inquiries</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Email Support</p>
+      <p>Direct assistance via the FXIFY website</p>
+    </div>
+  </div>
+
+  <!-- Educational Resources -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Educational Resources</h3>
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
+    <p class="text-sm font-bold text-amber-900 mb-1">Limited Educational Content</p>
+    <p class="text-sm text-amber-800">
+      FXIFY Futures does not provide formal trading education such as webinars or courses. However, the Discord community and Help Center offer guidance on trading rules, platform usage, and account management.
+    </p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Customer Service &amp; Education</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      FXIFY Futures offers accessible customer support through live chat and email, but its educational resources are limited compared to firms that provide structured learning. Those seeking in-depth educational content may need to look elsewhere.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* TRUST / TRUST & COMMUNITY SECTION                                   */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "trust" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    FXIFY Futures has an active community presence through Discord, where traders can engage in discussions and access payout proof channels. The firm is linked to <strong>FXIFY</strong> (CFD prop firm) and <strong>FXPIG</strong> (regulated forex broker), which adds credibility.
+  </p>
+
+  <!-- Trustpilot -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">FXIFY Futures TrustPilot Score</h3>
+
+  <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 mb-6 flex items-center gap-4">
+    <div class="flex-shrink-0">
+      <p class="text-3xl font-black text-slate-900">3.9<span class="text-lg text-slate-400">/5</span></p>
+      <p class="text-xs text-slate-500 font-semibold">Mixed (4 reviews)</p>
+    </div>
+    <div>
+      <p class="text-sm text-slate-700">As a new firm, FXIFY Futures has received mixed reviews with an average score of <strong>3.9/5 stars</strong> based on only 4 reviews, making it too early to gauge a strong reputation. Some traders praise the payout process and platform, while others raise concerns about country restrictions and customer support response times.</p>
+    </div>
+  </div>
+
+  <!-- Community -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Community</h3>
+  <p class="mb-4">
+    FXIFY Futures maintains an active <strong>Discord server</strong> where traders can:
+  </p>
+
+  <div class="space-y-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Payout Updates</p>
+      <p>Access weekly payout updates and payout proof from funded traders.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Trading Discussions</p>
+      <p>Engage in trading discussions and support channels with other futures traders.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Transparency</p>
+      <p>Verified admin profiles for accountability and trust.</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trust &amp; Community</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      FXIFY Futures is still building its reputation. Its association with FXIFY (CFD prop firm) and FXPIG (brokerage) adds credibility, but traders should be aware of policy restrictions and limited customer support responsiveness before committing. The active Discord community with payout proof helps build trust, though the Trustpilot profile is still in its early stages.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* FALLBACK — sections not customised render the default text          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section !== "challenges" && section !== "spreads" && section !== "markets" && section !== "platforms" && section !== "payouts" && section !== "support" && section !== "trust" && fallbackBody && (
+  <div class="text-sm leading-relaxed text-slate-700 space-y-4">
+    {fallbackBody.split("\n\n").map((para) => (
+      <p set:html={para.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")} />
+    ))}
+  </div>
+)}

@@ -1,0 +1,658 @@
+---
+// Static editorial content for Goat Funded Trader
+// Supports multiple sections via the `section` prop
+interface Props {
+  section: string;
+  fallbackBody?: string;
+}
+const { section, fallbackBody } = Astro.props;
+---
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* CHALLENGES SECTION                                                  */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "challenges" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Goat Funded Trader offers a variety of evaluation programs, catering to different risk levels. You can choose from One-Step, Two-Step, and Three-Step evaluations, each with its own profit targets and drawdown limits, or Instant Funding accounts, which skip the evaluation phase entirely.
+  </p>
+  <p class="mb-6">
+    While the prop firm offers flexibility with no time limits, each challenge and funded account comes with specific rules and conditions that you need to consider carefully.
+  </p>
+
+  <!-- Challenge summary cards -->
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">One-Step Challenge</p>
+      <p>Requires a 10% profit target with a 4% daily drawdown and 6% max drawdown. Fastest route to funding but the strictest limits. Account sizes from $15K to $200K ($138–$798).</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Two-Step Challenge (Goat & Standard)</p>
+      <p>Split evaluation into two stages. Goat variant has lower targets (8%/6%) while Standard requires 10%/5%. Account sizes from $5K to $200K ($22–$730). Best balance of difficulty and cost.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Three-Step Challenge</p>
+      <p>Slowest route — three phases each requiring 6% profit target with 8% max drawdown. Account sizes from $10K to $200K ($48–$498). Best for conservative, steady traders.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Instant Funding</p>
+      <p>Skip the evaluation entirely. Higher fees and stricter rules (3–4% daily DD, 6–8% max DD). No profit target required. Goat variant from $5K–$100K ($107–$767), Standard from $2.5K–$50K ($73–$1,434).</p>
+    </div>
+  </div>
+
+  <!-- ─── Master Comparison Table ───────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Comparison</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Attribute</th>
+          <th class="px-4 py-3 text-center">Instant (Goat)</th>
+          <th class="px-4 py-3 text-center">Instant (Std)</th>
+          <th class="px-4 py-3 text-center">One-Step</th>
+          <th class="px-4 py-3 text-center">Two-Step (Goat)</th>
+          <th class="px-4 py-3 text-center">Two-Step (Std)</th>
+          <th class="px-4 py-3 text-center">Three-Step</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Account Sizes</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5K–$100K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$2.5K–$50K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$15K–$200K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5K–$150K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5K–$200K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$10K–$200K</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">One-Off Fee</td>
+          <td class="px-4 py-3 text-center text-slate-900">$107–$767</td>
+          <td class="px-4 py-3 text-center text-slate-900">$73–$1,434</td>
+          <td class="px-4 py-3 text-center text-slate-900">$138–$798</td>
+          <td class="px-4 py-3 text-center text-slate-900">$22–$448</td>
+          <td class="px-4 py-3 text-center text-slate-900">$33–$730</td>
+          <td class="px-4 py-3 text-center text-slate-900">$48–$498</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Target</td>
+          <td class="px-4 py-3 text-center text-slate-900">No Target</td>
+          <td class="px-4 py-3 text-center text-slate-900">No Target</td>
+          <td class="px-4 py-3 text-center text-slate-900">10%</td>
+          <td class="px-4 py-3 text-center text-slate-900">8% / 6%</td>
+          <td class="px-4 py-3 text-center text-slate-900">10% / 5%</td>
+          <td class="px-4 py-3 text-center text-slate-900">6% / 6% / 6%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Daily Drawdown</td>
+          <td class="px-4 py-3 text-center text-slate-900">3%</td>
+          <td class="px-4 py-3 text-center text-slate-900">4%</td>
+          <td class="px-4 py-3 text-center text-slate-900">4%</td>
+          <td class="px-4 py-3 text-center text-slate-900">4%</td>
+          <td class="px-4 py-3 text-center text-slate-900">5%</td>
+          <td class="px-4 py-3 text-center text-slate-900">4%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Max Drawdown</td>
+          <td class="px-4 py-3 text-center text-slate-900">6%</td>
+          <td class="px-4 py-3 text-center text-slate-900">8%</td>
+          <td class="px-4 py-3 text-center text-slate-900">6%</td>
+          <td class="px-4 py-3 text-center text-slate-900">10%</td>
+          <td class="px-4 py-3 text-center text-slate-900">10%</td>
+          <td class="px-4 py-3 text-center text-slate-900">8%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Time Limit</td>
+          <td class="px-4 py-3 text-center text-slate-900">No Limit</td>
+          <td class="px-4 py-3 text-center text-slate-900">No Limit</td>
+          <td class="px-4 py-3 text-center text-slate-900">No Limit</td>
+          <td class="px-4 py-3 text-center text-slate-900">No Limit</td>
+          <td class="px-4 py-3 text-center text-slate-900">No Limit</td>
+          <td class="px-4 py-3 text-center text-slate-900">No Limit</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Payout Schedule</td>
+          <td class="px-4 py-3 text-center text-slate-900">Bi-Weekly</td>
+          <td class="px-4 py-3 text-center text-slate-900">Every 10 Days</td>
+          <td class="px-4 py-3 text-center text-slate-900">Bi-Weekly*</td>
+          <td class="px-4 py-3 text-center text-slate-900">30 Days*</td>
+          <td class="px-4 py-3 text-center text-slate-900">Bi-Weekly*</td>
+          <td class="px-4 py-3 text-center text-slate-900">Bi-Weekly*</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Leverage (Forex)</td>
+          <td class="px-4 py-3 text-center text-slate-900">Up to 50:1</td>
+          <td class="px-4 py-3 text-center text-slate-900">Up to 50:1</td>
+          <td class="px-4 py-3 text-center text-slate-900">Up to 30:1</td>
+          <td class="px-4 py-3 text-center text-slate-900">Up to 100:1</td>
+          <td class="px-4 py-3 text-center text-slate-900">Up to 100:1</td>
+          <td class="px-4 py-3 text-center text-slate-900">Up to 100:1</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Split</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (100%*)</td>
+          <td class="px-4 py-3 text-center text-slate-900">65%–95%</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (100%*)</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (100%*)</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (100%*)</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (100%*)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="text-xs text-slate-500 mb-8">* On-demand and bi-weekly payout schedules require paid add-ons. 100% profit split also requires a paid add-on.</p>
+
+  <!-- ─── One-Step Fee Table ────────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">One-Step Challenge Fees</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Size</th>
+          <th class="px-4 py-3 text-right">One-Time Fee</th>
+          <th class="px-4 py-3 text-right">Profit Target (10%)</th>
+          <th class="px-4 py-3 text-right">Daily DD (4%)</th>
+          <th class="px-4 py-3 text-right">Max DD (6%)</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">$15,000</td><td class="px-4 py-3 text-right text-slate-900">$138</td><td class="px-4 py-3 text-right text-slate-600">$1,500</td><td class="px-4 py-3 text-right text-slate-600">$600</td><td class="px-4 py-3 text-right text-slate-600">$900</td></tr>
+        <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">$25,000</td><td class="px-4 py-3 text-right text-slate-900">$183</td><td class="px-4 py-3 text-right text-slate-600">$2,500</td><td class="px-4 py-3 text-right text-slate-600">$1,000</td><td class="px-4 py-3 text-right text-slate-600">$1,500</td></tr>
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">$50,000</td><td class="px-4 py-3 text-right text-slate-900">$265</td><td class="px-4 py-3 text-right text-slate-600">$5,000</td><td class="px-4 py-3 text-right text-slate-600">$2,000</td><td class="px-4 py-3 text-right text-slate-600">$3,000</td></tr>
+        <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">$100,000</td><td class="px-4 py-3 text-right text-slate-900">$453</td><td class="px-4 py-3 text-right text-slate-600">$10,000</td><td class="px-4 py-3 text-right text-slate-600">$4,000</td><td class="px-4 py-3 text-right text-slate-600">$6,000</td></tr>
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">$200,000</td><td class="px-4 py-3 text-right text-slate-900">$798</td><td class="px-4 py-3 text-right text-slate-600">$20,000</td><td class="px-4 py-3 text-right text-slate-600">$8,000</td><td class="px-4 py-3 text-right text-slate-600">$12,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ─── Two-Step Fee Table ────────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Two-Step Challenge Fees</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Size</th>
+          <th class="px-4 py-3 text-right">Fee (Goat)</th>
+          <th class="px-4 py-3 text-right">Fee (Standard)</th>
+          <th class="px-4 py-3 text-center">Step 1 Target</th>
+          <th class="px-4 py-3 text-center">Step 2 Target</th>
+          <th class="px-4 py-3 text-center">Daily DD</th>
+          <th class="px-4 py-3 text-center">Max DD</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">$5,000</td><td class="px-4 py-3 text-right text-slate-900">$22</td><td class="px-4 py-3 text-right text-slate-900">$33</td><td class="px-4 py-3 text-center text-slate-600">$400 / $500</td><td class="px-4 py-3 text-center text-slate-600">$300 / $250</td><td class="px-4 py-3 text-center text-slate-600">$200 / $250</td><td class="px-4 py-3 text-center text-slate-600">$500</td></tr>
+        <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">$15,000</td><td class="px-4 py-3 text-right text-slate-900">$66</td><td class="px-4 py-3 text-right text-slate-900">$115</td><td class="px-4 py-3 text-center text-slate-600">$1,200 / $1,500</td><td class="px-4 py-3 text-center text-slate-600">$900 / $750</td><td class="px-4 py-3 text-center text-slate-600">$600 / $750</td><td class="px-4 py-3 text-center text-slate-600">$1,500</td></tr>
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">$50,000</td><td class="px-4 py-3 text-right text-slate-900">$178</td><td class="px-4 py-3 text-right text-slate-900">$220</td><td class="px-4 py-3 text-center text-slate-600">$4,000 / $5,000</td><td class="px-4 py-3 text-center text-slate-600">$3,000 / $2,500</td><td class="px-4 py-3 text-center text-slate-600">$2,000 / $2,500</td><td class="px-4 py-3 text-center text-slate-600">$5,000</td></tr>
+        <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">$100,000</td><td class="px-4 py-3 text-right text-slate-900">$298</td><td class="px-4 py-3 text-right text-slate-900">$393</td><td class="px-4 py-3 text-center text-slate-600">$8,000 / $10,000</td><td class="px-4 py-3 text-center text-slate-600">$6,000 / $5,000</td><td class="px-4 py-3 text-center text-slate-600">$4,000 / $5,000</td><td class="px-4 py-3 text-center text-slate-600">$10,000</td></tr>
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">$200,000</td><td class="px-4 py-3 text-right text-slate-900">—</td><td class="px-4 py-3 text-right text-slate-900">$730</td><td class="px-4 py-3 text-center text-slate-600">— / $20,000</td><td class="px-4 py-3 text-center text-slate-600">— / $10,000</td><td class="px-4 py-3 text-center text-slate-600">— / $10,000</td><td class="px-4 py-3 text-center text-slate-600">$20,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="text-xs text-slate-500 mb-8">Values shown as Goat / Standard where applicable.</p>
+
+  <!-- ─── Three-Step Fee Table ──────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Three-Step Challenge Fees</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Size</th>
+          <th class="px-4 py-3 text-right">One-Time Fee</th>
+          <th class="px-4 py-3 text-center">Each Step Target (6%)</th>
+          <th class="px-4 py-3 text-center">Daily DD (4%)</th>
+          <th class="px-4 py-3 text-center">Max DD (8%)</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">$10,000</td><td class="px-4 py-3 text-right text-slate-900">$48</td><td class="px-4 py-3 text-center text-slate-600">$600</td><td class="px-4 py-3 text-center text-slate-600">$400</td><td class="px-4 py-3 text-center text-slate-600">$800</td></tr>
+        <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">$25,000</td><td class="px-4 py-3 text-right text-slate-900">$108</td><td class="px-4 py-3 text-center text-slate-600">$1,500</td><td class="px-4 py-3 text-center text-slate-600">$1,000</td><td class="px-4 py-3 text-center text-slate-600">$2,000</td></tr>
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">$50,000</td><td class="px-4 py-3 text-right text-slate-900">$168</td><td class="px-4 py-3 text-center text-slate-600">$3,000</td><td class="px-4 py-3 text-center text-slate-600">$2,000</td><td class="px-4 py-3 text-center text-slate-600">$4,000</td></tr>
+        <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">$100,000</td><td class="px-4 py-3 text-right text-slate-900">$273</td><td class="px-4 py-3 text-center text-slate-600">$6,000</td><td class="px-4 py-3 text-center text-slate-600">$4,000</td><td class="px-4 py-3 text-center text-slate-600">$8,000</td></tr>
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">$200,000</td><td class="px-4 py-3 text-right text-slate-900">$498</td><td class="px-4 py-3 text-center text-slate-600">$12,000</td><td class="px-4 py-3 text-center text-slate-600">$8,000</td><td class="px-4 py-3 text-center text-slate-600">$16,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ─── Instant Funding Fee Table ─────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Instant Funding Fees</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Type</th>
+          <th class="px-4 py-3 text-right">One-Time Fee</th>
+          <th class="px-4 py-3 text-right">Daily DD ($)</th>
+          <th class="px-4 py-3 text-right">Max DD ($)</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">$2,500 Standard</td><td class="px-4 py-3 text-right text-slate-900">$73</td><td class="px-4 py-3 text-right text-slate-600">$100</td><td class="px-4 py-3 text-right text-slate-600">$200</td></tr>
+        <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">$5,000 Goat</td><td class="px-4 py-3 text-right text-slate-900">$107</td><td class="px-4 py-3 text-right text-slate-600">$150</td><td class="px-4 py-3 text-right text-slate-600">$300</td></tr>
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">$5,000 Standard</td><td class="px-4 py-3 text-right text-slate-900">$148</td><td class="px-4 py-3 text-right text-slate-600">$200</td><td class="px-4 py-3 text-right text-slate-600">$400</td></tr>
+        <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">$10,000 Goat</td><td class="px-4 py-3 text-right text-slate-900">$147</td><td class="px-4 py-3 text-right text-slate-600">$300</td><td class="px-4 py-3 text-right text-slate-600">$600</td></tr>
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">$25,000 Goat</td><td class="px-4 py-3 text-right text-slate-900">$307</td><td class="px-4 py-3 text-right text-slate-600">$750</td><td class="px-4 py-3 text-right text-slate-600">$1,500</td></tr>
+        <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">$50,000 Goat</td><td class="px-4 py-3 text-right text-slate-900">$467</td><td class="px-4 py-3 text-right text-slate-600">$1,500</td><td class="px-4 py-3 text-right text-slate-600">$3,000</td></tr>
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">$50,000 Standard</td><td class="px-4 py-3 text-right text-slate-900">$1,434</td><td class="px-4 py-3 text-right text-slate-600">$2,000</td><td class="px-4 py-3 text-right text-slate-600">$4,000</td></tr>
+        <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">$100,000 Goat</td><td class="px-4 py-3 text-right text-slate-900">$767</td><td class="px-4 py-3 text-right text-slate-600">$3,000</td><td class="px-4 py-3 text-right text-slate-600">$6,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Scaling Plan -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Scaling Plan</h3>
+  <p class="mb-4">
+    If you maintain consistent profitability, you can scale your funded account up to $800K over time. However, the process for scaling is not publicly detailed, and you will need to meet internal performance criteria. The firm advertises profit splits of up to 100% for top performers, but the specifics of how you qualify remain unclear.
+  </p>
+
+  <!-- Amber warning -->
+  <div class="rounded-xl border border-amber-300 bg-amber-50 p-4 flex items-start gap-3 mb-6">
+    <svg class="h-5 w-5 text-amber-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.168 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+    </svg>
+    <div>
+      <p class="font-semibold text-amber-900 text-sm">Unclear Scaling Requirements</p>
+      <p class="text-xs text-amber-800 mt-0.5">Unlike competitors that outline their scaling plans in detail, GFT does not provide a clear roadmap for account growth. Important details like spreads, payouts, and scaling criteria are not clearly explained, leaving traders guessing.</p>
+    </div>
+  </div>
+
+  <!-- Verdict callout -->
+  <div class="rounded-xl border-l-4 border-red-500 bg-red-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-red-800 mb-1">Verdict on Challenges — 6/10</p>
+    <p class="text-sm text-slate-700 leading-relaxed">Goat Funded Trader offers multiple challenge types with no time limits, making it flexible. However, important details like scaling, spreads, and payouts are not clearly explained, leaving traders guessing. The strict drawdown limits make passing tough, especially in the One-Step challenge. While the firm advertises high profit splits and fast payouts, its lack of transparency around the scaling plan and rules at the funded trading stage is a concern.</p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SPREADS SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "spreads" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Goat Funded Trader advertises tight spreads and raw pricing, but its lack of transparency makes it difficult to verify actual trading costs. Unlike broker-backed prop firms, GFT does not disclose liquidity providers or minimum spreads, and support does not provide clear answers when asked.
+  </p>
+
+  <!-- Fee Structure Table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Fee Structure</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Asset Class</th>
+          <th class="px-4 py-3 text-center">Commission</th>
+          <th class="px-4 py-3 text-center">Min Spread</th>
+          <th class="px-4 py-3 text-center">Avg Spread</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">Forex</td><td class="px-4 py-3 text-center text-slate-900">$2.50/lot RT</td><td class="px-4 py-3 text-center text-red-500 font-medium">Not Disclosed</td><td class="px-4 py-3 text-center text-red-500 font-medium">Not Disclosed</td></tr>
+        <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">Indices</td><td class="px-4 py-3 text-center text-slate-900">$0</td><td class="px-4 py-3 text-center text-red-500 font-medium">Not Disclosed</td><td class="px-4 py-3 text-center text-red-500 font-medium">Not Disclosed</td></tr>
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">Commodities</td><td class="px-4 py-3 text-center text-slate-900">$0</td><td class="px-4 py-3 text-center text-red-500 font-medium">Not Disclosed</td><td class="px-4 py-3 text-center text-red-500 font-medium">Not Disclosed</td></tr>
+        <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">Crypto</td><td class="px-4 py-3 text-center text-slate-900">$0</td><td class="px-4 py-3 text-center text-red-500 font-medium">Not Disclosed</td><td class="px-4 py-3 text-center text-red-500 font-medium">Not Disclosed</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="mb-4">
+    The $2.50 per lot round-turn forex commission is one of the lowest in the industry, making it attractive for scalpers and intraday traders. However, without published spread data, the true cost of trading remains unknown.
+  </p>
+
+  <!-- Amber warning -->
+  <div class="rounded-xl border border-amber-300 bg-amber-50 p-4 flex items-start gap-3 mb-6">
+    <svg class="h-5 w-5 text-amber-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.168 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+    </svg>
+    <div>
+      <p class="font-semibold text-amber-900 text-sm">No Published Spread Data</p>
+      <p class="text-xs text-amber-800 mt-0.5">GFT claims spreads as low as 0 pips, but does not provide average spread tables. Attempts to get clarification from support have been unsuccessful. Without transparency, it's impossible to confirm if pricing is truly competitive. Several traders on TrustPilot have accused GFT of manipulating spreads.</p>
+    </div>
+  </div>
+
+  <!-- Verdict callout -->
+  <div class="rounded-xl border-l-4 border-red-500 bg-red-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-red-800 mb-1">Verdict on Pricing — 3/10</p>
+    <p class="text-sm text-slate-700 leading-relaxed">Goat Funded Trader offers one of the lowest forex commission rates, but the lack of transparency on spreads and liquidity sources is a major concern. Without clear data, you can't verify if the advertised raw pricing is truly competitive. If you rely on tight spreads for scalping or active day trading, it's worth testing execution conditions before committing. The zero-commission structure for other assets may seem attractive, but hidden costs in spreads could offset any savings.</p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* MARKETS SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "markets" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    Goat Funded Trader offers prop trading in Forex, Indices, Commodities, and Cryptocurrencies. However, the maximum leverage varies across evaluation and funded accounts, and details about how it changes after funding are unclear.
+  </p>
+
+  <!-- Leverage Table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Leverage by Account Type</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Asset Class</th>
+          <th class="px-4 py-3 text-center">Two/Three-Step Eval</th>
+          <th class="px-4 py-3 text-center">One-Step Eval</th>
+          <th class="px-4 py-3 text-center">Instant / Funded</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">Forex</td><td class="px-4 py-3 text-center text-slate-900">1:100</td><td class="px-4 py-3 text-center text-slate-900">1:30</td><td class="px-4 py-3 text-center text-slate-900">1:50</td></tr>
+        <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">Indices</td><td class="px-4 py-3 text-center text-slate-900">1:20</td><td class="px-4 py-3 text-center text-slate-900">1:20</td><td class="px-4 py-3 text-center text-slate-900">1:20</td></tr>
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">Commodities</td><td class="px-4 py-3 text-center text-slate-900">1:20</td><td class="px-4 py-3 text-center text-slate-900">1:20</td><td class="px-4 py-3 text-center text-slate-900">1:20</td></tr>
+        <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">Crypto</td><td class="px-4 py-3 text-center text-slate-900">1:2</td><td class="px-4 py-3 text-center text-slate-900">1:2</td><td class="px-4 py-3 text-center text-slate-900">1:2</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="mb-4">
+    GFT promotes scaling leverage back up to 1:100 based on trader performance but does not explain how this works. There are no published requirements, meaning traders have no way of knowing if or when they will receive higher leverage.
+  </p>
+
+  <!-- Amber warning -->
+  <div class="rounded-xl border border-amber-300 bg-amber-50 p-4 flex items-start gap-3 mb-6">
+    <svg class="h-5 w-5 text-amber-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.168 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+    </svg>
+    <div>
+      <p class="font-semibold text-amber-900 text-sm">Unclear Funded Account Leverage</p>
+      <p class="text-xs text-amber-800 mt-0.5">GFT does not confirm what leverage One-Step traders receive once funded. When asked, support would not provide an answer, stating leverage is determined after funding. This makes it impossible to plan your trading strategy in advance.</p>
+    </div>
+  </div>
+
+  <!-- Verdict callout -->
+  <div class="rounded-xl border-l-4 border-red-500 bg-red-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-red-800 mb-1">Verdict on Markets & Leverage — 5/10</p>
+    <p class="text-sm text-slate-700 leading-relaxed">Goat Funded Trader offers high leverage during evaluations for most accounts, but One-Step traders are limited to 1:30. Once funded, all accounts drop to 1:50 or lower. The firm advertises the ability to increase leverage over time, but with no clear rules or timeline, traders are left without a clear understanding of their long-term trading conditions. No stock trading is available.</p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PLATFORMS SECTION                                                   */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "platforms" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    Goat Funded Trader offers three trading platforms: MT5, TradeLocker, and Match-Trader. Unlike many prop firms, MT4 is not available, which may be a drawback if you're used to it.
+  </p>
+
+  <!-- Platform cards -->
+  <div class="grid sm:grid-cols-3 gap-4 mb-6">
+    <div class="rounded-xl border border-slate-200 bg-white p-4">
+      <p class="font-bold text-slate-900 mb-2">MetaTrader 5</p>
+      <p class="text-xs text-slate-600 leading-relaxed">Advanced charting, fast order execution, and built-in automation. Best option for running indicators, scripts, and Expert Advisors. Available on desktop, web, and mobile.</p>
+    </div>
+    <div class="rounded-xl border border-slate-200 bg-white p-4">
+      <p class="font-bold text-slate-900 mb-2">TradeLocker</p>
+      <p class="text-xs text-slate-600 leading-relaxed">Web-based platform integrating with TradingView charts. Clean interface, no download needed. Limited automation — better for manual traders who use TradingView.</p>
+    </div>
+    <div class="rounded-xl border border-slate-200 bg-white p-4">
+      <p class="font-bold text-slate-900 mb-2">Match-Trader</p>
+      <p class="text-xs text-slate-600 leading-relaxed">Fast execution with built-in analytics, economic news, and mobile compatibility. Simple all-in-one platform but limited EA support compared to MT5.</p>
+    </div>
+  </div>
+
+  <!-- Trading Rules Table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules & Restrictions</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Rule</th>
+          <th class="px-4 py-3 text-center">Status</th>
+          <th class="px-4 py-3 text-left">Details</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">Hedging</td><td class="px-4 py-3 text-center text-red-500 font-bold">Banned</td><td class="px-4 py-3 text-slate-600">No opposite trades on same instrument, even across accounts</td></tr>
+        <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">Copy Trading</td><td class="px-4 py-3 text-center text-red-500 font-bold">Banned</td><td class="px-4 py-3 text-slate-600">Cannot mirror trades across any accounts</td></tr>
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">Expert Advisors</td><td class="px-4 py-3 text-center text-amber-600 font-bold">Restricted</td><td class="px-4 py-3 text-slate-600">Must prove ownership with source code. No third-party EAs</td></tr>
+        <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">Strategy Switching</td><td class="px-4 py-3 text-center text-red-500 font-bold">Banned</td><td class="px-4 py-3 text-slate-600">Must use same method in funded account as evaluation</td></tr>
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">HFT</td><td class="px-4 py-3 text-center text-red-500 font-bold">Banned</td><td class="px-4 py-3 text-slate-600">50%+ of trades cannot be held under 1 minute</td></tr>
+        <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">All-or-Nothing</td><td class="px-4 py-3 text-center text-red-500 font-bold">Banned</td><td class="px-4 py-3 text-slate-600">Cannot risk entire account on one trade or series</td></tr>
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">News Trading</td><td class="px-4 py-3 text-center text-amber-600 font-bold">Capped</td><td class="px-4 py-3 text-slate-600">Profit capped at 1% within 2 min of high-impact news</td></tr>
+        <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">Weekend Holding</td><td class="px-4 py-3 text-center text-amber-600 font-bold">Conditional</td><td class="px-4 py-3 text-slate-600">Allowed but eval accounts reviewed by risk team</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Red restriction warning -->
+  <div class="rounded-xl border border-red-300 bg-red-50 p-4 flex items-start gap-3 mb-6">
+    <svg class="h-5 w-5 text-red-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z" clip-rule="evenodd"/>
+    </svg>
+    <div>
+      <p class="font-semibold text-red-800 text-sm">Strict Rule Enforcement</p>
+      <p class="text-xs text-red-700 mt-0.5">GFT enforces strict rules across all platforms. Breaking any rule can result in account breach, loss of funding, or denied payouts. Several TrustPilot reviews report unexpected account breaches despite traders believing they were within limits.</p>
+    </div>
+  </div>
+
+  <!-- Verdict callout -->
+  <div class="rounded-xl border-l-4 border-red-500 bg-red-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-red-800 mb-1">Verdict on Platforms — 6/10</p>
+    <p class="text-sm text-slate-700 leading-relaxed">Three platforms available with TradeLocker ideal for TradingView users and MT5 offering the best automation support. However, MT4 is not available, and strict rules on hedging, trade copying, and EAs may limit your strategies. News trading profits are capped, and weekend holding comes with risk oversight. If you rely on HFT, account mirroring, or hedging, these restrictions are a dealbreaker.</p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PAYOUTS SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "payouts" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    Goat Funded Trader offers multiple payment methods for purchasing challenges and provides a structured payout system for funded traders. However, payout processing and profit withdrawal rules come with certain limitations.
+  </p>
+
+  <!-- Payout overview grid -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 px-3 py-2.5">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold">Profit Split</p>
+      <p class="text-base font-bold text-slate-900">80–100%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 px-3 py-2.5">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold">First Payout</p>
+      <p class="text-base font-bold text-slate-900">After 30 Days</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 px-3 py-2.5">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold">Processing</p>
+      <p class="text-base font-bold text-slate-900">2–3 Days</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 px-3 py-2.5">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold">Min Withdrawal</p>
+      <p class="text-base font-bold text-slate-900">$100</p>
+    </div>
+  </div>
+
+  <!-- Payout details table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payout Rules</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Rule</th>
+          <th class="px-4 py-3 text-left">Details</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">Standard Schedule</td><td class="px-4 py-3 text-slate-600">Every 30 days from first funded trade</td></tr>
+        <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">Bi-Weekly (Add-On)</td><td class="px-4 py-3 text-slate-600">Every 14 days — requires purchasing upgrade at signup</td></tr>
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">Reward on Demand</td><td class="px-4 py-3 text-slate-600">Withdraw 40% of profits after 3 trading days; 60% held until regular cycle</td></tr>
+        <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">First Two Withdrawals</td><td class="px-4 py-3 text-red-600 font-medium">Capped at 6% of account balance</td></tr>
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">Daily Withdrawal Cap</td><td class="px-4 py-3 text-red-600 font-medium">$3,000 maximum per day</td></tr>
+        <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">Min Withdrawal</td><td class="px-4 py-3 text-slate-600">$100</td></tr>
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">Processing Time</td><td class="px-4 py-3 text-slate-600">2–3 business days</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Payment methods -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payment Methods</h3>
+  <div class="grid grid-cols-3 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-3 text-center">
+      <p class="text-xs font-bold text-slate-900">Credit/Debit Card</p>
+      <p class="text-[10px] text-slate-500 mt-0.5">Visa, Mastercard</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-3 text-center">
+      <p class="text-xs font-bold text-slate-900">Cryptocurrency</p>
+      <p class="text-[10px] text-slate-500 mt-0.5">USDT, BTC, ETH</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-3 text-center">
+      <p class="text-xs font-bold text-slate-900">Bank Transfer</p>
+      <p class="text-[10px] text-slate-500 mt-0.5">Location dependent</p>
+    </div>
+  </div>
+
+  <!-- Amber warning -->
+  <div class="rounded-xl border border-amber-300 bg-amber-50 p-4 flex items-start gap-3 mb-6">
+    <svg class="h-5 w-5 text-amber-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.168 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+    </svg>
+    <div>
+      <p class="font-semibold text-amber-900 text-sm">Payout Restrictions</p>
+      <p class="text-xs text-amber-800 mt-0.5">The first two withdrawals are capped at 6% of your account balance, and daily withdrawals are limited to $3,000. No PayPal or e-wallet support. Many TrustPilot reviewers report waiting weeks or months for payouts, with some denied entirely.</p>
+    </div>
+  </div>
+
+  <!-- Verdict callout -->
+  <div class="rounded-xl border-l-4 border-red-500 bg-red-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-red-800 mb-1">Verdict on Payouts — 3/10</p>
+    <p class="text-sm text-slate-700 leading-relaxed">Goat Funded Trader offers standard payment options and a structured payout system, but the first two withdrawals are capped at 6%, you must wait 30 days for your first payout unless you buy an add-on, and daily withdrawals are capped at $3,000. Multiple TrustPilot reviews report delayed or denied payouts. If you prefer fast, flexible payouts with reliable processing, these restrictions and reports are a major red flag.</p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SUPPORT SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "support" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    Goat Funded Trader offers multiple ways to get support, but response times can be inconsistent depending on how you reach out. While they provide some educational content, there's no structured learning program.
+  </p>
+
+  <!-- Support channels table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Support Channels</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Channel</th>
+          <th class="px-4 py-3 text-center">Available</th>
+          <th class="px-4 py-3 text-left">Notes</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">Live Chat</td><td class="px-4 py-3 text-center text-green-600 font-bold">Yes</td><td class="px-4 py-3 text-slate-600">Quick for basic questions; detailed issues take longer</td></tr>
+        <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">Email</td><td class="px-4 py-3 text-center text-green-600 font-bold">Yes</td><td class="px-4 py-3 text-slate-600">Replies can take 24+ hours</td></tr>
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">Discord</td><td class="px-4 py-3 text-center text-green-600 font-bold">Yes</td><td class="px-4 py-3 text-slate-600">59,700+ members; community-driven</td></tr>
+        <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">Phone</td><td class="px-4 py-3 text-center text-red-500 font-bold">No</td><td class="px-4 py-3 text-slate-600">No phone support available</td></tr>
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">Mentorship</td><td class="px-4 py-3 text-center text-red-500 font-bold">No</td><td class="px-4 py-3 text-slate-600">No structured training or mentorship programs</td></tr>
+        <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">Webinars</td><td class="px-4 py-3 text-center text-red-500 font-bold">No</td><td class="px-4 py-3 text-slate-600">No live trading sessions or webinars</td></tr>
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">YouTube</td><td class="px-4 py-3 text-center text-amber-600 font-bold">Basic</td><td class="px-4 py-3 text-slate-600">Trader interviews and basic tutorials only</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Amber warning -->
+  <div class="rounded-xl border border-amber-300 bg-amber-50 p-4 flex items-start gap-3 mb-6">
+    <svg class="h-5 w-5 text-amber-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.168 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+    </svg>
+    <div>
+      <p class="font-semibold text-amber-900 text-sm">Unhelpful Responses</p>
+      <p class="text-xs text-amber-800 mt-0.5">Support often doesn't provide clear answers to specific policy questions, especially about spreads and leverage. If you need quick or detailed responses, it may take multiple follow-ups. Many TrustPilot reviews mention unhelpful support and generic replies.</p>
+    </div>
+  </div>
+
+  <!-- Verdict callout -->
+  <div class="rounded-xl border-l-4 border-red-500 bg-red-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-red-800 mb-1">Verdict on Support — 4/10</p>
+    <p class="text-sm text-slate-700 leading-relaxed">Goat Funded Trader provides basic support options, but response times and clarity can be hit or miss. Their educational content is minimal — no mentorship, webinars, or structured learning. You're expected to already know how to trade before signing up.</p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* TRUST SECTION                                                       */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "trust" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    Goat Funded Trader has a strong online presence with thousands of traders engaging in its community. However, its TrustPilot rating reveals mixed feedback, with traders reporting payout issues, platform problems, and poor customer support.
+  </p>
+
+  <!-- Trust stats grid -->
+  <div class="grid grid-cols-3 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 px-3 py-2.5 text-center">
+      <p class="text-lg font-black text-slate-900">3.4/5</p>
+      <p class="text-[10px] text-slate-500 uppercase font-semibold">TrustPilot</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 px-3 py-2.5 text-center">
+      <p class="text-lg font-black text-slate-900">3,000+</p>
+      <p class="text-[10px] text-slate-500 uppercase font-semibold">Reviews</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 px-3 py-2.5 text-center">
+      <p class="text-lg font-black text-red-600">23%</p>
+      <p class="text-[10px] text-slate-500 uppercase font-semibold">1-Star Reviews</p>
+    </div>
+  </div>
+
+  <!-- Trust signals table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trust Signals</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Signal</th>
+          <th class="px-4 py-3 text-left">Details</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">TrustPilot Rating</td><td class="px-4 py-3 text-slate-600">3.4/5 — 62% five-star, 23% one-star</td></tr>
+        <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">Discord Community</td><td class="px-4 py-3 text-slate-600">59,700+ members — one of the largest among prop firms</td></tr>
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">Payout Complaints</td><td class="px-4 py-3 text-red-600 font-medium">Delayed or denied payouts widely reported</td></tr>
+        <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">Account Breaches</td><td class="px-4 py-3 text-red-600 font-medium">Unexplained closures despite staying within limits</td></tr>
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">Execution Issues</td><td class="px-4 py-3 text-red-600 font-medium">Slippage, freezing, and trades not closing properly</td></tr>
+        <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">Spread Manipulation</td><td class="px-4 py-3 text-red-600 font-medium">Multiple accusations of spread widening</td></tr>
+        <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">Liquidity Providers</td><td class="px-4 py-3 text-red-600 font-medium">Not disclosed — simulated trading environment</td></tr>
+        <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">Broker-Backed</td><td class="px-4 py-3 text-red-600 font-medium">No — not partnered with a regulated broker</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Red warning -->
+  <div class="rounded-xl border border-red-300 bg-red-50 p-4 flex items-start gap-3 mb-6">
+    <svg class="h-5 w-5 text-red-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z" clip-rule="evenodd"/>
+    </svg>
+    <div>
+      <p class="font-semibold text-red-800 text-sm">Serious Trust Concerns</p>
+      <p class="text-xs text-red-700 mt-0.5">While some traders have positive experiences, the volume of complaints about denied withdrawals, hidden rules, and platform manipulation raises serious red flags. GFT does not use a regulated broker and operates on a simulated environment, making it impossible to independently verify trading conditions.</p>
+    </div>
+  </div>
+
+  <!-- Verdict callout -->
+  <div class="rounded-xl border-l-4 border-red-500 bg-red-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-red-800 mb-1">Verdict on Trust — 2/10</p>
+    <p class="text-sm text-slate-700 leading-relaxed">Goat Funded Trader has a strong online presence and an engaged community, but TrustPilot reviews reveal ongoing issues with payouts, platform reliability, and customer support. The number of complaints about denied withdrawals and hidden rules raises serious concerns. If you're considering GFT, approach with extreme caution and be prepared for potential payout delays.</p>
+  </div>
+
+</div>
+)}

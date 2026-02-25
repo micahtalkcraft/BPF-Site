@@ -1,0 +1,71 @@
+{
+  "id": "d0000003-0000-0000-0000-000000000003",
+  "slug": "blueberry-funded",
+  "name": "Blueberry Funded",
+  "status": "active",
+  "foundedYear": 2023,
+  "hqCountry": "AU",
+  "evaluation": {
+    "types": ["instant", "1-step", "2-step", "rapid", "synthetic"],
+    "profitTargets": { "phase1": 10, "phase2": 5 },
+    "dailyDrawdown": 5,
+    "maxDrawdown": 10,
+    "minTradingDays": 3,
+    "scalingPlan": true
+  },
+  "pricing": {
+    "challengeFees": [
+      { "accountSize": 5000, "fee": 35, "model": "2-step", "label": "Two Step" },
+      { "accountSize": 10000, "fee": 60, "model": "2-step", "label": "Two Step" },
+      { "accountSize": 25000, "fee": 125, "model": "2-step", "label": "Two Step" },
+      { "accountSize": 50000, "fee": 250, "model": "2-step", "label": "Two Step" },
+      { "accountSize": 100000, "fee": 500, "model": "2-step", "label": "Two Step" },
+      { "accountSize": 200000, "fee": 1000, "model": "2-step", "label": "Two Step" },
+      { "accountSize": 5000, "fee": 40, "model": "1-step", "label": "One Step" },
+      { "accountSize": 10000, "fee": 75, "model": "1-step", "label": "One Step" },
+      { "accountSize": 25000, "fee": 150, "model": "1-step", "label": "One Step" },
+      { "accountSize": 50000, "fee": 275, "model": "1-step", "label": "One Step" },
+      { "accountSize": 100000, "fee": 550, "model": "1-step", "label": "One Step" },
+      { "accountSize": 200000, "fee": 1100, "model": "1-step", "label": "One Step" },
+      { "accountSize": 5000, "fee": 25, "model": "synthetic", "label": "Synthetic" }
+    ],
+    "resetFee": null,
+    "refundPolicy": "Fee refunded with first payout"
+  },
+  "payouts": {
+    "splitMax": 90,
+    "schedule": "Every 14 days",
+    "processingTime": "1-2 business days",
+    "firstPayoutDays": 14,
+    "methods": ["crypto"]
+  },
+  "rules": {
+    "newsTrading": false,
+    "weekendHolding": true,
+    "copyTrading": false,
+    "expertAdvisors": true,
+    "consistencyRule": null,
+    "notes": "News trading restricted with 10-minute window either side of high-impact events. Copy trading between own accounts only. Martingale, grid trading, HFT, tick scalping, and latency arbitrage are prohibited."
+  },
+  "markets": {
+    "platforms": ["MT4", "MT5", "DXTrade", "TradeLocker"],
+    "instruments": "Forex, Indices, Commodities, Crypto, Stocks, Synthetics"
+  },
+  "trust": {
+    "trustpilotRating": 3.8,
+    "trustpilotCount": 1200,
+    "communitySize": "32,700+ Discord",
+    "notableFlags": []
+  },
+  "links": { "website": "https://blueberryfunded.com" },
+  "media": { "logo": "/images/logos/blueberry-funded-logo.png" },
+  "availability": { "restrictedCountries": [] },
+  "custom": {
+    "tags": ["ASIC-Backed Broker", "1,100+ Instruments", "Scaling to $2M", "Synthetics Trading"],
+    "discountCode": "PROPFIRMS20",
+    "discountPercent": 20
+  },
+  "lastVerifiedAt": "2026-02-24",
+  "lastUpdatedAt": "2026-02-24",
+  "dataSources": ["https://blueberryfunded.com"]
+}

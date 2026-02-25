@@ -1,0 +1,14 @@
+---
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const propFirms = await getCollection("prop-firms");
+  return propFirms.map((f) => ({
+    params: { slug: f.data.slug },
+    props: { slug: f.data.slug },
+  }));
+}
+
+const { slug } = Astro.props;
+return Astro.redirect(`/reviews/${slug}`, 301);
+---

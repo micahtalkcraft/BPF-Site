@@ -1,0 +1,83 @@
+{
+  "id": "d0000018-0000-0000-0000-000000000018",
+  "slug": "goat-funded-trader",
+  "name": "Goat Funded Trader",
+  "status": "active",
+  "foundedYear": 2023,
+  "hqCountry": "AE",
+  "evaluation": {
+    "types": ["1-step", "2-step", "instant"],
+    "profitTargets": { "phase1": 10, "phase2": 5 },
+    "dailyDrawdown": 3,
+    "maxDrawdown": 10,
+    "minTradingDays": 0,
+    "scalingPlan": true
+  },
+  "pricing": {
+    "challengeFees": [
+      { "accountSize": 5000, "fee": 22, "model": "2-step", "label": "Two-Step Goat $5K" },
+      { "accountSize": 5000, "fee": 33, "model": "2-step", "label": "Two-Step Standard $5K" },
+      { "accountSize": 15000, "fee": 138, "model": "1-step", "label": "One-Step $15K" },
+      { "accountSize": 50000, "fee": 265, "model": "1-step", "label": "One-Step $50K" },
+      { "accountSize": 100000, "fee": 453, "model": "1-step", "label": "One-Step $100K" },
+      { "accountSize": 200000, "fee": 798, "model": "1-step", "label": "One-Step $200K" },
+      { "accountSize": 50000, "fee": 178, "model": "2-step", "label": "Two-Step Goat $50K" },
+      { "accountSize": 100000, "fee": 298, "model": "2-step", "label": "Two-Step Goat $100K" },
+      { "accountSize": 100000, "fee": 393, "model": "2-step", "label": "Two-Step Standard $100K" },
+      { "accountSize": 200000, "fee": 730, "model": "2-step", "label": "Two-Step Standard $200K" },
+      { "accountSize": 10000, "fee": 48, "model": "2-step", "label": "Three-Step $10K" },
+      { "accountSize": 100000, "fee": 273, "model": "2-step", "label": "Three-Step $100K" },
+      { "accountSize": 200000, "fee": 498, "model": "2-step", "label": "Three-Step $200K" },
+      { "accountSize": 5000, "fee": 107, "model": "instant", "label": "Instant Goat $5K" },
+      { "accountSize": 25000, "fee": 307, "model": "instant", "label": "Instant Goat $25K" },
+      { "accountSize": 100000, "fee": 767, "model": "instant", "label": "Instant Goat $100K" },
+      { "accountSize": 2500, "fee": 73, "model": "instant", "label": "Instant Standard $2.5K" },
+      { "accountSize": 50000, "fee": 1434, "model": "instant", "label": "Instant Standard $50K" }
+    ],
+    "resetFee": null,
+    "refundPolicy": "Refundable fees on evaluation accounts only. Instant Funding accounts have no refund option."
+  },
+  "payouts": {
+    "splitMax": 100,
+    "schedule": "Bi-weekly or every 30 days (model dependent)",
+    "processingTime": "2–3 business days",
+    "firstPayoutDays": 30,
+    "methods": ["Credit Card", "Crypto", "Bank Transfer"]
+  },
+  "rules": {
+    "newsTrading": true,
+    "weekendHolding": true,
+    "copyTrading": false,
+    "expertAdvisors": true,
+    "consistencyRule": null,
+    "notes": "News trading allowed but profits capped at 1% of account balance for trades within 2 minutes of high-impact news. EAs allowed but must prove ownership with source code if requested. No hedging. No trade copying between accounts. No HFT (50%+ trades under 1 minute). No all-or-nothing trading. Weekend holding allowed but eval accounts may be reviewed by risk team. First two payouts capped at 6% of account balance. Daily profit withdrawals capped at $3,000. Min withdrawal $100."
+  },
+  "markets": {
+    "platforms": ["MT5", "TradeLocker", "MatchTrader"],
+    "instruments": "Forex, Indices, Commodities, Crypto"
+  },
+  "trust": {
+    "trustpilotRating": 3.4,
+    "trustpilotCount": 3000,
+    "communitySize": "59,700+ Discord members",
+    "notableFlags": ["Payout complaints", "Transparency concerns", "23% 1-star reviews"]
+  },
+  "links": { "website": "https://goatfundedtrader.com" },
+  "media": { "logo": "/images/logos/goat-funded-trader-menu-icon.png" },
+  "availability": { "restrictedCountries": [] },
+  "support": {
+    "hours": "Business hours",
+    "liveChat": true,
+    "email": true,
+    "discord": true
+  },
+  "custom": {
+    "tags": ["Flagged", "Multiple Models", "Scaling Plan"],
+    "discountCode": null,
+    "discountPercent": null
+  },
+  "notes": null,
+  "lastVerifiedAt": "2026-02-24",
+  "lastUpdatedAt": "2026-02-24",
+  "dataSources": ["https://goatfundedtrader.com"]
+}

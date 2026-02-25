@@ -1,0 +1,676 @@
+---
+// Static editorial content for BrightFunded
+// Supports multiple sections via the `section` prop
+interface Props {
+  section: string;
+  fallbackBody?: string;
+}
+const { section, fallbackBody } = Astro.props;
+---
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* CHALLENGES SECTION                                                  */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "challenges" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    To get a BrightFunded trading account you need to work through a traditional two step evaluation process. They keep things simple with just one model with a default 80% profit share, but you can choose an account size between $5K and $200K, with fees ranging from <strong>&euro;55 to &euro;975</strong> without addons.
+  </p>
+  <p class="mb-4">
+    The rules are easy to follow — in Step 1 you need to reach an <strong>8% profit target</strong>, then Step 2 it drops to <strong>5%</strong>. At both steps risk requirements are the same, with a <strong>5% daily drawdown</strong> and <strong>10% overall</strong>. At step 1 and 2 you'll need to trade for a minimum of 5 days unless you buy the add-on, but there's no maximum days or time limit.
+  </p>
+  <p class="mb-8">
+    BrightFunded does let you trade news during the evaluation, with no restrictions, which is a massive perk not offered by many prop firms. But it is worth noting once you become a funded trader, there is a 10 minute window for major news events.
+  </p>
+
+  <!-- ─── Challenge Fee Table ─────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Accounts</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Size</th>
+          <th class="px-4 py-3 text-right">Challenge Fee</th>
+          <th class="px-4 py-3 text-right">Phase 1 Target</th>
+          <th class="px-4 py-3 text-right">Phase 2 Target</th>
+          <th class="px-4 py-3 text-right">Max Daily Loss</th>
+          <th class="px-4 py-3 text-right">Max Total Drawdown</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">&euro;55</td>
+          <td class="px-4 py-3 text-right text-slate-700">8% ($400)</td>
+          <td class="px-4 py-3 text-right text-slate-700">5% ($250)</td>
+          <td class="px-4 py-3 text-right text-slate-700">5% ($250)</td>
+          <td class="px-4 py-3 text-right text-slate-700">10% ($500)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">&euro;95</td>
+          <td class="px-4 py-3 text-right text-slate-700">8% ($800)</td>
+          <td class="px-4 py-3 text-right text-slate-700">5% ($500)</td>
+          <td class="px-4 py-3 text-right text-slate-700">5% ($500)</td>
+          <td class="px-4 py-3 text-right text-slate-700">10% ($1,000)</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">&euro;195</td>
+          <td class="px-4 py-3 text-right text-slate-700">8% ($2,000)</td>
+          <td class="px-4 py-3 text-right text-slate-700">5% ($1,250)</td>
+          <td class="px-4 py-3 text-right text-slate-700">5% ($1,250)</td>
+          <td class="px-4 py-3 text-right text-slate-700">10% ($2,500)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">&euro;295</td>
+          <td class="px-4 py-3 text-right text-slate-700">8% ($4,000)</td>
+          <td class="px-4 py-3 text-right text-slate-700">5% ($2,500)</td>
+          <td class="px-4 py-3 text-right text-slate-700">5% ($2,500)</td>
+          <td class="px-4 py-3 text-right text-slate-700">10% ($5,000)</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">&euro;495</td>
+          <td class="px-4 py-3 text-right text-slate-700">8% ($8,000)</td>
+          <td class="px-4 py-3 text-right text-slate-700">5% ($5,000)</td>
+          <td class="px-4 py-3 text-right text-slate-700">5% ($5,000)</td>
+          <td class="px-4 py-3 text-right text-slate-700">10% ($10,000)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$200,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">&euro;975</td>
+          <td class="px-4 py-3 text-right text-slate-700">8% ($16,000)</td>
+          <td class="px-4 py-3 text-right text-slate-700">5% ($10,000)</td>
+          <td class="px-4 py-3 text-right text-slate-700">5% ($10,000)</td>
+          <td class="px-4 py-3 text-right text-slate-700">10% ($20,000)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Key specs -->
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Evaluation</p>
+      <p class="text-sm font-bold text-slate-800">2-Step</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 1 Target</p>
+      <p class="text-sm font-bold text-slate-800">8%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 2 Target</p>
+      <p class="text-sm font-bold text-slate-800">5%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Drawdown</p>
+      <p class="text-sm font-bold text-slate-800">5%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Drawdown</p>
+      <p class="text-sm font-bold text-slate-800">10%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Trading Days</p>
+      <p class="text-sm font-bold text-slate-800">5 Days</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Trading Days</p>
+      <p class="text-sm font-bold text-slate-800">Unlimited</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
+      <p class="text-sm font-bold text-teal-600">80% → 100%</p>
+    </div>
+  </div>
+
+  <!-- ─── Paid Add-Ons ───────────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Paid Add-Ons</h3>
+  <p class="mb-4">
+    If you want to customise your funded account, BrightFunded offers one of the best selections of paid addons available. You can modify your profit payouts, evaluation process, and fees:
+  </p>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Add-On</th>
+          <th class="px-4 py-3 text-right">Fee Increase</th>
+          <th class="px-4 py-3 text-left">Description</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Weekly Payouts</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">25%</td>
+          <td class="px-4 py-3 text-slate-700">Get paid every 7 days instead of monthly</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Bi-Weekly Payouts</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">15%</td>
+          <td class="px-4 py-3 text-slate-700">Get paid every 14 days instead of monthly</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">100% Fee Refund</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">10%</td>
+          <td class="px-4 py-3 text-slate-700">Full challenge fee refunded once funded</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">90% Profit Split</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">20%</td>
+          <td class="px-4 py-3 text-slate-700">Start with 90% split instead of default 80%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">No Min Trading Days</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">15%</td>
+          <td class="px-4 py-3 text-slate-700">Remove the 5-day minimum trading requirement</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Swap Free Account</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">10%</td>
+          <td class="px-4 py-3 text-slate-700">No overnight swap charges on positions</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ─── Scaling Plan ────────────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Unlimited Scaling Plan</h3>
+  <p class="mb-4">
+    One of BrightFunded's best features is their <strong>unlimited scaling plan</strong> for funded traders. Every 4 months you can increase your account size by 30% of the original amount as long as you've been consistently trading.
+  </p>
+
+  <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-4">
+    <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-2">Scaling Qualification Criteria</p>
+    <ul class="text-sm text-teal-700 space-y-1 list-disc list-inside">
+      <li>Profitable in at least 2 out of 4 months</li>
+      <li>Combined profit of 10% over the 4-month period</li>
+      <li>Completed two profit payouts</li>
+      <li>Finish the period in a positive or breakeven balance</li>
+    </ul>
+  </div>
+
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-8">
+    <p class="text-sm font-bold text-amber-900 mb-1">No Cap + 100% Profit Split</p>
+    <p class="text-sm text-amber-800">
+      What makes the scaling plan so good is there's no cap — you can continue growing your account long term. Plus, once you hit your <strong>third scale up</strong>, you are rewarded with a <strong>100% profit split</strong>.
+    </p>
+  </div>
+
+  <!-- ─── Trade2Earn ──────────────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trade2Earn Loyalty Program</h3>
+  <p class="mb-3">
+    BrightFunded's <strong>Trade2Earn</strong> program is another reason why they scored a perfect 10/10 for challenges. Instead of only rewarding profitable trades, you earn tokens for every trade you place, no matter the outcome.
+  </p>
+  <p class="mb-4">
+    These tokens add up automatically in your dashboard based on your trading volume, and you can redeem them for:
+  </p>
+
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-sm font-bold text-slate-800">Free Evaluations</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-sm font-bold text-slate-800">Higher Profit Splits</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-sm font-bold text-slate-800">Lower Profit Targets</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-sm font-bold text-slate-800">Increased Drawdown</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-sm font-bold text-slate-800">Double Challenges</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-sm font-bold text-slate-800">Discounts</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on BrightFunded Challenges</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      BrightFunded scored a perfect 10 here because their evaluation process is simple and clear, the rules are fair, and there's no time limit. Plus, you can fully customise your funded account with the biggest range of add-ons we've seen, and the unlimited scaling plan and loyalty program add more long term value than any prop firm we've reviewed.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SPREADS / COMMISSION FEES & PRICING SECTION                         */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "spreads" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-3">
+    When we tested BrightFunded's evaluation process and funded accounts we were pleasantly surprised with their spreads and fees. Despite being an independent prop firm that isn't broker backed, it's just as competitive with forex spreads from <strong>0 pips</strong>, and usually averaging <strong>0.1 pips</strong>.
+  </p>
+  <p class="mb-4">
+    For crypto, Bitcoin spreads start as low as <strong>$0.1</strong> and average about <strong>$1</strong>, which is far better than the $5 to $10 crypto spreads you'll find at other firms. Other popular digital assets like Ethereum also come in tight, and indices and commodities follow suit, with pricing aggregated from sources like S&P, Nasdaq, ICE, and FTSE to mirror real time market conditions.
+  </p>
+
+  <!-- Spreads overview -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">EUR/USD Spread</p>
+      <p class="text-sm font-bold text-teal-600">From 0 pips</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">BTC Spread</p>
+      <p class="text-sm font-bold text-teal-600">From $0.1</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Average Forex</p>
+      <p class="text-sm font-bold text-slate-800">0.1 pips</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Average BTC</p>
+      <p class="text-sm font-bold text-slate-800">~$1</p>
+    </div>
+  </div>
+
+  <!-- Commission table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Commission Fees</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-5 py-3 text-left">Asset Class</th>
+          <th class="px-5 py-3 text-right">Commission</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">Forex</td>
+          <td class="px-5 py-3 text-right text-slate-900">$3 per lot per side</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">Crypto</td>
+          <td class="px-5 py-3 text-right text-slate-900">0.024% of trading volume</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">Commodities</td>
+          <td class="px-5 py-3 text-right text-slate-900">0.0010% of trading volume</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">Indices</td>
+          <td class="px-5 py-3 text-right font-semibold text-teal-600">No commission (in spread)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="mb-6">
+    This straightforward fee model aligns with or just below industry standards. For instance, the industry average commission fee is $3.50, and BrightFunded is just below this at <strong>$3 per side</strong> for foreign exchange.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Commissions &amp; Pricing</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      BrightFunded scored 9/10 for pricing because their spreads on major forex pairs and crypto are some of the best in the industry, and commissions are both predictable and fair.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* MARKETS / FINANCIAL MARKETS & LEVERAGE SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "markets" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    BrightFunded has one of the wider product ranges we've seen from an independent prop firm, with crypto market access being one of their best features.
+  </p>
+
+  <!-- Markets & Leverage table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Markets &amp; Leverage</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Asset Class</th>
+          <th class="px-4 py-3 text-center">Instruments</th>
+          <th class="px-4 py-3 text-center">Max Leverage</th>
+          <th class="px-4 py-3 text-left">Notes</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Forex</td>
+          <td class="px-4 py-3 text-center text-slate-900">49 pairs</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">100:1</td>
+          <td class="px-4 py-3 text-slate-700">Majors, minors, and exotics</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Commodities</td>
+          <td class="px-4 py-3 text-center text-slate-900">Gas, Oil, Metals</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">1:40</td>
+          <td class="px-4 py-3 text-slate-700">Including gold and silver</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Indices</td>
+          <td class="px-4 py-3 text-center text-slate-900">Global indices</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">1:20</td>
+          <td class="px-4 py-3 text-slate-700">No commission fees</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Crypto</td>
+          <td class="px-4 py-3 text-center text-slate-900">35 assets</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">5:1</td>
+          <td class="px-4 py-3 text-slate-700">BTC, ETH, SOL, meme coins &amp; altcoins</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="mb-4">
+    You can trade forex pairs, indices, commodities, and a massive selection of crypto products, each with decent leverage. Crypto leverage at <strong>5:1</strong> is above the industry average of 2:1, and forex at <strong>100:1</strong> is well above the industry average of 30:1.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Financial Markets &amp; Leverage</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      BrightFunded scored 10/10 for markets and leverage because they offer major asset classes with higher leverage than most, without being overly risky. If you want to focus on forex and crypto markets, they are really strong here and offer 100:1 and 5:1 leverage, respectively, which is above the industry average of 30:1 and 2:1.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PLATFORMS / TRADING PLATFORMS SECTION                                */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "platforms" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    You can choose between three popular trading platforms with <strong>cTrader</strong>, <strong>DXTrade</strong>, and now <strong>MetaTrader 5</strong> available. This gives you desktop, web, and mobile app options along with good trading tools to develop your strategies. Regardless of the platform you pick, both evaluations and funded accounts operate via a simulated trading environment with demo accounts.
+  </p>
+
+  <!-- Platform cards -->
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">MetaTrader 5 (MT5)</p>
+      <p>The most popular trading platform in prop firms. BrightFunded's version comes with everything you'd expect — advanced charting tools, one-click trading, and full support for Expert Advisors. It's the natural choice if you're already familiar with MT4/MT5 or rely on automated trading strategies.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">cTrader</p>
+      <p>More suited if you want automated trading with more advanced features and Depth of Market (DoM). You'll get over 60 indicators, multiple chart types and timeframes, plus fast order execution and clean design.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">DXtrade</p>
+      <p>A more customisable option built for discretionary and hybrid traders, but it wouldn't be our first option. While it includes real-time risk monitoring and over 80 technical indicators, we ran into glitches when testing the platform and ultimately swapped to MT5.</p>
+      <p class="text-xs text-amber-600 font-semibold mt-1">We experienced some glitches during testing</p>
+    </div>
+  </div>
+
+  <!-- Trading Rules -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules</h3>
+  <p class="mb-4">
+    Trading rules are the same across platforms and generally relaxed:
+  </p>
+
+  <div class="space-y-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Expert Advisors (EAs)</p>
+      <p><span class="text-emerald-600 font-semibold">Allowed</span> — automated trading is permitted on all platforms.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Hedging</p>
+      <p><span class="text-emerald-600 font-semibold">Allowed</span> — within one account only.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">News Trading</p>
+      <p><span class="text-emerald-600 font-semibold">Unrestricted in evaluation</span> — funded accounts have a 10-minute window around major news events.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Copy Trading</p>
+      <p><span class="text-red-500 font-semibold">Not allowed</span> — you cannot mirror trades from other traders or social platforms.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Weekend Holding</p>
+      <p><span class="text-emerald-600 font-semibold">Allowed</span> — positions can be held over the weekend.</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trading Platforms</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      BrightFunded scored 9/10 here because adding MT5 alongside cTrader and DXtrade gives you solid options for both manual and automated strategies. The platforms cover everything you need — execution is fast and rules are fair, but they lost a point because of the issues we ran into with DXtrade.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PAYOUTS / PAYMENTS & PROFIT PAYOUT SECTION                          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "payouts" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    BrightFunded has a great payment and payout system, with the potential to work up to a <strong>100% profit split</strong> or purchase weekly payouts.
+  </p>
+
+  <!-- Challenge Fees -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Fee Payments</h3>
+  <p class="mb-4">
+    When you sign up you pay a one-time challenge fee between <strong>&euro;55 to &euro;975</strong>, with no recurring fees after. If you buy the add-on for a fee refund you'll get this back once you get your funded account, and if you've got enough tokens you can use these to pay for upfront fees too.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-xs text-slate-500 uppercase tracking-wide font-semibold mb-1">Credit Card</p>
+      <p class="text-sm font-bold text-slate-800">Visa / Mastercard</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-xs text-slate-500 uppercase tracking-wide font-semibold mb-1">Bank Transfer</p>
+      <p class="text-sm font-bold text-slate-800">Wire / SEPA</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-xs text-slate-500 uppercase tracking-wide font-semibold mb-1">Crypto</p>
+      <p class="text-sm font-bold text-slate-800">BTC / ETH</p>
+    </div>
+  </div>
+
+  <!-- Profit Split progression -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Profit Split Progression</h3>
+
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Default Split</p>
+      <p class="text-sm font-bold text-slate-800">80%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">With Add-On</p>
+      <p class="text-sm font-bold text-teal-600">90%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">3rd Scale-Up</p>
+      <p class="text-sm font-bold text-teal-600">100%</p>
+    </div>
+  </div>
+
+  <!-- Payout Frequency -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payout Frequency</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-5 py-3 text-left">Payout Schedule</th>
+          <th class="px-5 py-3 text-right">Requirement</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">Monthly</td>
+          <td class="px-5 py-3 text-right text-slate-700">Default — no add-on required</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">Bi-Weekly (14 days)</td>
+          <td class="px-5 py-3 text-right text-slate-700">15% fee add-on</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">Weekly (7 days)</td>
+          <td class="px-5 py-3 text-right text-slate-700">25% fee add-on</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="mb-6">
+    There's <strong>no minimum withdrawal</strong> and payouts go out in US Dollar via bank transfer or in crypto (USDC ERC-20). Processing is quick, and outside processor fees are minimal.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Payments &amp; Profit Shares</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      BrightFunded earns another 10/10 here because fees are transparent, payouts are frequent and go up to 100%, and there's a range of ways you can tailor things to your liking. There's also no minimum withdrawal amount which is rare.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SUPPORT / CUSTOMER SERVICE & EDUCATION SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "support" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    BrightFunded is constantly improving their educational content, and their customer service team is available <strong>24/7</strong> which is great for weekend crypto traders.
+  </p>
+
+  <!-- Support Channels -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Customer Support</h3>
+  <p class="mb-4">
+    Support is available around the clock through <strong>email, live chat, or WhatsApp</strong>, and we were never left waiting when we needed help. When testing support we found their live chat and WhatsApp to be the quickest, and if you want in-person support they have a main office in <strong>Amsterdam</strong>.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Email</p>
+      <p>Available 24/7 for all enquiries</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Live Chat</p>
+      <p>Fastest response — available on website 24/7</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">WhatsApp</p>
+      <p>Quick replies — great for mobile traders</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Office</p>
+      <p>Main office based in Amsterdam, Netherlands</p>
+    </div>
+  </div>
+
+  <!-- Educational Resources -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Educational Resources</h3>
+  <p class="mb-4">
+    On the education side, BrightFunded isn't offering a full trading academy, but they cover what you need to trade effectively within their system.
+  </p>
+
+  <div class="space-y-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">FAQ Section</p>
+      <p>Detailed and answers most questions on rules, payouts, and platforms.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Platform Guides</p>
+      <p>Available in both text and video format, making it easier for newer traders to get comfortable with cTrader, DXtrade, or MT5.</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Customer Service &amp; Education</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      BrightFunded scored highly here because support is genuinely available 24/7 and their resources make it easy to understand how the firm works. While advanced traders won't find deep strategy lessons, beginners will appreciate the clear guides and instant access to help when they need it.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* TRUST / TRUST & COMMUNITY SECTION                                   */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "trust" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    BrightFunded has a good reputation and is popular among European traders being a Polish prop firm.
+  </p>
+
+  <!-- Trustpilot -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">BrightFunded Trustpilot Reviews</h3>
+
+  <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 mb-4 flex items-center gap-4">
+    <div class="flex-shrink-0">
+      <p class="text-3xl font-black text-slate-900">4.4<span class="text-lg text-slate-400">/5</span></p>
+      <p class="text-xs text-slate-500 font-semibold">TrustScore</p>
+    </div>
+    <div>
+      <p class="text-sm text-slate-700"><strong>81% of users</strong> gave BrightFunded a perfect 5/5 stars. Reviews talk about clear trading rules with no surprises, and how it's a great prop firm for long-term trading. Others comment on the speed of payouts, sometimes being received in as little as 5 hours.</p>
+    </div>
+  </div>
+
+  <!-- Community -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Community</h3>
+
+  <p class="mb-4">
+    Although only being a few years old, BrightFunded already has a huge <strong>Discord community</strong> where you can access info on markets, rules, training, as well as direct support from their customer service team. They also have a strong social media presence and will post promotions and competitions on both platforms.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">4.4/5</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Trustpilot Score</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">81%</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">5-Star Reviews</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-teal-600">Active</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Discord Community</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trust &amp; Community</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      BrightFunded scored 9/10 for trust and community, which is the highest score we've given out to a non-broker-backed firm in this area. That's because they have had a consistently high Trustscore since they started operating a few years ago, with an engaged community free to access.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* FALLBACK — sections not customised render the default text          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section !== "challenges" && section !== "spreads" && section !== "markets" && section !== "platforms" && section !== "payouts" && section !== "support" && section !== "trust" && fallbackBody && (
+  <div class="text-sm leading-relaxed text-slate-700 space-y-4">
+    {fallbackBody.split("\n\n").map((para) => (
+      <p set:html={para.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")} />
+    ))}
+  </div>
+)}

@@ -1,0 +1,22 @@
+{
+  "id": "rev-earn2trade",
+  "propFirmId": "d0000025-0000-0000-0000-000000000025",
+  "summary": "Earn2Trade scored 35/100 in our assessment. While its educational resources stand out as a genuine strength for beginners wanting to learn futures trading, the firm falls short in almost every other area. Challenges are overly restrictive, monthly subscription fees are steep, trading rules are rigid, and the profit split sits well below the industry average at just 80%. Experienced traders will find far better options elsewhere.",
+  "pros": ["Good educational resources", "Multiple trading platforms"],
+  "cons": ["Strict trading rules and evaluations", "Monthly subscription fees", "Low profit split (80%)", "Vague funded account rules"],
+  "bestFor": "Beginners who want to learn futures trading with educational support included",
+  "notIdealFor": "Experienced traders who want competitive splits, flexible rules, or a fast path to payouts",
+  "overallScore": 35,
+  "categoryScores": { "challenges": 30, "pricing": 25, "platforms": 55, "trust": 45 },
+  "verdictBlocks": [
+    {
+      "heading": "Our Verdict: 35/100",
+      "body": "Earn2Trade earnt a low overall score of 35/100, with its only strength being solid educational resources. For beginners wanting to learn more, Earn2Trade's resources are appealing. However, the challenge is far too limiting for experienced traders and rules are very rigid.\n\nEarn2Trade is one of the older prop firms, but that doesn't mean it's better. Although you can get accounts up to $400K — which is very large for futures trading — it comes with lower profit splits and vague rules. Evaluation fees are high, ranging from $150 to $550 per month, and data fees are charged on top. A $10 withdrawal fee applies to payouts under $500.\n\nThe firm provides customer support through email and live chat, but the overall experience doesn't justify the cost when compared to modern alternatives that offer higher splits, clearer rules, and faster payouts."
+    }
+  ],
+  "verified": false,
+  "flagged": true,
+  "flaggedWarning": "We do not recommend Earn2Trade due to strict trading rules, high monthly subscription fees, and a below-average profit split of just 80%. The evaluation process is overly restrictive and funded account rules remain vague.\n\nOur testing scored Earn2Trade **35/100**, and we only recommend firms scoring 50/100+. For a better futures trading experience with clearer rules and higher splits, consider [Topstep](/reviews/topstep) or [FXIFY Futures](/reviews/fxify-futures).",
+  "methodologyVersion": "1.0",
+  "lastReviewedAt": "2026-02-24"
+}

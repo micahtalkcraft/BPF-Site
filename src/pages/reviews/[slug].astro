@@ -1,0 +1,953 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getCollection } from "astro:content";
+import ScoreBadge from "../../components/shared/ScoreBadge.astro";
+import PropFirmBadges from "../../components/shared/PropFirmBadges.astro";
+import FirmAvatar from "../../components/shared/FirmAvatar.astro";
+import type { PropFirm, Review } from "../../content/config";
+import * as flags from "country-flag-icons/string/3x2";
+
+export async function getStaticPaths() {
+  const propFirms = await getCollection("prop-firms");
+  const reviews = await getCollection("reviews");
+  const offers = await getCollection("offers");
+
+  const reviewMap = Object.fromEntries(reviews.map((r) => [r.data.propFirmId, r.data]));
+
+  const offersMap: Record<string, typeof offers[0]["data"][]> = {};
+  for (const o of offers) {
+    for (const fid of o.data.propFirmIds) {
+      offersMap[fid] ??= [];
+      offersMap[fid].push(o.data);
+    }
+  }
+
+  return propFirms.map((f) => ({
+    params: { slug: f.data.slug },
+    props: {
+      firm: f.data,
+      review: reviewMap[f.data.id] ?? null,
+      offers: offersMap[f.data.id] ?? [],
+    },
+  }));
+}
+
+interface Props {
+  firm: PropFirm;
+  review: Review | null;
+  offers: Awaited<ReturnType<typeof getCollection<"offers">>>[0]["data"][];
+}
+
+const { firm, review, offers } = Astro.props;
+
+if (!review) {
+  return Astro.redirect("/reviews");
+}
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    itemReviewed: {
+      "@type": "Organization",
+      name: firm.name,
+      foundingDate: firm.foundedYear?.toString(),
+      url: firm.links?.website,
+    },
+    reviewRating: review.overallScore
+      ? {
+          "@type": "Rating",
+          ratingValue: review.overallScore,
+          worstRating: 0,
+          bestRating: 100,
+        }
+      : undefined,
+    author: { "@type": "Organization", name: "BestPropFirms.com" },
+    datePublished: review.lastReviewedAt,
+    reviewBody: review.summary,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.bestpropfirms.com" },
+      { "@type": "ListItem", position: 2, name: "Reviews", item: "https://www.bestpropfirms.com/reviews" },
+      { "@type": "ListItem", position: 3, name: `${firm.name} Review`, item: `https://www.bestpropfirms.com/reviews/${firm.slug}` },
+    ],
+  },
+];
+
+const categoryLabels: Record<string, string> = {
+  challenges: "Challenges",
+  spreads: "Spreads",
+  markets: "Markets",
+  platforms: "Platforms",
+  payouts: "Payouts",
+  trust: "Trust",
+  conditions: "Trading Conditions",
+  pricing: "Pricing",
+  support: "Support",
+  ux: "UX & Community",
+};
+
+const sectionLabels: Record<string, string> = {
+  challenges: "Challenge Accounts",
+  spreads: "Commission Fees & Pricing",
+  markets: "Financial Markets & Leverage",
+  platforms: "Trading Platforms",
+  payouts: "Payments & Profit Payout",
+  support: "Customer Service & Education",
+  trust: "Trust & Community",
+};
+
+const sectionOrder = ["challenges", "spreads", "markets", "platforms", "payouts", "support", "trust"];
+
+const orderedSections = review.categorySections
+  ? sectionOrder
+      .filter((k) => review.categorySections![k])
+      .map((k) => ({ key: k, heading: sectionLabels[k] ?? k, body: review.categorySections![k] as string }))
+  : [];
+
+// Dynamic import of firm-specific review content (if exists)
+const contentModules = import.meta.glob<{ default: any }>('../../components/review-content/*.astro');
+const firmContentPath = `../../components/review-content/${firm.slug}.astro`;
+const FirmDetailContent = contentModules[firmContentPath]
+  ? (await contentModules[firmContentPath]()).default
+  : null;
+
+const discountCode = (firm.custom as Record<string, unknown>)?.discountCode as string | undefined;
+const discountPercent = (firm.custom as Record<string, unknown>)?.discountPercent as number | undefined;
+const ctaUrl = offers[0]?.trackingUrl ?? firm.links?.website;
+const lowestFee = firm.pricing.challengeFees.length > 0
+  ? firm.pricing.challengeFees.reduce((min, f) => f.fee < min.fee ? f : min)
+  : null;
+const sortedFees = [...firm.pricing.challengeFees].sort((a, b) => a.accountSize - b.accountSize);
+
+function barColor(s: number): string {
+  if (s >= 88) return "bg-green-500";
+  if (s >= 82) return "bg-green-400";
+  if (s >= 76) return "bg-lime-500";
+  if (s >= 70) return "bg-yellow-400";
+  if (s >= 62) return "bg-amber-500";
+  return "bg-red-500";
+}
+function scoreTextColor(s: number): string {
+  if (s >= 88) return "text-green-600";
+  if (s >= 82) return "text-green-500";
+  if (s >= 76) return "text-lime-600";
+  if (s >= 70) return "text-yellow-600";
+  if (s >= 62) return "text-amber-600";
+  return "text-red-600";
+}
+
+const isVerified = review.verified !== false;
+const isFlagged = review.flagged === true;
+const overallBg = review.overallScore !== undefined ? barColor(review.overallScore) : "bg-slate-300";
+const scoredCategories = review.categoryScores
+  ? (Object.entries(review.categoryScores) as [string, number][]).map(([key, score]) => ({
+      label: categoryLabels[key] ?? key,
+      score,
+      bg: barColor(score),
+      textColor: scoreTextColor(score),
+    }))
+  : [];
+
+// Country flag SVG
+const flagSvg = firm.hqCountry ? (flags as Record<string, string>)[firm.hqCountry.toUpperCase()] : undefined;
+
+// Convert markdown links [text](url) to styled HTML <a> tags
+function mdLinksToHtml(text: string, cls = 'font-bold text-red-700 underline hover:text-red-900'): string {
+  return text
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, `<a href="$2" class="${cls}">$1</a>`);
+}
+
+// YouTube thumbnail from embed URL
+const youtubeId = review.youtubeUrl?.match(/(?:embed\/|v=|youtu\.be\/)([a-zA-Z0-9_-]+)/)?.[1];
+---
+
+<Base
+  title={`${firm.name} Review ${new Date().getFullYear()} — Challenge Fees, Rules & Payouts | BestPropFirms.com`}
+  description={`Independent ${firm.name} review. ${firm.payouts.splitMax ?? "—"}% max payout split, ${firm.evaluation.maxDrawdown ?? "—"}% max drawdown. Evaluation: ${firm.evaluation.types.join(", ")}.`}
+  jsonLd={jsonLd}
+>
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8">
+
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-slate-500 mb-6" aria-label="Breadcrumb">
+      <a href="/reviews" class="hover:text-teal-600 transition-colors">Reviews</a>
+      <span class="mx-2">›</span>
+      <span class="text-slate-800 font-medium">{firm.name}</span>
+    </nav>
+
+    <!-- Status banner for non-active firms -->
+    {firm.status !== "active" && (
+      <div class="mb-6 rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-900">
+        <p class="font-semibold">Status: {firm.status.toUpperCase()}</p>
+        {firm.notes && <p class="mt-1">{firm.notes}</p>}
+      </div>
+    )}
+
+    <!-- ============================================================ -->
+    <!-- TWO-COLUMN HERO: Main content + Sticky sidebar               -->
+    <!-- ============================================================ -->
+    <div class="lg:grid lg:grid-cols-[1fr_300px] lg:gap-8">
+
+      <!-- LEFT COLUMN: Review content -->
+      <div class="min-w-0">
+
+        <!-- Header: Name + avatar -->
+        <div class="flex items-center gap-3 mb-3">
+          <FirmAvatar name={firm.name} logoUrl={firm.media?.logo} size="lg" />
+          <div>
+            <div class="flex items-center gap-2 flex-wrap">
+              <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight">{firm.name} Review</h1>
+              {!isVerified && !isFlagged && (
+                <span class="inline-flex items-center gap-1 rounded-full bg-amber-100 border border-amber-300 px-2.5 py-0.5 flex-shrink-0">
+                  <svg class="h-3.5 w-3.5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.168 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-[10px] font-bold text-amber-700 uppercase tracking-wide">Unverified</span>
+                </span>
+              )}
+            </div>
+            {firm.foundedYear && (
+              <p class="text-sm text-slate-500 mt-0.5">
+                Est. {firm.foundedYear}{firm.hqCountry ? <>{" · "}{flagSvg && <span class="inline-block w-4 h-3 align-baseline rounded-[2px] overflow-hidden relative top-[1px] mr-0.5" set:html={flagSvg} />}{firm.hqCountry}</> : ""}
+                {firm.trust.communitySize ? ` · ${firm.trust.communitySize}` : ""}
+              </p>
+            )}
+          </div>
+        </div>
+
+        <!-- Badges -->
+        <div class="mb-4">
+          <PropFirmBadges firm={firm} review={review} />
+        </div>
+
+        <!-- Flagged firm warning -->
+        {isFlagged && review.flaggedWarning && (
+          <div class="mb-6 rounded-xl border-2 border-red-400 bg-red-50 p-5 flex items-start gap-3">
+            <svg class="h-6 w-6 text-red-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.168 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <p class="font-bold text-red-900 text-base mb-1.5">{firm.name}</p>
+              {review.flaggedWarning.split("\n\n").map((para) => (
+                <p class="text-sm text-red-800 leading-relaxed mb-2" set:html={mdLinksToHtml(para)} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        <!-- Unverified notice -->
+        {!isVerified && !isFlagged && (
+          <div class="mb-6 rounded-xl border border-amber-300 bg-amber-50 p-4 flex items-start gap-3">
+            <svg class="h-5 w-5 text-amber-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.168 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <p class="font-semibold text-amber-900 text-sm">Unverified Review</p>
+              <p class="text-xs text-amber-800 mt-0.5">This review has not been fully verified by our team. The information presented is based on publicly available data and may not reflect the most current terms and conditions. Please verify details directly with the firm before making any decisions.</p>
+            </div>
+          </div>
+        )}
+
+        <!-- Brief verdict callout (top) -->
+        {review.verdictBlocks && review.verdictBlocks.length > 0 && (
+          <div class="mb-6">
+            <div class={`rounded-xl border-l-4 px-5 py-4 ${isFlagged ? "border-red-500 bg-red-50/60" : "border-teal-500 bg-teal-50/60"}`}>
+              <p class={`text-sm font-semibold mb-1 ${isFlagged ? "text-red-800" : "text-teal-800"}`}>{review.verdictBlocks[0].heading}</p>
+              <p class="text-sm text-slate-700 leading-relaxed">{review.verdictBlocks[0].body.split("\n\n")[0]}</p>
+            </div>
+          </div>
+        )}
+
+        <!-- Mobile-only: Score + CTA (shown above stats on small screens) -->
+        <div class="lg:hidden mb-6">
+          <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+            <div class="flex items-center gap-4 mb-4">
+              {review.overallScore !== undefined && (
+                <div class={`w-16 h-16 rounded-2xl ${overallBg} flex flex-col items-center justify-center shadow-lg flex-shrink-0`}>
+                  <span class="text-2xl font-black text-white leading-none">{review.overallScore}</span>
+                  <span class="text-[9px] font-bold text-white/70 uppercase">/100</span>
+                </div>
+              )}
+              <div class="flex-1 min-w-0">
+                <p class="text-sm font-bold text-slate-900">BPF Score</p>
+                {firm.trust.trustpilotRating !== null && (
+                  <p class="text-xs text-slate-500 mt-0.5 flex items-center gap-1 flex-wrap">
+                    <img src="/images/social/free-trustpilot-icon-svg-download-png-8715838.webp" alt="Trustpilot" class="w-3.5 h-3.5 inline-block" loading="lazy" />
+                    Trustpilot: {firm.trust.trustpilotRating}/5
+                    <span class="text-amber-500">★</span>
+                    {firm.trust.trustpilotCount && (
+                      <span class="text-slate-400"> ({firm.trust.trustpilotCount.toLocaleString()})</span>
+                    )}
+                  </p>
+                )}
+                {lowestFee && (
+                  <p class="text-xs text-slate-500 mt-0.5">
+                    From <span class="font-bold text-slate-800">${lowestFee.fee}</span>
+                  </p>
+                )}
+              </div>
+            </div>
+            <div class="flex gap-2">
+              {ctaUrl && (
+                <a
+                  href={ctaUrl}
+                  target="_blank"
+                  rel="nofollow noopener sponsored"
+                  class="flex-1 inline-flex items-center justify-center gap-2 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-4 py-2.5 text-sm transition-colors"
+                >
+                  Visit {firm.name}
+                  <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                  </svg>
+                </a>
+              )}
+            </div>
+            {discountCode && (
+              <div class="mt-3 flex items-center gap-2 rounded-lg bg-emerald-50 border border-emerald-200 px-3 py-2">
+                <span class="text-xs font-bold text-emerald-600 uppercase">{discountPercent}% OFF</span>
+                <code class="text-sm font-black text-emerald-700 tracking-wider">{discountCode}</code>
+                <button id="copy-code-btn-mobile" data-code={discountCode} class="ml-auto text-xs font-bold text-emerald-600 hover:text-emerald-800 transition-colors cursor-pointer">Copy</button>
+              </div>
+            )}
+          </div>
+        </div>
+
+        <!-- Quick stats strip -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+          <div class="rounded-xl bg-slate-50 border border-slate-100 px-4 py-3 text-center">
+            <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-1">Challenge Types</p>
+            <p class="text-sm font-bold text-slate-800 capitalize">{firm.evaluation.types.join(", ")}</p>
+          </div>
+          <div class="rounded-xl bg-slate-50 border border-slate-100 px-4 py-3 text-center">
+            <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-1">Profit Split</p>
+            <p class={`text-sm font-bold ${firm.payouts.splitMax !== null ? "text-teal-600" : "text-slate-400"}`}>
+              {firm.payouts.splitMax !== null ? `${firm.payouts.splitMax}%` : "—"}
+            </p>
+          </div>
+          <div class="rounded-xl bg-slate-50 border border-slate-100 px-4 py-3 text-center">
+            <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-1">Drawdown</p>
+            <p class="text-sm font-bold text-slate-800">
+              {firm.evaluation.dailyDrawdown !== null ? `${firm.evaluation.dailyDrawdown}%` : "—"} / {firm.evaluation.maxDrawdown !== null ? `${firm.evaluation.maxDrawdown}%` : "—"}
+            </p>
+          </div>
+          <div class="rounded-xl bg-slate-50 border border-slate-100 px-4 py-3 text-center">
+            <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-1">First Payout</p>
+            <p class="text-sm font-bold text-slate-800">
+              {firm.payouts.firstPayoutDays !== null ? `${firm.payouts.firstPayoutDays} days` : "—"}
+            </p>
+          </div>
+        </div>
+
+        <!-- YouTube video embed -->
+        {review.youtubeUrl && (
+          <div id="video-section" class="mb-8 rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-black scroll-mt-6">
+            <div class="relative w-full" style="padding-bottom: 56.25%">
+              <iframe
+                class="absolute inset-0 w-full h-full"
+                src={review.youtubeUrl}
+                title={`${firm.name} Review`}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        )}
+
+        <!-- Category scores -->
+        {scoredCategories.length > 0 && (
+          <section class="mb-8" id="score-section">
+            <div class="flex items-start justify-between gap-4 mb-4">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-widest text-teal-500 mb-1">Independent Review</p>
+                <h2 class="text-xl font-black text-slate-900">Our Rating</h2>
+              </div>
+              {review.overallScore !== undefined && (
+                <div class="hidden lg:flex flex-col items-center gap-1">
+                  <div class={`w-14 h-14 rounded-xl ${overallBg} flex flex-col items-center justify-center shadow-md`}>
+                    <span class="text-xl font-black text-white leading-none">{review.overallScore}</span>
+                    <span class="text-[8px] font-bold text-white/70 uppercase">/100</span>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+              <div class="divide-y divide-slate-100">
+                {scoredCategories.map(({ label, score, bg, textColor }, idx) => (
+                  <div class="score-row flex items-center gap-3 sm:gap-4 px-4 sm:px-5 py-3" style={`--idx: ${idx}`}>
+                    <p class="text-sm font-semibold text-slate-700 w-24 sm:w-32 flex-shrink-0 leading-tight">{label}</p>
+                    <div class="flex-1 bg-slate-100 rounded-full h-2.5 overflow-hidden">
+                      <div class={`score-bar h-full rounded-full ${bg}`} style={`--w: ${score}%`}></div>
+                    </div>
+                    <div class="w-14 text-right flex-shrink-0 flex items-baseline justify-end gap-0.5">
+                      <span class={`text-base font-black ${textColor}`}>{score}</span>
+                      <span class="text-[10px] text-slate-400 font-medium">/100</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        <!-- Pros & Cons -->
+        <section class="mb-8 grid sm:grid-cols-2 gap-4">
+          <div class="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 class="text-base font-bold text-slate-900 mb-3 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0">
+                <svg class="h-3.5 w-3.5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </span>
+              Pros
+            </h2>
+            <ul class="space-y-2">
+              {review.pros.map((pro) => (
+                <li class="flex items-start gap-2 text-sm text-slate-700">
+                  <svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  {pro}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="rounded-xl border border-slate-200 bg-white p-5">
+            <h2 class="text-base font-bold text-slate-900 mb-3 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
+                <svg class="h-3.5 w-3.5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+              </span>
+              Cons
+            </h2>
+            <ul class="space-y-2">
+              {review.cons.map((con) => (
+                <li class="flex items-start gap-2 text-sm text-slate-700">
+                  <svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                  </svg>
+                  {con}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        <!-- Best for / Not ideal for -->
+        <section class="mb-8 grid sm:grid-cols-2 gap-4">
+          <div class="rounded-xl bg-teal-50 border border-teal-200 p-5">
+            <h3 class="font-bold text-teal-800 mb-2 text-sm">Best For</h3>
+            <p class="text-sm text-teal-700 leading-relaxed">{review.bestFor}</p>
+          </div>
+          <div class="rounded-xl bg-red-50 border border-red-200 p-5">
+            <h3 class="font-bold text-red-800 mb-2 text-sm">Not Ideal For</h3>
+            <p class="text-sm text-red-700 leading-relaxed">{review.notIdealFor}</p>
+          </div>
+        </section>
+
+        <!-- In-depth summary -->
+        <section class="mb-8">
+          <h2 class="text-xl font-bold text-slate-900 mb-3">Our Take on {firm.name}</h2>
+          <div class="text-sm leading-relaxed text-slate-700 space-y-4">
+            {review.summary.split("\n\n").map((para) => (
+              <p>{para}</p>
+            ))}
+          </div>
+        </section>
+
+        <!-- Challenge fees table (only shown if no firm-specific content exists and review is verified) -->
+        {isVerified && !FirmDetailContent && sortedFees.length > 0 && (
+          <section class="mb-8">
+            <h2 class="text-xl font-bold text-slate-900 mb-4">Challenge Fees</h2>
+            <div class="overflow-x-auto rounded-xl border border-slate-200">
+              <table class="w-full text-sm">
+                <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+                  <tr>
+                    <th class="px-4 py-3 text-left">Account Size</th>
+                    <th class="px-4 py-3 text-left">Model</th>
+                    <th class="px-4 py-3 text-left">Label</th>
+                    <th class="px-4 py-3 text-right">Fee</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                  {sortedFees.map((fee, i) => (
+                    <tr class={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                      <td class="px-4 py-3 font-semibold text-slate-900">${fee.accountSize.toLocaleString()}</td>
+                      <td class="px-4 py-3 text-slate-600 capitalize">{fee.model ?? "—"}</td>
+                      <td class="px-4 py-3 text-slate-600">{fee.label ?? "—"}</td>
+                      <td class="px-4 py-3 text-right font-semibold text-slate-900">${fee.fee}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            {firm.pricing.refundPolicy && (
+              <p class="mt-2 text-xs text-slate-500">
+                <span class="font-medium">Refund policy:</span> {firm.pricing.refundPolicy}
+              </p>
+            )}
+          </section>
+        )}
+
+        <!-- Key Facts -->
+        <section class="mb-8">
+          <h2 class="text-xl font-bold text-slate-900 mb-4">Key Facts</h2>
+          <div class="overflow-x-auto rounded-xl border border-slate-200">
+            <table class="w-full text-sm">
+              <tbody class="divide-y divide-slate-100">
+                <tr class="bg-white">
+                  <td class="px-4 py-3 font-medium text-slate-600 w-2/5">Evaluation Types</td>
+                  <td class="px-4 py-3 font-semibold text-slate-900 capitalize">{firm.evaluation.types.join(", ")}</td>
+                </tr>
+                <tr class="bg-slate-50">
+                  <td class="px-4 py-3 font-medium text-slate-600">Max Payout Split</td>
+                  <td class="px-4 py-3 font-semibold text-slate-900">{firm.payouts.splitMax !== null ? `${firm.payouts.splitMax}%` : "—"}</td>
+                </tr>
+                <tr class="bg-white">
+                  <td class="px-4 py-3 font-medium text-slate-600">Payout Schedule</td>
+                  <td class="px-4 py-3 font-semibold text-slate-900">{firm.payouts.schedule ?? "—"}</td>
+                </tr>
+                <tr class="bg-slate-50">
+                  <td class="px-4 py-3 font-medium text-slate-600">First Payout</td>
+                  <td class="px-4 py-3 font-semibold text-slate-900">{firm.payouts.firstPayoutDays !== null ? `After ${firm.payouts.firstPayoutDays} days` : "—"}</td>
+                </tr>
+                <tr class="bg-white">
+                  <td class="px-4 py-3 font-medium text-slate-600">Daily Drawdown</td>
+                  <td class="px-4 py-3 font-semibold text-slate-900">{firm.evaluation.dailyDrawdown !== null ? `${firm.evaluation.dailyDrawdown}%` : "—"}</td>
+                </tr>
+                <tr class="bg-slate-50">
+                  <td class="px-4 py-3 font-medium text-slate-600">Max Drawdown</td>
+                  <td class="px-4 py-3 font-semibold text-slate-900">{firm.evaluation.maxDrawdown !== null ? `${firm.evaluation.maxDrawdown}%` : "—"}</td>
+                </tr>
+                <tr class="bg-white">
+                  <td class="px-4 py-3 font-medium text-slate-600">Platforms</td>
+                  <td class="px-4 py-3 font-semibold text-slate-900">{firm.markets.platforms.join(", ")}</td>
+                </tr>
+                <tr class="bg-slate-50">
+                  <td class="px-4 py-3 font-medium text-slate-600">News Trading</td>
+                  <td class="px-4 py-3 font-semibold text-slate-900">{firm.rules.newsTrading === true ? "Allowed" : firm.rules.newsTrading === false ? "Not Allowed" : "—"}</td>
+                </tr>
+                <tr class="bg-white">
+                  <td class="px-4 py-3 font-medium text-slate-600">Weekend Holding</td>
+                  <td class="px-4 py-3 font-semibold text-slate-900">{firm.rules.weekendHolding === true ? "Allowed" : firm.rules.weekendHolding === false ? "Not Allowed" : "—"}</td>
+                </tr>
+                <tr class="bg-slate-50">
+                  <td class="px-4 py-3 font-medium text-slate-600">Copy Trading</td>
+                  <td class="px-4 py-3 font-semibold text-slate-900">{firm.rules.copyTrading === true ? "Allowed" : firm.rules.copyTrading === false ? "Not Allowed" : "—"}</td>
+                </tr>
+                <tr class="bg-white">
+                  <td class="px-4 py-3 font-medium text-slate-600">Expert Advisors (EAs)</td>
+                  <td class="px-4 py-3 font-semibold text-slate-900">{firm.rules.expertAdvisors === true ? "Allowed" : firm.rules.expertAdvisors === false ? "Not Allowed" : "—"}</td>
+                </tr>
+                <tr class="bg-slate-50">
+                  <td class="px-4 py-3 font-medium text-slate-600 flex items-center gap-1.5"><img src="/images/social/free-trustpilot-icon-svg-download-png-8715838.webp" alt="Trustpilot" class="w-4 h-4" loading="lazy" />Trustpilot</td>
+                  <td class="px-4 py-3 font-semibold text-slate-900">
+                    {firm.trust.trustpilotRating !== null
+                      ? `${firm.trust.trustpilotRating}/5 (${firm.trust.trustpilotCount?.toLocaleString()} reviews)`
+                      : "—"}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Consistency rule -->
+        {firm.rules.consistencyRule && (
+          <section class="mb-8">
+            <h2 class="text-xl font-bold text-slate-900 mb-2">Consistency Rule</h2>
+            <p class="text-sm text-slate-700 bg-amber-50 border border-amber-200 rounded-xl p-4">
+              {firm.rules.consistencyRule}
+            </p>
+          </section>
+        )}
+
+        <!-- Offers -->
+        {discountCode && (
+          <section class="mb-8">
+            <h2 class="text-xl font-bold text-slate-900 mb-4">Current Offers</h2>
+            <div class="rounded-xl border border-teal-200 bg-teal-50 p-5">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                <div>
+                  <p class="font-semibold text-teal-900">{discountPercent}% Off All Challenge Fees</p>
+                  <p class="mt-1 text-sm text-teal-700">Use code at checkout for {discountPercent}% discount on any {firm.name} challenge.</p>
+                </div>
+                <button
+                  class="group/offer inline-flex items-center gap-2 rounded-xl border-2 border-dashed border-teal-300 hover:border-teal-500 bg-white hover:bg-teal-100 px-4 py-2.5 transition-all cursor-pointer flex-shrink-0"
+                  onclick={`navigator.clipboard.writeText('${discountCode}').then(()=>{const el=this.querySelector('.offer-code');el.textContent='Copied!';setTimeout(()=>{el.textContent='${discountCode}'},1500)})`}
+                >
+                  <span class="offer-code text-sm font-black text-teal-700 tracking-widest">{discountCode}</span>
+                  <svg class="h-4 w-4 text-teal-400 group-hover/offer:text-teal-600 transition-colors flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                </button>
+              </div>
+              {ctaUrl && (
+                <a
+                  href={ctaUrl}
+                  target="_blank"
+                  rel="nofollow noopener noreferrer sponsored"
+                  class="mt-4 w-full inline-flex items-center justify-center gap-2 rounded-xl bg-teal-500 hover:bg-teal-600 text-white font-bold px-5 py-3 text-sm transition-colors shadow-sm shadow-teal-500/20"
+                >
+                  Claim Offer at {firm.name}
+                  <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                  </svg>
+                </a>
+              )}
+            </div>
+          </section>
+        )}
+
+        <!-- Category deep-dive sections (only for verified reviews) -->
+        {isVerified && orderedSections.length > 0 && (
+          <div class="mb-8 border-t border-slate-200 pt-8">
+            {orderedSections.map(({ key, heading, body }) => (
+              <section class="mb-8" id={`section-${key}`}>
+                <h2 class="text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-200">{heading}</h2>
+                {FirmDetailContent ? (
+                  <FirmDetailContent section={key} fallbackBody={body} />
+                ) : (
+                  <div class="text-sm leading-relaxed text-slate-700 space-y-4">
+                    {body.split("\n\n").map((para) => (
+                      <p set:html={para.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")} />
+                    ))}
+                  </div>
+                )}
+              </section>
+            ))}
+          </div>
+        )}
+
+        <!-- Final Verdict -->
+        {review.verdictBlocks && review.verdictBlocks.length > 0 && (
+          <section class="mb-8 border-t border-slate-200 pt-8" id="verdict-section">
+            {isFlagged ? (
+              <div class="rounded-xl border-2 border-red-400 bg-red-50 p-6">
+                {review.verdictBlocks.map((block) => (
+                  <div>
+                    <h2 class="text-xl font-bold text-red-900 mb-4 flex items-center gap-2">
+                      <svg class="h-6 w-6 text-red-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.168 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+                      </svg>
+                      {block.heading}
+                    </h2>
+                    <div class="text-sm leading-relaxed text-red-900/80 space-y-4">
+                      {block.body.split("\n\n").map((para) => (
+                        <p set:html={para.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")} />
+                      ))}
+                    </div>
+                  </div>
+                ))}
+                {review.flaggedWarning && (
+                  <div class="mt-5 pt-4 border-t border-red-200">
+                    {review.flaggedWarning.split("\n\n").map((para) => (
+                      <p class="text-sm text-red-800 leading-relaxed mb-1" set:html={mdLinksToHtml(para)} />
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <>
+                {review.verdictBlocks.map((block) => (
+                  <div>
+                    <h2 class="text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-200">{block.heading}</h2>
+                    <div class="text-sm leading-relaxed text-slate-700 space-y-4">
+                      {block.body.split("\n\n").map((para) => (
+                        <p set:html={para.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")} />
+                      ))}
+                    </div>
+                  </div>
+                ))}
+                {ctaUrl && (
+                  <a
+                    href={ctaUrl}
+                    target="_blank"
+                    rel="nofollow noopener noreferrer sponsored"
+                    class="mt-6 w-full inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-6 py-3.5 text-sm transition-colors shadow-md shadow-emerald-500/20"
+                  >
+                    Visit {firm.name}
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                    </svg>
+                  </a>
+                )}
+              </>
+            )}
+          </section>
+        )}
+
+        <!-- FAQ (collapsible with smooth animation — only for verified reviews) -->
+        {isVerified && review.faq && review.faq.length > 0 && (
+          <section class="mb-8 border-t border-slate-200 pt-8" id="faq-section">
+            <h2 class="text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-200">Frequently Asked Questions</h2>
+            <div class="space-y-3">
+              {review.faq.map((item) => (
+                <div class="faq-item rounded-xl border border-slate-200 bg-white overflow-hidden">
+                  <button
+                    type="button"
+                    class="faq-trigger flex w-full items-center justify-between gap-3 px-5 py-4 cursor-pointer select-none hover:bg-slate-50 transition-colors text-left"
+                    aria-expanded="false"
+                  >
+                    <span class="font-semibold text-slate-900 text-sm">{item.q}</span>
+                    <svg class="faq-chevron h-4 w-4 text-slate-400 flex-shrink-0 transition-transform duration-300 ease-in-out" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                  </button>
+                  <div class="faq-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out">
+                    <div class="overflow-hidden">
+                      <div class="px-5 pb-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                        {item.a}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <!-- Data sources -->
+        {firm.dataSources.length > 0 && (
+          <section class="border-t border-slate-200 pt-6 mb-8">
+            <p class="text-xs font-medium text-slate-500 mb-2">Data Sources</p>
+            <ul class="space-y-1">
+              {firm.dataSources.map((src) => (
+                <li class="text-xs text-slate-400 break-all">{src}</li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        <!-- Timestamps -->
+        <p class="text-xs text-slate-400 mb-4">
+          Last reviewed {review.lastReviewedAt} · Data verified {firm.lastVerifiedAt}
+        </p>
+
+      </div>
+      <!-- END LEFT COLUMN -->
+
+      <!-- RIGHT SIDEBAR (desktop only — mobile version is inlined above) -->
+      <aside class="hidden lg:block">
+        <div class="sticky top-6 max-h-[calc(100vh-3rem)] overflow-y-auto space-y-4 pb-4 scrollbar-thin">
+
+          <!-- Score card -->
+          <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm text-center">
+            {review.overallScore !== undefined && (
+              <div class="mb-3">
+                <div class={`mx-auto w-20 h-20 rounded-2xl ${overallBg} flex flex-col items-center justify-center shadow-lg`}>
+                  <span class="text-3xl font-black text-white leading-none">{review.overallScore}</span>
+                  <span class="text-[10px] font-bold text-white/70 uppercase tracking-wider">/100</span>
+                </div>
+                <p class="text-[11px] font-semibold text-slate-400 uppercase tracking-wide mt-2">BPF Score</p>
+              </div>
+            )}
+
+            {/* Trustpilot */}
+            {firm.trust.trustpilotRating !== null && (
+              <div class="border-t border-slate-100 pt-3 mb-3">
+                <div class="flex items-center justify-center gap-1.5">
+                  <span class="text-lg font-bold text-slate-900">{firm.trust.trustpilotRating}</span>
+                  <span class="text-amber-500 text-lg">★</span>
+                </div>
+                <p class="text-[11px] text-slate-500 flex items-center justify-center gap-1">
+                  <img src="/images/social/free-trustpilot-icon-svg-download-png-8715838.webp" alt="Trustpilot" class="w-3.5 h-3.5" loading="lazy" />
+                  Trustpilot
+                  {firm.trust.trustpilotCount && ` · ${firm.trust.trustpilotCount.toLocaleString()} reviews`}
+                </p>
+              </div>
+            )}
+
+            {/* Lowest fee */}
+            {lowestFee && (
+              <div class="border-t border-slate-100 pt-3 mb-3">
+                <p class="text-[11px] text-slate-500 uppercase tracking-wide font-medium">From</p>
+                <p class="text-2xl font-black text-slate-900">${lowestFee.fee}</p>
+                <p class="text-[11px] text-slate-400">${lowestFee.accountSize.toLocaleString()} account</p>
+              </div>
+            )}
+
+            {/* CTA */}
+            {ctaUrl && (
+              <a
+                href={ctaUrl}
+                target="_blank"
+                rel="nofollow noopener sponsored"
+                class="mt-2 w-full inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-4 py-3 text-sm transition-colors shadow-md shadow-emerald-500/20"
+              >
+                Visit {firm.name}
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                </svg>
+              </a>
+            )}
+          </div>
+
+          <!-- Coupon code -->
+          {discountCode && (
+            <div class="rounded-xl border-2 border-dashed border-emerald-300 bg-emerald-50 p-4 text-center">
+              <p class="text-xs font-bold uppercase tracking-widest text-emerald-600 mb-2">Exclusive Discount</p>
+              <p class="text-sm text-emerald-800 mb-3">
+                Save <span class="font-bold">{discountPercent}%</span> on all fees
+              </p>
+              <div class="flex items-center justify-center gap-2">
+                <code class="rounded-lg bg-white border border-emerald-300 px-3 py-2 text-base font-black text-emerald-700 tracking-widest">
+                  {discountCode}
+                </code>
+                <button
+                  id="copy-code-btn"
+                  data-code={discountCode}
+                  class="rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-bold px-3 py-2 transition-colors cursor-pointer"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          )}
+
+          <!-- Video thumbnail in sidebar -->
+          {youtubeId && (
+            <a
+              href={`#video-section`}
+              class="block rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-shadow group"
+            >
+              <div class="relative">
+                <img
+                  src={`https://img.youtube.com/vi/${youtubeId}/mqdefault.jpg`}
+                  alt={`${firm.name} video review`}
+                  class="w-full aspect-video object-cover"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">
+                  <div class="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center shadow-lg">
+                    <svg class="h-5 w-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <p class="text-xs text-slate-500 font-medium px-3 py-2 bg-white">Watch video review</p>
+            </a>
+          )}
+
+          <!-- Quick links -->
+          <div class="rounded-xl border border-slate-200 bg-white p-4">
+            <p class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-3">Quick Links</p>
+            <nav class="space-y-2 text-sm">
+              {scoredCategories.length > 0 && (
+                <a href="#score-section" class="block text-slate-600 hover:text-teal-600 transition-colors">Our Rating</a>
+              )}
+              {isVerified && orderedSections.map(({ key, heading }) => (
+                <a href={`#section-${key}`} class="block text-slate-600 hover:text-teal-600 transition-colors">{heading}</a>
+              ))}
+              {review.verdictBlocks && review.verdictBlocks.length > 0 && (
+                <a href="#verdict-section" class="block text-slate-600 hover:text-teal-600 transition-colors">Final Verdict</a>
+              )}
+              {isVerified && review.faq && review.faq.length > 0 && (
+                <a href="#faq-section" class="block text-slate-600 hover:text-teal-600 transition-colors">FAQ</a>
+              )}
+              {firm.links?.website && (
+                <a href={firm.links.website} target="_blank" rel="nofollow noopener noreferrer sponsored" class="block text-slate-600 hover:text-teal-600 transition-colors">
+                  Official Website →
+                </a>
+              )}
+            </nav>
+          </div>
+
+        </div>
+      </aside>
+      <!-- END RIGHT SIDEBAR -->
+
+    </div>
+    <!-- END TWO-COLUMN GRID -->
+
+  </div>
+
+  <style>
+    .scrollbar-thin {
+      scrollbar-width: thin;
+      scrollbar-color: #cbd5e1 transparent;
+    }
+    .scrollbar-thin::-webkit-scrollbar {
+      width: 4px;
+    }
+    .scrollbar-thin::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .scrollbar-thin::-webkit-scrollbar-thumb {
+      background-color: #cbd5e1;
+      border-radius: 9999px;
+    }
+    .score-row {
+      opacity: 0;
+      transform: translateX(-6px);
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+    .score-row.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .score-bar {
+      width: 0;
+      transition: width 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .score-row.visible .score-bar {
+      width: var(--w);
+    }
+  </style>
+
+  <script>
+    // Copy coupon code (desktop)
+    document.querySelectorAll<HTMLButtonElement>("[id^='copy-code-btn']").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const code = btn.dataset.code ?? "";
+        navigator.clipboard.writeText(code).then(() => {
+          const original = btn.textContent;
+          btn.textContent = "Copied!";
+          setTimeout(() => { btn.textContent = original; }, 1800);
+        });
+      });
+    });
+
+    // Score bar animation
+    const section = document.getElementById("score-section");
+    if (section) {
+      const rows = Array.from(section.querySelectorAll<HTMLElement>(".score-row"));
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              rows.forEach((row, i) => {
+                setTimeout(() => row.classList.add("visible"), i * 90);
+              });
+              observer.disconnect();
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+      observer.observe(section);
+    }
+
+    // FAQ accordion
+    document.querySelectorAll<HTMLButtonElement>(".faq-trigger").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const item = btn.closest(".faq-item")!;
+        const panel = item.querySelector<HTMLElement>(".faq-panel")!;
+        const chevron = btn.querySelector<SVGElement>(".faq-chevron")!;
+        const isOpen = btn.getAttribute("aria-expanded") === "true";
+
+        btn.setAttribute("aria-expanded", String(!isOpen));
+        chevron.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
+        panel.style.gridTemplateRows = isOpen ? "0fr" : "1fr";
+      });
+    });
+  </script>
+</Base>

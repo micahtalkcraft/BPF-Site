@@ -1,0 +1,90 @@
+{
+  "id": "d0000014-0000-0000-0000-000000000014",
+  "slug": "maven-trading",
+  "name": "Maven Trading",
+  "status": "active",
+  "foundedYear": 2022,
+  "hqCountry": "CA",
+  "evaluation": {
+    "types": ["1-step", "2-step", "instant", "other"],
+    "profitTargets": { "phase1": 8, "phase2": 5 },
+    "dailyDrawdown": 4,
+    "maxDrawdown": 8,
+    "minTradingDays": 0,
+    "scalingPlan": true
+  },
+  "pricing": {
+    "challengeFees": [
+      { "accountSize": 2000, "fee": 15, "model": "one-step" },
+      { "accountSize": 5000, "fee": 19, "model": "one-step" },
+      { "accountSize": 10000, "fee": 38, "model": "one-step" },
+      { "accountSize": 20000, "fee": 76, "model": "one-step" },
+      { "accountSize": 50000, "fee": 190, "model": "one-step" },
+      { "accountSize": 100000, "fee": 379, "model": "one-step" },
+      { "accountSize": 2000, "fee": 15, "model": "two-step" },
+      { "accountSize": 5000, "fee": 19, "model": "two-step" },
+      { "accountSize": 10000, "fee": 38, "model": "two-step" },
+      { "accountSize": 20000, "fee": 76, "model": "two-step" },
+      { "accountSize": 50000, "fee": 190, "model": "two-step" },
+      { "accountSize": 100000, "fee": 379, "model": "two-step" },
+      { "accountSize": 2000, "fee": 13, "model": "three-step" },
+      { "accountSize": 5000, "fee": 17, "model": "three-step" },
+      { "accountSize": 10000, "fee": 38, "model": "three-step" },
+      { "accountSize": 20000, "fee": 76, "model": "three-step" },
+      { "accountSize": 50000, "fee": 190, "model": "three-step" },
+      { "accountSize": 100000, "fee": 299, "model": "three-step" },
+      { "accountSize": 2000, "fee": 15, "model": "instant" },
+      { "accountSize": 5000, "fee": 19, "model": "instant" },
+      { "accountSize": 10000, "fee": 37, "model": "instant" },
+      { "accountSize": 20000, "fee": 68, "model": "instant" },
+      { "accountSize": 50000, "fee": 170, "model": "instant" },
+      { "accountSize": 100000, "fee": 380, "model": "instant" },
+      { "accountSize": 2000, "fee": 13, "model": "mini" },
+      { "accountSize": 5000, "fee": 17, "model": "mini" },
+      { "accountSize": 10000, "fee": 38, "model": "mini" },
+      { "accountSize": 20000, "fee": 76, "model": "mini" },
+      { "accountSize": 50000, "fee": 190, "model": "mini" },
+      { "accountSize": 100000, "fee": 299, "model": "mini" }
+    ],
+    "resetFee": null,
+    "refundPolicy": "Fee refunded on third withdrawal"
+  },
+  "payouts": {
+    "splitMax": 100,
+    "schedule": "Every 10 business days",
+    "processingTime": "10 business days",
+    "firstPayoutDays": 10,
+    "methods": ["credit card", "bank transfer", "crypto"]
+  },
+  "rules": {
+    "newsTrading": false,
+    "weekendHolding": false,
+    "copyTrading": false,
+    "expertAdvisors": false,
+    "consistencyRule": "20% consistency score (Instant/Mini); no single trade or day >50% of total profit if profits exceed $5,000",
+    "notes": "HFT, toxic order flow, long/short arbitrage, reverse arbitrage, group hedging, and gamification prohibited. IP address changes flagged. Gambling-style trading (50%+ trades under 1 min hold) prohibited. Martingale now allowed as of January 2026."
+  },
+  "markets": {
+    "platforms": ["cTrader", "Match-Trader", "MT5"],
+    "instruments": "Forex, Indices, Commodities, ETFs, Cryptocurrencies"
+  },
+  "trust": {
+    "trustpilotRating": 4.5,
+    "trustpilotCount": 5000,
+    "communitySize": "77,000+ Discord",
+    "notableFlags": []
+  },
+  "links": { "website": "https://maventrading.com" },
+  "media": { "logo": "/images/logos/maven.png" },
+  "availability": { "restrictedCountries": [] },
+  "support": {
+    "liveChat": true,
+    "discord": true
+  },
+  "custom": {
+    "tags": ["Low Fees", "5 Challenge Types", "MT5", "cTrader"]
+  },
+  "lastVerifiedAt": "2026-02-24",
+  "lastUpdatedAt": "2026-02-24",
+  "dataSources": ["https://maventrading.com"]
+}

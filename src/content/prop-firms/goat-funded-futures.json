@@ -1,0 +1,73 @@
+{
+  "id": "d0000019-0000-0000-0000-000000000019",
+  "slug": "goat-funded-futures",
+  "name": "Goat Funded Futures",
+  "status": "active",
+  "foundedYear": 2023,
+  "hqCountry": "AE",
+  "evaluation": {
+    "types": ["other"],
+    "profitTargets": { "phase1": 9 },
+    "dailyDrawdown": 3,
+    "maxDrawdown": 5,
+    "minTradingDays": 0,
+    "scalingPlan": true
+  },
+  "pricing": {
+    "challengeFees": [
+      { "accountSize": 50000, "fee": 99, "model": "other", "label": "EOD $50K (monthly)" },
+      { "accountSize": 100000, "fee": 149, "model": "other", "label": "EOD $100K (monthly)" },
+      { "accountSize": 150000, "fee": 249, "model": "other", "label": "EOD $150K (monthly)" },
+      { "accountSize": 30000, "fee": 199, "model": "other", "label": "Static $30K (monthly)" },
+      { "accountSize": 75000, "fee": 349, "model": "other", "label": "Static $75K (monthly)" },
+      { "accountSize": 25000, "fee": 349, "model": "instant", "label": "Instant $25K" },
+      { "accountSize": 50000, "fee": 509, "model": "instant", "label": "Instant $50K" },
+      { "accountSize": 75000, "fee": 699, "model": "instant", "label": "Instant $75K" }
+    ],
+    "resetFee": 99,
+    "refundPolicy": "No refunds. EOD resets $99, Static resets $349. Instant Funding has no reset option."
+  },
+  "payouts": {
+    "splitMax": 100,
+    "schedule": "14 days (EOD/Static), 10 days (Instant)",
+    "processingTime": "2–3 business days",
+    "firstPayoutDays": 10,
+    "methods": ["Crypto", "Credit Card", "PayPal", "Paytiko", "Riseworks"]
+  },
+  "rules": {
+    "newsTrading": true,
+    "weekendHolding": false,
+    "copyTrading": false,
+    "expertAdvisors": false,
+    "consistencyRule": "EOD/Static: 50% eval, 30% funded. Instant: 20% of total profit per day.",
+    "notes": "Three models: EOD (trailing EOD drawdown, monthly subscription, scaling during eval), Static (fixed drawdown, monthly subscription, no daily loss limit), Instant (trailing real-time drawdown, one-time fee, 3% daily loss, 10 min trading days for first payout). Copy trading only between own accounts — no signal services. EAs/algorithmic trading not confirmed. No resets for Instant. Fixed payout windows: 5th–8th and 20th–23rd of each month. Min withdrawal $500 (EOD/Static), $250 (Instant). Max withdrawal $3K–$5K per cycle depending on account size. 100% of first $10K profit kept, then 90% split scaling to 95% at GOAT Trader level. KYC required before first withdrawal."
+  },
+  "markets": {
+    "platforms": ["Project X", "NinjaTrader", "Quantower", "Volumetrica", "Volsys", "ATAS", "TradingView", "VolBook", "Tradovate"],
+    "instruments": "Futures (55 CME instruments: Equity Indices, Metals, Energy, Currency Futures, Agricultural & Soft Commodities)"
+  },
+  "trust": {
+    "trustpilotRating": 3.8,
+    "trustpilotCount": 120,
+    "communitySize": "Active Discord community",
+    "notableFlags": ["Futures arm of Goat Funded Trader", "100% first $10K profit"]
+  },
+  "links": { "website": "https://goatfundedtrader.com/futures" },
+  "media": { "logo": "/images/logos/goat-funded-futures-logo.png" },
+  "availability": { "restrictedCountries": [] },
+  "support": {
+    "hours": "24/7",
+    "liveChat": true,
+    "email": true,
+    "discord": true
+  },
+  "custom": {
+    "tags": ["Futures", "100% First $10K", "Scaling Plan", "90-100% Profit Split"],
+    "discountCode": null,
+    "discountPercent": null
+  },
+  "notes": null,
+  "lastVerifiedAt": "2026-02-24",
+  "lastUpdatedAt": "2026-02-24",
+  "dataSources": ["https://goatfundedtrader.com/futures"]
+}

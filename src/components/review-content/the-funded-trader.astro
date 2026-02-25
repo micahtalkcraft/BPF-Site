@@ -1,0 +1,992 @@
+---
+// Static editorial content for The Funded Trader
+// Supports multiple sections via the `section` prop
+interface Props {
+  section: string;
+  fallbackBody?: string;
+}
+const { section, fallbackBody } = Astro.props;
+---
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* CHALLENGES SECTION                                                  */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "challenges" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    You can select from eight different evaluation processes with The Funded Trader, and we found this overkill when testing the firm.
+  </p>
+  <p class="mb-4">
+    While they offer one, two, and three step options, we have noticed they change their challenge options all the time making it confusing for users as pricing and rules aren't consistent.
+  </p>
+
+  <!-- ─── Challenge Summary Cards ────────────────────────────────── -->
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">1 Step – Knight Challenge</p>
+      <p>Account sizes from $5,000 to $200,000 with fees from $42 to $549. 3% daily / 8% max drawdown, 10% profit target, payouts up to 99%.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">1 Step – Knight Pro Challenge</p>
+      <p>Account sizes from $5,000 to $200,000 with fees from $42 to $549. 5% daily / 8% max drawdown, 10% profit target, payouts up to 99%.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">1 Step – Classic Challenge</p>
+      <p>Account sizes from $25,000 to $200,000 with fees from $139 to $989. 3% daily / 6% max drawdown, 10% profit target, fixed 80% payout.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">2 Step – Royal Challenge</p>
+      <p>Account sizes from $5,000 to $200,000 with fees from $79 to $1,100. 5% daily / 10% max drawdown, targets 8% then 5%, payouts up to 99%.</p>
+      <p class="text-xs text-emerald-600 font-semibold mt-1">Optional 14-day withdrawal add-on available</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">2 Step – Royal Pro Challenge</p>
+      <p>Account sizes from $25,000 to $200,000 with fees from $55 to $579. 5% daily / 10% max drawdown, targets 8% then 5%, payouts up to 99%.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">2 Step – Classic Challenge</p>
+      <p>Account sizes from $25,000 to $200,000 with fees from $129 to $949. 4% daily / 8% max drawdown, targets 8% then 5%, fixed 80% payout.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">3 Step – Dragon Challenge</p>
+      <p>Account sizes from $5,000 to $100,000 with fees from $49 to $299. 5% daily / 10% max drawdown, targets 8%, 5%, 5%, payouts up to 99%.</p>
+    </div>
+  </div>
+
+  <!-- ─── Comparison Table ───────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Comparison</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-10">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Challenge</th>
+          <th class="px-4 py-3 text-center">Account Sizes</th>
+          <th class="px-4 py-3 text-center">Fees</th>
+          <th class="px-4 py-3 text-center">Add-Ons</th>
+          <th class="px-4 py-3 text-center">Drawdown Limits</th>
+          <th class="px-4 py-3 text-center">Profit Target</th>
+          <th class="px-4 py-3 text-center">Profit Payout</th>
+          <th class="px-4 py-3 text-center">First Payout</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">1 Step – Knight</td>
+          <td class="px-4 py-3 text-center text-slate-900">5K – 200K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$42 – $549</td>
+          <td class="px-4 py-3 text-center text-slate-400">None</td>
+          <td class="px-4 py-3 text-center text-slate-900">3% Daily / 8% Max</td>
+          <td class="px-4 py-3 text-center text-slate-900">10%</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">Up to 99%</td>
+          <td class="px-4 py-3 text-center text-slate-900">Anytime</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">1 Step – Knight Pro</td>
+          <td class="px-4 py-3 text-center text-slate-900">5K – 200K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$42 – $549</td>
+          <td class="px-4 py-3 text-center text-slate-400">None</td>
+          <td class="px-4 py-3 text-center text-slate-900">5% Daily / 8% Max</td>
+          <td class="px-4 py-3 text-center text-slate-900">10%</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">Up to 99%</td>
+          <td class="px-4 py-3 text-center text-slate-900">Anytime</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">1 Step – Classic</td>
+          <td class="px-4 py-3 text-center text-slate-900">25K – 200K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$139 – $989</td>
+          <td class="px-4 py-3 text-center text-slate-400">None</td>
+          <td class="px-4 py-3 text-center text-slate-900">3% Daily / 6% Max</td>
+          <td class="px-4 py-3 text-center text-slate-900">10%</td>
+          <td class="px-4 py-3 text-center text-slate-900">80%</td>
+          <td class="px-4 py-3 text-center text-slate-900">7 Days</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">2 Step – Royal</td>
+          <td class="px-4 py-3 text-center text-slate-900">5K – 200K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$79 – $1,100</td>
+          <td class="px-4 py-3 text-center text-slate-900">14-Day Withdrawal</td>
+          <td class="px-4 py-3 text-center text-slate-900">5% Daily / 10% Max</td>
+          <td class="px-4 py-3 text-center text-slate-900">8%, then 5%</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">Up to 99%</td>
+          <td class="px-4 py-3 text-center text-slate-900">30 Days</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">2 Step – Royal Pro</td>
+          <td class="px-4 py-3 text-center text-slate-900">25K – 200K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$55 – $579</td>
+          <td class="px-4 py-3 text-center text-slate-400">None</td>
+          <td class="px-4 py-3 text-center text-slate-900">5% Daily / 10% Max</td>
+          <td class="px-4 py-3 text-center text-slate-900">8%, then 5%</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">Up to 99%</td>
+          <td class="px-4 py-3 text-center text-slate-900">2 Days</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">2 Step – Classic</td>
+          <td class="px-4 py-3 text-center text-slate-900">25K – 200K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$129 – $949</td>
+          <td class="px-4 py-3 text-center text-slate-400">None</td>
+          <td class="px-4 py-3 text-center text-slate-900">4% Daily / 8% Max</td>
+          <td class="px-4 py-3 text-center text-slate-900">8%, then 5%</td>
+          <td class="px-4 py-3 text-center text-slate-900">80%</td>
+          <td class="px-4 py-3 text-center text-slate-900">14 Days</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">3 Step – Dragon</td>
+          <td class="px-4 py-3 text-center text-slate-900">5K – 100K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$49 – $299</td>
+          <td class="px-4 py-3 text-center text-slate-400">None</td>
+          <td class="px-4 py-3 text-center text-slate-900">5% Daily / 10% Max</td>
+          <td class="px-4 py-3 text-center text-slate-900">8%, 5%, 5%</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">Up to 99%</td>
+          <td class="px-4 py-3 text-center text-slate-900">7 Days</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- ONE-STEP CHALLENGES                                             -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-emerald-500 text-white text-xs font-black flex items-center justify-center">1</span>
+      One-Step Challenges
+    </h3>
+
+    <p class="mb-3">
+      There are three one-step challenge models: Knight, Knight Pro, and Classic. Knight and Knight Pro accounts seem similar on the surface, but they differ a lot when it comes to consistency and drawdown rules, minimum trading days, and profit payouts.
+    </p>
+
+    <!-- Knight -->
+    <div class="rounded-xl border border-slate-200 p-5 mb-4">
+      <h4 class="font-bold text-slate-900 mb-2">Knight Challenge</h4>
+      <p class="mb-3">
+        The Knight Challenge is more forgiving because daily loss violations don't kill the account right away. Instead, you get a few chances before it's closed, but the trade-off is that it demands consistency. You need to show profitable days spread out over time, not just hit the profit target in one go. Payouts are available anytime, but early withdrawals come with limits.
+      </p>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-3">
+        <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+          <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Drawdown</p>
+          <p class="text-sm font-bold text-slate-800">3%</p>
+        </div>
+        <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+          <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Drawdown</p>
+          <p class="text-sm font-bold text-slate-800">8%</p>
+        </div>
+        <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+          <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
+          <p class="text-sm font-bold text-slate-800">10%</p>
+        </div>
+        <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+          <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Payout</p>
+          <p class="text-sm font-bold text-emerald-600">Up to 99%</p>
+        </div>
+      </div>
+      <div class="rounded-lg bg-amber-50 border border-amber-200 p-3">
+        <p class="text-xs text-amber-800"><strong>Note:</strong> Requires consistency — profitable days must be spread over time, not hit in a single session.</p>
+      </div>
+    </div>
+
+    <!-- Knight Pro -->
+    <div class="rounded-xl border border-slate-200 p-5 mb-4">
+      <h4 class="font-bold text-slate-900 mb-2">Knight Pro Challenge</h4>
+      <p class="mb-3">
+        The Knight Pro is the most flexible. It doesn't force minimum trading days, needs fewer consistent winning days, and gives access to payouts without restrictions once you're profitable. The risk rules trail with your performance, which makes it tighter in the beginning but easier to manage long term once you build some cushion.
+      </p>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+        <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+          <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Drawdown</p>
+          <p class="text-sm font-bold text-slate-800">5%</p>
+        </div>
+        <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+          <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Drawdown</p>
+          <p class="text-sm font-bold text-slate-800">8%</p>
+        </div>
+        <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+          <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
+          <p class="text-sm font-bold text-slate-800">10%</p>
+        </div>
+        <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+          <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Payout</p>
+          <p class="text-sm font-bold text-emerald-600">Up to 99%</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Classic 1-Step -->
+    <div class="rounded-xl border border-slate-200 p-5 mb-4">
+      <h4 class="font-bold text-slate-900 mb-2">Classic 1-Step Challenge</h4>
+      <p class="mb-3">
+        The Classic account is the most rigid of the one-step options. It has a hard daily loss limit, so if you cross it once, the account is gone. It also makes you wait before your first payout and keeps profit splits lower compared to the others. On the other hand, it doesn't ask for any consistency rules, which makes it simpler to pass if you trade aggressively.
+      </p>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-3">
+        <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+          <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Drawdown</p>
+          <p class="text-sm font-bold text-slate-800">3%</p>
+        </div>
+        <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+          <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Drawdown</p>
+          <p class="text-sm font-bold text-slate-800">6%</p>
+        </div>
+        <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+          <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
+          <p class="text-sm font-bold text-slate-800">10%</p>
+        </div>
+        <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+          <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Payout</p>
+          <p class="text-sm font-bold text-slate-800">80% (fixed)</p>
+        </div>
+      </div>
+      <div class="rounded-lg bg-red-50 border border-red-200 p-3">
+        <p class="text-xs text-red-800"><strong>Warning:</strong> Hard daily loss limit — one breach and the account is closed. Profit split stays fixed at 80% and does not scale.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- TWO-STEP CHALLENGES                                             -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-emerald-500 text-white text-xs font-black flex items-center justify-center">2</span>
+      Two-Step Challenges
+    </h3>
+
+    <p class="mb-3">
+      The Funded Trader's two-step challenges are set up the same with three options: a Royal, Royal Pro, and Classic account.
+    </p>
+
+    <!-- Royal -->
+    <div class="rounded-xl border border-slate-200 p-5 mb-4">
+      <h4 class="font-bold text-slate-900 mb-2">Royal Challenge</h4>
+      <p class="mb-3">
+        The Royal Challenge is the most controlled as you're locked into hard loss limits, news trading isn't available, and payouts take longer unless you buy the add-on for 14-day profit payouts. It's best for methodical trading without shortcuts.
+      </p>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-3">
+        <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+          <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Drawdown</p>
+          <p class="text-sm font-bold text-slate-800">5%</p>
+        </div>
+        <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+          <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Drawdown</p>
+          <p class="text-sm font-bold text-slate-800">10%</p>
+        </div>
+        <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+          <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Targets</p>
+          <p class="text-sm font-bold text-slate-800">8%, then 5%</p>
+        </div>
+        <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+          <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">First Payout</p>
+          <p class="text-sm font-bold text-slate-800">30 Days</p>
+        </div>
+      </div>
+      <div class="rounded-lg bg-red-50 border border-red-200 p-3">
+        <p class="text-xs text-red-800"><strong>Restriction:</strong> News trading is not available on the Royal Challenge.</p>
+      </div>
+    </div>
+
+    <!-- Royal Pro -->
+    <div class="rounded-xl border border-slate-200 p-5 mb-4">
+      <h4 class="font-bold text-slate-900 mb-2">Royal Pro Challenge</h4>
+      <p class="mb-3">
+        The Royal Pro Challenge is a slightly more relaxed option as loss limits are softer with a few warnings allowed, news trading is available, and payouts are faster with a first payout in just 2 days.
+      </p>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+        <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+          <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Drawdown</p>
+          <p class="text-sm font-bold text-slate-800">5%</p>
+        </div>
+        <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+          <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Drawdown</p>
+          <p class="text-sm font-bold text-slate-800">10%</p>
+        </div>
+        <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+          <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Targets</p>
+          <p class="text-sm font-bold text-slate-800">8%, then 5%</p>
+        </div>
+        <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+          <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">First Payout</p>
+          <p class="text-sm font-bold text-emerald-600">2 Days</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Classic 2-Step -->
+    <div class="rounded-xl border border-slate-200 p-5 mb-4">
+      <h4 class="font-bold text-slate-900 mb-2">Classic 2-Step Challenge</h4>
+      <p class="mb-3">
+        The Classic two-step comes with strict rules on daily losses, but there's no consistency requirement and you can trade news or run automated strategies.
+      </p>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-3">
+        <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+          <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Drawdown</p>
+          <p class="text-sm font-bold text-slate-800">4%</p>
+        </div>
+        <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+          <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Drawdown</p>
+          <p class="text-sm font-bold text-slate-800">8%</p>
+        </div>
+        <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+          <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Targets</p>
+          <p class="text-sm font-bold text-slate-800">8%, then 5%</p>
+        </div>
+        <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+          <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Payout</p>
+          <p class="text-sm font-bold text-slate-800">80% (fixed)</p>
+        </div>
+      </div>
+      <div class="rounded-lg bg-red-50 border border-red-200 p-3">
+        <p class="text-xs text-red-800"><strong>Note:</strong> Profit split stays fixed at 80% and does not scale higher. First payout after 14 days.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- THREE-STEP CHALLENGE (DRAGON)                                   -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-emerald-500 text-white text-xs font-black flex items-center justify-center">3</span>
+      Three-Step Challenge – Dragon
+    </h3>
+
+    <p class="mb-3">
+      The only three-step option at The Funded Trader is the Dragon Challenge. You don't have minimum or maximum trading days, and you're allowed to use automated strategies, but news trading is restricted.
+    </p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Targets</p>
+        <p class="text-sm font-bold text-slate-800">8%, 5%, 5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Account Sizes</p>
+        <p class="text-sm font-bold text-slate-800">5K – 100K</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Fees</p>
+        <p class="text-sm font-bold text-slate-800">$49 – $299</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Payout</p>
+        <p class="text-sm font-bold text-emerald-600">Up to 99%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">First Payout</p>
+        <p class="text-sm font-bold text-slate-800">7 Days</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Trading Days</p>
+        <p class="text-sm font-bold text-slate-800">No Min/Max</p>
+      </div>
+    </div>
+
+    <div class="rounded-xl bg-emerald-50 border border-emerald-200 p-4 mb-4">
+      <p class="text-xs font-bold text-emerald-800 uppercase tracking-wide mb-1">Dragon Challenge Highlights</p>
+      <p class="text-sm text-emerald-700">No minimum or maximum trading days. Automated strategies (EAs) are allowed. News trading is restricted. Crypto leverage is 2:1 during the challenge, dropping to 1:1 when funded.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SCALING PLANS                                                   -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3">Scaling Plans</h3>
+    <p class="mb-3">
+      One of the biggest perks of The Funded Trader is the opportunity to scale your funded account to <strong>$5 million</strong>, one of the best scaling plans out. Your challenge type will determine the max you can scale to, but you can grow your account size by <strong>25% every three months</strong> if you meet the requirements.
+    </p>
+    <p class="mb-4">
+      There are limits, with the max account size for Royal, Classic, Royal Pro, and Dragon accounts being <strong>$600,000</strong>. Knight and Knight Pro accounts allow for much larger growth, with the potential to scale up to <strong>$2.5 million funded</strong> and <strong>$5 million in total</strong> across challenge and funded accounts.
+    </p>
+
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-4">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Challenge Type</th>
+            <th class="px-4 py-3 text-right">Max Scaling</th>
+            <th class="px-4 py-3 text-right">Scaling Rate</th>
+            <th class="px-4 py-3 text-right">Requirement</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">Knight / Knight Pro</td>
+            <td class="px-4 py-3 text-right font-semibold text-emerald-600">$5,000,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">25% every 3 months</td>
+            <td class="px-4 py-3 text-right text-slate-700">6% profit maintained</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">Royal / Royal Pro / Classic / Dragon</td>
+            <td class="px-4 py-3 text-right text-slate-900">$600,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">25% every 3 months</td>
+            <td class="px-4 py-3 text-right text-slate-700">6% profit maintained</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- VERDICT ON CHALLENGES                                           -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on TFT Challenges</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      The Funded Trader gives you one of the widest sets of challenge options in the industry, but the sheer number of options can feel confusing. Rules and pricing aren't always consistent across challenges, and TFT has a tendency to change them frequently. The scaling plan up to $5 million is a genuine standout, particularly for Knight and Knight Pro accounts.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SPREADS / COMMISSION FEES & PRICING SECTION                         */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "spreads" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-3">
+    We found it hard to pinpoint info on spreads as The Funded Trader <strong>doesn't publish any minimums or averages</strong>. This lack of transparency is a clear drawback compared to competitors who display their spread data upfront.
+  </p>
+  <p class="mb-4">
+    In terms of commission fees, forex trading is <strong>$4 per lot</strong>, but they don't exactly make it clear whether this is per side or round turn.
+  </p>
+
+  <!-- Commission Fee Table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Commission Fees by Asset Class</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-5 py-3 text-left">Asset Class</th>
+          <th class="px-5 py-3 text-right">Commission per Lot</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">Forex</td>
+          <td class="px-5 py-3 text-right text-slate-900">$4</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">Metals</td>
+          <td class="px-5 py-3 text-right text-slate-900">$1</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">Oil</td>
+          <td class="px-5 py-3 text-right font-semibold text-emerald-600">$0 (Commission Free)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">Indices</td>
+          <td class="px-5 py-3 text-right font-semibold text-emerald-600">$0 (Commission Free)</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">Crypto</td>
+          <td class="px-5 py-3 text-right font-semibold text-emerald-600">$0 (Commission Free)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="rounded-xl border border-red-200 bg-red-50 p-4 mb-6">
+    <p class="text-xs font-bold text-red-800 uppercase tracking-wide mb-1">Transparency Concern</p>
+    <p class="text-sm text-red-700">The Funded Trader does not publish minimum or average spread data. It's also unclear whether the $4 forex commission is per side or round turn. This makes it difficult to accurately assess total trading costs before committing.</p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Spreads & Commissions</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      The lack of published spread data is a significant drawback. Forex commissions at $4 per lot are higher than many competitors, and the ambiguity around per-side vs round-turn pricing doesn't help. Oil, indices, and crypto are commission-free, which is a plus, but without knowing the actual spreads, it's hard to calculate the real cost of trading with TFT.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* MARKETS / FINANCIAL MARKETS & LEVERAGE SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "markets" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-3">
+    You can trade just <strong>48 different markets</strong> with The Funded Trader. It's not the most extensive range of trading products but it covers the basics with major forex pairs, a few commodities, some indices, and major cryptos like Bitcoin, Litecoin, Solana, and Ethereum.
+  </p>
+
+  <!-- Instruments Overview -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Instruments</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Markets</th>
+          <th class="px-4 py-3 text-center">Forex</th>
+          <th class="px-4 py-3 text-center">Commodities</th>
+          <th class="px-4 py-3 text-center">Indices</th>
+          <th class="px-4 py-3 text-center">Cryptocurrency</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">No. of Instruments</td>
+          <td class="px-4 py-3 text-center font-bold text-slate-900">29</td>
+          <td class="px-4 py-3 text-center font-bold text-slate-900">5</td>
+          <td class="px-4 py-3 text-center font-bold text-slate-900">9</td>
+          <td class="px-4 py-3 text-center font-bold text-slate-900">5</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Leverage Table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Maximum Leverage by Challenge Type</h3>
+  <p class="mb-4">
+    Leverage varies a lot between account types, but is consistent across challenges and funded accounts, with the exception of the Dragon Challenge where crypto leverage drops when funded.
+  </p>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Challenge Type</th>
+          <th class="px-4 py-3 text-center">Forex</th>
+          <th class="px-4 py-3 text-center">Gold & Commodities</th>
+          <th class="px-4 py-3 text-center">Indices</th>
+          <th class="px-4 py-3 text-center">Crypto</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Royal Challenge</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">1:50</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:15</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:10</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:1</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Knight Challenge</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:30</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:10</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:5</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:1</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Dragon Challenge</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">1:100</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:30</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:20</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:2 / 1:1*</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Knight Pro Challenge</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:30</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:10</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:5</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:1</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Royal Pro Challenge</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:30</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:10</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:5</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:1</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Classic 1-Step</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:30</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:10</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:5</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:1</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Classic 2-Step</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">1:50</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:15</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:10</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:1</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="text-xs text-slate-500 italic mb-4">* Dragon Challenge crypto leverage is 1:2 during the challenge and drops to 1:1 when funded.</p>
+
+  <p class="mb-3">
+    Knight, Knight Pro, Royal Pro, and Classic 1-Step Challenges have max forex leverage of <strong>1:30</strong>, commodities 1:10, indices 1:5, and crypto 1:1.
+  </p>
+  <p class="mb-3">
+    Royal and Classic 2-Step challenges have higher max leverage with <strong>1:50 for forex</strong>, 1:15 for commodities, 1:10 for indices, and 1:1 for crypto.
+  </p>
+  <p class="mb-6">
+    The Dragon Challenge gives you much higher leverage of <strong>1:100 for forex</strong>, 1:30 for commodities, 1:20 for indices, and crypto 1:2 for challenges and 1:1 for funded accounts.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Markets & Leverage</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      With just 48 instruments, The Funded Trader's market range isn't the most extensive, but it covers the essentials across forex, commodities, indices, and crypto. Leverage varies significantly between challenge types, with the Dragon Challenge offering the highest at 1:100 for forex. The inconsistency in leverage across accounts adds to the overall complexity of choosing the right challenge.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PLATFORMS / TRADING PLATFORMS SECTION                                */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "platforms" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Three trading platforms are available with MetaTrader 5 (MT5), cTrader, and Match-Trader. If you live in the US you won't get access to MT5, but everyone outside will be able to choose between the three options.
+  </p>
+
+  <!-- Platform Cards -->
+  <div class="space-y-4 mb-8">
+
+    <!-- MT5 -->
+    <div class="rounded-xl border border-slate-200 overflow-hidden">
+      <div class="bg-slate-800 px-5 py-3">
+        <h4 class="font-bold text-white">MetaTrader 5 (MT5)</h4>
+      </div>
+      <div class="p-5">
+        <p class="mb-3">
+          MT5 is only available if you're outside the USA. It's the standard option most will already know, with a wide range of indicators and charting tools. If you want something reliable and straightforward, MT5 does the job without much of a learning curve.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2 py-1 text-xs font-semibold bg-slate-100 text-slate-700 rounded-full">Wide indicator range</span>
+          <span class="px-2 py-1 text-xs font-semibold bg-slate-100 text-slate-700 rounded-full">Charting tools</span>
+          <span class="px-2 py-1 text-xs font-semibold bg-slate-100 text-slate-700 rounded-full">Low learning curve</span>
+          <span class="px-2 py-1 text-xs font-semibold bg-red-100 text-red-700 rounded-full">Not available in USA</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- cTrader -->
+    <div class="rounded-xl border border-slate-200 overflow-hidden">
+      <div class="bg-slate-800 px-5 py-3">
+        <h4 class="font-bold text-white">cTrader</h4>
+      </div>
+      <div class="p-5">
+        <p class="mb-3">
+          cTrader is available via Voyage Markets for traders outside the US. It's a step up in terms of charting and order execution, with more flexibility for custom layouts and advanced analysis. If you like depth and a modern interface, cTrader is the stronger pick.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2 py-1 text-xs font-semibold bg-slate-100 text-slate-700 rounded-full">Advanced charting</span>
+          <span class="px-2 py-1 text-xs font-semibold bg-slate-100 text-slate-700 rounded-full">Custom layouts</span>
+          <span class="px-2 py-1 text-xs font-semibold bg-slate-100 text-slate-700 rounded-full">Modern interface</span>
+          <span class="px-2 py-1 text-xs font-semibold bg-red-100 text-red-700 rounded-full">Not available in USA</span>
+          <span class="px-2 py-1 text-xs font-semibold bg-amber-100 text-amber-700 rounded-full">$25 fee</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Match-Trader -->
+    <div class="rounded-xl border border-slate-200 overflow-hidden">
+      <div class="bg-slate-800 px-5 py-3">
+        <h4 class="font-bold text-white">Match-Trader</h4>
+      </div>
+      <div class="p-5">
+        <p class="mb-3">
+          Match-Trader is the simplest of the three. It's globally available and built for ease of use rather than complexity. You get the essentials with basic charting, common order types, and simple layouts, which works if you don't need heavy customisation.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2 py-1 text-xs font-semibold bg-slate-100 text-slate-700 rounded-full">Globally available</span>
+          <span class="px-2 py-1 text-xs font-semibold bg-slate-100 text-slate-700 rounded-full">Easy to use</span>
+          <span class="px-2 py-1 text-xs font-semibold bg-slate-100 text-slate-700 rounded-full">Basic charting</span>
+          <span class="px-2 py-1 text-xs font-semibold bg-emerald-100 text-emerald-700 rounded-full">Available worldwide</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- US Trader Note -->
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
+    <p class="text-xs font-bold text-amber-800 uppercase tracking-wide mb-1">US Traders</p>
+    <p class="text-sm text-amber-700">If you're based in the United States, your only option is Match-Trader. MT5 and cTrader are not available for US-based traders.</p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Trading Platforms</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Having three platform options is solid, though the $25 cTrader fee and US restrictions on MT5 reduce the flexibility. Match-Trader is the simplest and most accessible, while cTrader offers the most advanced features for experienced traders. MT5 sits in the middle as a reliable, familiar choice.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PAYOUTS / PAYMENTS & PROFIT PAYOUT SECTION                          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "payouts" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-3">
+    The Funded Trader accepts a wide mix of payment methods for challenge fees, including cards, Google Pay, e-wallets, and major cryptocurrencies. Payouts are mainly through Rise (Riseworks), with options for bank transfer, crypto, and local currency once you complete verification.
+  </p>
+
+  <!-- Payout Summary Grid -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Profit Split</p>
+      <p class="text-sm font-bold text-emerald-600">Up to 99%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Classic Split</p>
+      <p class="text-sm font-bold text-slate-800">80% (fixed)</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Processing Time</p>
+      <p class="text-sm font-bold text-slate-800">3–5 Business Days</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Primary Payout</p>
+      <p class="text-sm font-bold text-slate-800">Rise (Riseworks)</p>
+    </div>
+  </div>
+
+  <!-- Challenge Fee Payments -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Fee Payment Methods</h3>
+  <p class="mb-4">You can pay for challenges using:</p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Credit/Debit Cards</p>
+      <p class="text-slate-600">Visa, Mastercard, and other major providers.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Google Pay</p>
+      <p class="text-slate-600">Linked through your wallet for quicker checkout.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Cryptocurrency</p>
+      <p class="text-slate-600">Bitcoin, Ethereum, and Tether via ERC20 and Polygon networks.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">E-Wallets</p>
+      <p class="text-slate-600">Astropay, Skrill, and Neteller if you prefer alternatives.</p>
+    </div>
+  </div>
+
+  <!-- Profit Payouts -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Profit Payouts</h3>
+  <p class="mb-4">
+    Once funded, you request payouts directly from your Trade Hub dashboard. Payments are reviewed for rule compliance and processed within <strong>3 to 5 business days</strong>.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Rise (Riseworks)</p>
+      <p class="text-slate-600">Primary payout option supporting local bank transfers, currency conversions, and crypto withdrawals. KYC verification required.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Crypto</p>
+      <p class="text-slate-600">If Rise isn't supported in your region, withdraw in Bitcoin, Ethereum, or USDC via ERC-20 and Polygon.</p>
+    </div>
+  </div>
+
+  <!-- Payout Eligibility by Challenge -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">First Payout Eligibility by Challenge</h3>
+  <p class="mb-4">
+    Payout eligibility depends on your challenge type. Some accounts allow you to withdraw profits almost immediately, while others set waiting periods.
+  </p>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Challenge Type</th>
+          <th class="px-4 py-3 text-right">First Payout</th>
+          <th class="px-4 py-3 text-right">Subsequent Payouts</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Knight / Knight Pro</td>
+          <td class="px-4 py-3 text-right font-semibold text-emerald-600">Anytime</td>
+          <td class="px-4 py-3 text-right text-slate-700">7–14 day cycles</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Classic 1-Step</td>
+          <td class="px-4 py-3 text-right text-slate-900">7 Days</td>
+          <td class="px-4 py-3 text-right text-slate-700">7–14 day cycles</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Dragon</td>
+          <td class="px-4 py-3 text-right text-slate-900">7 Days</td>
+          <td class="px-4 py-3 text-right text-slate-700">7–14 day cycles</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Classic 2-Step</td>
+          <td class="px-4 py-3 text-right text-slate-900">14 Days</td>
+          <td class="px-4 py-3 text-right text-slate-700">7–14 day cycles</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Royal</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">30 Days</td>
+          <td class="px-4 py-3 text-right text-slate-700">14-day add-on available</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Royal Pro</td>
+          <td class="px-4 py-3 text-right font-semibold text-emerald-600">2 Days</td>
+          <td class="px-4 py-3 text-right text-slate-700">7–14 day cycles</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Payments & Payouts</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      The wide range of payment methods for challenge fees is a plus, and profit splits that reach 99% on most accounts are competitive. However, the Classic challenges remaining fixed at 80% and the 30-day wait for Royal payouts are notable limitations. Processing times of 3–5 business days are standard but not best-in-class.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SUPPORT / CUSTOMER SERVICE & EDUCATION SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "support" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    The Funded Trader's customer support and educational resources are fairly limited, especially compared to competitors that provide more robust service and training options. While their YouTube channel has a strong following, support availability and educational depth could be improved.
+  </p>
+
+  <!-- Customer Support -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Customer Support</h3>
+  <p class="mb-4">
+    The Funded Trader lacks 24/7 support, with live chat responses taking <strong>1–3 days</strong>, even mid-week, which may be a concern for users needing quicker assistance. They do not heavily promote customer service options, and minimal contact details are offered beyond email and a Discord community.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Live Chat</p>
+      <p class="text-slate-600">Available but response times are 1–3 days, not suitable for urgent queries.</p>
+    </div>
+    <div class="rounded-lg bg-red-50 border border-red-200 p-4">
+      <p class="font-bold text-red-900 mb-1">No 24/7 Support</p>
+      <p class="text-red-700">No round-the-clock availability. Contact is limited to email and Discord community.</p>
+    </div>
+  </div>
+
+  <!-- Educational Resources -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Educational Resources</h3>
+  <p class="mb-3">
+    Their YouTube channel is the primary educational resource, with over <strong>103,000 subscribers</strong> and a mix of webinars and trading advice videos.
+  </p>
+  <p class="mb-6">
+    While the channel covers various topics, The Funded Trader does not provide a structured educational portal or dedicated learning materials on its site outside of social media and podcasts.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">YouTube Channel</p>
+      <p class="text-slate-600">103,000+ subscribers with webinars, trading advice, and market analysis content.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">On-Site Education</p>
+      <p class="text-slate-500">No structured portal. Limited to social media, podcasts, and blog posts.</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Customer Service & Education</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      The Funded Trader has an active YouTube presence, but its limited support options and sparse educational resources make it less competitive in this area. Traders requiring hands-on support or extensive educational content might find the current offerings insufficient. The 1–3 day response times for live chat are a significant drawback.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* TRUST / TRUST & COMMUNITY SECTION                                   */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "trust" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-3">
+    The Funded Trader has a mixed reputation. Its Trustpilot score sits at <strong>3.0/5 stars</strong> from more than <strong>22,000 reviews</strong>, with recurring complaints about payout delays, account breaches, and sudden rule changes. Positive feedback highlights the Discord community and promotions, but the negatives tend to focus on consistency and communication.
+  </p>
+  <p class="mb-6">
+    Unlike prop trading firms tied to established brokers such as IC Funded or DNA Funded, TFT runs independently. For some that raises questions around credibility and stability, especially when combined with shifting policies.
+  </p>
+
+  <!-- Trustpilot -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trustpilot Reviews</h3>
+
+  <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 mb-6 flex items-center gap-4">
+    <div class="flex-shrink-0">
+      <p class="text-3xl font-black text-slate-900">3.0<span class="text-lg text-slate-400">/5</span></p>
+      <p class="text-xs text-slate-500 font-semibold">TrustScore</p>
+    </div>
+    <div>
+      <p class="text-sm text-slate-700">Based on <strong>22,000+ reviews</strong> on Trustpilot. Recurring complaints about payout delays, account breaches, and sudden rule changes. Positive reviews highlight the community and promotional offers.</p>
+    </div>
+  </div>
+
+  <!-- Community Stats -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Community</h3>
+  <p class="mb-3">
+    On the community side, the numbers are strong. The Discord server has more than <strong>110,000 members</strong> and posts payout proofs, announcements, and trader interaction. Their social media also has a lot of followers, but engagement often circles back to the same concerns — slow payouts and lack of direct support.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">110,000+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Discord Members</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">3.0/5</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Trustpilot Score</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">22,000+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Trustpilot Reviews</p>
+    </div>
+  </div>
+
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
+    <p class="text-xs font-bold text-amber-800 uppercase tracking-wide mb-1">Reputation Concerns</p>
+    <p class="text-sm text-amber-700">TFT runs independently without being backed by an established broker. Combined with frequent rule changes and a 3.0/5 Trustpilot score, this raises questions about long-term stability and reliability for some traders.</p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Trust & Community</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      The Funded Trader has a large and active community, particularly on Discord, but the mixed Trustpilot reviews and lack of broker-backing raise legitimate concerns. The firm's tendency to change rules frequently doesn't help build trust. While the community numbers are strong, the quality of the feedback suggests ongoing issues with payouts and transparency that prospective traders should weigh carefully.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* FALLBACK — sections not customised render the default text          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section !== "challenges" && section !== "spreads" && section !== "markets" && section !== "platforms" && section !== "payouts" && section !== "support" && section !== "trust" && fallbackBody && (
+  <div class="text-sm leading-relaxed text-slate-700 space-y-4">
+    {fallbackBody.split("\n\n").map((para) => (
+      <p set:html={para.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")} />
+    ))}
+  </div>
+)}

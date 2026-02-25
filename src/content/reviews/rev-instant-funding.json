@@ -1,0 +1,70 @@
+{
+  "id": "rev-instant-funding",
+  "propFirmId": "d0000013-0000-0000-0000-000000000013",
+  "summary": "With an overall score of 58/100, Instant Funding is an independent prop trading firm focused on instant funding accounts with no evaluation. While it offers seven account types, flexible scaling up to $1,280,000, and support for MT5, cTrader, and Match-Trader, significant concerns around pricing transparency, removed TrustPilot reviews due to guideline breaches, and trader complaints about payout disputes and rule enforcement lower its overall standing.\n\nHowever, there are positives. Platforms scored well at 8/10 with three solid options, and payouts earned 8/10 thanks to on-demand and short-cycle withdrawal options. Markets and leverage also scored 7/10, with broad CFD coverage and up to 1:100 leverage on forex pairs.",
+  "pros": [
+    "Multiple instant funding account options with no evaluation",
+    "No time limits on most challenge accounts",
+    "Up to 90-95% profit split depending on account type",
+    "Scaling up to $1,280,000 across all models",
+    "Three platform choices: MT5, cTrader, Match-Trader",
+    "Customizable add-ons for rules and profit splits"
+  ],
+  "cons": [
+    "High-frequency trading strictly prohibited",
+    "Non-refundable upfront fees",
+    "Limited transparency on liquidity and spreads",
+    "Complex rules that differ across account types",
+    "TrustPilot reviews removed due to guideline breach",
+    "Reports of denied payouts and account terminations"
+  ],
+  "bestFor": "Traders who want instant access to funded accounts without evaluation, with multiple account types and customizable add-ons for trading flexibility",
+  "notIdealFor": "Traders looking for transparent pricing and spreads, high-frequency trading, or firms with strong trust and payout reliability track records",
+  "overallScore": 58,
+  "categoryScores": {
+    "challenges": 60,
+    "spreads": 30,
+    "markets": 70,
+    "payouts": 80,
+    "platforms": 80,
+    "trust": 30
+  },
+  "categorySections": {
+    "challenges": "custom",
+    "spreads": "custom",
+    "markets": "custom",
+    "platforms": "custom",
+    "payouts": "custom",
+    "support": "custom",
+    "trust": "custom"
+  },
+  "verdictBlocks": [
+    {
+      "heading": "Our Final Verdict On Instant Funding",
+      "body": "Instant Funding scored 58/100 based on a mixed performance across challenges, pricing transparency, platforms, markets, payouts, and trust. The score reflects a firm that offers flexible instant funding models and solid platform access, but loses significant points due to transparency gaps and rule enforcement concerns.\n\nOn the positive side, Instant Funding earned stronger marks for Platforms (8/10) and Payouts (8/10) thanks to support for MT5, cTrader, and Match-Trader, along with a range of on-demand and short-cycle withdrawal options. Markets and Leverage (7/10) also scored well, with broad CFD coverage and up to 1:100 leverage on forex pairs.\n\nHowever, the overall score is pulled down by Spreads and Fees (3/10) and Trust and Transparency (3/10). The firm does not publicly disclose live spread data, execution sources, liquidity providers, or whether pricing is broker-backed or fully simulated. In addition, the removal of TrustPilot reviews following guideline breaches and ongoing trader complaints about payout disputes and rule enforcement significantly impacted the trust score.\n\nChallenges (6/10) sit in the middle. Fees are competitive and the range of instant and evaluation-based models is broad, but strict consistency rules, add-on-dependent flexibility, and complex conditions reduce clarity for traders. Overall, Instant Funding operates within clearly written rules, but the lack of third-party verification and pricing transparency ultimately cap its score at the lower end of our rankings."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Does Instant Funding payout?",
+      "a": "Yes, Instant Funding does process payouts, but this is also one of the reasons the prop firm review score was lower overall. While payouts are advertised as being processed within 48 business hours via RISE or USDC crypto, a noticeable number of traders report delayed withdrawals, rejected payout requests, or account terminations tied to rule interpretation. These complaints, combined with removed TrustPilot reviews and limited public payout verification, raise concerns around consistency rather than the payout system itself."
+    },
+    {
+      "q": "How does Instant Funding work?",
+      "a": "Instant Funding works by giving you access to simulated trading capital after paying a one-time fee, either through instant funding accounts with no evaluation or through one step and two step challenges. You trade under predefined risk rules, profit targets, and consistency limits, and if you meet the conditions, you become eligible for payouts based on the funded account's payout schedule. Profits are split between you and the firm, while breaches of drawdown or trading rules can result in account closure."
+    },
+    {
+      "q": "What is the best instant funding prop firm?",
+      "a": "Our shortlist of the best instant funding prop firms currently ranks Blueberry Funded as the strongest option for traders who want a no-evaluation account with clearer pricing and simpler rules. FXIFY follows closely, offering a wider range of instant funding models and platforms. Both firms are backed by regulated CFD brokers, which adds an extra layer of pricing and execution transparency."
+    },
+    {
+      "q": "Is Instant Funding available for US traders?",
+      "a": "Yes, Instant Funding is available to traders in the United States, but platform access is limited. Traders based in the US can trade through cTrader or Match-Trader, while MT5 is not supported in this region. These platforms still provide core charting, order management, and limited automation features under Instant Funding's rules. US traders can request a platform switch during a challenge for a one-time $20 fee, and standard KYC verification is required before withdrawals."
+    }
+  ],
+  "verified": true,
+  "flagged": true,
+  "flaggedWarning": "Instant Funding's TrustPilot reviews were removed due to a breach of guidelines related to potential fake reviews. Multiple traders have reported denied payouts and disputed account terminations.",
+  "methodologyVersion": "1.0",
+  "lastReviewedAt": "2026-02-24"
+}

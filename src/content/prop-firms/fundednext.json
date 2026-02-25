@@ -1,0 +1,75 @@
+{
+  "id": "d0000004-0000-0000-0000-000000000004",
+  "slug": "fundednext",
+  "name": "FundedNext",
+  "status": "active",
+  "foundedYear": 2022,
+  "hqCountry": "AE",
+  "evaluation": {
+    "types": ["1-step", "2-step"],
+    "profitTargets": { "phase1": 8, "phase2": 5 },
+    "dailyDrawdown": 5,
+    "maxDrawdown": 10,
+    "minTradingDays": 2,
+    "scalingPlan": true
+  },
+  "pricing": {
+    "challengeFees": [
+      { "accountSize": 6000, "fee": 65, "model": "1-step", "label": "Stellar 1-Step" },
+      { "accountSize": 15000, "fee": 129, "model": "1-step", "label": "Stellar 1-Step" },
+      { "accountSize": 25000, "fee": 219, "model": "1-step", "label": "Stellar 1-Step" },
+      { "accountSize": 50000, "fee": 329, "model": "1-step", "label": "Stellar 1-Step" },
+      { "accountSize": 100000, "fee": 569, "model": "1-step", "label": "Stellar 1-Step" },
+      { "accountSize": 200000, "fee": 1099, "model": "1-step", "label": "Stellar 1-Step" },
+      { "accountSize": 6000, "fee": 59, "model": "2-step", "label": "Stellar 2-Step" },
+      { "accountSize": 15000, "fee": 119, "model": "2-step", "label": "Stellar 2-Step" },
+      { "accountSize": 25000, "fee": 199, "model": "2-step", "label": "Stellar 2-Step" },
+      { "accountSize": 50000, "fee": 299, "model": "2-step", "label": "Stellar 2-Step" },
+      { "accountSize": 100000, "fee": 549, "model": "2-step", "label": "Stellar 2-Step" },
+      { "accountSize": 200000, "fee": 999, "model": "2-step", "label": "Stellar 2-Step" },
+      { "accountSize": 5000, "fee": 32, "model": "2-step", "label": "Stellar Lite" },
+      { "accountSize": 10000, "fee": 59, "model": "2-step", "label": "Stellar Lite" },
+      { "accountSize": 25000, "fee": 139, "model": "2-step", "label": "Stellar Lite" },
+      { "accountSize": 50000, "fee": 229, "model": "2-step", "label": "Stellar Lite" },
+      { "accountSize": 100000, "fee": 399, "model": "2-step", "label": "Stellar Lite" }
+    ],
+    "resetFee": null,
+    "refundPolicy": "120% refund with promo code PROPFIRMS"
+  },
+  "payouts": {
+    "splitMax": 95,
+    "schedule": "Bi-weekly (5 business days for Stellar 1-Step)",
+    "processingTime": "1-2 business days",
+    "firstPayoutDays": 5,
+    "methods": ["bank transfer", "crypto", "Deel"]
+  },
+  "rules": {
+    "newsTrading": true,
+    "weekendHolding": true,
+    "copyTrading": false,
+    "expertAdvisors": true,
+    "consistencyRule": null,
+    "notes": "News trading allowed but funded traders have a 5-minute window rule around high-impact events (40% profit counted). Copy trading only between own accounts. EAs allowed on MT4/MT5 only, not cTrader. HFT, grid trading, and latency arbitrage prohibited."
+  },
+  "markets": {
+    "platforms": ["MT4", "MT5", "cTrader", "Match-Trader"],
+    "instruments": "Forex, Indices, Commodities, Crypto"
+  },
+  "trust": {
+    "trustpilotRating": 4.5,
+    "trustpilotCount": null,
+    "communitySize": "226,800+ Discord",
+    "notableFlags": []
+  },
+  "links": { "website": "https://fundednext.com" },
+  "media": { "logo": "/images/logos/fundednext.png" },
+  "availability": { "restrictedCountries": [] },
+  "custom": {
+    "tags": ["Broker-Backed (FNmarkets)", "Up to 95% Split", "15% During Challenge", "Scaling to $4M"],
+    "discountCode": "PROPFIRMS",
+    "discountPercent": null
+  },
+  "lastVerifiedAt": "2026-02-24",
+  "lastUpdatedAt": "2026-02-24",
+  "dataSources": ["https://fundednext.com"]
+}

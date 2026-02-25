@@ -1,0 +1,77 @@
+{
+  "id": "rev-maven-trading",
+  "propFirmId": "d0000014-0000-0000-0000-000000000014",
+  "summary": "With an overall score of 62/100, Maven Trading scored moderately because of wider spreads and poor transparency around pricing. Although the prop firm offers multiple challenges with low fees and instant funding accounts, Maven Trading has restrictive payouts and unhelpful customer support.\n\nWhile the range of five challenge types allows for flexibility compared to other firms, significantly wider forex spreads and limited transparency may make it less ideal for active and high-frequency traders.",
+  "pros": [
+    "Fees from just $13",
+    "Five challenge types including Instant Funding and Mini",
+    "Forex, ETFs, crypto, commodities, and indices",
+    "Match-Trader, cTrader, and MT5 platforms",
+    "No minimum trading days on any challenge",
+    "Scaling plan up to $1,000,000"
+  ],
+  "cons": [
+    "Significantly wide forex spreads",
+    "Limited transparency around pricing and liquidity providers",
+    "Restrictive payout policies with $10,000 cap per two cycles",
+    "Unhelpful customer support — live chat only",
+    "Minimal educational resources",
+    "No phone or email support available"
+  ],
+  "bestFor": "Budget-conscious traders looking for diverse challenge types with low entry fees, flexible account options, and no minimum trading days",
+  "notIdealFor": "Scalpers, high-frequency traders, or those requiring tight spreads, transparent pricing, and hands-on customer support",
+  "overallScore": 62,
+  "categoryScores": {
+    "challenges": 70,
+    "spreads": 20,
+    "markets": 70,
+    "payouts": 60,
+    "platforms": 70,
+    "trust": 40
+  },
+  "categorySections": {
+    "challenges": "custom",
+    "spreads": "custom",
+    "markets": "custom",
+    "platforms": "custom",
+    "payouts": "custom",
+    "support": "custom",
+    "trust": "custom"
+  },
+  "verdictBlocks": [
+    {
+      "heading": "Final Verdict on Maven Trading",
+      "body": "Maven Trading's score of 62/100 is similar to prop firms like E8 Markets and Funded Elite. While Maven offers low-cost entry fees and flexibility between five types of evaluation challenges, the wider forex spreads and lack of transparency around pricing make it a costly choice if you're a daily or active trader.\n\nCustomer support is minimal, with only basic live chat assistance and no direct contact methods, which doesn't make it a favourable firm if you're a beginner trader in need of all the help you can get. The platform's restricted payout policies, like the $10,000 cap per cycle, can further limit potential earnings. Educational resources are also lacking, offering only a basic FAQ and blog with little to support skill development.\n\nWhile Maven has an active community and high TrustPilot rating, the lack of transparency around key elements like spreads, liquidity providers, and payment fees raises concerns for those looking for an open and fully supportive trading environment."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is Maven Trading a good firm?",
+      "a": "Maven Trading is a good prop trading platform with cheap challenge fees, but it scores lower than most prop trading competitors due to high forex spreads and a lack of transparency around liquidity and spreads. While the firm offers multiple evaluation options with low fees, the restrictive payout policies and unhelpful customer support team lowers its value as a prop trading company. If you're an average prop trader who wants to test out your prop trading risk management strategies, Maven Trading is a good firm for you."
+    },
+    {
+      "q": "Is Maven Trading legit?",
+      "a": "Yes, Maven Trading is a legitimate proprietary trading firm that has been in business since 2022 with headquarters in Vancouver, Canada. The firm is known for offering fast payouts and access to trading platforms like MT5 and cTrader. However, there have also been reports of traders complaining that Maven has a tendency to change and revert trading rules out of the blue which doesn't help Maven's reputation to stand out as a legitimate prop firm."
+    },
+    {
+      "q": "What are the best prop trading firms?",
+      "a": "The best prop trading firms for 2026 are DNA Funded, Funded Next, and OANDA Prop Trader. DNA Funded tops the list with low challenge fees, an 80% profit split, and a solid range of markets. Funded Next is a great choice for forex trading because it has flexible evaluations, 95% profit split, and clear trading rules. OANDA Prop Trader offers low entry fees and up to 90% profit splits, and its clear and instructive rules, competitive pricing, and educational resources prove excellent advantages if you're a beginner looking for a flexible platform."
+    },
+    {
+      "q": "How does Maven Trading evaluate traders?",
+      "a": "Maven Trading's evaluation process offers multiple trading challenges: the One-Step, Two-Step, and Three-Step challenges, as well as the Mini and the Instant Funding method. The One-Step requires you to meet an 8% profit target with a 5% trailing drawdown, while the Two-Step has a static drawdown of 8% and requires you to hit 8% in phase one and 5% in phase two. The Three-Step lets you complete three phases with a 3% profit target for each phase and a 2% daily drawdown with no time frame which makes it a good choice for beginners."
+    },
+    {
+      "q": "What are the cons of Maven Trading?",
+      "a": "The biggest disadvantages of Maven Trading are its significantly wide forex spreads which can severely increase your trading costs. While it offers low challenge fees, the firm isn't transparent around pricing and payout structures, and the customer support is not up to standards. These factors make Maven Trading a bad choice if you're looking for scalping and high-frequency trading with tight spreads and fast execution."
+    },
+    {
+      "q": "Is Maven Trading good for beginners?",
+      "a": "Maven Trading can be a good prop trading firm for beginners thanks to the cheap fees starting from $13 for the Mini challenge. If you don't like that challenge, there are four more types to choose from, and there are no minimum trading days, making it very flexible. However, if you're a beginner, keep in mind that the forex spreads are wider than most competitors, and they don't provide much educational resources or clarify their rules."
+    }
+  ],
+  "verified": true,
+  "flagged": false,
+  "methodologyVersion": "1.0",
+  "lastReviewedAt": "2026-02-24"
+}

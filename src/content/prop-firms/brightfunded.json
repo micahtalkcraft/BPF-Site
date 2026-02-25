@@ -1,0 +1,64 @@
+{
+  "id": "d0000002-0000-0000-0000-000000000002",
+  "slug": "brightfunded",
+  "name": "BrightFunded",
+  "status": "active",
+  "foundedYear": 2023,
+  "hqCountry": "NL",
+  "evaluation": {
+    "types": ["2-step"],
+    "profitTargets": { "phase1": 8, "phase2": 5 },
+    "dailyDrawdown": 5,
+    "maxDrawdown": 10,
+    "minTradingDays": 5,
+    "scalingPlan": true
+  },
+  "pricing": {
+    "challengeFees": [
+      { "accountSize": 5000, "fee": 55, "model": "2-step", "label": "Two Phase" },
+      { "accountSize": 10000, "fee": 95, "model": "2-step", "label": "Two Phase" },
+      { "accountSize": 25000, "fee": 195, "model": "2-step", "label": "Two Phase" },
+      { "accountSize": 50000, "fee": 295, "model": "2-step", "label": "Two Phase" },
+      { "accountSize": 100000, "fee": 495, "model": "2-step", "label": "Two Phase" },
+      { "accountSize": 200000, "fee": 975, "model": "2-step", "label": "Two Phase" }
+    ],
+    "resetFee": null,
+    "refundPolicy": "Fee refunded with 100% Refund add-on (10% surcharge)"
+  },
+  "payouts": {
+    "splitMax": 100,
+    "schedule": "Monthly (bi-weekly/weekly with add-ons)",
+    "processingTime": "Fast processing",
+    "firstPayoutDays": 30,
+    "methods": ["bank transfer", "crypto"]
+  },
+  "rules": {
+    "newsTrading": true,
+    "weekendHolding": true,
+    "copyTrading": false,
+    "expertAdvisors": true,
+    "consistencyRule": null,
+    "notes": "News trading unrestricted during evaluation; 10-min window restriction on funded accounts during major events. Hedging allowed within one account only."
+  },
+  "markets": {
+    "platforms": ["cTrader", "DXTrade", "MT5"],
+    "instruments": "Forex, Indices, Commodities, Crypto"
+  },
+  "trust": {
+    "trustpilotRating": 4.4,
+    "trustpilotCount": null,
+    "communitySize": null,
+    "notableFlags": []
+  },
+  "links": { "website": "https://brightfunded.com" },
+  "media": { "logo": "/images/logos/brightfunded-logo.png" },
+  "availability": { "restrictedCountries": ["BY", "CU", "IR", "MM", "KP", "RU", "SD", "SY"] },
+  "custom": {
+    "tags": ["Unlimited Scaling", "Trade2Earn Loyalty", "Up to 100% Split", "35 Crypto Markets"],
+    "discountCode": "PROPFIRMS20",
+    "discountPercent": 20
+  },
+  "lastVerifiedAt": "2026-02-23",
+  "lastUpdatedAt": "2026-02-23",
+  "dataSources": ["https://brightfunded.com"]
+}

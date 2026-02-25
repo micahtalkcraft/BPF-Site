@@ -1,0 +1,1084 @@
+---
+// Static editorial content for Eightcap
+// Supports multiple sections via the `section` prop
+interface Props {
+  section: string;
+  fallbackBody?: string;
+}
+const { section, fallbackBody } = Astro.props;
+---
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* CHALLENGES SECTION                                                  */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "challenges" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    Eightcap gives you three evaluation processes to choose from with its One Step, Two Step and short-session Day Trader challenges. The forex broker has created an interesting selection of challenges with something for everyone, and each operates within a simulated environment rather than a live market.
+  </p>
+  <p class="mb-4">
+    The standard challenges range from $10K to $200K, with fees starting from $99 for the Two Step and $119 for the One Step. The fast-paced Day Trader challenges are much cheaper, with entry costs from $5, but all run on a fixed $10,000 balance.
+  </p>
+
+  <!-- Per-challenge summaries -->
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">One Step Challenge</p>
+      <p>Account sizes from $10,000 to $200,000 with a single 10% profit target, 4% daily and 8% total drawdown. Minimum 5 trading days.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Add-on options: Earlier payout (7 days) or higher 90% profit split</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Two Step Challenge</p>
+      <p>Account sizes from $10,000 to $200,000 with a 10% Phase 1 and 8% Phase 2 target, 5% daily and 10% total drawdown. Minimum 3 trading days per step.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Add-on options: Earlier payout (7 days) or higher 90% profit split</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Day Trader Challenge (1–8 Hours)</p>
+      <p>Fixed $10,000 balance with stakes from $5 to $250. Choose a 1, 2, 4 or 8-hour session and a 2x, 5x or 10x payout multiplier. Instant payouts after successful sessions.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">No add-ons available — payouts are instant based on multiplier</p>
+    </div>
+  </div>
+
+  <!-- ─── Comparison Table ───────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Comparison</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-10">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Feature</th>
+          <th class="px-4 py-3 text-center">One Step</th>
+          <th class="px-4 py-3 text-center">Two Step</th>
+          <th class="px-4 py-3 text-center">Day Trader (1–8 Hr)</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Account Size Range</td>
+          <td class="px-4 py-3 text-center text-slate-900">$10,000 – $200,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$10,000 – $200,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">Fixed $10,000</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Fee Range</td>
+          <td class="px-4 py-3 text-center text-slate-900">$119 – $1,299</td>
+          <td class="px-4 py-3 text-center text-slate-900">$99 – $1,199</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5 – $250</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Evaluation Process</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">One Step</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">Two Step</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">1, 2, 4 or 8-hour</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Target</td>
+          <td class="px-4 py-3 text-center text-slate-900">10%</td>
+          <td class="px-4 py-3 text-center text-slate-900">10% / 8%</td>
+          <td class="px-4 py-3 text-center text-slate-900">Varies by multiplier</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Max Daily Loss</td>
+          <td class="px-4 py-3 text-center text-slate-900">4%</td>
+          <td class="px-4 py-3 text-center text-slate-900">5%</td>
+          <td class="px-4 py-3 text-center text-slate-900">Fixed dollar drawdown</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Max Total Loss</td>
+          <td class="px-4 py-3 text-center text-slate-900">8%</td>
+          <td class="px-4 py-3 text-center text-slate-900">10%</td>
+          <td class="px-4 py-3 text-center text-slate-900">Fixed dollar limit</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Min Trading Days</td>
+          <td class="px-4 py-3 text-center text-slate-900">5</td>
+          <td class="px-4 py-3 text-center text-slate-900">3 per step</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Split</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">80%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">80%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">2x, 5x or 10x multiplier</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Max Leverage (Forex)</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:100</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:100</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:30</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 1. ONE STEP CHALLENGE                                          -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">1</span>
+      One Step Challenge
+    </h3>
+
+    <p class="mb-3">
+      The One Step Challenge is the most direct evaluation because you only work through a single step before entering the payout stage, and the rules stay fixed from the moment your account is created.
+    </p>
+    <p class="mb-3">
+      You choose an account size from $10,000 to $200,000, pay the one-off fee, and trade until you reach the 10% target or breach either the 4% daily or 8% total drawdown. The minimum of five trading days stops you from passing in a single move, but otherwise the pacing is flexible.
+    </p>
+    <p class="mb-4">
+      The daily drawdown is based on the previous day's balance, so you begin each session knowing exactly how much room you have. The total drawdown never trails your equity, which removes the stress of watching a limit move against you during profitable streaks.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Daily Loss</p>
+        <p class="text-sm font-bold text-slate-800">4%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Total Loss</p>
+        <p class="text-sm font-bold text-slate-800">8%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Trading Days</p>
+        <p class="text-sm font-bold text-slate-800">5</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Leverage</p>
+        <p class="text-sm font-bold text-slate-800">1:100</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
+        <p class="text-sm font-bold text-teal-600">80%</p>
+      </div>
+    </div>
+
+    <!-- Suited For -->
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
+      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
+      <p class="text-sm text-teal-700">Traders who prefer a simple, single-step evaluation with static drawdown rules and no time pressure beyond the minimum 5 trading days.</p>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">Fee</th>
+            <th class="px-4 py-3 text-right">Max Daily Loss (4%)</th>
+            <th class="px-4 py-3 text-right">Max Total Loss (8%)</th>
+            <th class="px-4 py-3 text-right">Profit Target (10%)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$119</td>
+            <td class="px-4 py-3 text-right text-slate-700">$400</td>
+            <td class="px-4 py-3 text-right text-slate-700">$800</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$259</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$429</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$4,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$659</td>
+            <td class="px-4 py-3 text-right text-slate-700">$4,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$8,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$200,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$1,299</td>
+            <td class="px-4 py-3 text-right text-slate-700">$8,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$16,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$20,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 2. TWO STEP CHALLENGE                                          -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">2</span>
+      Two Step Challenge
+    </h3>
+
+    <p class="mb-3">
+      The Two Step Challenge offers more breathing room through wider limits, and many traders prefer it because the structure feels smoother across different market conditions.
+    </p>
+    <p class="mb-3">
+      You still choose from $10,000 to $200,000, but the evaluation is split into a 10% target in Step 1 and an 8% target in Step 2, which is easier to manage than trying to hit a single large target at once.
+    </p>
+    <p class="mb-4">
+      The 5% daily and 10% overall drawdowns allow for steadier trade management, and each step requires at least three trading days before you can move forward.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 1 Target</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 2 Target</p>
+        <p class="text-sm font-bold text-slate-800">8%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Daily Loss</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Total Loss</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Trading Days</p>
+        <p class="text-sm font-bold text-slate-800">3 per step</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Leverage</p>
+        <p class="text-sm font-bold text-slate-800">1:100</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
+        <p class="text-sm font-bold text-teal-600">80%</p>
+      </div>
+    </div>
+
+    <!-- Suited For -->
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
+      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
+      <p class="text-sm text-teal-700">Traders who prefer a structured two-phase evaluation with wider drawdown limits and a lower second-phase target, ideal for steady and consistent trading approaches.</p>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-3 py-3 text-left">Account Size</th>
+            <th class="px-3 py-3 text-right">Fee</th>
+            <th class="px-3 py-3 text-right">Max Daily Loss (5%)</th>
+            <th class="px-3 py-3 text-right">Max Total Loss (10%)</th>
+            <th class="px-3 py-3 text-right">Phase 1 Target (10%)</th>
+            <th class="px-3 py-3 text-right">Phase 2 Target (8%)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$99</td>
+            <td class="px-3 py-3 text-right text-slate-700">$500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$800</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$219</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,250</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$389</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$4,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$599</td>
+            <td class="px-3 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$8,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$200,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$1,199</td>
+            <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$20,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$20,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$16,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 3. DAY TRADER CHALLENGE                                        -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">3</span>
+      Day Trader Challenge (1–8 Hours)
+    </h3>
+
+    <p class="mb-3">
+      The Day Trader Challenge is completely different because it compresses the entire evaluation into a timed session, which creates a faster and more tactical experience.
+    </p>
+    <p class="mb-3">
+      Every challenge begins with a fixed $10,000 balance, and you choose a stake between $5 and $250 along with a multiplier that sets your target and drawdown. Once the session starts, you work inside a 1, 2, 4 or 8-hour window and try to reach your target before either the timer or your drawdown runs out.
+    </p>
+    <p class="mb-4">
+      You can only run one Day Trader challenge at a time, automated trading isn't available, and there's a single instrument profit cap of 75% of the target to stop the challenge from turning into a single lucky entry.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Starting Balance</p>
+        <p class="text-sm font-bold text-slate-800">$10,000</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Stake Range</p>
+        <p class="text-sm font-bold text-slate-800">$5 – $250</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Multipliers</p>
+        <p class="text-sm font-bold text-teal-600">2x, 5x, 10x</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Leverage (Forex)</p>
+        <p class="text-sm font-bold text-slate-800">1:30</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Platform</p>
+        <p class="text-sm font-bold text-slate-800">TradeLocker only</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Payout</p>
+        <p class="text-sm font-bold text-teal-600">Instant</p>
+      </div>
+    </div>
+
+    <!-- Suited For -->
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
+      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
+      <p class="text-sm text-teal-700">Traders who prefer short, focused sessions with immediate results rather than a multi-day or multi-week grind. Great for testing timing and risk control under pressure.</p>
+    </div>
+
+    <!-- Session table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Challenge</th>
+            <th class="px-4 py-3 text-center">Session Length</th>
+            <th class="px-4 py-3 text-center">Starting Balance</th>
+            <th class="px-4 py-3 text-center">Stake Range</th>
+            <th class="px-4 py-3 text-center">Payout Multipliers</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">DT-1</td>
+            <td class="px-4 py-3 text-center text-slate-900">1 hour</td>
+            <td class="px-4 py-3 text-center text-slate-700">$10,000</td>
+            <td class="px-4 py-3 text-center text-slate-700">$5 – $250</td>
+            <td class="px-4 py-3 text-center font-semibold text-teal-600">2x, 5x, 10x</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">DT-2</td>
+            <td class="px-4 py-3 text-center text-slate-900">2 hours</td>
+            <td class="px-4 py-3 text-center text-slate-700">$10,000</td>
+            <td class="px-4 py-3 text-center text-slate-700">$5 – $250</td>
+            <td class="px-4 py-3 text-center font-semibold text-teal-600">2x, 5x, 10x</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">DT-4</td>
+            <td class="px-4 py-3 text-center text-slate-900">4 hours</td>
+            <td class="px-4 py-3 text-center text-slate-700">$10,000</td>
+            <td class="px-4 py-3 text-center text-slate-700">$5 – $250</td>
+            <td class="px-4 py-3 text-center font-semibold text-teal-600">2x, 5x, 10x</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">DT-8</td>
+            <td class="px-4 py-3 text-center text-slate-900">8 hours</td>
+            <td class="px-4 py-3 text-center text-slate-700">$10,000</td>
+            <td class="px-4 py-3 text-center text-slate-700">$5 – $250</td>
+            <td class="px-4 py-3 text-center font-semibold text-teal-600">2x, 5x, 10x</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- ADD-ONS                                                        -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3">Add-Ons (One Step & Two Step Only)</h3>
+
+    <p class="mb-4">
+      Eightcap offers two optional add-ons for the funded account stage on One Step and Two Step challenges. These do not apply to the Day Trader challenge, since that model pays instantly once the session finishes.
+    </p>
+
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Add-On</th>
+            <th class="px-4 py-3 text-center">Benefit</th>
+            <th class="px-4 py-3 text-center">Extra Cost</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">Earlier Payout</td>
+            <td class="px-4 py-3 text-center text-slate-700">First payout wait reduced from 14 to 7 days</td>
+            <td class="px-4 py-3 text-center font-semibold text-slate-900">+20% of challenge fee</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">Higher Profit Split</td>
+            <td class="px-4 py-3 text-center text-slate-700">Profit split increased from 80% to 90%</td>
+            <td class="px-4 py-3 text-center font-semibold text-slate-900">+20% of challenge fee</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SCALING PLAN                                                    -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3">Scaling Plan</h3>
+    <p class="mb-3">
+      Eightcap does not offer a traditional scaling plan at the moment, but you can increase your total allocation by holding multiple active accounts across the One Step and Two Step challenges.
+    </p>
+    <p class="mb-3">
+      The combined limit across all funded accounts is <strong>$600,000</strong>, which gives you room to grow as long as you stay within the risk rules and avoid inactivity.
+    </p>
+    <p class="text-xs text-slate-500 italic">The Day Trader challenge does not include any scaling or allocation increases because each session stands alone.</p>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- TRADING RULES                                                   -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules</h3>
+    <p class="mb-4">
+      Eightcap's trading rules are clear once you understand how each model is structured, and most of the restrictions are in place to keep the challenges fair and consistent across all accounts.
+    </p>
+
+    <div class="space-y-3 mb-6">
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">Automated Trading</p>
+        <p>EAs and scripts are allowed on the One Step and Two Step challenges, but they are <strong>not allowed</strong> on the Day Trader challenge.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">News Restrictions</p>
+        <p>One Step and Two Step accounts cannot trade within <strong>10 minutes</strong> of major news during the payout stage. Day Trader sessions have a <strong>5-minute</strong> restriction once you reach payout. These rules do not apply during evaluation.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">Weekend Holding</p>
+        <p>Weekend holding is allowed on all standard challenges.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">Position Limits</p>
+        <p>All accounts share the same per-instrument maximums: <strong>40 forex lots</strong>, <strong>20 index lots</strong> and <strong>10 commodity lots</strong>. Standard challenges also cap at <strong>10 open trades</strong> at a time.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">Prohibited Strategies</p>
+        <p>Martingale, grid trading, 30-second scalping, tick scalping, latency arbitrage, copy trading, hedging across accounts and any form of market abuse are not allowed.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- VERDICT ON CHALLENGES                                           -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">How We Tested Eightcap's Challenges (9/10)</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      We scored Eightcap's challenges by mapping their trading rules against our framework for targets, drawdown, costs and flexibility, then running live test accounts in the Two Step challenge. We checked that the 10% and 8% targets, 4-5% daily drawdown and 8-10% max loss sat inside our preferred bands. The extra point came from the short-session Day Trader challenge and the funded account add-ons, while higher fees on larger accounts and the lack of a traditional scaling plan kept the score at 9/10.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SPREADS / COMMISSION FEES & PRICING SECTION                         */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "spreads" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-3">
+    Eightcap runs raw pricing across all challenge accounts, with forex spreads starting from <strong>0 pips</strong> and a <strong>$5 round-turn commission</strong> for every non-crypto CFD.
+  </p>
+  <p class="mb-4">
+    This is the same across all trading platforms, and the pricing is pulled directly from Eightcap's live feed rather than a simulated or widened challenge-only stream.
+  </p>
+
+  <p class="mb-4">
+    Forex spreads for majors like EUR/USD start at 0 pips, while GBP/USD and USD/JPY can be as low as 0.1 pips. Crypto is the only asset class with no commission fees. US stocks (Day Trader only) carry a $4 round-turn commission, while ASX ETFs use a 0.1% round-trip commission.
+  </p>
+
+  <!-- Commission structure table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Commission Structure by Asset Class</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-5 py-3 text-left">Asset Class</th>
+          <th class="px-5 py-3 text-right">Spread From</th>
+          <th class="px-5 py-3 text-right">Commission (Round-Turn)</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">Forex (Majors)</td>
+          <td class="px-5 py-3 text-right font-bold text-teal-600">0.0 pips</td>
+          <td class="px-5 py-3 text-right text-slate-900">$5 per lot</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">Indices</td>
+          <td class="px-5 py-3 text-right text-slate-700">From 12 points</td>
+          <td class="px-5 py-3 text-right text-slate-900">$5 per lot</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">Commodities</td>
+          <td class="px-5 py-3 text-right text-slate-700">From 1.2 points (Gold)</td>
+          <td class="px-5 py-3 text-right text-slate-900">$5 per lot</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">Cryptocurrency</td>
+          <td class="px-5 py-3 text-right text-slate-700">Variable</td>
+          <td class="px-5 py-3 text-right font-semibold text-teal-600">$0 (No commission)</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">US Stocks (Day Trader)</td>
+          <td class="px-5 py-3 text-right text-slate-700">Variable</td>
+          <td class="px-5 py-3 text-right text-slate-900">$4 per round-turn</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">US ETFs</td>
+          <td class="px-5 py-3 text-right text-slate-700">Variable</td>
+          <td class="px-5 py-3 text-right text-slate-900">$4 per round-turn</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">ASX ETFs</td>
+          <td class="px-5 py-3 text-right text-slate-700">Variable</td>
+          <td class="px-5 py-3 text-right text-slate-900">0.1% round-trip</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Typical spreads on forex -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Typical Spreads on Popular Forex Pairs</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-5 py-3 text-left">Currency Pair</th>
+          <th class="px-5 py-3 text-right">Spread From (pips)</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">EUR/USD</td>
+          <td class="px-5 py-3 text-right font-bold text-teal-600">0.0</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">GBP/USD</td>
+          <td class="px-5 py-3 text-right font-bold text-teal-600">0.1</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">USD/JPY</td>
+          <td class="px-5 py-3 text-right font-bold text-teal-600">0.1</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">How We Tested Eightcap's Spreads & Fees (9.5/10)</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      We evaluated Eightcap's spreads by connecting a live MT5 test account during active London and New York sessions, then comparing real-time bid/ask data against our benchmark. Majors consistently printed at 0.0–0.1 pips and the $5 round-trip commission aligned with the flat-fee model we use in scoring. The 0.5-point deduction reflects the fact that some competitors offer $3.50 round-turn commissions, which is our ideal benchmark for perfect scoring.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* MARKETS / FINANCIAL MARKETS & LEVERAGE SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "markets" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-3">
+    You can trade forex, indices, commodities, cryptocurrency, and ETFs across all challenges, but <strong>US stocks are only available via the Day Trader challenge</strong>, and leverage depends on the model you choose.
+  </p>
+  <p class="mb-4">
+    The One Step and Two Step accounts use the highest leverage, with forex capped at 1:100 and the rest of the market using predictable tiers. Cryptocurrency runs at 1:3, and ETFs sit at 1:5 across all account types.
+  </p>
+
+  <!-- Asset class grid -->
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-lg font-black text-slate-900">Forex</p>
+      <p class="text-xs text-slate-500">Majors, minors, exotics</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-lg font-black text-slate-900">Indices</p>
+      <p class="text-xs text-slate-500">US30, NAS100, SPX500, UK100, GER40</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-lg font-black text-slate-900">Commodities</p>
+      <p class="text-xs text-slate-500">Metals & energies</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-lg font-black text-slate-900">Crypto</p>
+      <p class="text-xs text-slate-500">Wide crypto list</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-lg font-black text-slate-900">ETFs</p>
+      <p class="text-xs text-slate-500">ASX & US ETFs</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-lg font-black text-slate-900">US Stocks</p>
+      <p class="text-xs text-amber-600 font-semibold">Day Trader only</p>
+    </div>
+  </div>
+
+  <!-- Leverage table by challenge type -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Leverage by Challenge Type</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Asset Class</th>
+          <th class="px-4 py-3 text-center">One Step</th>
+          <th class="px-4 py-3 text-center">Two Step</th>
+          <th class="px-4 py-3 text-center">Day Trader</th>
+          <th class="px-4 py-3 text-left">Notes</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Forex</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">1:100</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">1:100</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:30</td>
+          <td class="px-4 py-3 text-slate-500 text-xs">Majors, minors, exotics</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Indices</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:30</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:30</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:10</td>
+          <td class="px-4 py-3 text-slate-500 text-xs">US30, NAS100, SPX500, UK100, GER40</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Commodities</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:20</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:20</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:10</td>
+          <td class="px-4 py-3 text-slate-500 text-xs">Metals and energies</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Crypto</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:3</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:3</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:2</td>
+          <td class="px-4 py-3 text-slate-500 text-xs">Wide crypto list across all models</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">US Stocks</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:5</td>
+          <td class="px-4 py-3 text-slate-500 text-xs">Day Trader only</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">ETFs</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:5</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:5</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:5</td>
+          <td class="px-4 py-3 text-slate-500 text-xs">ASX and US ETFs available</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="mb-4">
+    The Day Trader challenge intentionally uses lower leverage on every market, with forex reduced to 1:30, indices to 1:10 and crypto to 1:2. This creates a more controlled environment for shorter sessions, where results depend on timing and risk control rather than raw position size.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">How We Tested Eightcap's Markets & Leverage (9/10)</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      We tested Eightcap's market depth by trading across different asset classes on their Two Step challenge account, comparing instrument availability to our broad market requirement. Eightcap met these standards with a strong asset list, but it lost a point due to US stock CFDs being restricted to Day Trader only and no futures trading — a limitation under our full-range market access ideal.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PLATFORMS / TRADING PLATFORMS SECTION                                */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "platforms" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Eightcap challenge accounts run on <strong>MetaTrader 4 (MT4)</strong>, <strong>MetaTrader 5 (MT5)</strong> and <strong>TradeLocker</strong>, and all three platforms use the broker's live pricing feed so spreads, commissions and execution behaviour match what you would see on a real Eightcap account.
+  </p>
+
+  <!-- Platform cards -->
+  <div class="space-y-4 mb-8">
+
+    <!-- MT4 -->
+    <div class="rounded-xl border border-slate-200 p-5">
+      <div class="flex items-start gap-3 mb-3">
+        <span class="flex-shrink-0 w-10 h-10 rounded-lg bg-blue-100 text-blue-700 font-black text-sm flex items-center justify-center">MT4</span>
+        <div>
+          <p class="font-bold text-slate-900 text-base">MetaTrader 4</p>
+          <p class="text-xs text-slate-500">Available for One Step & Two Step challenges</p>
+        </div>
+      </div>
+      <p class="mb-2">
+        Supports the full set of Expert Advisors (EAs), custom indicators and MQL4 scripts. A strong fit if your strategy relies on automation, backtesting or rule-based execution.
+      </p>
+      <p>
+        MT4 handles all supported asset classes except US stock CFDs. You can hold positions over the weekend without restrictions.
+      </p>
+    </div>
+
+    <!-- MT5 -->
+    <div class="rounded-xl border border-slate-200 p-5">
+      <div class="flex items-start gap-3 mb-3">
+        <span class="flex-shrink-0 w-10 h-10 rounded-lg bg-indigo-100 text-indigo-700 font-black text-sm flex items-center justify-center">MT5</span>
+        <div>
+          <p class="font-bold text-slate-900 text-base">MetaTrader 5</p>
+          <p class="text-xs text-slate-500">Available for One Step & Two Step challenges</p>
+        </div>
+      </div>
+      <p class="mb-2">
+        Offers a more modern layout, faster charting, and supports automated trading through MQL5 Expert Advisors and scripts. Extra timeframes, depth-of-market window and broader indicator list.
+      </p>
+      <p>
+        Generally feels smoother than MT4 for intraday trading and pairs well with Eightcap's raw pricing feed, especially for indices, metals or crypto.
+      </p>
+    </div>
+
+    <!-- TradeLocker -->
+    <div class="rounded-xl border border-slate-200 p-5">
+      <div class="flex items-start gap-3 mb-3">
+        <span class="flex-shrink-0 w-10 h-10 rounded-lg bg-emerald-100 text-emerald-700 font-black text-sm flex items-center justify-center">TL</span>
+        <div>
+          <p class="font-bold text-slate-900 text-base">TradeLocker</p>
+          <p class="text-xs text-slate-500">Required for Day Trader · Optional for One Step & Two Step</p>
+        </div>
+      </div>
+      <p class="mb-2">
+        The only platform available for the Day Trader challenge, and it is fully manual — no automated trading, no scripts and no copy trading allowed.
+      </p>
+      <p>
+        The interface is lightweight and responsive for time-boxed sessions. Covers the full list of Day Trader instruments, including US stock CFDs.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Platform note -->
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
+    <p class="text-sm font-bold text-amber-900 mb-1">Platform Switching</p>
+    <p class="text-sm text-amber-800">
+      Switching platforms is supported on standard challenges but not during an active Day Trader session, so you need to choose your platform beforehand.
+    </p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">How We Tested Eightcap's Trading Platforms (9/10)</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      We scored Eightcap's platforms by running both automated and manual trades on MT5 during a Two Step challenge, and then completing a timed session on TradeLocker. Eightcap scored strongly because MT4/MT5 provide full EA and MQL automation support, and TradeLocker delivered clean manual execution for the short session model. The missing point came from the absence of TradingView and cTrader, which are part of our benchmark for a perfect platform score.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PAYOUTS / PAYMENTS & PROFIT PAYOUT SECTION                          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "payouts" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-3">
+    Eightcap processes profit payouts quickly once you qualify, with your first payout after <strong>14 days</strong> for the One Step and Two Step accounts, and <strong>instant payouts</strong> on the Day Trader challenge.
+  </p>
+  <p class="mb-6">
+    The default profit split is <strong>80%</strong>, upgradeable to <strong>90%</strong> with the paid add-on. Eightcap does not refund challenge fees after you pass, regardless of challenge type.
+  </p>
+
+  <!-- Payout summary stats -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Base Profit Split</p>
+      <p class="text-sm font-bold text-teal-600">80%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">With Add-On</p>
+      <p class="text-sm font-bold text-teal-600">90%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">First Payout</p>
+      <p class="text-sm font-bold text-slate-800">14 Days</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Processing Time</p>
+      <p class="text-sm font-bold text-slate-800">24–48 hours</p>
+    </div>
+  </div>
+
+  <!-- One Step & Two Step payouts -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">One Step & Two Step Payouts</h3>
+  <p class="mb-3">
+    You can request your first payout after 14 days from account activation or from your previous payout. The minimum withdrawal is <strong>$100</strong>, and anything below that can only be paid in crypto.
+  </p>
+  <p class="mb-3">
+    All payout requests must pass KYC and a risk review, and Eightcap notes that phone or video verification may be required. Approved withdrawals are normally processed within 24 to 48 hours, although they can take 2 to 5 business days depending on banking times.
+  </p>
+  <p class="mb-6">
+    The <strong>One Step challenge includes a profit cap for your first three payouts</strong>, set at 5% of your starting balance. The Two Step challenge has <strong>no profit cap</strong> at all.
+  </p>
+
+  <!-- Day Trader payouts -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Day Trader Payouts</h3>
+  <p class="mb-3">
+    Day Trader payouts work differently — instead of a profit split, your payout is calculated by multiplying your initial stake by the multiplier you selected. You become eligible immediately after a successful session with no waiting period.
+  </p>
+  <p class="mb-6">
+    The minimum withdrawal is <strong>$10</strong> when using crypto, and payouts under $100 can only be sent via crypto. Because each session stands alone, there is no recurring payout cycle or fee refund.
+  </p>
+
+  <!-- Payment methods -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payment Methods</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Bank Transfer</p>
+      <p>Available for withdrawals of $100+. International transfers may take an additional 4–5 business days.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Cryptocurrency</p>
+      <p>USDT (TRC20 or ERC20) and BTC supported. Minimum $10 withdrawal for Day Trader, $100 for standard challenges.</p>
+    </div>
+  </div>
+
+  <!-- Important notes -->
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
+    <p class="text-sm font-bold text-amber-900 mb-1">Important Payout Notes</p>
+    <p class="text-sm text-amber-800">
+      Payouts are processed on business days only — weekend and holiday requests roll to the next business day. Eightcap does not refund challenge fees after you pass, regardless of challenge type.
+    </p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">How We Tested Eightcap's Payout System (8/10)</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      We tested payouts by completing a Two Step challenge and submitting a withdrawal request. We verified the 14-day first-payout rule, the $100 minimum, the KYC+risk review step, and the expected 24–48 hour processing window. Eightcap landed at 8/10 because One Step accounts include a temporary 5% payout cap, minimums are stricter than our ideal, and no challenge fee refund is offered.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SUPPORT / CUSTOMER SERVICE & EDUCATION SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "support" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Eightcap provides reliable support for its challenge accounts, with <strong>24/7 email assistance</strong> and <strong>live chat</strong> that connects you to a real person rather than a bot, which makes troubleshooting during volatile sessions much easier.
+  </p>
+  <p class="mb-6">
+    Customer support replies were fast during our testing, and we consistently received clear answers to KYC, payout timelines and account rules — the areas where most prop traders need a quick response.
+  </p>
+
+  <!-- Support channels -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Support Channels</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Live Chat</p>
+      <p>Real human agents, not bots. Available 24/7 with fast response times during volatile sessions.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Email Support</p>
+      <p>24/7 email assistance with consistently clear answers on KYC, payouts and account rules.</p>
+    </div>
+  </div>
+
+  <!-- Education -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Educational Resources</h3>
+  <p class="mb-4">
+    The education offering is stronger than what most prop firms provide, since you also get access to Eightcap's ecosystem of research tools.
+  </p>
+
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Trade Zone</p>
+      <p>Weekly market insights, session previews and technical breakdowns covering the same instruments and trading conditions you'll see on challenge accounts.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Eightcap Labs</p>
+      <p>More structured guides on trading concepts, risk management ideas and strategy building. Designed for retail clients but translates well to challenge trading.</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">How We Tested Eightcap's Support & Education (9/10)</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      We tested Eightcap's support by contacting live chat and email with payout, KYC and platform questions, checking response speed and accuracy. They scored strongly because replies were fast, 24/7 and handled by real agents. For educational resources, we reviewed Trade Zone and Eightcap Labs for market insights and practical guidance. We deducted one point because the material isn't challenge-specific.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* TRUST / TRUST & TRANSPARENCY SECTION                                */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "trust" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-3">
+    Eightcap's challenge program works differently from most because it isn't a broker-backed prop firm — it is <strong>run directly by the broker itself</strong>, using the same technical infrastructure, pricing feeds and platform environment offered to live clients.
+  </p>
+  <p class="mb-6">
+    You trade on simulated accounts, but the execution, spreads and market data all mirror Eightcap's real-time pricing feed, which removes the uncertainty that usually comes with prop firms using private or manipulated pricing sources.
+  </p>
+
+  <!-- Company info grid -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">2009</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Founded</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">AU</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Headquarters</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-teal-600">4.0/5</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Trustpilot</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">5,000+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Trustpilot Reviews</p>
+    </div>
+  </div>
+
+  <!-- Regulation -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Regulatory Status</h3>
+  <p class="mb-4">
+    Eightcap has been operating since 2009 and is based in Australia, regulated by top-tier financial authorities including:
+  </p>
+
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
+    <div class="rounded-lg bg-emerald-50 border border-emerald-200 px-3 py-3 text-center">
+      <p class="text-sm font-bold text-emerald-800">ASIC</p>
+      <p class="text-[10px] text-emerald-600">Australia</p>
+    </div>
+    <div class="rounded-lg bg-emerald-50 border border-emerald-200 px-3 py-3 text-center">
+      <p class="text-sm font-bold text-emerald-800">FCA</p>
+      <p class="text-[10px] text-emerald-600">United Kingdom</p>
+    </div>
+    <div class="rounded-lg bg-emerald-50 border border-emerald-200 px-3 py-3 text-center">
+      <p class="text-sm font-bold text-emerald-800">CySEC</p>
+      <p class="text-[10px] text-emerald-600">Cyprus</p>
+    </div>
+    <div class="rounded-lg bg-emerald-50 border border-emerald-200 px-3 py-3 text-center">
+      <p class="text-sm font-bold text-emerald-800">SCB</p>
+      <p class="text-[10px] text-emerald-600">Bahamas</p>
+    </div>
+  </div>
+
+  <!-- Transparency -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Transparency</h3>
+  <p class="mb-3">
+    Eightcap is transparent about how payouts work, what triggers a review and which documents are required for KYC, and the 14-day first-payout window is stated openly rather than buried in fine print.
+  </p>
+  <p class="mb-6">
+    Monthly trading instrument updates and clear leverage tables help you understand exactly what you can trade before starting a challenge. Even though these accounts are simulated environments, the combination of broker-level infrastructure, public rule documentation and a long operating history makes the overall setup more predictable and trustworthy than most independent prop firms.
+  </p>
+
+  <!-- Country restrictions warning -->
+  <div class="rounded-xl border border-red-200 bg-red-50 p-4 mb-6">
+    <p class="text-sm font-bold text-red-800 mb-1">Availability Restriction</p>
+    <p class="text-sm text-red-700">
+      Eightcap is <strong>not available to US residents</strong>. The challenge accounts follow the same geographic restrictions as Eightcap's brokerage services. This is due to regulatory limitations rather than a technical barrier.
+    </p>
+  </div>
+
+  <!-- Trustpilot -->
+  <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 mb-6 flex items-center gap-4">
+    <div class="flex-shrink-0">
+      <p class="text-3xl font-black text-slate-900">4.0<span class="text-lg text-slate-400">/5</span></p>
+      <p class="text-xs text-slate-500 font-semibold">TrustScore</p>
+    </div>
+    <div>
+      <p class="text-sm text-slate-700">Based on <strong>thousands of reviews</strong> on Trustpilot. Feedback generally reflects solid customer service, efficient withdrawals and minimal slippage.</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">How We Tested Eightcap's Trust & Transparency (9/10)</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      We assessed trust using our three-pillar model: regulation, reputation, and operational transparency. We verified Eightcap's licences (ASIC, FCA, CySEC, SCB), checked its 4.0/5 Trustpilot score, and assessed whether challenge accounts genuinely mirror the broker's live pricing. The only deduction came from the simulated trading environment nature of challenge accounts, which do not carry investor protections like Eightcap's traditional CFD trading accounts.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* FALLBACK — sections not customised render the default text          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section !== "challenges" && section !== "spreads" && section !== "markets" && section !== "platforms" && section !== "payouts" && section !== "support" && section !== "trust" && fallbackBody && (
+  <div class="text-sm leading-relaxed text-slate-700 space-y-4">
+    {fallbackBody.split("\n\n").map((para) => (
+      <p set:html={para.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")} />
+    ))}
+  </div>
+)}

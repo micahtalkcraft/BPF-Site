@@ -1,0 +1,76 @@
+{
+  "id": "d0000027-0000-0000-0000-000000000027",
+  "slug": "eightcap",
+  "name": "Eightcap",
+  "status": "active",
+  "foundedYear": 2009,
+  "hqCountry": "AU",
+  "evaluation": {
+    "types": ["1-step", "2-step", "other"],
+    "profitTargets": { "phase1": 10, "phase2": 8 },
+    "dailyDrawdown": 5,
+    "maxDrawdown": 10,
+    "minTradingDays": 3,
+    "scalingPlan": false
+  },
+  "pricing": {
+    "challengeFees": [
+      { "accountSize": 10000, "fee": 119, "model": "one-step" },
+      { "accountSize": 25000, "fee": 259, "model": "one-step" },
+      { "accountSize": 50000, "fee": 429, "model": "one-step" },
+      { "accountSize": 100000, "fee": 659, "model": "one-step" },
+      { "accountSize": 200000, "fee": 1299, "model": "one-step" },
+      { "accountSize": 10000, "fee": 99, "model": "two-step" },
+      { "accountSize": 25000, "fee": 219, "model": "two-step" },
+      { "accountSize": 50000, "fee": 389, "model": "two-step" },
+      { "accountSize": 100000, "fee": 599, "model": "two-step" },
+      { "accountSize": 200000, "fee": 1199, "model": "two-step" },
+      { "accountSize": 10000, "fee": 5, "model": "day-trader", "label": "Day Trader (stake)" },
+      { "accountSize": 10000, "fee": 250, "model": "day-trader", "label": "Day Trader (max stake)" }
+    ],
+    "resetFee": null,
+    "refundPolicy": "No challenge fee refunds offered"
+  },
+  "payouts": {
+    "splitMax": 90,
+    "schedule": "14-day cycle",
+    "processingTime": "24-48 hours",
+    "firstPayoutDays": 14,
+    "methods": ["Bank Transfer", "Crypto (USDT TRC20/ERC20)", "Crypto (BTC)"]
+  },
+  "rules": {
+    "newsTrading": false,
+    "weekendHolding": true,
+    "copyTrading": false,
+    "expertAdvisors": true,
+    "consistencyRule": "Single instrument profit cap of 75% on Day Trader challenge. One Step has a 5% payout cap for the first three payouts.",
+    "notes": "News restriction: no trading within 10 minutes of major news during payout stage (5 minutes for Day Trader). EAs allowed on One Step and Two Step only, not Day Trader. Position limits: 40 forex lots, 20 index lots, 10 commodity lots. Max 10 open trades on standard challenges. Prohibited: martingale, grid trading, 30-second scalping, tick scalping, latency arbitrage, hedging across accounts. Combined funded account limit: $600,000."
+  },
+  "markets": {
+    "platforms": ["MT4", "MT5", "TradeLocker"],
+    "instruments": "Forex, Indices, Commodities, Cryptocurrency, ETFs, US Stocks (Day Trader only)"
+  },
+  "trust": {
+    "trustpilotRating": 4.0,
+    "trustpilotCount": 5000,
+    "communitySize": "Established brokerage with global presence since 2009",
+    "notableFlags": ["Broker-operated (not broker-backed)", "ASIC regulated", "FCA regulated", "CySEC regulated", "SCB regulated", "Simulated trading environment"]
+  },
+  "links": { "website": "https://www.eightcap.com/en/trading/prop-trading/" },
+  "media": { "logo": "/images/logos/eightcap-logo-1.png" },
+  "availability": {
+    "restrictedCountries": ["US"]
+  },
+  "support": {
+    "liveChat": true,
+    "email": true
+  },
+  "custom": {
+    "tags": ["Broker-Operated", "Three Challenge Types", "MT4/MT5/TradeLocker", "Day Trader"],
+    "discountCode": "PROPFIRMS20",
+    "discountPercent": 20
+  },
+  "lastVerifiedAt": "2026-02-24",
+  "lastUpdatedAt": "2026-02-24",
+  "dataSources": ["https://www.eightcap.com/en/trading/prop-trading/"]
+}

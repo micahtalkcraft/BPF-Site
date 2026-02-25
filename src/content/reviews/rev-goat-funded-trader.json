@@ -1,0 +1,36 @@
+{
+  "id": "rev-goat-funded-trader",
+  "propFirmId": "d0000018-0000-0000-0000-000000000018",
+  "summary": "Goat Funded Trader finished testing with a low score of 42/100, mainly due to a lack of transparency. While it offers flexible challenge types, bi-weekly payouts, and scaling opportunities, unclear funded account conditions, hidden rules, and payout complaints make it a risky choice.\n\nMany traders have reported slow execution, unexpected account breaches, and difficulty withdrawing profits. The lack of clear details on spreads, liquidity, and leverage adds to the uncertainty. If you're thinking about signing up, be ready for some headaches along the way.",
+  "pros": ["Profit splits up to 100%", "Multiple challenge types (1-step, 2-step, 3-step, instant)", "Instant funding available", "No time limits on evaluations", "Low entry fees from $22", "Scaling plan available"],
+  "cons": ["Multiple payout issues reported", "Vague and unclear trading rules", "No stock trading available", "Hidden spread and leverage data", "Payout delays and denied withdrawals", "23% one-star TrustPilot reviews"],
+  "bestFor": "Traders comfortable with risk who want low entry fees, multiple challenge types, and no time limits on evaluations",
+  "notIdealFor": "Traders who value transparency, reliable payouts, clear trading conditions, or need structured education and mentorship",
+  "overallScore": 42,
+  "categoryScores": { "challenges": 60, "spreads": 30, "markets": 50, "payouts": 30, "platforms": 60, "trust": 20 },
+  "categorySections": {
+    "challenges": "Goat Funded Trader offers One-Step, Two-Step (Goat & Standard), Three-Step, and Instant Funding accounts. Flexible with no time limits. Profit targets range from 5%–10% depending on model. Daily drawdown 3%–5%, max drawdown 6%–10%. Low entry fees starting from $22. However, strict drawdown limits and consistency rules make passing difficult. Scored 6/10.",
+    "spreads": "Goat Funded Trader claims spreads as low as 0 pips but does not publish average spread data. No liquidity providers disclosed. Commission is $2.50 per lot round-turn on forex — one of the lowest in the industry. Other asset classes have no commissions but undisclosed spreads. Lack of transparency on actual trading costs is a major concern. Scored 3/10.",
+    "markets": "Access to Forex, Indices, Commodities, and Cryptocurrencies. Forex leverage up to 1:100 for Two-Step/Three-Step evaluations, 1:30 for One-Step, 1:50 for funded accounts. Crypto leverage 1:2. GFT does not confirm One-Step funded leverage and promotes scaling leverage without clear requirements. Scored 5/10.",
+    "platforms": "Three platforms available: MT5 (best automation support), TradeLocker (TradingView integration), and MatchTrader (built-in analytics). No MT4 available. Strict rules on EAs — must prove ownership with source code. No hedging, no trade copying, no HFT. News trading profits capped at 1% within 2 minutes of high-impact events. Scored 6/10.",
+    "payouts": "First payout after 30 days (bi-weekly available as paid add-on). Profit split starts at 80% with 100% add-on option. First two withdrawals capped at 6% of account balance. Daily withdrawal cap of $3,000. Min withdrawal $100. Processing in 2–3 business days. Payment via credit card, crypto, and bank transfer. No PayPal. Scored 3/10.",
+    "support": "Live chat and email support available. Response times inconsistent — basic questions answered quickly but detailed account issues take longer. Support often gives unclear answers about spreads and leverage. No structured education, mentorship, or training programs. YouTube channel has interviews and basic tutorials but no in-depth strategy content. Scored 4/10.",
+    "trust": "3.4/5 TrustPilot from 3,000+ reviews. 62% five-star but 23% one-star. Major complaints include delayed/denied payouts, unexplained account breaches, execution issues, spread manipulation accusations, and unhelpful support. Discord community of 59,700+ members. While some traders report positive experiences, the volume of complaints about denied withdrawals and hidden rules raises serious concerns. Scored 2/10."
+  },
+  "verdictBlocks": [
+    {
+      "heading": "Final Verdict: 42/100",
+      "body": "Goat Funded Trader offers flexible challenge options with no time limits, low entry fees, and high potential profit splits. The Two-Step Challenge is likely the best option for most traders, as it offers a balance between achievable profit targets and reasonable drawdown limits. The Instant Funding accounts may appeal to those who want to skip the evaluation process, but they come with stricter risk rules and higher upfront costs.\n\nHowever, transparency issues are a major concern. The firm does not disclose minimum spreads, funded account leverage for One-Step traders, or clear payout processing policies. Many traders have reported payout delays, platform malfunctions, and unexpected account breaches, raising red flags about reliability.\n\nIf you value low-cost challenges, high leverage during evaluations, and bi-weekly payouts, GFT might be worth considering — but only if you are comfortable with the risks. The lack of clear trading conditions, payout restrictions, and mixed trader feedback make this a high-risk prop firm, best suited for those who are willing to accept uncertainty in exchange for potentially high rewards."
+    }
+  ],
+  "faq": [
+    { "q": "Is Goat Funded Trader legit or a scam?", "a": "Goat Funded Trader is a real prop firm, but transparency issues and payout complaints raise concerns. While some traders report smooth withdrawals, others have faced delayed or denied payouts, unexpected account breaches, and unclear trading conditions. The firm does not disclose spread data or liquidity providers, making it difficult to verify trading costs." },
+    { "q": "What broker does Goat Funded Trader use?", "a": "Goat Funded Trader does not use a traditional forex broker and instead operates on a simulated trading environment. This means your trades are not executed in real financial markets, but within a risk management system controlled by the firm. Unlike broker-backed prop firms, GFT does not disclose its liquidity providers or minimum spreads." },
+    { "q": "Does Goat Funded Trader allow expert advisors or copy trading?", "a": "You can use an EA, but must prove you own the code if requested. The firm prohibits third-party or commercially available EAs designed to pass challenges. Copy trading is completely banned — you cannot mirror trades between accounts. Violating these rules can lead to account termination and forfeited payouts." }
+  ],
+  "verified": true,
+  "flagged": true,
+  "flaggedWarning": "We do not recommend Goat Funded Trader due to payout delays, unclear trading conditions, and reports of unexpected account breaches. The firm lacks transparency on spreads, liquidity providers, and funded account leverage, making it difficult to assess long-term profitability.\n\nOur testing scored Goat Funded Trader **42/100**, and we only recommend firms scoring 50/100+. For a more reliable experience with better trust and clearer policies, consider broker-backed prop firms like [DNA Funded](/reviews/dna-funded) or [Blueberry Funded](/reviews/blueberry-funded).",
+  "methodologyVersion": "1.0",
+  "lastReviewedAt": "2026-02-24"
+}

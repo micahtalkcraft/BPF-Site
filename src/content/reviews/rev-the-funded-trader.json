@@ -1,0 +1,77 @@
+{
+  "id": "rev-the-funded-trader",
+  "propFirmId": "d0000015-0000-0000-0000-000000000015",
+  "summary": "With an overall score of 65/100, The Funded Trader lands in the middle of the pack. It stands out for the sheer number of challenges on offer and scaling that can reach $5 million, but it's not without issues. Support isn't 24/7, response times are often slow, and a low Trustpilot score shows the mixed reputation it has.\n\nTFT offers decent market access, scaling up to $5 million, and profit splits that reach 99% on most accounts. Platform choice is solid with MT5, cTrader, and Match-Trader available. The main drawbacks are high commissions, no published spreads, and constant rule changes.",
+  "pros": [
+    "200K challenge accounts available",
+    "Established Discord with 110,000+ members",
+    "Scaling plan up to $5 million",
+    "Profit splits up to 99% on most accounts",
+    "Three platform choices: MT5, cTrader, Match-Trader",
+    "Seven challenge types for flexibility"
+  ],
+  "cons": [
+    "Confusing challenge types with frequent rule changes",
+    "Low TrustPilot score of 3.0/5 from 22,000+ reviews",
+    "$25 fee for cTrader access",
+    "No published spread data",
+    "Higher commission fees ($4 per lot forex)",
+    "Support response times of 1–3 days"
+  ],
+  "bestFor": "Traders who want variety in challenge structures, large account sizes up to $200K, and long-term scaling potential up to $5 million",
+  "notIdealFor": "Traders needing transparent pricing, tight spreads, fast customer support, and consistent rules that don't change frequently",
+  "overallScore": 65,
+  "categoryScores": {
+    "challenges": 80,
+    "spreads": 60,
+    "markets": 70,
+    "payouts": 60,
+    "platforms": 70,
+    "trust": 50
+  },
+  "categorySections": {
+    "challenges": "custom",
+    "spreads": "custom",
+    "markets": "custom",
+    "platforms": "custom",
+    "payouts": "custom",
+    "support": "custom",
+    "trust": "custom"
+  },
+  "verdictBlocks": [
+    {
+      "heading": "Final Verdict on The Funded Trader",
+      "body": "The Funded Trader gives you one of the widest sets of challenge options in the industry, with account scaling that can reach $5 million and three platform choices. The range of evaluations is a plus, but it can also feel confusing, as rules and pricing aren't always consistent.\n\nOn the positive side, payout splits are competitive, scaling up to 99% for most accounts, and payouts are processed in 3 to 5 business days. The main exception is the Classic challenges, which remain fixed at 80%.\n\nWhere TFT falls short is in transparency and reliability. Spreads aren't published, commission fees are higher than many competitors, and support is limited to slower response times. Add to that a mixed Trustpilot score and frequent reports of payout delays, and you're left with a prop firm that offers strong upside but comes with risks."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is The Funded Trader?",
+      "a": "The Funded Trader is a prop trading firm that funds traders through evaluation challenges in forex, commodities, indices, and crypto. Account sizes range from $5,000 to $200,000, with scaling opportunities that reach up to $5 million for consistent performance. Instead of trading live capital, you trade on simulated accounts and receive profit splits based on your results, which start at 80% for Classic challenges and go as high as 99% on tiered accounts."
+    },
+    {
+      "q": "Does the funded trader use real money?",
+      "a": "No, The Funded Trader does not use real money during its challenges or funded accounts. It doesn't matter if you are trading during the evaluation process or funded stage, all takes place on simulated accounts that mirror live market conditions. Profit splits are paid from the firm's revenue rather than direct market profits, so while you're not trading real capital, you still earn payouts based on your performance."
+    },
+    {
+      "q": "How much does the funded trader program payout?",
+      "a": "Your payout split depends on the account type. Most challenges now use a tiered system that starts at 90% and can scale up to 99% as you complete more withdrawals. The exception is the Classic 1-Step and Classic 2-Step, which remain fixed at 80% from the start and don't scale higher."
+    },
+    {
+      "q": "What are The Funded Trader account sizes?",
+      "a": "The Funded Trader offers account sizes ranging from $5,000 to $200,000. Smaller accounts are available on challenges like Knight and Knight Pro, while larger tiers such as Royal, Classic, and Dragon extend up to $200,000. With scaling, you can grow these accounts significantly over time, reaching a maximum of $5 million depending on the challenge type."
+    },
+    {
+      "q": "How quickly can I receive payouts from The Funded Trader?",
+      "a": "Processing usually takes 3 to 5 business days after you submit a payout request. The timing of when you can first request a withdrawal depends on your account. For example, Knight and Knight Pro accounts allow payouts anytime once you're profitable, while Dragon accounts start after 7 days, and Royal accounts normally require 30 days unless you purchase the 14 day add-on. After the first payout, most accounts switch to 7 or 14 day cycles."
+    },
+    {
+      "q": "Can you scale your account with The Funded Trader program?",
+      "a": "Yes, The Funded Trader program allows account scaling for traders who consistently achieve profit targets, increasing both account size and profit share potential. Eligible traders who maintain at least a 6% profit over three months can expand their account balance by 25% of the initial balance per successful scaling event. This opportunity to grow accounts helps committed traders maximise returns and reach a maximum balance of up to $1.5 million or $5 million, depending on the challenge type."
+    }
+  ],
+  "verified": true,
+  "flagged": false,
+  "methodologyVersion": "1.0",
+  "lastReviewedAt": "2026-02-24"
+}

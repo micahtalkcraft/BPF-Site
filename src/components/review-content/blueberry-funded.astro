@@ -1,0 +1,1321 @@
+---
+// Static editorial content for Blueberry Funded
+// Supports multiple sections via the `section` prop
+interface Props {
+  section: string;
+  fallbackBody?: string;
+}
+const { section, fallbackBody } = Astro.props;
+---
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* CHALLENGES SECTION                                                  */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "challenges" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    Blueberry Funded offers one of the most diverse selections of challenges &ndash; two instant funding options, one and two step evaluations, plus rapid and synthetic accounts.
+  </p>
+
+  <!-- ─── Challenge Overview Table ────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Comparison</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-10">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-3 py-3 text-left">Attribute</th>
+          <th class="px-3 py-3 text-center">Instant Lite</th>
+          <th class="px-3 py-3 text-center">Instant Elite</th>
+          <th class="px-3 py-3 text-center">Rapid</th>
+          <th class="px-3 py-3 text-center">1 Step</th>
+          <th class="px-3 py-3 text-center">2 Step</th>
+          <th class="px-3 py-3 text-center">Prime 2 Step</th>
+          <th class="px-3 py-3 text-center">Synthetic</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-medium text-slate-600">Evaluation</td>
+          <td class="px-3 py-3 text-center text-slate-900">None</td>
+          <td class="px-3 py-3 text-center text-slate-900">None</td>
+          <td class="px-3 py-3 text-center text-slate-900">1 Step</td>
+          <td class="px-3 py-3 text-center text-slate-900">1 Step</td>
+          <td class="px-3 py-3 text-center text-slate-900">2 Step</td>
+          <td class="px-3 py-3 text-center text-slate-900">2 Step</td>
+          <td class="px-3 py-3 text-center text-slate-900">2 Step</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-medium text-slate-600">Account Sizes</td>
+          <td class="px-3 py-3 text-center text-slate-900">1.25K&ndash;100K</td>
+          <td class="px-3 py-3 text-center text-slate-900">2.5K&ndash;50K</td>
+          <td class="px-3 py-3 text-center text-slate-900">10K&ndash;100K</td>
+          <td class="px-3 py-3 text-center text-slate-900">5K&ndash;200K</td>
+          <td class="px-3 py-3 text-center text-slate-900">5K&ndash;200K</td>
+          <td class="px-3 py-3 text-center text-slate-900">5K&ndash;100K</td>
+          <td class="px-3 py-3 text-center text-slate-900">5K&ndash;100K</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-medium text-slate-600">Fees</td>
+          <td class="px-3 py-3 text-center text-slate-900">$37&ndash;$750</td>
+          <td class="px-3 py-3 text-center text-slate-900">$100&ndash;$1,500</td>
+          <td class="px-3 py-3 text-center text-slate-900">$50&ndash;$300</td>
+          <td class="px-3 py-3 text-center text-slate-900">$40&ndash;$1,100</td>
+          <td class="px-3 py-3 text-center text-slate-900">$35&ndash;$1,000</td>
+          <td class="px-3 py-3 text-center text-slate-900">$55&ndash;$650</td>
+          <td class="px-3 py-3 text-center text-slate-900">$25&ndash;$450</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-medium text-slate-600">Profit Target</td>
+          <td class="px-3 py-3 text-center text-slate-400">N/A</td>
+          <td class="px-3 py-3 text-center text-slate-400">N/A</td>
+          <td class="px-3 py-3 text-center text-slate-900">5%</td>
+          <td class="px-3 py-3 text-center text-slate-900">10%</td>
+          <td class="px-3 py-3 text-center text-slate-900">P1 10%, P2 5%</td>
+          <td class="px-3 py-3 text-center text-slate-900">P1 8%, P2 6%</td>
+          <td class="px-3 py-3 text-center text-slate-900">P1 10%, P2 5%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-medium text-slate-600">Total Loss</td>
+          <td class="px-3 py-3 text-center text-slate-900">4%</td>
+          <td class="px-3 py-3 text-center text-slate-900">10%</td>
+          <td class="px-3 py-3 text-center text-slate-900">4%</td>
+          <td class="px-3 py-3 text-center text-slate-900">6%</td>
+          <td class="px-3 py-3 text-center text-slate-900">10%</td>
+          <td class="px-3 py-3 text-center text-slate-900">10%</td>
+          <td class="px-3 py-3 text-center text-slate-900">10%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-medium text-slate-600">Daily Loss</td>
+          <td class="px-3 py-3 text-center text-slate-900">2%</td>
+          <td class="px-3 py-3 text-center text-slate-400">None</td>
+          <td class="px-3 py-3 text-center text-slate-900">3%</td>
+          <td class="px-3 py-3 text-center text-slate-900">4%</td>
+          <td class="px-3 py-3 text-center text-slate-900">5%</td>
+          <td class="px-3 py-3 text-center text-slate-900">4%</td>
+          <td class="px-3 py-3 text-center text-slate-900">4%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-medium text-slate-600">Drawdown Type</td>
+          <td class="px-3 py-3 text-center text-slate-900">Trailing Lock</td>
+          <td class="px-3 py-3 text-center text-slate-900">Trailing Lock</td>
+          <td class="px-3 py-3 text-center text-slate-900">Trailing</td>
+          <td class="px-3 py-3 text-center text-slate-900">Static</td>
+          <td class="px-3 py-3 text-center text-slate-900">Static</td>
+          <td class="px-3 py-3 text-center text-slate-900">Static</td>
+          <td class="px-3 py-3 text-center text-slate-900">Static</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-medium text-slate-600">Max Trading Days</td>
+          <td class="px-3 py-3 text-center text-slate-400">None</td>
+          <td class="px-3 py-3 text-center text-slate-400">None</td>
+          <td class="px-3 py-3 text-center text-slate-900">7 Days</td>
+          <td class="px-3 py-3 text-center text-slate-400">None</td>
+          <td class="px-3 py-3 text-center text-slate-400">None</td>
+          <td class="px-3 py-3 text-center text-slate-400">None</td>
+          <td class="px-3 py-3 text-center text-slate-400">None</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-medium text-slate-600">Profit Split</td>
+          <td class="px-3 py-3 text-center font-semibold text-teal-600">80%</td>
+          <td class="px-3 py-3 text-center font-semibold text-teal-600">80%</td>
+          <td class="px-3 py-3 text-center font-semibold text-teal-600">80%</td>
+          <td class="px-3 py-3 text-center font-semibold text-teal-600">80%</td>
+          <td class="px-3 py-3 text-center font-semibold text-teal-600">80%</td>
+          <td class="px-3 py-3 text-center font-semibold text-teal-600">80%</td>
+          <td class="px-3 py-3 text-center font-semibold text-teal-600">80%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- INSTANT LITE                                                    -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">1</span>
+      Instant Lite
+    </h3>
+
+    <p class="mb-3">
+      The Instant Lite account is Blueberry's entry level instant funding model. You start trading a live simulated balance from day one, with no evaluation process to complete. The drawdown is set at 2% per day and 4% in total, using a trailing lock structure that rises as your equity grows.
+    </p>
+    <p class="mb-4">
+      The risk limits are tight, so you need controlled sizing and quick risk management, but the direct funding means you can focus entirely on execution rather than targets.
+    </p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
+        <p class="text-sm font-bold text-slate-800">None</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Drawdown Type</p>
+        <p class="text-sm font-bold text-slate-800">Trailing Lock</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Loss</p>
+        <p class="text-sm font-bold text-slate-800">2%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Total Loss</p>
+        <p class="text-sm font-bold text-slate-800">4%</p>
+      </div>
+    </div>
+
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">One-Off Fee</th>
+            <th class="px-4 py-3 text-right">Max Total Loss (4%)</th>
+            <th class="px-4 py-3 text-right">Max Daily Loss (2%)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-900">$100</td>
+            <td class="px-4 py-3 text-right text-slate-700">$100</td>
+            <td class="px-4 py-3 text-right text-slate-700">$50</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$300</td>
+            <td class="px-4 py-3 text-right text-slate-700">$200</td>
+            <td class="px-4 py-3 text-right text-slate-700">$100</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$400</td>
+            <td class="px-4 py-3 text-right text-slate-700">$400</td>
+            <td class="px-4 py-3 text-right text-slate-700">$200</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$800</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$1,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- INSTANT ELITE                                                   -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">2</span>
+      Instant Elite
+    </h3>
+
+    <p class="mb-3">
+      Instant Elite builds on the Lite structure with higher capital access, wider limits, and a more forgiving drawdown system. You also trade a simulated funded balance immediately, but the total loss limit increases to 10% and there is no daily restriction.
+    </p>
+    <p class="mb-4">
+      It's designed for experienced traders who already have a clear risk process and want to operate with more freedom. The trailing lock drawdown protects capital as your equity grows but leaves more room for strategic trades and portfolio style positioning.
+    </p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
+        <p class="text-sm font-bold text-slate-800">None</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Drawdown Type</p>
+        <p class="text-sm font-bold text-slate-800">Trailing Lock</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Loss</p>
+        <p class="text-sm font-bold text-slate-800">None</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Total Loss</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+    </div>
+
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">One-Off Fee</th>
+            <th class="px-4 py-3 text-right">Max Total Loss (10%)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$1,250</td>
+            <td class="px-4 py-3 text-right text-slate-900">$37.04</td>
+            <td class="px-4 py-3 text-right text-slate-700">$125</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-900">$55.56</td>
+            <td class="px-4 py-3 text-right text-slate-700">$250</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$83.33</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$125.00</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$187.50</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$375.00</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$750.00</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- RAPID CHALLENGE                                                 -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">3</span>
+      Rapid Challenge
+    </h3>
+
+    <p class="mb-3">
+      The Rapid Challenge is built for those who like a short, focused evaluation with immediate feedback. You have seven days to reach a 5% profit target while keeping within a 3% daily and 4% total trailing drawdown. The format rewards precision and consistency, not luck, and every trade counts toward the finish.
+    </p>
+    <p class="mb-4">
+      There's no minimum trading day requirement, so you can complete it in one strong run or pace yourself across the week. The trailing drawdown structure locks in equity as you progress, meaning risk management becomes just as important as performance.
+    </p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Drawdown Type</p>
+        <p class="text-sm font-bold text-slate-800">Trailing</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Loss</p>
+        <p class="text-sm font-bold text-slate-800">3%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Time Limit</p>
+        <p class="text-sm font-bold text-slate-800">7 Days</p>
+      </div>
+    </div>
+
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">One-Off Fee</th>
+            <th class="px-4 py-3 text-right">Profit Target</th>
+            <th class="px-4 py-3 text-right">Max Total Loss</th>
+            <th class="px-4 py-3 text-right">Max Daily Loss</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$50</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$400</td>
+            <td class="px-4 py-3 text-right text-slate-700">$300</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$100</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$750</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$200</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$300</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$4,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 1 STEP CHALLENGE                                                -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">4</span>
+      1 Step Challenge
+    </h3>
+
+    <p class="mb-3">
+      The One Step Challenge is the simplest path to funding and one of the most balanced options available. You only need to complete a single step, reaching a 10% target while staying within a 6% total and 4% daily drawdown. There is no time limit, so you can approach it at your own pace.
+    </p>
+    <p class="mb-4">
+      The static drawdown creates a steady environment where your limits never move, which helps maintain focus and consistency.
+    </p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Drawdown Type</p>
+        <p class="text-sm font-bold text-slate-800">Static</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Loss</p>
+        <p class="text-sm font-bold text-slate-800">4%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Total Loss</p>
+        <p class="text-sm font-bold text-slate-800">6%</p>
+      </div>
+    </div>
+
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">One-Off Fee</th>
+            <th class="px-4 py-3 text-right">Profit Target</th>
+            <th class="px-4 py-3 text-right">Max Total Loss</th>
+            <th class="px-4 py-3 text-right">Max Daily Loss</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$40</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$300</td>
+            <td class="px-4 py-3 text-right text-slate-700">$200</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$75</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$600</td>
+            <td class="px-4 py-3 text-right text-slate-700">$400</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$150</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$275</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$550</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$6,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$4,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$200,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$1,100</td>
+            <td class="px-4 py-3 text-right text-slate-700">$20,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$12,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$8,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 2 STEP CHALLENGE                                                -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">5</span>
+      2 Step Challenge
+    </h3>
+
+    <p class="mb-3">
+      The Two Step Challenge is Blueberry Funded's structured evaluation. It runs across two phases, with a 10% target in Step One and a 5% target in Step Two. The daily loss limit is 5%, and the overall drawdown cap is 10%, both fixed as static levels that do not move with your equity.
+    </p>
+    <p class="mb-4">
+      The tighter structure means risk discipline matters more than high win rates. The 10% and 5% targets are achievable without forcing trades, and the static drawdown keeps risk predictable throughout both stages.
+    </p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 1 Target</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 2 Target</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Loss</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Total Loss</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+    </div>
+
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">One-Off Fee</th>
+            <th class="px-4 py-3 text-right">P1 Target</th>
+            <th class="px-4 py-3 text-right">P2 Target</th>
+            <th class="px-4 py-3 text-right">Max Total Loss</th>
+            <th class="px-4 py-3 text-right">Max Daily Loss</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$35</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$250</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$60</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$125</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,250</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$200,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$20,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$20,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- PRIME 2 STEP                                                    -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">6</span>
+      Prime &ndash; 2 Step Challenge
+    </h3>
+
+    <p class="mb-3">
+      The Prime Two Step Challenge is an advanced version of Blueberry's standard two step model. It maintains the same structure but uses an 8% target in Step One and 6% in Step Two, with a tighter 4% daily loss limit while keeping the 10% overall drawdown. Both are fixed as static thresholds.
+    </p>
+    <p class="mb-4">
+      Each step must include a minimum of 5 active trading days, while all other Blueberry Funded multi step challenges have a 3 day minimum. The Prime challenge is designed for experienced traders who already operate within defined risk boundaries.
+    </p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 1 Target</p>
+        <p class="text-sm font-bold text-slate-800">8%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 2 Target</p>
+        <p class="text-sm font-bold text-slate-800">6%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Loss</p>
+        <p class="text-sm font-bold text-slate-800">4%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Trading Days</p>
+        <p class="text-sm font-bold text-slate-800">5 per step</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SYNTHETIC CHALLENGE                                             -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">7</span>
+      Synthetic Challenge
+    </h3>
+
+    <p class="mb-3">
+      The Synthetic Challenge is unique to Blueberry and easily its most experimental option. It's a two step structure focused entirely on synthetic indices &ndash; instruments designed to mirror volatility patterns rather than track real world markets. Profit targets remain at 10% and 5%, with a 4% daily and 10% total static drawdown.
+    </p>
+    <p class="mb-4">
+      These markets trade continuously, offering constant movement without the influence of news events. If you enjoy analysing price structure and thrive on active market flow, this challenge provides that experience. It feels different from anything tied to real assets and is one of the most engaging ways to test a rule-based strategy in a controlled environment.
+    </p>
+
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">One-Off Fee</th>
+            <th class="px-4 py-3 text-right">P1 Target</th>
+            <th class="px-4 py-3 text-right">P2 Target</th>
+            <th class="px-4 py-3 text-right">Max Total Loss</th>
+            <th class="px-4 py-3 text-right">Max Daily Loss</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$25</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$200</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$50</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$400</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$115</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$225</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$450</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$4,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ─── Trading Rules ───────────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules</h3>
+  <p class="mb-4">
+    Blueberry Funded enforces clear trading rules to ensure responsible trading practices, banning high-risk strategies like Martingale, grid trading, and excessive scalping while allowing Expert Advisors (EAs) for automated trading and trading over weekends.
+  </p>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Rule</th>
+          <th class="px-4 py-3 text-center">Allowed</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 text-slate-900">Copy Trading (Own Accounts)</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 text-slate-900">Copy Trading (Other Accounts)</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 text-slate-900">EA Trading</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 text-slate-900">News Trading</td>
+          <td class="px-4 py-3 text-center text-slate-700">10-min window either side</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 text-slate-900">Weekend Trading</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 text-slate-900">High-Frequency Trading</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 text-slate-900">Tick Scalping / Latency Arbitrage</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 text-slate-900">Martingale / Grid Trading</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ─── Scaling Plan ────────────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Scaling Plan</h3>
+  <p class="mb-4">
+    Blueberry Funded offers one of the strongest scaling plans in the prop trading space. If you're profitable and consistent, you can grow your funded account over time without starting a new evaluation. Every 3 months, your account can scale up by <strong>25%</strong> as long as you meet two conditions:
+  </p>
+
+  <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-4">
+    <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-2">Scaling Qualification</p>
+    <ul class="text-sm text-teal-700 space-y-1 list-disc list-inside">
+      <li>Achieved at least 10% net profit over the 3-month period</li>
+      <li>Completed at least 4 successful profit withdrawals</li>
+    </ul>
+  </div>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-4">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Detail</th>
+          <th class="px-4 py-3 text-right">Value</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 text-slate-900">Scaling Interval</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">Every 3 months</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 text-slate-900">Capital Increment</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">25% increase</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 text-slate-900">Profit Split</td>
+          <td class="px-4 py-3 text-right font-semibold text-teal-600">80% &rarr; 90%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 text-slate-900">Max Allocation</td>
+          <td class="px-4 py-3 text-right font-semibold text-teal-600">$2,000,000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h4 class="text-base font-bold text-slate-900 mb-3">$200K Account Scaling Timeline</h4>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Timeframe</th>
+          <th class="px-4 py-3 text-right">Account Balance</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 text-slate-900">0 months</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$200,000</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 text-slate-900">3 months</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$250,000</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 text-slate-900">6 months</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$300,000</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 text-slate-900">9 months</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$350,000</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 text-slate-900">12 months</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$400,000</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 text-slate-900">18 months</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$500,000</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 text-slate-900">24 months</td>
+          <td class="px-4 py-3 text-right font-semibold text-teal-600">$600,000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Blueberry Funded Challenges</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Blueberry Funded scores 9.5/10 for Challenges, reflecting its strong technical design and consistent rule framework. Each challenge type is clearly structured, with transparent drawdown limits, realistic profit targets, and fair entry costs. The majority of evaluations use static drawdown, providing predictable risk, while Instant and Rapid accounts apply a trailing lock that scales with equity. Profit targets are achievable at 5% to 10%, and total drawdown limits are capped at 10%, matching the top tier range in our methodology for fairness and flexibility.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SPREADS / COMMISSION FEES & PRICING SECTION                         */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "spreads" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Blueberry Funded offers raw spreads from <strong>0.1 pips</strong> and a flat <strong>$7 round-turn</strong> commission on forex and gold. Crypto, indices, and commodities have no commission, while stocks are now included via the Stock Challenge with a <strong>$2 per lot</strong> commission fee. These low, fixed costs contribute to the prop firm's strong 9/10 spreads score.
+  </p>
+
+  <!-- Forex Spreads -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Forex Spreads</h3>
+  <p class="mb-4">
+    Blueberry Funded offers low forex spreads for major pairs which are below the industry average. AUD/USD at 0.1 pips vs industry 0.46 pips, GBP/USD at 0.2 pips vs 0.52 pips, and EUR/USD at 0.2 pips vs 0.22 pips. However, USD/CAD (1.2 pips) and USD/JPY (0.6 pips) are higher than industry averages.
+  </p>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-5 py-3 text-left">Instrument</th>
+          <th class="px-5 py-3 text-right">Blueberry Spread</th>
+          <th class="px-5 py-3 text-right">Industry Average</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">EUR/USD</td>
+          <td class="px-5 py-3 text-right font-bold text-teal-600">0.2 pips</td>
+          <td class="px-5 py-3 text-right text-slate-500">0.22 pips</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">AUD/USD</td>
+          <td class="px-5 py-3 text-right font-bold text-teal-600">0.1 pips</td>
+          <td class="px-5 py-3 text-right text-slate-500">0.46 pips</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">GBP/USD</td>
+          <td class="px-5 py-3 text-right font-bold text-teal-600">0.2 pips</td>
+          <td class="px-5 py-3 text-right text-slate-500">0.52 pips</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">USD/CAD</td>
+          <td class="px-5 py-3 text-right text-amber-600">1.2 pips</td>
+          <td class="px-5 py-3 text-right text-slate-500">0.66 pips</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">USD/JPY</td>
+          <td class="px-5 py-3 text-right text-amber-600">0.6 pips</td>
+          <td class="px-5 py-3 text-right text-slate-500">0.41 pips</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Commission Fees -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Commission Fees</h3>
+  <p class="mb-4">
+    Blueberry Funded charges a flat commission of $7 round turn for forex trades, with $3.50 charged when opening and closing a position. The same $7 round-turn rate applies to gold (XAU pairs). All other commodities, indices, and cryptocurrencies remain commission-free.
+  </p>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-5 py-3 text-left">Instrument</th>
+          <th class="px-5 py-3 text-right">Per Side (per 100k)</th>
+          <th class="px-5 py-3 text-right">Round Turn (per 100k)</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">Forex pairs</td>
+          <td class="px-5 py-3 text-right text-slate-900">$3.50</td>
+          <td class="px-5 py-3 text-right text-slate-900">$7.00</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">XAU/USD (Gold)</td>
+          <td class="px-5 py-3 text-right text-slate-900">$3.50</td>
+          <td class="px-5 py-3 text-right text-slate-900">$7.00</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">Other Commodities</td>
+          <td class="px-5 py-3 text-right font-semibold text-teal-600">$0</td>
+          <td class="px-5 py-3 text-right font-semibold text-teal-600">$0</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">Indices</td>
+          <td class="px-5 py-3 text-right font-semibold text-teal-600">$0</td>
+          <td class="px-5 py-3 text-right font-semibold text-teal-600">$0</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">Crypto</td>
+          <td class="px-5 py-3 text-right font-semibold text-teal-600">$0</td>
+          <td class="px-5 py-3 text-right font-semibold text-teal-600">$0</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">US Stocks</td>
+          <td class="px-5 py-3 text-right text-slate-900">$1.00</td>
+          <td class="px-5 py-3 text-right text-slate-900">$2.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Commissions &amp; Pricing</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Blueberry Funded keeps costs low with tight forex spreads, a $7 commission on FX and gold, and $2 on US stocks. This simple, fixed pricing supports its strong 9/10 spreads score and makes it a solid choice for cost-focused traders.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* MARKETS / FINANCIAL MARKETS & LEVERAGE SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "markets" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Blueberry Funded gives you access to <strong>1,100+ instruments</strong> across forex, crypto, indices, commodities, stocks, and synthetics. The inclusion of synthetic indices with constant volatility and unique tick behaviour sets it apart from most prop firms.
+  </p>
+
+  <!-- Markets & Leverage table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Markets &amp; Leverage</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Asset Class</th>
+          <th class="px-4 py-3 text-center">Instruments</th>
+          <th class="px-4 py-3 text-center">Max Leverage</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Forex</td>
+          <td class="px-4 py-3 text-center text-slate-900">45 pairs</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">1:50 / 1:30</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Indices</td>
+          <td class="px-4 py-3 text-center text-slate-900">14</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">1:10</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Commodities</td>
+          <td class="px-4 py-3 text-center text-slate-900">17</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">1:10</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Crypto</td>
+          <td class="px-4 py-3 text-center text-slate-900">52</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">1:2</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Stocks</td>
+          <td class="px-4 py-3 text-center text-slate-900">1,000+</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">1:10</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Synthetics</td>
+          <td class="px-4 py-3 text-center text-slate-900">12</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">1:30</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Market detail cards -->
+  <div class="space-y-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Forex (45 pairs)</p>
+      <p>Majors, minors, and exotics. Leverage varies by challenge: 50:1 on two step, prime two step, and instant elite; 30:1 on one step, rapid, instant lite, and synthetics.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Crypto (52 instruments)</p>
+      <p>One of the largest crypto selections available. BTC, ETH, ADA, DOT, SOL and more. Trade 24/7 with 1:2 leverage.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Stock CFDs (1,000+)</p>
+      <p>US stock CFDs available through the dedicated Stock Challenge. Major listed companies across tech, finance, and healthcare at 1:10 leverage.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Synthetics (12 indices)</p>
+      <p>Custom indices across four categories: SYN, Surge, Drop, and Leap. Constant price action with tick intervals as short as one second. Unique to Blueberry Funded.</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Financial Markets &amp; Leverage</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      With access to over 1,100 instruments, strong leverage on forex and indices, and the unique addition of synthetics, Blueberry Funded ranks as one of the most versatile firms in the space. It's especially strong if you are looking to diversify or trade outside traditional markets, earning it a perfect 10/10 in this area.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PLATFORMS / TRADING PLATFORMS SECTION                                */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "platforms" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Blueberry Funded gives you access to four platforms &ndash; <strong>MT4</strong>, <strong>MT5</strong>, <strong>DXTrade</strong>, and <strong>TradeLocker</strong>. We tested all platforms during our evaluation, scoring them on functionality, toolsets, and ease of use.
+  </p>
+
+  <!-- Platform Availability -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Platform Availability by Challenge</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Platform</th>
+          <th class="px-4 py-3 text-center">1 Step</th>
+          <th class="px-4 py-3 text-center">2 Step</th>
+          <th class="px-4 py-3 text-center">Rapid</th>
+          <th class="px-4 py-3 text-center">Stock Challenge</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">MetaTrader 4</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">MetaTrader 5</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">DXTrade</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">TradeLocker</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Platform cards -->
+  <div class="space-y-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">MetaTrader 4 (MT4)</p>
+      <p>One of the most widely used platforms for forex trading. Automated trading via EAs, advanced charting with multiple timeframes and indicators, one-click trading, and risk management tools including stop-loss, take-profit, and trailing stops. Ideal for traders looking for a simple yet powerful platform.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">MetaTrader 5 (MT5)</p>
+      <p>The upgraded version of MT4 with more order types (6 pending orders vs MT4's 4), Level 2 Depth of Market, 21 timeframes and 38 technical indicators, and multi-threaded backtesting. Suited for more advanced traders needing sophisticated tools.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">DXTrade</p>
+      <p>A browser-based platform with a customisable interface and multi-asset access. However, it lacks some advanced functionalities and we experienced delays in trade execution and connection losses during testing.</p>
+      <p class="text-xs text-amber-600 font-semibold mt-1">We experienced execution delays during testing</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">TradeLocker</p>
+      <p>A newer browser-based platform focused on speed and user experience. Web and mobile access with no downloads, drag-and-drop order placement, real-time trade monitoring, and price alerts. A good middle ground between DXTrade and MetaTrader.</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trading Platforms</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      We scored Blueberry Funded 9/10 for Prop Platforms after testing execution speed, layout, and tools across all four options. MT4 and MT5 provide advanced features and EA support, while TradeLocker delivered a smooth mobile experience with a clean interface and DXTrade was functional but basic. Overall, the platform range covers most trading styles without restricting access.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PAYOUTS / PAYMENTS & PROFIT PAYOUT SECTION                          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "payouts" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    With Blueberry Funded, you can withdraw profits on a <strong>14-day payout cycle</strong> (or faster with an optional upgrade), with a minimum withdrawal amount of <strong>$100</strong>, giving you predictable and regular access to your funded account earnings. Payouts are handled through <strong>RiseWorks</strong> and are typically settled in cryptocurrency such as USDC or USDT, with profit splits starting at <strong>80%</strong> and increasing to <strong>90%</strong>.
+  </p>
+
+  <!-- Payout overview -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Payout Cycle</p>
+      <p class="text-sm font-bold text-slate-800">14 Days</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Withdrawal</p>
+      <p class="text-sm font-bold text-slate-800">$100</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
+      <p class="text-sm font-bold text-teal-600">80% &ndash; 90%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Processing</p>
+      <p class="text-sm font-bold text-slate-800">1&ndash;2 days</p>
+    </div>
+  </div>
+
+  <!-- Payment Methods -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payment Methods for Challenge Fees</h3>
+  <p class="mb-4">
+    You can pay challenge fees using cryptocurrency or credit and debit cards. All challenge fees are paid as a one-time upfront cost with no instalment options.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Cryptocurrencies</p>
+      <p>Bitcoin, Lightning Network, stablecoins, and other supported assets via Confirmo</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Credit &amp; Debit Cards</p>
+      <p>Visa and Mastercard accepted</p>
+    </div>
+  </div>
+
+  <!-- Payout Policy -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payout Policy</h3>
+  <p class="mb-4">
+    Profit withdrawals are handled through RiseWorks, with payout options including USDC and USDT (TRC20). To qualify for a payout, your account must:
+  </p>
+
+  <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-6">
+    <ul class="text-sm text-teal-700 space-y-1 list-disc list-inside">
+      <li>Be in profit by at least $100</li>
+      <li>Have no open positions at the time of withdrawal</li>
+      <li>Be fully compliant with all trading rules and account conditions</li>
+    </ul>
+  </div>
+
+  <p class="mb-6">
+    Once submitted and approved, payout requests are typically processed within <strong>1 to 2 business days</strong>, which is competitive compared to most prop firms.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Payments &amp; Profit Shares</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Blueberry Funded offers a clear and reliable payout system, built around a predictable 14-day withdrawal cycle, a low $100 minimum payout, and fast crypto-based processing through RiseWorks. The option to increase your profit split to 90% adds flexibility, while the approval process remains transparent and easy to follow. These factors result in a score of 9/10 for payments and payouts.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SUPPORT / CUSTOMER SERVICE & EDUCATION SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "support" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    Blueberry Funded provides <strong>24/5 customer support</strong> via email and live chat, ensuring assistance is available during the trading week. However, its educational resources are limited, with a small YouTube presence and reliance on Discord for community-driven insights.
+  </p>
+
+  <!-- Customer Support -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Customer Support</h3>
+  <p class="mb-4">
+    Their FAQ section is comprehensive, providing answers to many key questions traders might have regarding platforms, fees, and trading rules. However, weekend inquiries may take up to 24 hours for a response.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Email Support</p>
+      <p>Available 24/5 during trading week</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Live Chat</p>
+      <p>Available 24/5 for real-time assistance</p>
+    </div>
+  </div>
+
+  <!-- Educational Resources -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Educational Resources</h3>
+  <p class="mb-4">
+    When it comes to educational content, Blueberry Funded lacks a strong presence on platforms like YouTube, with only a few dozen videos and nearly 500 subscribers, focusing more on promotional material than comprehensive educational content. The <strong>Discord community</strong> serves as the primary resource for trading insights and peer advice.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Customer Service &amp; Education</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      While Blueberry Funded offers reliable 24/5 support and a solid FAQ, the firm could improve its educational offerings, especially through a stronger YouTube presence or more structured learning resources. The Discord community, while helpful, cannot fully substitute for these educational gaps.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* TRUST / TRUST & COMMUNITY SECTION                                   */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "trust" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    Blueberry Funded scores 9/10 for Trust thanks to its <strong>ASIC-regulated</strong> backing, active community, and recent move to join <strong>The Prop Association</strong> &ndash; a new industry body focused on fairness, certification, and external dispute resolution.
+  </p>
+
+  <!-- Trustpilot -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Blueberry Funded TrustPilot Reviews</h3>
+
+  <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 mb-6 flex items-center gap-4">
+    <div class="flex-shrink-0">
+      <p class="text-3xl font-black text-slate-900">3.8<span class="text-lg text-slate-400">/5</span></p>
+      <p class="text-xs text-slate-500 font-semibold">TrustScore</p>
+    </div>
+    <div>
+      <p class="text-sm text-slate-700">Based on over <strong>1,200 reviews</strong> on TrustPilot. A large number of reviews are positive, highlighting fast withdrawals and responsive customer service. Minor concerns include frequent rule changes and news trading restrictions.</p>
+    </div>
+  </div>
+
+  <!-- Broker Backed -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Broker Backed Prop Firm</h3>
+  <p class="mb-6">
+    Blueberry Funded is backed by <strong>Blueberry Markets</strong>, an Australian forex broker regulated by <strong>ASIC</strong>. Its parent company, Blueberry Australia Pty Ltd, holds an AFSL licence (No. 000535887), which authorises it to provide financial services including forex and derivatives trading. This regulated backing gives Blueberry Funded added credibility and operational oversight.
+  </p>
+
+  <!-- The Prop Association -->
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
+    <p class="text-sm font-bold text-amber-900 mb-1">The Prop Association (TPA)</p>
+    <p class="text-sm text-amber-800">
+      In April 2025, Blueberry Funded became a founding member of The Prop Association. This is a self-regulatory body created to improve standards in the prop trading industry, providing certification, dispute resolution, and transparency benchmarks.
+    </p>
+  </div>
+
+  <!-- Community -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Community</h3>
+
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">32,700+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Discord</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">41,700+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Twitter/X</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">31,500+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Instagram</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">3.8/5</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">TrustPilot</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trust &amp; Community</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      With a great TrustPilot score, ASIC-regulated backing, and active community channels, Blueberry Funded offers a high level of transparency and trader engagement. Their role as a founding member of The Prop Association adds an extra layer of trust and accountability, contributing to their 9/10 score for Trust in our rankings.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* FALLBACK — sections not customised render the default text          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section !== "challenges" && section !== "spreads" && section !== "markets" && section !== "platforms" && section !== "payouts" && section !== "support" && section !== "trust" && fallbackBody && (
+  <div class="text-sm leading-relaxed text-slate-700 space-y-4">
+    {fallbackBody.split("\n\n").map((para) => (
+      <p set:html={para.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")} />
+    ))}
+  </div>
+)}

@@ -1,0 +1,106 @@
+{
+  "id": "d0000013-0000-0000-0000-000000000013",
+  "slug": "instant-funding",
+  "name": "Instant Funding",
+  "status": "active",
+  "foundedYear": 2020,
+  "hqCountry": "LC",
+  "evaluation": {
+    "types": ["instant", "1-step", "2-step"],
+    "profitTargets": { "phase1": 10, "phase2": 5 },
+    "dailyDrawdown": 5,
+    "maxDrawdown": 10,
+    "minTradingDays": 3,
+    "scalingPlan": true
+  },
+  "pricing": {
+    "challengeFees": [
+      { "accountSize": 625, "fee": 44, "model": "instant-funding" },
+      { "accountSize": 1250, "fee": 84, "model": "instant-funding" },
+      { "accountSize": 2500, "fee": 129, "model": "instant-funding" },
+      { "accountSize": 5000, "fee": 239, "model": "instant-funding" },
+      { "accountSize": 10000, "fee": 459, "model": "instant-funding" },
+      { "accountSize": 20000, "fee": 899, "model": "instant-funding" },
+      { "accountSize": 40000, "fee": 1849, "model": "instant-funding" },
+      { "accountSize": 80000, "fee": 3699, "model": "instant-funding" },
+      { "accountSize": 120000, "fee": 5499, "model": "instant-funding" },
+      { "accountSize": 5000, "fee": 42, "model": "instant-micro" },
+      { "accountSize": 10000, "fee": 79, "model": "instant-micro" },
+      { "accountSize": 25000, "fee": 169, "model": "instant-micro" },
+      { "accountSize": 50000, "fee": 319, "model": "instant-micro" },
+      { "accountSize": 100000, "fee": 589, "model": "instant-micro" },
+      { "accountSize": 200000, "fee": 1199, "model": "instant-micro" },
+      { "accountSize": 300000, "fee": 1659, "model": "instant-micro" },
+      { "accountSize": 2000, "fee": 25, "model": "if1" },
+      { "accountSize": 5000, "fee": 38, "model": "if1" },
+      { "accountSize": 10000, "fee": 63, "model": "if1" },
+      { "accountSize": 20000, "fee": 119, "model": "if1" },
+      { "accountSize": 50000, "fee": 289, "model": "if1" },
+      { "accountSize": 100000, "fee": 484, "model": "if1" },
+      { "accountSize": 200000, "fee": 939, "model": "if1" },
+      { "accountSize": 5000, "fee": 49, "model": "one-step" },
+      { "accountSize": 10000, "fee": 94, "model": "one-step" },
+      { "accountSize": 25000, "fee": 199, "model": "one-step" },
+      { "accountSize": 50000, "fee": 329, "model": "one-step" },
+      { "accountSize": 100000, "fee": 599, "model": "one-step" },
+      { "accountSize": 200000, "fee": 1199, "model": "one-step" },
+      { "accountSize": 10000, "fee": 39, "model": "one-step-micro" },
+      { "accountSize": 25000, "fee": 64, "model": "one-step-micro" },
+      { "accountSize": 50000, "fee": 114, "model": "one-step-micro" },
+      { "accountSize": 100000, "fee": 219, "model": "one-step-micro" },
+      { "accountSize": 200000, "fee": 399, "model": "one-step-micro" },
+      { "accountSize": 5000, "fee": 39, "model": "two-step" },
+      { "accountSize": 10000, "fee": 63, "model": "two-step" },
+      { "accountSize": 25000, "fee": 149, "model": "two-step" },
+      { "accountSize": 50000, "fee": 254, "model": "two-step" },
+      { "accountSize": 100000, "fee": 439, "model": "two-step" },
+      { "accountSize": 200000, "fee": 999, "model": "two-step" },
+      { "accountSize": 5000, "fee": 39, "model": "two-step-max" },
+      { "accountSize": 10000, "fee": 49, "model": "two-step-max" },
+      { "accountSize": 25000, "fee": 104, "model": "two-step-max" },
+      { "accountSize": 50000, "fee": 214, "model": "two-step-max" },
+      { "accountSize": 100000, "fee": 419, "model": "two-step-max" },
+      { "accountSize": 200000, "fee": 899, "model": "two-step-max" }
+    ],
+    "resetFee": null,
+    "refundPolicy": "Non-refundable upfront fees"
+  },
+  "payouts": {
+    "splitMax": 95,
+    "schedule": "Varies by account (on-demand, weekly, bi-weekly)",
+    "processingTime": "48 business hours",
+    "firstPayoutDays": 14,
+    "methods": ["Visa", "Mastercard", "American Express", "Google Pay", "Skrill", "Sofort", "Neteller", "crypto (USDC)"]
+  },
+  "rules": {
+    "newsTrading": false,
+    "weekendHolding": false,
+    "copyTrading": false,
+    "expertAdvisors": true,
+    "consistencyRule": "15-40% Best Day rule — best trading day cannot exceed 15-40% of total profit depending on account type",
+    "notes": "News trading and weekend holding restricted by default on most accounts; available via paid add-ons on Instant Funding, One Step, and Two Step. Allowed by default on IF Micro, IF1, One Step Micro, and Two Step Max. HFT, grid trading, latency arbitrage, copy trading, and tick-scalping strictly prohibited. EAs allowed only if private (not public third-party). Inactivity limit: 60 days. Max lot sizes enforced per account size and asset class."
+  },
+  "markets": {
+    "platforms": ["MT5", "cTrader", "Match-Trader"],
+    "instruments": "Forex (31 pairs), Metals (2), Indices (7), Commodities (2), Crypto (9)"
+  },
+  "trust": {
+    "trustpilotRating": null,
+    "trustpilotCount": 4700,
+    "communitySize": "Active Discord community",
+    "notableFlags": ["Not broker-backed", "Registered in Saint Lucia (IF Pro Ltd)", "TrustPilot reviews removed due to guideline breach", "Acello Limited as payment agent"]
+  },
+  "links": { "website": "https://instantfunding.io" },
+  "media": { "logo": "/images/logos/instant-funding-logo-1.png" },
+  "availability": { "restrictedCountries": [] },
+  "support": {
+    "liveChat": true,
+    "email": true
+  },
+  "custom": {
+    "tags": ["Instant Funded", "No Evaluation", "7 Account Types", "Up to 95% Split"]
+  },
+  "lastVerifiedAt": "2026-02-24",
+  "lastUpdatedAt": "2026-02-24",
+  "dataSources": ["https://instantfunding.io"]
+}

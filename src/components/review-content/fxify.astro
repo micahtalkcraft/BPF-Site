@@ -1,0 +1,1184 @@
+---
+// Static editorial content for FXIFY (CFD)
+// Supports multiple sections via the `section` prop
+interface Props {
+  section: string;
+  fallbackBody?: string;
+}
+const { section, fallbackBody } = Astro.props;
+---
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* CHALLENGES SECTION                                                  */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "challenges" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    FXIFY offers an excellent selection of challenge types, including <strong>Instant</strong>, <strong>Lightning</strong>, <strong>One Step</strong>, <strong>Two Step</strong>, and <strong>Three Step</strong> evaluation processes. Each type has its own requirements in terms of evaluation phases, account size, fees, and risk parameters.
+  </p>
+
+  <!-- ─── Challenge Comparison Table ──────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Comparison</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-3 py-3 text-left">Feature</th>
+          <th class="px-3 py-3 text-center">Instant</th>
+          <th class="px-3 py-3 text-center">Lightning</th>
+          <th class="px-3 py-3 text-center">One Phase</th>
+          <th class="px-3 py-3 text-center">Two Phase</th>
+          <th class="px-3 py-3 text-center">Three Phase</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-medium text-slate-900">Evaluation Phases</td>
+          <td class="px-3 py-3 text-center text-emerald-600 font-semibold">None</td>
+          <td class="px-3 py-3 text-center">1 Step (7 Days)</td>
+          <td class="px-3 py-3 text-center">1 Step</td>
+          <td class="px-3 py-3 text-center">2 Steps</td>
+          <td class="px-3 py-3 text-center">3 Steps</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-medium text-slate-900">Account Sizes</td>
+          <td class="px-3 py-3 text-center">$1K &ndash; $50K</td>
+          <td class="px-3 py-3 text-center">$10K &ndash; $100K</td>
+          <td class="px-3 py-3 text-center">$5K &ndash; $400K</td>
+          <td class="px-3 py-3 text-center">$5K &ndash; $400K</td>
+          <td class="px-3 py-3 text-center">$5K &ndash; $400K</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-medium text-slate-900">Fees</td>
+          <td class="px-3 py-3 text-center">$69 &ndash; $1,749</td>
+          <td class="px-3 py-3 text-center">$59 &ndash; $399</td>
+          <td class="px-3 py-3 text-center">$59 &ndash; $2,950</td>
+          <td class="px-3 py-3 text-center">$59 &ndash; $2,950</td>
+          <td class="px-3 py-3 text-center">$39 &ndash; $1,599</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-medium text-slate-900">Profit Target</td>
+          <td class="px-3 py-3 text-center">&mdash;</td>
+          <td class="px-3 py-3 text-center">5%</td>
+          <td class="px-3 py-3 text-center">10%</td>
+          <td class="px-3 py-3 text-center">10% / 5%</td>
+          <td class="px-3 py-3 text-center">5% each</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-medium text-slate-900">Daily Loss Limit</td>
+          <td class="px-3 py-3 text-center">8%</td>
+          <td class="px-3 py-3 text-center">3%</td>
+          <td class="px-3 py-3 text-center">3%</td>
+          <td class="px-3 py-3 text-center">4%</td>
+          <td class="px-3 py-3 text-center">5%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-medium text-slate-900">Max Drawdown</td>
+          <td class="px-3 py-3 text-center">8% Trailing</td>
+          <td class="px-3 py-3 text-center">4% Trailing</td>
+          <td class="px-3 py-3 text-center">6% Trailing</td>
+          <td class="px-3 py-3 text-center">10% Trailing</td>
+          <td class="px-3 py-3 text-center">10% Static</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-medium text-slate-900">Min Trading Days</td>
+          <td class="px-3 py-3 text-center text-emerald-600 font-semibold">None</td>
+          <td class="px-3 py-3 text-center">5 days</td>
+          <td class="px-3 py-3 text-center">5 days</td>
+          <td class="px-3 py-3 text-center">5 days</td>
+          <td class="px-3 py-3 text-center">5 days</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-medium text-slate-900">Max Trading Days</td>
+          <td class="px-3 py-3 text-center text-emerald-600 font-semibold">Unlimited</td>
+          <td class="px-3 py-3 text-center">7 days</td>
+          <td class="px-3 py-3 text-center text-emerald-600 font-semibold">Unlimited</td>
+          <td class="px-3 py-3 text-center text-emerald-600 font-semibold">Unlimited</td>
+          <td class="px-3 py-3 text-center text-emerald-600 font-semibold">Unlimited</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-medium text-slate-900">Leverage</td>
+          <td class="px-3 py-3 text-center">Up to 50:1</td>
+          <td class="px-3 py-3 text-center">Up to 30:1</td>
+          <td class="px-3 py-3 text-center">Up to 50:1</td>
+          <td class="px-3 py-3 text-center">Up to 50:1</td>
+          <td class="px-3 py-3 text-center">Up to 50:1</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-medium text-slate-900">Weekend Holding</td>
+          <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+          <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-medium text-slate-900">News Trading</td>
+          <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+          <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-medium text-slate-900">Refundable Fee</td>
+          <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- INSTANT FUNDING                                                  -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-emerald-500 text-white text-xs font-black flex items-center justify-center">1</span>
+      Instant Funding Account
+    </h3>
+
+    <p class="mb-3">
+      The Instant Funding Account gives you immediate access to trading capital without any evaluation process. You can start trading right away, earn up to a <strong>90% profit split</strong>, and withdraw profits every 14 days. With a fixed 8% trailing drawdown and no minimum trading days, this account is perfect if you want to skip challenges and start earning from day one.
+    </p>
+
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm whitespace-nowrap">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-3 py-3 text-left">Account Size</th>
+            <th class="px-3 py-3 text-right">Fee</th>
+            <th class="px-3 py-3 text-right">Daily Loss (8%)</th>
+            <th class="px-3 py-3 text-right">Max Trailing DD (8%)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$1,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$69</td>
+            <td class="px-3 py-3 text-right text-slate-700">$80</td>
+            <td class="px-3 py-3 text-right text-slate-700">$80</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$2,500</td>
+            <td class="px-3 py-3 text-right text-slate-900">$119</td>
+            <td class="px-3 py-3 text-right text-slate-700">$200</td>
+            <td class="px-3 py-3 text-right text-slate-700">$200</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$229</td>
+            <td class="px-3 py-3 text-right text-slate-700">$400</td>
+            <td class="px-3 py-3 text-right text-slate-700">$400</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$449</td>
+            <td class="px-3 py-3 text-right text-slate-700">$800</td>
+            <td class="px-3 py-3 text-right text-slate-700">$800</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$899</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$1,749</td>
+            <td class="px-3 py-3 text-right text-slate-700">$4,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$4,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- LIGHTNING CHALLENGE                                              -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-emerald-500 text-white text-xs font-black flex items-center justify-center">2</span>
+      Lightning Challenge
+    </h3>
+
+    <p class="mb-3">
+      The Lightning Challenge is FXIFY's fastest evaluation model, allowing traders to get funded in just <strong>7 days</strong>. With a low 5% profit target, a 3% daily loss limit, and a 4% trailing max drawdown, this challenge is ideal for confident traders who want a quick path to funding. First payout available within 7 days of reaching the funded stage.
+    </p>
+
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm whitespace-nowrap">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-3 py-3 text-left">Account Size</th>
+            <th class="px-3 py-3 text-right">Fee</th>
+            <th class="px-3 py-3 text-right">Profit Target (5%)</th>
+            <th class="px-3 py-3 text-right">Daily Loss (3%)</th>
+            <th class="px-3 py-3 text-right">Max DD (4%)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$59</td>
+            <td class="px-3 py-3 text-right text-slate-700">$500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$300</td>
+            <td class="px-3 py-3 text-right text-slate-700">$400</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$119</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,250</td>
+            <td class="px-3 py-3 text-right text-slate-700">$750</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$209</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$399</td>
+            <td class="px-3 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$3,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$4,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- ONE PHASE CHALLENGE                                              -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-emerald-500 text-white text-xs font-black flex items-center justify-center">3</span>
+      One Phase Challenge
+    </h3>
+
+    <p class="mb-3">
+      The One Phase Challenge gives you a straightforward path to funding with a single-step evaluation. You need to reach a <strong>10% profit target</strong> while staying within a 3% daily loss limit and a 6% trailing drawdown. No time limit, giving you full control over how you trade.
+    </p>
+
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm whitespace-nowrap">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-3 py-3 text-left">Account Size</th>
+            <th class="px-3 py-3 text-right">Fee</th>
+            <th class="px-3 py-3 text-right">Profit Target (10%)</th>
+            <th class="px-3 py-3 text-right">Daily Loss (3%)</th>
+            <th class="px-3 py-3 text-right">Max Trailing DD (6%)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$59</td>
+            <td class="px-3 py-3 text-right text-slate-700">$500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$150</td>
+            <td class="px-3 py-3 text-right text-slate-700">$300</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$89</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$300</td>
+            <td class="px-3 py-3 text-right text-slate-700">$600</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$15,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$119</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$450</td>
+            <td class="px-3 py-3 text-right text-slate-700">$900</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$199</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$750</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,500</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$379</td>
+            <td class="px-3 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$3,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$549</td>
+            <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$3,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$6,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$200,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$1,049</td>
+            <td class="px-3 py-3 text-right text-slate-700">$20,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$6,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$12,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$400,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$2,950</td>
+            <td class="px-3 py-3 text-right text-slate-700">$40,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$12,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$24,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- TWO PHASE CHALLENGE                                              -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-emerald-500 text-white text-xs font-black flex items-center justify-center">4</span>
+      Two Phase Challenge
+    </h3>
+
+    <p class="mb-3">
+      The Two Phase Challenge is a structured evaluation that gives you two steps to prove consistency. In Phase 1, you must hit a <strong>10% profit target</strong>, and in Phase 2, you need to achieve <strong>5%</strong>, while staying within a 4% daily loss limit and a 10% trailing drawdown. Ideal if you prefer a measured approach to securing funding.
+    </p>
+
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm whitespace-nowrap">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-3 py-3 text-left">Account Size</th>
+            <th class="px-3 py-3 text-right">Fee</th>
+            <th class="px-3 py-3 text-right">Phase 1 (10%)</th>
+            <th class="px-3 py-3 text-right">Phase 2 (5%)</th>
+            <th class="px-3 py-3 text-right">Daily Loss (4%)</th>
+            <th class="px-3 py-3 text-right">Max Trailing DD (10%)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$59</td>
+            <td class="px-3 py-3 text-right text-slate-700">$500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$250</td>
+            <td class="px-3 py-3 text-right text-slate-700">$200</td>
+            <td class="px-3 py-3 text-right text-slate-700">$500</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$89</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$400</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$15,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$119</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$750</td>
+            <td class="px-3 py-3 text-right text-slate-700">$600</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,500</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$199</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,250</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$379</td>
+            <td class="px-3 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$5,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$549</td>
+            <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$4,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$200,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$1,049</td>
+            <td class="px-3 py-3 text-right text-slate-700">$20,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$8,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$20,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$400,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$2,950</td>
+            <td class="px-3 py-3 text-right text-slate-700">$40,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$20,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$16,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$40,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- THREE PHASE CHALLENGE                                            -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-emerald-500 text-white text-xs font-black flex items-center justify-center">5</span>
+      Three Phase Challenge
+    </h3>
+
+    <p class="mb-3">
+      The Three Phase Challenge gives you a slower, lower-risk path to funding with three evaluation phases. You need to achieve a <strong>5% profit target in each phase</strong> while staying within a 5% daily loss limit and a <strong>10% static max drawdown</strong>. The lowest fees of any FXIFY challenge type.
+    </p>
+
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm whitespace-nowrap">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-3 py-3 text-left">Account Size</th>
+            <th class="px-3 py-3 text-right">Fee</th>
+            <th class="px-3 py-3 text-right">Profit Target (5% each)</th>
+            <th class="px-3 py-3 text-right">Daily Loss (5%)</th>
+            <th class="px-3 py-3 text-right">Max Static DD (10%)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$39</td>
+            <td class="px-3 py-3 text-right text-slate-700">$250</td>
+            <td class="px-3 py-3 text-right text-slate-700">$250</td>
+            <td class="px-3 py-3 text-right text-slate-700">$500</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$59</td>
+            <td class="px-3 py-3 text-right text-slate-700">$500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$15,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$79</td>
+            <td class="px-3 py-3 text-right text-slate-700">$750</td>
+            <td class="px-3 py-3 text-right text-slate-700">$750</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,500</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$149</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,250</td>
+            <td class="px-3 py-3 text-right text-slate-700">$1,250</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$249</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$5,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$399</td>
+            <td class="px-3 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$200,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$799</td>
+            <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$20,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-semibold text-slate-900">$400,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$1,599</td>
+            <td class="px-3 py-3 text-right text-slate-700">$20,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$20,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$40,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ─── Add-Ons ─────────────────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Account Add-Ons</h3>
+  <p class="mb-4">
+    FXIFY allows you to customize your account with optional add-ons that enhance your profit split, payout frequency, leverage, and account protection. These upgrades must be selected at checkout and cannot be added after reaching the funded stage.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Higher Profit Split <span class="text-xs font-normal text-slate-500">(+20% of fee)</span></p>
+      <p>Increases your profit split to 90/10, allowing you to keep a larger share of your trading profits.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Bi-Weekly Payouts <span class="text-xs font-normal text-slate-500">(+5% of fee)</span></p>
+      <p>Enables withdrawals every two weeks instead of the default monthly schedule for faster access to earnings.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Performance Protect <span class="text-xs font-normal text-slate-500">(+15% of fee)</span></p>
+      <p>Protects your profits in case of a drawdown breach, allowing you to withdraw remaining gains instead of losing them.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Increased Leverage <span class="text-xs font-normal text-slate-500">(+25% of fee)</span></p>
+      <p>Boosts leverage to 50:1 for FX and Gold on MT4 and MT5 accounts only.</p>
+    </div>
+  </div>
+
+  <!-- ─── Scaling Plan ────────────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Scaling Plan</h3>
+  <p class="mb-4">
+    FXIFY's scaling plan rewards consistent performance with steady account growth. If you achieve a <strong>10% return within three months</strong>, with two of those months in profit, your account scales up by <strong>25%</strong>. After the initial boost, you can double your account size every three months by hitting similar targets. A $400K account could grow to <strong>$4M</strong> within a year.
+  </p>
+
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Initial Scale</p>
+      <p class="text-sm font-bold text-emerald-600">+25%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Return Required</p>
+      <p class="text-sm font-bold text-slate-800">10% in 3 months</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profitable Months</p>
+      <p class="text-sm font-bold text-slate-800">2 of 3</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Account</p>
+      <p class="text-sm font-bold text-emerald-600">$4,000,000</p>
+    </div>
+  </div>
+
+  <!-- ─── Trading Rules ───────────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules</h3>
+  <p class="mb-4">
+    FXIFY enforces a clear set of rules to promote risk management and responsible trading across all account types.
+  </p>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Rule</th>
+          <th class="px-4 py-3 text-center">Status</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">News Trading</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span> <span class="text-slate-600">Allowed (except Lightning &mdash; 5 min buffer)</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">Weekend Holding</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span> <span class="text-slate-600">Allowed (except Lightning)</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">Expert Advisors (EAs)</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span> <span class="text-slate-600">MT4 &amp; MT5 only (not DXTrade or Lightning)</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">Copy Trading</td>
+          <td class="px-4 py-3 text-center"><span class="text-slate-600">Own FXIFY accounts only (third-party requires verification)</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">Stop-Loss Required</td>
+          <td class="px-4 py-3 text-center"><span class="text-slate-600">Lightning accounts only</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">HFT / Latency Arbitrage</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span> <span class="text-slate-600">Prohibited</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">Tick Scalping</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span> <span class="text-slate-600">Prohibited</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">Account Sharing</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span> <span class="text-slate-600">Not allowed</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Challenge Accounts</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      FXIFY's accounts cater to diverse trading preferences, offering flexibility through the single-step One Phase Challenge, the consistency-focused Two Phase Challenge, and the gradual Three Phase Challenge. The Lightning and Instant Funding options provide quick access to trading capital for experienced traders. Optional add-ons and a scaling plan up to $4M round out a strong offering.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SPREADS / COMMISSION FEES AND PRICING SECTION                       */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "spreads" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    FXIFY gives traders flexibility with two pricing models: <strong>raw spreads from 0 pips</strong> with a competitive commission fee, or higher &lsquo;all in&rsquo; spreads with <strong>no commission fees</strong>. This setup allows you to pick the structure that best suits your trading style.
+  </p>
+
+  <!-- Pricing Models -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Pricing Models</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Raw Spreads</p>
+      <p class="mb-2">Spreads starting from <strong>0 pips</strong> on popular pairs like EUR/USD during peak hours. Uses FXPIG's data feed for institutional-grade liquidity.</p>
+      <p class="text-xs text-slate-500">$6 round-turn commission per lot on forex, metals, crypto, and indices.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">All-Inclusive (Commission-Free)</p>
+      <p class="mb-2">Wider spreads with <strong>zero commission fees</strong> across forex, metals, crypto, and indices.</p>
+      <p class="text-xs text-slate-500">Simpler cost structure — no per-trade commission charges.</p>
+    </div>
+  </div>
+
+  <!-- Commission Details -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Raw Spread Commission Fees</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Asset Class</th>
+          <th class="px-4 py-3 text-right">Commission (Round-Turn)</th>
+          <th class="px-4 py-3 text-left">Notes</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Forex</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$6 per lot</td>
+          <td class="px-4 py-3 text-slate-700">Spreads from 0 pips during London/NY sessions</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Metals</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$6 per lot</td>
+          <td class="px-4 py-3 text-slate-700">Gold, silver &mdash; raw institutional pricing</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Indices</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$6 per lot</td>
+          <td class="px-4 py-3 text-slate-700">13 global indices available</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Crypto</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$6 per lot</td>
+          <td class="px-4 py-3 text-slate-700">BTC, ETH, and more (MT4/MT5 only)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Notes -->
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
+    <p class="text-sm font-bold text-amber-900 mb-1">Spread Transparency</p>
+    <p class="text-sm text-amber-800">
+      FXIFY doesn't publish average spread data, so if you're trying to gauge how spreads might affect your costs, it's worth taking advantage of their demo accounts to assess pricing during the times you plan to trade. No swap-free accounts are currently available.
+    </p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Commissions &amp; Pricing</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      FXIFY's pricing offers solid flexibility, whether you're aiming for minimal spreads with a per-lot commission or a straightforward all-inclusive fee. While their spread data transparency could improve, and the absence of swap-free accounts may deter some, FXIFY provides a reasonable cost structure that suits different trading needs.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* MARKETS / FINANCIAL MARKETS AND LEVERAGE SECTION                    */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "markets" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    With a total of <strong>101 instruments on MT5</strong> across various asset classes, FXIFY offers a reasonable range of trading opportunities. Availability varies depending on the platform used.
+  </p>
+
+  <!-- Instrument Availability Table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Instruments by Platform</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Asset Class</th>
+          <th class="px-4 py-3 text-center">DXTrade</th>
+          <th class="px-4 py-3 text-center">MT4</th>
+          <th class="px-4 py-3 text-center">MT5</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Forex Pairs</td>
+          <td class="px-4 py-3 text-center text-slate-900">42</td>
+          <td class="px-4 py-3 text-center text-slate-900">42</td>
+          <td class="px-4 py-3 text-center text-slate-900">42</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Indices</td>
+          <td class="px-4 py-3 text-center text-slate-900">13</td>
+          <td class="px-4 py-3 text-center text-slate-900">13</td>
+          <td class="px-4 py-3 text-center text-slate-900">13</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Commodities</td>
+          <td class="px-4 py-3 text-center text-slate-900">6</td>
+          <td class="px-4 py-3 text-center text-slate-900">7</td>
+          <td class="px-4 py-3 text-center text-slate-900">7</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Stocks</td>
+          <td class="px-4 py-3 text-center text-slate-400">&mdash;</td>
+          <td class="px-4 py-3 text-center text-slate-400">&mdash;</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">30</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Cryptocurrencies</td>
+          <td class="px-4 py-3 text-center text-slate-400">&mdash;</td>
+          <td class="px-4 py-3 text-center text-slate-900">7</td>
+          <td class="px-4 py-3 text-center text-slate-900">7</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Other (Vol Index, Currency Index)</td>
+          <td class="px-4 py-3 text-center text-slate-900">1</td>
+          <td class="px-4 py-3 text-center text-slate-900">2</td>
+          <td class="px-4 py-3 text-center text-slate-900">2</td>
+        </tr>
+        <tr class="bg-white font-bold">
+          <td class="px-4 py-3 text-slate-900">Total</td>
+          <td class="px-4 py-3 text-center text-slate-900">62</td>
+          <td class="px-4 py-3 text-center text-slate-900">71</td>
+          <td class="px-4 py-3 text-center text-emerald-600">101</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Asset Classes -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Asset Class Details</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Forex Pairs</p>
+      <p>42 major, minor, and exotic currency pairs across all platforms.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Indices</p>
+      <p>13 global indices including S&amp;P 500, DAX (Germany), and ASX.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Commodities</p>
+      <p>Crude oil (WTI/Brent), gold, silver, and other precious metals.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Stocks <span class="text-xs font-normal text-slate-500">(MT5 only)</span></p>
+      <p>30 well-known stocks including Apple, Amazon, and Tesla.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Crypto <span class="text-xs font-normal text-slate-500">(MT4 &amp; MT5 only)</span></p>
+      <p>7 popular assets including Bitcoin, Ethereum, and Ripple.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Other</p>
+      <p>Volatility Index and US Dollar Index for additional market indicators.</p>
+    </div>
+  </div>
+
+  <!-- Leverage -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Maximum Leverage</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Asset Class</th>
+          <th class="px-4 py-3 text-center">Default Leverage</th>
+          <th class="px-4 py-3 text-center">With Add-On</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Forex &amp; Gold</td>
+          <td class="px-4 py-3 text-center text-slate-900">30:1</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">50:1</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Indices</td>
+          <td class="px-4 py-3 text-center text-slate-900">10:1</td>
+          <td class="px-4 py-3 text-center text-slate-400">&mdash;</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Stocks</td>
+          <td class="px-4 py-3 text-center text-slate-900">2:1</td>
+          <td class="px-4 py-3 text-center text-slate-400">&mdash;</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Cryptocurrencies</td>
+          <td class="px-4 py-3 text-center text-slate-900">2:1</td>
+          <td class="px-4 py-3 text-center text-slate-400">&mdash;</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Financial Markets &amp; Leverage</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      FXIFY offers a balanced selection of markets, though limited in stocks and cryptocurrencies. MT5 provides the widest range, including stock trading, while DXTrade and MT4 cater to other trading needs. The leverage options are conservative, promoting responsible trading with an option to increase leverage on select assets.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PLATFORMS / TRADING PLATFORMS SECTION                                */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "platforms" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    FXIFY gives you access to three major trading platforms: <strong>MetaTrader 4 (MT4)</strong>, <strong>MetaTrader 5 (MT5)</strong>, and <strong>DXTrade with TradingView integration</strong>, though availability depends on your challenge account type.
+  </p>
+
+  <!-- Platform Availability Table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Platform Availability by Account Type</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Type</th>
+          <th class="px-4 py-3 text-center">MT4</th>
+          <th class="px-4 py-3 text-center">MT5</th>
+          <th class="px-4 py-3 text-center">DXTrade</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">One Phase</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Two Phase</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Three Phase</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Instant Funding</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Lightning</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Platform Cards -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Platform Details</h3>
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-2">MetaTrader 4 (MT4)</p>
+      <p class="mb-2">A high-speed, automation-friendly platform built for forex and CFD traders. Known for stability, fast execution, and extensive EA support.</p>
+      <ul class="list-disc list-inside text-slate-600 space-y-1 text-xs">
+        <li>Advanced charting with multiple timeframes and custom indicators</li>
+        <li>Dozens of built-in technical indicators</li>
+        <li>One-click trading for fast execution</li>
+        <li>Full support for Expert Advisors (EAs) and custom scripts</li>
+      </ul>
+      <p class="text-xs text-slate-500 mt-2">Available for One Phase, Two Phase, and Three Phase accounts.</p>
+    </div>
+
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-2">MetaTrader 5 (MT5)</p>
+      <p class="mb-2">Builds on MT4 with more advanced tools, additional order types, and multi-asset support including stocks and crypto.</p>
+      <ul class="list-disc list-inside text-slate-600 space-y-1 text-xs">
+        <li>More timeframes and stop-limit orders for precision execution</li>
+        <li>Depth of Market (DOM) for tracking liquidity</li>
+        <li>Built-in economic calendar for global events</li>
+        <li>Improved backtesting tools for automated strategies</li>
+        <li>Access to stocks, indices, commodities, forex, and crypto</li>
+      </ul>
+      <p class="text-xs text-slate-500 mt-2">Available for all account types, including Instant Funding and Lightning.</p>
+    </div>
+
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-2">DXTrade + TradingView</p>
+      <p class="mb-2">A modern, web-based trading experience with powerful charting and advanced analytics. No software downloads required.</p>
+      <ul class="list-disc list-inside text-slate-600 space-y-1 text-xs">
+        <li>TradingView-powered charting with 100+ indicators and drawing tools</li>
+        <li>Fully customizable drag-and-drop layouts</li>
+        <li>Fast execution with minimal slippage</li>
+        <li>Cloud-based &mdash; trade from any device</li>
+        <li>Advanced risk management tools with custom alerts</li>
+      </ul>
+      <p class="text-xs text-slate-500 mt-2">Available for One Phase, Two Phase, Three Phase, and Instant Funding accounts.</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Trading Platforms</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      FXIFY provides a solid selection of platforms covering different trading needs. MT4 excels for EA-based automation, MT5 offers the widest instrument access with multi-asset support, and DXTrade with TradingView delivers a modern web-based experience. Platform availability varies by challenge type, so choose carefully at checkout.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PAYOUTS / PAYMENTS AND PROFIT PAYOUT SECTION                        */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "payouts" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    FXIFY offers multiple payment methods, making both funding and withdrawals accessible and relatively straightforward. Challenge fees are structured as <strong>one-time payments</strong> and are <strong>refunded with the first profitable payout</strong>.
+  </p>
+
+  <!-- Payment Methods -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payment Methods for Challenge Fees</h3>
+  <p class="mb-4">
+    Challenge fees range from <strong>$39 to $2,950</strong> depending on account size and challenge type. Fees can increase with optional add-ons, reaching around $3,298 for a fully configured $400K account.
+  </p>
+
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-sm font-bold text-slate-800">Credit/Debit Cards</p>
+      <p class="text-xs text-slate-500 mt-1">Immediate processing</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-sm font-bold text-slate-800">Bank Transfers</p>
+      <p class="text-xs text-slate-500 mt-1">1&ndash;3 business days</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-sm font-bold text-slate-800">Cryptocurrency</p>
+      <p class="text-xs text-slate-500 mt-1">BTC &amp; ETH accepted</p>
+    </div>
+  </div>
+
+  <!-- Profit Split & Payout Policy -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Profit Splits &amp; Payout Policy</h3>
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Base Profit Split</p>
+      <p class="text-sm font-bold text-slate-800">80%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">With Add-On</p>
+      <p class="text-sm font-bold text-emerald-600">90%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Default Frequency</p>
+      <p class="text-sm font-bold text-slate-800">Monthly</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Processing Time</p>
+      <p class="text-sm font-bold text-slate-800">24&ndash;48 hours</p>
+    </div>
+  </div>
+
+  <!-- Payout Details -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Withdrawal Details</h3>
+  <div class="space-y-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Initial Withdrawal</p>
+      <p>On-demand after the first profitable live trade. Instant Funding accounts require a $50 minimum and 14-day waiting period.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Subsequent Withdrawals</p>
+      <p>Monthly by default, or bi-weekly if the optional add-on was purchased (+5% of challenge fee).</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Withdrawal Methods</p>
+      <p>Bank transfers, cryptocurrency, and online payment platforms (e.g., Deel).</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Drawdown Reset (One Phase)</p>
+      <p>For One Phase accounts, the maximum drawdown resets post-withdrawal to the starting account balance.</p>
+    </div>
+  </div>
+
+  <p class="mb-6 text-xs text-slate-500">
+    Accounts enter read-only mode during withdrawal processing. FXIFY regularly shares verified payout proofs across Discord and social media.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Payments &amp; Profit Shares</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      FXIFY makes payouts straightforward and flexible, offering fast processing, multiple withdrawal options, and clear public proof of trader payments every week. With strong execution during testing and added transparency through regular payout proof posts, FXIFY earned a 9/10 rating for payments and payouts. Minor deductions reflect the need to purchase add-ons for maximum flexibility.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SUPPORT / CUSTOMER SERVICE AND EDUCATION SECTION                    */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "support" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    FXIFY's customer service includes essential support channels but shows room for improvement in responsiveness and educational offerings. While their live chat and email support are accessible, feedback suggests varied response quality.
+  </p>
+
+  <!-- Customer Support -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Customer Support</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Live Chat</p>
+      <p>Accessible 24/7 during weekdays. Some users report delays and inconsistent support quality when transitioning from chatbot to human agents.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Email Support</p>
+      <p>Available for general inquiries and account-related issues. Response times may vary.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Support Hub &amp; FAQ</p>
+      <p>General assistance and answers to common questions available on the FXIFY website.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Discord Community</p>
+      <p>Active community with support channels, verified trader discussions, and payout proof sharing.</p>
+    </div>
+  </div>
+
+  <!-- Educational Resources -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Educational Resources</h3>
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
+    <p class="text-sm font-bold text-amber-900 mb-1">Limited Educational Content</p>
+    <p class="text-sm text-amber-800">
+      FXIFY's educational resources are limited compared to other prop firms. Their YouTube content is minimal and lacks comprehensive tutorials. For traders seeking substantial educational support, FXIFY might not fully meet expectations. Traders needing robust learning tools may find more value with firms like IC Funded or DNA Funded.
+    </p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Customer Service &amp; Education</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      FXIFY's support system offers basic assistance, but its limited educational resources may be a drawback for traders seeking robust learning tools. With a minimal presence on YouTube and fewer in-depth resources, traders looking for strong educational content may find more value elsewhere.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* TRUST / TRUST AND COMMUNITY SECTION                                 */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "trust" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    FXIFY does a decent job when it comes to building trust with traders. Between their verified reviews, active Discord server, and broker-backed licensing, they've ticked a lot of the right boxes.
+  </p>
+
+  <!-- Trustpilot -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">FXIFY TrustPilot Score</h3>
+
+  <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 mb-6 flex items-center gap-4">
+    <div class="flex-shrink-0">
+      <p class="text-3xl font-black text-slate-900">4.4<span class="text-lg text-slate-400">/5</span></p>
+      <p class="text-xs text-slate-500 font-semibold">Great (4,900+ reviews)</p>
+    </div>
+    <div>
+      <p class="text-sm text-slate-700">FXIFY holds a <strong>4.4 out of 5 Trustpilot rating</strong> from over <strong>4,900 reviews</strong>. The overall feedback is positive, especially regarding fast payouts and user-friendly trading rules.</p>
+    </div>
+  </div>
+
+  <!-- Community -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Community</h3>
+  <p class="mb-4">
+    FXIFY's Discord server is where a lot of the real action happens. It's a large group with traders chatting about setups, market news, prop firm tips, and challenge progress. There are also verified trader channels where those who've passed can connect separately.
+  </p>
+
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Discord Server</p>
+      <p>Active community with verified trader channels, payout proof sharing, and support from staff through public channels.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Social Media Presence</p>
+      <p>Active on Instagram, Facebook, and Twitter/X with regular updates on top payouts, challenges, and community engagement.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Payout Proofs</p>
+      <p>FXIFY regularly shares verified top payouts every week across their social channels, including the highest payout amounts from funded accounts.</p>
+    </div>
+  </div>
+
+  <!-- Broker-Backed -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Broker-Backed Regulation</h3>
+  <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 mb-6">
+    <p class="font-bold text-slate-900 mb-1">FXPIG (Vanuatu VFSC &mdash; License #014578)</p>
+    <p>FXIFY is backed by <strong>FXPIG</strong>, a broker licensed by the Vanuatu Financial Services Commission (VFSC). While Vanuatu regulation isn't as strict as ASIC (Australia) or FCA (UK), it's an official license that provides more oversight than prop firms with no broker transparency.</p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Trust &amp; Community</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Overall, FXIFY has built a legitimate setup for traders who want more than just another prop firm. The community is active, the feedback is mostly positive, and they're not hiding how their backend operates. It's not bulletproof &mdash; no prop firm is &mdash; but for what they offer, FXIFY earns their 9/10 Trust Score.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* FALLBACK — sections not customised render the default text          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section !== "challenges" && section !== "spreads" && section !== "markets" && section !== "platforms" && section !== "payouts" && section !== "support" && section !== "trust" && fallbackBody && (
+  <div class="text-sm leading-relaxed text-slate-700 space-y-4">
+    {fallbackBody.split("\n\n").map((para) => (
+      <p set:html={para.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")} />
+    ))}
+  </div>
+)}

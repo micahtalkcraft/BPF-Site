@@ -1,0 +1,65 @@
+{
+  "id": "rev-eightcap",
+  "propFirmId": "d0000027-0000-0000-0000-000000000027",
+  "summary": "With an overall score of 89/100, Eightcap is one of the highest-scoring prop firms we've reviewed. What sets it apart is that the entire challenge program is operated directly by a regulated forex broker rather than an independent prop firm. You get access to Eightcap's own live pricing, execution feed and trading platforms (MT4, MT5 and TradeLocker), but within prop-style rules and targets.\n\nThe One Step, Two Step and Day Trader challenges cover both structured, multi-day evaluations and fast, timed sessions, with extremely competitive tight spreads from 0 pips and a $5 round-turn commission on non-crypto CFDs. We think this will suit serious forex traders who want a trading environment that feels familiar and efficient.",
+  "pros": [
+    "Raw spreads from 0 pips with fast execution",
+    "MT4, MT5, and TradeLocker platform access",
+    "Unique Day Trader challenge format (1-8 hour sessions)",
+    "Operated directly by an ASIC/FCA-regulated broker",
+    "Three distinct challenge types for different trading styles",
+    "Clear, transparent rules across all account types"
+  ],
+  "cons": [
+    "No traditional scaling plan available",
+    "No challenge fee refunds offered",
+    "Strict news trading restrictions during payout stage",
+    "Higher fees on larger account sizes",
+    "14-day wait before first payout on standard challenges",
+    "One Step accounts have a 5% payout cap for the first three payouts"
+  ],
+  "bestFor": "Serious forex traders who want broker-level infrastructure, regulated oversight, and consistent pricing with multiple challenge formats including unique short-session Day Trader challenges",
+  "notIdealFor": "Traders wanting traditional scaling plans, challenge fee refunds, US-based traders, or those needing instant payouts and unlimited profit withdrawal on standard challenges from day one",
+  "overallScore": 89,
+  "categoryScores": {
+    "challenges": 90,
+    "spreads": 95,
+    "markets": 90,
+    "payouts": 80,
+    "platforms": 90,
+    "trust": 90
+  },
+  "categorySections": {
+    "challenges": "custom",
+    "spreads": "custom",
+    "markets": "custom",
+    "platforms": "custom",
+    "payouts": "custom",
+    "support": "custom",
+    "trust": "custom"
+  },
+  "verdictBlocks": [
+    {
+      "heading": "Our Final Verdict On Eightcap",
+      "body": "Eightcap earns a solid overall score of 89/100, largely because it offers something structurally different from typical prop firms — a challenge system operated directly by a regulated broker using its own pricing, infrastructure and execution environment. This removes many of the uncertainties you can face with some prop firms, such as private liquidity pools, artificial spreads or inconsistent fills.\n\nThe challenge formats are balanced and achievable, the Day Trader model offers a genuinely alternative way to prop trade, and MT4/MT5 support gives you access to a proper technical environment rather than a simplified web platform. Costs are competitive, spreads are extremely tight, and the trading rules are clear and transparent.\n\nThe main limitations are the higher fees on larger account sizes, no traditional scaling plan, and the 14-day wait before the first payout on the standard challenges. Even with those drawbacks, the overall package feels more stable and predictable than many independent prop firms because everything is built on top of Eightcap's brokerage framework, rather than outsourced infrastructure."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is Eightcap allowed in the US?",
+      "a": "No, Eightcap's brokerage services are not available to US residents, and the challenge accounts follow the same geographic restrictions. Traders in the United States cannot open an Eightcap live account or participate in the One Step, Two Step or Day Trader challenges. This is due to regulatory limitations rather than a technical barrier, and there are no workarounds such as VPN trading or offshore onboarding."
+    },
+    {
+      "q": "How long do Eightcap payouts take?",
+      "a": "Eightcap payouts usually take 24 to 48 hours to process once they pass KYC and risk review, although the FAQ notes they can take 2 to 5 business days depending on your bank or crypto network. The first payout for One Step and Two Step accounts is available after 14 days, with a $100 minimum withdrawal. Day Trader payouts are instant after a successful session and can be withdrawn from $10 in crypto."
+    },
+    {
+      "q": "Is there an Eightcap demo account for challenges?",
+      "a": "No, Eightcap does not offer a demo version of its prop challenges, because each challenge relies on a simulated live feed that must be purchased and activated through your account. The challenge environment uses the same pricing as Eightcap's live markets, but you can't trial the evaluation rules or test pass conditions without buying a challenge first. If you want to practise, you can use a free MT4 or MT5 demo, but it won't replicate challenge drawdowns or targets."
+    }
+  ],
+  "verified": true,
+  "flagged": false,
+  "methodologyVersion": "1.0",
+  "lastReviewedAt": "2026-02-24"
+}

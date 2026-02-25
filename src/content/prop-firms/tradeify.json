@@ -1,0 +1,77 @@
+{
+  "id": "d0000008-0000-0000-0000-000000000008",
+  "slug": "tradeify",
+  "name": "Tradeify",
+  "status": "active",
+  "foundedYear": 2023,
+  "hqCountry": "US",
+  "evaluation": {
+    "types": ["1-step", "instant"],
+    "profitTargets": { "phase1": 6 },
+    "dailyDrawdown": null,
+    "maxDrawdown": 4,
+    "minTradingDays": 1,
+    "scalingPlan": null
+  },
+  "pricing": {
+    "challengeFees": [
+      { "accountSize": 50000, "fee": 69, "model": "1-step", "label": "Advanced (monthly)" },
+      { "accountSize": 100000, "fee": 109, "model": "1-step", "label": "Advanced (monthly)" },
+      { "accountSize": 150000, "fee": 129, "model": "1-step", "label": "Advanced (monthly)" },
+      { "accountSize": 50000, "fee": 139, "model": "1-step", "label": "Growth (monthly)" },
+      { "accountSize": 100000, "fee": 249, "model": "1-step", "label": "Growth (monthly)" },
+      { "accountSize": 150000, "fee": 339, "model": "1-step", "label": "Growth (monthly)" },
+      { "accountSize": 25000, "fee": 349, "model": "instant", "label": "Lightning (one-time)" },
+      { "accountSize": 50000, "fee": 509, "model": "instant", "label": "Lightning (one-time)" },
+      { "accountSize": 100000, "fee": 629, "model": "instant", "label": "Lightning (one-time)" },
+      { "accountSize": 150000, "fee": 729, "model": "instant", "label": "Lightning (one-time)" }
+    ],
+    "resetFee": 45,
+    "refundPolicy": null
+  },
+  "payouts": {
+    "splitMax": 90,
+    "schedule": "On-demand (after 10 trading days)",
+    "processingTime": "24–72 hours",
+    "firstPayoutDays": 10,
+    "methods": ["Rise Pay", "Plane Payouts"]
+  },
+  "rules": {
+    "newsTrading": true,
+    "weekendHolding": false,
+    "copyTrading": false,
+    "expertAdvisors": false,
+    "consistencyRule": "35% daily profit cap (Advanced/Growth), 20% daily profit cap (Lightning). No more than that percentage of total profit can come from a single day before payout.",
+    "notes": "Three models: Advanced (1-step, intraday trailing drawdown on equity, $125 activation fee, $45 reset), Growth (1-step, EOD trailing drawdown on balance, no activation fee, $85 reset), Lightning (instant funding, EOD trailing, no reset option). No weekend trading on any model. No EAs or copy trading in funded phase. One account per person. Lightning requires 10 trading days and 5 profitable days over $200 before first withdrawal. Monthly billing continues until manually cancelled."
+  },
+  "markets": {
+    "platforms": ["Tradovate", "TradingView", "NinjaTrader"],
+    "instruments": "Futures — CME, CBOT, COMEX, NYMEX (Indices, Currencies, Metals, Energies, Agriculturals, Crypto)"
+  },
+  "trust": {
+    "trustpilotRating": 4.7,
+    "trustpilotCount": 1800,
+    "communitySize": "~30,000 Discord members",
+    "notableFlags": []
+  },
+  "links": { "website": "https://tradeify.co" },
+  "media": { "logo": "/images/logos/tradeify-logo.png" },
+  "availability": {
+    "restrictedCountries": ["AF", "DZ", "AO", "BW", "BI", "ET", "GH", "LR", "LY", "SO", "SS", "SD", "UG", "ZW", "IR", "IQ", "KP", "SY", "YE", "MM", "LA", "KH", "VN", "BY", "CU", "RU", "VE"]
+  },
+  "support": {
+    "hours": "Business hours (Mon–Fri)",
+    "liveChat": false,
+    "email": true,
+    "discord": true
+  },
+  "custom": {
+    "tags": ["Real Exchange Access", "Instant Funding", "90% Profit Split", "US Futures"],
+    "discountCode": null,
+    "discountPercent": null
+  },
+  "notes": null,
+  "lastVerifiedAt": "2026-02-24",
+  "lastUpdatedAt": "2026-02-24",
+  "dataSources": ["https://tradeify.co"]
+}

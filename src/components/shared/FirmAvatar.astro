@@ -1,0 +1,26 @@
+---
+interface Props {
+  name: string;
+  logoUrl?: string | null;
+  size?: "sm" | "md" | "lg";
+}
+
+const { name, logoUrl, size = "md" } = Astro.props;
+
+const initials = name.split(" ").map((w: string) => w[0]).slice(0, 2).join("").toUpperCase();
+const colors = ["bg-teal-500", "bg-blue-500", "bg-violet-500", "bg-indigo-500", "bg-teal-500", "bg-sky-500"];
+const color = colors[name.charCodeAt(0) % colors.length];
+
+const sizeClass = size === "sm" ? "w-8 h-8" : size === "lg" ? "w-12 h-12" : "w-10 h-10";
+const textClass = size === "sm" ? "text-xs" : size === "lg" ? "text-base" : "text-sm";
+---
+
+{logoUrl ? (
+  <div class={`${sizeClass} rounded-lg bg-white border border-slate-200 flex items-center justify-center overflow-hidden flex-shrink-0 shadow-sm`}>
+    <img src={logoUrl} alt={`${name} logo`} class="w-full h-full object-contain p-1" loading="lazy" />
+  </div>
+) : (
+  <div class={`${sizeClass} rounded-lg ${color} flex items-center justify-center border border-slate-200 flex-shrink-0`}>
+    <span class={`${textClass} font-black text-white`}>{initials}</span>
+  </div>
+)}

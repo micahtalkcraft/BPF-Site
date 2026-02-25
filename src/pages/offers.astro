@@ -1,0 +1,297 @@
+---
+import Base from "../layouts/Base.astro";
+import { getCollection } from "astro:content";
+import FirmAvatar from "../components/shared/FirmAvatar.astro";
+
+const propFirms = await getCollection("prop-firms");
+const offers = await getCollection("offers");
+
+const firmMap = Object.fromEntries(propFirms.map((f) => [f.data.id, f.data]));
+
+// Enrich offers with firm data
+const enrichedOffers = offers.map((o) => ({
+  offer: o.data,
+  firms: o.data.propFirmIds.map((id) => firmMap[id]).filter(Boolean),
+}));
+
+// Featured offers = ones with a discountCode on the firm, sorted by % desc, capped at 4
+const featuredOffers = propFirms
+  .map((f) => {
+    const code = (f.data.custom as any)?.discountCode as string | undefined;
+    const percent = (f.data.custom as any)?.discountPercent as number | undefined;
+    const desc = ((f.data.custom as any)?.discountDesc as string | undefined) ??
+      (percent ? `${percent}% off on all challenge fees` : undefined);
+    return { firm: f.data, code, percent, desc };
+  })
+  .filter((x) => x.code && x.percent)
+  .sort((a, b) => (b.percent ?? 0) - (a.percent ?? 0));
+
+const featuredGrid = featuredOffers.slice(0, 4);
+---
+
+<Base
+  title="Best Prop Firm Discount Codes & Offers 2026 | BestPropFirms.com"
+  description="Exclusive discount codes and limited-time offers on prop firm challenge fees. Save up to 90% with verified coupon codes."
+>
+  <!-- Page header -->
+  <section class="bg-[#0d1b2a] text-white py-14 px-4">
+    <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <p class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-2">Exclusive Deals</p>
+      <h1 class="text-4xl font-black mb-3">Prop Firm Offers & Discounts</h1>
+      <p class="text-slate-300 text-lg max-w-2xl">
+        Verified discount codes and exclusive offers — updated monthly. Never pay full price on a challenge.
+      </p>
+    </div>
+  </section>
+
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 space-y-12">
+
+    <!-- ── Vault CTA ──────────────────────────────────────────────────────── -->
+    <section>
+      <div class="relative overflow-hidden rounded-2xl border border-white/10 shadow-2xl shadow-teal-900/20">
+        <!-- Layered background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-[#0d1b2a] via-[#112840] to-[#091520]"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_70%_-10%,rgba(20,184,166,0.15),transparent)]"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_0%_100%,rgba(20,184,166,0.08),transparent)]"></div>
+        <!-- Subtle grid pattern -->
+        <div class="pointer-events-none absolute inset-0 opacity-[0.03]" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0z' fill='none' stroke='white' stroke-width='0.5'/%3E%3C/svg%3E&quot;);"></div>
+        <!-- Floating glow orbs -->
+        <div class="pointer-events-none absolute -right-16 -top-16 h-72 w-72 rounded-full bg-teal-400/10 blur-3xl animate-pulse"></div>
+        <div class="pointer-events-none absolute -bottom-20 left-1/4 h-56 w-56 rounded-full bg-teal-500/5 blur-3xl"></div>
+
+        <div class="relative px-6 py-8 sm:px-10 sm:py-10 md:px-12 md:py-12">
+          <div class="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-12">
+
+            <!-- Left content -->
+            <div class="flex-1 min-w-0">
+              <!-- Badge row -->
+              <div class="mb-5 flex flex-wrap items-center gap-2">
+                <span class="inline-flex items-center gap-1.5 rounded-full border border-teal-400/30 bg-teal-400/10 px-3 py-1 text-[11px] font-bold text-teal-300 uppercase tracking-widest">
+                  <svg class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" /></svg>
+                  VIP Access
+                </span>
+                <span class="inline-flex items-center gap-1 rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-[11px] font-bold text-amber-300 uppercase tracking-widest">
+                  <svg class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" /></svg>
+                  Free
+                </span>
+              </div>
+
+              <h2 class="text-3xl sm:text-4xl md:text-[2.75rem] font-black text-white leading-[1.1] mb-4">
+                Unlock the<br />
+                <span class="bg-gradient-to-r from-teal-300 to-teal-500 bg-clip-text text-transparent">Prop Firm Vault</span>
+              </h2>
+
+              <p class="text-slate-300/90 text-sm leading-relaxed mb-5 max-w-xl">
+                Exclusive discount codes, early review access, and members-only offers from top prop firms — delivered straight to your inbox every month.
+              </p>
+
+              <!-- Benefit pills -->
+              <div class="flex flex-wrap gap-2 mb-6">
+                <div class="flex items-center gap-1.5 rounded-lg bg-white/5 border border-white/10 px-3 py-1.5 text-xs text-slate-300">
+                  <svg class="h-3.5 w-3.5 text-teal-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  Members-only codes
+                </div>
+                <div class="flex items-center gap-1.5 rounded-lg bg-white/5 border border-white/10 px-3 py-1.5 text-xs text-slate-300">
+                  <svg class="h-3.5 w-3.5 text-teal-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  Early review access
+                </div>
+                <div class="flex items-center gap-1.5 rounded-lg bg-white/5 border border-white/10 px-3 py-1.5 text-xs text-slate-300">
+                  <svg class="h-3.5 w-3.5 text-teal-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  Monthly deal alerts
+                </div>
+              </div>
+
+              <!-- Social proof -->
+              <div class="flex items-center gap-3">
+                <div class="flex -space-x-2">
+                  <div class="h-7 w-7 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 border-2 border-[#112840] flex items-center justify-center text-[10px] font-bold text-white">J</div>
+                  <div class="h-7 w-7 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 border-[#112840] flex items-center justify-center text-[10px] font-bold text-white">M</div>
+                  <div class="h-7 w-7 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-2 border-[#112840] flex items-center justify-center text-[10px] font-bold text-white">K</div>
+                  <div class="h-7 w-7 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 border-2 border-[#112840] flex items-center justify-center text-[10px] font-bold text-white">R</div>
+                </div>
+                <p class="text-xs text-slate-400">
+                  <span class="font-semibold text-white">2,400+</span> traders already saving on challenges
+                </p>
+              </div>
+            </div>
+
+            <!-- Right: CTA card -->
+            <div class="flex-shrink-0 lg:w-72">
+              <div class="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-6 text-center">
+                <!-- Vault icon -->
+                <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-400 to-teal-600 shadow-lg shadow-teal-500/30">
+                  <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                  </svg>
+                </div>
+                <p class="text-sm font-semibold text-white mb-1">Join for Free</p>
+                <p class="text-xs text-slate-400 mb-5">No credit card required</p>
+                <a
+                  href="#"
+                  class="group relative block w-full overflow-hidden rounded-xl bg-gradient-to-r from-teal-500 to-teal-400 px-6 py-3.5 text-center font-bold text-white shadow-lg shadow-teal-500/25 transition-all duration-200 hover:shadow-xl hover:shadow-teal-500/30 hover:brightness-110"
+                >
+                  <span class="relative z-10 flex items-center justify-center gap-2 text-base">
+                    Unlock the Vault
+                    <svg class="h-4 w-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+                  </span>
+                </a>
+                <div class="mt-4 flex items-center justify-center gap-1.5 text-[11px] text-slate-500">
+                  <svg class="h-3 w-3 text-teal-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                  Unsubscribe anytime
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Featured offers grid (max 4) ──────────────────────────────────── -->
+    {featuredGrid.length > 0 && (
+      <section>
+        <div class="mb-6">
+          <p class="text-xs font-bold uppercase tracking-widest text-teal-500 mb-1">February 2026</p>
+          <h2 class="text-2xl font-black text-slate-900">Featured Offers This Month</h2>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {featuredGrid.map(({ firm, code, percent }) => (
+            <div class="group bg-white border border-slate-200 rounded-xl overflow-hidden hover:border-orange-300 hover:shadow-md transition-all duration-200">
+              <!-- Top accent -->
+              <div class="h-1 bg-gradient-to-r from-orange-500 to-orange-300"></div>
+              <div class="p-4">
+                <!-- Firm info -->
+                <div class="flex items-center gap-2.5 mb-3">
+                  <FirmAvatar name={firm.name} logoUrl={firm.media?.logo} size="sm" />
+                  <div class="min-w-0">
+                    <p class="text-sm font-bold text-slate-900 leading-tight truncate">{firm.name}</p>
+                    {firm.trust.trustpilotRating && (
+                      <p class="text-[10px] text-slate-400">{firm.trust.trustpilotRating} ★ Trustpilot</p>
+                    )}
+                  </div>
+                </div>
+                <!-- Discount badge -->
+                <div class="rounded-xl border-2 border-orange-200 bg-orange-50 p-3 text-center mb-3">
+                  <p class="text-2xl font-black text-orange-600 leading-none">{percent}% OFF</p>
+                </div>
+                <!-- Code -->
+                <button
+                  class="w-full flex items-center justify-between rounded-lg border border-dashed border-slate-200 hover:border-orange-400 bg-slate-50 hover:bg-orange-50 px-3 py-2 transition-all cursor-pointer group/btn"
+                  onclick={`navigator.clipboard.writeText('${code}').then(()=>{const el=this.querySelector('.copy-label');el.textContent='Copied!';setTimeout(()=>{el.textContent='${code}'},1500)})`}
+                >
+                  <span class="copy-label text-xs font-black text-slate-800 tracking-wider">{code}</span>
+                  <svg class="h-3.5 w-3.5 text-slate-400 group-hover/btn:text-orange-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- ── All offers list ──────────────────────────────────────────────── -->
+    <section>
+      <div class="mb-6">
+        <p class="text-xs font-bold uppercase tracking-widest text-teal-500 mb-1">All Discounts</p>
+        <h2 class="text-2xl font-black text-slate-900">Current Prop Firm Offers</h2>
+        <p class="text-sm text-slate-500 mt-1">Click any code to copy it instantly</p>
+      </div>
+
+      <div class="space-y-3">
+        {featuredOffers.map(({ firm, code, percent, desc }, i) => (
+          <div class="group bg-white border border-slate-200 rounded-2xl overflow-hidden hover:border-teal-200 hover:shadow-lg transition-all duration-200">
+            <div class="flex items-stretch">
+
+              <!-- Left: % OFF panel -->
+              <div class="flex-shrink-0 w-24 sm:w-28 bg-white border-r border-slate-100 flex flex-col items-center justify-center p-3 relative">
+                {i === 0 && (
+                  <span class="absolute top-2 inset-x-0 flex justify-center">
+                    <span class="bg-orange-400 text-white text-[8px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full leading-tight">Top Deal</span>
+                  </span>
+                )}
+                <div class="mt-4 w-full rounded-2xl border-2 border-teal-200 bg-teal-50 flex flex-col items-center justify-center py-2.5 px-1">
+                  <span class="text-xl sm:text-2xl font-black text-teal-600 leading-none">{percent}%</span>
+                  <span class="text-[8px] font-bold uppercase tracking-widest text-teal-400 mt-0.5">OFF</span>
+                </div>
+              </div>
+
+              <!-- Middle: firm info -->
+              <div class="flex-1 min-w-0 px-4 sm:px-6 py-4 flex flex-col justify-center">
+                <div class="flex items-center gap-3 mb-1.5">
+                  <FirmAvatar name={firm.name} logoUrl={firm.media?.logo} />
+                  <div class="min-w-0">
+                    <p class="font-bold text-slate-900 text-base leading-tight truncate">{firm.name}</p>
+                    {firm.trust.trustpilotRating && (
+                      <div class="flex items-center gap-1 mt-0.5">
+                        <span class="text-amber-400 text-xs">{'★'.repeat(Math.round(firm.trust.trustpilotRating))}</span>
+                        <span class="text-[10px] text-slate-400">{firm.trust.trustpilotRating} · {firm.trust.trustpilotCount?.toLocaleString()} reviews</span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+                <!-- Offer description -->
+                {desc && (
+                  <div class="mt-2 pt-2 border-t border-slate-100">
+                    <p class="text-xs text-slate-400">{desc}</p>
+                  </div>
+                )}
+                <!-- Mobile code -->
+                <button
+                  class="sm:hidden mt-2 flex items-center gap-2 rounded-lg border border-dashed border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-black text-slate-800 tracking-wider cursor-pointer w-fit"
+                  onclick={`navigator.clipboard.writeText('${code}').then(()=>{const el=this.querySelector('.copy-label-m');el.textContent='Copied!';setTimeout(()=>{el.textContent='${code}'},1500)})`}
+                >
+                  <span class="copy-label-m">{code}</span>
+                  <svg class="h-3 w-3 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+                </button>
+              </div>
+
+              <!-- Code (desktop) -->
+              <div class="hidden sm:flex flex-shrink-0 items-center px-6 border-l border-slate-100">
+                <div>
+                  <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium mb-1.5">Coupon Code</p>
+                  <button
+                    class="group/btn flex items-center gap-0 rounded-xl border-2 border-dashed border-slate-200 hover:border-teal-400 bg-white hover:bg-teal-50 overflow-hidden transition-all cursor-pointer shadow-sm"
+                    onclick={`navigator.clipboard.writeText('${code}').then(()=>{const el=this.querySelector('.copy-label');el.textContent='Copied!';setTimeout(()=>{el.textContent='${code}'},1500)})`}
+                  >
+                    <span class="px-3 py-2 text-[10px] font-semibold text-slate-400 bg-slate-50 border-r border-dashed border-slate-200">Code</span>
+                    <span class="copy-label px-4 py-2 font-black text-slate-900 tracking-widest text-sm">{code}</span>
+                    <span class="px-2 py-2 border-l border-dashed border-slate-200">
+                      <svg class="h-4 w-4 text-slate-400 group-hover/btn:text-teal-500 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- CTA column -->
+              <div class="flex-shrink-0 flex flex-col items-center justify-center gap-2 px-4 sm:px-6 border-l border-slate-100">
+                <a
+                  href={firm.links?.website ?? '#'}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow sponsored"
+                  class="inline-flex items-center justify-center gap-1.5 rounded-xl bg-teal-500 hover:bg-teal-600 px-4 py-2.5 text-sm font-bold text-white transition-colors whitespace-nowrap shadow-sm shadow-teal-500/20 w-full"
+                >
+                  Claim Offer
+                  <svg class="h-3.5 w-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+                <a
+                  href={`/reviews/${firm.slug}`}
+                  class="text-[11px] font-medium text-slate-400 hover:text-teal-600 transition-colors whitespace-nowrap"
+                >
+                  Read Review →
+                </a>
+              </div>
+
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  </div>
+</Base>

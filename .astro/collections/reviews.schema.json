@@ -1,0 +1,138 @@
+{
+  "$ref": "#/definitions/reviews",
+  "definitions": {
+    "reviews": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "propFirmId": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "pros": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "cons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "bestFor": {
+          "type": "string"
+        },
+        "notIdealFor": {
+          "type": "string"
+        },
+        "overallScore": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "categoryScores": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          }
+        },
+        "categorySections": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "verdictBlocks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "heading": {
+                "type": "string"
+              },
+              "body": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "heading",
+              "body"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "faq": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "q": {
+                "type": "string"
+              },
+              "a": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "q",
+              "a"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "verified": {
+          "type": "boolean",
+          "default": true
+        },
+        "flagged": {
+          "type": "boolean",
+          "default": false
+        },
+        "flaggedWarning": {
+          "type": "string"
+        },
+        "methodologyVersion": {
+          "type": "string"
+        },
+        "lastReviewedAt": {
+          "type": "string",
+          "format": "date"
+        },
+        "author": {
+          "type": "string"
+        },
+        "editor": {
+          "type": "string"
+        },
+        "youtubeUrl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "propFirmId",
+        "summary",
+        "pros",
+        "cons",
+        "bestFor",
+        "notIdealFor",
+        "methodologyVersion",
+        "lastReviewedAt"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

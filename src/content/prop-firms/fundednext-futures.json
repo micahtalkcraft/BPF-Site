@@ -1,0 +1,68 @@
+{
+  "id": "d0000007-0000-0000-0000-000000000007",
+  "slug": "fundednext-futures",
+  "name": "FundedNext Futures",
+  "status": "active",
+  "foundedYear": 2023,
+  "hqCountry": "AE",
+  "evaluation": {
+    "types": ["1-step"],
+    "profitTargets": { "phase1": 5 },
+    "dailyDrawdown": 2.4,
+    "maxDrawdown": 5,
+    "minTradingDays": null,
+    "scalingPlan": true
+  },
+  "pricing": {
+    "challengeFees": [
+      { "accountSize": 25000, "fee": 129, "model": "1-step" },
+      { "accountSize": 50000, "fee": 249, "model": "1-step" },
+      { "accountSize": 100000, "fee": 449, "model": "1-step" }
+    ],
+    "resetFee": null,
+    "refundPolicy": null
+  },
+  "payouts": {
+    "splitMax": 100,
+    "schedule": "Every 5 days (after 5 Benchmark Days)",
+    "processingTime": "24 hours (guaranteed)",
+    "firstPayoutDays": 5,
+    "methods": ["USDT (ERC20)", "USDT (TRC20)", "USDC", "RiseWorks", "TC Pay"]
+  },
+  "rules": {
+    "newsTrading": true,
+    "weekendHolding": false,
+    "copyTrading": false,
+    "expertAdvisors": false,
+    "consistencyRule": "No single day can exceed 40% of total profit target",
+    "notes": "One-phase futures challenge with no time limit. All positions must be closed by end of session — no overnight holding. Automated trading (bots, EAs, HFT) prohibited. DCA/overleveraging not allowed. Hedging across accounts prohibited. If a contract moves within 2% of CME price limit, trading that instrument must stop for the day. Simulated accounts with real CME pricing. Reset fee: 10% discount on original challenge fee. All payments are final — no refunds."
+  },
+  "markets": {
+    "platforms": ["Tradovate", "NinjaTrader"],
+    "instruments": "Futures — Currencies, Equity Indices, Metals, Energy, Agriculture (CME Group)"
+  },
+  "trust": {
+    "trustpilotRating": null,
+    "trustpilotCount": null,
+    "communitySize": null,
+    "notableFlags": ["Broker-backed (FNmarkets)", "24-hour payout guarantee ($1,000 penalty)"]
+  },
+  "links": { "website": "https://fundednext.com/futures" },
+  "media": { "logo": "/images/logos/fn-futures.png" },
+  "availability": { "restrictedCountries": ["CA", "MT", "CY", "SI", "RO"] },
+  "support": {
+    "hours": "24/7",
+    "liveChat": true,
+    "email": true,
+    "discord": false
+  },
+  "custom": {
+    "tags": ["Futures Only", "100% Profit Split", "24h Payout Guarantee", "Broker-Backed"],
+    "discountCode": "PF",
+    "discountPercent": 30
+  },
+  "notes": null,
+  "lastVerifiedAt": "2026-02-24",
+  "lastUpdatedAt": "2026-02-24",
+  "dataSources": ["https://fundednext.com/futures"]
+}

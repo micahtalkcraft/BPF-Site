@@ -1,0 +1,34 @@
+{
+  "id": "rev-hantec-trader",
+  "propFirmId": "d0000023-0000-0000-0000-000000000023",
+  "summary": "Hantec Trader scores 75/100, making it a solid mid-tier option for traders who value clean rules, reliable payouts, and broker-backed credibility via Hantec Markets. While market depth and education are limited, and Instant Funding has tighter restrictions, the firm's clear structure and flexible challenges will suit experienced traders looking for efficient, no-nonsense funding.",
+  "pros": ["Fast, flexible payouts (7, 14, or 30 days)", "Backed by FCA-regulated broker (Hantec Markets)", "MT4 and MT5 supported with no platform fees", "Three challenge types including Instant Funding", "Scaling plan up to $200K", "No minimum trading days or consistency rules"],
+  "cons": ["Crypto leverage fixed at 1:1", "Instant Funding has stricter rules (no EAs, no weekend holds, no news)", "Limited commodity coverage (only 2 instruments)", "No stocks or futures available", "Minimal educational content"],
+  "bestFor": "Experienced traders who want a broker-backed prop firm with clean rules, flexible payouts, and multiple funding paths — especially those comfortable with MT4/MT5",
+  "notIdealFor": "Beginners who need structured education, US-based traders (not eligible), or those relying heavily on crypto leverage or automated strategies on Instant accounts",
+  "overallScore": 75,
+  "categoryScores": { "challenges": 80, "spreads": 60, "markets": 60, "payouts": 80, "platforms": 80, "trust": 90 },
+  "categorySections": {
+    "challenges": "Hantec Trader offers three program types: Express (1-step), Enhanced (2-step), and Instant Funding. Account sizes range from $5K to $200K with fees from $49 to $1,999. All three have no time limits or minimum trading days. Express uses trailing-to-static drawdown (5% daily, 6% max), Enhanced uses static drawdown (5% daily, 10% max), and Instant uses trailing-to-static (6% daily, 6% max). Scaling available up to $200K on evaluation accounts. Scored 8/10.",
+    "spreads": "Raw spreads with flat commission per lot. Forex and metals at $5/lot, commodities at $1/lot, indices and crypto at $0. No platform or data feed fees. However, no average spread data is published and liquidity providers are undisclosed, limiting transparency. Scored 6/10.",
+    "markets": "Access to 5 asset classes: 40 forex pairs, 8 metals, 11 indices, 2 commodities, and 14 crypto pairs. Forex leverage at 50:1, metals 20:1, indices 15:1, commodities 15:1, crypto 1:1. No stocks or futures available. Scored 6/10.",
+    "platforms": "MetaTrader 4 and MetaTrader 5 supported with no platform or data fees. Real-time pricing. EAs and copy trading allowed on Express and Enhanced only. No platform switching once challenge starts. Instant accounts cannot use EAs or copy trading. Scored 8/10.",
+    "payouts": "75-90% profit split. One-time fees with no recurring costs. Payouts via bank transfer, PayPal, or crypto. Processing in 1-2 business days. Express and Enhanced: 30-day default, 14-day with add-on. Instant: 14-day default, 7-day with add-on. No minimum withdrawal amount. Buffer rule applies post-withdrawal. Scored 8/10.",
+    "support": "24/5 support via email, live chat, and Discord. Response quality is clear and helpful with no known delays. No weekend support. Educational content limited to FAQ section only — no tutorials, webinars, or strategy guides.",
+    "trust": "Broker-backed by FCA-regulated Hantec Markets. 4.5/5 Trustpilot rating from 313+ verified reviews. No reports of payout issues or price manipulation. Active Discord community with 3,500+ members and 14,400+ Twitter followers. Community payout proof shared via Discord and social platforms. Scored 9/10."
+  },
+  "verdictBlocks": [
+    {
+      "heading": "Final Verdict: 75/100",
+      "body": "Hantec Trader is a solid prop firm if you want a rule-transparent, broker-backed firm with flexible funding options. The One Step and Two Step challenges offer scalable funding up to $200K, with no time limits or consistency requirements, ideal for traders who value control. Instant Funding is more limited, but still attractive for those who want to bypass evaluations entirely.\n\nThe prop firm delivers on payouts, platform reliability, and community engagement, backed by FCA-regulated Hantec Markets. While the lack of average spread data, limited education, and 1:1 crypto leverage hold it back slightly, the clean fee structure, responsive support, and public payout record make it one of the more trustworthy options in today's prop trading market."
+    }
+  ],
+  "faq": [
+    { "q": "What is the profit split on Hantec?", "a": "Hantec Trader offers a profit split starting at 75%, which can increase to 90% based on account type and trader performance. Both the One Step and Two Step evaluations begin at 75%, with potential upgrades. Instant Funding accounts also start at 75%, and traders can unlock a 90% split with the Weekly Payout add-on. There are no profit withdrawal limits, but a buffer rule applies after each payout." },
+    { "q": "What is the maximum allocation for Hantec Trader?", "a": "The maximum account allocation at Hantec Trader is $200,000. You can start with any account size and scale up through the One Step or Two Step challenges. But it's important to note there is no scaling available for Instant Funding accounts. Scaling is performance-based and allows you to move to the next tier for free after meeting the required profit targets." },
+    { "q": "Is Hantec a good broker?", "a": "Yes, Hantec is considered a good broker. Hantec Trader is backed by Hantec Markets, an FCA-regulated forex broker. This connection adds trust and oversight to the prop firm, which is rare in the space. While Hantec Trader operates independently for funding challenges, the broker backing ensures price feeds are stable and payouts are credible." },
+    { "q": "Is Hantec Trader available in the US?", "a": "No, Hantec Trader is not available to US residents. This is due to regulatory and compliance restrictions related to the FCA-regulated broker backing. Traders from most other regions can sign up and participate in all three challenge types." }
+  ],
+  "methodologyVersion": "1.0",
+  "lastReviewedAt": "2026-02-24"
+}

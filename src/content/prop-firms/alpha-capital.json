@@ -1,0 +1,87 @@
+{
+  "id": "d0000024-0000-0000-0000-000000000024",
+  "slug": "alpha-capital",
+  "name": "Alpha Capital",
+  "status": "active",
+  "foundedYear": 2021,
+  "hqCountry": "GB",
+  "evaluation": {
+    "types": ["1-step", "2-step", "other"],
+    "profitTargets": { "phase1": 10, "phase2": 5 },
+    "dailyDrawdown": 5,
+    "maxDrawdown": 10,
+    "minTradingDays": 5,
+    "scalingPlan": true
+  },
+  "pricing": {
+    "challengeFees": [
+      { "accountSize": 5000, "fee": 50, "model": "1-step", "label": "Alpha One $5K" },
+      { "accountSize": 10000, "fee": 97, "model": "1-step", "label": "Alpha One $10K" },
+      { "accountSize": 25000, "fee": 197, "model": "1-step", "label": "Alpha One $25K" },
+      { "accountSize": 50000, "fee": 297, "model": "1-step", "label": "Alpha One $50K" },
+      { "accountSize": 100000, "fee": 497, "model": "1-step", "label": "Alpha One $100K" },
+      { "accountSize": 200000, "fee": 997, "model": "1-step", "label": "Alpha One $200K" },
+      { "accountSize": 5000, "fee": 50, "model": "2-step", "label": "Alpha Pro $5K" },
+      { "accountSize": 10000, "fee": 97, "model": "2-step", "label": "Alpha Pro $10K" },
+      { "accountSize": 25000, "fee": 197, "model": "2-step", "label": "Alpha Pro $25K" },
+      { "accountSize": 50000, "fee": 297, "model": "2-step", "label": "Alpha Pro $50K" },
+      { "accountSize": 100000, "fee": 497, "model": "2-step", "label": "Alpha Pro $100K" },
+      { "accountSize": 200000, "fee": 997, "model": "2-step", "label": "Alpha Pro $200K" },
+      { "accountSize": 5000, "fee": 70, "model": "2-step", "label": "Swing $5K" },
+      { "accountSize": 10000, "fee": 147, "model": "2-step", "label": "Swing $10K" },
+      { "accountSize": 25000, "fee": 247, "model": "2-step", "label": "Swing $25K" },
+      { "accountSize": 50000, "fee": 357, "model": "2-step", "label": "Swing $50K" },
+      { "accountSize": 100000, "fee": 577, "model": "2-step", "label": "Swing $100K" },
+      { "accountSize": 200000, "fee": 1097, "model": "2-step", "label": "Swing $200K" },
+      { "accountSize": 10000, "fee": 67, "model": "other", "label": "Alpha Three $10K" },
+      { "accountSize": 25000, "fee": 157, "model": "other", "label": "Alpha Three $25K" },
+      { "accountSize": 50000, "fee": 247, "model": "other", "label": "Alpha Three $50K" },
+      { "accountSize": 100000, "fee": 397, "model": "other", "label": "Alpha Three $100K" },
+      { "accountSize": 200000, "fee": 697, "model": "other", "label": "Alpha Three $200K" }
+    ],
+    "resetFee": null,
+    "refundPolicy": "No refund policy disclosed"
+  },
+  "payouts": {
+    "splitMax": 80,
+    "schedule": "On-demand or Bi-weekly",
+    "processingTime": "Within 2 business days",
+    "firstPayoutDays": 14,
+    "methods": ["Rise (Riseworks)", "Wise", "Bank Wire"]
+  },
+  "rules": {
+    "newsTrading": false,
+    "weekendHolding": true,
+    "copyTrading": false,
+    "expertAdvisors": true,
+    "consistencyRule": "40% Best Day Rule — no single trading day can contribute more than 40% of total profits",
+    "notes": "All trading takes place in a simulated environment. No real-money execution at the funded stage. EAs only available on MT5. US residents restricted to DXTrade only."
+  },
+  "markets": {
+    "platforms": ["MetaTrader 5", "cTrader", "DXTrade"],
+    "instruments": "Forex, Indices, Commodities"
+  },
+  "trust": {
+    "trustpilotRating": 4.7,
+    "trustpilotCount": null,
+    "communitySize": "106,500+ Discord members",
+    "notableFlags": ["Operates entirely in simulated environment", "Reports of payout denials and account closures", "Strict KYC enforcement post-challenge"]
+  },
+  "links": { "website": "https://alphacapitalgroup.uk" },
+  "media": { "logo": "/images/logos/alphacapital-1.png" },
+  "availability": { "restrictedCountries": [] },
+  "support": {
+    "hours": "Mon–Fri 08:00–20:00 GMT",
+    "liveChat": true,
+    "email": true,
+    "discord": true
+  },
+  "custom": {
+    "tags": ["Multiple Platforms", "Scaling Plan", "UK Based"],
+    "discountCode": "ALPHA15",
+    "discountPercent": 15
+  },
+  "lastVerifiedAt": "2026-02-24",
+  "lastUpdatedAt": "2026-02-24",
+  "dataSources": ["https://alphacapitalgroup.uk"]
+}

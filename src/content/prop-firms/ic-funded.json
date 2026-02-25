@@ -1,0 +1,71 @@
+{
+  "id": "d0000022-0000-0000-0000-000000000022",
+  "slug": "ic-funded",
+  "name": "IC Funded",
+  "status": "active",
+  "foundedYear": 2023,
+  "hqCountry": "AU",
+  "evaluation": {
+    "types": ["1-step", "2-step"],
+    "profitTargets": { "phase1": 10, "phase2": 5 },
+    "dailyDrawdown": 5,
+    "maxDrawdown": 10,
+    "minTradingDays": 5,
+    "scalingPlan": true
+  },
+  "pricing": {
+    "challengeFees": [
+      { "accountSize": 5000, "fee": 29.75, "model": "1-step", "label": "One Step" },
+      { "accountSize": 10000, "fee": 59.50, "model": "1-step", "label": "One Step" },
+      { "accountSize": 25000, "fee": 148.75, "model": "1-step", "label": "One Step" },
+      { "accountSize": 50000, "fee": 297.50, "model": "1-step", "label": "One Step" },
+      { "accountSize": 100000, "fee": 595, "model": "1-step", "label": "One Step" },
+      { "accountSize": 250000, "fee": 1487.50, "model": "1-step", "label": "One Step" },
+      { "accountSize": 5000, "fee": 49, "model": "2-step", "label": "Two Step" },
+      { "accountSize": 10000, "fee": 99, "model": "2-step", "label": "Two Step" },
+      { "accountSize": 25000, "fee": 149, "model": "2-step", "label": "Two Step" },
+      { "accountSize": 50000, "fee": 289, "model": "2-step", "label": "Two Step" },
+      { "accountSize": 100000, "fee": 499, "model": "2-step", "label": "Two Step" },
+      { "accountSize": 250000, "fee": 1249, "model": "2-step", "label": "Two Step" },
+      { "accountSize": 500000, "fee": 2498, "model": "2-step", "label": "Two Step" }
+    ],
+    "resetFee": null,
+    "refundPolicy": "Fee refunded with first payout after 30 days of trading"
+  },
+  "payouts": {
+    "splitMax": 80,
+    "schedule": "Monthly (bi-weekly or on-demand available)",
+    "processingTime": "1-3 business days",
+    "firstPayoutDays": 14,
+    "methods": ["bank transfer", "crypto", "Skrill"]
+  },
+  "rules": {
+    "newsTrading": true,
+    "weekendHolding": false,
+    "copyTrading": false,
+    "expertAdvisors": true,
+    "consistencyRule": null,
+    "notes": "EAs allowed but trader must own the source code. Copy trading not allowed. HFT prohibited. Scalping allowed. Weekend holding not allowed — all positions must be closed before Friday market close. Accounts closed after 30 days of inactivity. KYC required for withdrawals."
+  },
+  "markets": {
+    "platforms": ["MT4", "MT5", "cTrader"],
+    "instruments": "Forex, Indices, Commodities"
+  },
+  "trust": {
+    "trustpilotRating": 2.7,
+    "trustpilotCount": null,
+    "communitySize": "Custom chat platform",
+    "notableFlags": []
+  },
+  "links": { "website": "https://icfunded.com" },
+  "media": { "logo": "/images/logos/ic-funded-logo.png" },
+  "availability": { "restrictedCountries": [] },
+  "custom": {
+    "tags": ["IC Markets Backed", "Spreads From 0 Pips", "$3.50 Commission", "Fees From $29.75"],
+    "discountCode": "PROPFIRMS25",
+    "discountPercent": 25
+  },
+  "lastVerifiedAt": "2026-02-24",
+  "lastUpdatedAt": "2026-02-24",
+  "dataSources": ["https://icfunded.com"]
+}

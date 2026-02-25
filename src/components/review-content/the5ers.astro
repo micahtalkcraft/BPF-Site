@@ -1,0 +1,1066 @@
+---
+// Static editorial content for The 5%ers
+// Supports multiple sections via the `section` prop
+interface Props {
+  section: string;
+  fallbackBody?: string;
+}
+const { section, fallbackBody } = Astro.props;
+---
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* CHALLENGES SECTION                                                  */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "challenges" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    The 5%ers offer three distinct evaluation models. Unlike firms that offer a one-size-fits-all approach, these cater to different risk appetites and capital requirements. Each program has its own leverage, drawdown rules, and path to scaling &mdash; culminating in a potential <strong>$4 million account</strong> with a <strong>100% profit split</strong> and a <strong>monthly salary</strong>.
+  </p>
+
+  <!-- Program summaries -->
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Bootcamp &mdash; 3 Step (Low-Cost Entry)</p>
+      <p>A three-step evaluation designed for traders who want to prove themselves without a large upfront investment. Fees start at just $95. 6% profit target per stage, 1:10 leverage, mandatory stop-loss on every position.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">High Stakes &mdash; 2 Step (The Professional Choice)</p>
+      <p>A two-step challenge designed for experienced traders seeking high leverage (1:100 on FX) and faster scaling. 8% then 5% profit targets, 10% max loss with 5% daily drawdown. Fees from $39.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Hyper Growth &mdash; 1 Step (Instant Expansion)</p>
+      <p>A one-step evaluation with aggressive scaling. Each time you hit a 10% profit target, your account size doubles &mdash; all the way up to $4 million. Fees from $260.</p>
+    </div>
+  </div>
+
+  <!-- ─── Challenge Comparison Table ──────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Comparison</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Attribute</th>
+          <th class="px-4 py-3 text-center">Bootcamp</th>
+          <th class="px-4 py-3 text-center">High Stakes</th>
+          <th class="px-4 py-3 text-center">Hyper Growth</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Evaluation Steps</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">3 Steps</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">2 Steps</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">1 Step</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Target</td>
+          <td class="px-4 py-3 text-center text-slate-900">6% per stage</td>
+          <td class="px-4 py-3 text-center text-slate-900">8%, then 5%</td>
+          <td class="px-4 py-3 text-center text-slate-900">10%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Max Loss</td>
+          <td class="px-4 py-3 text-center text-slate-900">5% (4% funded)</td>
+          <td class="px-4 py-3 text-center text-slate-900">10%</td>
+          <td class="px-4 py-3 text-center text-slate-900">5% (4% funded)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Daily Drawdown</td>
+          <td class="px-4 py-3 text-center text-slate-400">&mdash;</td>
+          <td class="px-4 py-3 text-center text-slate-900">5%</td>
+          <td class="px-4 py-3 text-center text-slate-400">&mdash;</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">FX Leverage</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:10</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">1:100</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:30</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Starting Profit Split</td>
+          <td class="px-4 py-3 text-center text-slate-900">50%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">80%</td>
+          <td class="px-4 py-3 text-center text-slate-900">50%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Max Profit Split</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">100%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">100%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">100%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Fees From</td>
+          <td class="px-4 py-3 text-center text-slate-900">$95</td>
+          <td class="px-4 py-3 text-center text-slate-900">$39</td>
+          <td class="px-4 py-3 text-center text-slate-900">$260</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Min Profitable Days</td>
+          <td class="px-4 py-3 text-center text-slate-400">None</td>
+          <td class="px-4 py-3 text-center text-slate-900">3 (0.5% each)</td>
+          <td class="px-4 py-3 text-center text-slate-400">None</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Max Scaling</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">$4,000,000</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">$4,000,000</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">$4,000,000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 1. BOOTCAMP                                                     -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">1</span>
+      Bootcamp Program (3-Step)
+    </h3>
+
+    <p class="mb-3">
+      The Bootcamp is a three-step evaluation designed for traders who want to prove themselves without a large upfront investment. You pay a small entry fee and only pay the "final" fee once you pass. This is the most accessible entry point to The 5%ers.
+    </p>
+    <p class="mb-4">
+      Each stage requires a <strong>6% profit target</strong> with a <strong>5% max loss</strong> (which tightens to 4% once funded). Leverage is conservative at <strong>1:10</strong>, and there's a mandatory stop-loss requirement on every position.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
+        <p class="text-sm font-bold text-slate-800">6% per stage</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Loss</p>
+        <p class="text-sm font-bold text-slate-800">5% (4% funded)</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">FX Leverage</p>
+        <p class="text-sm font-bold text-slate-800">1:10</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Starting Split</p>
+        <p class="text-sm font-bold text-slate-800">50%</p>
+      </div>
+    </div>
+
+    <!-- Best Suited For -->
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
+      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
+      <p class="text-sm text-teal-700">Traders who want a low-risk, low-cost entry point to prove their consistency. Ideal for swing traders and those who prefer conservative leverage with a structured, multi-step progression.</p>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Funded Account Size</th>
+            <th class="px-4 py-3 text-right">Entry Fee</th>
+            <th class="px-4 py-3 text-right">Profit Target (per stage)</th>
+            <th class="px-4 py-3 text-right">Max Loss</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$95</td>
+            <td class="px-4 py-3 text-right text-slate-700">6%</td>
+            <td class="px-4 py-3 text-right text-slate-700">5%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$250,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$225</td>
+            <td class="px-4 py-3 text-right text-slate-700">6%</td>
+            <td class="px-4 py-3 text-right text-slate-700">5%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Bootcamp specific rules -->
+    <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-5">
+      <p class="text-sm font-bold text-amber-900 mb-1">Bootcamp-Specific Rules</p>
+      <p class="text-sm text-amber-800 mb-2">
+        A <strong>stop-loss is mandatory</strong> for all positions and orders and must be set within 3 minutes of placement. You cannot risk more than 2% of the account balance per position. A 3% daily pause ("soft breach") applies during the funded stage.
+      </p>
+      <p class="text-sm text-amber-800">
+        <strong>5 risk violations = automatic account termination.</strong> Opening a position without an SL or risking more than 2% per trade counts as a violation.
+      </p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 2. HIGH STAKES                                                  -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">2</span>
+      High Stakes Challenge (2-Step)
+    </h3>
+
+    <p class="mb-3">
+      This is a two-step challenge designed for experienced traders seeking high leverage and faster scaling. With <strong>1:100 leverage on FX</strong>, an <strong>8% Step 1 target</strong> and <strong>5% Step 2 target</strong>, it's the professional choice for traders who are confident in their strategy.
+    </p>
+    <p class="mb-4">
+      The High Stakes program starts with an <strong>80% profit split</strong> &mdash; the highest starting split of all three programs &mdash; and scales up to 100%. A minimum of <strong>3 profitable days</strong> (at least 0.5% of initial balance each) is required.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Step 1 Target</p>
+        <p class="text-sm font-bold text-slate-800">8%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Step 2 Target</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Loss</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">FX Leverage</p>
+        <p class="text-sm font-bold text-teal-600">1:100</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Starting Split</p>
+        <p class="text-sm font-bold text-teal-600">80%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Profitable Days</p>
+        <p class="text-sm font-bold text-slate-800">3</p>
+      </div>
+    </div>
+
+    <!-- Best Suited For -->
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
+      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
+      <p class="text-sm text-teal-700">Experienced traders who want high leverage (1:100 on FX) and an 80% starting profit split. The professional choice for confident, disciplined traders seeking rapid funding.</p>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">Fee</th>
+            <th class="px-4 py-3 text-right">Step 1 Target (8%)</th>
+            <th class="px-4 py-3 text-right">Step 2 Target (5%)</th>
+            <th class="px-4 py-3 text-right">Max Loss (10%)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$39</td>
+            <td class="px-4 py-3 text-right text-slate-700">$400</td>
+            <td class="px-4 py-3 text-right text-slate-700">$250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$78</td>
+            <td class="px-4 py-3 text-right text-slate-700">$800</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$195</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$309</td>
+            <td class="px-4 py-3 text-right text-slate-700">$4,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$545</td>
+            <td class="px-4 py-3 text-right text-slate-700">$8,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- High Stakes news rule -->
+    <div class="rounded-xl border border-red-200 bg-red-50 p-4">
+      <p class="text-xs font-bold text-red-800 uppercase tracking-wide mb-1">High Stakes News Restriction</p>
+      <p class="text-sm text-red-700">Executing orders <strong>2 minutes before until 2 minutes after</strong> high-impact news events is prohibited on the High Stakes program.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 3. HYPER GROWTH                                                 -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">3</span>
+      Hyper Growth Program (1-Step)
+    </h3>
+
+    <p class="mb-3">
+      A one-step evaluation with aggressive scaling. Each time you hit a <strong>10% profit target</strong>, your account size <strong>doubles</strong> &mdash; all the way up to <strong>$4 million</strong>. This is the most ambitious program The 5%ers offer.
+    </p>
+    <p class="mb-4">
+      Leverage is <strong>1:30 on FX</strong>, and the max loss is <strong>5%</strong> (tightening to 4% once funded). The profit split starts at 50% but scales to 100% as you progress through the scaling plan.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Loss</p>
+        <p class="text-sm font-bold text-slate-800">5% (4% funded)</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">FX Leverage</p>
+        <p class="text-sm font-bold text-slate-800">1:30</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Scaling</p>
+        <p class="text-sm font-bold text-teal-600">Account doubles</p>
+      </div>
+    </div>
+
+    <!-- Best Suited For -->
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
+      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
+      <p class="text-sm text-teal-700">Ambitious traders who want the fastest path to maximum funding. If you can consistently hit 10% targets, your account doubles each time until you reach $4 million with 100% profit split.</p>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Starting Size</th>
+            <th class="px-4 py-3 text-right">Fee</th>
+            <th class="px-4 py-3 text-right">Target (10%)</th>
+            <th class="px-4 py-3 text-right">Max Loss (5%)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$260</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$250</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$450</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$20,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$850</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SCALING PLAN                                                    -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">The Scaling Plan &mdash; How to Earn a $10,000 Salary</h3>
+
+  <p class="mb-4">
+    The 5%ers have arguably the best scaling plan of any prop firm in 2026. They don't just increase your balance &mdash; they change your career trajectory. The "salary" component is a rare perk that provides a safety net most prop traders never get to experience.
+  </p>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Milestone</th>
+          <th class="px-4 py-3 text-left">Benefit</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Hitting 10% Profit</td>
+          <td class="px-4 py-3 text-slate-700">Account balance doubles (Hyper Growth) or moves to next tier</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$350,000 Funding</td>
+          <td class="px-4 py-3 font-semibold text-teal-600">$4,000 fixed monthly salary</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$500,000 Funding</td>
+          <td class="px-4 py-3 font-semibold text-teal-600">$10,000 monthly salary</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$2,500,000 Funding</td>
+          <td class="px-4 py-3 font-semibold text-teal-600">Profit share moves to 100%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Top Tier</td>
+          <td class="px-4 py-3 font-semibold text-teal-600">$4M account with 100% profit share</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- TRADING RULES                                                   -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules &amp; "The Gotchas"</h3>
+
+  <p class="mb-4">
+    While The 5%ers are highly rated, they have specific rules that can trip up the unwary. Rules vary between programs, so pay close attention to which apply to yours.
+  </p>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Rule</th>
+          <th class="px-4 py-3 text-left">Details</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">News Trading</td>
+          <td class="px-4 py-3 text-slate-700">Hyper Growth &amp; Bootcamp: <span class="text-emerald-600 font-semibold">Allowed</span> (no bracket strategies). High Stakes: <span class="text-red-500 font-semibold">Prohibited</span> 2 min before/after high-impact news.</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Expert Advisors</td>
+          <td class="px-4 py-3 text-slate-700"><span class="text-emerald-600 font-semibold">Allowed</span> on all programs. Must set SL on every position. No tick scalping, no arbitrage, no emulators.</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Copy Trading</td>
+          <td class="px-4 py-3 text-slate-700">Allowed on High Stakes &amp; Hyper Growth with limitations. Not between Bootcamp accounts. Restricted above $500K. Third-party copy trading not allowed.</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Stop-Loss (Bootcamp)</td>
+          <td class="px-4 py-3 text-slate-700"><span class="text-red-500 font-semibold">Mandatory</span> within 3 minutes. Max 2% risk per position. 5 violations = termination.</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Bracket Strategies</td>
+          <td class="px-4 py-3 text-slate-700"><span class="text-red-500 font-semibold">Prohibited</span> on all programs &mdash; no pending orders on both sides of news releases.</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Weekend Holding</td>
+          <td class="px-4 py-3 text-slate-700"><span class="text-emerald-600 font-semibold">Allowed</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Inactivity</td>
+          <td class="px-4 py-3 text-slate-700">Accounts <span class="text-red-500 font-semibold">closed after 30 days</span> without new orders</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Prohibited Practices</td>
+          <td class="px-4 py-3 text-slate-700">One-sided bets, arbitrage exploitation, system error exploitation, spoofing</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Expert Verdict callout -->
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
+    <p class="text-sm font-bold text-amber-900 mb-1">Expert Note on News Trading Enforcement</p>
+    <p class="text-sm text-amber-800">
+      During our real-money test, a profitable trade was disqualified because it occurred during a news release. The issue wasn't the rule itself, but the fact that it took the firm <strong>nearly a week to notify us</strong>. This "manual lag" in enforcement is something to be aware of &mdash; always check the news calendar before trading.
+    </p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Challenges and Rules</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      The 5%ers offer genuine variety across their three programs, and the scaling plan is exceptional. The Bootcamp is perfect for cautious traders, High Stakes for professionals who want leverage, and Hyper Growth for ambitious traders chasing the $4M ceiling. The salary component at $350K and $500K is unique in the industry. Just be aware of the program-specific rules &mdash; especially the Bootcamp stop-loss requirements and High Stakes news restrictions.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SPREADS / COMMISSION FEES & PRICING SECTION                         */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "spreads" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    We scored The 5%ers <strong>8/10 for pricing</strong>. In the world of prop firm payout proof, your edge is often eaten by slippage. Here's what our real-money data showed &mdash; and it's impressive.
+  </p>
+
+  <!-- Key pricing stats -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">FX Commission</p>
+      <p class="text-sm font-bold text-teal-600">$4 / round turn</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Industry Average</p>
+      <p class="text-sm font-bold text-slate-800">$7 / round turn</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">USD/JPY Live Spread</p>
+      <p class="text-sm font-bold text-teal-600">0.0 pips</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Indices Commission</p>
+      <p class="text-sm font-bold text-teal-600">$0</p>
+    </div>
+  </div>
+
+  <!-- Live Spread Test -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">The Live Spread Test</h3>
+
+  <p class="mb-3">
+    During our testing, USD/JPY held steady at <strong>0.0 pips</strong>. This kind of raw spread is what you'd expect from an institutional-grade liquidity provider, not a prop firm.
+  </p>
+
+  <h3 class="text-lg font-bold text-slate-900 mb-3">The News Stress Test</h3>
+
+  <p class="mb-4">
+    During a <strong>US unemployment claims release</strong>, we monitored the spread blowout. While other firms see spreads widen by <strong>4+ pips</strong>, The 5%ers only pushed out to <strong>1 pip</strong>. This stability is a massive green flag for intraday scalpers.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+    <div class="rounded-lg bg-teal-50 border border-teal-200 p-4 text-center">
+      <p class="text-3xl font-black text-teal-600">1 pip</p>
+      <p class="text-xs text-teal-700 font-semibold uppercase tracking-wide">The 5%ers during news</p>
+    </div>
+    <div class="rounded-lg bg-red-50 border border-red-200 p-4 text-center">
+      <p class="text-3xl font-black text-red-500">4+ pips</p>
+      <p class="text-xs text-red-700 font-semibold uppercase tracking-wide">Other prop firms during news</p>
+    </div>
+  </div>
+
+  <!-- Commission Structure -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Commission Structure by Asset Class</h3>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Asset Class</th>
+          <th class="px-4 py-3 text-left">Commission</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">FX</td>
+          <td class="px-4 py-3 text-slate-700"><strong>$4</strong> per standard lot (round turn)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Indices</td>
+          <td class="px-4 py-3 font-semibold text-teal-600">No commission</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Metals</td>
+          <td class="px-4 py-3 text-slate-700">Percentage-based: (Rate/100) &times; Entry Price &times; Contract Size &times; Lots &times; 2</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Crypto</td>
+          <td class="px-4 py-3 text-slate-700">Percentage-based: (Rate/100) &times; Entry Price &times; Contract Size &times; Lots &times; 2</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Other Commodities</td>
+          <td class="px-4 py-3 text-slate-700">Percentage-based: (Rate/100) &times; Entry Price &times; Contract Size &times; Lots &times; 2</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Spreads &amp; Pricing</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      The 5%ers deliver elite trading conditions. The $4 FX commission is nearly half the industry average, indices have zero commission, and the spread stability during high-impact news is exceptional. If you're a scalper or intraday trader, these conditions give you a genuine edge over most competitors.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* MARKETS / FINANCIAL MARKETS & LEVERAGE SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "markets" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    The 5%ers offer CFDs across five asset classes: <strong>FX, Metals, Indices, Crypto, and Other Commodities</strong>. While not the widest selection compared to firms offering 800+ instruments, it covers all the major categories most prop traders focus on.
+  </p>
+
+  <p class="mb-6">
+    Leverage varies <strong>significantly by program</strong>, which is an important consideration when choosing your challenge type. The High Stakes program stands out with 1:100 on FX &mdash; one of the highest leverage offerings in the prop firm industry.
+  </p>
+
+  <!-- Leverage Table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Leverage by Program &amp; Asset Class</h3>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Asset</th>
+          <th class="px-4 py-3 text-center">Hyper Growth (1-Step)</th>
+          <th class="px-4 py-3 text-center">High Stakes (2-Step)</th>
+          <th class="px-4 py-3 text-center">Bootcamp (3-Step)</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">FX</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:30</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">1:100</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:30</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Metals</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:10</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:15</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:10</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Indices</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:7.5</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:25</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:7.5</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Crypto</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:0.6</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:2</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:0.6</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Other Commodities</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:5</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:5</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:5</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Asset Categories -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Available Asset Classes</h3>
+
+  <div class="space-y-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">FX (Forex)</p>
+      <p>Major, minor, and exotic currency pairs. Best leverage on High Stakes at 1:100 &mdash; one of the highest in the prop industry.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Metals</p>
+      <p>Gold, silver, and other precious metals. Leverage up to 1:15 on High Stakes. Percentage-based commission applies.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Indices</p>
+      <p>Major global indices with <strong>zero commission</strong>. Leverage up to 1:25 on High Stakes, 1:7.5 on other programs.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Crypto</p>
+      <p>Cryptocurrency CFDs with limited leverage (1:2 max on High Stakes, 1:0.6 on others). Percentage-based commission.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Other Commodities</p>
+      <p>Oil, gas, and agricultural commodities. Consistent 1:5 leverage across all programs. Percentage-based commission.</p>
+    </div>
+  </div>
+
+  <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-6">
+    <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">No Consistency Rules</p>
+    <p class="text-sm text-teal-700">The 5%ers do not apply any consistency rules, meaning there are no restrictions on how much profit can come from a single day or trade. This gives traders full flexibility in their approach.</p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Financial Markets &amp; Leverage</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      The 5%ers cover all the essential asset classes for prop trading. The standout is the High Stakes program with 1:100 FX leverage and 1:25 on indices &mdash; giving professional traders serious firepower. Crypto leverage is limited across the board, but for FX and index traders, the conditions are among the best available.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PLATFORMS / TRADING PLATFORMS SECTION                                */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "platforms" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    The 5%ers support two trading platforms: <strong>MetaTrader 5 (MT5)</strong> and <strong>MatchTrader</strong>. Both provide access to the same markets and conditions, but there are important differences &mdash; especially for US-based traders.
+  </p>
+
+  <!-- Platform Comparison -->
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Feature</th>
+          <th class="px-4 py-3 text-center">MetaTrader 5</th>
+          <th class="px-4 py-3 text-center">MatchTrader</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Type</td>
+          <td class="px-4 py-3 text-center text-slate-900">Desktop + Mobile</td>
+          <td class="px-4 py-3 text-center text-slate-900">Web-based + Mobile</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Expert Advisors (EAs)</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Custom Indicators</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes (MQL5)</span></td>
+          <td class="px-4 py-3 text-center text-slate-900">Limited</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Advanced Charting</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
+          <td class="px-4 py-3 text-center text-slate-900">Clean &amp; functional</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">US Traders</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-semibold">Restricted</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Available</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Platform Fee</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">Free</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">Free</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- MT5 -->
+  <div class="mb-8">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">1</span>
+      MetaTrader 5 (MT5)
+    </h3>
+
+    <p class="mb-3">
+      MT5 is the industry-standard platform offering advanced charting, EAs via MQL5, custom indicators, multi-timeframe analysis, and a built-in strategy tester. It's the go-to for most serious prop traders.
+    </p>
+    <p class="mb-4">
+      <strong>Important:</strong> US-based clients typically must use MatchTrader due to current MetaQuotes restrictions on MT5 access for US residents.
+    </p>
+  </div>
+
+  <!-- MatchTrader -->
+  <div class="mb-8">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">2</span>
+      MatchTrader
+    </h3>
+
+    <p class="mb-3">
+      MatchTrader is a web-based platform with no download required. It provides clean charting, fast execution, and a simplified interface. It's the default option for US traders.
+    </p>
+    <p class="mb-4">
+      While it lacks the depth of MT5's custom indicator ecosystem and strategy tester, it handles the fundamentals well and is responsive across devices.
+    </p>
+  </div>
+
+  <!-- Dashboard Warning -->
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
+    <p class="text-sm font-bold text-amber-900 mb-1">Dashboard P&amp;L Lag Warning</p>
+    <p class="text-sm text-amber-800 mb-2">
+      During our real-money test, the P&amp;L on The 5%ers' web dashboard <strong>didn't update in real-time</strong>. We often saw the dashboard showing a profit when the MT5 terminal showed a drawdown.
+    </p>
+    <p class="text-sm text-amber-800 font-semibold">
+      Expert Tip: Always rely on your trading terminal (MT5 or MatchTrader) for your "source of truth." Do not trust the web dashboard for real-time equity management.
+    </p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trading Platforms</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      MT5 is the stronger platform for most traders, but US residents are limited to MatchTrader. Both are functional and free, but the dashboard lag is a genuine concern &mdash; always use your terminal for real-time P&amp;L. This backend issue is the primary reason platforms scored 7/10 rather than higher.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PAYOUTS / PAYMENTS & PROFIT PAYOUT SECTION                          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "payouts" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    The 5%ers score an <strong>8/10 for payments</strong>. Their profit split structure rewards long-term consistency, scaling from 50% all the way to 100%. Unlike some firms that cap splits, The 5%ers provide a genuine path to keeping every dollar you earn.
+  </p>
+
+  <!-- Payout Overview -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Profit Split</p>
+      <p class="text-sm font-bold text-teal-600">100%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Payout</p>
+      <p class="text-sm font-bold text-slate-800">$150</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Frequency</p>
+      <p class="text-sm font-bold text-slate-800">Bi-weekly</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Processing</p>
+      <p class="text-sm font-bold text-slate-800">2&ndash;5 business days</p>
+    </div>
+  </div>
+
+  <!-- Profit Split by Program -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Profit Split by Program</h3>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Program</th>
+          <th class="px-4 py-3 text-center">Starting Split</th>
+          <th class="px-4 py-3 text-center">Scales To</th>
+          <th class="px-4 py-3 text-center">Max Split</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Bootcamp (3-Step)</td>
+          <td class="px-4 py-3 text-center text-slate-900">50%</td>
+          <td class="px-4 py-3 text-center text-slate-900">75% at next stage</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">100%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">High Stakes (2-Step)</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">80%</td>
+          <td class="px-4 py-3 text-center text-slate-900">Scales with milestones</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">100%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Hyper Growth (1-Step)</td>
+          <td class="px-4 py-3 text-center text-slate-900">50%</td>
+          <td class="px-4 py-3 text-center text-slate-900">75% at next stage</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">100%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Withdrawal Methods -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Withdrawal Methods &amp; Fees</h3>
+
+  <p class="mb-4">
+    Withdrawals are processed bi-weekly with a <strong>$150 minimum</strong> (after profit split). Each method has its own commission percentage:
+  </p>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Method</th>
+          <th class="px-4 py-3 text-center">Commission</th>
+          <th class="px-4 py-3 text-left">Notes</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Rise</td>
+          <td class="px-4 py-3 text-center text-slate-900">2%</td>
+          <td class="px-4 py-3 text-slate-700">Online payment provider</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Cryptocurrencies</td>
+          <td class="px-4 py-3 text-center text-slate-900">2%</td>
+          <td class="px-4 py-3 text-slate-700">BTC, ETH, USDT, etc.</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Bank Transfer</td>
+          <td class="px-4 py-3 text-center text-slate-900">3%</td>
+          <td class="px-4 py-3 text-slate-700">Direct bank wire</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">HUB Credits</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">0%</td>
+          <td class="px-4 py-3 text-slate-700">No commission &mdash; can be used for new challenges</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Payments &amp; Payouts</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      The payout structure rewards patience and consistency. The 50% starting split on Bootcamp/Hyper Growth is lower than some competitors, but the path to 100% is clear and achievable. High Stakes traders get a strong 80% starting split. The withdrawal commission (2&ndash;3%) is worth noting &mdash; HUB Credits are the only fee-free option. Bi-weekly payouts with a $150 minimum are reasonable.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SUPPORT / CUSTOMER SERVICE & EDUCATION SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "support" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    The 5%ers provide customer support during <strong>business hours</strong> via live chat and email, alongside an active <strong>Discord community</strong>. While not 24/7, the team is generally responsive to account, platform, and rule-related queries.
+  </p>
+
+  <!-- Support Channels -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Support Channels</h3>
+
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Live Chat</p>
+      <p>Available during business hours for quick queries</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Email Support</p>
+      <p>For detailed account and payout questions</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Discord Community</p>
+      <p>50,000+ traders for peer support and discussion</p>
+    </div>
+  </div>
+
+  <!-- Copy Trading Partnership -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Prop Firm One Partnership</h3>
+
+  <p class="mb-4">
+    The 5%ers' partnership with <strong>Prop Firm One (PF1)</strong> enables traders to extend their copy trading capabilities. PF1 allows traders to seamlessly copy trades across different proprietary firm accounts within a single platform, offering increased flexibility and a broader range of opportunities.
+  </p>
+
+  <p class="mb-6">
+    This means that, in addition to The 5%ers' internal copy trading feature, PF1 empowers users to manage trades across multiple firms, enhancing scalability and trading efficiency without breaching The 5%ers' core rules.
+  </p>
+
+  <!-- Educational Resources -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Educational Resources</h3>
+
+  <p class="mb-6">
+    The 5%ers offer educational content through their community channels, including trading guides and market analysis. Founded in 2016, their decade of operational experience translates into well-documented help resources covering rules, scaling, and platform usage.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Customer Service &amp; Education</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Support is functional but not exceptional &mdash; business hours only, no 24/7 coverage. The Discord community with 50,000+ traders is the real strength here, providing peer support and shared experience. The Prop Firm One partnership adds genuine value for traders managing multiple prop accounts.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* TRUST / TRUST & COMMUNITY SECTION                                   */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "trust" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    The 5%ers are one of the most established names in prop trading, <strong>founded in 2016</strong> and headquartered in Israel. With nearly a decade of operational history, they've built a strong reputation for reliable payouts and transparent conditions. Unlike retail brokers, they use <strong>commercial liquidity providers</strong>, which generally results in smoother fills and less "stop-hunting."
+  </p>
+
+  <!-- Trustpilot -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">TrustPilot Score</h3>
+
+  <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 mb-6 flex items-center gap-4">
+    <div class="flex-shrink-0">
+      <p class="text-3xl font-black text-slate-900">4.9<span class="text-lg text-slate-400">/5</span></p>
+      <p class="text-xs text-slate-500 font-semibold">Exceptional</p>
+    </div>
+    <div>
+      <p class="text-sm text-slate-700">Based on <strong>4,500+ reviews</strong> on TrustPilot. A 4.9/5 is exceptionally high for the prop firm industry &mdash; very few firms maintain this level of customer satisfaction. The vast majority of reviews are positive, citing reliable payouts and strong trading conditions.</p>
+    </div>
+  </div>
+
+  <!-- Trust Stats -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">4.9/5</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">TrustPilot</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">4,500+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Reviews</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">50K+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Community</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">2016</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Founded</p>
+    </div>
+  </div>
+
+  <!-- Commercial Liquidity -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Commercial Liquidity Providers</h3>
+
+  <p class="mb-6">
+    The 5%ers use commercial liquidity providers rather than dealing desk execution. This means orders are filled at market prices with less risk of "stop-hunting" or artificial spread widening. Our real-money test confirmed this &mdash; USD/JPY held at 0.0 pips, and during a US unemployment claims release, spreads only widened to 1 pip while competitors blew out to 4+ pips.
+  </p>
+
+  <!-- Longevity -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Industry Longevity</h3>
+
+  <p class="mb-6">
+    Founded in 2016, The 5%ers are one of the longest-running prop firms in the industry. While many newer firms have appeared (and disappeared) since then, The 5%ers have maintained consistent operations, payouts, and community support. This track record is a significant trust factor for traders evaluating long-term viability.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trust &amp; Community</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      The 5%ers are one of the most trusted prop firms in the industry. A 4.9/5 TrustPilot score from 4,500+ reviews, nearly a decade of operations, commercial liquidity providers, and a 50,000+ trader community &mdash; these are all strong indicators of a firm that takes its reputation seriously. If trust and reliability are your top priorities, The 5%ers are hard to beat.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* FALLBACK — sections not customised render the default text          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section !== "challenges" && section !== "spreads" && section !== "markets" && section !== "platforms" && section !== "payouts" && section !== "support" && section !== "trust" && fallbackBody && (
+  <div class="text-sm leading-relaxed text-slate-700 space-y-4">
+    {fallbackBody.split("\n\n").map((para) => (
+      <p set:html={para.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")} />
+    ))}
+  </div>
+)}

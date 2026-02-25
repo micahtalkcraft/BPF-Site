@@ -1,0 +1,64 @@
+{
+  "id": "d0000001-0000-0000-0000-000000000001",
+  "slug": "dna-funded",
+  "name": "DNA Funded",
+  "status": "active",
+  "foundedYear": 2022,
+  "hqCountry": "AU",
+  "evaluation": {
+    "types": ["1-step", "2-step", "instant"],
+    "profitTargets": { "phase1": 10, "phase2": 5 },
+    "dailyDrawdown": 5,
+    "maxDrawdown": 10,
+    "minTradingDays": 3,
+    "scalingPlan": true
+  },
+  "pricing": {
+    "challengeFees": [
+      { "accountSize": 5000, "fee": 49, "model": "2-step", "label": "Double Helix" },
+      { "accountSize": 10000, "fee": 79, "model": "2-step", "label": "Double Helix" },
+      { "accountSize": 25000, "fee": 149, "model": "2-step", "label": "Double Helix" },
+      { "accountSize": 50000, "fee": 249, "model": "2-step", "label": "Double Helix" },
+      { "accountSize": 100000, "fee": 399, "model": "2-step", "label": "Double Helix" },
+      { "accountSize": 200000, "fee": 1209, "model": "instant", "label": "Instant Funding" }
+    ],
+    "resetFee": null,
+    "refundPolicy": "Fee refunded with first payout"
+  },
+  "payouts": {
+    "splitMax": 90,
+    "schedule": "On-demand",
+    "processingTime": "24 hours",
+    "firstPayoutDays": 7,
+    "methods": ["bank transfer", "crypto", "Wise"]
+  },
+  "rules": {
+    "newsTrading": true,
+    "weekendHolding": true,
+    "copyTrading": true,
+    "expertAdvisors": false,
+    "consistencyRule": null,
+    "notes": null
+  },
+  "markets": {
+    "platforms": ["TradeLocker"],
+    "instruments": "Forex, Indices, Commodities, Metals, Crypto"
+  },
+  "trust": {
+    "trustpilotRating": 4.9,
+    "trustpilotCount": 3200,
+    "communitySize": "50,000+ traders",
+    "notableFlags": []
+  },
+  "links": { "website": "https://dnafunded.com" },
+  "media": { "logo": "/images/logos/dna-funded-logo.png" },
+  "availability": { "restrictedCountries": [] },
+  "custom": {
+    "tags": ["Fast Payouts", "Low Spreads", "Scaling Plan", "No Time Limit"],
+    "discountCode": "PROPFIRMS25",
+    "discountPercent": 25
+  },
+  "lastVerifiedAt": "2026-02-01",
+  "lastUpdatedAt": "2026-02-01",
+  "dataSources": ["https://dnafunded.com"]
+}

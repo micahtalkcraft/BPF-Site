@@ -1,0 +1,68 @@
+{
+  "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+  "slug": "ftmo",
+  "name": "FTMO",
+  "status": "active",
+  "foundedYear": 2015,
+  "hqCountry": "CZ",
+  "evaluation": {
+    "types": ["2-step"],
+    "profitTargets": { "phase1": 10, "phase2": 5 },
+    "dailyDrawdown": 5,
+    "maxDrawdown": 10,
+    "minTradingDays": 4,
+    "scalingPlan": true
+  },
+  "pricing": {
+    "challengeFees": [
+      { "accountSize": 10000, "fee": 155, "model": "2-step", "label": "Standard" },
+      { "accountSize": 25000, "fee": 250, "model": "2-step", "label": "Standard" },
+      { "accountSize": 50000, "fee": 345, "model": "2-step", "label": "Standard" },
+      { "accountSize": 100000, "fee": 540, "model": "2-step", "label": "Standard" },
+      { "accountSize": 200000, "fee": 1080, "model": "2-step", "label": "Standard" }
+    ],
+    "resetFee": null,
+    "refundPolicy": "Challenge fee refunded with first payout"
+  },
+  "payouts": {
+    "splitMax": 90,
+    "schedule": "Monthly, on-demand after 14 days",
+    "processingTime": "1-2 business days",
+    "firstPayoutDays": 14,
+    "methods": ["bank transfer", "crypto", "Skrill"]
+  },
+  "rules": {
+    "newsTrading": false,
+    "weekendHolding": false,
+    "copyTrading": false,
+    "expertAdvisors": true,
+    "consistencyRule": null,
+    "notes": "Three account types: Standard (1:100 leverage), Aggressive (1:100, doubled targets/drawdowns), Swing (1:30, weekend/news holding allowed). Standard/Aggressive: no weekend holding, no trading within 2 minutes of high-impact news on targeted assets. Swing account exempt from these restrictions. No mandatory stop loss. No lot size limits. Scaling: 25% account increase every 4 months for consistent 10% profit."
+  },
+  "markets": {
+    "platforms": ["MT4", "MT5", "cTrader", "DXtrade"],
+    "instruments": "Forex, Indices, Commodities, Crypto, Stocks, Bonds"
+  },
+  "trust": {
+    "trustpilotRating": 4.8,
+    "trustpilotCount": 37000,
+    "communitySize": "87,700+ Discord",
+    "notableFlags": []
+  },
+  "links": { "website": "https://ftmo.com" },
+  "media": { "logo": "/images/logos/ftmo-logo-2-2-1-1-1.png" },
+  "availability": { "restrictedCountries": ["US", "IR", "KP", "BY", "CU"] },
+  "support": {
+    "hours": "24/7",
+    "liveChat": true,
+    "email": true,
+    "discord": true
+  },
+  "custom": {
+    "tags": ["Est. 2015", "Scaling to $2M", "Up to 90% Split", "18+ Languages Support"]
+  },
+  "notes": null,
+  "lastVerifiedAt": "2026-02-24",
+  "lastUpdatedAt": "2026-02-24",
+  "dataSources": ["https://ftmo.com/en/trading-objectives/", "https://ftmo.com/en/faq/"]
+}

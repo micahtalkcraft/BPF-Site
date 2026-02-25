@@ -1,0 +1,230 @@
+---
+import "../styles/global.css";
+import { SEO } from "astro-seo";
+
+interface Props {
+  title: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: "website" | "article";
+  /** JSON-LD structured data object(s) */
+  jsonLd?: object | object[];
+}
+
+const defaultDescription = "Independent reviews and rankings of proprietary trading firms. Data-driven scores, verified metrics, zero paid placements.";
+const siteUrl = (Astro.site?.href ?? "https://www.bestpropfirms.com").replace(/\/$/, "");
+
+const {
+  title,
+  description = defaultDescription,
+  canonical,
+  ogImage = `${siteUrl}/og-default.png`,
+  ogType = "website",
+  jsonLd,
+} = Astro.props;
+
+const canonicalUrl = canonical
+  ? new URL(canonical, Astro.site ?? Astro.url.origin).href
+  : Astro.url.href;
+
+const jsonLdArray = jsonLd
+  ? Array.isArray(jsonLd)
+    ? jsonLd
+    : [jsonLd]
+  : [];
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+
+    <SEO
+      title={title}
+      description={description}
+      canonical={canonicalUrl}
+      openGraph={{
+        basic: {
+          title,
+          type: ogType,
+          image: ogImage,
+          url: canonicalUrl,
+        },
+        optional: {
+          description,
+          siteName: "BestPropFirms.com",
+        },
+      }}
+      twitter={{
+        card: "summary_large_image",
+        site: "@bestpropfirms",
+        title,
+        description,
+        image: ogImage,
+      }}
+    />
+
+    <link rel="icon" type="image/png" href="/images/brand/best-prop-firms-favicon.png" />
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    {
+      jsonLdArray.map((schema) => (
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify(schema)}
+        />
+      ))
+    }
+  </head>
+  <body class="bg-slate-50 text-slate-900 antialiased">
+    <!-- Site header -->
+    <header class="sticky top-0 z-50 bg-[#0d1b2a] shadow-lg">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <!-- Logo -->
+          <a href="/" class="flex items-center">
+            <img
+              src="/images/brand/best-prop-firms-site-logo.png"
+              alt="BestPropFirms.com"
+              class="h-9 w-auto"
+            />
+          </a>
+
+          <!-- Desktop nav -->
+          <nav class="hidden md:flex items-center gap-1 text-sm font-medium">
+            <a
+              href="/reviews"
+              class="rounded-md px-3 py-2 text-slate-300 hover:bg-white/10 hover:text-white transition-colors"
+            >
+              Reviews
+            </a>
+            <a
+              href="/offers"
+              class="rounded-md px-3 py-2 text-slate-300 hover:bg-white/10 hover:text-white transition-colors"
+            >
+              Offers
+            </a>
+            <a
+              href="/blog"
+              class="rounded-md px-3 py-2 text-slate-300 hover:bg-white/10 hover:text-white transition-colors"
+            >
+              Blog
+            </a>
+            <a
+              href="/reviews"
+              class="ml-3 rounded-lg bg-teal-500 px-4 py-2 text-sm font-semibold text-white hover:bg-teal-400 transition-colors"
+            >
+              View Rankings
+            </a>
+          </nav>
+
+          <!-- Mobile menu placeholder -->
+          <button
+            class="md:hidden rounded-md p-2 text-slate-400 hover:bg-white/10 hover:text-white transition-colors"
+            aria-label="Open menu"
+          >
+            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main>
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#0d1b2a] mt-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+          <!-- Brand -->
+          <div class="col-span-2 md:col-span-1">
+            <div class="mb-3">
+              <img
+                src="/images/brand/best-prop-firms-site-logo.png"
+                alt="BestPropFirms.com"
+                class="h-8 w-auto"
+              />
+            </div>
+            <p class="text-slate-400 leading-relaxed text-xs">
+              Independent rankings and reviews of proprietary trading firms. No paid placements. No sponsored content. Data first.
+            </p>
+          </div>
+
+          <!-- Reviews -->
+          <div>
+            <p class="font-semibold text-white mb-3">Reviews</p>
+            <ul class="space-y-2 text-slate-400">
+              <li><a href="/reviews" class="hover:text-teal-400 transition-colors">All Prop Firms</a></li>
+              <li><a href="/#firms" class="hover:text-teal-400 transition-colors">Search Rankings</a></li>
+            </ul>
+          </div>
+
+          <!-- Tools -->
+          <div>
+            <p class="font-semibold text-white mb-3">Resources</p>
+            <ul class="space-y-2 text-slate-400">
+              <li><a href="/offers" class="hover:text-teal-400 transition-colors">All Discount Codes</a></li>
+              <li><a href="/blog" class="hover:text-teal-400 transition-colors">Blog</a></li>
+              <li><a href="/methodology" class="hover:text-teal-400 transition-colors">Our Methodology</a></li>
+            </ul>
+          </div>
+
+          <!-- Trust signals -->
+          <div>
+            <p class="font-semibold text-white mb-3">Editorial Standards</p>
+            <ul class="space-y-2 text-slate-400 text-xs">
+              <li class="flex items-start gap-1.5">
+                <svg class="mt-0.5 h-3.5 w-3.5 flex-shrink-0 text-teal-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                Zero paid placements
+              </li>
+              <li class="flex items-start gap-1.5">
+                <svg class="mt-0.5 h-3.5 w-3.5 flex-shrink-0 text-teal-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                Data verified against official sources
+              </li>
+              <li class="flex items-start gap-1.5">
+                <svg class="mt-0.5 h-3.5 w-3.5 flex-shrink-0 text-teal-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                Methodology v1.0 published
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Disclaimer + copyright -->
+        <div class="mt-10 border-t border-white/10 pt-8 text-xs text-slate-500 leading-relaxed">
+          <p class="font-medium text-slate-400 mb-1">Risk Disclaimer</p>
+          <p>
+            Proprietary trading involves significant risk of capital loss. Our reviews and rankings are editorial opinions and do not
+            constitute financial advice. Always verify prop firm details independently before paying any challenge fee.
+
+          </p>
+          <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-slate-400">
+            <a href="/terms" class="hover:text-teal-400 transition-colors">Terms of Service</a>
+            <span class="text-white/20">|</span>
+            <a href="/privacy" class="hover:text-teal-400 transition-colors">Privacy Policy</a>
+          </div>
+          <p class="mt-3">&copy; {new Date().getFullYear()} BestPropFirms.com. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

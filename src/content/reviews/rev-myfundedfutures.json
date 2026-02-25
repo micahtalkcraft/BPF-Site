@@ -1,0 +1,73 @@
+{
+  "id": "rev-myfundedfutures",
+  "propFirmId": "d0000017-0000-0000-0000-000000000017",
+  "summary": "With an overall score of 58/100, MyFundedFutures ranked 7th place out of 16 futures prop firms we tested, with our research team having a mixed trading experience. The firm's three account types cater to different types of futures traders, but restrictive payout policies, high monthly fees for some plans, and rigid profit-sharing rules dropped the firm a few places.\n\nWhile the range of futures account types allows for some flexibility compared to other firms, strict consistency rules and limited payout options may make it less ideal for active traders.",
+  "pros": [
+    "Specialises in futures trading",
+    "Keep 100% of first $10K profit",
+    "NinjaTrader, Tradovate, and TradingView platforms",
+    "Broad selection of futures contracts across all major asset classes",
+    "One-time fee option with Milestone accounts",
+    "Structured scaling plan for Starter accounts"
+  ],
+  "cons": [
+    "40% consistency rule on Starter accounts",
+    "Limited payout frequency — bi-weekly on Expert plan",
+    "Minimal customer support — chat-based and FAQ only",
+    "Monthly fees accumulate over time on Starter and Expert",
+    "Buffer zone policy resets drawdown protection on Expert withdrawals",
+    "No phone support available"
+  ],
+  "bestFor": "Experienced futures traders looking for structured growth, advanced platforms like NinjaTrader and TradingView, and flexible account types with scaling potential",
+  "notIdealFor": "Beginners, forex traders, or those prioritising frequent small payouts and hands-on customer support",
+  "overallScore": 58,
+  "categoryScores": {
+    "challenges": 50,
+    "spreads": 50,
+    "markets": 60,
+    "payouts": 60,
+    "platforms": 70,
+    "trust": 60
+  },
+  "categorySections": {
+    "challenges": "custom",
+    "spreads": "custom",
+    "markets": "custom",
+    "platforms": "custom",
+    "payouts": "custom",
+    "support": "custom",
+    "trust": "custom"
+  },
+  "verdictBlocks": [
+    {
+      "heading": "Final Verdict on MyFundedFutures",
+      "body": "MyFundedFutures focuses on futures trading, offering flexible account options, advanced platforms like NinjaTrader and TradingView, and access to a wide range of futures markets. The 100% profit retention on the first $10,000 is a clear benefit for traders aiming to maximise initial earnings.\n\nHowever, restrictive payout policies, high recurring fees for some accounts, and limited support options may not suit all traders. Milestone accounts, with their one-time fees, are a better fit for those preferring upfront costs over ongoing payments.\n\nThe firm is most suitable for experienced traders looking for structured growth in futures markets and advanced tools but may not be ideal for beginners or those prioritising frequent payouts."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is MyFundedFutures?",
+      "a": "MyFundedFutures is a futures prop trading firm that funds traders who pass its evaluation programs, enabling them to trade futures using the firm's capital rather than their own money. Traders can select from different account types — Starter, Milestone, and Expert — each with varying fees, evaluation stages, and payout options."
+    },
+    {
+      "q": "What is the difference between a sim funded account and a live funded account?",
+      "a": "A sim funded account is a simulated trading account that allows you to practice and prove your skills without real capital exposure, whereas a live funded account involves actual capital, placing trades in the live market. Simulated accounts are typically used for evaluation stages, where you must meet performance targets before qualifying for a Live Funded Account."
+    },
+    {
+      "q": "How much is the MyFundedFutures payout?",
+      "a": "With MyFundedFutures, you keep 100% of your first $10,000 in profits, followed by a 90/10 profit split. If you're on the Starter plan, you can request payouts every five winning days, with minimum amounts based on your account size. For the Expert plan, payouts are available every two weeks once your account meets a required buffer, with a minimum payout of $1,000."
+    },
+    {
+      "q": "What are the MyFundedFutures account sizes?",
+      "a": "MyFundedFutures offers futures trading account sizes of $25,000, $50,000, $100,000, and $150,000. Each account size comes with specific rules for maximum position size, drawdown limits, and payout structures, allowing you to choose an account that aligns with your trading goals and risk tolerance."
+    },
+    {
+      "q": "What is the best futures prop firm?",
+      "a": "When we tested futures prop firms in 2026, we found FXIFY Futures and FundedNext Futures were the best, overtaking Topstep. FXIFY and FundedNext are both broker-backed prop trading brands, and offer sister CFD trading challenges giving you more flexibility. They also have competitive fees, quality liquidity providers, and various addons to customise your challenges and funded accounts."
+    }
+  ],
+  "verified": true,
+  "flagged": false,
+  "methodologyVersion": "1.0",
+  "lastReviewedAt": "2026-02-24"
+}

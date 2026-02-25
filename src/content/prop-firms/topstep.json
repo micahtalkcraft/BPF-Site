@@ -1,0 +1,71 @@
+{
+  "id": "d0000010-0000-0000-0000-000000000010",
+  "slug": "topstep",
+  "name": "Topstep",
+  "status": "active",
+  "foundedYear": 2012,
+  "hqCountry": "US",
+  "evaluation": {
+    "types": ["2-step", "other"],
+    "profitTargets": { "phase1": 6 },
+    "dailyDrawdown": 2,
+    "maxDrawdown": 4,
+    "minTradingDays": null,
+    "scalingPlan": true
+  },
+  "pricing": {
+    "challengeFees": [
+      { "accountSize": 50000, "fee": 49, "model": "other", "label": "Trading Combine (monthly)" },
+      { "accountSize": 100000, "fee": 99, "model": "other", "label": "Trading Combine (monthly)" },
+      { "accountSize": 150000, "fee": 149, "model": "other", "label": "Trading Combine (monthly)" },
+      { "accountSize": 50000, "fee": 149, "model": "other", "label": "Express Funded Activation" },
+      { "accountSize": 100000, "fee": 149, "model": "other", "label": "Express Funded Activation" },
+      { "accountSize": 150000, "fee": 149, "model": "other", "label": "Express Funded Activation" }
+    ],
+    "resetFee": 49,
+    "refundPolicy": null
+  },
+  "payouts": {
+    "splitMax": 100,
+    "schedule": "On-demand (after 5 winning days)",
+    "processingTime": "1-10 business days",
+    "firstPayoutDays": null,
+    "methods": ["Wise", "ACH", "Wire Transfer", "SWIFT"]
+  },
+  "rules": {
+    "newsTrading": true,
+    "weekendHolding": false,
+    "copyTrading": true,
+    "expertAdvisors": true,
+    "consistencyRule": "Best Day Profit / Overall Profit must not exceed 50%",
+    "notes": "Three-stage process: Trading Combine (monthly subscription, simulated) → Express Funded ($149 activation, simulated with real profits) → Live Funded (real capital). All positions must be closed by 3:10 PM CT daily — no overnight or weekend holding. Automated strategies (EAs) allowed but unsupported by Topstep. Copy trading allowed via trade copiers. News trading permitted but caution advised. Prohibited: system manipulation, spoofing, ultra-high-speed trading. Scaling plan limits: $50K = 5 lots, $100K = 10 lots, $150K = 15 lots. TopstepX uses 10:1 micro-to-mini ratio."
+  },
+  "markets": {
+    "platforms": ["TopstepX", "NinjaTrader", "TradingView", "Tradovate", "Quantower", "T4"],
+    "instruments": "Futures — Forex (8), Equity Indices (9), Oil & Gas (8), Precious Metals (5), Agricultural (7)"
+  },
+  "trust": {
+    "trustpilotRating": 3.6,
+    "trustpilotCount": 13000,
+    "communitySize": "155,000+ Discord members",
+    "notableFlags": []
+  },
+  "links": { "website": "https://topstep.com" },
+  "media": { "logo": "/images/logos/topstep-logo-1-1-1-1-1.png" },
+  "availability": { "restrictedCountries": [] },
+  "support": {
+    "hours": "24/7",
+    "liveChat": true,
+    "email": true,
+    "discord": true
+  },
+  "custom": {
+    "tags": ["Est. 2012", "Futures Only", "100% First $10K", "155K+ Discord"],
+    "discountCode": null,
+    "discountPercent": null
+  },
+  "notes": null,
+  "lastVerifiedAt": "2026-02-24",
+  "lastUpdatedAt": "2026-02-24",
+  "dataSources": ["https://topstep.com"]
+}

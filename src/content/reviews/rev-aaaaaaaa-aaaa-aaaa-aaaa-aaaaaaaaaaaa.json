@@ -1,0 +1,49 @@
+{
+  "id": "rev-aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+  "propFirmId": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+
+  "summary": "FTMO is the gold standard in proprietary trading. Founded in Prague in 2015, it has funded more than 300,000 traders and maintains one of the highest Trustpilot scores in the industry at 4.8.\n\nThe 2-step evaluation requires hitting a 10% profit target in Phase 1 and 5% in Phase 2, with a maximum 5% daily and 10% overall drawdown. These are stricter than many competitors, but the trade-off is exceptional payout reliability and a well-structured scaling plan up to $2M in funded capital.\n\nThe challenge fee is refunded with the first payout, making FTMO effectively free if you pass. News trading is prohibited, which is a meaningful restriction for some strategies.",
+
+  "pros": [
+    "Most established prop firm — 10+ years of operation",
+    "Industry-leading Trustpilot score (4.8 / 5 from 12,000+ reviews)",
+    "Challenge fee refunded with first payout",
+    "90% profit split at top scale",
+    "Supports MT4, MT5, and cTrader"
+  ],
+  "cons": [
+    "News trading not allowed",
+    "2-step evaluation only — no instant funding option",
+    "US residents restricted",
+    "Strict consistency rule (no single day >50% of total profit)"
+  ],
+
+  "bestFor": "Experienced traders who want maximum credibility and payout reliability",
+  "notIdealFor": "News traders and US-based traders",
+
+  "overallScore": 83,
+  "categoryScores": { "challenges": 80, "spreads": 80, "markets": 80, "payouts": 80, "platforms": 90, "trust": 90 },
+
+  "verdictBlocks": [
+    {
+      "heading": "Our Verdict",
+      "body": "FTMO is the benchmark against which all other prop firms are measured. If you pass their evaluation, the payout reliability and brand credibility are unmatched. Our top-rated prop firm overall."
+    }
+  ],
+
+  "faq": [
+    {
+      "q": "Does FTMO refund the challenge fee?",
+      "a": "Yes — the challenge fee is refunded with your first profit payout if you pass the evaluation."
+    },
+    {
+      "q": "Is news trading allowed on FTMO?",
+      "a": "No. Trading during high-impact news events is prohibited on all FTMO accounts."
+    }
+  ],
+
+  "methodologyVersion": "1.0",
+  "lastReviewedAt": "2026-01-18",
+  "author": "Editorial Team",
+  "editor": "Senior Editor"
+}

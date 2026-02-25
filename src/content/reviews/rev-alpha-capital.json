@@ -1,0 +1,74 @@
+{
+  "id": "rev-alpha-capital",
+  "propFirmId": "d0000024-0000-0000-0000-000000000024",
+  "summary": "With a score of 43/100, Alpha Capital offers multiple evaluation models and trading platforms but operates entirely in a simulated environment with no real-money execution. While it promotes an engaged Discord community and tools like Autochartist, its lack of transparency on spreads and execution raises concerns.\n\nTraders have reported payout denials, sudden account closures, and KYC enforcement only after passing challenges. Many claim risk interviews, IP bans, and changing rules prevent withdrawals, leading to doubts about the firm's legitimacy. The high number of detailed 1-star reviews suggests traders should approach with caution.",
+  "pros": [
+    "Multiple evaluation models (1-step, 2-step, 3-step)",
+    "Account sizes up to $200K",
+    "Scaling plan up to $2 million",
+    "MT5, cTrader, and DXTrade available",
+    "Active Discord community with 106K+ members",
+    "Autochartist integration for market analysis"
+  ],
+  "cons": [
+    "No real-money trading — fully simulated environment",
+    "No transparency on average spreads",
+    "Reports of payout denials and sudden account closures",
+    "Strict KYC enforcement after passing challenges",
+    "US residents restricted to DXTrade only",
+    "40% Best Day Rule limits daily profit contribution"
+  ],
+  "bestFor": "Traders who want multiple evaluation paths and scaling potential, and who understand the risks of simulated-only prop firms",
+  "notIdealFor": "Traders seeking transparent execution, reliable payouts, or real-money trading environments",
+  "overallScore": 43,
+  "categoryScores": {
+    "challenges": 60,
+    "spreads": 30,
+    "markets": 30,
+    "payouts": 50,
+    "platforms": 50,
+    "trust": 40
+  },
+  "categorySections": {
+    "challenges": "custom",
+    "spreads": "custom",
+    "markets": "custom",
+    "platforms": "custom",
+    "payouts": "custom",
+    "support": "custom",
+    "trust": "custom"
+  },
+  "verdictBlocks": [
+    {
+      "heading": "Alpha Capital Warning",
+      "body": "We do not recommend Alpha Capital due to payout denials, sudden account closures, and strict KYC enforcement after traders pass challenges. The firm operates in a simulated environment with no real-money execution, raising transparency concerns.\n\nOur testing scored Alpha Capital 43/100, and we only recommend firms scoring 50/100+. For better trust and pricing, consider IC Funded, Blueberry Funded, or BrightFunded for more reliable prop firms."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Are Alpha Capital legit?",
+      "a": "Alpha Capital Group is a proprietary trading firm that offers simulated funded accounts rather than real-money trading. While it provides multiple evaluation models and trading platforms, concerns over payout denials, sudden account closures, and strict KYC enforcement have been reported. With a mix of positive and negative reviews, traders should approach with caution and carefully review the terms before joining."
+    },
+    {
+      "q": "How does Alpha Capital work?",
+      "a": "Alpha Capital operates by offering traders a chance to pass evaluation challenges to qualify for a funded account. However, these accounts are simulated, meaning traders do not trade with real money. Traders can choose between different challenge types with set profit targets and drawdown limits, and if successful, they can earn a percentage of their simulated profits."
+    },
+    {
+      "q": "Is Alpha Capital Group accepting US clients?",
+      "a": "Alpha Capital Group accepts US clients but restricts them to using the DXTrade platform. Unlike other traders who can access MetaTrader 5 (MT5) and cTrader, U.S. residents must use DXTrade due to regulatory restrictions. Additionally, traders traveling to the US cannot access their MT5 or cTrader accounts while within the country."
+    },
+    {
+      "q": "What broker does Alpha Capital use?",
+      "a": "Alpha Capital Group is broker-backed through ACG Markets, an FSA-regulated brokerage. While ACG Markets provides Prime-of-Prime liquidity and ultra-low latency execution, all trading within Alpha Capital remains in a simulated environment. This means funded traders do not have direct market access or real-money execution."
+    },
+    {
+      "q": "Why doesn't BestPropFirms recommend Alpha Capital Group?",
+      "a": "BestPropFirms does not recommend Alpha Capital Group due to multiple trader complaints regarding payout denials, sudden account closures, and strict KYC enforcement after passing challenges. Additionally, Alpha Capital operates entirely in a simulated environment with no real-money execution. With a trust score of 43/100, Alpha Capital falls below our recommended threshold of 50/100+."
+    }
+  ],
+  "verified": true,
+  "flagged": true,
+  "flaggedWarning": "We do not recommend Alpha Capital due to payout denials, sudden account closures, and strict KYC enforcement after traders pass challenges. The firm operates in a simulated environment with no real-money execution, raising transparency concerns.\n\nOur testing scored Alpha Capital 43/100, and we only recommend firms scoring 50/100+. For better trust and pricing, consider [IC Funded](/reviews/ic-funded), [Blueberry Funded](/reviews/blueberry-funded), or [BrightFunded](/reviews/brightfunded) for more reliable prop firms.",
+  "methodologyVersion": "1.0",
+  "lastReviewedAt": "2026-02-24"
+}

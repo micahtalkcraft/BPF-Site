@@ -1,0 +1,471 @@
+---
+interface Props {
+  section: string;
+  fallbackBody: string;
+}
+const { section, fallbackBody } = Astro.props;
+---
+
+{/* ═══════════════════════════════════════════════════════════════════════════ */}
+{/* CHALLENGES                                                                 */}
+{/* ═══════════════════════════════════════════════════════════════════════════ */}
+{section === "challenges" && (
+  <div class="space-y-6">
+
+    <!-- Overview -->
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Apex Trader Funding offers two account types — <strong>Tradovate</strong> and <strong>Rithmic</strong> — with account sizes from <strong>$25,000 to $300,000</strong>. The core difference is the trading platform each account operates on. Each type provides various funded account sizes with different contract limits, trailing thresholds, and drawdown structures.
+    </p>
+
+    <!-- Account type cards -->
+    <div class="grid sm:grid-cols-2 gap-4">
+      <div class="rounded-xl border border-slate-200 bg-white p-5">
+        <h4 class="font-bold text-slate-900 mb-2">Tradovate Accounts</h4>
+        <p class="text-sm text-slate-600 leading-relaxed">Browser-based platform with mobile and desktop access. TradingView integration. Ideal for traders who want flexibility and multi-device trading.</p>
+      </div>
+      <div class="rounded-xl border border-slate-200 bg-white p-5">
+        <h4 class="font-bold text-slate-900 mb-2">Rithmic Accounts</h4>
+        <p class="text-sm text-slate-600 leading-relaxed">High-speed execution with low-latency data feeds. Compatible with NinjaTrader. Ideal for advanced traders and algorithmic strategies.</p>
+      </div>
+    </div>
+
+    <!-- Evaluation process -->
+    <div class="rounded-xl border border-slate-200 bg-white p-5">
+      <h4 class="font-bold text-slate-900 mb-3">How Does the Evaluation Work?</h4>
+      <ul class="space-y-2 text-sm text-slate-700">
+        <li class="flex items-start gap-2"><span class="text-slate-400 font-bold">•</span>One-step evaluation with a minimum of <strong>7 trading days</strong></li>
+        <li class="flex items-start gap-2"><span class="text-slate-400 font-bold">•</span>Profit targets are <strong>fixed dollar amounts</strong>, not percentages — starting at $1,500 for 25K accounts</li>
+        <li class="flex items-start gap-2"><span class="text-slate-400 font-bold">•</span>Static accounts have lower targets — 100K Static requires only $2,000 vs $6,000 for 100K Full</li>
+        <li class="flex items-start gap-2"><span class="text-slate-400 font-bold">•</span>Upon passing, you get <strong>100% profit split on first $25K</strong>, then 75%–95% thereafter</li>
+        <li class="flex items-start gap-2"><span class="text-slate-400 font-bold">•</span>No scaling requirements on funded accounts</li>
+      </ul>
+    </div>
+
+    <!-- Tradovate accounts table -->
+    <div>
+      <h4 class="font-bold text-slate-900 mb-3">Tradovate Accounts</h4>
+      <div class="overflow-x-auto rounded-xl border border-slate-200">
+        <table class="w-full text-sm">
+          <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+            <tr>
+              <th class="px-4 py-3 text-left">Account</th>
+              <th class="px-4 py-3 text-center">Contracts (Micros)</th>
+              <th class="px-4 py-3 text-center">Profit Goal</th>
+              <th class="px-4 py-3 text-center">Trailing Threshold</th>
+              <th class="px-4 py-3 text-right">Monthly Cost</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">25K Full</td><td class="px-4 py-3 text-center text-slate-600">4 (40)</td><td class="px-4 py-3 text-center text-slate-600">$1,500</td><td class="px-4 py-3 text-center text-slate-600">$1,500</td><td class="px-4 py-3 text-right font-semibold text-red-600">$167</td></tr>
+            <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">50K Full</td><td class="px-4 py-3 text-center text-slate-600">10 (100)</td><td class="px-4 py-3 text-center text-slate-600">$3,000</td><td class="px-4 py-3 text-center text-slate-600">$2,500</td><td class="px-4 py-3 text-right font-semibold text-red-600">$187</td></tr>
+            <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">100K Full</td><td class="px-4 py-3 text-center text-slate-600">14 (140)</td><td class="px-4 py-3 text-center text-slate-600">$6,000</td><td class="px-4 py-3 text-center text-slate-600">$3,000</td><td class="px-4 py-3 text-right font-semibold text-red-600">$297</td></tr>
+            <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">100K Static</td><td class="px-4 py-3 text-center text-slate-600">2 (20)</td><td class="px-4 py-3 text-center text-slate-600">$2,000</td><td class="px-4 py-3 text-center text-slate-600">None</td><td class="px-4 py-3 text-right font-semibold text-red-600">$157</td></tr>
+            <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">150K Full</td><td class="px-4 py-3 text-center text-slate-600">17 (170)</td><td class="px-4 py-3 text-center text-slate-600">$9,000</td><td class="px-4 py-3 text-center text-slate-600">$5,000</td><td class="px-4 py-3 text-right font-semibold text-red-600">$397</td></tr>
+            <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">250K Full</td><td class="px-4 py-3 text-center text-slate-600">27 (270)</td><td class="px-4 py-3 text-center text-slate-600">$15,000</td><td class="px-4 py-3 text-center text-slate-600">$6,500</td><td class="px-4 py-3 text-right font-semibold text-red-600">$497</td></tr>
+            <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">300K Full</td><td class="px-4 py-3 text-center text-slate-600">35 (350)</td><td class="px-4 py-3 text-center text-slate-600">$20,000</td><td class="px-4 py-3 text-center text-slate-600">$7,500</td><td class="px-4 py-3 text-right font-semibold text-red-600">$597</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Rithmic accounts table -->
+    <div>
+      <h4 class="font-bold text-slate-900 mb-3">Rithmic Accounts</h4>
+      <div class="overflow-x-auto rounded-xl border border-slate-200">
+        <table class="w-full text-sm">
+          <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+            <tr>
+              <th class="px-4 py-3 text-left">Account</th>
+              <th class="px-4 py-3 text-center">Contracts (Micros)</th>
+              <th class="px-4 py-3 text-center">Profit Goal</th>
+              <th class="px-4 py-3 text-center">Trailing Threshold</th>
+              <th class="px-4 py-3 text-center">Platform & Data Fees</th>
+              <th class="px-4 py-3 text-right">Monthly Cost</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">25K Full</td><td class="px-4 py-3 text-center text-slate-600">4 (40)</td><td class="px-4 py-3 text-center text-slate-600">$1,500</td><td class="px-4 py-3 text-center text-slate-600">$1,500</td><td class="px-4 py-3 text-center text-slate-600">NinjaTrader ($75) & Data ($55)</td><td class="px-4 py-3 text-right font-semibold text-red-600">$157</td></tr>
+            <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">50K Full</td><td class="px-4 py-3 text-center text-slate-600">10 (100)</td><td class="px-4 py-3 text-center text-slate-600">$3,000</td><td class="px-4 py-3 text-center text-slate-600">$2,500</td><td class="px-4 py-3 text-center text-slate-600">NinjaTrader ($75) & Data ($55)</td><td class="px-4 py-3 text-right font-semibold text-red-600">$177</td></tr>
+            <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">100K Full</td><td class="px-4 py-3 text-center text-slate-600">14 (140)</td><td class="px-4 py-3 text-center text-slate-600">$6,000</td><td class="px-4 py-3 text-center text-slate-600">$3,000</td><td class="px-4 py-3 text-center text-slate-600">NinjaTrader ($75) & Data ($55)</td><td class="px-4 py-3 text-right font-semibold text-red-600">$297</td></tr>
+            <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">100K Static</td><td class="px-4 py-3 text-center text-slate-600">2 (20)</td><td class="px-4 py-3 text-center text-slate-600">$2,000</td><td class="px-4 py-3 text-center text-slate-600">None</td><td class="px-4 py-3 text-center text-slate-600">NinjaTrader ($75) & Data ($55)</td><td class="px-4 py-3 text-right font-semibold text-red-600">$147</td></tr>
+            <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">150K Full</td><td class="px-4 py-3 text-center text-slate-600">17 (170)</td><td class="px-4 py-3 text-center text-slate-600">$9,000</td><td class="px-4 py-3 text-center text-slate-600">$5,000</td><td class="px-4 py-3 text-center text-slate-600">NinjaTrader ($75) & Data ($55)</td><td class="px-4 py-3 text-right font-semibold text-red-600">$397</td></tr>
+            <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">250K Full</td><td class="px-4 py-3 text-center text-slate-600">27 (270)</td><td class="px-4 py-3 text-center text-slate-600">$15,000</td><td class="px-4 py-3 text-center text-slate-600">$6,500</td><td class="px-4 py-3 text-center text-slate-600">NinjaTrader ($75) & Data ($55)</td><td class="px-4 py-3 text-right font-semibold text-red-600">$497</td></tr>
+            <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">300K Full</td><td class="px-4 py-3 text-center text-slate-600">35 (350)</td><td class="px-4 py-3 text-center text-slate-600">$20,000</td><td class="px-4 py-3 text-center text-slate-600">$7,500</td><td class="px-4 py-3 text-center text-slate-600">NinjaTrader ($75) & Data ($55)</td><td class="px-4 py-3 text-right font-semibold text-red-600">$597</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Verdict -->
+    <div class="rounded-xl border-2 border-red-300 bg-red-50 p-5">
+      <p class="text-sm text-red-900 leading-relaxed">
+        <strong>Verdict on Challenges — 4/10:</strong> With account sizes from $25,000 to $300,000 and contracts from 4 up to 35, Apex's offerings cater to different trading volumes. However, the <strong>high monthly subscription fees</strong> ($147–$597/mo) make this one of the most expensive evaluation programs in the industry. Unlike most prop firms that charge a one-time fee, Apex's recurring costs can add up quickly if you don't pass.
+      </p>
+    </div>
+  </div>
+)}
+
+{/* ═══════════════════════════════════════════════════════════════════════════ */}
+{/* SPREADS (Pricing & Commission Fees)                                        */}
+{/* ═══════════════════════════════════════════════════════════════════════════ */}
+{section === "spreads" && (
+  <div class="space-y-6">
+
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Apex Trader Funding's costs can accumulate over time, with monthly fees for evaluation accounts, activation fees for funded accounts, and commission charges per trade. These ongoing expenses, especially with add-ons like Level 2 data, can significantly impact monthly costs for active traders.
+    </p>
+
+    <!-- Activation fees -->
+    <div class="rounded-xl border border-slate-200 bg-white p-5">
+      <h4 class="font-bold text-slate-900 mb-3">Activation Fees (Funded Accounts)</h4>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+            <tr>
+              <th class="px-4 py-3 text-left">Account Type</th>
+              <th class="px-4 py-3 text-center">Monthly Fee</th>
+              <th class="px-4 py-3 text-right">Lifetime Fee</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">Rithmic</td><td class="px-4 py-3 text-center text-red-600 font-semibold">$85/mo</td><td class="px-4 py-3 text-right text-slate-600">$130 – $340</td></tr>
+            <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">Tradovate</td><td class="px-4 py-3 text-center text-red-600 font-semibold">$105/mo</td><td class="px-4 py-3 text-right text-slate-600">$150 – $360</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Commission fees -->
+    <div class="rounded-xl border border-slate-200 bg-white p-5">
+      <h4 class="font-bold text-slate-900 mb-3">Commission Fees</h4>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+            <tr>
+              <th class="px-4 py-3 text-left">Instrument</th>
+              <th class="px-4 py-3 text-center">Tradovate (Round Turn)</th>
+              <th class="px-4 py-3 text-right">Rithmic (Round Turn)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr class="bg-white"><td class="px-4 py-3 font-semibold text-slate-900">E-mini S&P 500 (ES)</td><td class="px-4 py-3 text-center text-slate-600">$3.10</td><td class="px-4 py-3 text-right text-slate-600">$3.98</td></tr>
+            <tr class="bg-slate-50"><td class="px-4 py-3 font-semibold text-slate-900">Micro E-mini S&P 500 (MES)</td><td class="px-4 py-3 text-center text-slate-600">$1.04</td><td class="px-4 py-3 text-right text-slate-600">$1.02</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Data fees -->
+    <div class="rounded-xl border border-amber-200 bg-amber-50 p-4">
+      <p class="text-sm text-amber-900 leading-relaxed">
+        <strong>Additional Data Fees:</strong> Level 1 market data is included. Level 2 data (depth of market) costs <strong>$41+/month</strong> plus a $2 processing fee. These subscriptions are managed through the respective platforms and do not renew automatically.
+      </p>
+    </div>
+
+    <!-- Verdict -->
+    <div class="rounded-xl border-2 border-red-300 bg-red-50 p-5">
+      <p class="text-sm text-red-900 leading-relaxed">
+        <strong>Verdict on Pricing — 4/10:</strong> With monthly evaluation fees, activation charges for funded accounts ($85–$360), and additional data costs, Apex Trader Funding's expenses add up quickly. The commission fees themselves are reasonable, but the <strong>recurring subscription model</strong> makes it significantly more expensive than prop firms offering one-time evaluation fees.
+      </p>
+    </div>
+  </div>
+)}
+
+{/* ═══════════════════════════════════════════════════════════════════════════ */}
+{/* MARKETS (Futures Markets)                                                  */}
+{/* ═══════════════════════════════════════════════════════════════════════════ */}
+{section === "markets" && (
+  <div class="space-y-6">
+
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Apex Trader Funding offers <strong>46 futures markets</strong> in total, covering currency, equity, agriculture, energy, metal, and cryptocurrency futures. Supported exchanges include the <strong>CME, CBOT, COMEX, and NYMEX</strong>.
+    </p>
+
+    <!-- Market categories -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="rounded-xl border border-slate-200 bg-white p-4">
+        <h4 class="font-bold text-slate-900 mb-2 text-sm">Currency Futures</h4>
+        <p class="text-xs text-slate-600">Euro FX (6E), British Pound (6B), Japanese Yen (6J) and more</p>
+      </div>
+      <div class="rounded-xl border border-slate-200 bg-white p-4">
+        <h4 class="font-bold text-slate-900 mb-2 text-sm">Equity Futures</h4>
+        <p class="text-xs text-slate-600">E-mini S&P 500 (ES), Mini-DOW (YM), E-mini NASDAQ 100 (NQ)</p>
+      </div>
+      <div class="rounded-xl border border-slate-200 bg-white p-4">
+        <h4 class="font-bold text-slate-900 mb-2 text-sm">Agricultural Futures</h4>
+        <p class="text-xs text-slate-600">Corn (ZC), Wheat (ZW), Lean Hogs (HE) and more</p>
+      </div>
+      <div class="rounded-xl border border-slate-200 bg-white p-4">
+        <h4 class="font-bold text-slate-900 mb-2 text-sm">Energy Futures</h4>
+        <p class="text-xs text-slate-600">Crude Oil (CL), Natural Gas (NG), Heating Oil (HO)</p>
+      </div>
+      <div class="rounded-xl border border-slate-200 bg-white p-4">
+        <h4 class="font-bold text-slate-900 mb-2 text-sm">Metal Futures</h4>
+        <p class="text-xs text-slate-600">Gold (GC), Silver (SI), Copper (HG), E-Micro Gold (MGC)</p>
+      </div>
+      <div class="rounded-xl border border-slate-200 bg-white p-4">
+        <h4 class="font-bold text-slate-900 mb-2 text-sm">Crypto Futures</h4>
+        <p class="text-xs text-slate-600">Micro Bitcoin (MBT), Micro Ether (MET) — micro contracts only</p>
+      </div>
+    </div>
+
+    <!-- Verdict -->
+    <div class="rounded-xl border-2 border-red-300 bg-red-50 p-5">
+      <p class="text-sm text-red-900 leading-relaxed">
+        <strong>Verdict on Markets — 4/10:</strong> While Apex covers popular high-liquidity futures assets across 46 markets, the selection is <strong>futures-only</strong> with no forex, stocks, or indices outside of futures contracts. Crypto is limited to micro contracts only. The range may feel limited compared to forex prop firms offering hundreds of instruments.
+      </p>
+    </div>
+  </div>
+)}
+
+{/* ═══════════════════════════════════════════════════════════════════════════ */}
+{/* PLATFORMS (Trading Platforms)                                               */}
+{/* ═══════════════════════════════════════════════════════════════════════════ */}
+{section === "platforms" && (
+  <div class="space-y-6">
+
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Apex Trader Funding supports a wide range of trading platforms across its two main account types. Each platform provides specific tools tailored to different needs, from flexible web-based options to advanced low-latency setups.
+    </p>
+
+    <!-- Platform cards -->
+    <div class="grid sm:grid-cols-2 gap-4">
+      <div class="rounded-xl border border-slate-200 bg-white p-5">
+        <h4 class="font-bold text-slate-900 mb-2">NinjaTrader 8</h4>
+        <p class="text-xs text-slate-600 mb-2">Advanced charting, strategy automation, custom indicators. Free license provided.</p>
+        <span class="inline-block rounded-full bg-blue-100 text-blue-700 text-[10px] font-bold px-2 py-0.5">Tradovate & Rithmic</span>
+      </div>
+      <div class="rounded-xl border border-slate-200 bg-white p-5">
+        <h4 class="font-bold text-slate-900 mb-2">Tradovate</h4>
+        <p class="text-xs text-slate-600 mb-2">Browser, mobile, and desktop access. TradingView integration. Intuitive interface.</p>
+        <span class="inline-block rounded-full bg-green-100 text-green-700 text-[10px] font-bold px-2 py-0.5">Tradovate Only</span>
+      </div>
+      <div class="rounded-xl border border-slate-200 bg-white p-5">
+        <h4 class="font-bold text-slate-900 mb-2">TradingView</h4>
+        <p class="text-xs text-slate-600 mb-2">Integrated charting, social trading tools, customisable indicators. Trade directly from charts.</p>
+        <span class="inline-block rounded-full bg-green-100 text-green-700 text-[10px] font-bold px-2 py-0.5">Tradovate Only</span>
+      </div>
+      <div class="rounded-xl border border-slate-200 bg-white p-5">
+        <h4 class="font-bold text-slate-900 mb-2">RTrader Pro</h4>
+        <p class="text-xs text-slate-600 mb-2">High-performance, low-latency data, real-time account monitoring. PC only.</p>
+        <span class="inline-block rounded-full bg-purple-100 text-purple-700 text-[10px] font-bold px-2 py-0.5">Rithmic Only</span>
+      </div>
+    </div>
+
+    <!-- Other Rithmic platforms -->
+    <div class="rounded-xl border border-slate-200 bg-white p-5">
+      <h4 class="font-bold text-slate-900 mb-3">Additional Rithmic Platforms</h4>
+      <div class="flex flex-wrap gap-2">
+        {["ATAS", "BOOKMAP", "Edge Clear EdgeProX", "Finamark", "Jigsaw Trading", "MotiveWave", "Quantower", "Sierra Chart", "VolFix", "WealthCharts"].map(p => (
+          <span class="rounded-full bg-slate-100 text-slate-600 text-xs font-medium px-3 py-1">{p}</span>
+        ))}
+      </div>
+    </div>
+
+    <!-- Trading rules table -->
+    <div>
+      <h4 class="font-bold text-slate-900 mb-3">Trading Rules</h4>
+      <div class="overflow-x-auto rounded-xl border border-slate-200">
+        <table class="w-full text-sm">
+          <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+            <tr>
+              <th class="px-4 py-3 text-left">Rule</th>
+              <th class="px-4 py-3 text-right">Status</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr class="bg-white"><td class="px-4 py-3 text-slate-700">Trailing Threshold</td><td class="px-4 py-3 text-right"><span class="text-amber-600 font-semibold">Follows profits (full accounts)</span></td></tr>
+            <tr class="bg-slate-50"><td class="px-4 py-3 text-slate-700">Minimum Trading Days</td><td class="px-4 py-3 text-right"><span class="text-slate-900 font-semibold">7 days</span></td></tr>
+            <tr class="bg-white"><td class="px-4 py-3 text-slate-700">Consistency Rules</td><td class="px-4 py-3 text-right"><span class="text-amber-600 font-semibold">Required on funded</span></td></tr>
+            <tr class="bg-slate-50"><td class="px-4 py-3 text-slate-700">Fully Automated Systems</td><td class="px-4 py-3 text-right"><span class="text-red-600 font-semibold">Banned</span></td></tr>
+            <tr class="bg-white"><td class="px-4 py-3 text-slate-700">Semi-Automated Systems</td><td class="px-4 py-3 text-right"><span class="text-green-600 font-semibold">Allowed (if monitored)</span></td></tr>
+            <tr class="bg-slate-50"><td class="px-4 py-3 text-slate-700">Copy Trading</td><td class="px-4 py-3 text-right"><span class="text-red-600 font-semibold">Banned</span></td></tr>
+            <tr class="bg-white"><td class="px-4 py-3 text-slate-700">News Trading</td><td class="px-4 py-3 text-right"><span class="text-amber-600 font-semibold">Allowed (directional bias required)</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Verdict -->
+    <div class="rounded-xl border-2 border-red-300 bg-red-50 p-5">
+      <p class="text-sm text-red-900 leading-relaxed">
+        <strong>Verdict on Platforms — 5/10:</strong> Apex offers a good range of platform options, from multi-device Tradovate to advanced NinjaTrader and RTrader Pro. However, the <strong>ban on fully automated systems and copy trading</strong> on funded accounts limits flexibility. Primary technical support is focused on NinjaTrader, with only partial support for other platforms.
+      </p>
+    </div>
+  </div>
+)}
+
+{/* ═══════════════════════════════════════════════════════════════════════════ */}
+{/* PAYOUTS (Payments & Profit Payout)                                         */}
+{/* ═══════════════════════════════════════════════════════════════════════════ */}
+{section === "payouts" && (
+  <div class="space-y-6">
+
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Apex Trader Funding offers a <strong>100% profit split on the first $25,000</strong> earned, followed by 90% on amounts beyond this. However, the payout process comes with several restrictions.
+    </p>
+
+    <!-- Payout overview grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+      <div class="rounded-xl bg-slate-50 border border-slate-100 px-4 py-3 text-center">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-1">Profit Split</p>
+        <p class="text-sm font-bold text-emerald-600">100% / 90%</p>
+      </div>
+      <div class="rounded-xl bg-slate-50 border border-slate-100 px-4 py-3 text-center">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-1">Payout Frequency</p>
+        <p class="text-sm font-bold text-slate-800">Every 8 trading days</p>
+      </div>
+      <div class="rounded-xl bg-slate-50 border border-slate-100 px-4 py-3 text-center">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-1">Processing</p>
+        <p class="text-sm font-bold text-slate-800">3–4 business days</p>
+      </div>
+      <div class="rounded-xl bg-slate-50 border border-slate-100 px-4 py-3 text-center">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-1">Payment</p>
+        <p class="text-sm font-bold text-red-600">Credit Card Only</p>
+      </div>
+    </div>
+
+    <!-- Payout rules -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Rule</th>
+            <th class="px-4 py-3 text-right">Details</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white"><td class="px-4 py-3 text-slate-700">First $25K Profit Split</td><td class="px-4 py-3 text-right font-semibold text-emerald-600">100%</td></tr>
+          <tr class="bg-slate-50"><td class="px-4 py-3 text-slate-700">Beyond $25K Split</td><td class="px-4 py-3 text-right font-semibold text-slate-900">90%</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 text-slate-700">Payout Frequency</td><td class="px-4 py-3 text-right font-semibold text-slate-900">Every 8 trading days</td></tr>
+          <tr class="bg-slate-50"><td class="px-4 py-3 text-slate-700">Safety Net (First 3 Payouts)</td><td class="px-4 py-3 text-right font-semibold text-red-600">Required — min balance must be maintained</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 text-slate-700">Trading During Payout</td><td class="px-4 py-3 text-right font-semibold text-amber-600">Allowed — but request denied if balance drops</td></tr>
+          <tr class="bg-slate-50"><td class="px-4 py-3 text-slate-700">Activation Fee (Rithmic)</td><td class="px-4 py-3 text-right font-semibold text-red-600">$85/mo or $130–$340 lifetime</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 text-slate-700">Activation Fee (Tradovate)</td><td class="px-4 py-3 text-right font-semibold text-red-600">$105/mo or $150–$360 lifetime</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Warning -->
+    <div class="rounded-xl border border-amber-200 bg-amber-50 p-4">
+      <p class="text-sm text-amber-900 leading-relaxed">
+        <strong>Note:</strong> Account fees must be paid using the trader's own credit card (Visa, Mastercard, Discover). No third-party payments allowed. Payout requests will be denied if your account balance drops below the required minimum before approval.
+      </p>
+    </div>
+
+    <!-- Verdict -->
+    <div class="rounded-xl border-2 border-red-300 bg-red-50 p-5">
+      <p class="text-sm text-red-900 leading-relaxed">
+        <strong>Verdict on Payouts — 1/10:</strong> While the 100% split on the first $25K sounds attractive, the <strong>activation fees, safety net requirements, and credit-card-only payments</strong> severely limit the payout experience. The additional monthly fees on top of evaluation costs make this one of the worst payout structures in the industry for funded traders.
+      </p>
+    </div>
+  </div>
+)}
+
+{/* ═══════════════════════════════════════════════════════════════════════════ */}
+{/* SUPPORT (Customer Service & Education)                                     */}
+{/* ═══════════════════════════════════════════════════════════════════════════ */}
+{section === "support" && (
+  <div class="space-y-6">
+
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Apex Trader Funding provides 24/7 support via an online help desk, with platform-specific guides and FAQs. Educational resources are limited to introductory videos covering basic trading strategies and risk management.
+    </p>
+
+    <!-- Support channels table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Channel</th>
+            <th class="px-4 py-3 text-right">Status</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white"><td class="px-4 py-3 text-slate-700">Online Help Desk</td><td class="px-4 py-3 text-right"><span class="text-green-600 font-semibold">24/7</span></td></tr>
+          <tr class="bg-slate-50"><td class="px-4 py-3 text-slate-700">Platform Guides</td><td class="px-4 py-3 text-right"><span class="text-green-600 font-semibold">Available</span></td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 text-slate-700">FAQs</td><td class="px-4 py-3 text-right"><span class="text-green-600 font-semibold">Available</span></td></tr>
+          <tr class="bg-slate-50"><td class="px-4 py-3 text-slate-700">Educational Videos</td><td class="px-4 py-3 text-right"><span class="text-amber-600 font-semibold">Basic only</span></td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 text-slate-700">Mentorship</td><td class="px-4 py-3 text-right"><span class="text-red-600 font-semibold">Not available</span></td></tr>
+          <tr class="bg-slate-50"><td class="px-4 py-3 text-slate-700">In-Depth Courses</td><td class="px-4 py-3 text-right"><span class="text-red-600 font-semibold">Not available</span></td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 text-slate-700">NinjaTrader Support</td><td class="px-4 py-3 text-right"><span class="text-green-600 font-semibold">Primary support</span></td></tr>
+          <tr class="bg-slate-50"><td class="px-4 py-3 text-slate-700">Other Platform Support</td><td class="px-4 py-3 text-right"><span class="text-amber-600 font-semibold">Partial only</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Warning -->
+    <div class="rounded-xl border border-amber-200 bg-amber-50 p-4">
+      <p class="text-sm text-amber-900 leading-relaxed">
+        <strong>Limited Education:</strong> While the support team is available 24/7, the educational offerings are focused on introductory content only. There are no in-depth courses, mentorship programs, or one-on-one coaching — a notable gap for newer traders.
+      </p>
+    </div>
+
+    <!-- Verdict -->
+    <div class="rounded-xl border-2 border-red-300 bg-red-50 p-5">
+      <p class="text-sm text-red-900 leading-relaxed">
+        <strong>Verdict on Support — 4/10:</strong> Apex Trader Funding's support team covers the basics with 24/7 availability, but the <strong>educational resources are minimal</strong> compared to top-scoring firms. If you're a newer trader seeking comprehensive guidance, mentorship, or detailed strategy content, you'll need to look elsewhere.
+      </p>
+    </div>
+  </div>
+)}
+
+{/* ═══════════════════════════════════════════════════════════════════════════ */}
+{/* TRUST (Trust & Community)                                                  */}
+{/* ═══════════════════════════════════════════════════════════════════════════ */}
+{section === "trust" && (
+  <div class="space-y-6">
+
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Apex Trader Funding's reputation is supported by a strong TrustPilot rating and a dedicated online community, though the engagement level may feel limited compared to larger prop firms.
+    </p>
+
+    <!-- Trust stats grid -->
+    <div class="grid grid-cols-3 gap-3">
+      <div class="rounded-xl bg-slate-50 border border-slate-100 px-4 py-3 text-center">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-1">TrustPilot</p>
+        <p class="text-lg font-black text-slate-900">4.4<span class="text-sm text-slate-400">/5</span></p>
+        <p class="text-[10px] text-slate-400">16,900+ reviews</p>
+      </div>
+      <div class="rounded-xl bg-slate-50 border border-slate-100 px-4 py-3 text-center">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-1">Discord</p>
+        <p class="text-lg font-black text-slate-900">59K</p>
+        <p class="text-[10px] text-slate-400">members</p>
+      </div>
+      <div class="rounded-xl bg-slate-50 border border-slate-100 px-4 py-3 text-center">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-1">Facebook</p>
+        <p class="text-lg font-black text-slate-900">29.4K</p>
+        <p class="text-[10px] text-slate-400">members</p>
+      </div>
+    </div>
+
+    <!-- Social media and community -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Platform</th>
+            <th class="px-4 py-3 text-right">Details</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white"><td class="px-4 py-3 text-slate-700">TrustPilot Rating</td><td class="px-4 py-3 text-right font-semibold text-green-600">4.4/5 stars (16,900+ reviews)</td></tr>
+          <tr class="bg-slate-50"><td class="px-4 py-3 text-slate-700">Discord Community</td><td class="px-4 py-3 text-right font-semibold text-slate-900">~59,000 members</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 text-slate-700">Facebook Group</td><td class="px-4 py-3 text-right font-semibold text-slate-900">29,400 members</td></tr>
+          <tr class="bg-slate-50"><td class="px-4 py-3 text-slate-700">Instagram</td><td class="px-4 py-3 text-right font-semibold text-slate-900">52,400 followers</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 text-slate-700">YouTube</td><td class="px-4 py-3 text-right font-semibold text-slate-900">26,800 subscribers</td></tr>
+          <tr class="bg-slate-50"><td class="px-4 py-3 text-slate-700">Community Engagement</td><td class="px-4 py-3 text-right"><span class="text-amber-600 font-semibold">Limited compared to larger firms</span></td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 text-slate-700">Platform Limitation Complaints</td><td class="px-4 py-3 text-right"><span class="text-amber-600 font-semibold">Some reports</span></td></tr>
+          <tr class="bg-slate-50"><td class="px-4 py-3 text-slate-700">Support Response Concerns</td><td class="px-4 py-3 text-right"><span class="text-amber-600 font-semibold">Mentioned in reviews</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Verdict -->
+    <div class="rounded-xl border-2 border-red-300 bg-red-50 p-5">
+      <p class="text-sm text-red-900 leading-relaxed">
+        <strong>Verdict on Trust — 4/10:</strong> Apex Trader Funding has a solid TrustPilot rating of 4.4/5 and a growing social media presence. However, the <strong>Discord resources and engagement may feel limited</strong> for those seeking extensive networking or educational opportunities. Some concerns about platform limitations and support response times persist across user reviews.
+      </p>
+    </div>
+  </div>
+)}

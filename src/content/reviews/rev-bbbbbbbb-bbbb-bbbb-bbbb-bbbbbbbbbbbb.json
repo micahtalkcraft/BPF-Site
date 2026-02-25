@@ -1,0 +1,48 @@
+{
+  "id": "rev-bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+  "propFirmId": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+
+  "summary": "The5%ers, founded in 2016 in Israel, offers one of the most flexible rule sets in the prop firm industry. News trading, weekend holding, and copy trading are all permitted — a trifecta that few firms allow simultaneously.\n\nThe standout feature is the Growth plan's 100% profit split, which scales as traders hit profit targets. Evaluation paths include 1-step, 2-step, and instant funding options, giving traders flexibility in how they enter the funded programme.\n\nThe main limitation is platform: MT5 only. Traders who rely on MT4 or cTrader will need to adapt. Fees are competitive, with a $5,000 account starting at $39.",
+
+  "pros": [
+    "100% profit split available on Growth plan",
+    "News trading, weekend holding, and copy trading all allowed",
+    "Multiple evaluation paths: 1-step, 2-step, instant",
+    "Competitive pricing — $5k account from $39",
+    "EA trading permitted"
+  ],
+  "cons": [
+    "MT5 only — no MT4 or cTrader",
+    "Smaller payout track record vs. FTMO",
+    "Stricter drawdown limits than many competitors (4% daily, 6% max)"
+  ],
+
+  "bestFor": "News traders, copy traders, and those wanting flexible evaluation options",
+  "notIdealFor": "MT4 or cTrader users who cannot switch platforms",
+
+  "overallScore": 80,
+  "categoryScores": { "challenges": 90, "spreads": 80, "markets": 80, "payouts": 80, "platforms": 70, "trust": 80 },
+
+  "verdictBlocks": [
+    {
+      "heading": "Our Verdict",
+      "body": "The5%ers is the best option for news traders and copy traders. The 100% profit split is genuinely unique in this space. The MT5-only restriction is its primary drawback — if you need MT4 or cTrader, look elsewhere."
+    }
+  ],
+
+  "faq": [
+    {
+      "q": "Can I trade the news on The5%ers?",
+      "a": "Yes — news trading is allowed on all The5%ers programmes."
+    },
+    {
+      "q": "What is the 100% profit split?",
+      "a": "On the Growth programme, as traders scale up their account, they can reach 100% profit split at higher tiers. The starting split is lower."
+    }
+  ],
+
+  "methodologyVersion": "1.0",
+  "lastReviewedAt": "2026-01-12",
+  "author": "Editorial Team",
+  "editor": "Senior Editor"
+}

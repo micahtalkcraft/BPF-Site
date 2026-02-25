@@ -1,0 +1,1317 @@
+---
+// Static editorial content for Maven Trading
+// Supports multiple sections via the `section` prop
+interface Props {
+  section: string;
+  fallbackBody?: string;
+}
+const { section, fallbackBody } = Astro.props;
+---
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* CHALLENGES SECTION                                                  */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "challenges" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    Maven Trading offers a decent range of challenges with <strong>One Step Challenge</strong>, <strong>Two Step Challenge</strong>, <strong>Three Step Challenge</strong>, <strong>Mini Challenge</strong>, and <strong>Instant Funding</strong>.
+  </p>
+  <p class="mb-6">
+    The Mini challenge is unique as it gives you a one-time profit payout, while Instant Funding allows you to skip the evaluation process entirely. However, to be eligible for the Instant Funding payment, you'll have to maintain an acceptable score throughout the challenges.
+  </p>
+
+  <!-- Per-challenge summaries -->
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">One-Step Challenge</p>
+      <p>8% profit target with a 5% trailing drawdown. Daily drawdown limited to 3%. Unlimited time to meet your target.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Fees from $15 – $379 (refundable)</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Two-Step Challenge</p>
+      <p>Phase 1: 8% profit target. Phase 2: 5% profit target. 8% static drawdown with unlimited timeframe. Daily drawdown capped at 4%.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Fees from $15 – $379 (refundable)</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Three-Step Challenge</p>
+      <p>Three phases, each with a 3% profit target. 3% static drawdown and 2% daily drawdown. No timeframe and low fees.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Fees from $13 – $299 (refundable)</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Instant Funding</p>
+      <p>Skip the evaluation and begin with a funded account immediately. 3% trailing drawdown with 2% daily loss limit. Minimum 3% profit for payout eligibility.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Fees from $15 – $380 (refundable)</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Mini Challenge</p>
+      <p>Fast-paced, low commitment option. 3% profit target with 2% daily drawdown. Single payout, intraday only — one open trade at a time. 24-hour trading window after first trade.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Fees from $13 – $299 (refundable)</p>
+    </div>
+  </div>
+
+  <!-- ─── Comparison Table ───────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Comparison</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-10">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Attribute</th>
+          <th class="px-4 py-3 text-center">One-Step</th>
+          <th class="px-4 py-3 text-center">Two-Step</th>
+          <th class="px-4 py-3 text-center">Three-Step</th>
+          <th class="px-4 py-3 text-center">Instant</th>
+          <th class="px-4 py-3 text-center">Mini</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Fee Range</td>
+          <td class="px-4 py-3 text-center text-slate-900">$15 – $379</td>
+          <td class="px-4 py-3 text-center text-slate-900">$15 – $379</td>
+          <td class="px-4 py-3 text-center text-slate-900">$13 – $299</td>
+          <td class="px-4 py-3 text-center text-slate-900">$15 – $380</td>
+          <td class="px-4 py-3 text-center text-slate-900">$13 – $299</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Account Size</td>
+          <td class="px-4 py-3 text-center text-slate-900">$2K – $100K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$2K – $100K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$2K – $100K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$2K – $100K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$2K – $100K</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Target</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">8%</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">8% / 5%</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">3% / 3% / 3%</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">3%</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">3%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Total Drawdown</td>
+          <td class="px-4 py-3 text-center text-slate-900">5% Trailing</td>
+          <td class="px-4 py-3 text-center text-slate-900">8% Static</td>
+          <td class="px-4 py-3 text-center text-slate-900">3% Static</td>
+          <td class="px-4 py-3 text-center text-slate-900">3% Trailing</td>
+          <td class="px-4 py-3 text-center text-slate-900">2% Trailing</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Daily Drawdown</td>
+          <td class="px-4 py-3 text-center text-slate-900">3%</td>
+          <td class="px-4 py-3 text-center text-slate-900">4%</td>
+          <td class="px-4 py-3 text-center text-slate-900">2%</td>
+          <td class="px-4 py-3 text-center text-slate-900">2%</td>
+          <td class="px-4 py-3 text-center text-slate-900">2%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Split</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">80%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">80%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">80%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">80%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">80%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Min Trading Days</td>
+          <td class="px-4 py-3 text-center text-slate-900">0</td>
+          <td class="px-4 py-3 text-center text-slate-900">0</td>
+          <td class="px-4 py-3 text-center text-slate-900">0</td>
+          <td class="px-4 py-3 text-center text-slate-900">0</td>
+          <td class="px-4 py-3 text-center text-slate-900">0</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Drawdown Type</td>
+          <td class="px-4 py-3 text-center text-slate-900">Trailing</td>
+          <td class="px-4 py-3 text-center text-slate-900">Static</td>
+          <td class="px-4 py-3 text-center text-slate-900">Static</td>
+          <td class="px-4 py-3 text-center text-slate-900">Trailing</td>
+          <td class="px-4 py-3 text-center text-slate-900">Trailing</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 1. ONE-STEP CHALLENGE                                          -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">1</span>
+      One-Step Challenge
+    </h3>
+
+    <p class="mb-3">
+      The One-Step challenge is great if you have solid trading experience and the confidence to nail it in a single, straightforward evaluation phase. This challenge requires you to hit an <strong>8% profit target</strong> with a <strong>5% trailing drawdown</strong>.
+    </p>
+    <p class="mb-3">
+      The trailing drawdown adjusts based on your highest equity, meaning as your account grows, the drawdown limit follows. The daily drawdown is limited to <strong>3%</strong> which makes your risk management more stringent, but you have unlimited time to meet your target.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
+        <p class="text-sm font-bold text-slate-800">8%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Total Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">5% Trailing</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">3%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
+        <p class="text-sm font-bold text-teal-600">80%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Trading Days</p>
+        <p class="text-sm font-bold text-slate-800">Unlimited</p>
+      </div>
+    </div>
+
+    <!-- Suited For -->
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
+      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
+      <p class="text-sm text-teal-700">Traders confident enough to reach the profit target in a single phase without the need for a more extended evaluation period. The trailing drawdown encourages better risk management as your equity grows.</p>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">Refundable Fee</th>
+            <th class="px-4 py-3 text-right">Profit Target (8%)</th>
+            <th class="px-4 py-3 text-right">Total DD (5%)</th>
+            <th class="px-4 py-3 text-right">Daily DD (3%)</th>
+            <th class="px-4 py-3 text-right">Profit Split</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$2,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$15</td>
+            <td class="px-4 py-3 text-right text-slate-700">$160</td>
+            <td class="px-4 py-3 text-right text-slate-700">$100</td>
+            <td class="px-4 py-3 text-right text-slate-700">$60</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$19</td>
+            <td class="px-4 py-3 text-right text-slate-700">$400</td>
+            <td class="px-4 py-3 text-right text-slate-700">$250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$150</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$38</td>
+            <td class="px-4 py-3 text-right text-slate-700">$800</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$300</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$20,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$76</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,600</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$600</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$190</td>
+            <td class="px-4 py-3 text-right text-slate-700">$4,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$379</td>
+            <td class="px-4 py-3 text-right text-slate-700">$8,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 2. TWO-STEP CHALLENGE                                          -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">2</span>
+      Two-Step Challenge
+    </h3>
+
+    <p class="mb-3">
+      In this challenge, you'll be completing two phases: Phase One with an <strong>8% profit target</strong>, and Phase Two with a <strong>5% profit target</strong>. The Two-Step challenge has an <strong>8% static drawdown</strong> with an unlimited timeframe, so you get a stable risk threshold.
+    </p>
+    <p class="mb-3">
+      It has a bit more flexibility than the One-Step Challenge because the daily drawdown is capped at <strong>4%</strong>. The Two-Step challenge is best suited if you're a novice trader, or if you prefer a slow-paced approach to your evaluation.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 1 Target</p>
+        <p class="text-sm font-bold text-slate-800">8%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 2 Target</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Total Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">8% Static</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">4%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
+        <p class="text-sm font-bold text-teal-600">80%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Trading Days</p>
+        <p class="text-sm font-bold text-slate-800">Unlimited</p>
+      </div>
+    </div>
+
+    <!-- Suited For -->
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
+      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
+      <p class="text-sm text-teal-700">Novice traders or those who prefer a slow-paced approach. The two stages with separate profit targets allow you to focus on a more gradual approach with a balance between a reasonable challenge and manageable risk.</p>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">Refundable Fee</th>
+            <th class="px-4 py-3 text-right">Target P1 (8%)</th>
+            <th class="px-4 py-3 text-right">Target P2 (5%)</th>
+            <th class="px-4 py-3 text-right">Daily DD (4%)</th>
+            <th class="px-4 py-3 text-right">Profit Split</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$2,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$15</td>
+            <td class="px-4 py-3 text-right text-slate-700">$160</td>
+            <td class="px-4 py-3 text-right text-slate-700">$100</td>
+            <td class="px-4 py-3 text-right text-slate-700">$80</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$19</td>
+            <td class="px-4 py-3 text-right text-slate-700">$400</td>
+            <td class="px-4 py-3 text-right text-slate-700">$250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$200</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$38</td>
+            <td class="px-4 py-3 text-right text-slate-700">$800</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$400</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$20,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$76</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,600</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$800</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$190</td>
+            <td class="px-4 py-3 text-right text-slate-700">$4,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$379</td>
+            <td class="px-4 py-3 text-right text-slate-700">$8,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$4,000</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 3. THREE-STEP CHALLENGE                                        -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">3</span>
+      Three-Step Challenge
+    </h3>
+
+    <p class="mb-3">
+      The Three-Step challenge is the most gradual of all the challenges. You'll need to complete three phases, each with a <strong>3% profit target</strong>. There's a <strong>2% daily drawdown loss</strong>, but there's no timeframe, and the fees are low which allows for stress-free trading.
+    </p>
+    <p class="mb-3">
+      This challenge is great if you don't mind the slow pace for less gains since all three phases have a 3% profit target. With its smaller profit targets and tighter daily loss limits, the Three-Step offers the smoothest entry into prop trading if you're an absolute beginner.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
+        <p class="text-sm font-bold text-slate-800">3% per phase</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Total Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">3% Static</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">2%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
+        <p class="text-sm font-bold text-teal-600">80%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Trading Days</p>
+        <p class="text-sm font-bold text-slate-800">Unlimited</p>
+      </div>
+    </div>
+
+    <!-- Suited For -->
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
+      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
+      <p class="text-sm text-teal-700">Absolute beginners who prefer a smooth, gradual entry into prop trading with smaller profit targets and tighter daily loss limits for a stress-free experience.</p>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">Refundable Fee</th>
+            <th class="px-4 py-3 text-right">Profit Target (3%)</th>
+            <th class="px-4 py-3 text-right">Total DD (3%)</th>
+            <th class="px-4 py-3 text-right">Daily DD (2%)</th>
+            <th class="px-4 py-3 text-right">Profit Split</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$2,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$13</td>
+            <td class="px-4 py-3 text-right text-slate-700">$60</td>
+            <td class="px-4 py-3 text-right text-slate-700">$60</td>
+            <td class="px-4 py-3 text-right text-slate-700">$40</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$17</td>
+            <td class="px-4 py-3 text-right text-slate-700">$150</td>
+            <td class="px-4 py-3 text-right text-slate-700">$150</td>
+            <td class="px-4 py-3 text-right text-slate-700">$100</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$38</td>
+            <td class="px-4 py-3 text-right text-slate-700">$300</td>
+            <td class="px-4 py-3 text-right text-slate-700">$300</td>
+            <td class="px-4 py-3 text-right text-slate-700">$200</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$20,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$76</td>
+            <td class="px-4 py-3 text-right text-slate-700">$600</td>
+            <td class="px-4 py-3 text-right text-slate-700">$600</td>
+            <td class="px-4 py-3 text-right text-slate-700">$400</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$190</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$299</td>
+            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 4. INSTANT FUNDING                                             -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">4</span>
+      Instant Funding
+    </h3>
+
+    <p class="mb-3">
+      The Instant Funding challenge allows you to skip the multi-step challenge phase and immediately begin with a funded account. The catch is that you take on a <strong>trailing 3% total drawdown</strong> and a daily loss limit of <strong>2%</strong> applied at the start of each day.
+    </p>
+    <p class="mb-3">
+      Before you can request a payout, the minimum withdrawal threshold is set at <strong>3% profit</strong> of the account. This is only recommended if you are looking for immediate payouts without the hassle of challenges.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
+        <p class="text-sm font-bold text-slate-800">3%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Total Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">3% Trailing</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">2%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
+        <p class="text-sm font-bold text-teal-600">80%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Open Risk</p>
+        <p class="text-sm font-bold text-slate-800">1%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Consistency Score</p>
+        <p class="text-sm font-bold text-slate-800">20%</p>
+      </div>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">Refundable Fee</th>
+            <th class="px-4 py-3 text-right">Profit Target (3%)</th>
+            <th class="px-4 py-3 text-right">Drawdown (3%)</th>
+            <th class="px-4 py-3 text-right">Daily DD (2%)</th>
+            <th class="px-4 py-3 text-right">Profit Split</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$2,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$15</td>
+            <td class="px-4 py-3 text-right text-slate-700">$60</td>
+            <td class="px-4 py-3 text-right text-slate-700">$60</td>
+            <td class="px-4 py-3 text-right text-slate-700">$40</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$19</td>
+            <td class="px-4 py-3 text-right text-slate-700">$150</td>
+            <td class="px-4 py-3 text-right text-slate-700">$150</td>
+            <td class="px-4 py-3 text-right text-slate-700">$100</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$37</td>
+            <td class="px-4 py-3 text-right text-slate-700">$300</td>
+            <td class="px-4 py-3 text-right text-slate-700">$300</td>
+            <td class="px-4 py-3 text-right text-slate-700">$200</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$20,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$68</td>
+            <td class="px-4 py-3 text-right text-slate-700">$600</td>
+            <td class="px-4 py-3 text-right text-slate-700">$600</td>
+            <td class="px-4 py-3 text-right text-slate-700">$400</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$170</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$380</td>
+            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 5. MINI CHALLENGE                                              -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">5</span>
+      Mini Challenge
+    </h3>
+
+    <p class="mb-3">
+      The Mini Challenge is a fast-paced, low initial commitment option specifically designed if you want something more flexible with barely any waiting period. It's a short-duration challenge with a daily <strong>2% drawdown limit</strong>, in which you have to achieve a minimum <strong>3% profit</strong> to request your payout, but you can only hold one open trade at a time.
+    </p>
+    <p class="mb-3">
+      This challenge isn't suitable if you're looking for multiple funding rounds. Once you place your first trade, you have to submit your request within a <strong>24-hour trading window</strong>.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
+        <p class="text-sm font-bold text-slate-800">3%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">2%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
+        <p class="text-sm font-bold text-teal-600">80%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Open Risk</p>
+        <p class="text-sm font-bold text-slate-800">1%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Special</p>
+        <p class="text-sm font-bold text-slate-800">Single Payout, Intraday Only</p>
+      </div>
+    </div>
+
+    <!-- Warning -->
+    <div class="rounded-xl bg-amber-50 border border-amber-200 p-4 mb-5">
+      <p class="text-xs font-bold text-amber-800 uppercase tracking-wide mb-1">Important Limitation</p>
+      <p class="text-sm text-amber-800">The Mini Challenge only provides a single payout opportunity. Once you place your first trade, you must submit your request within a 24-hour trading window. This is not suitable for multiple funding rounds.</p>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">Refundable Fee</th>
+            <th class="px-4 py-3 text-right">Profit Target (3%)</th>
+            <th class="px-4 py-3 text-right">Daily DD (2%)</th>
+            <th class="px-4 py-3 text-right">Profit Split</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$2,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$13</td>
+            <td class="px-4 py-3 text-right text-slate-700">$60</td>
+            <td class="px-4 py-3 text-right text-slate-700">$40</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$17</td>
+            <td class="px-4 py-3 text-right text-slate-700">$150</td>
+            <td class="px-4 py-3 text-right text-slate-700">$100</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$38</td>
+            <td class="px-4 py-3 text-right text-slate-700">$300</td>
+            <td class="px-4 py-3 text-right text-slate-700">$200</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$20,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$76</td>
+            <td class="px-4 py-3 text-right text-slate-700">$600</td>
+            <td class="px-4 py-3 text-right text-slate-700">$400</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$190</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$299</td>
+            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SCALING PLAN                                                    -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3">Scaling for Funded Accounts</h3>
+    <p class="mb-3">
+      Maven Trading offers an attractive scaling plan if you prove consistent performance. Once you achieve a <strong>10% profit over four months</strong> (2.5% per month) and process at least one payout per month, you're eligible for a <strong>25% increase</strong> in your funded account size.
+    </p>
+    <p class="mb-3">
+      This process can be repeated until the account size reaches <strong>$1,000,000</strong>. The scaling function encourages progressive growth and makes sure that you get rewards for consistently hitting targets. The maximum withdrawal cap also increases alongside the scaling plan, enabling you to access larger profits as you scale your account.
+    </p>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- TRADING RULES                                                   -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3">Maven Trading Challenge Rules</h3>
+    <p class="mb-4">Maven Trading has strict rules regarding trading styles and frequency:</p>
+
+    <div class="space-y-3 mb-6">
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">News Trading Restricted</p>
+        <p>Trading before high impact news, or Red Folder News, are not counted. You cannot open or close your trades within a two-minute window before a news event release. Maven Trading uses ForexFactory to evaluate high impact news.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">Copy Trading Prohibited</p>
+        <p>Copy trading using another trader's system or copying trades is strictly prohibited. Maven Trading has measures to detect if you're using someone else's system, which may result in account termination.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">Cheating Prohibited</p>
+        <p>Any form of high-frequency trading (HFT), toxic trading order flow, long/short arbitrage, reverse arbitrage, group hedging, and gamification are strictly prohibited.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">Expert Advisors (EAs) Restricted</p>
+        <p>Expert Advisors are not allowed and may get your account suspended. If you want to use EAs, you'll need to contact their support team and wait for approval.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">IP Address Changes Flagged</p>
+        <p>Maven Trading specifically states that if they detect your IP address has changed, they'll request proof and explanation of the occurrence.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">Gambling Prohibited</p>
+        <p>Maven Trading may mark your trading as gambling if more than 50% of your trades are held under one minute. Additionally, betting one direction and holding until you pass the challenge will get you banned or suspended.</p>
+      </div>
+      <div class="rounded-lg bg-teal-50 border border-teal-200 p-4">
+        <p class="font-bold text-teal-900 mb-1">Martingale Strategy — Now Allowed</p>
+        <p>As of January 2026, Maven Trading removed the Martingale rule. Traders can now hold up to five open positions in drawdown on the same pair simultaneously, giving more flexibility for scaling into trades or managing multiple entries.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- VERDICT ON CHALLENGES                                           -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Challenge Accounts</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      We gave Maven Trading a 7/10 for their diverse and balanced selection of challenges. Compared to many other prop firms which offer limited options, Maven Trading has the Three-Step challenges for beginners, the One-Step and Instant for experts, or the Two-Step for those who are looking to test trading strategies. While the rules could definitely use a rework for clarity, it's good that the challenges have low fees and scaling for consistent performance.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SPREADS / COMMISSION FEES & PRICING SECTION                         */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "spreads" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-3">
+    Maven Trading's spreads are <strong>significantly wider</strong> compared to prop firms like DNA Funded, Blueberry Funded, and IC Funded. The spreads are generally one to two pips higher than the industry average, and it may be very expensive if you're a high-frequency strategy and scalping trader.
+  </p>
+  <p class="mb-4">
+    According to our testing, Maven Trading doesn't disclose if the pricing structure comes from their in-house team, simulated environments, or other sources. The lack of transparency in Maven Trading's spread structure can hinder your precise execution strategies, and you'll be forced to focus on larger price movements just to even out the transaction costs.
+  </p>
+  <p class="mb-6">
+    While commission fees are <strong>$2 USD per side</strong> and <strong>0%</strong> for cryptocurrencies, indices, and commodities, the high spreads and unclear pricing make Maven Trading a bad choice if you're an active trader going for dozens of trades per day.
+  </p>
+
+  <!-- Forex Spreads Comparison -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Forex Spreads — Maven vs Blueberry Funded</h3>
+  <p class="mb-4">
+    Maven Trading's spreads are wider than those of many competing prop firms. During testing, we compared Maven's spreads with Blueberry Funded in real-time. The difference was significant, with Blueberry often offering spreads that were nearly half those of Maven.
+  </p>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-5 py-3 text-left">Maven Trading Spread</th>
+          <th class="px-5 py-3 text-left">Blueberry Funded Spread</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-5 py-3 text-red-600 font-semibold">AUD/CAD 14 pips</td>
+          <td class="px-5 py-3 text-teal-600 font-semibold">EUR/USD 0.2 pips</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 text-red-600 font-semibold">AUD/JPY 9 pips</td>
+          <td class="px-5 py-3 text-teal-600 font-semibold">AUD/USD 0.1 pips</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-5 py-3 text-red-600 font-semibold">CHF/JPY 15 pips</td>
+          <td class="px-5 py-3 text-teal-600 font-semibold">GBP/USD 0.2 pips</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 text-red-600 font-semibold">EUR/AUD 15 pips</td>
+          <td class="px-5 py-3 text-teal-600 font-semibold">USD/CAD 1.2 pips</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-5 py-3 text-red-600 font-semibold">EUR/GBP 7 pips</td>
+          <td class="px-5 py-3 text-teal-600 font-semibold">USD/JPY 0.6 pips</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="mb-6">
+    In addition to the wider spreads, Maven doesn't provide much transparency around how spreads are determined or if they fluctuate based on market trading conditions. This makes it harder to estimate costs accurately, especially in fast-moving markets.
+  </p>
+
+  <!-- Commission Fees -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Commission Fees</h3>
+  <p class="mb-4">
+    Maven Trading applies a <strong>$2 USD commission fee per side</strong> ($4 USD round trip) on forex trades, but the commission fee for indices, commodities, and digital ETFs and cryptocurrencies is <strong>0%</strong>.
+  </p>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-5 py-3 text-left">Asset Class</th>
+          <th class="px-5 py-3 text-right">Commission (per side)</th>
+          <th class="px-5 py-3 text-right">Total Round Trip</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">Forex</td>
+          <td class="px-5 py-3 text-right text-slate-900">$2</td>
+          <td class="px-5 py-3 text-right text-slate-900">$4</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">Indices</td>
+          <td class="px-5 py-3 text-right text-teal-600 font-semibold">$0</td>
+          <td class="px-5 py-3 text-right text-teal-600 font-semibold">$0</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">Commodities</td>
+          <td class="px-5 py-3 text-right text-teal-600 font-semibold">$0</td>
+          <td class="px-5 py-3 text-right text-teal-600 font-semibold">$0</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">Digital ETFs / Crypto</td>
+          <td class="px-5 py-3 text-right text-teal-600 font-semibold">$0</td>
+          <td class="px-5 py-3 text-right text-teal-600 font-semibold">$0</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="mb-4">
+    While the commission fee is standard, it doesn't offset the higher costs of trading due to Maven's wider spreads. For non-USD pairs, commissions are automatically converted to USD.
+  </p>
+
+  <!-- Swap Fees -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Swap Fees</h3>
+  <p class="mb-6">
+    A positive aspect of Maven Trading's pricing is that there are <strong>no swap fees</strong> for holding positions overnight, which is great if you're a swing trader or just holding for extended periods of time. However, considering the wider spreads, the savings from zero swap fees may not be enough to offset the overall higher cost of trading.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Spreads, Commissions and Pricing</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      We gave Maven Trading a 2/10 score for spreads, commissions, and pricing. The high forex spreads are a major concern, and it's arguably one of the widest spreads among the many prop firms that we've reviewed so far. This makes it a very poor choice if you're an experienced trader. While the no-swap fees and no commissions on certain markets are nice features, Maven's wider spreads is a deal breaker that renders trading more expensive than it needs to be.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* MARKETS / FINANCIAL MARKETS & LEVERAGE SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "markets" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    When prop trading with Maven, you can access <strong>76 financial markets</strong> covering forex, commodities, indices, and digital ETFs like crypto with a maximum leverage of <strong>75:1</strong>.
+  </p>
+
+  <!-- Asset Class & Leverage Overview -->
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Asset Class</th>
+          <th class="px-4 py-3 text-center">Leverage</th>
+          <th class="px-4 py-3 text-left">Instruments</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Forex</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">75:1</td>
+          <td class="px-4 py-3 text-slate-700">40 pairs — majors, minors, and exotics</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Commodities</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">20:1</td>
+          <td class="px-4 py-3 text-slate-700">Precious metals, energy, agriculture (16 instruments)</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Indices</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">20:1</td>
+          <td class="px-4 py-3 text-slate-700">15 global indices — US, EU, Asia, Australia</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Crypto / Digital ETFs</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">2:1</td>
+          <td class="px-4 py-3 text-slate-700">BTC/EUR, BTC/USD, ETH/BTC, ETH/USD</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Forex Trading -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Forex Trading</h3>
+  <p class="mb-3">
+    Maven Trading provides leverage of <strong>75:1</strong> on forex pairs, giving you access to major, minor, and exotic currency pairs. This variety lets you explore different assets, and the leverage options cater to various trading styles.
+  </p>
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Major Pairs</p>
+      <p class="text-xs text-slate-600">EUR/USD, GBP/USD, AUD/USD, USD/CAD, USD/CHF, USD/JPY</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Minor Pairs</p>
+      <p class="text-xs text-slate-600">EUR/GBP, EUR/AUD, GBP/JPY, AUD/CAD, NZD/USD, CAD/JPY</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Exotic Pairs</p>
+      <p class="text-xs text-slate-600">USD/ZAR, USD/TRY, EUR/TRY, USD/PLN, USD/MXN, EUR/PLN</p>
+    </div>
+  </div>
+
+  <!-- Commodities -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Commodities</h3>
+  <p class="mb-3">With <strong>20:1 leverage</strong> on commodities, prop traders can access precious metals, energy, and agricultural products.</p>
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Precious Metals</p>
+      <p class="text-xs text-slate-600">XAU/USD (Gold), XAG/USD (Silver), XPD/USD (Palladium), XPT/USD (Platinum)</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Energy</p>
+      <p class="text-xs text-slate-600">WTI (Crude Oil), Brent (Crude Oil), NGAS (Natural Gas)</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Agriculture</p>
+      <p class="text-xs text-slate-600">Corn, Wheat, Soybean, Coffee, Cocoa, Sugar, Cotton, Aluminium, Zinc</p>
+    </div>
+  </div>
+
+  <!-- Indices -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Indices</h3>
+  <p class="mb-3">Maven Trading offers <strong>20:1 leverage</strong> on indices, giving you exposure to some of the world's leading stock indices.</p>
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">American</p>
+      <p class="text-xs text-slate-600">US500 (S&P 500), US30 (Dow Jones), US100 (Nasdaq), US2000 (Russell 2000)</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">European</p>
+      <p class="text-xs text-slate-600">GER30, FRA40, UK100, EU50, SPA35, ITA40</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Asia & Other</p>
+      <p class="text-xs text-slate-600">JAP225, CHNIND, HKIND, AUS200, SUI20</p>
+    </div>
+  </div>
+
+  <!-- Crypto -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Cryptocurrencies & Digital ETFs</h3>
+  <p class="mb-3">
+    Maven Trading gives you <strong>2:1 leverage</strong> for digital ETFs and cryptocurrencies. Though they only work with two cryptocurrencies, it's more than enough for basic diversification.
+  </p>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Bitcoin Pairs</p>
+      <p class="text-xs text-slate-600">BTC/EUR, BTC/USD</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Ethereum Pairs</p>
+      <p class="text-xs text-slate-600">ETH/BTC, ETH/USD</p>
+    </div>
+  </div>
+  <div class="rounded-xl bg-amber-50 border border-amber-200 p-4 mb-6">
+    <p class="text-sm text-amber-800">The crypto spread on Maven Trading tends to be very wide even during calm market conditions, so please consider your positions carefully.</p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Markets and Leverage</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      After testing, we scored Maven Trading 7/10 for markets and leverage because you get access to a good range of 76 instruments, which covers the main asset classes most prop traders look for. The 75:1 leverage on forex is solid if you like trading majors or exploring exotic pairs, while the 20:1 leverage on indices and commodities keeps things steady for swing and position traders. Crypto sits at a low 2:1, which limits flexibility, but the selection is still enough for basic exposure.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PLATFORMS / TRADING PLATFORMS SECTION                                */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "platforms" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    Maven Trading supports three platforms: <strong>Match-Trader</strong>, <strong>cTrader</strong>, and <strong>MetaTrader 5 (MT5)</strong> which they re-introduced as of January 2026. All three platforms offer different sets of tools for various trading needs, but they also have their limitations.
+  </p>
+
+  <!-- Platform Cards -->
+  <div class="space-y-6 mb-8">
+
+    <!-- MT5 -->
+    <div class="rounded-xl border border-slate-200 overflow-hidden">
+      <div class="bg-slate-800 px-5 py-3">
+        <h3 class="text-white font-bold">MetaTrader 5 (MT5)</h3>
+      </div>
+      <div class="p-5">
+        <p class="mb-3">
+          One of the most prolific trading platforms in the world, MetaTrader 5 is back on Maven Trading. MT5 has all the bells and whistles that help you analyse, chart, expand, and trade with real-time data. What's great is that Maven Trading has an official, <strong>MetaQuotes-issued license</strong> that offers extra security and more control in trading.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-3">
+          <span class="text-xs font-semibold bg-teal-50 text-teal-700 border border-teal-200 rounded-full px-2.5 py-0.5">Charting & Real-Time Data</span>
+          <span class="text-xs font-semibold bg-teal-50 text-teal-700 border border-teal-200 rounded-full px-2.5 py-0.5">Expanded Order Types</span>
+          <span class="text-xs font-semibold bg-teal-50 text-teal-700 border border-teal-200 rounded-full px-2.5 py-0.5">Direct Platform Access</span>
+          <span class="text-xs font-semibold bg-teal-50 text-teal-700 border border-teal-200 rounded-full px-2.5 py-0.5">MetaQuotes Licensed</span>
+        </div>
+        <p class="text-xs text-slate-500">However, MT5 has a steep learning curve that requires extensive knowledge of the UI and advanced tools.</p>
+      </div>
+    </div>
+
+    <!-- Match-Trader -->
+    <div class="rounded-xl border border-slate-200 overflow-hidden">
+      <div class="bg-slate-800 px-5 py-3">
+        <h3 class="text-white font-bold">Match-Trader</h3>
+      </div>
+      <div class="p-5">
+        <p class="mb-3">
+          Match-Trader is a web-based and mobile platform — there is <strong>no dedicated desktop application</strong>. While it offers basic trading tools, its biggest problem is that you can't save chart templates across devices. The lack of customisation can be a huge drawback if you rely on different charts to tweak your setups.
+        </p>
+        <p class="mb-3">
+          However, Match-Trader integrates with <strong>TradingView</strong>, providing more advanced charting tools. Additionally, the platform features real-time news feeds with an economic calendar.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-3">
+          <span class="text-xs font-semibold bg-teal-50 text-teal-700 border border-teal-200 rounded-full px-2.5 py-0.5">TradingView Integration</span>
+          <span class="text-xs font-semibold bg-teal-50 text-teal-700 border border-teal-200 rounded-full px-2.5 py-0.5">Mobile & Web-Based</span>
+          <span class="text-xs font-semibold bg-teal-50 text-teal-700 border border-teal-200 rounded-full px-2.5 py-0.5">Economic Calendar</span>
+          <span class="text-xs font-semibold bg-teal-50 text-teal-700 border border-teal-200 rounded-full px-2.5 py-0.5">Real-Time News</span>
+        </div>
+        <p class="text-xs text-red-500 font-semibold">No desktop application available — web and mobile only.</p>
+      </div>
+    </div>
+
+    <!-- cTrader -->
+    <div class="rounded-xl border border-slate-200 overflow-hidden">
+      <div class="bg-slate-800 px-5 py-3">
+        <h3 class="text-white font-bold">cTrader</h3>
+      </div>
+      <div class="p-5">
+        <p class="mb-3">
+          cTrader is a highly customisable platform that offers more advanced charting compared to Match-Trader, with access to over <strong>70 indicators</strong> and tools for detailed technical analysis. It also supports <strong>cTrader Automate</strong>, allowing you to develop automated strategies using C#.
+        </p>
+        <p class="mb-3">
+          Unlike Match-Trader, cTrader has both desktop and web versions, providing more flexibility. However, it lacks the integrated TradingView features which may be a concern if you rely heavily on TradingView for charting.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="text-xs font-semibold bg-teal-50 text-teal-700 border border-teal-200 rounded-full px-2.5 py-0.5">70+ Indicators</span>
+          <span class="text-xs font-semibold bg-teal-50 text-teal-700 border border-teal-200 rounded-full px-2.5 py-0.5">Desktop, Web & Mobile</span>
+          <span class="text-xs font-semibold bg-teal-50 text-teal-700 border border-teal-200 rounded-full px-2.5 py-0.5">cTrader Automate (C#)</span>
+          <span class="text-xs font-semibold bg-teal-50 text-teal-700 border border-teal-200 rounded-full px-2.5 py-0.5">Custom Charting</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Platform Recommendation -->
+  <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-6">
+    <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Recommended Platform</p>
+    <p class="text-sm text-teal-700">We recommend <strong>cTrader</strong> if you choose to sign up to Maven Trading, as it offers more flexibility and advanced features for a more technical trading approach.</p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trading Platforms</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      All the platforms provide strong tools, but Match-Trader's web-only format and limited customisation are significant drawbacks, especially if you rely on a direct-to-app interface with a more reliable UI. We're giving Maven Trading a 7/10 for the platform selection, with cTrader being the standout choice for flexibility and advanced features.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PAYOUTS / PAYMENTS & PROFIT PAYOUT SECTION                          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "payouts" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-3">
+    Maven Trading allows you to pay challenge fees via cryptocurrency, credit card, and direct bank transfer, although the transparency around fees for these methods is lacking. Profit withdrawals are processed every <strong>10 business days</strong>, but a strict <strong>$10,000 withdrawal cap per two cycles</strong> and limitations on larger trades can restrict flexibility.
+  </p>
+
+  <!-- Payout structure summary -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
+      <p class="text-sm font-bold text-teal-600">80% – 100%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Payout Cycle</p>
+      <p class="text-sm font-bold text-slate-800">10 Business Days</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Withdrawal Cap</p>
+      <p class="text-sm font-bold text-red-600">$10,000 / 2 cycles</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Fee Refund</p>
+      <p class="text-sm font-bold text-slate-800">3rd Withdrawal</p>
+    </div>
+  </div>
+
+  <!-- Payment Methods for Challenge Fees -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payment Methods for Challenge Fees</h3>
+  <p class="mb-4">
+    With Maven Trading, you can choose to pay for your challenge fees either by direct bank transfer, cryptocurrency, or credit card. The availability of bank transfers entirely depends on your country.
+  </p>
+  <p class="mb-6">
+    While having options for cryptocurrency and bank transfer is a plus, the prop firm doesn't provide much clarity on the processing fee structures, conversion rates, or third-party charges for these payment methods, which can be a point of concern for transparency.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="font-bold text-slate-900 mb-1">Credit Card</p>
+      <p class="text-xs text-slate-500">Widely available</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="font-bold text-slate-900 mb-1">Bank Transfer</p>
+      <p class="text-xs text-slate-500">Country-dependent</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="font-bold text-slate-900 mb-1">Cryptocurrency</p>
+      <p class="text-xs text-slate-500">Available globally</p>
+    </div>
+  </div>
+
+  <!-- Payout Policy -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payout Policy and Profit Withdrawals</h3>
+  <p class="mb-3">
+    The payout policy at Maven Trading follows a structured schedule, with profit withdrawals processed every <strong>10 business days</strong>. While Maven promises a full refund on the third withdrawal, there's a <strong>$10,000 withdrawal cap per two payout cycles</strong>. This means you cannot withdraw more than $10,000 during this period, even if you've earned more.
+  </p>
+  <p class="mb-3">
+    If you're managing multiple accounts, Maven Trading treats all accounts as one, which limits flexibility. This cap does scale as accounts grow, but the prop firm doesn't offer much detail on how scaling impacts payouts in the long run.
+  </p>
+
+  <!-- $5K+ profit restriction -->
+  <div class="rounded-xl border border-red-200 bg-red-50 p-4 mb-6">
+    <p class="text-xs font-bold text-red-800 uppercase tracking-wide mb-1">Important Restriction</p>
+    <p class="text-sm text-red-700">
+      If your profits exceed <strong>$5,000</strong>, you must ensure that no single trade or trading day exceeds <strong>50%</strong> of your total profit. This restriction can limit how you manage larger accounts and may discourage taking larger positions.
+    </p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Payments and Profit Payouts</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Maven Trading's payout policy is restrictive compared to top prop firms, especially with the $10,000 withdrawal limit and the cap on larger trades or trading days. This adds more things to be aware of than to lighten the load of your trading experience. Additionally, the poor transparency around payment fees, especially for digital currencies, doesn't promise clear expectations in planning your payments. A 6/10 score reflects the lack of flexibility and transparency.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SUPPORT / CUSTOMER SERVICE & EDUCATION SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "support" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    Maven Trading's customer service includes live chat, but it lacks effectiveness. The chat offers limited assistance, and there are no direct contact methods like email or phone. Educational resources are also basic, with a simple FAQ and blog that don't provide detailed trading strategies.
+  </p>
+
+  <!-- Customer Support -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Customer Support</h3>
+  <p class="mb-3">
+    Maven Trading offers live chat support, but it's not as helpful as one might hope. Although the chat feature is available, it doesn't provide the level of assistance expected for important queries.
+  </p>
+  <p class="mb-3">
+    For instance, when we asked for details on their trading platforms, the support team directed us to Google for information on cTrader, rather than offering direct guidance. This lack of meaningful support, combined with no other direct contact options like email or phone, raises serious concerns about their ability to effectively help traders.
+  </p>
+  <p class="mb-6">
+    Additionally, we tested their customer support messaging speed by asking a question on the official website regarding cryptocurrency, but didn't receive a response at all. Granted, the message was sent as a user without an account, but even so you'd expect a brief reply.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Live Chat</p>
+      <p>Available but unhelpful — directed us to Google for platform info</p>
+    </div>
+    <div class="rounded-lg bg-red-50 border border-red-200 p-4">
+      <p class="font-bold text-red-900 mb-1">No Email or Phone Support</p>
+      <p class="text-red-700">No direct contact methods available</p>
+    </div>
+  </div>
+
+  <!-- Educational Resources -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Educational Resources</h3>
+  <p class="mb-3">
+    Maven Trading offers a very basic FAQ section and blog with limited resources. The FAQ is scattered, doesn't cover in-depth topics, and the blog offers general articles about trading concepts.
+  </p>
+  <p class="mb-6">
+    Given that Maven Trading has complex rules and instructions, they could have done so much more instead of ignoring this lack of resources. Not only does the FAQ page lack specific guidance, but once you click a specific question, the previous one closes, which can be a hindrance if you're looking for advanced educational material.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Customer Service and Education</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Maven Trading's customer support and educational resources are underwhelming. The live chat is unhelpful, and the lack of comprehensive educational materials makes it difficult to find decent in-depth support. This limited service is a significant downside for those who are looking for a more engaged and informative prop trading company.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* TRUST / TRUST & COMMUNITY SECTION                                   */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "trust" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    At first glance Maven Trading has a substantial online presence, with a strong TrustPilot rating and an active community. However, questions remain about their transparency, particularly around trading conditions and liquidity providers.
+  </p>
+
+  <!-- Trustpilot -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Maven TrustPilot Reviews</h3>
+
+  <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 mb-4 flex items-center gap-4">
+    <div class="flex-shrink-0">
+      <p class="text-3xl font-black text-slate-900">4.5<span class="text-lg text-slate-400">/5</span></p>
+      <p class="text-xs text-slate-500 font-semibold">TrustScore</p>
+    </div>
+    <div>
+      <p class="text-sm text-slate-700">Based on <strong>~5,000 reviews</strong> on Trustpilot — which might seem surprisingly high given the limited transparency the company provides.</p>
+    </div>
+  </div>
+
+  <p class="mb-3">
+    Unlike firms such as Blueberry Funded that openly connect with regulated brokers, Maven doesn't disclose its liquidity providers or brokerage sources. This lack of clarity raises questions about the authenticity of some reviews, especially when compared to other more transparent firms in the industry.
+  </p>
+
+  <!-- Trading Community -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3 mt-6">Trading Community</h3>
+  <p class="mb-3">
+    Maven has an active prop trading community, with more than <strong>77,000 members</strong> on Discord, yet only <strong>110+</strong> are listed as funded traders. They maintain a presence across social media platforms.
+  </p>
+  <p class="mb-6">
+    Most importantly, Maven Trading may sometimes neglect updating their website regarding rules, challenges, and announcements. So be sure to follow their Discord if you want to be up to date on the latest changes.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-4 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">77K+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Discord Members</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">82.3K+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Twitter / X</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">1K+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">LinkedIn</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">110+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Funded Traders</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trust and Community</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Maven Trading's large community and high TrustPilot rating don't fully align with the level of transparency expected from a prop firm. When it comes to essential details like liquidity providers and operational clarity, you may prefer firms that are more open with critical information like that. Such an oversight, along with poor customer support, leaves us giving Maven Trading a 4/10 score for the Trust and Community evaluation.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* FALLBACK — sections not customised render the default text          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section !== "challenges" && section !== "spreads" && section !== "markets" && section !== "platforms" && section !== "payouts" && section !== "support" && section !== "trust" && fallbackBody && (
+  <div class="text-sm leading-relaxed text-slate-700 space-y-4">
+    {fallbackBody.split("\n\n").map((para) => (
+      <p set:html={para.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")} />
+    ))}
+  </div>
+)}

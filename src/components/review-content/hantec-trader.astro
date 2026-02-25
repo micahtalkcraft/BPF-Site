@@ -1,0 +1,1079 @@
+---
+// Static editorial content for Hantec Trader
+// Supports multiple sections via the `section` prop
+interface Props {
+  section: string;
+  fallbackBody?: string;
+}
+const { section, fallbackBody } = Astro.props;
+---
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* CHALLENGES SECTION                                                  */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "challenges" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    Hantec Trader scores <strong>8/10</strong> for its funding challenges, offering traders three program types — One Step (Express), Two Step (Enhanced), and Instant Funding accounts. Account sizes range from <strong>$5K to $200K</strong> with fees from <strong>$49 to $1,999</strong>.
+  </p>
+
+  <!-- Per-challenge summaries -->
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Express – One Step Challenge</p>
+      <p>Requires a 10% profit target with trailing-to-static drawdown. The drawdown starts trailing but locks once you reach +6% profit. Fees from $59 to $1,999.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Bi-weekly payout add-on available (14 days)</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Enhanced – Two Step Challenge</p>
+      <p>Stage 1 requires 10% profit target, Stage 2 requires 5%. Static drawdowns throughout. The most flexible option with the highest max drawdown at 10%. Fees from $49 to $1,999.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Lowest entry fee at $49 for $5K account</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Instant Funding – No Evaluation</p>
+      <p>Direct access to simulated capital with no profit target. Tighter rules: 6% daily loss and 6% trailing drawdown that locks at +6% profit. Fees from $69 to $1,999.</p>
+      <p class="text-xs text-amber-600 font-semibold mt-1">No EAs, no weekend holding, restricted news trading. No scaling available.</p>
+    </div>
+  </div>
+
+  <!-- ─── Comparison Table ───────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Comparison</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-10">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Attribute</th>
+          <th class="px-4 py-3 text-center">Express (1-Step)</th>
+          <th class="px-4 py-3 text-center">Enhanced (2-Step)</th>
+          <th class="px-4 py-3 text-center">Instant Funding</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Account Sizes</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5K – $200K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5K – $200K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5K – $200K</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Upfront Fees</td>
+          <td class="px-4 py-3 text-center text-slate-900">$59 – $1,999</td>
+          <td class="px-4 py-3 text-center text-slate-900">$49 – $1,999</td>
+          <td class="px-4 py-3 text-center text-slate-900">$69 – $1,999</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Split</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">75% – 90%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">75% – 90%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">75% – 90%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Target</td>
+          <td class="px-4 py-3 text-center text-slate-900">10%</td>
+          <td class="px-4 py-3 text-center text-slate-900">10% → 5%</td>
+          <td class="px-4 py-3 text-center text-slate-400">None</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Daily Drawdown</td>
+          <td class="px-4 py-3 text-center text-slate-900">5%</td>
+          <td class="px-4 py-3 text-center text-slate-900">5%</td>
+          <td class="px-4 py-3 text-center text-slate-900">6%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Max Drawdown</td>
+          <td class="px-4 py-3 text-center text-slate-900">6%</td>
+          <td class="px-4 py-3 text-center text-slate-900">10%</td>
+          <td class="px-4 py-3 text-center text-slate-900">6%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Drawdown Type</td>
+          <td class="px-4 py-3 text-center text-slate-900">Trailing → Static</td>
+          <td class="px-4 py-3 text-center text-slate-900">Static</td>
+          <td class="px-4 py-3 text-center text-slate-900">Trailing → Static</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Min Trading Days</td>
+          <td class="px-4 py-3 text-center text-slate-900">None</td>
+          <td class="px-4 py-3 text-center text-slate-900">None</td>
+          <td class="px-4 py-3 text-center text-slate-900">None</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Max Trading Days</td>
+          <td class="px-4 py-3 text-center text-slate-900">None</td>
+          <td class="px-4 py-3 text-center text-slate-900">None</td>
+          <td class="px-4 py-3 text-center text-slate-900">None</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Scaling</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Up to $200K</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Up to $200K</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">No</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Payout Frequency</td>
+          <td class="px-4 py-3 text-center text-slate-900">14 or 30 Days</td>
+          <td class="px-4 py-3 text-center text-slate-900">14 or 30 Days</td>
+          <td class="px-4 py-3 text-center text-slate-900">7 or 14 Days</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 1. EXPRESS (ONE STEP)                                           -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">1</span>
+      Express Challenge – One Step
+    </h3>
+
+    <p class="mb-3">
+      The Express challenge is ideal for experienced traders who want to get funded quickly. It requires a <strong>10% profit target</strong> with no minimum or maximum trading days.
+    </p>
+    <p class="mb-4">
+      The drawdown starts trailing, but once you reach <strong>+6% profit</strong>, it becomes static, helping protect profits from being lost.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Drawdown Type</p>
+        <p class="text-sm font-bold text-slate-800">Trailing → Static</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Loss</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Loss</p>
+        <p class="text-sm font-bold text-slate-800">6%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Trading Days</p>
+        <p class="text-sm font-bold text-slate-800">None (Unlimited)</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
+        <p class="text-sm font-bold text-teal-600">75% – 90%</p>
+      </div>
+    </div>
+
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
+      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
+      <p class="text-sm text-teal-700">Experienced traders who want a simple, one-step path to funding with no time pressure and trailing drawdown protection once profits are secured.</p>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">Fee</th>
+            <th class="px-4 py-3 text-right">Target (10%)</th>
+            <th class="px-4 py-3 text-right">Daily Loss (5%)</th>
+            <th class="px-4 py-3 text-right">Max Loss (6%)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$59</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$300</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$99</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$600</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$199</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$299</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$499</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$6,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$200,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$1,999</td>
+            <td class="px-4 py-3 text-right text-slate-700">$20,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$12,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 2. ENHANCED (TWO STEP)                                         -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">2</span>
+      Enhanced Challenge – Two Step
+    </h3>
+
+    <p class="mb-3">
+      The Enhanced challenge is better suited to traders who want to build a track record over two phases. Stage 1 requires a <strong>10% profit target</strong>, and Stage 2 requires <strong>5%</strong>, with <strong>static drawdowns</strong> throughout.
+    </p>
+    <p class="mb-4">
+      Like the Express challenge, there are no minimum trading days, making it one of the more flexible two-step models available.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 1 Target</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 2 Target</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Drawdown Type</p>
+        <p class="text-sm font-bold text-slate-800">Static</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Loss</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Loss</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Trading Days</p>
+        <p class="text-sm font-bold text-slate-800">None (Unlimited)</p>
+      </div>
+    </div>
+
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
+      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
+      <p class="text-sm text-teal-700">Disciplined traders who prefer a structured, two-phase evaluation with the highest max drawdown (10%) and static drawdown rules throughout.</p>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">Fee</th>
+            <th class="px-4 py-3 text-right">Stage 1 (10%)</th>
+            <th class="px-4 py-3 text-right">Stage 2 (5%)</th>
+            <th class="px-4 py-3 text-right">Daily Loss (5%)</th>
+            <th class="px-4 py-3 text-right">Max Loss (10%)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$49</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$99</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$199</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$299</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$499</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$200,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$1,999</td>
+            <td class="px-4 py-3 text-right text-slate-700">$20,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$20,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 3. INSTANT FUNDING                                              -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">3</span>
+      Instant Funding Account
+    </h3>
+
+    <p class="mb-3">
+      The Instant Funding account gives traders direct access to simulated capital without needing to pass a challenge. There's <strong>no profit target</strong>, but traders must respect a <strong>6% daily loss</strong> and a <strong>6% trailing drawdown</strong>, which locks once +6% profit is reached.
+    </p>
+    <p class="mb-4">
+      Instant accounts are more restrictive on news and weekend trading and <strong>do not qualify for scaling</strong>.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
+        <p class="text-sm font-bold text-slate-800">None</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Drawdown Type</p>
+        <p class="text-sm font-bold text-slate-800">Trailing → Static</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Loss</p>
+        <p class="text-sm font-bold text-slate-800">6%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Loss</p>
+        <p class="text-sm font-bold text-slate-800">6%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Payout</p>
+        <p class="text-sm font-bold text-slate-800">7 or 14 Days</p>
+      </div>
+    </div>
+
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-4">
+      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
+      <p class="text-sm text-teal-700">Traders who want to bypass evaluations entirely and start with funded capital immediately. Best for manual, discretionary traders comfortable with tighter risk rules.</p>
+    </div>
+    <div class="rounded-xl bg-red-50 border border-red-200 p-4 mb-5">
+      <p class="text-xs font-bold text-red-800 uppercase tracking-wide mb-1">Restrictions</p>
+      <p class="text-sm text-red-700">No EAs or copy trading. No weekend holding. No trading within 3 minutes of high-impact news. No scaling available.</p>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">Fee</th>
+            <th class="px-4 py-3 text-right">Daily Loss (6%)</th>
+            <th class="px-4 py-3 text-right">Max Loss (6%)</th>
+            <th class="px-4 py-3 text-right">Payout</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$69</td>
+            <td class="px-4 py-3 text-right text-slate-700">$300</td>
+            <td class="px-4 py-3 text-right text-slate-700">$300</td>
+            <td class="px-4 py-3 text-right text-slate-700">7 or 14 Days</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$99</td>
+            <td class="px-4 py-3 text-right text-slate-700">$600</td>
+            <td class="px-4 py-3 text-right text-slate-700">$600</td>
+            <td class="px-4 py-3 text-right text-slate-700">7 or 14 Days</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$199</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">7 or 14 Days</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$299</td>
+            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">7 or 14 Days</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$499</td>
+            <td class="px-4 py-3 text-right text-slate-700">$6,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$6,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">7 or 14 Days</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$200,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$1,999</td>
+            <td class="px-4 py-3 text-right text-slate-700">$12,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$12,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">7 or 14 Days</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SCALING PLANS                                                    -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3">Scaling Plans</h3>
+    <p class="mb-3">
+      Hantec Trader offers a clear and repeatable scaling path for evaluation accounts, with funding available up to <strong>$200,000</strong>. Traders cannot scale Instant Funding accounts.
+    </p>
+    <div class="space-y-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-3">
+        <p class="text-sm text-slate-700"><strong>1.</strong> Start with any challenge size (e.g. $10K, $25K).</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-3">
+        <p class="text-sm text-slate-700"><strong>2.</strong> Pass the evaluation (Express or Enhanced).</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-3">
+        <p class="text-sm text-slate-700"><strong>3.</strong> Choose to take a funded account at your current level, or upgrade to the next tier for free.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-3">
+        <p class="text-sm text-slate-700"><strong>4.</strong> Continue this process to grow your funded account up to $200K.</p>
+      </div>
+    </div>
+    <p class="text-xs text-slate-500">There's no time requirement between steps, and scaled accounts maintain the same drawdown and profit split terms.</p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Challenges</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      We rate Hantec's challenge setup highly for its balance of flexibility, transparency, and trader control. There's no time pressure, no consistency rules, and the scaling plan is clear for evaluation models. Instant Funding is more restricted and doesn't scale, which lowers its appeal. But if you value clean rules, fair risk limits, and fast access to funding, this is one of the stronger offers available. <strong>Score: 8/10</strong>.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SPREADS / COMMISSION FEES & PRICING SECTION                         */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "spreads" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Hantec Trader scores <strong>6/10</strong> for its pricing model, which uses raw spreads plus a flat commission per lot. There are no platform or data feed fees, and no extra charges for specific markets. However, the lack of published average spreads and undisclosed liquidity providers limits transparency.
+  </p>
+
+  <!-- Commission table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Commission Fees by Market</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-5 py-3 text-left">Market</th>
+          <th class="px-5 py-3 text-center">Spread Type</th>
+          <th class="px-5 py-3 text-right">Commission (per lot)</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">Forex</td>
+          <td class="px-5 py-3 text-center text-slate-700">Raw</td>
+          <td class="px-5 py-3 text-right font-bold text-slate-900">$5</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">Metals</td>
+          <td class="px-5 py-3 text-center text-slate-700">Raw</td>
+          <td class="px-5 py-3 text-right font-bold text-slate-900">$5</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">Commodities</td>
+          <td class="px-5 py-3 text-center text-slate-700">Raw</td>
+          <td class="px-5 py-3 text-right font-bold text-slate-900">$1</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">Indices</td>
+          <td class="px-5 py-3 text-center text-slate-700">Raw</td>
+          <td class="px-5 py-3 text-right font-bold text-teal-600">$0</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">Crypto</td>
+          <td class="px-5 py-3 text-center text-slate-700">Raw</td>
+          <td class="px-5 py-3 text-right font-bold text-teal-600">$0</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="mb-3">
+    Hantec Trader offers raw spreads for forex trading, meaning you're trading close to the market price. This structure suits scalpers and high-frequency traders, but <strong>no average spread data is provided</strong> for instruments like EUR/USD or gold. Without this visibility, it's harder to compare Hantec's spreads against other firms directly.
+  </p>
+  <p class="mb-6">
+    Importantly, there are <strong>no additional fees for data feeds or platforms</strong>, which simplifies the total cost for funded traders.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Pricing</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      The raw spread plus commission model is standard for prop trading and offers fair, predictable pricing. However, without published average spreads or disclosed liquidity providers, traders have limited visibility into actual trading costs. <strong>Score: 6/10</strong>.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* MARKETS / FINANCIAL MARKETS & LEVERAGE SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "markets" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Hantec Trader scores <strong>6/10</strong> for its market coverage and leverage offering. It supports five core asset classes — forex, metals, indices, commodities, and crypto — with fixed leverage applied across all challenge types and funded stages. While the range of markets is solid, the total number of instruments is smaller than top prop firms, and <strong>crypto is limited to 1:1 leverage</strong>.
+  </p>
+
+  <!-- Market coverage table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Market Coverage & Leverage</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Asset Class</th>
+          <th class="px-4 py-3 text-center">No. of Markets</th>
+          <th class="px-4 py-3 text-center">Leverage</th>
+          <th class="px-4 py-3 text-left">Notes</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Forex</td>
+          <td class="px-4 py-3 text-center text-slate-900">40</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">50:1</td>
+          <td class="px-4 py-3 text-slate-700">Majors and minors</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Metals</td>
+          <td class="px-4 py-3 text-center text-slate-900">8</td>
+          <td class="px-4 py-3 text-center text-slate-900">20:1</td>
+          <td class="px-4 py-3 text-slate-700">Gold, silver, and others</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Indices</td>
+          <td class="px-4 py-3 text-center text-slate-900">11</td>
+          <td class="px-4 py-3 text-center text-slate-900">15:1</td>
+          <td class="px-4 py-3 text-slate-700">US, EU, APAC</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Commodities</td>
+          <td class="px-4 py-3 text-center text-slate-900">2</td>
+          <td class="px-4 py-3 text-center text-slate-900">15:1</td>
+          <td class="px-4 py-3 text-amber-600 font-medium">Limited range</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Crypto</td>
+          <td class="px-4 py-3 text-center text-slate-900">14</td>
+          <td class="px-4 py-3 text-center text-amber-600 font-semibold">1:1</td>
+          <td class="px-4 py-3 text-amber-600 font-medium">No leverage</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-400">Stocks</td>
+          <td class="px-4 py-3 text-center text-slate-400">—</td>
+          <td class="px-4 py-3 text-center text-slate-400">—</td>
+          <td class="px-4 py-3 text-slate-400">Not available</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-400">Futures</td>
+          <td class="px-4 py-3 text-center text-slate-400">—</td>
+          <td class="px-4 py-3 text-center text-slate-400">—</td>
+          <td class="px-4 py-3 text-slate-400">Not available</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="mb-6">
+    There are no tiered margin systems, no maximum lot size limits, and no restrictions on contract size, making the setup simple and scalable for all strategies. However, the limited commodity depth (only 2 instruments) and lack of stocks or futures may be a drawback for some traders.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Financial Markets & Leverage</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      While Hantec covers the major asset classes with consistent leverage and no restrictions on lot size or margin tiers, the limited number of instruments in commodities and the 1:1 leverage cap on crypto hold it back. <strong>Score: 6/10</strong>.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PLATFORMS / TRADING PLATFORMS SECTION                                */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "platforms" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Hantec Trader scores <strong>8/10</strong> for its trading platforms with access to <strong>MetaTrader 4 and MetaTrader 5</strong>. The trading rules are straightforward, with no time limits, no consistency requirements, and support for EAs and algos on One Step and Two Step accounts. Instant Funding accounts are more restricted.
+  </p>
+
+  <!-- Platform features table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Platform Features</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Feature</th>
+          <th class="px-4 py-3 text-center">Details</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">MetaTrader 4</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">&#10003;</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">MetaTrader 5</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">&#10003;</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">TradingView</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-semibold">&#10007;</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">cTrader</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-semibold">&#10007;</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Platform / Data Feed Fees</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">No fees</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Real-Time Pricing</td>
+          <td class="px-4 py-3 text-center text-slate-900">Yes</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">EAs / Algos</td>
+          <td class="px-4 py-3 text-center text-slate-900">Express & Enhanced only</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Copy Trading</td>
+          <td class="px-4 py-3 text-center text-slate-900">Express & Enhanced only</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Platform Switching</td>
+          <td class="px-4 py-3 text-center text-amber-600 font-medium">Not allowed mid-challenge</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Country Restrictions</td>
+          <td class="px-4 py-3 text-center text-slate-900">Not available to US residents</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Trading Rules -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules</h3>
+  <div class="space-y-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Time Limits</p>
+      <p>No minimum or maximum trading days on any program. No consistency rules.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">News Trading</p>
+      <p>Allowed on Express and Enhanced. Instant Funding <strong>cannot trade within 3 minutes</strong> of high-impact news events.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Weekend Holding</p>
+      <p>Allowed on Express and Enhanced. <strong>Not allowed on Instant Funding</strong>.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">EAs & Copy Trading</p>
+      <p>Allowed on Express and Enhanced. <strong>Not allowed on Instant Funding</strong>.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Inactivity Rule</p>
+      <p><strong>30+ days of inactivity</strong> results in account breach.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Overleveraging</p>
+      <p>Using more than <strong>85% margin</strong> on a single or related asset is not allowed.</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trading Platforms & Rules</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      MT4 and MT5 access with no platform or data fees is a solid foundation, and the rules give traders a high level of control, especially on Express and Enhanced accounts. The main limitation is the Instant Funding model, which blocks EAs and restricts news and weekend trading. <strong>Score: 8/10</strong>.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PAYOUTS / PAYMENTS & PROFIT PAYOUT SECTION                          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "payouts" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Hantec Trader scores <strong>8/10</strong> for its payment system and profit withdrawal structure, thanks to flexible payout terms with no recurring fees. Profit payouts are flexible, with weekly, bi-weekly, or monthly options depending on the program and any add-ons selected.
+  </p>
+
+  <!-- Payout overview grid -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
+      <p class="text-sm font-bold text-teal-600">75% – 90%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Processing</p>
+      <p class="text-sm font-bold text-slate-800">1–2 business days</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Withdrawal</p>
+      <p class="text-sm font-bold text-teal-600">None</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Methods</p>
+      <p class="text-sm font-bold text-slate-800">Bank, PayPal, Crypto</p>
+    </div>
+  </div>
+
+  <!-- Payout rules by model -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payout Rules by Program</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Feature</th>
+          <th class="px-4 py-3 text-center">Express</th>
+          <th class="px-4 py-3 text-center">Enhanced</th>
+          <th class="px-4 py-3 text-center">Instant Funding</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Payment Type</td>
+          <td class="px-4 py-3 text-center text-slate-900">One-time fee</td>
+          <td class="px-4 py-3 text-center text-slate-900">One-time fee</td>
+          <td class="px-4 py-3 text-center text-slate-900">One-time fee</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Fee Range</td>
+          <td class="px-4 py-3 text-center text-slate-900">$59 – $1,999</td>
+          <td class="px-4 py-3 text-center text-slate-900">$49 – $1,999</td>
+          <td class="px-4 py-3 text-center text-slate-900">$69 – $1,999</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Split</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">75% – 90%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">75% – 90%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">75% – 90%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Initial Payout</td>
+          <td class="px-4 py-3 text-center text-slate-900">Any time (no open trades)</td>
+          <td class="px-4 py-3 text-center text-slate-900">Any time (no open trades)</td>
+          <td class="px-4 py-3 text-center text-slate-900">7 or 14 days after 1st trade</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Default Payout</td>
+          <td class="px-4 py-3 text-center text-slate-900">Every 30 days</td>
+          <td class="px-4 py-3 text-center text-slate-900">Every 30 days</td>
+          <td class="px-4 py-3 text-center text-slate-900">Every 14 days</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">With Add-on</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">Every 14 days</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">Every 14 days</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">Every 7 days</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Min Withdrawal</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">None</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">None</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">None</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Processing Time</td>
+          <td class="px-4 py-3 text-center text-slate-900">1–2 business days</td>
+          <td class="px-4 py-3 text-center text-slate-900">1–2 business days</td>
+          <td class="px-4 py-3 text-center text-slate-900">1–2 business days</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Payment methods -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Accepted Payment Methods</h3>
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="font-bold text-slate-900">Credit/Debit Cards</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="font-bold text-slate-900">Cryptocurrency</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="font-bold text-slate-900">PayPal</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="font-bold text-slate-900">Bank Wire</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="font-bold text-slate-900">Apple Pay</p>
+    </div>
+  </div>
+
+  <!-- Buffer rule warning -->
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
+    <p class="text-sm font-bold text-amber-900 mb-1">Buffer Rule</p>
+    <p class="text-sm text-amber-800">
+      Hantec applies a buffer rule, which locks your new max drawdown to the post-withdrawal balance. This means after a payout, your drawdown limit adjusts based on your remaining balance.
+    </p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Payments & Payouts</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Hantec Trader scores well here thanks to a clear one-time fee model, broad payment support, and no recurring costs. Payouts are fast and frequent, especially with add-ons, and the lack of minimum withdrawal limits is a plus. The buffer rule is worth noting, but overall the system is reliable, flexible, and trader-focused. <strong>Score: 8/10</strong>.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SUPPORT / CUSTOMER SERVICE & EDUCATION SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "support" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Hantec Trader provides solid customer support across email, live chat, and Discord, with our team experiencing a prompt reply when we enquired. Support is available <strong>24 hours a day, five days a week</strong>, though weekend coverage is not offered.
+  </p>
+  <p class="mb-6">
+    While live assistance is reliable, the educational content is minimal. Aside from a standard FAQ section, there are no platform tutorials, webinars, or strategy guides, which may be limiting for beginners who want structured learning.
+  </p>
+
+  <!-- Support features table -->
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Feature</th>
+          <th class="px-4 py-3 text-center">Details</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Support Channels</td>
+          <td class="px-4 py-3 text-center text-slate-900">Email, Live Chat, Discord</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Hours of Availability</td>
+          <td class="px-4 py-3 text-center text-slate-900">24/5 (Monday to Friday)</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Weekend Support</td>
+          <td class="px-4 py-3 text-center text-amber-600 font-medium">Not available</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Response Quality</td>
+          <td class="px-4 py-3 text-center text-slate-900">Clear, responsive, and helpful</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Educational Content</td>
+          <td class="px-4 py-3 text-center text-amber-600 font-medium">FAQ section only</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Platform Tutorials</td>
+          <td class="px-4 py-3 text-center text-slate-400">Not available</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Webinars / Strategy Help</td>
+          <td class="px-4 py-3 text-center text-slate-400">Not offered</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="mb-6">
+    Most traders will find the live support channels effective for onboarding, account questions, and platform troubleshooting. However, the lack of deeper educational tools makes this setup more suitable for experienced traders who don't rely on guided training.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Customer Support & Education</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Hantec Trader offers helpful, responsive support through key channels, but it's not 24/7 and their education offering is basic. The absence of weekend support and lack of platform or strategy content is a drawback for less experienced traders who need more guidance.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* TRUST / TRUST & COMMUNITY SECTION                                   */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "trust" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-3">
+    Hantec Trader scores <strong>9/10</strong> for trust and transparency, and is one of the few <strong>broker-backed prop firms</strong>, powered by FCA-regulated <strong>Hantec Markets</strong>.
+  </p>
+  <p class="mb-6">
+    This adds a level of oversight and accountability that's often missing from independent proprietary trading firms. We found no reports of slippage manipulation, payout issues, or challenge failures due to platform-side issues. Payouts are processed consistently and frequently showcased in their public channels.
+  </p>
+
+  <!-- Trust stats grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">4.5<span class="text-lg text-slate-400">/5</span></p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Trustpilot Score</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">313+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Verified Reviews</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-teal-600">FCA</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Regulated Broker</p>
+    </div>
+  </div>
+
+  <!-- Trustpilot details -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Hantec Trader Trustpilot Rating</h3>
+  <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 mb-6 flex items-center gap-4">
+    <div class="flex-shrink-0">
+      <p class="text-3xl font-black text-slate-900">4.5<span class="text-lg text-slate-400">/5</span></p>
+      <p class="text-xs text-slate-500 font-semibold">TrustScore</p>
+    </div>
+    <div>
+      <p class="text-sm text-slate-700">Based on <strong>313+ verified reviews</strong> on Trustpilot. Most reviews highlight fast payouts, friendly customer support, and a stress-free funding process. Hantec responds to 95% of negative reviews, often within a week.</p>
+    </div>
+  </div>
+
+  <!-- Community -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Community</h3>
+  <p class="mb-3">
+    Hantec Trader has an active <strong>Discord community with 3,500+ members</strong> and a social media presence with <strong>14,400+ followers on Twitter</strong>. Traders frequently post their payouts, share experiences, and engage directly with moderators and staff.
+  </p>
+  <p class="mb-6">
+    Giveaways and challenge promotions are frequent, making it easy to track platform activity in real time. This level of visibility helps build confidence, especially for newer traders looking for public proof of reliability.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">3,500+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Discord Members</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">14,400+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Twitter Followers</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-teal-600">Hantec Markets</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">FCA-Regulated Broker</p>
+    </div>
+  </div>
+
+  <!-- Key trust signals -->
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Trust Signal</th>
+          <th class="px-4 py-3 text-center">Status</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Broker-backed</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes — Hantec Markets</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Regulation</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">FCA-regulated</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Key Personnel Public</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Payout Issues Reported</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">None</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Price Manipulation Reports</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">None</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Community Payout Proof</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes — Discord & social</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trust & Community</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Hantec Trader scores highly here for its combination of regulation, reputation, and active trader engagement. Being broker-backed by a licensed, FCA-regulated forex broker adds serious credibility, and the prop firm has a consistent payout record. <strong>Score: 9/10</strong>.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* FALLBACK — sections not customised render the default text          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section !== "challenges" && section !== "spreads" && section !== "markets" && section !== "platforms" && section !== "payouts" && section !== "support" && section !== "trust" && fallbackBody && (
+  <div class="text-sm leading-relaxed text-slate-700 space-y-4">
+    {fallbackBody.split("\n\n").map((para) => (
+      <p set:html={para.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")} />
+    ))}
+  </div>
+)}

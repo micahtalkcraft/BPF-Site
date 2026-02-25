@@ -1,0 +1,438 @@
+{
+  "$ref": "#/definitions/prop-firms",
+  "definitions": {
+    "prop-firms": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "name": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "active",
+            "paused",
+            "unknown"
+          ],
+          "default": "active"
+        },
+        "foundedYear": {
+          "type": "integer",
+          "minimum": 1900,
+          "maximum": 2100
+        },
+        "hqCountry": {
+          "type": "string"
+        },
+        "evaluation": {
+          "type": "object",
+          "properties": {
+            "types": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "1-step",
+                  "2-step",
+                  "instant",
+                  "rapid",
+                  "synthetic",
+                  "other"
+                ]
+              }
+            },
+            "profitTargets": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "number"
+              }
+            },
+            "dailyDrawdown": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "maxDrawdown": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "minTradingDays": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "scalingPlan": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "types",
+            "dailyDrawdown",
+            "maxDrawdown",
+            "minTradingDays",
+            "scalingPlan"
+          ],
+          "additionalProperties": false
+        },
+        "pricing": {
+          "type": "object",
+          "properties": {
+            "challengeFees": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "accountSize": {
+                    "type": "number"
+                  },
+                  "fee": {
+                    "type": "number"
+                  },
+                  "model": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "accountSize",
+                  "fee"
+                ],
+                "additionalProperties": false
+              },
+              "default": []
+            },
+            "resetFee": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "refundPolicy": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "resetFee",
+            "refundPolicy"
+          ],
+          "additionalProperties": false
+        },
+        "payouts": {
+          "type": "object",
+          "properties": {
+            "splitMax": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "schedule": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "processingTime": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "firstPayoutDays": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "methods": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "splitMax",
+            "schedule",
+            "processingTime",
+            "firstPayoutDays"
+          ],
+          "additionalProperties": false
+        },
+        "rules": {
+          "type": "object",
+          "properties": {
+            "newsTrading": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "weekendHolding": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "copyTrading": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "expertAdvisors": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "consistencyRule": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "notes": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "newsTrading",
+            "weekendHolding",
+            "copyTrading",
+            "expertAdvisors",
+            "consistencyRule"
+          ],
+          "additionalProperties": false
+        },
+        "markets": {
+          "type": "object",
+          "properties": {
+            "platforms": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "instruments": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "platforms",
+            "instruments"
+          ],
+          "additionalProperties": false
+        },
+        "trust": {
+          "type": "object",
+          "properties": {
+            "trustpilotRating": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 5
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "trustpilotCount": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "communitySize": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "notableFlags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "trustpilotRating",
+            "trustpilotCount",
+            "communitySize"
+          ],
+          "additionalProperties": false
+        },
+        "links": {
+          "type": "object",
+          "properties": {
+            "website": {
+              "type": "string",
+              "format": "uri"
+            },
+            "dashboard": {
+              "type": "string",
+              "format": "uri"
+            },
+            "terms": {
+              "type": "string",
+              "format": "uri"
+            },
+            "helpCenter": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "additionalProperties": false
+        },
+        "media": {
+          "type": "object",
+          "properties": {
+            "logo": {
+              "type": "string"
+            },
+            "screenshot": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "availability": {
+          "type": "object",
+          "properties": {
+            "restrictedCountries": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "default": []
+            },
+            "allowedCountries": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "support": {
+          "type": "object",
+          "properties": {
+            "hours": {
+              "type": "string"
+            },
+            "liveChat": {
+              "type": "boolean"
+            },
+            "email": {
+              "type": "boolean"
+            },
+            "discord": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "custom": {
+          "type": "object",
+          "additionalProperties": {}
+        },
+        "lastVerifiedAt": {
+          "type": "string",
+          "format": "date"
+        },
+        "lastUpdatedAt": {
+          "type": "string",
+          "format": "date"
+        },
+        "dataSources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "slug",
+        "name",
+        "evaluation",
+        "pricing",
+        "payouts",
+        "rules",
+        "markets",
+        "trust",
+        "availability",
+        "lastVerifiedAt",
+        "lastUpdatedAt"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

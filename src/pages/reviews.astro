@@ -1,0 +1,512 @@
+---
+import Base from "../layouts/Base.astro";
+import { getCollection } from "astro:content";
+import ScoreBadge from "../components/shared/ScoreBadge.astro";
+import FirmAvatar from "../components/shared/FirmAvatar.astro";
+import * as flags from "country-flag-icons/string/3x2";
+
+const propFirms = await getCollection("prop-firms");
+const reviews = await getCollection("reviews");
+
+const reviewMap = Object.fromEntries(reviews.map((r) => [r.data.propFirmId, r.data]));
+
+function countryFlag(code: string): string {
+  return [...code.toUpperCase()].map((c) => String.fromCodePoint(0x1F1E6 + c.charCodeAt(0) - 65)).join("");
+}
+function evalLabel(types: string[]) {
+  return types.map((t) => t === "other" ? "Futures" : t.split("-").map(w => w[0].toUpperCase()+w.slice(1)).join("-")).join(", ");
+}
+
+// Sort: scored firms desc, then unscored alphabetically
+const sorted = propFirms
+  .map((f) => ({ firm: f.data, review: reviewMap[f.data.id] }))
+  .sort((a, b) => {
+    const as = a.review?.overallScore;
+    const bs = b.review?.overallScore;
+    if (as !== undefined && bs !== undefined) return bs - as;
+    if (as !== undefined) return -1;
+    if (bs !== undefined) return 1;
+    return a.firm.name.localeCompare(b.firm.name);
+  });
+
+interface RankedRow {
+  rank: number;
+  rankLabel: string;
+  isTopPick: boolean;
+  slug: string;
+  name: string;
+  foundedYear: number | undefined;
+  hqCountry: string | undefined;
+  status: string;
+  summary: string | undefined;
+  tags: string[];
+  evalTypes: string[];
+  discountCode: string | undefined;
+  discountPercent: number | undefined;
+  evalLabel: string;
+  platforms: string;
+  splitMax: number | null;
+  firstPayoutDays: number | null;
+  pros: string[];
+  overallScore: number | undefined;
+  trustpilotRating: number | null;
+  trustpilotCount: number | null;
+  lowestFeeAmount: number | null;
+  website: string | undefined;
+  logoUrl: string | undefined;
+  youtubeId: string | undefined;
+  flagEmoji: string | undefined;
+  flagSvg: string | undefined;
+  hasReview: boolean;
+  verified: boolean;
+  flagged: boolean;
+}
+
+const rows: RankedRow[] = sorted.map(({ firm, review }, i) => {
+  const rank = i + 1;
+  const fees = firm.pricing.challengeFees;
+  const lowestFee = fees.length > 0 ? fees.reduce((m, x) => x.fee < m.fee ? x : m) : null;
+  const ytId = review?.youtubeUrl?.match(/(?:embed\/|v=|youtu\.be\/)([a-zA-Z0-9_-]+)/)?.[1];
+  return {
+    rank,
+    rankLabel: String(rank).padStart(2, "0"),
+    isTopPick: rank <= 3 && review?.overallScore !== undefined,
+    slug: firm.slug,
+    name: firm.name,
+    foundedYear: firm.foundedYear,
+    hqCountry: firm.hqCountry,
+    status: firm.status,
+    summary: review?.summary,
+    tags: (firm.custom as any)?.tags ?? [],
+    evalTypes: firm.evaluation.types,
+    discountCode: (firm.custom as any)?.discountCode,
+    discountPercent: (firm.custom as any)?.discountPercent,
+    evalLabel: evalLabel(firm.evaluation.types),
+    platforms: firm.markets.platforms.slice(0, 2).join(", "),
+    splitMax: firm.payouts.splitMax,
+    firstPayoutDays: firm.payouts.firstPayoutDays,
+    pros: review?.pros?.slice(0, 3) ?? [],
+    overallScore: review?.overallScore,
+    trustpilotRating: firm.trust.trustpilotRating,
+    trustpilotCount: firm.trust.trustpilotCount,
+    lowestFeeAmount: lowestFee?.fee ?? null,
+    website: firm.links?.website,
+    logoUrl: firm.media?.logo ?? undefined,
+    youtubeId: ytId,
+    flagEmoji: firm.hqCountry ? countryFlag(firm.hqCountry) : undefined,
+    flagSvg: firm.hqCountry ? (flags as Record<string, string>)[firm.hqCountry.toUpperCase()] : undefined,
+    hasReview: review !== undefined,
+    verified: review?.verified !== false,
+    flagged: review?.flagged === true,
+  };
+});
+
+const scoredCount = rows.filter((r) => r.overallScore !== undefined).length;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Best Prop Trading Firms 2026",
+  description: "Independent rankings of proprietary trading firms, scored across 7 categories.",
+  numberOfItems: rows.length,
+  itemListElement: rows.map((row) => ({
+    "@type": "ListItem",
+    position: row.rank,
+    name: row.name,
+    url: `https://www.bestpropfirms.com/reviews/${row.slug}`,
+  })),
+};
+
+const typeLabelMap: Record<string, string> = {
+  "1-step": "1-Step",
+  "2-step": "2-Step",
+  "instant": "Instant Funding",
+  "other": "Futures",
+};
+const uniqueEvalTypes = [...new Set(rows.flatMap((r) => r.evalTypes))].filter(
+  (t) => typeLabelMap[t]
+);
+---
+
+<Base
+  title="Prop Firm Reviews 2026 — All Ranked & Scored | BestPropFirms.com"
+  description="In-depth reviews of every major prop trading firm. Scored across 7 categories: Trust, Conditions, Pricing, Platforms, Payouts, Support, and UX."
+  jsonLd={jsonLd}
+>
+  <!-- Page header -->
+  <section class="bg-[#0d1b2a] text-white py-14 px-4">
+    <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <p class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-2">Independent Reviews</p>
+      <h1 class="text-4xl font-black mb-3">All Prop Firms Ranked</h1>
+      <p class="text-slate-300 text-lg max-w-2xl">
+        Sorted by our internal score — verified data across 7 categories.
+        <span class="text-teal-400 font-semibold">{scoredCount} firms</span> fully scored out of {rows.length} reviewed.
+      </p>
+    </div>
+  </section>
+
+  <!-- Search & Filter bar -->
+  <div class="sticky top-0 z-10 bg-white/95 backdrop-blur border-b border-slate-100 shadow-sm">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
+      <div class="relative flex-1 max-w-sm">
+        <svg class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z" />
+        </svg>
+        <input
+          id="firm-search"
+          type="text"
+          placeholder="Search prop firms…"
+          class="w-full rounded-lg border border-slate-200 bg-white pl-9 pr-3 py-2 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-teal-400 focus:ring-2 focus:ring-teal-100 transition"
+        />
+      </div>
+      <div class="flex items-center gap-2 flex-wrap">
+        <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wide whitespace-nowrap">Filter:</span>
+        <button data-filter="all" class="filter-chip rounded-full border px-3 py-1 text-xs font-semibold transition-colors bg-teal-500 text-white border-teal-500">All</button>
+        {uniqueEvalTypes.map((type) => (
+          <button data-filter={type} class="filter-chip rounded-full border px-3 py-1 text-xs font-semibold transition-colors bg-white text-slate-600 border-slate-200 hover:border-teal-300 hover:text-teal-600">
+            {typeLabelMap[type]}
+          </button>
+        ))}
+      </div>
+      <p id="results-count" class="text-xs text-slate-400 whitespace-nowrap sm:ml-auto"></p>
+    </div>
+  </div>
+
+  <!-- Rankings list -->
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+    <div class="space-y-5">
+      {rows.map((row) => (
+        <article
+          class="bg-white border border-slate-200 rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden"
+          data-firm-card
+          data-name={row.name.toLowerCase()}
+          data-types={row.evalTypes.join(" ")}
+        >
+          <div class="flex flex-col lg:flex-row">
+
+            <!-- LEFT: Main content -->
+            <div class="flex-1 min-w-0 p-5 sm:p-6">
+
+              <!-- Top section: info left, video right on md+ -->
+              <div class="flex items-start gap-4">
+                <!-- Info block -->
+                <div class="flex-1 min-w-0">
+                  <!-- Row 1: Rank + Logo + Name -->
+                  <div class="flex items-start gap-3 mb-2">
+                    <span class="flex-shrink-0 text-2xl font-black text-slate-200 w-8 text-center leading-none select-none mt-0.5">
+                      {row.rankLabel}
+                    </span>
+                    <FirmAvatar name={row.name} logoUrl={row.logoUrl} size="md" />
+                    <div class="flex-1 min-w-0">
+                      <div class="flex flex-wrap items-center gap-2">
+                        <h2 class="text-lg sm:text-xl font-extrabold text-slate-900 leading-tight">
+                          <a href={`/reviews/${row.slug}`} class="hover:text-teal-600 transition-colors">
+                            {row.name}
+                          </a>
+                        </h2>
+                        {row.hasReview && row.flagged && (
+                          <span class="relative group/caution flex-shrink-0">
+                            <svg class="h-[18px] w-[18px] text-red-500" fill="currentColor" viewBox="0 0 20 20" aria-label="Caution">
+                              <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.168 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-gray-900 px-2 py-1 text-[11px] font-semibold text-white opacity-0 group-hover/caution:opacity-100 transition-opacity duration-150 shadow-lg z-10">
+                              Caution
+                            </span>
+                          </span>
+                        )}
+                        {row.hasReview && row.verified && !row.flagged && (
+                          <span class="relative group/verified flex-shrink-0">
+                            <svg class="h-[18px] w-[18px] text-[#1d9bf0]" viewBox="0 0 22 22" fill="currentColor" aria-label="Verified">
+                              <path d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.855-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.69-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.607-.274 1.264-.144 1.897.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681.132-.637.075-1.299-.165-1.903.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"/>
+                            </svg>
+                            <span class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-gray-900 px-2 py-1 text-[11px] font-semibold text-white opacity-0 group-hover/verified:opacity-100 transition-opacity duration-150 shadow-lg z-10">
+                              Verified
+                            </span>
+                          </span>
+                        )}
+                        {row.hasReview && !row.verified && !row.flagged && (
+                          <span class="relative group/unverified flex-shrink-0">
+                            <svg class="h-[18px] w-[18px] text-amber-500" fill="currentColor" viewBox="0 0 20 20" aria-label="Unverified">
+                              <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.168 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-gray-900 px-2 py-1 text-[11px] font-semibold text-white opacity-0 group-hover/unverified:opacity-100 transition-opacity duration-150 shadow-lg z-10">
+                              Unverified
+                            </span>
+                          </span>
+                        )}
+                        {row.isTopPick && (
+                          <span class="inline-flex items-center gap-1 rounded-full bg-teal-50 border border-teal-200 px-2 py-0.5 text-[10px] font-bold text-teal-700">
+                            ★ TOP PICK
+                          </span>
+                        )}
+                        {row.status !== "active" && (
+                          <span class="rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-700 uppercase">
+                            {row.status}
+                          </span>
+                        )}
+                      </div>
+                      <p class="text-xs text-slate-400 mt-0.5 flex items-center gap-1.5 flex-wrap">
+                        {row.foundedYear && <span>Est. {row.foundedYear}</span>}
+                        {row.foundedYear && row.hqCountry && <span>·</span>}
+                        {row.hqCountry && (
+                          <span class="inline-flex items-center gap-1">
+                            {row.flagSvg && <span class="inline-block w-4 h-3 rounded-[2px] overflow-hidden shadow-sm border border-slate-200/60 flex-shrink-0" set:html={row.flagSvg} />}
+                            {row.hqCountry}
+                          </span>
+                        )}
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Summary (truncated) -->
+                  {row.summary && (
+                    <p class="text-sm text-slate-600 leading-relaxed line-clamp-2 mb-1">{row.summary}</p>
+                  )}
+                </div>
+
+                <!-- Video thumbnail (md+ only, inline) -->
+                {row.youtubeId && (
+                  <a
+                    href={`/reviews/${row.slug}#video-section`}
+                    class="hidden md:block flex-shrink-0 w-44 rounded-lg overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-shadow group/vid"
+                  >
+                    <div class="relative">
+                      <img
+                        src={`https://img.youtube.com/vi/${row.youtubeId}/mqdefault.jpg`}
+                        alt={`${row.name} video review`}
+                        class="w-full aspect-video object-cover"
+                        loading="lazy"
+                      />
+                      <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover/vid:bg-black/30 transition-colors">
+                        <div class="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center shadow-lg">
+                          <svg class="h-3.5 w-3.5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="text-[10px] text-slate-500 font-medium px-2 py-1 text-center bg-white group-hover/vid:text-teal-600 transition-colors">Watch review</p>
+                  </a>
+                )}
+              </div>
+
+              <!-- Video thumbnail (mobile only, full-width below summary) -->
+              {row.youtubeId && (
+                <a
+                  href={`/reviews/${row.slug}#video-section`}
+                  class="md:hidden block rounded-lg overflow-hidden border border-slate-200 shadow-sm mb-3 mt-2 group/vid"
+                >
+                  <div class="relative">
+                    <img
+                      src={`https://img.youtube.com/vi/${row.youtubeId}/mqdefault.jpg`}
+                      alt={`${row.name} video review`}
+                      class="w-full aspect-video object-cover"
+                      loading="lazy"
+                    />
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover/vid:bg-black/30 transition-colors">
+                      <div class="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center shadow-lg">
+                        <svg class="h-4 w-4 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              )}
+
+              <!-- Tags + Coupon -->
+              {(row.tags.length > 0 || row.discountCode) && (
+                <div class="flex flex-wrap items-center gap-2 mb-3">
+                  {row.discountCode && (
+                    <button
+                      class="group/code inline-flex items-center gap-1.5 rounded-full bg-teal-50 border border-teal-200 hover:border-teal-400 hover:bg-teal-100 px-3 py-1 transition-colors cursor-pointer"
+                      onclick={`navigator.clipboard.writeText('${row.discountCode}').then(()=>{const el=this.querySelector('.dc-label');el.textContent='Copied!';setTimeout(()=>{el.textContent='${row.discountCode}'},1500)})`}
+                    >
+                      <span class="text-[11px] font-bold text-teal-600 uppercase tracking-wide whitespace-nowrap">{row.discountPercent}% OFF</span>
+                      <span class="dc-label text-xs font-extrabold text-teal-700 tracking-wider">{row.discountCode}</span>
+                      <svg class="h-3.5 w-3.5 text-teal-400 group-hover/code:text-teal-600 transition-colors flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                      </svg>
+                    </button>
+                  )}
+                  {row.tags.slice(0, 5).map((tag) => (
+                    <span class="text-xs bg-slate-100 text-slate-600 px-3 py-1 rounded-full font-medium">{tag}</span>
+                  ))}
+                </div>
+              )}
+
+              <!-- Stats grid -->
+              <dl class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-3">
+                <div class="rounded-lg bg-slate-50 px-3 py-2">
+                  <dt class="text-[10px] text-slate-400 uppercase tracking-wide font-medium mb-0.5">Challenge Types</dt>
+                  <dd class="text-xs font-bold text-slate-800">{row.evalLabel}</dd>
+                </div>
+                <div class="rounded-lg bg-slate-50 px-3 py-2">
+                  <dt class="text-[10px] text-slate-400 uppercase tracking-wide font-medium mb-0.5">Platform</dt>
+                  <dd class="text-xs font-bold text-slate-800">{row.platforms}</dd>
+                </div>
+                <div class="rounded-lg bg-slate-50 px-3 py-2">
+                  <dt class="text-[10px] text-slate-400 uppercase tracking-wide font-medium mb-0.5">Profit Split</dt>
+                  <dd class={`text-xs font-bold ${row.splitMax ? "text-teal-600" : "text-slate-400"}`}>
+                    {row.splitMax ? `${row.splitMax}%` : "—"}
+                  </dd>
+                </div>
+                <div class="rounded-lg bg-slate-50 px-3 py-2">
+                  <dt class="text-[10px] text-slate-400 uppercase tracking-wide font-medium mb-0.5">First Payout</dt>
+                  <dd class="text-xs font-bold text-slate-800">
+                    {row.firstPayoutDays ? `${row.firstPayoutDays} days` : "—"}
+                  </dd>
+                </div>
+              </dl>
+
+              <!-- Pros -->
+              {row.pros.length > 0 && (
+                <ul class="space-y-1">
+                  {row.pros.map((pro) => (
+                    <li class="flex items-start gap-2 text-xs text-slate-600">
+                      <svg class="mt-0.5 h-3.5 w-3.5 flex-shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                      </svg>
+                      {pro}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+            <!-- END LEFT -->
+
+            <!-- RIGHT: Score panel + video -->
+            <div class="flex-shrink-0 lg:w-52 flex flex-col items-center border-t lg:border-t-0 lg:border-l border-slate-100 bg-slate-50/50">
+
+              <!-- Score section -->
+              <div class="flex lg:flex-col items-center gap-4 lg:gap-2 p-5 w-full lg:text-center">
+                {row.overallScore !== undefined ? (
+                  <Fragment>
+                    <div class="flex flex-col items-center">
+                      <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1.5 hidden lg:block">Score</p>
+                      <ScoreBadge score={row.overallScore} size="lg" />
+                    </div>
+                    {row.trustpilotRating && (
+                      <div class="text-center">
+                        <p class="text-sm font-bold text-slate-700">{row.trustpilotRating} <span class="text-amber-500">★</span></p>
+                        <p class="text-[10px] text-slate-400 flex items-center justify-center gap-1"><img src="/images/social/free-trustpilot-icon-svg-download-png-8715838.webp" alt="Trustpilot" class="w-3 h-3 inline-block" loading="lazy" />Trustpilot</p>
+                      </div>
+                    )}
+                  </Fragment>
+                ) : (
+                  <div class="text-center">
+                    <p class="text-xs text-slate-400 font-medium">Review pending</p>
+                  </div>
+                )}
+                {row.lowestFeeAmount && (
+                  <div class="text-center lg:border-t lg:border-slate-200 lg:pt-3 lg:w-full">
+                    <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">From</p>
+                    <p class="text-lg font-black text-slate-800">${row.lowestFeeAmount}</p>
+                  </div>
+                )}
+              </div>
+
+              <!-- CTA buttons -->
+              <div class="flex lg:flex-col gap-2 px-5 pb-5 w-full">
+                <a
+                  href={`/reviews/${row.slug}`}
+                  class="flex-1 inline-flex items-center justify-center gap-1.5 rounded-lg bg-teal-500 px-4 py-2 text-sm font-semibold text-white hover:bg-teal-600 transition-colors"
+                >
+                  Full Review
+                  <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                {row.website && (
+                  <a
+                    href={row.website}
+                    target="_blank"
+                    rel="nofollow noopener noreferrer sponsored"
+                    class="flex-1 inline-flex items-center justify-center gap-1.5 rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-600 hover:border-teal-300 hover:text-teal-600 transition-colors"
+                  >
+                    Visit Website
+                    <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                )}
+              </div>
+
+            </div>
+            <!-- END RIGHT -->
+
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <script>
+    const searchInput = document.getElementById("firm-search") as HTMLInputElement | null;
+    const filterBtns = document.querySelectorAll<HTMLButtonElement>(".filter-chip");
+    const cards = document.querySelectorAll<HTMLElement>("[data-firm-card]");
+    const countEl = document.getElementById("results-count");
+
+    let activeFilters = new Set<string>();
+    let searchQuery = "";
+
+    function applyFilters() {
+      let visible = 0;
+      cards.forEach((card) => {
+        const name = card.dataset.name ?? "";
+        const types = (card.dataset.types ?? "").split(" ").filter(Boolean);
+        const matchesSearch = name.includes(searchQuery);
+        const matchesFilter =
+          activeFilters.size === 0 ||
+          [...activeFilters].some((f) => types.includes(f));
+        const show = matchesSearch && matchesFilter;
+        card.style.display = show ? "" : "none";
+        if (show) visible++;
+      });
+      if (countEl) {
+        countEl.textContent =
+          visible === cards.length
+            ? `${cards.length} firms`
+            : `${visible} of ${cards.length} firms`;
+      }
+    }
+
+    function updateChipStyles() {
+      filterBtns.forEach((btn) => {
+        const f = btn.dataset.filter ?? "";
+        const isActive =
+          f === "all" ? activeFilters.size === 0 : activeFilters.has(f);
+        btn.classList.toggle("bg-teal-500", isActive);
+        btn.classList.toggle("text-white", isActive);
+        btn.classList.toggle("border-teal-500", isActive);
+        btn.classList.toggle("bg-white", !isActive);
+        btn.classList.toggle("text-slate-600", !isActive);
+        btn.classList.toggle("border-slate-200", !isActive);
+      });
+    }
+
+    searchInput?.addEventListener("input", () => {
+      searchQuery = (searchInput.value ?? "").trim().toLowerCase();
+      applyFilters();
+    });
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const f = btn.dataset.filter ?? "";
+        if (f === "all") {
+          activeFilters.clear();
+        } else {
+          if (activeFilters.has(f)) {
+            activeFilters.delete(f);
+          } else {
+            activeFilters.add(f);
+          }
+        }
+        updateChipStyles();
+        applyFilters();
+      });
+    });
+
+    applyFilters();
+  </script>
+</Base>

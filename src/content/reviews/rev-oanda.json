@@ -1,0 +1,69 @@
+{
+  "id": "rev-oanda",
+  "propFirmId": "d0000026-0000-0000-0000-000000000026",
+  "summary": "With an overall score of 85/100, OANDA Prop Trader ranks 8th among the top 20 prop firms we've reviewed. When testing the firm, we found it to be a strong option for beginner traders thanks to clear rules, competitive pricing, and some of the best educational resources for prop traders via OANDA Labs.\n\nThe challenge has fair rules and a straightforward two step evaluation, while pricing feels competitive, with spreads from 0 pips and a $7 round-turn commission on forex and metals. Payouts are handled every 14 days, and traders get their challenge fee refunded after the first profit withdrawal, which helps offset the upfront cost. The trading platform choice is limited to MetaTrader 5, and there's no access to crypto markets, but execution quality and pricing make up for it.",
+  "pros": [
+    "Account sizes from 5K to 500K",
+    "Challenge fees starting from just $35",
+    "80% profit split with fee refund after first payout",
+    "Spreads from 0.0 pips on forex",
+    "Backed by the trusted OANDA brand with 25+ years in markets",
+    "Clear, consistent rules across all account sizes"
+  ],
+  "cons": [
+    "No cryptocurrency trading available",
+    "MetaTrader 5 only — no alternative platforms",
+    "Only one challenge type (two step)",
+    "Restricted in US, Canada, Australia, and several other countries",
+    "No scaling plan available",
+    "Daily profit cap during challenge phase limits single-day gains"
+  ],
+  "bestFor": "Beginner to intermediate traders who value transparency, consistent rules, and a strong brand behind their funding, with competitive pricing and a straightforward two step evaluation",
+  "notIdealFor": "Traders looking for crypto markets, platform variety beyond MT5, instant funding or one step challenges, or those based in restricted countries including the US and Canada",
+  "overallScore": 85,
+  "categoryScores": {
+    "challenges": 90,
+    "spreads": 80,
+    "markets": 70,
+    "payouts": 90,
+    "platforms": 80,
+    "trust": 100
+  },
+  "categorySections": {
+    "challenges": "custom",
+    "spreads": "custom",
+    "markets": "custom",
+    "platforms": "custom",
+    "payouts": "custom",
+    "support": "custom",
+    "trust": "custom"
+  },
+  "verdictBlocks": [
+    {
+      "heading": "Our Final Verdict On OANDA Prop Trader",
+      "body": "OANDA Prop Trader earned a score of 85/100 in our testing, ranking 8th overall in our shortlist of the best prop firms. The challenge has fair rules and a straightforward two step evaluation, while pricing feels competitive, with spreads from 0 pips and a $7 round-turn commission on forex and metals. Payouts are handled every 14 days, and traders get their challenge fee refunded after the first profit withdrawal, which helps offset the upfront cost.\n\nThe trading platform choice is limited to MetaTrader 5, and there's no access to crypto markets, but execution quality and pricing make up for it. For traders who value transparency, consistent rules, and a strong brand behind their funding, OANDA Prop Trader delivers a balanced mix of structure, reliability, and value."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Does OANDA offer prop trading?",
+      "a": "Yes, OANDA is a broker-backed prop firm where you can access funded accounts by completing a two step challenge, where you trade a simulated account under defined risk rules with account sizes between 5K and 500K. Once you pass both steps, you move on to a funded account (Signal Provider) with an 80% profit split. OANDA's prop trading branch focuses on forex, indices, and commodities, and all trading is done on MetaTrader 5."
+    },
+    {
+      "q": "Is OANDA legit?",
+      "a": "Yes, OANDA Prop Trader is a legitimate prop trading program run under the OANDA brand, with clearly published rules and a transparent evaluation structure. They scored 85/100 during our testing, ranking much higher than many other prop firms. While the prop program itself isn't regulated in the same way as OANDA's brokerage services, it operates with clear challenge rules and a documented profit payout process. This makes it a credible option if you're looking for a structured, broker-backed style prop challenge."
+    },
+    {
+      "q": "What markets can you trade with OANDA Prop Trader?",
+      "a": "OANDA Prop Trader offers 56 financial markets across three asset classes: 36 forex pairs, 15 indices, and 5 commodities. Unfortunately, crypto trading is not available. The lineup targets the most traded markets, with forex and gold at 100:1 leverage, and indices and other commodities at 50:1."
+    },
+    {
+      "q": "Is OANDA Prop Trader available in the US?",
+      "a": "No, OANDA Prop Trader is not available to traders based in the United States. Other restricted countries include Canada, Australia, New Zealand, Spain, Cyprus, and several sanctioned regions. The program is open to traders from over 100 other countries including India, Malaysia, South Africa, and the UAE."
+    }
+  ],
+  "verified": true,
+  "flagged": false,
+  "methodologyVersion": "1.0",
+  "lastReviewedAt": "2026-02-24"
+}

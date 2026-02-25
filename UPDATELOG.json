@@ -1,0 +1,50 @@
+[
+  {
+    "date": "2026-01-05",
+    "entityId": "cccccccc-cccc-cccc-cccc-cccccccccccc",
+    "entitySlug": "my-forex-funds",
+    "fieldChanged": "trustSignals.notableNotes",
+    "reason": "Added CFTC/NFA regulatory investigation note (2023)",
+    "source": "CFTC litigation release 2023-178"
+  },
+  {
+    "date": "2026-01-10",
+    "entityId": "33333333-3333-3333-3333-333333333333",
+    "entitySlug": "xm",
+    "fieldChanged": "metadata.lastVerifiedAt, fees, trustSignals",
+    "reason": "Quarterly review — fees and Trustpilot data verified",
+    "source": "xm.com pricing pages, Trustpilot.com"
+  },
+  {
+    "date": "2026-01-12",
+    "entityId": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+    "entitySlug": "the5ers",
+    "fieldChanged": "metadata.lastVerifiedAt, fees.challengeFees",
+    "reason": "Quarterly review — challenge fee table verified",
+    "source": "the5ers.com/trading-programs/"
+  },
+  {
+    "date": "2026-01-15",
+    "entityId": "11111111-1111-1111-1111-111111111111",
+    "entitySlug": "ic-markets",
+    "fieldChanged": "metadata.lastVerifiedAt, trustSignals.trustpilotCount",
+    "reason": "Quarterly review — Trustpilot count updated",
+    "source": "Trustpilot.com IC Markets profile"
+  },
+  {
+    "date": "2026-01-18",
+    "entityId": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+    "entitySlug": "ftmo",
+    "fieldChanged": "metadata.lastVerifiedAt, fundingModel, fees.challengeFees",
+    "reason": "Quarterly review — fee table and rules verified",
+    "source": "ftmo.com/trading-objectives/"
+  },
+  {
+    "date": "2026-01-20",
+    "entityId": "22222222-2222-2222-2222-222222222222",
+    "entitySlug": "pepperstone",
+    "fieldChanged": "metadata.lastVerifiedAt, licenses, trustSignals",
+    "reason": "Quarterly review — all data verified",
+    "source": "pepperstone.com legal pages, FCA/ASIC registers"
+  }
+]

@@ -1,0 +1,75 @@
+{
+  "id": "d0000015-0000-0000-0000-000000000015",
+  "slug": "the-funded-trader",
+  "name": "The Funded Trader",
+  "status": "active",
+  "foundedYear": 2021,
+  "hqCountry": "US",
+  "evaluation": {
+    "types": ["1-step", "2-step", "other"],
+    "profitTargets": { "phase1": 10, "phase2": 5 },
+    "dailyDrawdown": 5,
+    "maxDrawdown": 10,
+    "minTradingDays": 0,
+    "scalingPlan": true
+  },
+  "pricing": {
+    "challengeFees": [
+      { "accountSize": 5000, "fee": 42, "model": "knight-1-step" },
+      { "accountSize": 200000, "fee": 549, "model": "knight-1-step" },
+      { "accountSize": 5000, "fee": 42, "model": "knight-pro-1-step" },
+      { "accountSize": 200000, "fee": 549, "model": "knight-pro-1-step" },
+      { "accountSize": 25000, "fee": 139, "model": "classic-1-step" },
+      { "accountSize": 200000, "fee": 989, "model": "classic-1-step" },
+      { "accountSize": 5000, "fee": 79, "model": "royal-2-step" },
+      { "accountSize": 200000, "fee": 1100, "model": "royal-2-step" },
+      { "accountSize": 25000, "fee": 55, "model": "royal-pro-2-step" },
+      { "accountSize": 200000, "fee": 579, "model": "royal-pro-2-step" },
+      { "accountSize": 25000, "fee": 129, "model": "classic-2-step" },
+      { "accountSize": 200000, "fee": 949, "model": "classic-2-step" },
+      { "accountSize": 5000, "fee": 49, "model": "dragon-3-step" },
+      { "accountSize": 100000, "fee": 299, "model": "dragon-3-step" }
+    ],
+    "resetFee": null,
+    "refundPolicy": "Fee refunded with first payout (select challenges)"
+  },
+  "payouts": {
+    "splitMax": 99,
+    "schedule": "Varies by challenge (7–30 days)",
+    "processingTime": "3–5 business days",
+    "firstPayoutDays": 7,
+    "methods": ["Rise (Riseworks)", "bank transfer", "crypto"]
+  },
+  "rules": {
+    "newsTrading": true,
+    "weekendHolding": null,
+    "copyTrading": null,
+    "expertAdvisors": true,
+    "consistencyRule": "Varies by challenge; Knight requires consistent profitable days spread over time",
+    "notes": "Rules vary significantly between challenge types. News trading restricted on Royal and Dragon challenges. Automated strategies (EAs) allowed on Dragon and Classic challenges only. Frequent rule and pricing changes reported by users."
+  },
+  "markets": {
+    "platforms": ["MT5", "cTrader", "Match-Trader"],
+    "instruments": "Forex, Commodities, Indices, Crypto"
+  },
+  "trust": {
+    "trustpilotRating": 3.0,
+    "trustpilotCount": 22000,
+    "communitySize": "110,000+ Discord",
+    "notableFlags": ["Frequent rule changes", "Mixed Trustpilot reviews"]
+  },
+  "links": { "website": "https://thefundedtrader.com" },
+  "media": { "logo": "/images/logos/the-funded-trader-1-1-1-1.png" },
+  "availability": { "restrictedCountries": [] },
+  "support": {
+    "liveChat": true,
+    "email": true,
+    "discord": true
+  },
+  "custom": {
+    "tags": ["8 Challenge Types", "Scaling to $5M", "MT5", "cTrader"]
+  },
+  "lastVerifiedAt": "2026-02-24",
+  "lastUpdatedAt": "2026-02-24",
+  "dataSources": ["https://thefundedtrader.com"]
+}

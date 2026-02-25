@@ -1,0 +1,83 @@
+{
+  "id": "d0000023-0000-0000-0000-000000000023",
+  "slug": "hantec-trader",
+  "name": "Hantec Trader",
+  "status": "active",
+  "foundedYear": 2023,
+  "hqCountry": "GB",
+  "evaluation": {
+    "types": ["1-step", "2-step", "instant"],
+    "profitTargets": { "phase1": 10, "phase2": 5 },
+    "dailyDrawdown": 5,
+    "maxDrawdown": 10,
+    "minTradingDays": 0,
+    "scalingPlan": true
+  },
+  "pricing": {
+    "challengeFees": [
+      { "accountSize": 5000, "fee": 59, "model": "1-step", "label": "Express $5K" },
+      { "accountSize": 10000, "fee": 99, "model": "1-step", "label": "Express $10K" },
+      { "accountSize": 25000, "fee": 199, "model": "1-step", "label": "Express $25K" },
+      { "accountSize": 50000, "fee": 299, "model": "1-step", "label": "Express $50K" },
+      { "accountSize": 100000, "fee": 499, "model": "1-step", "label": "Express $100K" },
+      { "accountSize": 200000, "fee": 1999, "model": "1-step", "label": "Express $200K" },
+      { "accountSize": 5000, "fee": 49, "model": "2-step", "label": "Enhanced $5K" },
+      { "accountSize": 10000, "fee": 99, "model": "2-step", "label": "Enhanced $10K" },
+      { "accountSize": 25000, "fee": 199, "model": "2-step", "label": "Enhanced $25K" },
+      { "accountSize": 50000, "fee": 299, "model": "2-step", "label": "Enhanced $50K" },
+      { "accountSize": 100000, "fee": 499, "model": "2-step", "label": "Enhanced $100K" },
+      { "accountSize": 200000, "fee": 1999, "model": "2-step", "label": "Enhanced $200K" },
+      { "accountSize": 5000, "fee": 69, "model": "instant", "label": "Instant $5K" },
+      { "accountSize": 10000, "fee": 99, "model": "instant", "label": "Instant $10K" },
+      { "accountSize": 25000, "fee": 199, "model": "instant", "label": "Instant $25K" },
+      { "accountSize": 50000, "fee": 299, "model": "instant", "label": "Instant $50K" },
+      { "accountSize": 100000, "fee": 499, "model": "instant", "label": "Instant $100K" },
+      { "accountSize": 200000, "fee": 1999, "model": "instant", "label": "Instant $200K" }
+    ],
+    "resetFee": null,
+    "refundPolicy": "10% discount on retakes (Express & Enhanced). No resets or retakes for Instant."
+  },
+  "payouts": {
+    "splitMax": 90,
+    "schedule": "7, 14, or 30 days (depending on program and add-ons)",
+    "processingTime": "1–2 business days",
+    "firstPayoutDays": 7,
+    "methods": ["Bank Transfer", "PayPal", "Crypto"]
+  },
+  "rules": {
+    "newsTrading": true,
+    "weekendHolding": true,
+    "copyTrading": true,
+    "expertAdvisors": true,
+    "consistencyRule": null,
+    "notes": "Three models: Express (1-step, trailing→static drawdown, 5% daily/6% max), Enhanced (2-step, static drawdown, 5% daily/10% max), Instant Funding (no evaluation, trailing→static, 6% daily/6% max). News trading and weekend holding allowed on Express and Enhanced only — Instant cannot trade within 3 minutes of high-impact news and cannot hold over weekends. EAs and copy trading allowed on Express and Enhanced only. No minimum or maximum trading days. Inactivity of 30+ days results in account breach. Overleveraging (>85% margin on single asset) not allowed. Scaling available up to $200K on evaluation accounts only — not on Instant. 10% retake discount on Express and Enhanced. Not available to US residents."
+  },
+  "markets": {
+    "platforms": ["MT4", "MT5"],
+    "instruments": "Forex (40 pairs), Indices (11), Metals (8), Commodities (2), Crypto (14)"
+  },
+  "trust": {
+    "trustpilotRating": 4.5,
+    "trustpilotCount": 313,
+    "communitySize": "3,500+ Discord members",
+    "notableFlags": ["FCA-regulated broker-backed (Hantec Markets)"]
+  },
+  "links": { "website": "https://hantectrader.com" },
+  "media": { "logo": "/images/logos/hantec-trader-logo-icon.png" },
+  "availability": { "restrictedCountries": ["US"] },
+  "support": {
+    "hours": "24/5 (Monday to Friday)",
+    "liveChat": true,
+    "email": true,
+    "discord": true
+  },
+  "custom": {
+    "tags": ["FCA Broker-Backed", "Instant Funding", "Scaling Plan", "75-90% Profit Split"],
+    "discountCode": null,
+    "discountPercent": null
+  },
+  "notes": null,
+  "lastVerifiedAt": "2026-02-24",
+  "lastUpdatedAt": "2026-02-24",
+  "dataSources": ["https://hantectrader.com"]
+}

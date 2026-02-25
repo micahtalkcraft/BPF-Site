@@ -1,0 +1,74 @@
+{
+  "id": "d0000016-0000-0000-0000-000000000016",
+  "slug": "the-trading-pit",
+  "name": "The Trading Pit",
+  "status": "active",
+  "foundedYear": 2021,
+  "hqCountry": "LI",
+  "evaluation": {
+    "types": ["1-step", "2-step"],
+    "profitTargets": { "phase1": 10, "phase2": 5 },
+    "dailyDrawdown": 5,
+    "maxDrawdown": 10,
+    "minTradingDays": 3,
+    "scalingPlan": true
+  },
+  "pricing": {
+    "challengeFees": [
+      { "accountSize": 10000, "fee": 99, "model": "cfd-1-phase" },
+      { "accountSize": 20000, "fee": 179, "model": "cfd-1-phase" },
+      { "accountSize": 50000, "fee": 399, "model": "cfd-1-phase" },
+      { "accountSize": 100000, "fee": 999, "model": "cfd-1-phase" },
+      { "accountSize": 5000, "fee": 49, "model": "cfd-2-phase" },
+      { "accountSize": 10000, "fee": 99, "model": "cfd-2-phase" },
+      { "accountSize": 20000, "fee": 199, "model": "cfd-2-phase" },
+      { "accountSize": 50000, "fee": 349, "model": "cfd-2-phase" },
+      { "accountSize": 100000, "fee": 569, "model": "cfd-2-phase" },
+      { "accountSize": 50000, "fee": 99, "model": "futures" },
+      { "accountSize": 100000, "fee": 189, "model": "futures" },
+      { "accountSize": 150000, "fee": 289, "model": "futures" },
+      { "accountSize": 25000, "fee": 99, "model": "stocks" },
+      { "accountSize": 50000, "fee": 249, "model": "stocks" }
+    ],
+    "resetFee": null,
+    "refundPolicy": null
+  },
+  "payouts": {
+    "splitMax": 80,
+    "schedule": "Bi-weekly (14 days)",
+    "processingTime": "1 business day",
+    "firstPayoutDays": 14,
+    "methods": ["credit/debit cards", "crypto", "Binance Pay", "Apple Pay", "Google Pay", "bank transfer"]
+  },
+  "rules": {
+    "newsTrading": false,
+    "weekendHolding": true,
+    "copyTrading": false,
+    "expertAdvisors": true,
+    "consistencyRule": "40% rule — no single trading day can account for more than 40% of the total profit target",
+    "notes": "News trading restricted within 2 minutes of major events. Copy trading prohibited on CFD challenges; limited to 5 linked accounts on Futures only. HFT and tick-scalping not permitted. Inactivity limit: 21 days for CFD/Futures, 14 days for Stocks."
+  },
+  "markets": {
+    "platforms": ["MT4", "MT5", "cTrader", "ATAS", "Quantower", "Rithmic", "Tradovate", "NinjaTrader", "TradingView"],
+    "instruments": "Forex (46 pairs), Commodities, Indices, Stocks, Crypto"
+  },
+  "trust": {
+    "trustpilotRating": 4.2,
+    "trustpilotCount": 700,
+    "communitySize": "15,700+ Discord, 19,300+ Instagram",
+    "notableFlags": ["Independent firm (not broker-backed)", "Partners with Tickmill for cTrader liquidity"]
+  },
+  "links": { "website": "https://thetradingpit.com" },
+  "media": { "logo": "/images/logos/the-trading-pit-logo.png" },
+  "availability": { "restrictedCountries": [] },
+  "support": {
+    "liveChat": true,
+    "email": true
+  },
+  "custom": {
+    "tags": ["CFDs & Futures", "Multi-Platform", "40% Consistency Rule", "Weekly Payouts"]
+  },
+  "lastVerifiedAt": "2026-02-24",
+  "lastUpdatedAt": "2026-02-24",
+  "dataSources": ["https://thetradingpit.com"]
+}
