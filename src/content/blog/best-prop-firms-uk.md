@@ -7,7 +7,7 @@ author: "Noam Korbl"
 authorImage: "https://www.bestpropfirms.com/wp-content/uploads/2023/08/noam-korbl-300x280-1.png"
 publishedAt: "2026-02-15"
 featured: true
-coverImage: "https://www.bestpropfirms.com/wp-content/uploads/2025/05/best-prop-firms-for-uk-traders-top-right.png"
+coverImage: "/images/blog/uk brokers.png"
 readingTimeMinutes: 14
 youtubeVideoId: "QHPnbIvv2qA"
 featuredFirms:

@@ -40,61 +40,619 @@ Prop trading lets you trade with a firm's capital, so you're not risking your ow
 
 ## 1. DNA Funded — Best Prop Firm For Australian Traders
 
-*Detailed review coming soon.*
+DNA Funded ranked 1st place in our list of the best prop firms, earning a top score of 97/100 for its low challenge fees from $49, flexible one- and two-step evaluations, and 80%–90% profit splits. Backed by DNA Markets, it offers tight spreads and uses the TradeLocker platform. You get access to over 800 markets including forex, stocks, and crypto, making it a strong option whether you're just starting out or scaling up.
+
+<div class="not-prose my-6 rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+  <div class="flex flex-col sm:flex-row items-stretch">
+    <div class="flex items-center gap-4 p-5 flex-1 min-w-0">
+      <img src="/images/logos/dna-funded-logo.png" alt="DNA Funded logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
+      <div class="min-w-0">
+        <p class="text-lg font-extrabold text-slate-900 leading-tight">DNA Funded</p>
+        <p class="text-xs text-slate-500 mt-0.5">Best Prop Firm For Australian Traders</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-6 px-5 py-3 sm:py-5 border-t sm:border-t-0 sm:border-l border-slate-100 bg-slate-50/50 text-center">
+      <div>
+        <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Split</p>
+        <p class="text-sm font-bold text-teal-600">90%</p>
+      </div>
+      <div>
+        <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Max DD</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div>
+        <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
+        <p class="text-sm font-bold text-slate-800">4.9 <span class="text-amber-500">★</span></p>
+      </div>
+      <a href="/reviews/dna-funded" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+        Full Review →
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="not-prose -mt-3 mb-6 rounded-xl border border-emerald-200 bg-emerald-50/80 px-5 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
+  <a href="https://dnafunded.com/?ref=bestpropfirms" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+    Visit DNA Funded
+  </a>
+  <div class="flex items-center gap-2.5">
+    <svg class="h-4 w-4 text-emerald-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" /></svg>
+    <span class="text-sm text-emerald-700 font-semibold">25% Off — Code:</span>
+    <span class="font-mono font-bold text-xs bg-white border border-dashed border-emerald-300 px-3 py-1.5 rounded text-emerald-700 tracking-wide select-all">PROPFIRMS25</span>
+  </div>
+</div>
+
+<div class="not-prose my-6 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+  <p class="text-sm font-bold text-slate-900 mb-3">Pros & Cons</p>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div>
+      <p class="text-xs font-bold text-emerald-600 uppercase tracking-wide mb-2">Pros</p>
+      <ul class="space-y-1.5 text-sm text-slate-700">
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Fees from $49 and unique addons</li>
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Low commission $5 roundturn</li>
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Forex, crypto, stocks, and more</li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-xs font-bold text-red-500 uppercase tracking-wide mb-2">Cons</p>
+      <ul class="space-y-1.5 text-sm text-slate-700">
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>No MT4 or MT5</li>
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>Scaling plan TBC</li>
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>No instant funding</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+### Why DNA Funded is #1 Best Prop Firm
+
+Based on our analysis of the top prop firms worldwide, we found DNA Funded to be the best prop firm overall with a score of 97/100.
+
+The Australian-based prop firm is backed by regulated broker DNA Markets (ASIC AFSL 514425), offering traders access to institutional-grade conditions like tight spreads, fast execution, and low trading costs. It stands out for its flexible one-step and two-step challenges, competitive fees, and profit splits of up to 90%.
+
+With TradeLocker integrated with TradingView, access to 800+ markets, and trading rule sets that align with forex broker compliance standards, DNA Funded offers the most complete setup we've tested.
+
+Use PROPFIRMS25 to get 25% off challenge fees, making it cheaper to get started!
+
+### Prop Challenges and Accounts
+
+DNA Funded offers three challenge types, catering to various trading styles:
+
+- **Single Helix (1-step challenge):** Account sizes from $5,000 to $200,000. Fees start at $59, with a 10% profit target and no time limits, making it ideal for swing traders and those focused on longer-term strategies.
+- **Double Helix (2-step challenge):** Account sizes also range from $5,000 to $200,000, with fees starting at $49. Phase 1 requires a 10% profit target, while Phase 2 lowers it to 5%, with flexible trading days.
+- **Rapid Challenge (1-step challenge):** Designed for more experienced traders with account sizes ranging from $10,000 to $100,000, and fees from $99. This challenge requires a 5% profit target to be met within 10 days, with a stricter drawdown limit, making it suitable for scalpers or high-frequency traders.
+
+| DNA Funded Account Type | Challenge Fees | Account Sizes | Early Payout (14→7 Days) Addon | Profit Split Increase (80%→90%) Addon |
+|-------------------------|---------------|---------------|-------------------------------|--------------------------------------|
+| **Single Helix (1 Step)** | $59 - $1,451 | 5K - 200K | Yes | No |
+| **Double Helix (2 Step)** | $49 - $1,295 | 5K - 200K | No | Yes |
+| **Pro Challenge** | $99 - $714 | 10K - 100K | Yes | Yes |
+
+After passing the evaluation process of your choosing, you will receive a certificate of recognition as funded traders do when completing the challenge firsthand.
+
+### Markets and Leverage
+
+DNA Funded provides access to over 800 forex, commodities, indices, stocks, and crypto markets (with restrictions on crypto in the Pro Challenge).
+
+Leverage varies by challenge type and asset. Forex is capped at 1:50 on Double Helix and 1:30 on Single Helix and Pro Challenge. Commodities and indices are fixed at 1:10, stocks at 1:5 following a recent reduction from 1:10, and crypto is 1:2 but only available on Single and Double Helix.
+
+| Asset Class | Single Helix | Double Helix | Pro Challenge |
+|------------|-------------|-------------|--------------|
+| **Forex** | 1:30 | 1:50 | 1:30 |
+| **Commodities** | 1:10 | 1:10 | 1:10 |
+| **Indices** | 1:10 | 1:10 | 1:10 |
+| **Stocks** | 1:5 | 1:5 | 1:5 |
+| **Crypto** | 1:2 | 1:2 | Not Allowed |
+
+### Trading Platforms
+
+All trading is done through **TradeLocker**, which comes fully integrated with TradingView. This setup is ideal for manual traders who want advanced charting, one-click execution, and a clean web-based interface. However, automated trading and EAs are not supported.
+
+DNA Funded keeps its trading rules simple and in line with broker-backed standards. All accounts follow daily and overall drawdown limits based on the challenge type, and a daily profit cap of 40% now applies. This means you can only count up to 40% of your payout target in one trading day, which helps support steady, consistent trading.
+
+Automated trading and expert advisors (EAs) are not allowed. You can copy trades between your own accounts, but not from others. News trading is allowed, but you'll need to avoid opening or closing positions within 10 minutes of high-impact news. Weekend trading is also permitted.
+
+### Trust and Community
+
+DNA Funded is backed by DNA Markets, a well-known ASIC-regulated broker (AFSL 514425), ensuring tight spreads and reliable execution. While DNA Funded is still new, its connection to DNA Markets boosts its credibility hugely.
+
+The prop firm is also developing an active trading community through its Discord channel, offering a space for traders to connect and share insights.
+
+### Our Verdict on DNA Funded
+
+DNA Funded is the best prop trading firm for 2026 even in the early stages of launch thanks to its flexible challenges, low fees, and an 80% – 90% profit share. Backed by DNA Markets, it provides reliable market access across forex, commodities, indices, stocks, and crypto. You can read our full evaluation on our [DNA Funded review](/reviews/dna-funded) page.
+
+With a user-friendly platform like TradeLocker and growing community support, DNA Funded is the best prop firm for both new and experienced traders looking for a new challenge to become a funded trader.
 
 ---
 
 ## 2. BrightFunded — Profit Share Scales to 100%
 
-*Detailed review coming soon.*
+BrightFunded earned our #2 spot with a score of 95/100, thanks to its industry-leading profit share that scales up to 100%, a well-structured two-step evaluation, and access to three top trading platforms. Based in the Netherlands, BrightFunded stands out for its transparent rules, wide market coverage, and a scaling plan with no cap — making it an excellent choice for Australian traders looking to grow their funded accounts over time.
+
+<div class="not-prose my-6 rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+  <div class="flex flex-col sm:flex-row items-stretch">
+    <div class="flex items-center gap-4 p-5 flex-1 min-w-0">
+      <img src="/images/logos/brightfunded-logo.png" alt="BrightFunded logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
+      <div class="min-w-0">
+        <p class="text-lg font-extrabold text-slate-900 leading-tight">BrightFunded</p>
+        <p class="text-xs text-slate-500 mt-0.5">Profit Share Scales to 100%</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-6 px-5 py-3 sm:py-5 border-t sm:border-t-0 sm:border-l border-slate-100 bg-slate-50/50 text-center">
+      <div>
+        <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Split</p>
+        <p class="text-sm font-bold text-teal-600">100%</p>
+      </div>
+      <div>
+        <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Max DD</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div>
+        <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
+        <p class="text-sm font-bold text-slate-800">4.7 <span class="text-amber-500">★</span></p>
+      </div>
+      <a href="/reviews/brightfunded" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+        Full Review →
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="not-prose -mt-3 mb-6 rounded-xl border border-emerald-200 bg-emerald-50/80 px-5 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
+  <a href="https://brightfunded.com/?ref=bestpropfirms" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+    Visit BrightFunded
+  </a>
+  <div class="flex items-center gap-2.5">
+    <svg class="h-4 w-4 text-emerald-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" /></svg>
+    <span class="text-sm text-emerald-700 font-semibold">20% Off — Code:</span>
+    <span class="font-mono font-bold text-xs bg-white border border-dashed border-emerald-300 px-3 py-1.5 rounded text-emerald-700 tracking-wide select-all">PROPFIRMS20</span>
+  </div>
+</div>
+
+<div class="not-prose my-6 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+  <p class="text-sm font-bold text-slate-900 mb-3">Pros & Cons</p>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div>
+      <p class="text-xs font-bold text-emerald-600 uppercase tracking-wide mb-2">Pros</p>
+      <ul class="space-y-1.5 text-sm text-slate-700">
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Profit share scales up to 100%</li>
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Wide market access with forex, indices, crypto</li>
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Unlimited scaling plan with no cap</li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-xs font-bold text-red-500 uppercase tracking-wide mb-2">Cons</p>
+      <ul class="space-y-1.5 text-sm text-slate-700">
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>No MT4 platform available</li>
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>No instant funding option</li>
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>Minimal educational resources</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+### More About BrightFunded
+
+BrightFunded scored 95/100 in our review for its strong combination of high payouts, flexible rules, and multiple platform choices. What sets it apart is the profit share that starts at 80% and scales all the way to 100% through their loyalty program — one of the highest in the industry.
+
+The firm runs a two-step evaluation with an 8% profit target in Phase 1 and 5% in Phase 2. The daily drawdown is capped at 5% and the maximum drawdown at 10%, with a minimum of 5 trading days required per phase. There are no maximum time limits, so you can trade at your own pace.
+
+### Challenge Fees and Account Sizes
+
+BrightFunded offers account sizes from $5,000 to $200,000, all through their two-phase evaluation:
+
+| Account Size | Challenge Fee | Phase 1 Target | Phase 2 Target | Daily DD | Max DD |
+|-------------|--------------|----------------|----------------|----------|--------|
+| **$5,000** | $55 | 8% | 5% | 5% | 10% |
+| **$10,000** | $95 | 8% | 5% | 5% | 10% |
+| **$25,000** | $195 | 8% | 5% | 5% | 10% |
+| **$50,000** | $295 | 8% | 5% | 5% | 10% |
+| **$100,000** | $495 | 8% | 5% | 5% | 10% |
+| **$200,000** | $975 | 8% | 5% | 5% | 10% |
+
+All challenge fees are refundable with the 100% Refund add-on (10% surcharge). BrightFunded also offers optional add-ons like bi-weekly or weekly payouts to customise your experience.
+
+### Markets and Leverage
+
+BrightFunded provides access to forex, indices, commodities, and crypto markets. Leverage varies by asset class:
+
+| Asset Class | Leverage |
+|------------|---------|
+| **Forex** | Up to 1:100 |
+| **Indices** | Up to 1:20 |
+| **Commodities** | Up to 1:20 |
+| **Crypto** | Up to 1:5 |
+
+The higher forex leverage at 1:100 is a notable advantage over many competitors, giving traders more flexibility to manage positions across currency pairs.
+
+### Trading Platforms
+
+BrightFunded supports three industry-leading platforms, catering to a range of trading styles:
+
+- **MT5 (MetaTrader 5):** The industry standard with expert advisor support, multi-asset capabilities, and advanced order types. Ideal for traders who rely on automated strategies.
+- **cTrader:** Known for its clean interface, fast execution, and advanced charting. A favourite among manual traders and scalpers for its depth of market data and intuitive layout.
+- **DXTrade:** A web-based platform offering TradingView-style charting with a simple, modern interface. Great for traders who prefer browser-based access without installing software.
+
+### Trading Rules
+
+News trading is unrestricted during the evaluation phase, with a 10-minute window restriction on funded accounts during major events. Weekend holding is allowed, and hedging is permitted within a single account. Expert advisors are supported on MT5. Copy trading from external sources is not allowed.
+
+### Trust and Community
+
+BrightFunded holds a **4.7/5 on Trustpilot**, reflecting strong trader satisfaction. The firm has built an active community of over 16,000 members on Discord, providing a space for traders to share strategies, tips, and payout certificates. Customer support is available via live chat and email, with generally fast response times reported by users.
+
+BrightFunded regularly shares payout certificates from funded traders, adding transparency and credibility to their payout process.
+
+### Our Verdict on BrightFunded
+
+BrightFunded is a standout prop firm for Australian traders who want to maximise their earnings through a profit share that scales to 100%. With three solid platforms, competitive challenge fees, and an unlimited scaling plan, it offers excellent long-term growth potential. The two-step evaluation is straightforward with fair targets, and the high forex leverage at 1:100 gives traders more room to work with. You can read our full evaluation on our [BrightFunded review](/reviews/brightfunded) page.
+
+While there's no instant funding option and MT4 isn't available, BrightFunded makes up for it with strong payouts, a growing community, and reliable trading conditions.
 
 ---
 
 ## 3. Blueberry Funded — 1,100+ Financial Markets
 
-*Detailed review coming soon.*
+Blueberry Funded ranks as the 3rd best prop firm thanks to its range of challenges and accounts, low fees, and strong broker backing. You can choose between instant funding for immediate access to capital or structured evaluations through one and two step challenges. Across all account types and platforms, trading conditions stay transparent with raw spreads from 0.1 pips, profit splits up to 90%, and access to over 1,100 financial markets.
+
+<div class="not-prose my-6 rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+  <div class="flex flex-col sm:flex-row items-stretch">
+    <div class="flex items-center gap-4 p-5 flex-1 min-w-0">
+      <img src="/images/logos/blueberry-funded-logo.png" alt="Blueberry Funded logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
+      <div class="min-w-0">
+        <p class="text-lg font-extrabold text-slate-900 leading-tight">Blueberry Funded</p>
+        <p class="text-xs text-slate-500 mt-0.5">1,100+ Financial Markets</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-6 px-5 py-3 sm:py-5 border-t sm:border-t-0 sm:border-l border-slate-100 bg-slate-50/50 text-center">
+      <div>
+        <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Split</p>
+        <p class="text-sm font-bold text-teal-600">90%</p>
+      </div>
+      <div>
+        <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Max DD</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div>
+        <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
+        <p class="text-sm font-bold text-slate-800">3.8 <span class="text-amber-500">★</span></p>
+      </div>
+      <a href="/reviews/blueberry-funded" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+        Full Review →
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="not-prose -mt-3 mb-6 rounded-xl border border-emerald-200 bg-emerald-50/80 px-5 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
+  <a href="https://blueberryfunded.com/?ref=bestpropfirms" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+    Visit Blueberry Funded
+  </a>
+  <div class="flex items-center gap-2.5">
+    <svg class="h-4 w-4 text-emerald-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" /></svg>
+    <span class="text-sm text-emerald-700 font-semibold">20% Off — Code:</span>
+    <span class="font-mono font-bold text-xs bg-white border border-dashed border-emerald-300 px-3 py-1.5 rounded text-emerald-700 tracking-wide select-all">PROPFIRMS20</span>
+  </div>
+</div>
+
+<div class="not-prose my-6 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+  <p class="text-sm font-bold text-slate-900 mb-3">Pros & Cons</p>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div>
+      <p class="text-xs font-bold text-emerald-600 uppercase tracking-wide mb-2">Pros</p>
+      <ul class="space-y-1.5 text-sm text-slate-700">
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Low challenge fees from $25</li>
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Scaling up to $2 million</li>
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>MT4, MT5, DXTrade, TradeLocker</li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-xs font-bold text-red-500 uppercase tracking-wide mb-2">Cons</p>
+      <ul class="space-y-1.5 text-sm text-slate-700">
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>Limited educational resources</li>
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>Fewer payment options</li>
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>Higher spreads on some forex pairs</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+### More About Blueberry Funded
+
+Blueberry Funded is a prop trading firm that came in 3rd place in our rankings with a score of 93/100. This is because they've developed one of the most versatile setups among the top prop firms, giving you the choice between instant access and structured evaluation processes. Each challenge follows clear, rule-based conditions with defined drawdown limits and payout structures.
+
+### Prop Challenges and Accounts
+
+Blueberry Funded offers everything from instant accounts to two-step challenges:
+
+- **Instant Lite & Instant Elite:** No evaluation required. You trade funded capital immediately with fixed trailing drawdowns. Lite is tighter for short-term strategies, while Elite gives more room for longer trades.
+- **Rapid Challenge:** A single-phase evaluation designed for faster traders who want quick feedback and short timeframes.
+- **One Step Challenge:** A straightforward, single-phase model suited to confident traders who prefer a clear target and static drawdown.
+- **Two Step Challenge:** A traditional two-phase evaluation for those who prefer structure and gradual progression.
+- **Prime Challenge:** A slightly stricter version of the Two Step challenge, built for consistency-focused traders.
+
+This great range of account options make Blueberry one of the few prop firms offering both instant funding and multiple evaluation processes, without overcomplicating the rules.
+
+### Markets and Leverage
+
+Blueberry Funded gives access to over 1,100 instruments across six asset classes, with conditions and leverage varying slightly by challenge type.
+
+| Asset Class | Details | Leverage |
+|------------|---------|---------|
+| **Forex** | Available across all programs, spreads from 0.1 pips | Up to 1:50 (Elite/Two Step/Prime) · 1:30 (Lite/One Step/Rapid) |
+| **Indices** | 14 global markets incl. US30, NAS100, GER30 | 1:10 |
+| **Commodities** | 17 products incl. gold, silver, oil, natural gas | 1:10 |
+| **Crypto** | 52 pairs incl. BTC/USD, ETH/USD — 24/7 on MT5 & TradeLocker | 1:2 |
+| **Stocks** | 1,000+ US stock CFDs (Stock Challenge & Instant Elite) | 1:10 |
+| **Synthetics** | 12 volatility-based indices (Synthetic Challenge only) | 1:30 |
+
+The market coverage is broad enough for diversified trading across forex, commodities, and equities, while maintaining sensible leverage that supports steady, controlled performance.
+
+### Trading Platforms
+
+Blueberry Funded offers four trading platforms:
+
+- **MetaTrader 4 (MT4):** Best for forex traders, with strong support for Expert Advisors (EAs) and advanced charting tools.
+- **MetaTrader 5 (MT5):** Offers additional features like Depth of Market (DOM) and multi-threaded backtesting for more advanced traders.
+- **DXTrade:** A browser-based platform, which, while flexible, lacks the advanced features of MT4 and MT5, making it less ideal for active traders.
+- **TradeLocker:** A newer platform known for its clean interface and user-friendly layout. It's accessible via web and mobile, and is especially useful for traders who want a modern, simplified trading experience without the heavier footprint of MT4/MT5.
+
+### Trust and Community
+
+Blueberry Funded's partnership with Blueberry Markets, a regulated Australian broker (ASIC AFSL 535887), provides confidence in its pricing and operational integrity. The firm is also a founding member of The Prop Association, a group promoting transparency and trader protection across the industry.
+
+Its growing Discord community now includes more than 30,000 members, offering daily updates, payout confirmations, and peer discussion for both new and funded traders.
+
+Blueberry has also begun publishing verified payout proofs, showing consistent payment reliability as the program continues to expand.
+
+### Our Verdict on Blueberry Funded
+
+Blueberry Funded scored 93/100 overall which came down to accessible pricing, professional trading conditions, and a clear selection of challenges for every experience level. Whether you want instant access to capital or prefer to earn funding through structured evaluations, the options are well balanced with fair trading rules.
+
+With regulatory backing, strong platform coverage, and transparent costs, it's by far one of the most complete prop trading firms currently available.
 
 ---
 
 ## 4. FXIFY — Instant Funding Prop Firm
 
-*Detailed review coming soon.*
+FXIFY ranked 4th overall, but it holds 1st place on our instant funding prop firm list. You can start with up to $50,000 in capital instantly, scale to $4 million, and keep up to 90% of your profits. Prefer to go through an evaluation? FXIFY also offers One Step, Two Step, and Three Step challenges.
+
+Backed by FXPIG, FXIFY combines tight pricing, fast execution, and an active Discord community for added support.
+
+<div class="not-prose my-6 rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+  <div class="flex flex-col sm:flex-row items-stretch">
+    <div class="flex items-center gap-4 p-5 flex-1 min-w-0">
+      <img src="/images/logos/fxify-1-1-1-1.png" alt="FXIFY logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
+      <div class="min-w-0">
+        <p class="text-lg font-extrabold text-slate-900 leading-tight">FXIFY</p>
+        <p class="text-xs text-slate-500 mt-0.5">Instant Funding Prop Firm</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-6 px-5 py-3 sm:py-5 border-t sm:border-t-0 sm:border-l border-slate-100 bg-slate-50/50 text-center">
+      <div>
+        <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Split</p>
+        <p class="text-sm font-bold text-teal-600">90%</p>
+      </div>
+      <div>
+        <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Max DD</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div>
+        <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
+        <p class="text-sm font-bold text-slate-800">4.2 <span class="text-amber-500">★</span></p>
+      </div>
+      <a href="/reviews/fxify" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+        Full Review →
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="not-prose -mt-3 mb-6 rounded-xl border border-emerald-200 bg-emerald-50/80 px-5 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
+  <a href="https://fxify.com/?ref=bestpropfirms" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+    Visit FXIFY
+  </a>
+  <div class="flex items-center gap-2.5">
+    <svg class="h-4 w-4 text-emerald-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" /></svg>
+    <span class="text-sm text-emerald-700 font-semibold">15% Off — Code:</span>
+    <span class="font-mono font-bold text-xs bg-white border border-dashed border-emerald-300 px-3 py-1.5 rounded text-emerald-700 tracking-wide select-all">PROPFIRMS15</span>
+  </div>
+</div>
+
+<div class="not-prose my-6 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+  <p class="text-sm font-bold text-slate-900 mb-3">Pros & Cons</p>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div>
+      <p class="text-xs font-bold text-emerald-600 uppercase tracking-wide mb-2">Pros</p>
+      <ul class="space-y-1.5 text-sm text-slate-700">
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Instant funding with up to $50,000 capital</li>
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>One, two, or three step evaluation processes</li>
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Profit splits up to 90% with scaling up to $4M</li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-xs font-bold text-red-500 uppercase tracking-wide mb-2">Cons</p>
+      <ul class="space-y-1.5 text-sm text-slate-700">
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>Limited transparency on actual trading costs</li>
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>Higher leverage upgrade has additional fee</li>
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>Payouts for larger accounts could be faster</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+### More About FXIFY
+
+FXIFY scored 83/100 and is the 4th best prop firm we tested thanks to its instant funding accounts and flexible evaluation challenges. You can start with up to $50,000 in capital immediately, making it one of the best prop firms if you want to skip the entire evaluation process and trade straight away.
+
+For those who prefer an evaluation, FXIFY also offers Lightning, One Step, Two Step, and Three Step challenges, with scalable account sizes and profit splits up to 90%. You can also trade futures through their FXIFY Futures branch, which came in 8th place on our list after establishing a reputation as the best futures prop firm worldwide.
+
+### Prop Challenges and Accounts
+
+FXIFY offers four funding options, including a direct instant funding account and three evaluation challenges:
+
+- **Instant Funding Account:** No challenge required — you can start trading immediately with up to $50,000 in capital. Comes with an 8% trailing drawdown and 90% profit split.
+- **One Step Challenge:** A single-phase challenge with a 10% profit target and a 6% max drawdown, designed for traders who want a faster route to funding.
+- **Two Step Challenge:** A structured two-step evaluation, requiring 10% profit in Phase 1 and 5% in Phase 2, with a 10% trailing drawdown limit.
+- **Three Step Challenge:** The most gradual challenge, designed for lower-risk traders, requiring 5% profit in each phase, with a 5% daily loss cap.
+
+| Feature | Instant Funding | One Step | Two Step | Three Step |
+|---------|----------------|----------|----------|------------|
+| **Phases** | None | 1 | 2 | 3 |
+| **Profit Target** | — | 10% | 10% / 5% | 5% per phase |
+| **Daily Loss Limit** | 3% | 3% | 3% | 5% |
+| **Max Drawdown** | 8% trailing | 6% trailing | 10% trailing | 10% static |
+| **Starting Fee** | $69 | $59 | $59 | $39 |
+| **Max Account** | $50K | $400K | $400K | $400K |
+
+### Markets and Leverage
+
+FXIFY provides access to 100+ trading instruments, including forex pairs, indices, commodities like gold and crude oil, major stocks (MT5 only), and cryptocurrencies (MT4 & MT5 only).
+
+| Asset Class | Leverage |
+|------------|---------|
+| **Forex & Gold** | 30:1 (upgradable to 50:1 for a fee) |
+| **Indices** | 10:1 |
+| **Stocks** | 2:1 |
+| **Crypto** | 2:1 |
+
+Standard leverage is 30:1 for forex and gold, 10:1 for indices, and 2:1 for stocks and crypto, with an optional upgrade to 50:1 leverage for forex and gold.
+
+### Trust and Community
+
+FXIFY is backed by FXPIG, a trusted forex broker, ensuring competitive pricing and fast execution. The firm has built a strong trader community, with over 38,000 members on Discord and a **4.2/5 Trustpilot rating**.
+
+While FXIFY generally receives positive reviews for its flexible account options and profit splits, some traders report delays in payouts for larger accounts and limited transparency on spreads.
+
+### Our Verdict on FXIFY
+
+FXIFY is the best prop firm for instant funding, offering traders capital from day one without a challenge. With profit splits up to 90%, flexible evaluation options, and a scaling plan that can grow accounts to $4M, it took spot number four on our best prop trading firms list for 2026.
 
 ---
 
 ## 5. FundedNext — Good TradingView Prop Firm
 
-*Detailed review coming soon.*
+FundedNext came in 5th place, offering funded accounts with profit splits up to 95%, a flexible scaling plan, and fast withdrawals. You can choose between the Stellar and Stellar Lite models, depending on your trading style and budget. With account scaling up to $4 million and bi-weekly withdrawals, FundedNext is a top prop firm if you want fast access to funding and flexible trading options.
 
----
+<div class="not-prose my-6 rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+  <div class="flex flex-col sm:flex-row items-stretch">
+    <div class="flex items-center gap-4 p-5 flex-1 min-w-0">
+      <img src="/images/logos/fundednext.png" alt="FundedNext logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
+      <div class="min-w-0">
+        <p class="text-lg font-extrabold text-slate-900 leading-tight">FundedNext</p>
+        <p class="text-xs text-slate-500 mt-0.5">Good TradingView Prop Firm</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-6 px-5 py-3 sm:py-5 border-t sm:border-t-0 sm:border-l border-slate-100 bg-slate-50/50 text-center">
+      <div>
+        <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Split</p>
+        <p class="text-sm font-bold text-teal-600">95%</p>
+      </div>
+      <div>
+        <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Max DD</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div>
+        <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
+        <p class="text-sm font-bold text-slate-800">4.6 <span class="text-amber-500">★</span></p>
+      </div>
+      <a href="/reviews/fundednext" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+        Full Review →
+      </a>
+    </div>
+  </div>
+</div>
 
-## 6. ThinkCapital — Low Challenge Fees
+<div class="not-prose -mt-3 mb-6 rounded-xl border border-emerald-200 bg-emerald-50/80 px-5 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
+  <a href="https://fundednext.com/?ref=bestpropfirms" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+    Visit FundedNext
+  </a>
+  <div class="flex items-center gap-2.5">
+    <svg class="h-4 w-4 text-emerald-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" /></svg>
+    <span class="text-sm text-emerald-700 font-semibold">120% Refund — Code:</span>
+    <span class="font-mono font-bold text-xs bg-white border border-dashed border-emerald-300 px-3 py-1.5 rounded text-emerald-700 tracking-wide select-all">PROPFIRMS</span>
+  </div>
+</div>
 
-*Detailed review coming soon.*
+<div class="not-prose my-6 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+  <p class="text-sm font-bold text-slate-900 mb-3">Pros & Cons</p>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div>
+      <p class="text-xs font-bold text-emerald-600 uppercase tracking-wide mb-2">Pros</p>
+      <ul class="space-y-1.5 text-sm text-slate-700">
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Multiple account models (Stellar & Stellar Lite)</li>
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Flexible scaling plan up to $4M</li>
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>No time limits for challenges</li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-xs font-bold text-red-500 uppercase tracking-wide mb-2">Cons</p>
+      <ul class="space-y-1.5 text-sm text-slate-700">
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>Higher fees for some accounts</li>
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>Limited market variety (83 instruments)</li>
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>Strict daily and overall loss limits</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
----
+### More About FundedNext
 
-## 7. IC Funded — Top Forex Prop Firm
+FundedNext has quickly become a recognised player in the prop trading space, earning a score of 92/100 and 5th place on our best prop firms list. Launched in 2022, it offers a high profit share, flexible trading challenges, and fast profit earning from the start of its evaluation phase.
 
-*Detailed review coming soon.*
+Best Prop Firms readers can take advantage of our exclusive discount code, PROPFIRMS, to receive a 120% refund after completing the evaluation process.
 
----
+### Prop Challenges and Accounts
 
-## 8. FXIFY Futures — Best Futures Prop Firm
+FundedNext offers two core models: Stellar and Stellar Lite.
 
-*Detailed review coming soon.*
+- **Stellar accounts** include both one-step and two-step evaluations. You can earn 15% profit share during the challenge phase, with payouts just 5 business days after passing the one-step model, or monthly for the two-step.
+- **Stellar Lite** is a lower-cost, two-step model with slightly tighter risk limits. It doesn't offer challenge-phase payouts, but unlocks 95% profit share once you're funded.
 
----
+There are no time limits on any challenges, and you can boost flexibility with add-ons like no minimum trading days, extended drawdowns, and bi-weekly payouts.
 
-## 9. OANDA Prop Trader — Prop Firm for Beginners
+| Model | Phases | Account Sizes | Fees From | Profit Target | Max DD | Profit Split |
+|-------|--------|--------------|-----------|---------------|--------|-------------|
+| **Stellar 1-Step** | 1 | $6K – $200K | $65 | 10% | 10% | Up to 95% |
+| **Stellar 2-Step** | 2 | $6K – $200K | $59 | 8% / 5% | 10% | Up to 95% |
+| **Stellar Lite** | 2 | $5K – $100K | $32 | 8% / 5% | 10% | Up to 95% |
 
-*Detailed review coming soon.*
+FundedNext publicly shares weekly payout data, with over $2.1 million paid out in the first week of April alone and an average payout time of just 8 hours and 34 minutes. This level of transparency, backed by real proof, sets FundedNext apart from less verified prop firms.
 
----
+### Markets and Leverage
 
-## 10. FTMO — Good Scaling Plan
+FundedNext gives you access to 83 markets: 50 forex pairs, 18 indices, 5 commodities, and 10 cryptocurrencies.
 
-*Detailed review coming soon.*
+| Asset Class | Instruments | Leverage |
+|------------|------------|---------|
+| **Forex** | 50 pairs | Up to 1:100 (1:30 on Stellar 1-Step) |
+| **Indices** | 18 markets | Up to 1:100 |
+| **Commodities** | 5 products | Up to 1:100 |
+| **Crypto** | 10 pairs | 1:2 |
+
+### Trading Platforms
+
+You can trade using MT4, MT5, cTrader, or Match-Trader. MT4 and MT5 are free, but cTrader and Match-Trader have a $25 fee and are limited to smaller account sizes. MT5 also integrates with TradingView for advanced charting, though this feature is temporarily paused for updates.
+
+- **MT4 & MT5:** Free, with full EA and algorithmic trading support.
+- **cTrader:** $25 fee, limited to smaller accounts. Automated trading not available.
+- **Match-Trader:** $25 fee, limited to smaller accounts. Clean web-based interface.
+
+### Trust and Community
+
+FundedNext has a **4.6/5 rating on Trustpilot** and a large, active community with over 225,000 members on Discord. It also runs a busy Telegram channel and has 77K+ subscribers on YouTube with over 1,200 trading education videos.
+
+Support is available 24/7 via live chat and email, and funded traders get direct access to in-house experts through Pro Support.
+
+### Our Verdict on FundedNext
+
+FundedNext offers a fast track to profitability, with an immediate 15% profit from day one and the potential to scale up to $4 million in capital. With profit splits up to 95%, a maximum funding cap of $4 million, and challenge models for every budget, it's one of the most adaptable prop firms on the market.
 
 ---
 
