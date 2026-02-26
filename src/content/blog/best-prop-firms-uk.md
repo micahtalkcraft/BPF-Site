@@ -21,6 +21,16 @@ featuredFirms:
     descriptor: "Top Scaling Plan for Funded Accounts"
   - slug: "fxify"
     descriptor: "Low Fee Forex Prop Trading Firm"
+  - slug: "eightcap"
+    descriptor: "FCA Regulated Broker"
+  - slug: "funded-trading-plus"
+    descriptor: "Best Prop Firm for Instant Funding"
+  - slug: "topstep"
+    descriptor: "Best for Futures Trading in UK"
+  - slug: "ftmo"
+    descriptor: "Top Prop Firm for Stock Trading"
+  - slug: "the5ers"
+    descriptor: "Fast Pathway to Funded Accounts"
 ---
 
 Prop trading has exploded in the UK over the past few years, with hundreds of thousands of retail traders now accessing funded accounts through evaluation-based prop firms. But with dozens of firms to choose from — and some significant cautionary tales in the market — knowing which prop firms are legitimate, transparent, and actually pay out is critical.
@@ -615,57 +625,89 @@ Topstep ranks second with 12,100 searches, showing that futures-focused firms st
 
 FXIFY (3,600) and Funded Trading Plus (1,900) also show growing interest, especially among traders looking for low entry costs and instant funding prop firms.
 
-<div class="not-prose my-8">
-  <div class="space-y-2">
-    <div class="flex items-center gap-4 rounded-xl border border-slate-200 bg-white px-5 py-3.5 shadow-sm">
-      <span class="flex-shrink-0 w-8 text-center text-lg font-black text-amber-500">1st</span>
+<div class="not-prose my-8 rounded-2xl border border-slate-200 bg-white shadow-lg overflow-hidden">
+  <div class="bg-[#0d1b2a] px-5 py-4">
+    <div class="flex items-center gap-2.5">
+      <svg class="h-5 w-5 text-teal-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+      <p class="text-sm font-black text-white uppercase tracking-wide flex-1">Most Searched UK Prop Firms</p>
+      <svg class="h-5 w-[26px] flex-shrink-0 rounded-[3px]" viewBox="0 0 60 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="60" height="30" fill="#012169"/>
+        <path d="M0 0L60 30M60 0L0 30" stroke="#fff" stroke-width="6"/>
+        <path d="M0 0L60 30" stroke="#C8102E" stroke-width="4"/>
+        <path d="M60 0L0 30" stroke="#C8102E" stroke-width="4"/>
+        <path d="M30 0V30M0 15H60" stroke="#fff" stroke-width="10"/>
+        <path d="M30 0V30M0 15H60" stroke="#C8102E" stroke-width="6"/>
+      </svg>
+    </div>
+    <p class="text-[11px] text-slate-400 mt-1">Based on monthly Google search volume in the UK</p>
+  </div>
+  <div class="flex items-center px-5 py-2 bg-teal-500 text-[10px] font-bold text-white uppercase tracking-widest">
+    <span class="w-8 flex-shrink-0">#</span>
+    <span class="flex-1">Firm</span>
+    <span class="text-right">Searches/mo</span>
+  </div>
+  <div class="divide-y divide-slate-100">
+    <div class="flex items-center gap-3 px-5 py-2.5 hover:bg-teal-50/50 transition-colors">
+      <span class="flex-shrink-0 w-6 text-xs font-black text-slate-400">1.</span>
+      <img src="/images/logos/ftmo-logo-2-2-1-1-1.png" alt="FTMO" class="w-6 h-6 rounded-md object-contain border border-slate-200 bg-white p-0.5 flex-shrink-0" />
       <span class="flex-1 text-sm font-bold text-slate-900">FTMO</span>
-      <span class="text-sm font-semibold text-slate-500">40,500 <span class="text-xs font-normal text-slate-400">searches/mo</span></span>
+      <span class="text-sm font-semibold text-slate-500">40,500</span>
     </div>
-    <div class="flex items-center gap-4 rounded-xl border border-slate-200 bg-white px-5 py-3.5 shadow-sm">
-      <span class="flex-shrink-0 w-8 text-center text-lg font-black text-slate-400">2nd</span>
+    <div class="flex items-center gap-3 px-5 py-2.5 hover:bg-teal-50/50 transition-colors">
+      <span class="flex-shrink-0 w-6 text-xs font-black text-slate-400">2.</span>
+      <img src="/images/logos/topstep-logo-1-1-1-1-1.png" alt="Topstep" class="w-6 h-6 rounded-md object-contain border border-slate-200 bg-white p-0.5 flex-shrink-0" />
       <span class="flex-1 text-sm font-bold text-slate-900">Topstep</span>
-      <span class="text-sm font-semibold text-slate-500">12,100 <span class="text-xs font-normal text-slate-400">searches/mo</span></span>
+      <span class="text-sm font-semibold text-slate-500">12,100</span>
     </div>
-    <div class="flex items-center gap-4 rounded-xl border border-slate-200 bg-white px-5 py-3.5 shadow-sm">
-      <span class="flex-shrink-0 w-8 text-center text-lg font-black text-amber-700">3rd</span>
+    <div class="flex items-center gap-3 px-5 py-2.5 hover:bg-teal-50/50 transition-colors">
+      <span class="flex-shrink-0 w-6 text-xs font-black text-slate-400">3.</span>
+      <img src="/images/logos/fundednext.png" alt="FundedNext" class="w-6 h-6 rounded-md object-contain border border-slate-200 bg-white p-0.5 flex-shrink-0" />
       <span class="flex-1 text-sm font-bold text-slate-900">FundedNext</span>
-      <span class="text-sm font-semibold text-slate-500">8,100 <span class="text-xs font-normal text-slate-400">searches/mo</span></span>
+      <span class="text-sm font-semibold text-slate-500">8,100</span>
     </div>
-    <div class="flex items-center gap-4 rounded-xl border border-slate-200 bg-white px-5 py-3.5 shadow-sm">
-      <span class="flex-shrink-0 w-8 text-center text-lg font-black text-slate-300">4th</span>
+    <div class="flex items-center gap-3 px-5 py-2.5 hover:bg-teal-50/50 transition-colors">
+      <span class="flex-shrink-0 w-6 text-xs font-black text-slate-400">4.</span>
+      <img src="/images/logos/fxify-1-1-1-1.png" alt="FXIFY" class="w-6 h-6 rounded-md object-contain border border-slate-200 bg-white p-0.5 flex-shrink-0" />
       <span class="flex-1 text-sm font-bold text-slate-900">FXIFY</span>
-      <span class="text-sm font-semibold text-slate-500">3,600 <span class="text-xs font-normal text-slate-400">searches/mo</span></span>
+      <span class="text-sm font-semibold text-slate-500">3,600</span>
     </div>
-    <div class="flex items-center gap-4 rounded-xl border border-slate-200 bg-white px-5 py-3.5 shadow-sm">
-      <span class="flex-shrink-0 w-8 text-center text-lg font-black text-slate-300">5th</span>
+    <div class="flex items-center gap-3 px-5 py-2.5 hover:bg-teal-50/50 transition-colors">
+      <span class="flex-shrink-0 w-6 text-xs font-black text-slate-400">5.</span>
+      <img src="/images/logos/funded-trading-plus.png" alt="Funded Trading Plus" class="w-6 h-6 rounded-md object-contain border border-slate-200 bg-white p-0.5 flex-shrink-0" />
       <span class="flex-1 text-sm font-bold text-slate-900">Funded Trading Plus</span>
-      <span class="text-sm font-semibold text-slate-500">1,900 <span class="text-xs font-normal text-slate-400">searches/mo</span></span>
+      <span class="text-sm font-semibold text-slate-500">1,900</span>
     </div>
-    <div class="flex items-center gap-4 rounded-xl border border-slate-200 bg-white px-5 py-3.5 shadow-sm">
-      <span class="flex-shrink-0 w-8 text-center text-lg font-black text-slate-300">6th</span>
+    <div class="flex items-center gap-3 px-5 py-2.5 hover:bg-teal-50/50 transition-colors">
+      <span class="flex-shrink-0 w-6 text-xs font-black text-slate-400">6.</span>
+      <img src="/images/logos/the5ers-logo-2-2-1-1-1.png" alt="The 5%ers" class="w-6 h-6 rounded-md object-contain border border-slate-200 bg-white p-0.5 flex-shrink-0" />
       <span class="flex-1 text-sm font-bold text-slate-900">The 5%ers</span>
-      <span class="text-sm font-semibold text-slate-500">1,000 <span class="text-xs font-normal text-slate-400">searches/mo</span></span>
+      <span class="text-sm font-semibold text-slate-500">1,000</span>
     </div>
-    <div class="flex items-center gap-4 rounded-xl border border-slate-200 bg-white px-5 py-3.5 shadow-sm">
-      <span class="flex-shrink-0 w-8 text-center text-lg font-black text-slate-300">7th</span>
+    <div class="flex items-center gap-3 px-5 py-2.5 hover:bg-teal-50/50 transition-colors">
+      <span class="flex-shrink-0 w-6 text-xs font-black text-slate-400">7.</span>
+      <img src="/images/logos/blueberry-funded-logo.png" alt="Blueberry Funded" class="w-6 h-6 rounded-md object-contain border border-slate-200 bg-white p-0.5 flex-shrink-0" />
       <span class="flex-1 text-sm font-bold text-slate-900">Blueberry Funded</span>
-      <span class="text-sm font-semibold text-slate-500">590 <span class="text-xs font-normal text-slate-400">searches/mo</span></span>
+      <span class="text-sm font-semibold text-slate-500">590</span>
     </div>
-    <div class="flex items-center gap-4 rounded-xl border border-slate-200 bg-white px-5 py-3.5 shadow-sm">
-      <span class="flex-shrink-0 w-8 text-center text-lg font-black text-slate-300">8th</span>
+    <div class="flex items-center gap-3 px-5 py-2.5 hover:bg-teal-50/50 transition-colors">
+      <span class="flex-shrink-0 w-6 text-xs font-black text-slate-400">8.</span>
+      <img src="/images/logos/brightfunded-logo.png" alt="BrightFunded" class="w-6 h-6 rounded-md object-contain border border-slate-200 bg-white p-0.5 flex-shrink-0" />
       <span class="flex-1 text-sm font-bold text-slate-900">BrightFunded</span>
-      <span class="text-sm font-semibold text-slate-500">390 <span class="text-xs font-normal text-slate-400">searches/mo</span></span>
+      <span class="text-sm font-semibold text-slate-500">390</span>
     </div>
-    <div class="flex items-center gap-4 rounded-xl border border-slate-200 bg-white px-5 py-3.5 shadow-sm">
-      <span class="flex-shrink-0 w-8 text-center text-lg font-black text-slate-300">9th</span>
+    <div class="flex items-center gap-3 px-5 py-2.5 hover:bg-teal-50/50 transition-colors">
+      <span class="flex-shrink-0 w-6 text-xs font-black text-slate-400">9.</span>
+      <img src="/images/logos/ic-funded-logo.png" alt="IC Funded" class="w-6 h-6 rounded-md object-contain border border-slate-200 bg-white p-0.5 flex-shrink-0" />
       <span class="flex-1 text-sm font-bold text-slate-900">IC Funded</span>
-      <span class="text-sm font-semibold text-slate-500">260 <span class="text-xs font-normal text-slate-400">searches/mo</span></span>
+      <span class="text-sm font-semibold text-slate-500">260</span>
     </div>
-    <div class="flex items-center gap-4 rounded-xl border border-slate-200 bg-white px-5 py-3.5 shadow-sm">
-      <span class="flex-shrink-0 w-8 text-center text-lg font-black text-slate-300">10th</span>
+    <div class="flex items-center gap-3 px-5 py-2.5 hover:bg-teal-50/50 transition-colors">
+      <span class="flex-shrink-0 w-6 text-xs font-black text-slate-400">10.</span>
+      <img src="/images/logos/dna-funded-logo.png" alt="DNA Funded" class="w-6 h-6 rounded-md object-contain border border-slate-200 bg-white p-0.5 flex-shrink-0" />
       <span class="flex-1 text-sm font-bold text-slate-900">DNA Funded</span>
-      <span class="text-sm font-semibold text-slate-500">80 <span class="text-xs font-normal text-slate-400">searches/mo</span></span>
+      <span class="text-sm font-semibold text-slate-500">80</span>
     </div>
   </div>
 </div>
