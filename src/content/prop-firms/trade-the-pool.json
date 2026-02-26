@@ -1,0 +1,54 @@
+{
+  "id": "d0000034-0000-0000-0000-000000000034",
+  "slug": "trade-the-pool",
+  "name": "Trade the Pool",
+  "status": "active",
+  "hqCountry": "IL",
+  "evaluation": {
+    "types": ["1-step", "2-step"],
+    "profitTargets": { "phase1": 10, "phase2": 5 },
+    "dailyDrawdown": 2,
+    "maxDrawdown": 7,
+    "minTradingDays": 3,
+    "scalingPlan": true
+  },
+  "pricing": {
+    "challengeFees": [],
+    "resetFee": null,
+    "refundPolicy": null
+  },
+  "payouts": {
+    "splitMax": 70,
+    "schedule": "Monthly",
+    "processingTime": null,
+    "firstPayoutDays": null,
+    "methods": ["bank transfer", "crypto"]
+  },
+  "rules": {
+    "newsTrading": true,
+    "weekendHolding": false,
+    "copyTrading": false,
+    "expertAdvisors": false,
+    "consistencyRule": null,
+    "notes": "Stock-focused prop firm. Trades US equities only. Short selling allowed."
+  },
+  "markets": {
+    "platforms": ["TradeThePool Platform"],
+    "instruments": "US Stocks (NYSE, NASDAQ)"
+  },
+  "trust": {
+    "trustpilotRating": null,
+    "trustpilotCount": null,
+    "communitySize": null,
+    "notableFlags": []
+  },
+  "links": { "website": "https://tradethepool.com" },
+  "media": { "logo": "/images/logos/trade-the-pool-logo.png" },
+  "availability": { "restrictedCountries": [] },
+  "custom": {
+    "tags": ["Stock Trading", "US Equities", "Short Selling"]
+  },
+  "lastVerifiedAt": "2026-02-26",
+  "lastUpdatedAt": "2026-02-26",
+  "dataSources": ["https://tradethepool.com"]
+}

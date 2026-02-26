@@ -77,7 +77,7 @@
     "discord": true
   },
   "custom": {
-    "tags": ["Multiple Platforms", "Scaling Plan", "UK Based"],
+    "tags": ["Broker-Backed", "Multiple Platforms", "Scaling Plan", "UK Based"],
     "discountCode": "ALPHA15",
     "discountPercent": 15
   },

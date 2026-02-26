@@ -1,0 +1,54 @@
+{
+  "id": "d0000035-0000-0000-0000-000000000035",
+  "slug": "lark-funding",
+  "name": "Lark Funding",
+  "status": "active",
+  "hqCountry": "US",
+  "evaluation": {
+    "types": ["1-step", "2-step", "instant"],
+    "profitTargets": { "phase1": 10, "phase2": 5 },
+    "dailyDrawdown": 5,
+    "maxDrawdown": 10,
+    "minTradingDays": 0,
+    "scalingPlan": false
+  },
+  "pricing": {
+    "challengeFees": [],
+    "resetFee": null,
+    "refundPolicy": null
+  },
+  "payouts": {
+    "splitMax": 90,
+    "schedule": "Bi-weekly",
+    "processingTime": null,
+    "firstPayoutDays": null,
+    "methods": ["crypto", "bank transfer"]
+  },
+  "rules": {
+    "newsTrading": true,
+    "weekendHolding": true,
+    "copyTrading": false,
+    "expertAdvisors": true,
+    "consistencyRule": null,
+    "notes": null
+  },
+  "markets": {
+    "platforms": ["MT5", "DXTrade"],
+    "instruments": "Forex, Indices, Commodities, Stocks, Crypto"
+  },
+  "trust": {
+    "trustpilotRating": null,
+    "trustpilotCount": null,
+    "communitySize": null,
+    "notableFlags": []
+  },
+  "links": { "website": "https://larkfunding.com" },
+  "media": { "logo": "/images/logos/lark-funding-logo.png" },
+  "availability": { "restrictedCountries": [] },
+  "custom": {
+    "tags": ["Multiple Evaluations", "Stocks", "Instant Funding"]
+  },
+  "lastVerifiedAt": "2026-02-26",
+  "lastUpdatedAt": "2026-02-26",
+  "dataSources": ["https://larkfunding.com"]
+}

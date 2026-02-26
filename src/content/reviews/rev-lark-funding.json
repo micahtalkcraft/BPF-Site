@@ -1,0 +1,12 @@
+{
+  "id": "rev-lark-funding",
+  "propFirmId": "d0000035-0000-0000-0000-000000000035",
+  "summary": "Lark Funding offers multiple evaluation processes including instant funding, one-step, and two-step challenges with access to stocks and other markets.",
+  "pros": ["Multiple evaluation options", "Instant funding available", "Stocks and multi-asset access"],
+  "cons": ["Newer firm", "Limited community size"],
+  "bestFor": "Traders who want flexible evaluation choices with stock trading access",
+  "notIdealFor": "Traders seeking an established firm with a long track record",
+  "methodologyVersion": "1.0",
+  "lastReviewedAt": "2026-02-26",
+  "verified": false
+}

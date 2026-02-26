@@ -1,0 +1,54 @@
+{
+  "id": "d0000033-0000-0000-0000-000000000033",
+  "slug": "elite-trader-funding",
+  "name": "Elite Trader Funding",
+  "status": "active",
+  "hqCountry": "US",
+  "evaluation": {
+    "types": ["1-step"],
+    "profitTargets": { "phase1": 6 },
+    "dailyDrawdown": null,
+    "maxDrawdown": null,
+    "minTradingDays": 0,
+    "scalingPlan": false
+  },
+  "pricing": {
+    "challengeFees": [],
+    "resetFee": null,
+    "refundPolicy": null
+  },
+  "payouts": {
+    "splitMax": 100,
+    "schedule": "On-demand",
+    "processingTime": null,
+    "firstPayoutDays": null,
+    "methods": ["crypto", "ACH"]
+  },
+  "rules": {
+    "newsTrading": true,
+    "weekendHolding": false,
+    "copyTrading": false,
+    "expertAdvisors": false,
+    "consistencyRule": null,
+    "notes": null
+  },
+  "markets": {
+    "platforms": ["NinjaTrader", "Rithmic"],
+    "instruments": "Futures (CME)"
+  },
+  "trust": {
+    "trustpilotRating": null,
+    "trustpilotCount": null,
+    "communitySize": null,
+    "notableFlags": []
+  },
+  "links": { "website": "https://elitetraderfunding.com" },
+  "media": { "logo": "/images/logos/elite-trader-logo.png" },
+  "availability": { "restrictedCountries": [] },
+  "custom": {
+    "tags": ["Futures", "Free NinjaTrader", "100% Profit Split"]
+  },
+  "lastVerifiedAt": "2026-02-26",
+  "lastUpdatedAt": "2026-02-26",
+  "dataSources": ["https://elitetraderfunding.com"]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "d0000032-0000-0000-0000-000000000032",
+  "slug": "tradeday",
+  "name": "TradeDay",
+  "status": "active",
+  "hqCountry": "US",
+  "evaluation": {
+    "types": ["1-step"],
+    "profitTargets": { "phase1": 6 },
+    "dailyDrawdown": null,
+    "maxDrawdown": 5,
+    "minTradingDays": 0,
+    "scalingPlan": true
+  },
+  "pricing": {
+    "challengeFees": [],
+    "resetFee": null,
+    "refundPolicy": null
+  },
+  "payouts": {
+    "splitMax": 100,
+    "schedule": "On-demand",
+    "processingTime": null,
+    "firstPayoutDays": null,
+    "methods": ["crypto", "ACH"]
+  },
+  "rules": {
+    "newsTrading": true,
+    "weekendHolding": false,
+    "copyTrading": false,
+    "expertAdvisors": false,
+    "consistencyRule": null,
+    "notes": null
+  },
+  "markets": {
+    "platforms": ["NinjaTrader", "Tradovate", "TradingView"],
+    "instruments": "Futures (CME)"
+  },
+  "trust": {
+    "trustpilotRating": null,
+    "trustpilotCount": null,
+    "communitySize": null,
+    "notableFlags": []
+  },
+  "links": { "website": "https://tradeday.com" },
+  "media": { "logo": "/images/logos/tradeday-logo.png" },
+  "availability": { "restrictedCountries": [] },
+  "custom": {
+    "tags": ["Futures", "250K Accounts", "100% Profit Split"]
+  },
+  "lastVerifiedAt": "2026-02-26",
+  "lastUpdatedAt": "2026-02-26",
+  "dataSources": ["https://tradeday.com"]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "rev-tradeday",
+  "propFirmId": "d0000032-0000-0000-0000-000000000032",
+  "summary": "TradeDay is a futures prop firm offering funded accounts up to $250K with competitive evaluation requirements and multiple platform options.",
+  "pros": ["Up to $250K funded accounts", "100% profit split potential", "Multiple platform options"],
+  "cons": ["Limited track record", "Monthly subscription fees"],
+  "bestFor": "Futures traders wanting large account sizes",
+  "notIdealFor": "Traders seeking forex or CFD markets",
+  "methodologyVersion": "1.0",
+  "lastReviewedAt": "2026-02-26",
+  "verified": false
+}

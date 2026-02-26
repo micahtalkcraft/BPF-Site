@@ -40,8 +40,9 @@ const EVAL_FILTERS = [
   { value: "1-step", label: "1-Step" },
   { value: "2-step", label: "2-Step" },
   { value: "instant", label: "Instant" },
-  { value: "other", label: "Futures" },
+  { value: "futures", label: "Futures" },
   { value: "broker-backed", label: "Broker Backed" },
+  { value: "offers", label: "Offers" },
 ];
 
 function scoreColor(score: number): string {
@@ -240,6 +241,10 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
 
     if (evalFilter === "broker-backed") {
       list = list.filter((f) => f.isBrokerBacked);
+    } else if (evalFilter === "futures") {
+      list = list.filter((f) => (f.tags ?? []).some((t) => t.includes("Futures")));
+    } else if (evalFilter === "offers") {
+      list = list.filter((f) => !!f.discountCode);
     } else if (evalFilter !== "all") {
       list = list.filter((f) => f.evaluationTypes.includes(evalFilter));
     }
@@ -386,9 +391,9 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
                   )}
                   {/* Tags row */}
                   <div className="flex items-center gap-1.5 mt-1.5 overflow-hidden">
-                    {firm.evaluationTypes.map((t) => (
+                    {firm.evaluationTypes.filter((t) => t !== "other").map((t) => (
                       <span key={t} className="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-medium capitalize whitespace-nowrap flex-shrink-0">
-                        {t === "other" ? "Futures" : t}
+                        {t}
                       </span>
                     ))}
                     {(firm.tags ?? []).slice(0, 3).map((tag) => (

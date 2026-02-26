@@ -1,0 +1,12 @@
+{
+  "id": "rev-trade-the-pool",
+  "propFirmId": "d0000034-0000-0000-0000-000000000034",
+  "summary": "Trade the Pool is a dedicated stock trading prop firm offering funded accounts for US equities, making it a popular choice for stock day traders.",
+  "pros": ["Dedicated stock trading platform", "Access to US equities (NYSE, NASDAQ)", "Short selling allowed"],
+  "cons": ["Limited to stocks only", "Proprietary platform only"],
+  "bestFor": "Stock day traders who want a dedicated equities prop firm",
+  "notIdealFor": "Traders seeking forex, futures, or multi-asset access",
+  "methodologyVersion": "1.0",
+  "lastReviewedAt": "2026-02-26",
+  "verified": false
+}

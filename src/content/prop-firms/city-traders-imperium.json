@@ -1,0 +1,54 @@
+{
+  "id": "d0000031-0000-0000-0000-000000000031",
+  "slug": "city-traders-imperium",
+  "name": "City Traders Imperium",
+  "status": "active",
+  "hqCountry": "GB",
+  "evaluation": {
+    "types": ["1-step", "2-step", "instant"],
+    "profitTargets": { "phase1": 10, "phase2": 5 },
+    "dailyDrawdown": 5,
+    "maxDrawdown": 10,
+    "minTradingDays": 0,
+    "scalingPlan": true
+  },
+  "pricing": {
+    "challengeFees": [],
+    "resetFee": null,
+    "refundPolicy": null
+  },
+  "payouts": {
+    "splitMax": 100,
+    "schedule": "14 days",
+    "processingTime": null,
+    "firstPayoutDays": 14,
+    "methods": ["bank transfer", "crypto"]
+  },
+  "rules": {
+    "newsTrading": null,
+    "weekendHolding": true,
+    "copyTrading": null,
+    "expertAdvisors": true,
+    "consistencyRule": null,
+    "notes": null
+  },
+  "markets": {
+    "platforms": ["MT5", "cTrader", "Match-Trader"],
+    "instruments": "Forex, Indices, Commodities, Crypto"
+  },
+  "trust": {
+    "trustpilotRating": null,
+    "trustpilotCount": null,
+    "communitySize": null,
+    "notableFlags": []
+  },
+  "links": { "website": "https://citytradersimperium.com" },
+  "media": { "logo": "/images/logos/city-traders-imperium-logo.png" },
+  "availability": { "restrictedCountries": [] },
+  "custom": {
+    "tags": ["$2.5K Challenges", "Up to 100% Split", "Weekend Trading", "Commission-Free Crypto"]
+  },
+  "lastVerifiedAt": "2026-02-26",
+  "lastUpdatedAt": "2026-02-26",
+  "dataSources": ["https://citytradersimperium.com"]
+}

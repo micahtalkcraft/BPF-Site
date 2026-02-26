@@ -1,0 +1,13 @@
+{
+  "id": "rev-funded-prime",
+  "propFirmId": "d0000030-0000-0000-0000-000000000030",
+  "summary": "Funded Prime scores 80/100 in our evaluation, standing out as one of the few prop firms offering dedicated access to cryptocurrency and meme coin markets. With over 250 crypto pairs available and unique meme coin trading with 10:1 leverage, it fills a niche that most prop firms overlook.",
+  "pros": ["250+ crypto pairs available", "Meme coin trading with 10:1 leverage", "Up to 90% profit split", "7-day payout with add-on"],
+  "cons": ["0.1% commission on crypto trades", "Weekend trading limited to meme coins only", "Limited platform options"],
+  "bestFor": "Crypto-focused traders who want extensive digital asset access and meme coin leverage",
+  "notIdealFor": "Forex-only traders or those who want commission-free crypto trading",
+  "overallScore": 80,
+  "methodologyVersion": "1.0",
+  "lastReviewedAt": "2026-02-26",
+  "verified": false
+}

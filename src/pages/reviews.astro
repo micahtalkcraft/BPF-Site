@@ -16,7 +16,7 @@ function countryFlag(code: string): string {
   return [...code.toUpperCase()].map((c) => String.fromCodePoint(0x1F1E6 + c.charCodeAt(0) - 65)).join("");
 }
 function evalLabel(types: string[]) {
-  return types.map((t) => t === "other" ? "Futures" : t.split("-").map(w => w[0].toUpperCase()+w.slice(1)).join("-")).join(", ");
+  return types.filter((t) => t !== "other").map((t) => t.split("-").map(w => w[0].toUpperCase()+w.slice(1)).join("-")).join(", ");
 }
 
 // Sort: scored firms desc, then unscored alphabetically
@@ -66,8 +66,8 @@ interface RankedRow {
   isBrokerBacked: boolean;
 }
 
-const awardWinnerSlugs = new Set(["dna-funded", "blueberry-funded", "fundednext", "brightfunded", "fxify"]);
-const brokerBackedSlugs = new Set(["dna-funded", "blueberry-funded", "fundednext", "ic-funded", "fxify-futures", "fxify", "oanda", "fundednext-futures", "hantec-trader"]);
+const awardWinnerSlugs = new Set(["dna-funded", "blueberry-funded", "fundednext", "brightfunded", "fxify", "fxify-futures"]);
+const brokerBackedSlugs = new Set(["dna-funded", "blueberry-funded", "fundednext", "ic-funded", "fxify-futures", "fxify", "oanda", "fundednext-futures", "hantec-trader", "alpha-capital"]);
 
 const rows: RankedRow[] = sorted.map(({ firm, review }, i) => {
   const rank = i + 1;
@@ -130,11 +130,11 @@ const typeLabelMap: Record<string, string> = {
   "1-step": "1-Step",
   "2-step": "2-Step",
   "instant": "Instant Funding",
-  "other": "Futures",
 };
 const uniqueEvalTypes = [...new Set(rows.flatMap((r) => r.evalTypes))].filter(
   (t) => typeLabelMap[t]
 );
+const hasFuturesFirms = rows.some((r) => r.tags.some((t) => t.includes("Futures")));
 ---
 
 <Base
@@ -176,8 +176,16 @@ const uniqueEvalTypes = [...new Set(rows.flatMap((r) => r.evalTypes))].filter(
             {typeLabelMap[type]}
           </button>
         ))}
+        {hasFuturesFirms && (
+          <button data-filter="futures" class="filter-chip rounded-full border px-3 py-1 text-xs font-semibold transition-colors bg-white text-slate-600 border-slate-200 hover:border-teal-300 hover:text-teal-600">
+            Futures
+          </button>
+        )}
         <button data-filter="broker-backed" class="filter-chip rounded-full border px-3 py-1 text-xs font-semibold transition-colors bg-white text-slate-600 border-slate-200 hover:border-teal-300 hover:text-teal-600">
           Broker Backed
+        </button>
+        <button data-filter="offers" class="filter-chip rounded-full border px-3 py-1 text-xs font-semibold transition-colors bg-white text-slate-600 border-slate-200 hover:border-teal-300 hover:text-teal-600">
+          Offers
         </button>
       </div>
       <p id="results-count" class="text-xs text-slate-400 whitespace-nowrap sm:ml-auto"></p>
@@ -193,7 +201,9 @@ const uniqueEvalTypes = [...new Set(rows.flatMap((r) => r.evalTypes))].filter(
           data-firm-card
           data-name={row.name.toLowerCase()}
           data-types={row.evalTypes.join(" ")}
+          data-tags={row.tags.join(",")}
           data-broker-backed={row.isBrokerBacked ? "true" : ""}
+          data-has-offer={row.discountCode ? "true" : ""}
         >
           <div class="flex flex-col lg:flex-row">
 
@@ -532,14 +542,20 @@ const uniqueEvalTypes = [...new Set(rows.flatMap((r) => r.evalTypes))].filter(
       return cards.filter((card) => {
         const name = card.dataset.name ?? "";
         const types = (card.dataset.types ?? "").split(" ").filter(Boolean);
+        const tags = (card.dataset.tags ?? "").split(",").filter(Boolean);
         const matchesSearch = name.includes(searchQuery);
         const isBrokerBacked = card.dataset.brokerBacked === "true";
+        const hasOffer = card.dataset.hasOffer === "true";
         const hasBrokerFilter = activeFilters.has("broker-backed");
-        const typeFilters = [...activeFilters].filter((f) => f !== "broker-backed");
+        const hasFuturesFilter = activeFilters.has("futures");
+        const hasOffersFilter = activeFilters.has("offers");
+        const typeFilters = [...activeFilters].filter((f) => f !== "broker-backed" && f !== "futures" && f !== "offers");
         const matchesFilter =
           activeFilters.size === 0 ||
           ((typeFilters.length === 0 || typeFilters.some((f) => types.includes(f))) &&
-           (!hasBrokerFilter || isBrokerBacked));
+           (!hasBrokerFilter || isBrokerBacked) &&
+           (!hasFuturesFilter || tags.some((t) => t.includes("Futures"))) &&
+           (!hasOffersFilter || hasOffer));
         return matchesSearch && matchesFilter;
       });
     }

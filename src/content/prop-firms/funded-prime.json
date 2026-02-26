@@ -1,0 +1,55 @@
+{
+  "id": "d0000030-0000-0000-0000-000000000030",
+  "slug": "funded-prime",
+  "name": "Funded Prime",
+  "status": "active",
+  "evaluation": {
+    "types": ["1-step", "2-step", "other"],
+    "profitTargets": { "phase1": 10, "phase2": 5 },
+    "dailyDrawdown": 5,
+    "maxDrawdown": 10,
+    "minTradingDays": 0,
+    "scalingPlan": null
+  },
+  "pricing": {
+    "challengeFees": [],
+    "resetFee": null,
+    "refundPolicy": null
+  },
+  "payouts": {
+    "splitMax": 90,
+    "schedule": "7 days (with add-on)",
+    "processingTime": null,
+    "firstPayoutDays": 7,
+    "methods": ["crypto"]
+  },
+  "rules": {
+    "newsTrading": null,
+    "weekendHolding": null,
+    "copyTrading": null,
+    "expertAdvisors": true,
+    "consistencyRule": null,
+    "notes": "Broker-backed via Eightcap. Weekend trading allowed for meme coins only. Crypto leverage capped at 1:1, meme coins at 10:1. Commission of 0.1% on crypto trades."
+  },
+  "markets": {
+    "platforms": ["DXTrade", "TradeLocker"],
+    "instruments": "Forex, Crypto, Meme Coins, Stocks (250+ crypto pairs)"
+  },
+  "trust": {
+    "trustpilotRating": null,
+    "trustpilotCount": null,
+    "communitySize": null,
+    "notableFlags": []
+  },
+  "links": { "website": "https://fundedprime.com" },
+  "media": { "logo": "/images/logos/fundedprime-logo.png" },
+  "availability": { "restrictedCountries": [] },
+  "custom": {
+    "tags": ["250+ Crypto Pairs", "Meme Coin Trading", "10:1 Meme Leverage", "Up to 90% Split"],
+    "discountCode": "PROPFIRMS25",
+    "discountPercent": 25
+  },
+  "lastVerifiedAt": "2026-02-26",
+  "lastUpdatedAt": "2026-02-26",
+  "dataSources": ["https://fundedprime.com"]
+}

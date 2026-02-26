@@ -54,7 +54,7 @@
   "media": { "logo": "/images/logos/fxify-futures.png" },
   "availability": { "restrictedCountries": [] },
   "custom": {
-    "tags": ["Profit Split to 100%", "No Recurring Fees", "TradingView Charts", "Real-Time CME Data"],
+    "tags": ["Futures", "Profit Split to 100%", "No Recurring Fees", "TradingView Charts"],
     "discountCode": "PROPFIRMS15",
     "discountPercent": 15
   },
