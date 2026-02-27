@@ -275,6 +275,45 @@ const firmItems: FirmItem[] = sortedFirms.map((f, idx) => {
     }
   </script>
 
+  <!-- FAQ animation script -->
+  <script>
+    document.querySelectorAll<HTMLDetailsElement>(".faq-item").forEach((details) => {
+      const summary = details.querySelector("summary")!;
+      const body = details.querySelector<HTMLElement>(".faq-body")!;
+
+      summary.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        if (details.open) {
+          // Closing
+          body.style.height = body.scrollHeight + "px";
+          requestAnimationFrame(() => {
+            body.style.height = "0px";
+          });
+          const onEnd = () => {
+            details.open = false;
+            body.style.height = "";
+            body.removeEventListener("transitionend", onEnd);
+          };
+          body.addEventListener("transitionend", onEnd);
+        } else {
+          // Opening
+          details.open = true;
+          const h = body.scrollHeight;
+          body.style.height = "0px";
+          requestAnimationFrame(() => {
+            body.style.height = h + "px";
+          });
+          const onEnd = () => {
+            body.style.height = "";
+            body.removeEventListener("transitionend", onEnd);
+          };
+          body.addEventListener("transitionend", onEnd);
+        }
+      });
+    });
+  </script>
+
   <!-- ── How We Review ─────────────────────────────────────────────────────── -->
   <section class="bg-slate-50 border-t border-slate-200 py-16 px-4">
     <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -365,94 +404,29 @@ const firmItems: FirmItem[] = sortedFirms.map((f, idx) => {
         <p class="text-sm text-slate-500 mt-2">Everything you need to know about prop trading firms and how we rank them.</p>
       </div>
 
-      <div class="space-y-3">
-        <!-- FAQ 1 -->
-        <details class="group rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-200 hover:border-slate-300">
-          <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left text-sm font-bold text-slate-900 select-none [&::-webkit-details-marker]:hidden">
-            What is a prop trading firm?
-            <svg class="h-4 w-4 flex-shrink-0 text-slate-400 transition-transform duration-200 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
-          </summary>
-          <div class="px-5 pb-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
-            A proprietary trading firm (prop firm) provides traders with capital to trade financial markets. Instead of risking your own money, you trade the firm's capital and share a percentage of the profits. Most firms require you to pass an evaluation or challenge before receiving a funded account.
-          </div>
-        </details>
-
-        <!-- FAQ 2 -->
-        <details class="group rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-200 hover:border-slate-300">
-          <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left text-sm font-bold text-slate-900 select-none [&::-webkit-details-marker]:hidden">
-            How does the Broker Score work?
-            <svg class="h-4 w-4 flex-shrink-0 text-slate-400 transition-transform duration-200 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
-          </summary>
-          <div class="px-5 pb-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
-            Our Broker Score is a proprietary rating from 0-100 based on our hands-on testing. We purchase challenges with our own money and evaluate: platform stability, execution speed, spread consistency, payout reliability, customer support quality, and rule transparency. We do not use user reviews or affiliate incentives in our scoring.
-          </div>
-        </details>
-
-        <!-- FAQ 3 -->
-        <details class="group rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-200 hover:border-slate-300">
-          <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left text-sm font-bold text-slate-900 select-none [&::-webkit-details-marker]:hidden">
-            What's the difference between instant funding and evaluation programs?
-            <svg class="h-4 w-4 flex-shrink-0 text-slate-400 transition-transform duration-200 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
-          </summary>
-          <div class="px-5 pb-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
-            Instant funding gives you immediate access to a funded account without passing a challenge, typically with lower profit splits or higher fees. Evaluation programs require you to hit profit targets while following trading rules, usually offering better profit splits once you pass.
-          </div>
-        </details>
-
-        <!-- FAQ 4 -->
-        <details class="group rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-200 hover:border-slate-300">
-          <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left text-sm font-bold text-slate-900 select-none [&::-webkit-details-marker]:hidden">
-            How do payouts work at prop firms?
-            <svg class="h-4 w-4 flex-shrink-0 text-slate-400 transition-transform duration-200 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
-          </summary>
-          <div class="px-5 pb-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
-            After generating profits on your funded account, you can request a payout according to the firm's schedule (daily, weekly, bi-weekly, or monthly). Payouts are typically processed via bank transfer, cryptocurrency, or payment processors like PayPal. The firm keeps their percentage, and you receive your share.
-          </div>
-        </details>
-
-        <!-- FAQ 5 -->
-        <details class="group rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-200 hover:border-slate-300">
-          <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left text-sm font-bold text-slate-900 select-none [&::-webkit-details-marker]:hidden">
-            Are prop firms legitimate or scams?
-            <svg class="h-4 w-4 flex-shrink-0 text-slate-400 transition-transform duration-200 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
-          </summary>
-          <div class="px-5 pb-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
-            The prop trading industry includes both legitimate firms and questionable operators. We only feature firms we've personally tested and received payouts from. Look for firms with transparent rules, verified payout history, responsive support, and realistic trading conditions.
-          </div>
-        </details>
-
-        <!-- FAQ 6 -->
-        <details class="group rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-200 hover:border-slate-300">
-          <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left text-sm font-bold text-slate-900 select-none [&::-webkit-details-marker]:hidden">
-            Can US traders use prop firms?
-            <svg class="h-4 w-4 flex-shrink-0 text-slate-400 transition-transform duration-200 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
-          </summary>
-          <div class="px-5 pb-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
-            Yes, but options are more limited due to regulatory restrictions. Many international prop firms don't accept US clients, while others have specific programs for US traders. We clearly mark which firms accept US traders in our reviews and filters.
-          </div>
-        </details>
-
-        <!-- FAQ 7 -->
-        <details class="group rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-200 hover:border-slate-300">
-          <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left text-sm font-bold text-slate-900 select-none [&::-webkit-details-marker]:hidden">
-            What platforms do prop firms offer?
-            <svg class="h-4 w-4 flex-shrink-0 text-slate-400 transition-transform duration-200 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
-          </summary>
-          <div class="px-5 pb-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
-            Most prop firms offer MetaTrader 4 (MT4), MetaTrader 5 (MT5), or cTrader. Some newer firms also support TradingView for charting with proprietary execution. The platform availability often depends on the broker the prop firm uses for execution.
-          </div>
-        </details>
-
-        <!-- FAQ 8 -->
-        <details class="group rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-200 hover:border-slate-300">
-          <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left text-sm font-bold text-slate-900 select-none [&::-webkit-details-marker]:hidden">
-            How much capital can I get from a prop firm?
-            <svg class="h-4 w-4 flex-shrink-0 text-slate-400 transition-transform duration-200 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
-          </summary>
-          <div class="px-5 pb-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
-            Initial funded account sizes typically range from $10,000 to $200,000. Many firms offer scaling programs where you can increase your account size by demonstrating consistent profitability, with some programs reaching up to $2 million or more.
-          </div>
-        </details>
+      <div class="space-y-3" id="faq-list">
+        {[
+          { q: "What is a prop trading firm?", a: "A proprietary trading firm (prop firm) provides traders with capital to trade financial markets. Instead of risking your own money, you trade the firm's capital and share a percentage of the profits. Most firms require you to pass an evaluation or challenge before receiving a funded account." },
+          { q: "How does the Broker Score work?", a: "Our Broker Score is a proprietary rating from 0-100 based on our hands-on testing. We purchase challenges with our own money and evaluate: platform stability, execution speed, spread consistency, payout reliability, customer support quality, and rule transparency. We do not use user reviews or affiliate incentives in our scoring." },
+          { q: "What's the difference between instant funding and evaluation programs?", a: "Instant funding gives you immediate access to a funded account without passing a challenge, typically with lower profit splits or higher fees. Evaluation programs require you to hit profit targets while following trading rules, usually offering better profit splits once you pass." },
+          { q: "How do payouts work at prop firms?", a: "After generating profits on your funded account, you can request a payout according to the firm's schedule (daily, weekly, bi-weekly, or monthly). Payouts are typically processed via bank transfer, cryptocurrency, or payment processors like PayPal. The firm keeps their percentage, and you receive your share." },
+          { q: "Are prop firms legitimate or scams?", a: "The prop trading industry includes both legitimate firms and questionable operators. We only feature firms we've personally tested and received payouts from. Look for firms with transparent rules, verified payout history, responsive support, and realistic trading conditions." },
+          { q: "Can US traders use prop firms?", a: "Yes, but options are more limited due to regulatory restrictions. Many international prop firms don't accept US clients, while others have specific programs for US traders. We clearly mark which firms accept US traders in our reviews and filters." },
+          { q: "What platforms do prop firms offer?", a: "Most prop firms offer MetaTrader 4 (MT4), MetaTrader 5 (MT5), or cTrader. Some newer firms also support TradingView for charting with proprietary execution. The platform availability often depends on the broker the prop firm uses for execution." },
+          { q: "How much capital can I get from a prop firm?", a: "Initial funded account sizes typically range from $10,000 to $200,000. Many firms offer scaling programs where you can increase your account size by demonstrating consistent profitability, with some programs reaching up to $2 million or more." },
+        ].map((faq) => (
+          <details class="faq-item group rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-200 hover:border-slate-300">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left text-sm font-bold text-slate-900 select-none [&::-webkit-details-marker]:hidden">
+              {faq.q}
+              <svg class="h-4 w-4 flex-shrink-0 text-slate-400 transition-transform duration-300 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+            </summary>
+            <div class="faq-body overflow-hidden transition-[height] duration-300 ease-out">
+              <div class="px-5 pb-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                {faq.a}
+              </div>
+            </div>
+          </details>
+        ))}
       </div>
     </div>
   </section>

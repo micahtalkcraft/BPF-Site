@@ -1,0 +1,51 @@
+{
+  "id": "d0000040-0000-0000-0000-000000000040",
+  "slug": "aquafunded",
+  "name": "Aquafunded",
+  "status": "active",
+  "evaluation": {
+    "types": [],
+    "profitTargets": {},
+    "dailyDrawdown": null,
+    "maxDrawdown": null,
+    "minTradingDays": null,
+    "scalingPlan": null
+  },
+  "pricing": {
+    "challengeFees": [],
+    "resetFee": null,
+    "refundPolicy": null
+  },
+  "payouts": {
+    "splitMax": null,
+    "schedule": null,
+    "processingTime": null,
+    "firstPayoutDays": null,
+    "methods": []
+  },
+  "rules": {
+    "newsTrading": null,
+    "weekendHolding": null,
+    "copyTrading": null,
+    "expertAdvisors": null,
+    "consistencyRule": null,
+    "notes": null
+  },
+  "markets": {
+    "platforms": [],
+    "instruments": ""
+  },
+  "trust": {
+    "trustpilotRating": null,
+    "trustpilotCount": null,
+    "communitySize": null,
+    "notableFlags": []
+  },
+  "links": { "website": "https://aquafunded.com" },
+  "media": { "logo": "/images/logos/aquafunded.png" },
+  "availability": { "restrictedCountries": [] },
+  "custom": { "tags": [] },
+  "lastVerifiedAt": "2026-02-27",
+  "lastUpdatedAt": "2026-02-27",
+  "dataSources": ["https://aquafunded.com"]
+}

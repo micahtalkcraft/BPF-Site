@@ -1,0 +1,151 @@
+---
+import Base from "../layouts/Base.astro";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+const faqs = [
+  {
+    q: "What Prop Firm Can I Trust?",
+    a: "You should select a prop trading firm that aligns with your trading needs and is transparent in its rules and conditions. Look for firms with clear funding programs, fair profit splits, and realistic evaluation targets. We recommend exploring our <a href=\"" + base + "/reviews\" class=\"text-teal-600 hover:underline font-medium\">list of the best prop firms</a> for a comprehensive comparison.",
+  },
+  {
+    q: "Does Best Prop Firms Permit Banner Advertising or Guest Posting?",
+    a: "We permit banner advertising as part of our promotional offerings. However, we do not accept guest posting requests. All inquiries related to guest posts will not receive a response.",
+  },
+  {
+    q: "Does Best Prop Firms Offer Financial Direction?",
+    a: "No, Best Prop Firms does not provide financial or trading advice. Our prop firm comparison site focuses on offering informational resources and comparisons to help traders make informed decisions.",
+  },
+];
+---
+
+<Base
+  title="Contact Us | BestPropFirms.com"
+  description="Get in touch with BestPropFirms.com for general enquiries, media requests, partnership opportunities, or advertising."
+>
+  <!-- Page header -->
+  <section class="bg-[#0d1b2a] text-white py-14 px-4">
+    <div class="mx-auto max-w-7xl sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl font-black tracking-tight">Contact Us</h1>
+      <p class="mt-3 text-slate-300 text-lg max-w-2xl mx-auto">
+        We value your feedback, and it's important that it reaches the right staff member at Best Prop Firms.
+      </p>
+    </div>
+  </section>
+
+  <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-12 space-y-10">
+
+    <!-- Contact cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- General & Media -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 hover:border-teal-200 hover:shadow-md transition-all duration-200">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-teal-50 text-teal-600">
+            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h2 class="text-lg font-bold text-slate-900">General &amp; Media Enquiries</h2>
+        </div>
+        <p class="text-sm text-slate-600 leading-relaxed mb-4">
+          For concerns about the site's content, media inquiries, or interview requests, you can reach our Financial Writer and Analyst.
+        </p>
+        <div class="rounded-xl bg-slate-50 border border-slate-100 p-4">
+          <p class="text-sm font-semibold text-slate-900">Tegan Miller</p>
+          <p class="text-xs text-slate-500 mb-2">Financial Writer &amp; Analyst</p>
+          <a href="mailto:tegan@bestpropfirms.com" class="inline-flex items-center gap-1.5 text-sm font-medium text-teal-600 hover:text-teal-700 transition-colors">
+            <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            tegan@bestpropfirms.com
+          </a>
+        </div>
+      </div>
+
+      <!-- Partnerships & Advertising -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 hover:border-teal-200 hover:shadow-md transition-all duration-200">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-teal-50 text-teal-600">
+            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h2 class="text-lg font-bold text-slate-900">Partnerships &amp; Advertising</h2>
+        </div>
+        <p class="text-sm text-slate-600 leading-relaxed mb-4">
+          For partnership or advertising opportunities, please contact our Co-Founder and Chief Operating Officer.
+        </p>
+        <div class="rounded-xl bg-slate-50 border border-slate-100 p-4">
+          <p class="text-sm font-semibold text-slate-900">Noam Korbl</p>
+          <p class="text-xs text-slate-500 mb-2">Co-Founder &amp; Chief Operating Officer</p>
+          <a href="mailto:noam@compareforexbrokers.com" class="inline-flex items-center gap-1.5 text-sm font-medium text-teal-600 hover:text-teal-700 transition-colors">
+            <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            noam@compareforexbrokers.com
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Methodology link -->
+    <div class="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+      <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900 text-teal-400 flex-shrink-0">
+        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+      </div>
+      <div class="flex-1">
+        <h2 class="text-lg font-bold text-slate-900">Our Methodology</h2>
+        <p class="text-sm text-slate-600 mt-1">
+          Want to understand how we score and rank prop firms? Read our full methodology, including scoring criteria, category weights, and editorial standards.
+        </p>
+      </div>
+      <a href={`${base}/methodology`} class="inline-flex items-center gap-1.5 rounded-lg bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white hover:bg-slate-800 transition-colors flex-shrink-0">
+        Read Methodology
+        <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </a>
+    </div>
+
+    <!-- FAQ section -->
+    <section>
+      <div class="text-center mb-8">
+        <p class="text-xs font-bold uppercase tracking-widest text-teal-500 mb-2">Common Questions</p>
+        <h2 class="text-2xl font-black text-slate-900">Answers To The Most Common Questions</h2>
+      </div>
+
+      <div class="space-y-3">
+        {faqs.map((faq) => (
+          <details class="group rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-200 hover:border-slate-300">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left text-sm font-bold text-slate-900 select-none [&::-webkit-details-marker]:hidden">
+              {faq.q}
+              <svg class="h-4 w-4 flex-shrink-0 text-slate-400 transition-transform duration-300 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+            </summary>
+            <div class="px-5 pb-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3" set:html={faq.a} />
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- Office address -->
+    <div class="bg-white border border-slate-200 rounded-2xl p-6">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-teal-50 text-teal-600">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </div>
+        <h2 class="text-lg font-bold text-slate-900">Our Office</h2>
+      </div>
+      <p class="text-sm text-slate-600 leading-relaxed">
+        Jacovides Tower 1st Floor, 81-83 Grivas Digenis Avenue<br />
+        Nicosia, 1090, Cyprus
+      </p>
+    </div>
+
+  </div>
+</Base>

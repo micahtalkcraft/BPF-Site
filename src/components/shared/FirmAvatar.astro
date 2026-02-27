@@ -16,11 +16,11 @@ const textClass = size === "sm" ? "text-xs" : size === "lg" ? "text-base" : "tex
 ---
 
 {logoUrl ? (
-  <div class={`${sizeClass} rounded-lg bg-white border border-slate-200 flex items-center justify-center overflow-hidden flex-shrink-0 shadow-sm`}>
+  <div class={`${sizeClass} rounded-xl bg-white border border-slate-200 flex items-center justify-center overflow-hidden flex-shrink-0 shadow-sm`}>
     <img src={logoUrl} alt={`${name} logo`} class="w-full h-full object-contain p-1" loading="lazy" />
   </div>
 ) : (
-  <div class={`${sizeClass} rounded-lg ${color} flex items-center justify-center border border-slate-200 flex-shrink-0`}>
+  <div class={`${sizeClass} rounded-xl ${color} flex items-center justify-center border border-slate-200 flex-shrink-0`}>
     <span class={`${textClass} font-black text-white`}>{initials}</span>
   </div>
 )}

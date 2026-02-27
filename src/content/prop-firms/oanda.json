@@ -48,7 +48,7 @@
     "trustpilotRating": 3.7,
     "trustpilotCount": 400,
     "communitySize": "Social media presence (Facebook, X, YouTube)",
-    "notableFlags": ["Broker-backed (OANDA brand)", "OANDA Assessments Limited Company", "25+ years in global financial markets", "Not individually regulated as a prop firm"]
+    "notableFlags": []
   },
   "links": { "website": "https://www.oanda.com/eu-en/trading/prop-trader/" },
   "media": { "logo": "/images/logos/oanda-prop-trader.png" },

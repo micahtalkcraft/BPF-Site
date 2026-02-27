@@ -1,0 +1,21 @@
+{
+  "id": "rev-think-capital",
+  "propFirmId": "d0000037-0000-0000-0000-000000000037",
+  "summary": "Think Capital scores 91/100 in our evaluation, placing it among the highest-rated prop firms on the site.",
+  "pros": [],
+  "cons": [],
+  "bestFor": "",
+  "notIdealFor": "",
+  "overallScore": 91,
+  "categoryScores": {
+    "challenges": 90,
+    "spreads": 90,
+    "markets": 90,
+    "payouts": 90,
+    "platforms": 90,
+    "trust": 95
+  },
+  "verified": true,
+  "methodologyVersion": "1.0",
+  "lastReviewedAt": "2026-02-27"
+}

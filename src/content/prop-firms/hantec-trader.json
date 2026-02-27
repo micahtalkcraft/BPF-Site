@@ -60,7 +60,7 @@
     "trustpilotRating": 4.5,
     "trustpilotCount": 313,
     "communitySize": "3,500+ Discord members",
-    "notableFlags": ["FCA-regulated broker-backed (Hantec Markets)"]
+    "notableFlags": []
   },
   "links": { "website": "https://hantectrader.com" },
   "media": { "logo": "/images/logos/hantec-trader-logo-icon.png" },

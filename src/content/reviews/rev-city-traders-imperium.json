@@ -7,7 +7,15 @@
   "bestFor": "Traders seeking smaller challenge sizes and high profit splits",
   "notIdealFor": "Crypto-focused traders who need wide digital asset access",
   "overallScore": 72,
+  "categoryScores": {
+    "challenges": 80,
+    "spreads": 70,
+    "markets": 70,
+    "payouts": 70,
+    "platforms": 70,
+    "trust": 70
+  },
+  "verified": true,
   "methodologyVersion": "1.0",
-  "lastReviewedAt": "2026-02-26",
-  "verified": false
+  "lastReviewedAt": "2026-02-27"
 }

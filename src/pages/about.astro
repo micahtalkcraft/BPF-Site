@@ -1,0 +1,384 @@
+---
+import Base from "../layouts/Base.astro";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+const offerings = [
+  {
+    title: "Challenges & Evaluation Processes",
+    desc: "We detail each firm's evaluation phases, including profit targets, drawdown limits, and any additional trading rules, to give you a full picture of what's involved in reaching funded status.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />`,
+  },
+  {
+    title: "Profit Splits and Payouts",
+    desc: "Information on profit-sharing models, frequency of payouts, and conditions for withdrawals, ensuring you understand each firm's approach to trader rewards.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />`,
+  },
+  {
+    title: "Funded Trader Programs",
+    desc: "Comprehensive overviews of available funding levels and account options, covering the range of capital and requirements provided by different firms.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />`,
+  },
+  {
+    title: "Prop Trading Platforms",
+    desc: "Insights on the technology and tools each firm supports, from popular platforms like MetaTrader 5 and TradingView integrations to custom solutions.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />`,
+  },
+  {
+    title: "Financial Market Access",
+    desc: "A look at each firm's asset offerings, from forex and commodities to indices, stocks, and crypto, ensuring flexibility to trade in markets that suit your approach.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />`,
+  },
+  {
+    title: "Customer Support & Community",
+    desc: "Evaluation of each firm's support services, as well as community resources, to help you find a firm with the level of guidance and support you need.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />`,
+  },
+];
+
+const tools = [
+  {
+    title: "Prop Firm Comparison Tables",
+    desc: "View critical details side-by-side, so you can quickly compare and contrast features like fees, profit splits, and maximum funding.",
+  },
+  {
+    title: "Challenge Overview",
+    desc: "Each firm's challenge structure is summarised, highlighting requirements and evaluation steps for a clear understanding of what's required to get funded.",
+  },
+  {
+    title: "Monthly Updates",
+    desc: "Our team tracks and updates information on prop firms, from fee changes to platform updates, ensuring you always have the most current data.",
+  },
+  {
+    title: "Educational Materials",
+    desc: "We offer a selection of educational products, ranging from guides and toolkits, to one-on-one prop trading consultations to help you get started.",
+  },
+  {
+    title: "Prop Firm Testing",
+    desc: "Our team's first-hand experience taking challenges and trading with funded accounts, logging their experiences from onboarding to scaling.",
+  },
+];
+
+const principles = [
+  {
+    title: "Transparency and Integrity",
+    desc: "We're committed to providing honest, accurate information, presenting the pros and cons of each firm to help you make well-informed choices.",
+    icon: "shield",
+  },
+  {
+    title: "Trader-Centric Focus",
+    desc: "Our comparisons and resources are tailored to benefit traders of all skill levels, ensuring the content is accessible, useful, and aligned with real-world trading needs.",
+    icon: "users",
+  },
+  {
+    title: "Innovation in Analysis",
+    desc: "As the prop trading industry changes, we adapt to offer the most relevant insights, covering new firms, trading rules, and unique offerings.",
+    icon: "chart",
+  },
+];
+
+const team = [
+  {
+    name: "Justin Grossbard",
+    role: "Co-Founder & Strategic Head Of Research",
+    image: "/images/team/justin-grossbard.png",
+  },
+  {
+    name: "Noam Korbl",
+    role: "Co-Founder & Chief Operating Officer",
+    image: "/images/team/noam-korbl-300x280-1.png",
+  },
+  {
+    name: "Tegan Miller",
+    role: "Financial Writer and Analyst",
+    image: "/images/team/tegan-miller-300x280-1.png",
+  },
+];
+
+const socials = [
+  {
+    name: "YouTube",
+    url: "https://www.youtube.com/@BestPropFirms",
+    icon: `<path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.55A3.02 3.02 0 00.5 6.19 31.6 31.6 0 000 12a31.6 31.6 0 00.5 5.81 3.02 3.02 0 002.12 2.14c1.88.55 9.38.55 9.38.55s7.5 0 9.38-.55a3.02 3.02 0 002.12-2.14A31.6 31.6 0 0024 12a31.6 31.6 0 00-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/>`,
+    viewBox: "0 0 24 24",
+    bg: "hover:bg-red-50 hover:border-red-300 hover:text-red-600",
+    iconHover: "group-hover:text-red-500",
+  },
+  {
+    name: "Instagram",
+    url: "https://www.instagram.com/bestpropfirms/",
+    icon: `<path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.97.24 2.44.41a4.08 4.08 0 011.52.99c.47.47.78.92.99 1.52.17.47.36 1.27.41 2.44.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.97-.41 2.44a4.08 4.08 0 01-.99 1.52 4.08 4.08 0 01-1.52.99c-.47.17-1.27.36-2.44.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.97-.24-2.44-.41a4.08 4.08 0 01-1.52-.99 4.08 4.08 0 01-.99-1.52c-.17-.47-.36-1.27-.41-2.44C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.24-1.97.41-2.44a4.08 4.08 0 01.99-1.52 4.08 4.08 0 011.52-.99c.47-.17 1.27-.36 2.44-.41C8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.77 5.77 0 00-2.13 1.38A5.77 5.77 0 00.63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91a5.77 5.77 0 001.38 2.13 5.77 5.77 0 002.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.77 5.77 0 002.13-1.38 5.77 5.77 0 001.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.77 5.77 0 00-1.38-2.13A5.77 5.77 0 0019.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32zM12 16a4 4 0 110-8 4 4 0 010 8zm7.85-10.4a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/>`,
+    viewBox: "0 0 24 24",
+    bg: "hover:bg-pink-50 hover:border-pink-300 hover:text-pink-600",
+    iconHover: "group-hover:text-pink-500",
+  },
+  {
+    name: "Facebook",
+    url: "https://www.facebook.com/bestpropfirms/",
+    icon: `<path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07c0 6.02 4.39 11.02 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.88v2.26h3.33l-.53 3.49h-2.8v8.44C19.61 23.09 24 18.09 24 12.07z"/>`,
+    viewBox: "0 0 24 24",
+    bg: "hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600",
+    iconHover: "group-hover:text-blue-500",
+  },
+  {
+    name: "X",
+    url: "https://x.com/bestpropfirms",
+    icon: `<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>`,
+    viewBox: "0 0 24 24",
+    bg: "hover:bg-slate-100 hover:border-slate-400 hover:text-slate-800",
+    iconHover: "group-hover:text-slate-700",
+  },
+  {
+    name: "Discord",
+    url: "https://discord.gg/bestpropfirms",
+    icon: `<path d="M20.32 4.37a19.8 19.8 0 00-4.89-1.52.07.07 0 00-.08.04c-.21.38-.45.87-.61 1.26a18.27 18.27 0 00-5.49 0 12.64 12.64 0 00-.62-1.26.07.07 0 00-.08-.04 19.74 19.74 0 00-4.89 1.52.07.07 0 00-.03.03C.53 9.62-.32 14.72.1 19.76a.08.08 0 00.03.06 19.9 19.9 0 005.99 3.03.08.08 0 00.08-.03c.46-.63.87-1.3 1.22-2a.08.08 0 00-.04-.1 13.1 13.1 0 01-1.87-.9.08.08 0 01-.01-.12c.13-.09.25-.19.37-.29a.07.07 0 01.08-.01c3.93 1.79 8.18 1.79 12.07 0a.07.07 0 01.08.01c.12.1.25.2.37.29a.08.08 0 01-.01.12c-.6.35-1.22.65-1.87.9a.08.08 0 00-.04.1c.36.7.77 1.37 1.22 2a.08.08 0 00.08.03 19.83 19.83 0 006-3.03.08.08 0 00.03-.05c.5-5.18-.84-9.68-3.55-13.66a.06.06 0 00-.03-.03zM8.02 16.71c-1.18 0-2.16-1.08-2.16-2.42 0-1.33.96-2.42 2.16-2.42 1.21 0 2.18 1.09 2.16 2.42 0 1.34-.96 2.42-2.16 2.42zm7.97 0c-1.18 0-2.16-1.08-2.16-2.42 0-1.33.96-2.42 2.16-2.42 1.21 0 2.18 1.09 2.16 2.42 0 1.34-.95 2.42-2.16 2.42z"/>`,
+    viewBox: "0 0 24 24",
+    bg: "hover:bg-indigo-50 hover:border-indigo-300 hover:text-indigo-600",
+    iconHover: "group-hover:text-indigo-500",
+  },
+];
+
+---
+
+<Base
+  title="About Us — BestPropFirms.com | Independent Prop Firm Reviews"
+  description="Learn about BestPropFirms.com — founded in 2023 by Justin Grossbard and Noam Korbl to provide transparent, data-driven prop firm reviews for traders worldwide."
+>
+  <!-- Hero with gradient overlay -->
+  <section class="relative bg-[#0d1b2a] text-white py-20 px-4 overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(20,184,166,0.15),transparent_60%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(99,102,241,0.1),transparent_60%)]"></div>
+    <div class="relative mx-auto max-w-4xl sm:px-6 lg:px-8">
+      <img
+        src={`${base}/images/brand/best-prop-firms-site-logo.png`}
+        alt="BestPropFirms.com"
+        class="h-10 w-auto mb-8 opacity-80"
+      />
+      <div class="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/10 px-4 py-1.5 text-xs font-semibold text-teal-300 mb-6 backdrop-blur-sm">
+        <svg class="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        Independent &middot; Unsponsored &middot; Data-Verified
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-black mb-5 leading-tight">
+        About <span class="text-teal-400">Best Prop Firms</span>
+      </h1>
+      <p class="text-slate-300 text-lg max-w-2xl leading-relaxed">
+        Our goal at Best Prop Firms is to help match you with the right prop trading firm and challenge for your risk appetite and trading skills. We focus on delivering valuable and easy-to-use information on the different prop firms' features and their evaluation processes to reaching funded trader status.
+      </p>
+    </div>
+  </section>
+
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pt-16 pb-12">
+
+    <!-- Background & Mission -->
+    <section class="mb-20">
+      <div class="grid md:grid-cols-5 gap-8 items-start">
+        <div class="md:col-span-2">
+          <p class="text-xs font-bold uppercase tracking-widest text-teal-500 mb-2">Our Story</p>
+          <h2 class="text-3xl font-black text-slate-900 leading-tight">Background<br/>And Mission</h2>
+          <div class="w-12 h-1 rounded-full bg-gradient-to-r from-teal-400 to-emerald-500 mt-4"></div>
+        </div>
+        <div class="md:col-span-3">
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Founded in 2023 by <strong class="text-slate-800">Justin Grossbard</strong> and <strong class="text-slate-800">Noam Korbl</strong>, Best Prop Firms was created to address the needs of a growing community of retail traders. With prop trading now accessible to more traders than ever, the choices can be overwhelming. Our goal is to streamline the process of comparing prop firms by focusing on what's important: transparency, quality information, and an understanding of what different firms offer to traders at every level.
+          </p>
+          <p class="text-slate-600 leading-relaxed">
+            Our team's mission is to simplify the trader experience, breaking down complex information into accessible, actionable insights. We provide clear comparisons across key factors, from platform usability and evaluation fees to payout policies and firm reputation, so you can confidently choose a prop firm that aligns with your trading style.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Offer -->
+    <section class="mb-20">
+      <div class="text-center mb-10">
+        <p class="text-xs font-bold uppercase tracking-widest text-teal-500 mb-2">What We Cover</p>
+        <h2 class="text-3xl font-black text-slate-900">What Best Prop Firms Offers</h2>
+        <p class="text-slate-500 mt-2 max-w-xl mx-auto">In-depth evaluations of each firm's strengths, challenges, and unique offerings — focused on what matters most to traders.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {offerings.map((item) => (
+          <div class="group bg-white border border-slate-200 rounded-2xl p-6 hover:border-teal-300 hover:shadow-lg hover:shadow-teal-500/5 transition-all duration-200">
+            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-teal-50 to-emerald-50 border border-teal-100 flex items-center justify-center mb-4 group-hover:from-teal-100 group-hover:to-emerald-100 transition-colors">
+              <svg class="h-5 w-5 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" set:html={item.icon} />
+            </div>
+            <p class="font-bold text-slate-900 mb-1.5">{item.title}</p>
+            <p class="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <!-- Tools & Features — full-width dark section -->
+  <section class="bg-gradient-to-br from-slate-900 via-slate-900 to-[#0d1b2a] py-20">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <p class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-2">Our Toolkit</p>
+        <h2 class="text-3xl font-black text-white">Prop Trading Tools and Features</h2>
+        <p class="text-slate-400 mt-2 max-w-xl mx-auto">Helpful comparison features for a smoother decision-making process.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4">
+        {tools.map((item, idx) => (
+          <div class="flex items-start gap-4 bg-white/5 border border-white/10 rounded-xl p-5 hover:bg-white/10 transition-colors backdrop-blur-sm">
+            <span class="flex-shrink-0 w-9 h-9 rounded-lg bg-gradient-to-br from-teal-500 to-emerald-600 flex items-center justify-center text-xs font-black text-white shadow-lg shadow-teal-500/20">
+              {String(idx + 1).padStart(2, "0")}
+            </span>
+            <div>
+              <p class="font-bold text-white mb-0.5">{item.title}</p>
+              <p class="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20">
+
+    <!-- Guiding Principles -->
+    <section class="mb-20">
+      <div class="text-center mb-10">
+        <p class="text-xs font-bold uppercase tracking-widest text-teal-500 mb-2">What Drives Us</p>
+        <h2 class="text-3xl font-black text-slate-900">Guiding Principles</h2>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-5">
+        {principles.map((p) => (
+          <div class="bg-white border border-slate-200 rounded-2xl p-6 hover:border-teal-200 hover:shadow-md transition-all">
+            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-teal-50 to-emerald-50 border border-teal-100 flex items-center justify-center mb-4">
+              {p.icon === "shield" && (
+                <svg class="h-5 w-5 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              )}
+              {p.icon === "users" && (
+                <svg class="h-5 w-5 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              )}
+              {p.icon === "chart" && (
+                <svg class="h-5 w-5 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
+              )}
+            </div>
+            <h3 class="font-bold text-lg text-slate-900 mb-1.5">{p.title}</h3>
+            <p class="text-sm text-slate-500 leading-relaxed">{p.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Transparency + How We're Funded — side by side -->
+    <section class="mb-20">
+      <div class="grid md:grid-cols-2 gap-5">
+        <!-- Transparency -->
+        <div class="bg-gradient-to-br from-teal-50 to-emerald-50 border border-teal-200 rounded-2xl p-7">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-teal-500 flex items-center justify-center shadow-lg shadow-teal-500/20">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="white" aria-hidden="true">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <h2 class="text-lg font-black text-teal-900">Transparency of Information</h2>
+          </div>
+          <p class="text-sm text-teal-800 leading-relaxed mb-3">
+            At Best Prop Firms, transparency is at the heart of everything we do. We believe that traders deserve unbiased, clear information to make confident decisions in a complex industry.
+          </p>
+          <p class="text-sm text-teal-800 leading-relaxed">
+            Our prop firm reviews are created with a commitment to honesty, highlighting both the advantages and potential drawbacks of each prop trading firm. We continuously update our content to reflect changes in the market, ensuring accuracy and relevance.
+          </p>
+        </div>
+
+        <!-- How We Are Funded -->
+        <div class="bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-7">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-500 flex items-center justify-center shadow-lg shadow-amber-500/20">
+              <svg class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h2 class="text-lg font-black text-amber-900">How We Are Funded</h2>
+          </div>
+          <p class="text-sm text-amber-800 leading-relaxed">
+            Best Prop Firms remains a free resource, sustained by commercial partnerships with select firms. Some reviews may contain referral links that, when used, allow us to earn a small commission at no additional cost to you. This helps us keep our reviews unbiased and our content accurate, without relying on paid promotions or influenced recommendations.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Senior Management Team — full-width light gray bg -->
+  <section class="bg-gradient-to-b from-slate-100 to-slate-50 py-20">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <p class="text-xs font-bold uppercase tracking-widest text-teal-500 mb-2">The People Behind BPF</p>
+        <h2 class="text-3xl font-black text-slate-900">Senior Management Team</h2>
+      </div>
+      <div class="flex flex-wrap justify-center gap-10 sm:gap-16">
+        {team.map((person) => (
+          <div class="flex flex-col items-center text-center group">
+            <div class="relative mb-5">
+              <!-- Outer ring -->
+              <div class="w-40 h-40 sm:w-44 sm:h-44 rounded-full p-1 bg-gradient-to-br from-teal-400 via-emerald-400 to-teal-600 shadow-xl shadow-teal-500/20 group-hover:shadow-teal-500/30 transition-shadow">
+                <div class="w-full h-full rounded-full overflow-hidden bg-white">
+                  <img
+                    src={`${base}${person.image}`}
+                    alt={person.name}
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <!-- Decorative dot -->
+              <div class="absolute bottom-1 right-1 w-5 h-5 rounded-full bg-teal-500 border-[3px] border-slate-100"></div>
+            </div>
+            <p class="font-extrabold text-lg text-slate-900">{person.name}</p>
+            <p class="text-sm text-teal-600 font-medium mt-1 max-w-[180px] leading-snug">{person.role}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Get in Touch + Socials -->
+  <section class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16">
+    <div class="relative overflow-hidden rounded-3xl bg-[#0d1b2a] px-8 py-14 sm:px-14 text-center">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(20,184,166,0.1),transparent_70%)]"></div>
+      <div class="relative">
+        <p class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">Get In Touch</p>
+        <h2 class="text-3xl font-black text-white mb-4">Ready to Connect?</h2>
+        <p class="text-slate-400 leading-relaxed max-w-xl mx-auto mb-8">
+          Best Prop Firms is here to support your journey in proprietary trading, from understanding challenge requirements to selecting the right firm for long-term growth. Feel free to reach out if you have questions or need guidance.
+        </p>
+        <a
+          href="mailto:contact@bestpropfirms.com"
+          class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-teal-500 to-emerald-500 px-7 py-3.5 text-sm font-bold text-white hover:from-teal-400 hover:to-emerald-400 transition-all shadow-lg shadow-teal-500/25 hover:shadow-teal-500/40"
+        >
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          Contact Us
+        </a>
+      </div>
+    </div>
+
+    <!-- Social links -->
+    <div class="mt-10 text-center">
+      <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-5">Follow Us</p>
+      <div class="flex items-center justify-center gap-3 flex-wrap">
+        {socials.map((s) => (
+          <a
+            href={s.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Follow us on ${s.name}`}
+            class:list={["group flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-600 transition-all", s.bg]}
+          >
+            <svg class:list={["h-4.5 w-4.5 fill-current text-slate-400 transition-colors", s.iconHover]} viewBox={s.viewBox} set:html={s.icon} />
+            {s.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>

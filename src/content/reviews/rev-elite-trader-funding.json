@@ -1,12 +1,22 @@
 {
   "id": "rev-elite-trader-funding",
   "propFirmId": "d0000033-0000-0000-0000-000000000033",
-  "summary": "Elite Trader Funding offers futures prop trading with a free NinjaTrader license included in the evaluation, making it a cost-effective choice for NinjaTrader users.",
+  "summary": "Elite Trader Funding scores 47/100 in our evaluation.",
   "pros": ["Free NinjaTrader platform included", "100% profit split potential", "Multiple account sizes"],
   "cons": ["Monthly subscription model", "Limited to futures only"],
   "bestFor": "NinjaTrader users who want platform costs covered",
   "notIdealFor": "Traders seeking multi-asset class access",
+  "overallScore": 47,
+  "categoryScores": {
+    "challenges": 30,
+    "spreads": 50,
+    "markets": 50,
+    "payouts": 50,
+    "platforms": 60,
+    "trust": 40
+  },
+  "flagged": true,
+  "verified": true,
   "methodologyVersion": "1.0",
-  "lastReviewedAt": "2026-02-26",
-  "verified": false
+  "lastReviewedAt": "2026-02-27"
 }

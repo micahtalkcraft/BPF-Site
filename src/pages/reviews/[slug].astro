@@ -204,6 +204,22 @@ const youtubeId = review.youtubeUrl?.match(/(?:embed\/|v=|youtu\.be\/)([a-zA-Z0-
           <div>
             <div class="flex items-center gap-2 flex-wrap">
               <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight">{firm.name} Review</h1>
+              {isVerified && !isFlagged && (
+                <span class="inline-flex items-center gap-1 rounded-full bg-emerald-100 border border-emerald-300 px-2.5 py-0.5 flex-shrink-0">
+                  <svg class="h-3.5 w-3.5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-[10px] font-bold text-emerald-700 uppercase tracking-wide">Verified</span>
+                </span>
+              )}
+              {isFlagged && (
+                <span class="inline-flex items-center gap-1 rounded-full bg-red-100 border border-red-300 px-2.5 py-0.5 flex-shrink-0">
+                  <svg class="h-3.5 w-3.5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.168 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-[10px] font-bold text-red-700 uppercase tracking-wide">Caution</span>
+                </span>
+              )}
               {!isVerified && !isFlagged && (
                 <span class="inline-flex items-center gap-1 rounded-full bg-amber-100 border border-amber-300 px-2.5 py-0.5 flex-shrink-0">
                   <svg class="h-3.5 w-3.5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
@@ -388,8 +404,8 @@ const youtubeId = review.youtubeUrl?.match(/(?:embed\/|v=|youtu\.be\/)([a-zA-Z0-
                       <div class={`score-bar h-full rounded-full ${bg}`} style={`--w: ${score}%`}></div>
                     </div>
                     <div class="w-14 text-right flex-shrink-0 flex items-baseline justify-end gap-0.5">
-                      <span class={`text-base font-black ${textColor}`}>{score}</span>
-                      <span class="text-[10px] text-slate-400 font-medium">/100</span>
+                      <span class={`text-base font-black ${textColor}`}>{score / 10}</span>
+                      <span class="text-[10px] text-slate-400 font-medium">/10</span>
                     </div>
                   </div>
                 ))}

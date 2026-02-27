@@ -1,0 +1,21 @@
+{
+  "id": "rev-aquafunded",
+  "propFirmId": "d0000040-0000-0000-0000-000000000040",
+  "summary": "Aquafunded scores 55/100 in our evaluation.",
+  "pros": [],
+  "cons": [],
+  "bestFor": "",
+  "notIdealFor": "",
+  "overallScore": 55,
+  "categoryScores": {
+    "challenges": 50,
+    "spreads": 50,
+    "markets": 60,
+    "payouts": 60,
+    "platforms": 70,
+    "trust": 40
+  },
+  "verified": true,
+  "methodologyVersion": "1.0",
+  "lastReviewedAt": "2026-02-27"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "rev-one-up-trader",
+  "propFirmId": "d0000039-0000-0000-0000-000000000039",
+  "summary": "One Up Trader scores 57/100 in our evaluation.",
+  "pros": [],
+  "cons": [],
+  "bestFor": "",
+  "notIdealFor": "",
+  "overallScore": 57,
+  "categoryScores": {
+    "challenges": 60,
+    "spreads": 50,
+    "markets": 50,
+    "payouts": 60,
+    "platforms": 70,
+    "trust": 50
+  },
+  "verified": true,
+  "methodologyVersion": "1.0",
+  "lastReviewedAt": "2026-02-27"
+}

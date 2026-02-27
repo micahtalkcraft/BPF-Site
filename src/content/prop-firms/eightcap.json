@@ -54,7 +54,7 @@
     "trustpilotRating": 4.0,
     "trustpilotCount": 5000,
     "communitySize": "Established brokerage with global presence since 2009",
-    "notableFlags": ["Broker-operated (not broker-backed)", "ASIC regulated", "FCA regulated", "CySEC regulated", "SCB regulated", "Simulated trading environment"]
+    "notableFlags": []
   },
   "links": { "website": "https://www.eightcap.com/en/trading/prop-trading/" },
   "media": { "logo": "/images/logos/eightcap-logo-1.png" },

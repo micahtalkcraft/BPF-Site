@@ -1,0 +1,51 @@
+{
+  "id": "d0000042-0000-0000-0000-000000000042",
+  "slug": "funded-elite",
+  "name": "Funded Elite",
+  "status": "active",
+  "evaluation": {
+    "types": [],
+    "profitTargets": {},
+    "dailyDrawdown": null,
+    "maxDrawdown": null,
+    "minTradingDays": null,
+    "scalingPlan": null
+  },
+  "pricing": {
+    "challengeFees": [],
+    "resetFee": null,
+    "refundPolicy": null
+  },
+  "payouts": {
+    "splitMax": null,
+    "schedule": null,
+    "processingTime": null,
+    "firstPayoutDays": null,
+    "methods": []
+  },
+  "rules": {
+    "newsTrading": null,
+    "weekendHolding": null,
+    "copyTrading": null,
+    "expertAdvisors": null,
+    "consistencyRule": null,
+    "notes": null
+  },
+  "markets": {
+    "platforms": [],
+    "instruments": ""
+  },
+  "trust": {
+    "trustpilotRating": null,
+    "trustpilotCount": null,
+    "communitySize": null,
+    "notableFlags": []
+  },
+  "links": { "website": "https://fundedelite.com" },
+  "media": { "logo": "/images/logos/fundedlite.png" },
+  "availability": { "restrictedCountries": [] },
+  "custom": { "tags": [] },
+  "lastVerifiedAt": "2026-02-27",
+  "lastUpdatedAt": "2026-02-27",
+  "dataSources": ["https://fundedelite.com"]
+}

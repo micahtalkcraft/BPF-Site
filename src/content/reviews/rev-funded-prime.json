@@ -7,7 +7,15 @@
   "bestFor": "Crypto-focused traders who want extensive digital asset access and meme coin leverage",
   "notIdealFor": "Forex-only traders or those who want commission-free crypto trading",
   "overallScore": 80,
+  "categoryScores": {
+    "challenges": 80,
+    "spreads": 80,
+    "markets": 100,
+    "payouts": 70,
+    "platforms": 70,
+    "trust": 80
+  },
+  "verified": true,
   "methodologyVersion": "1.0",
-  "lastReviewedAt": "2026-02-26",
-  "verified": false
+  "lastReviewedAt": "2026-02-27"
 }

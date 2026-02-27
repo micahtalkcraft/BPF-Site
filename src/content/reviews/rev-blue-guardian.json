@@ -1,0 +1,22 @@
+{
+  "id": "rev-blue-guardian",
+  "propFirmId": "d0000043-0000-0000-0000-000000000043",
+  "summary": "Blue Guardian scores 45/100 in our evaluation.",
+  "pros": [],
+  "cons": [],
+  "bestFor": "",
+  "notIdealFor": "",
+  "overallScore": 45,
+  "categoryScores": {
+    "challenges": 60,
+    "spreads": 40,
+    "markets": 40,
+    "payouts": 40,
+    "platforms": 50,
+    "trust": 40
+  },
+  "flagged": true,
+  "verified": true,
+  "methodologyVersion": "1.0",
+  "lastReviewedAt": "2026-02-27"
+}

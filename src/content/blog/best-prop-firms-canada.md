@@ -7,6 +7,7 @@ author: "Noam Korbl"
 authorImage: "https://www.bestpropfirms.com/wp-content/uploads/2023/08/noam-korbl-300x280-1.png"
 publishedAt: "2026-02-26"
 featured: false
+coverImage: "/images/blog/Canada brokers.png"
 readingTimeMinutes: 14
 youtubeVideoId: "QHPnbIvv2qA"
 featuredFirms:
@@ -67,7 +68,7 @@ Canadian traders can access a funded account with BrightFunded after completing 
 <div class="not-prose my-6 rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
   <div class="flex flex-col sm:flex-row items-stretch">
     <div class="flex items-center gap-4 p-5 flex-1 min-w-0">
-      <img src="https://www.bestpropfirms.com/wp-content/uploads/2025/06/brightfunded-logo.png" alt="BrightFunded logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
+      <img src="/images/logos/brightfunded-logo.png" alt="BrightFunded logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
       <div class="min-w-0">
         <p class="text-lg font-extrabold text-slate-900 leading-tight">BrightFunded</p>
         <p class="text-xs text-slate-500 mt-0.5">Best Prop Firm in Canada Overall</p>
@@ -332,7 +333,7 @@ During testing DNA Funded also ranked as the second best crypto prop firm, secon
 <div class="not-prose my-6 rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
   <div class="flex flex-col sm:flex-row items-stretch">
     <div class="flex items-center gap-4 p-5 flex-1 min-w-0">
-      <img src="https://www.bestpropfirms.com/wp-content/uploads/2025/06/dna-funded-logo.png" alt="DNA Funded logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
+      <img src="/images/logos/dna-funded-logo.png" alt="DNA Funded logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
       <div class="min-w-0">
         <p class="text-lg font-extrabold text-slate-900 leading-tight">DNA Funded</p>
         <p class="text-xs text-slate-500 mt-0.5">Broker Backed Prop Firm</p>
@@ -458,7 +459,7 @@ FundedNext lets you work towards a funded account via a one or two-step challeng
 <div class="not-prose my-6 rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
   <div class="flex flex-col sm:flex-row items-stretch">
     <div class="flex items-center gap-4 p-5 flex-1 min-w-0">
-      <img src="https://www.bestpropfirms.com/wp-content/uploads/2025/06/fundednext.png" alt="FundedNext logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
+      <img src="/images/logos/fundednext.png" alt="FundedNext logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
       <div class="min-w-0">
         <p class="text-lg font-extrabold text-slate-900 leading-tight">FundedNext</p>
         <p class="text-xs text-slate-500 mt-0.5">Flexible Prop Challenges</p>

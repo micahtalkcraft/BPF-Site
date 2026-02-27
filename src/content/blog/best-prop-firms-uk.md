@@ -66,7 +66,7 @@ FundedNext is the best UK prop firm with profit splits up to 95%, three flexible
 <div class="not-prose my-6 rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
   <div class="flex flex-col sm:flex-row items-stretch">
     <div class="flex items-center gap-4 p-5 flex-1 min-w-0">
-      <img src="https://www.bestpropfirms.com/wp-content/uploads/2025/06/fundednext.png" alt="FundedNext logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
+      <img src="/images/logos/fundednext.png" alt="FundedNext logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
       <div class="min-w-0">
         <p class="text-lg font-extrabold text-slate-900 leading-tight">FundedNext</p>
         <p class="text-xs text-slate-500 mt-0.5">Best Prop Firm for UK Traders</p>
@@ -168,7 +168,7 @@ BrightFunded provides a straightforward path to obtaining a funded account while
 <div class="not-prose my-6 rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
   <div class="flex flex-col sm:flex-row items-stretch">
     <div class="flex items-center gap-4 p-5 flex-1 min-w-0">
-      <img src="https://www.bestpropfirms.com/wp-content/uploads/2025/06/brightfunded-logo.png" alt="BrightFunded logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
+      <img src="/images/logos/brightfunded-logo.png" alt="BrightFunded logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
       <div class="min-w-0">
         <p class="text-lg font-extrabold text-slate-900 leading-tight">BrightFunded</p>
         <p class="text-xs text-slate-500 mt-0.5">Loyalty Program & Unlimited Scaling</p>
@@ -270,7 +270,7 @@ DNA Funded is a newly launched prop trading firm that leverages DNA Markets as i
 <div class="not-prose my-6 rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
   <div class="flex flex-col sm:flex-row items-stretch">
     <div class="flex items-center gap-4 p-5 flex-1 min-w-0">
-      <img src="https://www.bestpropfirms.com/wp-content/uploads/2025/06/dna-funded-logo.png" alt="DNA Funded logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
+      <img src="/images/logos/dna-funded-logo.png" alt="DNA Funded logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
       <div class="min-w-0">
         <p class="text-lg font-extrabold text-slate-900 leading-tight">DNA Funded</p>
         <p class="text-xs text-slate-500 mt-0.5">Top Broker Backed Prop Firm</p>
@@ -390,7 +390,7 @@ Blueberry Funded balances accessibility with advanced opportunities for traders 
 <div class="not-prose my-6 rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
   <div class="flex flex-col sm:flex-row items-stretch">
     <div class="flex items-center gap-4 p-5 flex-1 min-w-0">
-      <img src="https://www.bestpropfirms.com/wp-content/uploads/2025/12/blueberry-funded-logo.png" alt="Blueberry Funded logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
+      <img src="/images/logos/blueberry-funded-logo.png" alt="Blueberry Funded logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
       <div class="min-w-0">
         <p class="text-lg font-extrabold text-slate-900 leading-tight">Blueberry Funded</p>
         <p class="text-xs text-slate-500 mt-0.5">Top Scaling Plan for Funded Accounts</p>
@@ -501,7 +501,7 @@ FXIFY offers funded trading opportunities through a structured evaluation proces
 <div class="not-prose my-6 rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
   <div class="flex flex-col sm:flex-row items-stretch">
     <div class="flex items-center gap-4 p-5 flex-1 min-w-0">
-      <img src="https://www.bestpropfirms.com/wp-content/uploads/2024/12/fxify-1-1-1-1.png" alt="FXIFY logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
+      <img src="/images/logos/fxify-1-1-1-1.png" alt="FXIFY logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
       <div class="min-w-0">
         <p class="text-lg font-extrabold text-slate-900 leading-tight">FXIFY</p>
         <p class="text-xs text-slate-500 mt-0.5">Low Fee Forex Prop Trading Firm</p>

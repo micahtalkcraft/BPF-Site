@@ -1,0 +1,68 @@
+{
+  "id": "d0000036-0000-0000-0000-000000000036",
+  "slug": "blueberry-futures",
+  "name": "Blueberry Futures",
+  "status": "active",
+  "foundedYear": 2024,
+  "hqCountry": "AU",
+  "evaluation": {
+    "types": ["1-step"],
+    "profitTargets": { "phase1": 6 },
+    "dailyDrawdown": null,
+    "maxDrawdown": null,
+    "minTradingDays": 1,
+    "scalingPlan": true
+  },
+  "pricing": {
+    "challengeFees": [
+      { "accountSize": 50000, "fee": 245, "model": "1-step", "label": "Ascent (EOD)" },
+      { "accountSize": 100000, "fee": 370, "model": "1-step", "label": "Ascent (EOD)" },
+      { "accountSize": 150000, "fee": 610, "model": "1-step", "label": "Ascent (EOD)" },
+      { "accountSize": 50000, "fee": 184, "model": "1-step", "label": "Accelerated (Trailing)" },
+      { "accountSize": 100000, "fee": 276, "model": "1-step", "label": "Accelerated (Trailing)" },
+      { "accountSize": 150000, "fee": 456, "model": "1-step", "label": "Accelerated (Trailing)" }
+    ],
+    "resetFee": null,
+    "refundPolicy": null
+  },
+  "payouts": {
+    "splitMax": 90,
+    "schedule": "Per payout cycle (5 profitable days)",
+    "processingTime": null,
+    "firstPayoutDays": null,
+    "methods": ["bank transfer", "crypto"]
+  },
+  "rules": {
+    "newsTrading": false,
+    "weekendHolding": false,
+    "copyTrading": false,
+    "expertAdvisors": false,
+    "consistencyRule": "35% (Ascent) / 20% (Accelerated) single-day profit cap",
+    "notes": "Manual trading only. No automated systems, trade copiers, hedging, or HFT. Cannot open new trades 3 minutes before/after high-impact news. No overnight or weekend holds. One entry plus two add-ons per position; fourth add counts as stacking violation. Min $500 / max $2,500 withdrawal per cycle. $2,100 account buffer required."
+  },
+  "markets": {
+    "platforms": ["BlackArrow"],
+    "instruments": "Futures (CME Equity, FX, Commodities, Livestock, Micro Crypto)"
+  },
+  "trust": {
+    "trustpilotRating": null,
+    "trustpilotCount": null,
+    "communitySize": "15,000+ active traders",
+    "notableFlags": []
+  },
+  "links": { "website": "https://blueberryfunded.com/futures" },
+  "media": { "logo": "/images/logos/blueberryfutures.jpg" },
+  "availability": { "restrictedCountries": ["AU", "RU", "BY", "IR", "MM", "SD", "ZW"] },
+  "support": {
+    "liveChat": true,
+    "email": true,
+    "discord": true
+  },
+  "custom": {
+    "tags": ["Futures", "ASIC-Backed Broker", "Commission Free", "BlackArrow Platform"]
+  },
+  "notes": null,
+  "lastVerifiedAt": "2026-02-27",
+  "lastUpdatedAt": "2026-02-27",
+  "dataSources": ["https://blueberryfunded.com/futures"]
+}

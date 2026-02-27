@@ -68,7 +68,7 @@ function FirmAvatar({ name, logoUrl }: { name: string; logoUrl?: string }) {
 
   if (logoUrl && !imgError) {
     return (
-      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center overflow-hidden shadow-sm">
+      <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center overflow-hidden shadow-sm">
         <img
           src={logoUrl}
           alt={`${name} logo`}
@@ -91,7 +91,7 @@ function FirmAvatar({ name, logoUrl }: { name: string; logoUrl?: string }) {
   ];
   const color = colors[name.charCodeAt(0) % colors.length];
   return (
-    <div className={`flex-shrink-0 w-10 h-10 rounded-lg ${color} flex items-center justify-center border border-slate-200`}>
+    <div className={`flex-shrink-0 w-10 h-10 rounded-xl ${color} flex items-center justify-center border border-slate-200`}>
       <span className="text-sm font-black text-white">{initials}</span>
     </div>
   );

@@ -45,7 +45,7 @@
     "trustpilotRating": null,
     "trustpilotCount": null,
     "communitySize": null,
-    "notableFlags": ["Broker-backed (FNmarkets)", "24-hour payout guarantee ($1,000 penalty)"]
+    "notableFlags": []
   },
   "links": { "website": "https://fundednext.com/futures" },
   "media": { "logo": "/images/logos/fn-futures.png" },

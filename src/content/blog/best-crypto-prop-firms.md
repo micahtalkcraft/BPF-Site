@@ -7,6 +7,7 @@ author: "Noam Korbl"
 authorImage: "https://www.bestpropfirms.com/wp-content/uploads/2023/08/noam-korbl-300x280-1.png"
 publishedAt: "2026-02-26"
 featured: false
+coverImage: "/images/blog/Crypto.png"
 readingTimeMinutes: 18
 youtubeVideoId: "dZ7gorgnMvU"
 featuredFirms:
@@ -786,7 +787,7 @@ You can drop your upfront fees by 25% by using the promo code PROPFIRMS25.
 <div class="not-prose my-6 rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
   <div class="flex flex-col sm:flex-row items-stretch">
     <div class="flex items-center gap-4 p-5 flex-1 min-w-0">
-      <img src="/images/logos/funded-prime-logo.png" alt="Funded Prime logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
+      <img src="/images/logos/fundedprime-logo.png" alt="Funded Prime logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
       <div class="min-w-0">
         <p class="text-lg font-extrabold text-slate-900 leading-tight">Funded Prime</p>
         <p class="text-xs text-slate-500 mt-0.5">Meme Coins and Crypto Markets</p>

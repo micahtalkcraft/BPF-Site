@@ -1,147 +1,282 @@
 ---
 import Base from "../layouts/Base.astro";
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
 const categories = [
   {
     num: "01",
     title: "Challenge Accounts",
     slug: "challenge-accounts",
-    image: "https://www.bestpropfirms.com/wp-content/uploads/2025/05/challenge-accounts-scoring.png",
-    description:
-      "We evaluate the transparency and accessibility of each firm's challenge structure. A fair challenge should give traders a genuine opportunity to prove their skills without unreasonable barriers.",
+    intro:
+      "In our methodology, each prop trading firm is evaluated on its approach to onboarding and challenge structures, as these processes often reveal the firm's transparency, accessibility, and fairness in funding.",
+    detail:
+      "Each prop firm's scoring in this area depends on the flexibility, clarity, and cost of their evaluation challenges, with a focus on the following:",
     factors: [
-      "Challenge Levels — variety of funding tiers from $5K to $500K+",
-      "Profit Targets — Phase 1 and Phase 2 targets assessed for achievability (ideally under 10% and 5%)",
-      "Drawdown Limits — flexible daily/overall limits (e.g. 5% daily, 10% overall)",
-      "Challenge Flexibility — one-step, two-step, and custom formats plus fee accessibility",
-      "Additional Policies — inactivity rules, consistency requirements, and refund policies",
+      {
+        label: "Prop Challenge Levels",
+        desc: "We assess the variety and accessibility of each challenge at each funding level (e.g., $5,000 to $500,000) offered by each prop firm. Firms with broader, more accessible entry points receive higher scores, as they provide options for a range of traders.",
+      },
+      {
+        label: "Profit Targets",
+        desc: "Firms with achievable targets in Phase 1 and Phase 2, typically under 10% and 5% respectively, are ranked higher. These targets indicate a reasonable and sustainable approach to evaluation.",
+      },
+      {
+        label: "Drawdown Limits",
+        desc: "Flexible and transparent daily and overall drawdown limits (e.g., 5% daily, 10% overall) score well, as these help traders manage risk without restrictive or unpredictable conditions.",
+      },
+      {
+        label: "Challenge Flexibility",
+        desc: "Higher-scoring firms often offer one-step, two-step, or custom challenge formats that cater to varying trading styles and risk tolerances. Lower fees for challenges also contribute to a more accessible and trader-friendly approach.",
+      },
+      {
+        label: "Additional Policies",
+        desc: "Key policies such as inactivity rules, consistency requirements, and refund policies on challenge fees also factor into scoring. Firms that maintain fair, clear policies that encourage long-term success for traders are rated higher.",
+      },
     ],
     scale: [
-      { range: "9–10 / 10", label: "Excellent", desc: "Low fees, flexible drawdown, achievable targets, varied challenge formats" },
-      { range: "6–8 / 10", label: "Good", desc: "Moderate fees, standard conditions, limited flexibility" },
-      { range: "0–5 / 10", label: "Poor", desc: "High fees, restrictive drawdowns, targets above 12%" },
+      { range: "9–10 / 10", label: "Excellent", desc: "Low fees, flexible drawdown (5% daily, 10% overall), achievable profit targets under 10%, varied challenges." },
+      { range: "6–8 / 10", label: "Good", desc: "Moderate fees, standard drawdowns and targets (10–12% for Phase 1, 5–8% for Phase 2), limited flexibility." },
+      { range: "0–5 / 10", label: "Poor", desc: "High fees, restrictive drawdowns, high targets above 12%, limited challenge formats or rigid requirements." },
     ],
+    note: null,
   },
   {
     num: "02",
     title: "Spreads & Commission Fees",
     slug: "spreads-commissions",
-    image: "https://www.bestpropfirms.com/wp-content/uploads/2025/05/spreads-and-commission-fees-scoring.png",
-    description:
-      "Trading costs directly impact a trader's ability to profit. We focus on transparency and competitiveness of spreads and commissions, since inflated costs can erode returns even with a strong win rate.",
+    intro:
+      "Spreads and commission fees are crucial for maintaining profitability, especially in high-frequency trading.",
+    detail:
+      "Firms are scored based on how well they control these costs, with lower spreads and transparent, competitive commission rates scoring higher. Transparent cost structures that keep total trading fees low are prioritized in our assessments.",
     factors: [
-      "Forex Spreads — tighter spreads (below 0.5 pips for EUR/USD) receive top marks",
-      "Commission Fees — low, consistent rates prioritised over variable or hidden charges",
+      {
+        label: "Forex Spreads",
+        desc: "Tighter spreads (e.g., below 0.5 pips for EUR/USD) receive top marks.",
+      },
+      {
+        label: "Commission Fees",
+        desc: "Low and consistent fees earn higher scores, especially when they enhance value.",
+      },
     ],
     scale: [
-      { range: "9–10 / 10", label: "Excellent", desc: "Sub-0.5 pip spreads, low commission up to $3.50 per lot" },
-      { range: "6–8 / 10", label: "Good", desc: "Around 1 pip spread, fair commission (~$4.50 per lot)" },
-      { range: "0–5 / 10", label: "Poor", desc: "Above 1.5 pip spreads, high or unclear fees" },
+      { range: "9–10 / 10", label: "Excellent", desc: "Sub-0.5 pips spread, low commission (up to $3.50 per lot)." },
+      { range: "6–8 / 10", label: "Good", desc: "1 pip spread, fair commission (~$4.50)." },
+      { range: "0–5 / 10", label: "Poor", desc: "Spreads above 1.5 pips, high or unclear fees." },
     ],
+    note: {
+      text: "We have specific pages for different tradable prop instruments where the fees of that market are the prime focus:",
+      links: [
+        { label: "Forex Prop Firms", href: `${base}/reviews` },
+        { label: "Stock Trading Prop Firms", href: `${base}/reviews` },
+        { label: "Futures Prop Firms", href: `${base}/reviews` },
+        { label: "Crypto Prop Firms", href: `${base}/reviews` },
+      ],
+    },
   },
   {
     num: "03",
     title: "Financial Markets & Leverage",
     slug: "markets-leverage",
-    image: "https://www.bestpropfirms.com/wp-content/uploads/2025/05/financial-markets-and-leverage-scoring.png",
-    description:
-      "Access to diverse markets and sensible leverage allows traders to employ a wider range of strategies. We assess both breadth and balance — leverage that is too restrictive limits strategies; leverage that is too high increases risk.",
+    intro:
+      "A diverse market selection and appropriate leverage give traders more flexibility in strategies.",
+    detail:
+      "We look for firms that offer a broad range of financial markets, from forex and indices to commodities and crypto. Leverage that allows traders to balance opportunity and risk, typically up to 50:1 for forex, also ranks higher.",
     factors: [
-      "Market Range — wide access including forex, indices, commodities, and crypto",
-      "Leverage Levels — typically up to 50:1 for forex, balanced against risk management policies",
+      {
+        label: "Financial Market Range",
+        desc: "Wide access to markets, including niche options.",
+      },
+      {
+        label: "Leverage Levels",
+        desc: "Balanced leverage, typically up to 50:1, for forex.",
+      },
     ],
     scale: [
-      { range: "9–10 / 10", label: "Excellent", desc: "Forex, indices, commodities, and crypto; 50:1 leverage" },
-      { range: "6–8 / 10", label: "Good", desc: "Basic forex and indices; standard leverage" },
-      { range: "0–5 / 10", label: "Poor", desc: "Limited markets, overly restricted or excessively high leverage" },
+      { range: "9–10 / 10", label: "Excellent", desc: "Access to forex, indices, crypto; leverage up to 50:1." },
+      { range: "6–8 / 10", label: "Good", desc: "Basic forex and indices access; industry-standard leverage." },
+      { range: "0–5 / 10", label: "Poor", desc: "Limited markets, restricted leverage." },
     ],
+    note: {
+      text: "Leverage and markets may be restricted based on the trader's location. We have created location-based pages with ratings for:",
+      links: [
+        { label: "Prop Firms For US Traders", href: `${base}/reviews` },
+        { label: "Prop Firms For Canadian Traders", href: `${base}/reviews` },
+        { label: "Prop Firms For UK Traders", href: `${base}/reviews` },
+      ],
+    },
   },
   {
     num: "04",
     title: "Trading Platforms",
     slug: "trading-platforms",
-    image: "https://www.bestpropfirms.com/wp-content/uploads/2025/05/trading-platforms-scoring.png",
-    description:
-      "The quality and reliability of the trading platform affects execution, analysis, and overall trading experience. We assess platform choice, stability, and the depth of available tools.",
+    intro:
+      "Platforms play a key role in traders' experience, so we assess firms based on the quality and versatility of their trading platforms.",
+    detail:
+      "Firms that offer multiple platforms like MetaTrader 4 (MT4), MetaTrader 5 (MT5), cTrader, or TradingView score higher, especially if they come with advanced tools, high performance, and mobile accessibility.",
     factors: [
-      "Platform Options — MT4, MT5, cTrader, and proprietary platforms rated on availability",
-      "Advanced Tools — risk management, charting capabilities, and order type breadth",
+      {
+        label: "Trading Platform Options",
+        desc: "Multiple platforms like MT4, MT5, cTrader are rated higher.",
+      },
+      {
+        label: "Advanced Trading Tools",
+        desc: "Tools for risk management, charting, and order types enhance scoring.",
+      },
     ],
     scale: [
-      { range: "9–10 / 10", label: "Excellent", desc: "Full platform range, advanced charting, robust order types" },
-      { range: "6–8 / 10", label: "Good", desc: "Limited platform selection, basic tools" },
-      { range: "0–5 / 10", label: "Poor", desc: "Performance issues, minimal features, poor execution" },
+      { range: "9–10 / 10", label: "Excellent", desc: "Full platform range (MT4, MT5, cTrader), advanced charting." },
+      { range: "6–8 / 10", label: "Good", desc: "Limited platforms, basic trading tools." },
+      { range: "0–5 / 10", label: "Poor", desc: "Performance issues, limited or minimal features." },
     ],
+    note: null,
   },
   {
     num: "05",
     title: "Payments & Profit Payouts",
     slug: "payouts",
-    image: "https://www.bestpropfirms.com/wp-content/uploads/2025/05/payments-and-profit-payouts-scoring.png",
-    description:
-      "Reliable and frequent payouts are critical for traders who depend on their funded accounts. This category carries significant weight because a firm's payout record directly reflects trustworthiness.",
+    intro:
+      "Profit payouts are essential for traders looking to access earnings without delay.",
+    detail:
+      "Firms are scored on payout frequency, minimum withdrawal amounts, and profit split percentages. Firms offering low minimums, higher splits, and fast payout cycles earn higher marks for supporting trader cash flow and flexibility.",
     factors: [
-      "Profit Split — higher percentages (above 80%) scored better",
-      "Payout Frequency — weekly or bi-weekly payouts with low minimums preferred",
-      "Withdrawal Methods — breadth of options including crypto, bank transfer, and payment processors",
+      {
+        label: "Profit Split",
+        desc: "Higher profit splits (above 80%) rank well.",
+      },
+      {
+        label: "Payout Frequency",
+        desc: "Frequent (weekly/bi-weekly) payouts with low minimums are preferred.",
+      },
     ],
     scale: [
-      { range: "9–10 / 10", label: "Excellent", desc: "80%+ split, weekly payouts, low withdrawal minimums" },
-      { range: "6–8 / 10", label: "Good", desc: "Standard splits (75–80%), bi-weekly payouts" },
-      { range: "0–5 / 10", label: "Poor", desc: "Low split, high minimums, infrequent or delayed payouts" },
+      { range: "9–10 / 10", label: "Excellent", desc: "80%+ split, weekly payouts, low withdrawal minimum." },
+      { range: "6–8 / 10", label: "Good", desc: "Standard splits (~75–80%), bi-weekly payouts." },
+      { range: "0–5 / 10", label: "Poor", desc: "Low split, high withdrawal minimums, infrequent payouts." },
     ],
+    note: null,
   },
   {
     num: "06",
     title: "Customer Service & Education",
     slug: "support-education",
-    image: "https://www.bestpropfirms.com/wp-content/uploads/2025/05/customer-service-and-education-scoring.png",
-    description:
-      "Responsive support and quality educational resources help traders succeed, especially newer traders entering prop trading for the first time. We evaluate both availability and quality.",
+    intro:
+      "A prop firm's support and educational resources are vital for a positive trading experience.",
+    detail:
+      "Trading firms with responsive 24/7 support, especially with live chat and phone options, are scored higher. Educational resources, such as tutorials, guides, and webinars, especially those relevant to prop trading, also contribute to higher scores.",
     factors: [
-      "Support Availability — 24/7 support with live chat, email, or phone access rated highly",
-      "Educational Resources — tutorials, webinars, and relevant training content enhance scores",
+      {
+        label: "Customer Support Availability",
+        desc: "24/7 support with live chat, email, or phone access is highly rated.",
+      },
+      {
+        label: "Educational Resources",
+        desc: "High-quality tutorials, webinars, and relevant training improve scores.",
+      },
     ],
     scale: [
-      { range: "9–10 / 10", label: "Excellent", desc: "24/7 support, live chat, extensive educational content" },
-      { range: "6–8 / 10", label: "Good", desc: "Limited support hours, basic tutorials" },
-      { range: "0–5 / 10", label: "Poor", desc: "Delayed responses, minimal educational content" },
+      { range: "9–10 / 10", label: "Excellent", desc: "24/7 support, live chat, extensive educational content." },
+      { range: "6–8 / 10", label: "Good", desc: "Limited support hours, basic tutorials." },
+      { range: "0–5 / 10", label: "Poor", desc: "Delayed responses, minimal educational content." },
     ],
+    note: null,
   },
   {
     num: "07",
     title: "Trust & Community",
     slug: "trust-community",
-    image: "https://www.bestpropfirms.com/wp-content/uploads/2025/05/trust-and-community-scoring.png",
-    description:
-      "We assess the reputation, transparency, and community presence of each firm. Trust is non-negotiable — firms with poor track records, unclear fee structures, or suspicious reviews are scored accordingly.",
+    intro:
+      "Trust and community engagement reflect a firm's reliability and openness.",
+    detail:
+      "We consider reviews on platforms like Trustpilot, the transparency of fees and policies, and the presence of active communities (e.g., Discord). Prop firms with high ratings and clear policies score well, along with those that facilitate community support.",
     factors: [
-      "Reputation — high Trustpilot scores and independent review platform ratings",
-      "Broker Partnerships — connections to regulated brokers and clear company ownership",
-      "Trading Community — active social media, Discord, and forum presence",
+      {
+        label: "Reputation",
+        desc: "High Trustpilot or similar scores indicate trustworthiness.",
+      },
+      {
+        label: "Forex Broker Partnerships",
+        desc: "Is the prop firm connected to a reputable and regulated broker?",
+      },
+      {
+        label: "Trading Community",
+        desc: "Active communities on social media or forums score better.",
+      },
     ],
     scale: [
-      { range: "9–10 / 10", label: "Excellent", desc: "Positive reviews, active community, fully transparent fees and ownership" },
-      { range: "6–8 / 10", label: "Good", desc: "Mixed reviews, moderate community presence" },
-      { range: "0–5 / 10", label: "Poor", desc: "Poor reviews, limited transparency, unclear ownership" },
+      { range: "9–10 / 10", label: "Excellent", desc: "Positive reviews, active community, transparent fees." },
+      { range: "6–8 / 10", label: "Good", desc: "Mixed reviews, moderate community presence." },
+      { range: "0–5 / 10", label: "Poor", desc: "Poor reviews, limited transparency." },
     ],
+    note: null,
   },
   {
     num: "08",
     title: "Sign-Up Process",
     slug: "sign-up",
-    image: "https://www.bestpropfirms.com/wp-content/uploads/2025/05/sign-up-process-scoring.png",
-    description:
-      "A streamlined onboarding experience signals that a firm respects traders' time. We assess clarity, speed, and the KYC verification process to ensure traders can get started without unnecessary friction.",
+    intro:
+      "A straightforward, quick sign-up process is essential for a smooth onboarding experience.",
+    detail:
+      "Firms that offer simple, secure sign-up forms and immediate access to evaluation challenges score highly. Clear KYC requirements and guidance on the onboarding process also add to the score.",
     factors: [
-      "Simplicity and Speed — streamlined forms and immediate challenge access prioritised",
-      "KYC Requirements — clear, transparent verification processes that protect both parties",
+      {
+        label: "Simplicity and Speed",
+        desc: "A streamlined sign-up process with clear steps rates best.",
+      },
+      {
+        label: "KYC and Verification",
+        desc: "Transparent KYC requirements enhance onboarding.",
+      },
     ],
     scale: [
-      { range: "9–10 / 10", label: "Excellent", desc: "Simple sign-up, clear KYC, immediate challenge access" },
-      { range: "6–8 / 10", label: "Good", desc: "Moderate steps, standard KYC process" },
-      { range: "0–5 / 10", label: "Poor", desc: "Complicated or unclear process, lengthy or opaque KYC" },
+      { range: "9–10 / 10", label: "Excellent", desc: "Simple sign-up, clear KYC, immediate challenge access." },
+      { range: "6–8 / 10", label: "Good", desc: "Moderate sign-up steps, standard KYC." },
+      { range: "0–5 / 10", label: "Poor", desc: "Complicated or unclear sign-up, lengthy KYC." },
     ],
+    note: null,
+  },
+];
+
+const socials = [
+  {
+    name: "YouTube",
+    url: "https://www.youtube.com/@BestPropFirms",
+    icon: `<path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.55A3.02 3.02 0 00.5 6.19 31.6 31.6 0 000 12a31.6 31.6 0 00.5 5.81 3.02 3.02 0 002.12 2.14c1.88.55 9.38.55 9.38.55s7.5 0 9.38-.55a3.02 3.02 0 002.12-2.14A31.6 31.6 0 0024 12a31.6 31.6 0 00-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/>`,
+    viewBox: "0 0 24 24",
+    bg: "hover:bg-red-50 hover:border-red-300 hover:text-red-600",
+    iconHover: "group-hover:text-red-500",
+  },
+  {
+    name: "Instagram",
+    url: "https://www.instagram.com/bestpropfirms/",
+    icon: `<path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.97.24 2.44.41a4.08 4.08 0 011.52.99c.47.47.78.92.99 1.52.17.47.36 1.27.41 2.44.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.97-.41 2.44a4.08 4.08 0 01-.99 1.52 4.08 4.08 0 01-1.52.99c-.47.17-1.27.36-2.44.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.97-.24-2.44-.41a4.08 4.08 0 01-1.52-.99 4.08 4.08 0 01-.99-1.52c-.17-.47-.36-1.27-.41-2.44C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.24-1.97.41-2.44a4.08 4.08 0 01.99-1.52 4.08 4.08 0 011.52-.99c.47-.17 1.27-.36 2.44-.41C8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.77 5.77 0 00-2.13 1.38A5.77 5.77 0 00.63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91a5.77 5.77 0 001.38 2.13 5.77 5.77 0 002.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.77 5.77 0 002.13-1.38 5.77 5.77 0 001.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.77 5.77 0 00-1.38-2.13A5.77 5.77 0 0019.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32zM12 16a4 4 0 110-8 4 4 0 010 8zm7.85-10.4a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/>`,
+    viewBox: "0 0 24 24",
+    bg: "hover:bg-pink-50 hover:border-pink-300 hover:text-pink-600",
+    iconHover: "group-hover:text-pink-500",
+  },
+  {
+    name: "Facebook",
+    url: "https://www.facebook.com/bestpropfirms/",
+    icon: `<path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07c0 6.02 4.39 11.02 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.88v2.26h3.33l-.53 3.49h-2.8v8.44C19.61 23.09 24 18.09 24 12.07z"/>`,
+    viewBox: "0 0 24 24",
+    bg: "hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600",
+    iconHover: "group-hover:text-blue-500",
+  },
+  {
+    name: "X",
+    url: "https://x.com/bestpropfirms",
+    icon: `<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>`,
+    viewBox: "0 0 24 24",
+    bg: "hover:bg-slate-100 hover:border-slate-400 hover:text-slate-800",
+    iconHover: "group-hover:text-slate-700",
+  },
+  {
+    name: "Discord",
+    url: "https://discord.gg/bestpropfirms",
+    icon: `<path d="M20.32 4.37a19.8 19.8 0 00-4.89-1.52.07.07 0 00-.08.04c-.21.38-.45.87-.61 1.26a18.27 18.27 0 00-5.49 0 12.64 12.64 0 00-.62-1.26.07.07 0 00-.08-.04 19.74 19.74 0 00-4.89 1.52.07.07 0 00-.03.03C.53 9.62-.32 14.72.1 19.76a.08.08 0 00.03.06 19.9 19.9 0 005.99 3.03.08.08 0 00.08-.03c.46-.63.87-1.3 1.22-2a.08.08 0 00-.04-.1 13.1 13.1 0 01-1.87-.9.08.08 0 01-.01-.12c.13-.09.25-.19.37-.29a.07.07 0 01.08-.01c3.93 1.79 8.18 1.79 12.07 0a.07.07 0 01.08.01c.12.1.25.2.37.29a.08.08 0 01-.01.12c-.6.35-1.22.65-1.87.9a.08.08 0 00-.04.1c.36.7.77 1.37 1.22 2a.08.08 0 00.08.03 19.83 19.83 0 006-3.03.08.08 0 00.03-.05c.5-5.18-.84-9.68-3.55-13.66a.06.06 0 00-.03-.03zM8.02 16.71c-1.18 0-2.16-1.08-2.16-2.42 0-1.33.96-2.42 2.16-2.42 1.21 0 2.18 1.09 2.16 2.42 0 1.34-.96 2.42-2.16 2.42zm7.97 0c-1.18 0-2.16-1.08-2.16-2.42 0-1.33.96-2.42 2.16-2.42 1.21 0 2.18 1.09 2.16 2.42 0 1.34-.95 2.42-2.16 2.42z"/>`,
+    viewBox: "0 0 24 24",
+    bg: "hover:bg-indigo-50 hover:border-indigo-300 hover:text-indigo-600",
+    iconHover: "group-hover:text-indigo-500",
   },
 ];
 ---
@@ -150,172 +285,331 @@ const categories = [
   title="Our Methodology — How We Score & Rank Prop Firms | BestPropFirms.com"
   description="Our independent scoring methodology covers 8 categories: challenge accounts, spreads, markets, platforms, payouts, support, trust, and sign-up. No paid placements, ever."
 >
-  <!-- Hero -->
-  <section class="bg-[#0d1b2a] text-white py-16 px-4">
-    <div class="mx-auto max-w-4xl sm:px-6 lg:px-8">
-      <p class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-2">Transparency First</p>
-      <h1 class="text-4xl font-black mb-4">Our Methodology</h1>
-      <p class="text-slate-300 text-lg max-w-2xl leading-relaxed">
-        Every firm on BestPropFirms.com is independently reviewed and scored across 8 categories.
-        No firm can pay for a better ranking. Here is exactly how we do it.
+  <!-- Hero with gradient overlay -->
+  <section class="relative bg-[#0d1b2a] text-white py-20 px-4 overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(20,184,166,0.15),transparent_60%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(99,102,241,0.1),transparent_60%)]"></div>
+    <div class="relative mx-auto max-w-4xl sm:px-6 lg:px-8">
+      <img
+        src={`${base}/images/brand/best-prop-firms-site-logo.png`}
+        alt="BestPropFirms.com"
+        class="h-10 w-auto mb-8 opacity-80"
+      />
+      <div class="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/10 px-4 py-1.5 text-xs font-semibold text-teal-300 mb-6 backdrop-blur-sm">
+        <svg class="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        Transparency First
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-black mb-5 leading-tight">
+        Our Methodology <span class="text-teal-400">In 2026</span>
+      </h1>
+      <p class="text-slate-300 text-lg max-w-2xl leading-relaxed mb-6">
+        We help traders find the best prop firms by comparing features, trade costs, and execution speeds. Our rankings focus on profit payouts, account costs, leverage, and funding steps, with regular updates and thorough platform testing by our research team.
       </p>
+
+      <!-- Author byline -->
+      <div class="flex items-center gap-3 mb-8">
+        <div class="w-11 h-11 rounded-full p-0.5 bg-gradient-to-br from-teal-400 to-emerald-500">
+          <div class="w-full h-full rounded-full overflow-hidden bg-white">
+            <img
+              src={`${base}/images/team/noam-korbl-300x280-1.png`}
+              alt="Noam Korbl"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-white">Noam Korbl</p>
+          <p class="text-xs text-slate-400">Co-Founder & Chief Operating Officer</p>
+        </div>
+        <span class="text-white/20 mx-1">|</span>
+        <p class="text-xs text-slate-400">Updated February 2026</p>
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+        <a
+          href="#challenge-accounts"
+          class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-teal-500 to-emerald-500 px-6 py-3 text-sm font-bold text-white hover:from-teal-400 hover:to-emerald-400 transition-all shadow-lg shadow-teal-500/25"
+        >
+          Explore Categories
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+        </a>
+        <a
+          href="#overall-scores"
+          class="inline-flex items-center gap-2 rounded-xl border border-white/20 px-6 py-3 text-sm font-bold text-white hover:bg-white/10 transition-all backdrop-blur-sm"
+        >
+          Overall Scores
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- Intro -->
   <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12">
 
-    <!-- Overview card -->
+    <!-- Methodology Overview Card -->
     <div class="bg-white border border-slate-200 rounded-2xl p-8 mb-12 shadow-sm">
-      <h2 class="text-2xl font-black text-slate-900 mb-3">How We Grade Prop Firms in 2026</h2>
+      <div class="flex items-start gap-4 mb-6">
+        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#0d1b2a] ring-2 ring-slate-200 flex items-center justify-center">
+          <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+          </svg>
+        </div>
+        <div>
+          <h2 class="text-2xl font-black text-slate-900 mb-1">Best Prop Firms Methodology</h2>
+          <p class="text-sm text-slate-500">Version 1.0 &middot; Last updated February 2026</p>
+        </div>
+      </div>
       <p class="text-slate-600 leading-relaxed mb-4">
-        Our goal is to help traders identify the best prop firm for their strategy by comparing features,
-        trading costs, and execution quality. Rankings are centred on the factors that matter most to funded
-        traders: profit payouts, account costs, leverage availability, and funding steps.
+        At Best Prop Firms, our rankings provide a comprehensive, data-driven evaluation of prop trading firms, scoring each firm based on the factors that matter most to traders.
+      </p>
+      <p class="text-slate-600 leading-relaxed mb-4">
+        We apply a detailed, weighted scoring system, which reflects a firm's performance across multiple categories such as trading costs, account options, evaluation challenges, and platform usability.
       </p>
       <p class="text-slate-600 leading-relaxed mb-6">
-        Each firm receives a score out of 100, calculated as a weighted average across 8 independently assessed
-        categories. Challenge accounts and profit payouts carry the highest weighting due to their direct
-        financial impact on traders. Support and community contributions enhance overall accessibility ratings.
+        Each category's score feeds into an overall rating, prioritising aspects that directly impact a trader's experience and earnings potential. We thoroughly look at the pros and cons of prop trading with each firm, helping traders make well informed decisions.
       </p>
 
-      <!-- Category quick-list -->
+      <!-- Category quick-nav grid -->
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
         {categories.map((cat) => (
           <a
             href={`#${cat.slug}`}
             class="group flex flex-col items-center gap-1.5 rounded-xl border border-slate-200 bg-slate-50 hover:border-teal-300 hover:bg-teal-50 p-3 text-center transition-colors"
           >
-            <span class="text-[11px] font-black text-teal-500 uppercase tracking-wider">{cat.num}</span>
+            <span class="inline-flex w-7 h-7 rounded-full bg-[#0d1b2a] items-center justify-center text-[10px] font-black text-white">{cat.num}</span>
             <span class="text-xs font-semibold text-slate-700 group-hover:text-teal-700 leading-tight">{cat.title}</span>
           </a>
         ))}
       </div>
     </div>
 
-    <!-- Overall scoring table -->
-    <div class="mb-12 rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden">
-      <div class="bg-slate-50 border-b border-slate-200 px-6 py-4">
-        <h2 class="text-lg font-black text-slate-900">Overall Score Classifications</h2>
-        <p class="text-sm text-slate-500 mt-0.5">How individual category scores combine into a final rating</p>
-      </div>
-      <div class="divide-y divide-slate-100">
-        <div class="flex items-center gap-4 px-6 py-4">
-          <div class="flex-shrink-0 w-28">
-            <span class="inline-flex items-center rounded-full bg-green-500 px-3 py-1 text-sm font-black text-white">80–100</span>
-          </div>
-          <div>
-            <p class="font-bold text-slate-900">Outstanding</p>
-            <p class="text-sm text-slate-500">Excellent performance across all 8 categories with no significant weaknesses</p>
-          </div>
-        </div>
-        <div class="flex items-center gap-4 px-6 py-4">
-          <div class="flex-shrink-0 w-28">
-            <span class="inline-flex items-center rounded-full bg-yellow-400 px-3 py-1 text-sm font-black text-white">60–79</span>
-          </div>
-          <div>
-            <p class="font-bold text-slate-900">Good</p>
-            <p class="text-sm text-slate-500">Strong overall balance with minor limitations in one or two categories</p>
-          </div>
-        </div>
-        <div class="flex items-center gap-4 px-6 py-4">
-          <div class="flex-shrink-0 w-28">
-            <span class="inline-flex items-center rounded-full bg-red-500 px-3 py-1 text-sm font-black text-white">0–59</span>
-          </div>
-          <div>
-            <p class="font-bold text-slate-900">Below Average</p>
-            <p class="text-sm text-slate-500">Significant limitations across multiple categories that may disadvantage traders</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Category sections -->
+    <!-- ========== CATEGORY SECTIONS ========== -->
     <div class="space-y-0">
       {categories.map((cat, catIdx) => (
-        <section id={cat.slug} class={`scroll-mt-20 ${catIdx > 0 ? "mt-20 pt-20 border-t border-slate-200" : "mt-12"}`}>
-          <!-- Section header -->
-          <div class="flex items-center gap-3 mb-6">
-            <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-teal-500 flex items-center justify-center text-xs font-black text-white">{cat.num}</span>
-            <h2 class="text-2xl font-black text-slate-900">{cat.title}</h2>
+        <section id={cat.slug} class={`scroll-mt-20 ${catIdx > 0 ? "mt-20 pt-20 border-t border-slate-200" : "mt-4"}`}>
+
+          <!-- Section header with number + title -->
+          <div class="flex items-center gap-4 mb-6">
+            <span class="flex-shrink-0 w-12 h-12 rounded-full bg-[#0d1b2a] ring-2 ring-slate-200 flex items-center justify-center text-sm font-black text-white">
+              {cat.num}
+            </span>
+            <div>
+              <h2 class="text-2xl sm:text-3xl font-black text-slate-900">{cat.title}</h2>
+            </div>
           </div>
 
-          <!-- Description -->
-          <p class="text-slate-600 leading-relaxed mb-6">{cat.description}</p>
-
-          <!-- Scoring image -->
-          <div class="mb-6 rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
-            <img
-              src={cat.image}
-              alt={`${cat.title} scoring breakdown`}
-              class="w-full h-auto"
-              loading="lazy"
-            />
+          <!-- Description paragraphs -->
+          <div class="mb-8">
+            <p class="text-slate-600 leading-relaxed mb-3">{cat.intro}</p>
+            <p class="text-slate-600 leading-relaxed">{cat.detail}</p>
           </div>
 
-          <!-- Two-column: factors + scale -->
-          <div class="grid sm:grid-cols-2 gap-6">
-            <!-- What we assess -->
-            <div class="bg-slate-50 rounded-xl border border-slate-200 p-5">
-              <p class="text-xs font-bold uppercase tracking-widest text-teal-500 mb-3">What We Assess</p>
-              <ul class="space-y-2">
-                {cat.factors.map((f) => (
-                  <li class="flex items-start gap-2 text-sm text-slate-700">
-                    <svg class="mt-0.5 h-3.5 w-3.5 flex-shrink-0 text-teal-500" fill="currentColor" viewBox="0 0 20 20">
+          <!-- What We Assess — factor cards -->
+          <div class="mb-8">
+            <p class="text-xs font-bold uppercase tracking-widest text-teal-500 mb-4">What We Assess</p>
+            <div class="space-y-3">
+              {cat.factors.map((f) => (
+                <div class="bg-white border border-slate-200 rounded-xl p-5 hover:border-teal-200 transition-colors">
+                  <div class="flex items-start gap-3">
+                    <svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-teal-500" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                     </svg>
-                    {f}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <!-- Scoring scale -->
-            <div class="bg-white rounded-xl border border-slate-200 p-5">
-              <p class="text-xs font-bold uppercase tracking-widest text-teal-500 mb-3">Scoring Scale</p>
-              <div class="space-y-3">
-                {cat.scale.map((s, idx) => (
-                  <div class="flex items-start gap-3">
-                    <span class={`flex-shrink-0 inline-flex items-center rounded-full px-2.5 py-0.5 text-[11px] font-black text-white whitespace-nowrap ${idx === 0 ? "bg-green-500" : idx === 1 ? "bg-yellow-400" : "bg-red-500"}`}>
-                      {s.range}
-                    </span>
                     <div>
-                      <p class="text-xs font-bold text-slate-800">{s.label}</p>
-                      <p class="text-xs text-slate-500 leading-snug">{s.desc}</p>
+                      <p class="font-bold text-slate-900 mb-1">{f.label}</p>
+                      <p class="text-sm text-slate-500 leading-relaxed">{f.desc}</p>
                     </div>
                   </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Scoring scale -->
+          <div class="mb-8">
+            <p class="text-xs font-bold uppercase tracking-widest text-teal-500 mb-4">Scoring Example</p>
+            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden">
+              {cat.scale.map((s, idx) => (
+                <div class={`flex items-start gap-4 px-5 py-4 ${idx < cat.scale.length - 1 ? "border-b border-slate-100" : ""}`}>
+                  <span class={`flex-shrink-0 inline-flex items-center rounded-full px-3 py-1 text-xs font-black text-white whitespace-nowrap ${idx === 0 ? "bg-green-500" : idx === 1 ? "bg-yellow-400" : "bg-red-500"}`}>
+                    {s.range}
+                  </span>
+                  <div>
+                    <p class="text-sm font-bold text-slate-800">{s.label}</p>
+                    <p class="text-sm text-slate-500 leading-snug">{s.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Optional note with links -->
+          {cat.note && (
+            <div class="bg-gradient-to-r from-teal-50 to-emerald-50 border border-teal-200 rounded-xl p-5 mt-6">
+              <p class="text-sm text-teal-800 leading-relaxed mb-3">{cat.note.text}</p>
+              <div class="flex flex-wrap gap-2">
+                {cat.note.links.map((link: { href: string; label: string }) => (
+                  <a
+                    href={link.href}
+                    class="inline-flex items-center gap-1 rounded-lg bg-white border border-teal-200 px-3 py-1.5 text-xs font-semibold text-teal-700 hover:bg-teal-100 hover:border-teal-300 transition-colors"
+                  >
+                    {link.label}
+                    <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
                 ))}
               </div>
             </div>
-          </div>
+          )}
         </section>
       ))}
     </div>
+  </div>
 
-    <!-- Editorial independence note -->
-    <div class="mt-16 rounded-2xl border border-teal-200 bg-teal-50 p-8">
-      <div class="flex items-center gap-3 mb-4">
-        <div class="flex-shrink-0 w-9 h-9 rounded-xl bg-teal-500 flex items-center justify-center">
-          <svg width="18" height="18" viewBox="0 0 20 20" fill="white" aria-hidden="true">
-            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-          </svg>
-        </div>
-        <h3 class="text-lg font-black text-teal-900">Editorial Independence</h3>
+  <!-- Overall Scores — dark section -->
+  <section id="overall-scores" class="scroll-mt-20 bg-gradient-to-br from-slate-900 via-slate-900 to-[#0d1b2a] py-20">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <p class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-2">Final Rating</p>
+        <h2 class="text-3xl font-black text-white">Overall Prop Firm Scores</h2>
+        <p class="text-slate-400 mt-3 max-w-2xl mx-auto leading-relaxed">
+          The overall score is a comprehensive assessment that combines each category's individual rating, creating a single, consolidated score that reflects the prop firm testing results in 2026, and overall performance.
+        </p>
       </div>
-      <p class="text-sm text-teal-800 leading-relaxed mb-3">
-        No prop firm can pay for a better score or ranking on BestPropFirms.com. Our methodology is applied
-        consistently to every firm we review, regardless of any affiliate relationship.
+
+      <p class="text-slate-400 leading-relaxed mb-4 text-center max-w-2xl mx-auto">
+        This score helps traders quickly gauge a firm's strengths and limitations, with a higher score indicating a firm that excels across essential aspects such as challenge accessibility, trading costs, platform usability, and payout policies.
       </p>
-      <p class="text-sm text-teal-800 leading-relaxed">
-        We keep our reviews current — firms that cease operations or fundamentally change their conditions
-        are updated or removed from rankings accordingly. If you spot data that needs updating, contact us.
+      <p class="text-slate-400 leading-relaxed mb-10 text-center max-w-2xl mx-auto">
+        Each category is weighted based on its impact on a trader's experience and potential earnings. For instance, factors like challenge accounts and profit payouts receive higher weights due to their direct influence on a trader's financial success, while factors like customer support and community contribute to the firm's accessibility and supportiveness.
+      </p>
+
+      <!-- Score tiers -->
+      <div class="space-y-4 mb-10">
+        <div class="flex items-start gap-5 bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
+          <div class="flex-shrink-0">
+            <span class="inline-flex items-center rounded-xl bg-green-500 px-4 py-2 text-lg font-black text-white shadow-lg shadow-green-500/20">
+              80–90
+            </span>
+          </div>
+          <div>
+            <p class="font-bold text-white text-lg">Outstanding</p>
+            <p class="text-sm text-slate-400 leading-relaxed">Outstanding performance across all categories, offering the best challenges, high flexibility, low costs, and strong customer support.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-5 bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
+          <div class="flex-shrink-0">
+            <span class="inline-flex items-center rounded-xl bg-yellow-400 px-4 py-2 text-lg font-black text-white shadow-lg shadow-yellow-400/20">
+              60–79
+            </span>
+          </div>
+          <div>
+            <p class="font-bold text-white text-lg">Good</p>
+            <p class="text-sm text-slate-400 leading-relaxed">Good balance of features but may have minor limitations in areas like platform range or customer support.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-5 bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
+          <div class="flex-shrink-0">
+            <span class="inline-flex items-center rounded-xl bg-red-500 px-4 py-2 text-lg font-black text-white shadow-lg shadow-red-500/20">
+              0–59
+            </span>
+          </div>
+          <div>
+            <p class="font-bold text-white text-lg">Below Average</p>
+            <p class="text-sm text-slate-400 leading-relaxed">Significant limitations in multiple categories, potentially restricting trader success and flexibility.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-slate-400 leading-relaxed text-center max-w-2xl mx-auto text-sm">
+        By combining individual scores into an overall rating, our methodology provides a balanced view of each prop trading firm, helping traders identify which firms best align with their trading goals and preferences. This consolidated rating offers a clear, data-driven way to compare prop firms side by side.
       </p>
     </div>
+  </section>
 
-    <!-- Methodology version -->
-    <p class="mt-8 text-center text-xs text-slate-400">
-      Methodology version 1.0 · Last updated February 2026
-    </p>
+  <!-- Editorial Independence + Updates -->
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid md:grid-cols-2 gap-5">
+      <!-- Editorial Independence -->
+      <div class="bg-gradient-to-br from-teal-50 to-emerald-50 border border-teal-200 rounded-2xl p-7">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-teal-500 flex items-center justify-center shadow-lg shadow-teal-500/20">
+            <svg width="18" height="18" viewBox="0 0 20 20" fill="white" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-black text-teal-900">Editorial Independence</h3>
+        </div>
+        <p class="text-sm text-teal-800 leading-relaxed mb-3">
+          No prop firm can pay for a better score or ranking on BestPropFirms.com. Our methodology is applied consistently to every firm we review, regardless of any affiliate relationship.
+        </p>
+        <p class="text-sm text-teal-800 leading-relaxed">
+          Our methodology ensures traders have a clear understanding of each prop firm's strengths and limitations. By consistently reviewing and updating our scoring, we strive to provide relevant, up-to-date insights to support informed trading decisions.
+        </p>
+      </div>
 
+      <!-- Keeping Current -->
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-7">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-500 flex items-center justify-center shadow-lg shadow-amber-500/20">
+            <svg class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-black text-amber-900">Keeping Reviews Current</h3>
+        </div>
+        <p class="text-sm text-amber-800 leading-relaxed mb-3">
+          We constantly update our site and reviews, so prop firms that are no longer operating, like Fidelcrest and Vantage Elite Trader, are not listed in shortlists or educational materials.
+        </p>
+        <p class="text-sm text-amber-800 leading-relaxed">
+          We keep our reviews current — firms that cease operations or fundamentally change their conditions are updated or removed from rankings accordingly. If you spot data that needs updating, contact us.
+        </p>
+      </div>
+    </div>
   </div>
+
+  <!-- Social CTA -->
+  <section class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pb-16">
+    <div class="relative overflow-hidden rounded-3xl bg-[#0d1b2a] px-8 py-14 sm:px-14 text-center">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(20,184,166,0.1),transparent_70%)]"></div>
+      <div class="relative">
+        <p class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3">Stay Connected</p>
+        <h2 class="text-3xl font-black text-white mb-4">Follow Our Research</h2>
+        <p class="text-slate-400 leading-relaxed max-w-xl mx-auto mb-8">
+          Get the latest prop firm reviews, scoring updates, and industry insights delivered through our social channels.
+        </p>
+        <a
+          href={`${base}/reviews`}
+          class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-teal-500 to-emerald-500 px-7 py-3.5 text-sm font-bold text-white hover:from-teal-400 hover:to-emerald-400 transition-all shadow-lg shadow-teal-500/25 hover:shadow-teal-500/40"
+        >
+          View Rankings
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Social links -->
+    <div class="mt-10 text-center">
+      <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-5">Follow Us</p>
+      <div class="flex items-center justify-center gap-3 flex-wrap">
+        {socials.map((s) => (
+          <a
+            href={s.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Follow us on ${s.name}`}
+            class:list={["group flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-600 transition-all", s.bg]}
+          >
+            <svg class:list={["h-4.5 w-4.5 fill-current text-slate-400 transition-colors", s.iconHover]} viewBox={s.viewBox} set:html={s.icon} />
+            {s.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
 </Base>

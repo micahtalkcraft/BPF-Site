@@ -1,0 +1,21 @@
+{
+  "id": "rev-funded-elite",
+  "propFirmId": "d0000042-0000-0000-0000-000000000042",
+  "summary": "Funded Elite scores 60/100 in our evaluation.",
+  "pros": [],
+  "cons": [],
+  "bestFor": "",
+  "notIdealFor": "",
+  "overallScore": 60,
+  "categoryScores": {
+    "challenges": 80,
+    "spreads": 70,
+    "markets": 70,
+    "payouts": 40,
+    "platforms": 50,
+    "trust": 50
+  },
+  "verified": true,
+  "methodologyVersion": "1.0",
+  "lastReviewedAt": "2026-02-27"
+}

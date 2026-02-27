@@ -44,7 +44,14 @@
       "Bash(git stash:*)",
       "WebFetch(domain:youtu.be)",
       "WebFetch(domain:www.youtube.com)",
-      "WebFetch(domain:noembed.com)"
+      "WebFetch(domain:noembed.com)",
+      "Bash(xargs -I {} sh -c 'echo \"\"=== {} ===\"\" && head -60 \"\"{}\"\"')",
+      "Bash(tr:*)",
+      "Bash(grep:*)",
+      "Bash(for firm in think-capital funded-prime city-traders-imperium the-trading-pit)",
+      "Bash(do echo -n \"$firm: \")",
+      "Bash(done)",
+      "Bash(for firm in think-capital funded-prime city-traders-imperium the-trading-pit blueberry-futures)"
     ]
   }
 }
