@@ -22,6 +22,18 @@ const sortedFirms = [...propFirms].sort((a, b) => {
   return bs - as;
 });
 
+// FAQ data — shared between template and structured data
+const faqs = [
+  { q: "What is a prop trading firm?", a: "A proprietary trading firm (prop firm) provides traders with capital to trade financial markets. Instead of risking your own money, you trade the firm's capital and share a percentage of the profits. Most firms require you to pass an evaluation or challenge before receiving a funded account." },
+  { q: "How does the Broker Score work?", a: "Our Broker Score is a proprietary rating from 0-100 based on our hands-on testing. We purchase challenges with our own money and evaluate: platform stability, execution speed, spread consistency, payout reliability, customer support quality, and rule transparency. We do not use user reviews or affiliate incentives in our scoring." },
+  { q: "What's the difference between instant funding and evaluation programs?", a: "Instant funding gives you immediate access to a funded account without passing a challenge, typically with lower profit splits or higher fees. Evaluation programs require you to hit profit targets while following trading rules, usually offering better profit splits once you pass." },
+  { q: "How do payouts work at prop firms?", a: "After generating profits on your funded account, you can request a payout according to the firm's schedule (daily, weekly, bi-weekly, or monthly). Payouts are typically processed via bank transfer, cryptocurrency, or payment processors like PayPal. The firm keeps their percentage, and you receive your share." },
+  { q: "Are prop firms legitimate or scams?", a: "The prop trading industry includes both legitimate firms and questionable operators. We only feature firms we've personally tested and received payouts from. Look for firms with transparent rules, verified payout history, responsive support, and realistic trading conditions." },
+  { q: "Can US traders use prop firms?", a: "Yes, but options are more limited due to regulatory restrictions. Many international prop firms don't accept US clients, while others have specific programs for US traders. We clearly mark which firms accept US traders in our reviews and filters." },
+  { q: "What platforms do prop firms offer?", a: "Most prop firms offer MetaTrader 4 (MT4), MetaTrader 5 (MT5), or cTrader. Some newer firms also support TradingView for charting with proprietary execution. The platform availability often depends on the broker the prop firm uses for execution." },
+  { q: "How much capital can I get from a prop firm?", a: "Initial funded account sizes typically range from $10,000 to $200,000. Many firms offer scaling programs where you can increase your account size by demonstrating consistent profitability, with some programs reaching up to $2 million or more." },
+];
+
 const jsonLd = [
   {
     "@context": "https://schema.org",
@@ -40,8 +52,33 @@ const jsonLd = [
     "@type": "Organization",
     name: "BestPropFirms.com",
     url: "https://www.bestpropfirms.com",
-    logo: "https://www.bestpropfirms.com/favicon.svg",
+    logo: "https://www.bestpropfirms.com/images/brand/best-prop-firms-site-logo.png",
     sameAs: [],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Best Prop Trading Firms 2026",
+    description: "Independent rankings of proprietary trading firms, scored across 7 categories.",
+    numberOfItems: totalFirms,
+    itemListElement: sortedFirms.slice(0, 10).map((f, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: f.data.name,
+      url: `https://www.bestpropfirms.com/reviews/${f.data.slug}`,
+    })),
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.a,
+      },
+    })),
   },
 ];
 
@@ -111,8 +148,8 @@ const firmItems: FirmItem[] = sortedFirms.map((f, idx) => {
         Independent · Unsponsored · Data-Verified
       </div>
       <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6">
-        Find a Prop Firm<br />
-        <span class="text-teal-400">You Can Actually Trust</span>
+        Best Prop Trading Firms 2026<br />
+        <span class="text-teal-400">Ranked &amp; Reviewed</span>
       </h1>
       <p class="text-lg text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
         Every ranking is built from a single verified data record. Transparent scores across <span class="font-bold text-white">{totalFirms} evaluated firms</span> — no guesswork, no paid placements.
@@ -405,16 +442,7 @@ const firmItems: FirmItem[] = sortedFirms.map((f, idx) => {
       </div>
 
       <div class="space-y-3" id="faq-list">
-        {[
-          { q: "What is a prop trading firm?", a: "A proprietary trading firm (prop firm) provides traders with capital to trade financial markets. Instead of risking your own money, you trade the firm's capital and share a percentage of the profits. Most firms require you to pass an evaluation or challenge before receiving a funded account." },
-          { q: "How does the Broker Score work?", a: "Our Broker Score is a proprietary rating from 0-100 based on our hands-on testing. We purchase challenges with our own money and evaluate: platform stability, execution speed, spread consistency, payout reliability, customer support quality, and rule transparency. We do not use user reviews or affiliate incentives in our scoring." },
-          { q: "What's the difference between instant funding and evaluation programs?", a: "Instant funding gives you immediate access to a funded account without passing a challenge, typically with lower profit splits or higher fees. Evaluation programs require you to hit profit targets while following trading rules, usually offering better profit splits once you pass." },
-          { q: "How do payouts work at prop firms?", a: "After generating profits on your funded account, you can request a payout according to the firm's schedule (daily, weekly, bi-weekly, or monthly). Payouts are typically processed via bank transfer, cryptocurrency, or payment processors like PayPal. The firm keeps their percentage, and you receive your share." },
-          { q: "Are prop firms legitimate or scams?", a: "The prop trading industry includes both legitimate firms and questionable operators. We only feature firms we've personally tested and received payouts from. Look for firms with transparent rules, verified payout history, responsive support, and realistic trading conditions." },
-          { q: "Can US traders use prop firms?", a: "Yes, but options are more limited due to regulatory restrictions. Many international prop firms don't accept US clients, while others have specific programs for US traders. We clearly mark which firms accept US traders in our reviews and filters." },
-          { q: "What platforms do prop firms offer?", a: "Most prop firms offer MetaTrader 4 (MT4), MetaTrader 5 (MT5), or cTrader. Some newer firms also support TradingView for charting with proprietary execution. The platform availability often depends on the broker the prop firm uses for execution." },
-          { q: "How much capital can I get from a prop firm?", a: "Initial funded account sizes typically range from $10,000 to $200,000. Many firms offer scaling programs where you can increase your account size by demonstrating consistent profitability, with some programs reaching up to $2 million or more." },
-        ].map((faq) => (
+        {faqs.map((faq) => (
           <details class="faq-item group rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-200 hover:border-slate-300">
             <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left text-sm font-bold text-slate-900 select-none [&::-webkit-details-marker]:hidden">
               {faq.q}
