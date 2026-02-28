@@ -13,6 +13,13 @@ export async function getStaticPaths() {
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
+/** Prefix local asset paths (starting with /) with the site base URL */
+function assetUrl(path: string | undefined): string | undefined {
+  if (!path) return undefined;
+  if (path.startsWith("http")) return path;
+  return `${base}${path}`;
+}
+
 const { post } = Astro.props;
 const { Content, headings } = await post.render();
 
@@ -142,7 +149,7 @@ const featuredFirmCards: FeaturedFirmCard[] = (post.data.featuredFirms ?? []).ma
       <div class="flex items-center gap-3">
         {post.data.authorImage && (
           <img
-            src={post.data.authorImage}
+            src={assetUrl(post.data.authorImage)}
             alt={post.data.author}
             class="w-9 h-9 rounded-full object-cover border-2 border-white/20"
           />
@@ -171,7 +178,7 @@ const featuredFirmCards: FeaturedFirmCard[] = (post.data.featuredFirms ?? []).ma
   {post.data.coverImage && !post.data.youtubeVideoId && (
     <div class="mx-auto max-w-3xl px-4 -mt-6 mb-8 relative z-10">
       <img
-        src={post.data.coverImage}
+        src={assetUrl(post.data.coverImage)}
         alt={post.data.title}
         class="w-full rounded-xl shadow-lg object-cover max-h-96"
       />
@@ -713,7 +720,7 @@ const featuredFirmCards: FeaturedFirmCard[] = (post.data.featuredFirms ?? []).ma
               class="group bg-white border border-slate-200 rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col"
             >
               {p.data.coverImage ? (
-                <img src={p.data.coverImage} alt={p.data.title} class="w-full h-40 object-cover" loading="lazy" />
+                <img src={assetUrl(p.data.coverImage)} alt={p.data.title} class="w-full h-40 object-cover" loading="lazy" />
               ) : (
                 <div class="w-full h-40 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
                   <svg class="h-8 w-8 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
