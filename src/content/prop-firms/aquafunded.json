@@ -1,50 +1,75 @@
 {
   "id": "d0000040-0000-0000-0000-000000000040",
   "slug": "aquafunded",
-  "name": "Aquafunded",
+  "name": "AquaFunded",
   "status": "active",
+  "hqCountry": "AE",
   "evaluation": {
-    "types": [],
-    "profitTargets": {},
-    "dailyDrawdown": null,
-    "maxDrawdown": null,
-    "minTradingDays": null,
-    "scalingPlan": null
+    "types": ["1-step", "2-step", "3-step", "instant"],
+    "profitTargets": { "phase1": 10, "phase2": 5, "phase3": 6 },
+    "dailyDrawdown": 5,
+    "maxDrawdown": 10,
+    "minTradingDays": 3,
+    "scalingPlan": true
   },
   "pricing": {
-    "challengeFees": [],
+    "challengeFees": [
+      { "accountSize": 5000, "fee": 47, "model": "1-step", "label": "1-Step Standard" },
+      { "accountSize": 200000, "fee": 712, "model": "1-step", "label": "1-Step Standard" },
+      { "accountSize": 5000, "fee": 41, "model": "1-step", "label": "1-Step Pro" },
+      { "accountSize": 200000, "fee": 629, "model": "1-step", "label": "1-Step Pro" },
+      { "accountSize": 5000, "fee": 28, "model": "2-step", "label": "2-Step Standard" },
+      { "accountSize": 200000, "fee": 698, "model": "2-step", "label": "2-Step Standard" },
+      { "accountSize": 5000, "fee": 19, "model": "2-step", "label": "2-Step Pro" },
+      { "accountSize": 200000, "fee": 649, "model": "2-step", "label": "2-Step Pro" },
+      { "accountSize": 10000, "fee": 54, "model": "3-step", "label": "3-Step" },
+      { "accountSize": 200000, "fee": 474, "model": "3-step", "label": "3-Step" },
+      { "accountSize": 2500, "fee": 34, "model": "1-step", "label": "AquaMan (Limited)" },
+      { "accountSize": 100000, "fee": 440, "model": "1-step", "label": "AquaMan (Limited)" },
+      { "accountSize": 5000, "fee": 147, "model": "instant", "label": "Instant Standard" },
+      { "accountSize": 50000, "fee": 502, "model": "instant", "label": "Instant Standard" },
+      { "accountSize": 2500, "fee": 42, "model": "instant", "label": "Instant Pro" },
+      { "accountSize": 200000, "fee": 875, "model": "instant", "label": "Instant Pro" }
+    ],
     "resetFee": null,
-    "refundPolicy": null
+    "refundPolicy": "No general refund policy. Refunds available only if KYC is refused. Optional add-ons available: 100% profit split upgrade and 7-day fast payout at additional cost."
   },
   "payouts": {
-    "splitMax": null,
-    "schedule": null,
-    "processingTime": null,
-    "firstPayoutDays": null,
-    "methods": []
+    "splitMax": 100,
+    "schedule": "Bi-weekly (14 days, or 7 days with add-on)",
+    "processingTime": "1-3 business days",
+    "firstPayoutDays": 14,
+    "methods": ["crypto", "bank-transfer"]
   },
   "rules": {
-    "newsTrading": null,
-    "weekendHolding": null,
-    "copyTrading": null,
-    "expertAdvisors": null,
-    "consistencyRule": null,
-    "notes": null
+    "newsTrading": true,
+    "weekendHolding": true,
+    "copyTrading": true,
+    "expertAdvisors": true,
+    "consistencyRule": "15-40% depending on model. Pro and Instant accounts enforce consistency rules post-funding. Standard evaluation accounts have no consistency rule.",
+    "notes": "News trading allowed during evaluation but restricted once funded — 10-minute no-trade window around red folder events, full block during FOMC news. Copy trading allowed between own AquaFunded accounts or legally linked personal accounts. EAs allowed on all platforms — no tick manipulation, latency arbitrage, or HFT strategies. Hedging and martingale strategies permitted. No forced stop losses or lot size limits. Risk per trade should stay within 1-2%, margin use should not exceed 80%. All accounts are demo/simulated trading environments. Payments processed by Paytiko (cards, Apple Pay, crypto)."
   },
   "markets": {
-    "platforms": [],
-    "instruments": ""
+    "platforms": ["MT5", "TradeLocker", "Match Trader"],
+    "instruments": "Forex (28 pairs, up to 1:100 evaluation / 1:30-1:50 funded), Metals (2, 1:20 evaluation / 1:10 funded), Indices (7, 1:20 evaluation / 1:10 funded), Commodities (2, 1:20 evaluation / 1:10 funded), Crypto (4, 1:2 leverage)"
   },
   "trust": {
     "trustpilotRating": null,
     "trustpilotCount": null,
-    "communitySize": null,
-    "notableFlags": []
+    "communitySize": "32,000+ Discord members",
+    "notableFlags": ["Trustpilot profile flagged for guideline breaches — fake reviews removed", "32,000+ Discord members", "Dubai-based (AE)", "No broker backing officially disclosed", "Partners with ThinkMarkets and Purple Trading (undisclosed)", "Strict post-funding consistency rules (15-40%)"]
   },
   "links": { "website": "https://aquafunded.com" },
   "media": { "logo": "/images/logos/aquafunded.png" },
   "availability": { "restrictedCountries": [] },
-  "custom": { "tags": [] },
+  "support": {
+    "hours": "Monday to Friday, 9 AM to 5 PM Dubai time",
+    "liveChat": true,
+    "email": true
+  },
+  "custom": {
+    "tags": ["Multiple Evaluations", "Instant Funding", "Scaling Plan", "Trustpilot Flagged"]
+  },
   "lastVerifiedAt": "2026-02-27",
   "lastUpdatedAt": "2026-02-27",
   "dataSources": ["https://aquafunded.com"]

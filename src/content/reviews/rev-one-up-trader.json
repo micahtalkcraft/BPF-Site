@@ -1,11 +1,25 @@
 {
   "id": "rev-one-up-trader",
   "propFirmId": "d0000039-0000-0000-0000-000000000039",
-  "summary": "One Up Trader scores 57/100 in our evaluation.",
-  "pros": [],
-  "cons": [],
-  "bestFor": "",
-  "notIdealFor": "",
+  "summary": "OneUp Trader scored 57/100 overall and is a popular prop firm for futures trading. You can qualify for funding in as little as 10 days—or just 5 with the Express Funding option—while keeping 100% of your first $10,000 in profits and 90% after that.\n\nHowever, the futures prop firm has clear limitations. Monthly fees during the evaluation phase can add up, especially if you don't pass on the first try. Some traders have also flagged issues with strict rule enforcement and platform stability. While the evaluation is simple, the tight trailing drawdown can be a hurdle for more aggressive strategies.\n\nOneUp Trader is best suited for disciplined futures traders who value simplicity and platform variety but may not be ideal if you're looking for more asset class flexibility or a lower-cost path to funding.",
+  "pros": [
+    "100% of first $10K profit kept by trader",
+    "Simple one-step evaluation process",
+    "Over 20 supported trading platforms",
+    "Free NinjaTrader license included",
+    "No daily loss limits during evaluation",
+    "On-demand payouts with no fixed schedule"
+  ],
+  "cons": [
+    "Monthly subscription fees add up during evaluation",
+    "Futures-only — no forex, crypto, or equities",
+    "Tight trailing drawdown can be challenging",
+    "$1,000 minimum withdrawal threshold",
+    "Card-only payments for challenge fees",
+    "No free educational resources"
+  ],
+  "bestFor": "Disciplined futures traders who value a simple one-step evaluation, platform variety with 20+ options, and a generous 90% profit split with 100% of the first $10K",
+  "notIdealFor": "Traders who want forex, crypto, or equities access, prefer lower-cost evaluations, or need automation-friendly rules without strict consistency requirements",
   "overallScore": 57,
   "categoryScores": {
     "challenges": 60,
@@ -13,9 +27,44 @@
     "markets": 50,
     "payouts": 60,
     "platforms": 70,
+    "support": 55,
     "trust": 50
   },
+  "categorySections": {
+    "challenges": "custom",
+    "spreads": "custom",
+    "markets": "custom",
+    "platforms": "custom",
+    "payouts": "custom",
+    "support": "custom",
+    "trust": "custom"
+  },
+  "verdictBlocks": [
+    {
+      "heading": "Our Final Verdict On OneUp Trader",
+      "body": "OneUp Trader is worth considering if you're focused on futures trading and want a simple, fast-track way to get funded, yet some traders have raised valid concerns.\n\nA major benefit is the one-step evaluation is beginner-friendly, with no daily loss limits and a strong 90% profit split (plus 100% of the first $10K). Platform flexibility is also a major plus, with NinjaTrader access included and over 20 options available, and the Express Funding for returning traders is a helpful feature.\n\nThat said, there are clear limitations. You're restricted to futures only—no forex, crypto, or equities—and the trailing drawdown can make the evaluation tough. The $1,000 minimum payout threshold and card-only payments may also be a downside for smaller accounts. Some experienced traders have flagged concerns about inconsistent rule enforcement and platform reliability.\n\nOverall, OneUp Trader suits disciplined futures traders who prefer a quick and straightforward path to funding, but it may not be the best fit for everyone."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What broker does OneUp Trader use?",
+      "a": "OneUp Trader is not a broker-backed prop trading firm. Instead, it partners with several liquidity providers to facilitate futures trading. While not operating under a single brokerage, more than 20 trading platforms are available for you to use, with access to NinjaTrader already provided with each challenge program."
+    },
+    {
+      "q": "Does OneUp Trader accept US clients?",
+      "a": "Yes, they accept traders from the United States. Since OneUp Trader focuses on futures trading, it does not face the same restrictions that cover forex and CFD trading. Still, wherever you are, make sure OneUp Trader complies with your local trading regulations."
+    },
+    {
+      "q": "Is OneUp Trader legit or a scam?",
+      "a": "OneUp Trader is a legitimate prop firm. While they offer an easy one-step evaluation challenge, fast funding options, and generous profit splits, some traders have voiced concerns about strict rule enforcement and platform stability. The firm holds a 4.7/5 TrustPilot rating from over 2,000 reviews."
+    },
+    {
+      "q": "Are EAs and copy trading allowed with OneUp Trader?",
+      "a": "Yes, OneUp Trader allows EAs (Expert Advisors) and automated trading. Copy trading is also allowed, but only between accounts registered under the same name. Group trading, high-frequency trading, and trades lasting under 10 seconds are not permitted."
+    }
+  ],
   "verified": true,
+  "flagged": false,
   "methodologyVersion": "1.0",
   "lastReviewedAt": "2026-02-27"
 }

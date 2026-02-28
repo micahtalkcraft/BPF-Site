@@ -3,7 +3,8 @@
   "slug": "city-traders-imperium",
   "name": "City Traders Imperium",
   "status": "active",
-  "hqCountry": "GB",
+  "foundedYear": 2018,
+  "hqCountry": "AE",
   "evaluation": {
     "types": ["1-step", "2-step", "instant"],
     "profitTargets": { "phase1": 10, "phase2": 5 },
@@ -13,14 +14,38 @@
     "scalingPlan": true
   },
   "pricing": {
-    "challengeFees": [],
+    "challengeFees": [
+      { "accountSize": 2500, "fee": 49, "model": "1-step" },
+      { "accountSize": 5000, "fee": 59, "model": "1-step" },
+      { "accountSize": 10000, "fee": 99, "model": "1-step" },
+      { "accountSize": 25000, "fee": 179, "model": "1-step" },
+      { "accountSize": 50000, "fee": 329, "model": "1-step" },
+      { "accountSize": 100000, "fee": 519, "model": "1-step" },
+      { "accountSize": 2500, "fee": 39, "model": "2-step" },
+      { "accountSize": 5000, "fee": 59, "model": "2-step" },
+      { "accountSize": 10000, "fee": 99, "model": "2-step" },
+      { "accountSize": 25000, "fee": 179, "model": "2-step" },
+      { "accountSize": 50000, "fee": 329, "model": "2-step" },
+      { "accountSize": 100000, "fee": 519, "model": "2-step" },
+      { "accountSize": 2500, "fee": 89, "model": "instant" },
+      { "accountSize": 5000, "fee": 249, "model": "instant" },
+      { "accountSize": 10000, "fee": 449, "model": "instant" },
+      { "accountSize": 20000, "fee": 849, "model": "instant" },
+      { "accountSize": 40000, "fee": 1499, "model": "instant" },
+      { "accountSize": 80000, "fee": 2399, "model": "instant" },
+      { "accountSize": 5000, "fee": 329, "model": "instant-pro" },
+      { "accountSize": 10000, "fee": 599, "model": "instant-pro" },
+      { "accountSize": 20000, "fee": 1199, "model": "instant-pro" },
+      { "accountSize": 40000, "fee": 2399, "model": "instant-pro" },
+      { "accountSize": 80000, "fee": 4799, "model": "instant-pro" }
+    ],
     "resetFee": null,
-    "refundPolicy": null
+    "refundPolicy": "No refund once trading activity starts. Eligible within 7 days if account completely inactive."
   },
   "payouts": {
     "splitMax": 100,
-    "schedule": "14 days",
-    "processingTime": null,
+    "schedule": "Bi-weekly (14 days)",
+    "processingTime": "1-2 business days",
     "firstPayoutDays": 14,
     "methods": ["bank transfer", "crypto"]
   },
@@ -30,25 +55,29 @@
     "copyTrading": null,
     "expertAdvisors": true,
     "consistencyRule": null,
-    "notes": null
+    "notes": "All challenges and funded accounts operate on simulated accounts with balance-based (static) drawdown. Instant Funding uses trailing drawdown. US clients limited to MatchTrader platform only. Minimum $100 profit withdrawal. No third-party withdrawals."
   },
   "markets": {
-    "platforms": ["MT5", "cTrader", "Match-Trader"],
-    "instruments": "Forex, Indices, Commodities, Crypto"
+    "platforms": ["MT5", "MatchTrader"],
+    "instruments": "Forex (28 pairs), Indices (13), Commodities (3), Crypto (6)"
   },
   "trust": {
-    "trustpilotRating": null,
+    "trustpilotRating": 4.4,
     "trustpilotCount": null,
-    "communitySize": null,
-    "notableFlags": []
+    "communitySize": "24,000+ Discord, 21,500+ Instagram",
+    "notableFlags": ["Partners with Broctagon (CySEC regulated)", "Funded over 36,000 traders", "$367M+ capital allocated"]
   },
   "links": { "website": "https://citytradersimperium.com" },
   "media": { "logo": "/images/logos/city-traders-imperium-logo.png" },
   "availability": { "restrictedCountries": [] },
-  "custom": {
-    "tags": ["$2.5K Challenges", "Up to 100% Split", "Weekend Trading", "Commission-Free Crypto"]
+  "support": {
+    "liveChat": true,
+    "email": true
   },
-  "lastVerifiedAt": "2026-02-26",
-  "lastUpdatedAt": "2026-02-26",
+  "custom": {
+    "tags": ["Instant Funding", "Up to 100% Split", "Scaling to $4M", "Funded Trader Salary"]
+  },
+  "lastVerifiedAt": "2026-02-27",
+  "lastUpdatedAt": "2026-02-27",
   "dataSources": ["https://citytradersimperium.com"]
 }

@@ -5,50 +5,73 @@
   "status": "active",
   "hqCountry": "IL",
   "evaluation": {
-    "types": ["1-step", "2-step"],
-    "profitTargets": { "phase1": 10, "phase2": 5 },
-    "dailyDrawdown": 2,
+    "types": ["1-step"],
+    "profitTargets": { "phase1": 6 },
+    "dailyDrawdown": 3,
     "maxDrawdown": 7,
-    "minTradingDays": 3,
+    "minTradingDays": 0,
     "scalingPlan": true
   },
   "pricing": {
-    "challengeFees": [],
+    "challengeFees": [
+      { "accountSize": 5000, "fee": 59, "model": "day-beginner" },
+      { "accountSize": 25000, "fee": 120, "model": "day-beginner" },
+      { "accountSize": 50000, "fee": 285, "model": "day-beginner" },
+      { "accountSize": 100000, "fee": 545, "model": "day-beginner" },
+      { "accountSize": 200000, "fee": 1475, "model": "day-beginner" },
+      { "accountSize": 5000, "fee": 47, "model": "day-advanced" },
+      { "accountSize": 25000, "fee": 97, "model": "day-advanced" },
+      { "accountSize": 50000, "fee": 230, "model": "day-advanced" },
+      { "accountSize": 100000, "fee": 435, "model": "day-advanced" },
+      { "accountSize": 200000, "fee": 1100, "model": "day-advanced" },
+      { "accountSize": 2000, "fee": 87, "model": "swing-beginner" },
+      { "accountSize": 10000, "fee": 420, "model": "swing-beginner" },
+      { "accountSize": 20000, "fee": 670, "model": "swing-beginner" },
+      { "accountSize": 40000, "fee": 1240, "model": "swing-beginner" },
+      { "accountSize": 2000, "fee": 69, "model": "swing-advanced" },
+      { "accountSize": 10000, "fee": 297, "model": "swing-advanced" },
+      { "accountSize": 20000, "fee": 447, "model": "swing-advanced" },
+      { "accountSize": 40000, "fee": 800, "model": "swing-advanced" }
+    ],
     "resetFee": null,
-    "refundPolicy": null
+    "refundPolicy": "No fee refund on challenges. Some payout methods may include processing fees."
   },
   "payouts": {
     "splitMax": 70,
-    "schedule": "Monthly",
-    "processingTime": null,
-    "firstPayoutDays": null,
-    "methods": ["bank transfer", "crypto"]
+    "schedule": "Bi-weekly (14 days)",
+    "processingTime": "1-2 business days",
+    "firstPayoutDays": 14,
+    "methods": ["credit card", "PayPal", "SEPA", "iDeal"]
   },
   "rules": {
-    "newsTrading": true,
-    "weekendHolding": false,
+    "newsTrading": null,
+    "weekendHolding": true,
     "copyTrading": false,
     "expertAdvisors": false,
-    "consistencyRule": null,
-    "notes": "Stock-focused prop firm. Trades US equities only. Short selling allowed."
+    "consistencyRule": "30-50% rule (best trade cannot exceed 30-50% of total profit, varies by program)",
+    "notes": "Stock and ETF prop firm only. All trading is simulated. Minimum 30-second hold per trade. Minimum 10-cent movement for profitable trades. Volume capped at 5% of previous one-minute volume. Day accounts must be flat before close. Swing accounts allow overnight and weekend holding. Operated by Five Percent Online Ltd (The 5%ers)."
   },
   "markets": {
-    "platforms": ["TradeThePool Platform"],
-    "instruments": "US Stocks (NYSE, NASDAQ)"
+    "platforms": ["TraderEvolution"],
+    "instruments": "US Stocks and ETFs (12,000+ symbols via NASDAQ, NYSE, CBOE)"
   },
   "trust": {
-    "trustpilotRating": null,
-    "trustpilotCount": null,
+    "trustpilotRating": 4.5,
+    "trustpilotCount": 500,
     "communitySize": null,
-    "notableFlags": []
+    "notableFlags": ["Operated by Five Percent Online Ltd (The 5%ers)", "Real exchange data from NASDAQ, NYSE, CBOE", "4.5/5 Trustpilot from 500+ reviews"]
   },
   "links": { "website": "https://tradethepool.com" },
   "media": { "logo": "/images/logos/trade-the-pool-logo.png" },
   "availability": { "restrictedCountries": [] },
-  "custom": {
-    "tags": ["Stock Trading", "US Equities", "Short Selling"]
+  "support": {
+    "liveChat": false,
+    "email": true
   },
-  "lastVerifiedAt": "2026-02-26",
-  "lastUpdatedAt": "2026-02-26",
+  "custom": {
+    "tags": ["US Stocks & ETFs", "12,000+ Symbols", "Real Exchange Data", "One-Step Evaluation"]
+  },
+  "lastVerifiedAt": "2026-02-27",
+  "lastUpdatedAt": "2026-02-27",
   "dataSources": ["https://tradethepool.com"]
 }

@@ -1,7 +1,7 @@
 {
   "id": "rev-the-trading-pit",
   "propFirmId": "d0000016-0000-0000-0000-000000000016",
-  "summary": "With an overall score of 78/100, The Trading Pit stands out by offering both CFD and Futures challenges, a rare combination in the prop firm space. It provides funding up to $250,000, weekly payouts, and access to a wide range of platforms including MT4, MT5, cTrader, TradingView, and advanced futures platforms.\n\nHowever, there are drawbacks. Profit splits for lower-tier accounts start at 50%, which is below many competitors. Some traders report platform stability issues during high volatility, and while forex spreads are competitive, crypto commissions and futures market data upgrades add extra costs.",
+  "summary": "The Trading Pit scores 78/100, reflecting a mixed offering that includes both CFD and Futures challenges. While having both markets is uncommon, the prop firm has drawbacks that limit its appeal. Lower-tier profit splits start at 50%, which is lower than many competitors, and some traders report platform stability issues during volatility.\n\nAlthough it offers weekly payouts and multiple trading platforms, including MT4, MT5, cTrader, TradingView, and advanced futures platforms, higher trading costs and inconsistent platform performance make it less competitive for some traders. The 40% consistency rule and set minimum trading days add further constraints, though the structured challenge types across CFDs, Futures, and Stocks provide flexibility for traders who want access to multiple asset classes under one roof.",
   "pros": [
     "CFDs, Stocks, and Futures challenges available",
     "Weekly payouts with fast 1 business day processing",
@@ -69,5 +69,5 @@
   "verified": true,
   "flagged": false,
   "methodologyVersion": "1.0",
-  "lastReviewedAt": "2026-02-24"
+  "lastReviewedAt": "2026-02-27"
 }

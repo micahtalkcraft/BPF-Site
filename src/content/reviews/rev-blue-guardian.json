@@ -1,11 +1,21 @@
 {
   "id": "rev-blue-guardian",
   "propFirmId": "d0000043-0000-0000-0000-000000000043",
-  "summary": "Blue Guardian scores 45/100 in our evaluation.",
-  "pros": [],
-  "cons": [],
-  "bestFor": "",
-  "notIdealFor": "",
+  "summary": "Blue Guardian scored 45/100 in our full review because while the prop firm offers a wide mix of challenge types, including instant funding and multi-step evaluations, the way these models are structured can be confusing. Key rules like payout caps, drawdown types, and consistency requirements differ significantly between plans, and not all terms are explained clearly up front.\n\nThat lack of clarity makes it harder to assess whether you're getting long-term value for the fee. Some accounts offer fast payouts and flexible trading conditions, while others include strict limits that may not suit experienced traders. Combined with a delisted TrustPilot rating and limited transparency around scaling, it's a setup that raises questions. Traders considering this firm should review each model carefully before committing.",
+  "pros": [
+    "Instant funding accounts available with no evaluation phase",
+    "No time limits on any challenge or evaluation",
+    "MT5, Match-Trader, and TradeLocker platform options",
+    "Active Discord community with 80,000+ members"
+  ],
+  "cons": [
+    "TrustPilot profile removed due to guideline violations",
+    "Rules vary widely between challenge types with inconsistent terms",
+    "No published data on spreads or execution quality",
+    "Instant Starter payouts limited to a single $250 withdrawal"
+  ],
+  "bestFor": "Traders who want instant funding options with no time limits and prefer flexible platform choices across MT5, Match-Trader, and TradeLocker",
+  "notIdealFor": "Traders seeking transparent scaling plans, strong trust signals, consistent rules across all account types, or those uncomfortable with a firm whose TrustPilot rating has been removed",
   "overallScore": 45,
   "categoryScores": {
     "challenges": 60,
@@ -15,8 +25,38 @@
     "platforms": 50,
     "trust": 40
   },
-  "flagged": true,
+  "categorySections": {
+    "challenges": "custom",
+    "spreads": "custom",
+    "markets": "custom",
+    "platforms": "custom",
+    "payouts": "custom",
+    "support": "custom",
+    "trust": "custom"
+  },
+  "verdictBlocks": [
+    {
+      "heading": "Our Final Verdict On Blue Guardian",
+      "body": "Blue Guardian ended up with a low score of 45/100 due to issues around transparency, inconsistent rule sets, and strict limitations on certain account types. While the firm does offer a wide selection of evaluations, including instant funding and three-step models, not all challenges provide long-term value — particularly the Instant Starter, which caps total payout at just $250 and closes the account after a single withdrawal.\n\nThe lack of clarity across risk parameters, payout rules, and scaling progression makes it difficult to evaluate your upside before committing a fee. TrustPilot delisting and feedback around spread execution and Guardian Shield usage further affect the trust score. On the positive side, the no-expiry challenges, platform flexibility, and fast Discord support will appeal to some traders. But overall, Blue Guardian is better suited to cautious testing than serious capital scaling."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Does Blue Guardian pay out?",
+      "a": "Yes, Blue Guardian does pay out, but only if you follow their rules exactly. Payouts are available every 14 days once funded, or every 7 days if you add the performance upgrade. Profit splits range from 80% to 90% depending on the account type. However, breaking any trading rule, including daily loss or consistency limits, voids eligibility. Payouts are handled through Riseworks.io, and crypto withdrawals are capped at $2,000 per request."
+    },
+    {
+      "q": "What is the most legit prop firm?",
+      "a": "The most legit prop firm in our rankings is DNA Funded, which scored 97/100 based on live testing. It's ranked number one on our best prop firms list for offering low-cost challenges, strong broker backing, and up to 90% profit splits. By comparison, Blue Guardian scored just 45/100 in our review, largely due to payout caps, inconsistent rules, and a removed TrustPilot rating. If legitimacy and structure matter, start with a firm that's tested and verified."
+    },
+    {
+      "q": "Which broker does Blue Guardian use?",
+      "a": "Blue Guardian is not a broker-backed prop firm. That doesn't automatically make it untrustworthy, but it does mean less transparency compared to the best broker-backed prop firms available. Broker-backed firms often offer better execution quality and clearer trading conditions, which can be a key factor for serious traders evaluating cost and slippage. If that matters to you, a broker-backed option may offer more peace of mind."
+    }
+  ],
   "verified": true,
+  "flagged": true,
+  "flaggedWarning": "Blue Guardian's TrustPilot profile has been **flagged for guideline violations**, making their public rating unavailable. Despite having 1,400+ reviews, this lack of transparency is concerning. The firm is **not broker-backed**, meaning there's limited external oversight during evaluation and funded phases. Key rules — including payout caps, consistency requirements, and drawdown types — **vary significantly between challenge models**, and some accounts carry strict limitations that aren't always clear upfront.",
   "methodologyVersion": "1.0",
-  "lastReviewedAt": "2026-02-27"
+  "lastReviewedAt": "2026-02-28"
 }

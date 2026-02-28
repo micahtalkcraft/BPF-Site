@@ -1,11 +1,25 @@
 {
   "id": "rev-seacrest-funding",
   "propFirmId": "d0000038-0000-0000-0000-000000000038",
-  "summary": "Seacrest Funding scores 65/100 in our evaluation.",
-  "pros": [],
-  "cons": [],
-  "bestFor": "",
-  "notIdealFor": "",
+  "summary": "Seacrest Funded, formerly known as MyFundedFX, scores 65/100 in our evaluation. It's a proprietary trading firm offering a decent range of trading challenges and flexible payout options tailored to different trading styles. The firm's mix of one-step to three-step programs and multi-platform support, including MT5, cTrader, MatchTrader, and DXTrade, cater well to traders looking for structure and platform variety.\n\nWhile the leverage cap at 1:30 may not suit high-leverage traders, Seacrest Funded has an active community and responsive support that make it an appealing option for those valuing community and guidance. However, recent rule changes may be a drawback for traders seeking stability. Overall, it's a balanced choice for those prioritising structure and support over high leverage.",
+  "pros": [
+    "Multiple challenge options from 1-Step to 3-Step",
+    "Great customer support with live chat",
+    "Large Discord community with 125,100+ members",
+    "Four trading platforms to choose from",
+    "News trading permitted during all phases",
+    "VIP upgrade available for 90% profit split"
+  ],
+  "cons": [
+    "Lower leverage capped at 1:30 for forex",
+    "Restrictions on algorithmic trading and EAs on MT5",
+    "Reported rule changes over time",
+    "Trailing drawdown on 1-Step challenge",
+    "Inactivity rule requires trading every 28 days",
+    "Limited crypto selection across platforms"
+  ],
+  "bestFor": "Traders who value multiple challenge options, platform variety, active community support, and a structured evaluation process with news trading allowed",
+  "notIdealFor": "High-leverage traders, algorithmic traders using EAs on MT5, or traders who prefer firms with fewer rule changes and higher starting profit splits",
   "overallScore": 65,
   "categoryScores": {
     "challenges": 60,
@@ -13,9 +27,52 @@
     "markets": 60,
     "payouts": 70,
     "platforms": 70,
+    "support": 70,
     "trust": 60
   },
+  "categorySections": {
+    "challenges": "custom",
+    "spreads": "custom",
+    "markets": "custom",
+    "platforms": "custom",
+    "payouts": "custom",
+    "support": "custom",
+    "trust": "custom"
+  },
+  "verdictBlocks": [
+    {
+      "heading": "Our Final Verdict On Seacrest Funded",
+      "body": "Seacrest Funded delivers a reliable prop trading experience with a solid 4.3/5 TrustPilot score, praised for its fast payouts and helpful customer service. With flexible challenge types and regular payouts every 14 days, it suits a variety of trading styles. The active Discord community of over 125,100 members adds value, providing support and trading insights.\n\nHowever, some users have noted recent rule changes that may not fit all traders. Overall, Seacrest Funded is a good prop firm if you are looking for diverse funding challenges, fast withdrawals, and strong community support."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the payout method for Seacrest Funded?",
+      "a": "Seacrest Funded processes payouts through cryptocurrency and the Riseworks platform, offering traders flexible withdrawal options. After passing a challenge, traders can request payouts every 14 days. The minimum payout threshold is $65, and requests made during weekends or holidays will be processed on the following business day, ensuring timely access to funds."
+    },
+    {
+      "q": "What is the profit split on Seacrest Funded?",
+      "a": "Seacrest Funded provides an 80% profit split for funded traders, with an option to upgrade to a 90% profit share by paying an additional 20% fee on the challenge cost. This setup enables traders to retain a significant portion of their profits, especially appealing to those with consistent performance."
+    },
+    {
+      "q": "Does Seacrest Funded allow news trading?",
+      "a": "Yes, Seacrest Funded permits trading during major news events, providing flexibility for traders who use news-based strategies. This policy allows traders to engage in market activity during high-volatility periods, though they must still adhere to the firm's risk management rules, such as drawdown limits."
+    },
+    {
+      "q": "How reliable is Seacrest Funded as a prop trading firm?",
+      "a": "Seacrest Funded holds a 4.3/5 star rating on TrustPilot, indicating a generally positive reputation for reliability. Traders appreciate its fast payout processing and responsive support, though recent rule changes have raised some concerns. Its active Discord community of over 125,100 members adds to its credibility as a trusted platform."
+    },
+    {
+      "q": "What are the account size options available with Seacrest Funded?",
+      "a": "Seacrest Funded offers account sizes ranging from $5,000 to $200,000, catering to traders with varying funding needs. Each account size is tied to a specific challenge fee, with options to scale accounts based on performance. This range enables both new and experienced traders to find a suitable funding level."
+    },
+    {
+      "q": "What is the time limit for Seacrest Funded?",
+      "a": "Seacrest Funded has no strict time limit for completing its trading challenges, offering unlimited trading days to reach the required profit targets. This flexible approach allows traders to operate at their own pace, reducing pressure and enabling a focus on consistent performance. Each phase within the multi-step evaluations does require minimum trading days, typically 1-3 per phase, ensuring traders demonstrate steady trading habits."
+    }
+  ],
   "verified": true,
+  "flagged": false,
   "methodologyVersion": "1.0",
   "lastReviewedAt": "2026-02-27"
 }

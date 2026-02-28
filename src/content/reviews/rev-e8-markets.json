@@ -1,21 +1,70 @@
 {
   "id": "rev-e8-markets",
   "propFirmId": "d0000041-0000-0000-0000-000000000041",
-  "summary": "E8 Markets scores 58/100 in our evaluation.",
-  "pros": [],
-  "cons": [],
-  "bestFor": "",
-  "notIdealFor": "",
-  "overallScore": 58,
+  "summary": "E8 Markets scored 64/100 overall. It offers a genuinely broad product range — Forex, Crypto, and CME Futures under one roof with six trading platforms — but the funded-stage conditions are significantly stricter than the evaluation, with best-day rules, profitable-day requirements, payout caps, and mandatory buffers creating friction for withdrawals.\n\nThe one-step challenge structure is straightforward, and E8 One provides good customisation options for drawdown and payout splits. But Signature accounts run on fixed rules, and the lack of broker-backed execution means all trading happens on simulated feeds without disclosed liquidity providers. E8 is best suited to experienced traders who can work inside tight risk and payout rules rather than beginners looking for something simple.",
+  "pros": [
+    "Wide market access including Forex, Crypto, and CME Futures",
+    "Six trading platforms across CFD and Futures",
+    "Customisable drawdown and payout splits on E8 One",
+    "No minimum trading days on any account",
+    "Account sizes up to $500K on E8 One",
+    "Strong Trustpilot rating of 4.4/5 with ~3,000 reviews"
+  ],
+  "cons": [
+    "Strict funded-stage consistency rules (best-day limits, profitable-day counts)",
+    "Payout caps on Signature accounts that only increase gradually",
+    "Simulated execution only — not broker-backed",
+    "No traditional scaling plan available",
+    "Intraday-only rules on Signature Futures",
+    "News trading restricted once funded on E8 One"
+  ],
+  "bestFor": "Experienced traders who want broad market access across Forex, Crypto, and Futures with multiple platform options, and are comfortable managing strict funded-stage consistency and payout rules",
+  "notIdealFor": "Beginners, swing traders who need overnight holding on Signature accounts, traders who prefer broker-backed execution, or those who want simple payout rules without caps and buffers",
+  "overallScore": 64,
   "categoryScores": {
     "challenges": 50,
     "spreads": 60,
     "markets": 70,
     "payouts": 40,
     "platforms": 70,
+    "support": 50,
     "trust": 60
   },
+  "categorySections": {
+    "challenges": "custom",
+    "spreads": "custom",
+    "markets": "custom",
+    "platforms": "custom",
+    "payouts": "custom",
+    "support": "custom",
+    "trust": "custom"
+  },
+  "verdictBlocks": [
+    {
+      "heading": "Our Final Verdict On E8 Markets",
+      "body": "E8 scored 64/100 overall because the proprietary trading firm does a lot right on products and platforms, but loses ground on payout friction, strict risk rules, and only mid-range transparency. The one-step structure, flexible sizing, and strong platform lineup are genuine positives, yet the real-time trailing drawdown on E8 One and the funded-stage consistency rules make long-term retention harder than at many rivals.\n\nFrom a markets perspective, E8 is strong, with wide CFD coverage, a dedicated crypto product, and a separate CME-style futures offering, which is why it scored higher in the markets and platforms categories. But the advantages here are balanced out by conservative CFD leverage, intraday-only futures rules, and a complex payout framework built around buffers, best-day limits, profitable-day counts, and caps that start low and only scale with history.\n\nTrust and transparency sit in the middle. A positive Trustpilot score and plenty of verified payouts support E8's legitimacy, but the fully simulated setup, lack of disclosed liquidity providers, and recurring complaints about execution and risk enforcement prevent it from scoring higher. Taken together, E8 is best suited to experienced traders who can work inside tight risk and payout rules, rather than beginners looking for something simple and forgiving."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Does E8 Markets actually pay out?",
+      "a": "Yes, E8 Markets does pay out funded traders who meet the payout rules and pass KYC, and there is a large volume of verified payout reports confirming this. Withdrawals are processed through bank transfer or crypto, with approvals typically taking 1–2 business days and funds arriving within a few days after. Most payout disputes come from traders failing consistency, buffer, or risk requirements rather than non-payment."
+    },
+    {
+      "q": "Can you trade news with E8 Markets?",
+      "a": "Yes, news trading is allowed on E8, but the rules change once you are funded and depend on the account type. During the challenge phase, news trading is permitted on all accounts. On E8 One funded accounts, certain high-impact news windows are restricted and trades placed during those periods may not count toward payouts. Signature Forex, Signature Crypto, and Signature Futures allow news trading at all stages, subject to drawdown rules."
+    },
+    {
+      "q": "Does E8 allow automated trading with Expert Advisors?",
+      "a": "Yes, E8 allows automated trading strategies with Expert Advisors on most accounts, provided the trading strategy follows their rules. EAs are permitted on E8 One, Signature Forex, and Signature Crypto, as long as they are not high-frequency trading (HFT), latency arbitrage, or copy trading systems. Automated trading is not allowed on Signature Futures, which is strictly manual and intraday trading only."
+    },
+    {
+      "q": "What is the best forex prop firm?",
+      "a": "The best forex prop firms in our rankings score 90/100 or higher, with FundedNext, DNA Funded, and BrightFunded leading the list due to flexible challenge structures, clearer payout rules, and stronger long-term scaling. While E8 is a legitimate firm, it does not make our top 10 forex prop firms for traders worldwide shortlist, mainly because its funded-stage consistency rules, payout caps, and simulated execution reduce overall flexibility compared to the highest-rated forex-focused competitors."
+    }
+  ],
   "verified": true,
+  "flagged": false,
   "methodologyVersion": "1.0",
-  "lastReviewedAt": "2026-02-27"
+  "lastReviewedAt": "2026-02-28"
 }

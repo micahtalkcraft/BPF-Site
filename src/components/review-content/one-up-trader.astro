@@ -1,0 +1,957 @@
+---
+// Static editorial content for OneUp Trader
+// Supports multiple sections via the `section` prop
+interface Props {
+  section: string;
+  fallbackBody?: string;
+}
+const { section, fallbackBody } = Astro.props;
+---
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* CHALLENGES SECTION                                                  */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "challenges" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    OneUp Trader uses a simple <strong>one-step evaluation</strong> process, making it one of the simplest prop trading programs available. All you need to do is reach the profit target while staying within the trailing drawdown limits across five account sizes ranging from <strong>$25,000 to $250,000</strong>. Monthly fees start from <strong>$65</strong>, and you keep <strong>100% of the first $10,000</strong> in profits plus <strong>90%</strong> of everything after.
+  </p>
+  <p class="mb-6">
+    If you previously had a funded account, an <strong>Express Funding</strong> option is available that allows you to requalify in just 5 trading days instead of 10.
+  </p>
+
+  <!-- Per-challenge summaries -->
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <div class="flex items-center gap-2 mb-1">
+        <span class="flex items-center justify-center w-6 h-6 rounded-full bg-teal-500 text-white text-xs font-bold">1</span>
+        <p class="font-bold text-slate-900">One-Step Evaluation Challenge</p>
+      </div>
+      <p>Account sizes from $25,000 to $250,000 with monthly fees from $65 to $325. 6% profit target with trailing drawdown that stops at initial balance, no daily loss limits, and minimum 10 trading days to qualify.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Free NinjaTrader license included · Real-time market data · Unlimited balance resets</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <div class="flex items-center gap-2 mb-1">
+        <span class="flex items-center justify-center w-6 h-6 rounded-full bg-teal-500 text-white text-xs font-bold">2</span>
+        <p class="font-bold text-slate-900">Express Funding Account (Fast-Track)</p>
+      </div>
+      <p>For previously funded traders who lost their account. Same account sizes with monthly fees from $115 to $425. Same rules and conditions as the standard challenge, but requalify in just 5 trading days instead of 10.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Fast-track for returning traders · Same profit targets and drawdown rules</p>
+    </div>
+  </div>
+
+  <!-- ─── Standard Challenge Fee Table ────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Standard Evaluation Fees</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Size</th>
+          <th class="px-4 py-3 text-center">Monthly Fee</th>
+          <th class="px-4 py-3 text-center">Profit Target</th>
+          <th class="px-4 py-3 text-center">Trailing Drawdown</th>
+          <th class="px-4 py-3 text-center">Max Contracts</th>
+          <th class="px-4 py-3 text-center">Profit Split</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$65</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">$1,500</td>
+          <td class="px-4 py-3 text-center text-red-600">$1,500</td>
+          <td class="px-4 py-3 text-center text-slate-900">3</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">90%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$75</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">$3,000</td>
+          <td class="px-4 py-3 text-center text-red-600">$2,500</td>
+          <td class="px-4 py-3 text-center text-slate-900">6</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">90%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$150</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">$6,000</td>
+          <td class="px-4 py-3 text-center text-red-600">$3,500</td>
+          <td class="px-4 py-3 text-center text-slate-900">12</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">90%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$150,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$175</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">$9,000</td>
+          <td class="px-4 py-3 text-center text-red-600">$5,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">15</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">90%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$250,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$325</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">$15,000</td>
+          <td class="px-4 py-3 text-center text-red-600">$5,500</td>
+          <td class="px-4 py-3 text-center text-slate-900">25</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">90%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ─── Express Funding Fee Table ───────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Express Funding Fees</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Size</th>
+          <th class="px-4 py-3 text-center">Monthly Fee</th>
+          <th class="px-4 py-3 text-center">Profit Target</th>
+          <th class="px-4 py-3 text-center">Trailing Drawdown</th>
+          <th class="px-4 py-3 text-center">Max Contracts</th>
+          <th class="px-4 py-3 text-center">Profit Split</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$115</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">$1,500</td>
+          <td class="px-4 py-3 text-center text-red-600">$1,500</td>
+          <td class="px-4 py-3 text-center text-slate-900">3</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">90%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$125</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">$3,000</td>
+          <td class="px-4 py-3 text-center text-red-600">$2,500</td>
+          <td class="px-4 py-3 text-center text-slate-900">6</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">90%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$200</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">$6,000</td>
+          <td class="px-4 py-3 text-center text-red-600">$3,500</td>
+          <td class="px-4 py-3 text-center text-slate-900">12</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">90%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$150,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$275</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">$9,000</td>
+          <td class="px-4 py-3 text-center text-red-600">$5,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">15</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">90%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$250,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$425</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">$15,000</td>
+          <td class="px-4 py-3 text-center text-red-600">$5,500</td>
+          <td class="px-4 py-3 text-center text-slate-900">25</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">90%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ─── Account Reset ───────────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Account Reset</h3>
+  <div class="rounded-lg bg-amber-50 border border-amber-200 p-4 mb-8">
+    <p class="text-amber-800 text-sm">
+      <strong>Reset Fee:</strong> If you hit the trailing drawdown, you can restart your account for a <strong>$50 fee</strong> on 25K and 50K accounts, or a <strong>$100 fee</strong> for all other account sizes. There are no limits on the number of balance resets.
+    </p>
+  </div>
+
+  <!-- ─── Trading Rules ───────────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules</h3>
+  <ul class="space-y-2 mb-8">
+    <li class="flex items-start gap-2">
+      <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+      <span><strong>News Trading:</strong> Allowed during evaluation. Funded traders must avoid trading 1 minute before and after major economic releases (FOMC, employment, inflation, GDP).</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+      <span><strong>EAs / Automated Trading:</strong> Allowed.</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-red-500 shrink-0"></span>
+      <span><strong>High-Frequency Trading:</strong> Prohibited. Trading durations of less than 10 seconds are strictly prohibited.</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-amber-500 shrink-0"></span>
+      <span><strong>Inactivity Rule:</strong> Weekly trade execution must be no less than 50% of the average number of trades completed during evaluation. Extended inactivity requests can be granted with prior approval.</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-amber-500 shrink-0"></span>
+      <span><strong>Consistency Rule:</strong> A trader's three other best trading days must equal 80% or more of the largest day's net profit.</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-red-500 shrink-0"></span>
+      <span><strong>Hedging:</strong> Hedging trading positions using multiple funded accounts is not allowed.</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+      <span><strong>Copy Trading:</strong> Allowed only between accounts registered under the same name. Copy trading from accounts named after other individuals is prohibited.</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-red-500 shrink-0"></span>
+      <span><strong>Group Trading:</strong> Synchronized trading with other people is not allowed.</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-red-500 shrink-0"></span>
+      <span><strong>Micro-Scalping:</strong> Scalping trades with a duration of less than 10 seconds and arbitrage trading of market data errors are not allowed.</span>
+    </li>
+  </ul>
+
+  <!-- ─── Verdict ─────────────────────────────────────────────────── -->
+  <div class="rounded-xl bg-teal-50 border border-teal-200 p-5">
+    <p class="font-bold text-teal-800 mb-1 text-base">Verdict on Challenges</p>
+    <p class="text-teal-700 text-sm leading-relaxed">
+      OneUp Trader's 1-step challenge is a simple evaluation process, where you can hit the profit target in just 10 days, with no daily loss limits and get a funded account. However, the tight trailing drawdown can be a significant hurdle. If you are a previously funded trader and want to regain your account, Express Funding can allow you to recover your account in 5 trading days. The monthly subscription model means fees can add up if you don't pass quickly.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SPREADS SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "spreads" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-6">
+    Since OneUp Trader only deals with the futures market, there are no spreads to deal with. Only a standard commission fee structure that generally aligns with industry standards. Whether you are taking the 1-step challenge or trading a funded account, simulated fees are applied to reflect actual trading conditions.
+  </p>
+
+  <!-- Stats grid -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Standard (One Way)</p>
+      <p class="text-lg font-bold text-slate-900">$2.50</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Standard (Round Trip)</p>
+      <p class="text-lg font-bold text-slate-900">$5.00</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Micro (One Way)</p>
+      <p class="text-lg font-bold text-slate-900">$1.00</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Micro (Round Trip)</p>
+      <p class="text-lg font-bold text-slate-900">$2.00</p>
+    </div>
+  </div>
+
+  <!-- Commission Details -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Commission Fee Structure</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Contract Type</th>
+          <th class="px-4 py-3 text-center">One Way</th>
+          <th class="px-4 py-3 text-center">Round Trip</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Standard Contracts</td>
+          <td class="px-4 py-3 text-center text-slate-900">$2.50</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5.00</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Micro Contracts</td>
+          <td class="px-4 py-3 text-center text-slate-900">$1.00</td>
+          <td class="px-4 py-3 text-center text-slate-900">$2.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="mb-6">
+    P&L computations for funding eligibility already reflect these simulated trading activities, making it easy to monitor your progress. Once a trader gets a funded account, the same simulated fees apply, with no additional commissions or markups from OneUp Trader.
+  </p>
+
+  <!-- ─── Verdict ─────────────────────────────────────────────────── -->
+  <div class="rounded-xl bg-teal-50 border border-teal-200 p-5">
+    <p class="font-bold text-teal-800 mb-1 text-base">Verdict on Spreads and Commission Fees</p>
+    <p class="text-teal-700 text-sm leading-relaxed">
+      OneUp Trader's trading fee structure is simple and trader-friendly, with the commission fee already baked into the P&L for easy monitoring. While not the cheapest — some firms go as low as $1–$2 round trip on micros — the ease and simplicity make up for it. No additional markups on funded accounts is a plus.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* MARKETS SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "markets" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-6">
+    While OneUp Trader only deals with the futures market, it still provides access to <strong>over 50 trading instruments</strong> that cover equity, currency, commodities, and interest rates, using popular micro and e-mini contracts. Leverage and contract limits scale with account size and profit levels.
+  </p>
+
+  <!-- Stats grid -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Instruments</p>
+      <p class="text-lg font-bold text-slate-900">50+</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Asset Classes</p>
+      <p class="text-lg font-bold text-slate-900">6</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Contract Types</p>
+      <p class="text-lg font-bold text-slate-900">Standard & Micro</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Exchange</p>
+      <p class="text-lg font-bold text-slate-900">CME</p>
+    </div>
+  </div>
+
+  <!-- Asset Classes -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Available Futures Markets</h3>
+  <div class="space-y-2 mb-8">
+    <div class="flex items-start gap-2">
+      <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-teal-500 shrink-0"></span>
+      <span><strong>Equity Futures</strong> — E-mini S&P 500, E-mini NASDAQ 100, E-mini Dow, E-mini Russell 2000, Micro E-mini variants</span>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-teal-500 shrink-0"></span>
+      <span><strong>Interest Rate Futures</strong> — Treasury Bonds, Treasury Notes, Eurodollars</span>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-teal-500 shrink-0"></span>
+      <span><strong>Currency Futures</strong> — Euro FX, Japanese Yen, British Pound, Australian Dollar, Canadian Dollar</span>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-teal-500 shrink-0"></span>
+      <span><strong>Agricultural Futures</strong> — Corn, Soybeans, Wheat, Live Cattle</span>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-teal-500 shrink-0"></span>
+      <span><strong>Energy Futures</strong> — Crude Oil, Natural Gas, Heating Oil, RBOB Gasoline</span>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-teal-500 shrink-0"></span>
+      <span><strong>Metal Futures</strong> — Gold, Silver, Copper, Platinum</span>
+    </div>
+  </div>
+
+  <!-- ─── Dynamic Scaling / Position Sizing Table ─────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Funded Account Position Sizing</h3>
+  <p class="mb-4">
+    The number of futures contracts you can hold depends on account size during evaluation. For funded traders, this is determined by a dynamic scaling plan where the number of contracts increases as your account balance grows.
+  </p>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Size</th>
+          <th class="px-4 py-3 text-center">Profit Level</th>
+          <th class="px-4 py-3 text-center">Max Contracts</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900" rowspan="2">$25,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$0 – $1,500</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">2</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 text-center text-emerald-600 font-semibold">Over $1,501</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">3</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900" rowspan="3">$50,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$0 – $1,500</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">2</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 text-center text-slate-900">$1,501 – $4,000</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">4</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 text-center text-emerald-600 font-semibold">Over $4,001</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">6</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900" rowspan="4">$100,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$0 – $2,000</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">3</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 text-center text-slate-900">$2,001 – $3,000</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">4</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 text-center text-slate-900">$3,001 – $5,000</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">6</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 text-center text-emerald-600 font-semibold">Over $5,001</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">12</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900" rowspan="4">$150,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$0 – $4,000</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">5</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 text-center text-slate-900">$4,001 – $8,000</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">8</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 text-center text-slate-900">$8,001 – $12,000</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">10</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 text-center text-emerald-600 font-semibold">Over $12,001</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">15</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900" rowspan="4">$250,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$0 – $5,000</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">6</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 text-center text-slate-900">$5,001 – $12,000</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">12</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 text-center text-slate-900">$12,001 – $20,000</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">18</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 text-center text-emerald-600 font-semibold">Over $20,001</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">25</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ─── Verdict ─────────────────────────────────────────────────── -->
+  <div class="rounded-xl bg-teal-50 border border-teal-200 p-5">
+    <p class="font-bold text-teal-800 mb-1 text-base">Verdict on Futures Markets</p>
+    <p class="text-teal-700 text-sm leading-relaxed">
+      OneUp Trader only operates within the futures market, making trading options limited. Still, the 50 CME-listed products spread across equity indices, commodities, currencies, and interest rates allow for trading variety, with micro and mini variants offering flexibility in sizing. However, OneUp Trader is not for you if you want to trade forex pairs, crypto, or stocks.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PLATFORMS SECTION                                                   */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "platforms" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-6">
+    Traders on OneUp Trader can choose from <strong>over 20 supported trading platforms</strong>, with the default choice of NinjaTrader since a free license is included in every trading challenge. Other platforms offer advanced charting, order flow analysis, and support for trading automation.
+  </p>
+
+  <!-- Platform cards -->
+  <div class="grid sm:grid-cols-2 gap-4 mb-8">
+    <div class="rounded-lg border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">NinjaTrader</p>
+      <p class="text-xs text-slate-600 mb-2">Advanced charting and customization tools for futures trading. Software license is included free with every trading challenge.</p>
+      <div class="flex flex-wrap gap-1">
+        <span class="inline-block rounded bg-emerald-50 px-2 py-0.5 text-xs font-medium text-emerald-700">Free License</span>
+        <span class="inline-block rounded bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600">Advanced Charting</span>
+        <span class="inline-block rounded bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600">Customizable</span>
+      </div>
+    </div>
+    <div class="rounded-lg border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">R|Trader Pro</p>
+      <p class="text-xs text-slate-600 mb-2">Highly customizable charting with real-time data integration and automated trading systems.</p>
+      <div class="flex flex-wrap gap-1">
+        <span class="inline-block rounded bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600">Real-Time Data</span>
+        <span class="inline-block rounded bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600">Automation</span>
+      </div>
+    </div>
+    <div class="rounded-lg border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Sierra Chart</p>
+      <p class="text-xs text-slate-600 mb-2">Advanced charting options with market access for stocks, futures, forex, and cryptos.</p>
+      <div class="flex flex-wrap gap-1">
+        <span class="inline-block rounded bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600">Advanced Charting</span>
+        <span class="inline-block rounded bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600">Multi-Market</span>
+      </div>
+    </div>
+    <div class="rounded-lg border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">MultiCharts</p>
+      <p class="text-xs text-slate-600 mb-2">Multi-timeframe analysis with support for algorithmic trading and multiple broker integration.</p>
+      <div class="flex flex-wrap gap-1">
+        <span class="inline-block rounded bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600">Algo Trading</span>
+        <span class="inline-block rounded bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600">Multi-Broker</span>
+      </div>
+    </div>
+    <div class="rounded-lg border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Bookmap</p>
+      <p class="text-xs text-slate-600 mb-2">Real-time heatmap visualization of market activity for advanced order flow analysis.</p>
+      <div class="flex flex-wrap gap-1">
+        <span class="inline-block rounded bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600">Heatmaps</span>
+        <span class="inline-block rounded bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600">Order Flow</span>
+      </div>
+    </div>
+    <div class="rounded-lg border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Jigsaw Trading</p>
+      <p class="text-xs text-slate-600 mb-2">Comprehensive order flow analysis tools designed for active futures traders.</p>
+      <div class="flex flex-wrap gap-1">
+        <span class="inline-block rounded bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600">Order Flow</span>
+        <span class="inline-block rounded bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600">Active Trading</span>
+      </div>
+    </div>
+    <div class="rounded-lg border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">ScalpTool</p>
+      <p class="text-xs text-slate-600 mb-2">Designed for scalpers with half-click orders, conditional orders, and real-time PnL tracking.</p>
+      <div class="flex flex-wrap gap-1">
+        <span class="inline-block rounded bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600">Scalping</span>
+        <span class="inline-block rounded bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600">Fast Execution</span>
+      </div>
+    </div>
+    <div class="rounded-lg border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">MotiveWave</p>
+      <p class="text-xs text-slate-600 mb-2">Supports advanced charting tools for Elliott Wave and other technical analysis methods.</p>
+      <div class="flex flex-wrap gap-1">
+        <span class="inline-block rounded bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600">Elliott Wave</span>
+        <span class="inline-block rounded bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600">Technical Analysis</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Additional platforms list -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Additional Supported Platforms</h3>
+  <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 mb-8">
+    <div class="flex flex-wrap gap-2">
+      <span class="inline-block rounded bg-white border border-slate-200 px-2.5 py-1 text-xs font-medium text-slate-700">Volfix.net</span>
+      <span class="inline-block rounded bg-white border border-slate-200 px-2.5 py-1 text-xs font-medium text-slate-700">Agena Trader</span>
+      <span class="inline-block rounded bg-white border border-slate-200 px-2.5 py-1 text-xs font-medium text-slate-700">Medved Trader</span>
+      <span class="inline-block rounded bg-white border border-slate-200 px-2.5 py-1 text-xs font-medium text-slate-700">Track 'n Trade</span>
+      <span class="inline-block rounded bg-white border border-slate-200 px-2.5 py-1 text-xs font-medium text-slate-700">Trade Navigator</span>
+      <span class="inline-block rounded bg-white border border-slate-200 px-2.5 py-1 text-xs font-medium text-slate-700">InsideEDGE Trader</span>
+      <span class="inline-block rounded bg-white border border-slate-200 px-2.5 py-1 text-xs font-medium text-slate-700">Vetta</span>
+      <span class="inline-block rounded bg-white border border-slate-200 px-2.5 py-1 text-xs font-medium text-slate-700">iTrader</span>
+      <span class="inline-block rounded bg-white border border-slate-200 px-2.5 py-1 text-xs font-medium text-slate-700">Order Flow Trading</span>
+      <span class="inline-block rounded bg-white border border-slate-200 px-2.5 py-1 text-xs font-medium text-slate-700">Photon Trade</span>
+    </div>
+  </div>
+
+  <!-- Desktop limitation note -->
+  <div class="rounded-lg bg-amber-50 border border-amber-200 p-4 mb-8">
+    <p class="text-amber-800 text-sm">
+      <strong>Note:</strong> Most of these platforms are desktop-heavy applications with limited support for mobile or on-the-go trading. The only mobile-friendly option is <strong>iTrader</strong>, which offers essential trading features for basic mobile access.
+    </p>
+  </div>
+
+  <!-- ─── Verdict ─────────────────────────────────────────────────── -->
+  <div class="rounded-xl bg-teal-50 border border-teal-200 p-5">
+    <p class="font-bold text-teal-800 mb-1 text-base">Verdict on Trading Platforms</p>
+    <p class="text-teal-700 text-sm leading-relaxed">
+      OneUp Trader stands out with free NinjaTrader access provided immediately, giving instant value. If you're looking for advanced charting and order flow tools or automation, platforms like Sierra Chart, MultiCharts, and R|Trader Pro deliver. The drawback is that most platforms are desktop-only with little support for mobile trading. OneUp Trader shines for futures traders, but if you want to trade forex or crypto, you'll need to look elsewhere.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PAYOUTS SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "payouts" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-6">
+    OneUp Trader keeps their payments and payout structure simple. You can sign up for challenges using credit or debit cards, and once funded, enjoy payouts with no set schedule — request a withdrawal anytime you meet the minimum threshold.
+  </p>
+
+  <!-- Stats grid -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Profit Split</p>
+      <p class="text-lg font-bold text-emerald-600">90%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">First $10K Profits</p>
+      <p class="text-lg font-bold text-emerald-600">100%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Min. Withdrawal</p>
+      <p class="text-lg font-bold text-slate-900">$1,000</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Processing Time</p>
+      <p class="text-lg font-bold text-slate-900">1–2 days</p>
+    </div>
+  </div>
+
+  <!-- Profit Split Details -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Profit Split Structure</h3>
+  <div class="space-y-2 mb-8">
+    <div class="flex items-start gap-2">
+      <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+      <span><strong>100% of the first $10,000</strong> in profits goes directly to the trader — one of the most generous first-payout deals in the industry</span>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+      <span><strong>90% profit split</strong> on all profits after the first $10,000</span>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+      <span>Withdrawals available <strong>anytime</strong> — no fixed payout schedule</span>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-amber-500 shrink-0"></span>
+      <span><strong>$1,000 minimum withdrawal</strong> threshold must be met before requesting a payout</span>
+    </div>
+  </div>
+
+  <!-- Challenge Fee Payments -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Fee Payments</h3>
+  <div class="space-y-2 mb-8">
+    <div class="flex items-start gap-2">
+      <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-teal-500 shrink-0"></span>
+      <span>Payment options limited to <strong>credit and debit cards</strong> only (Visa, MasterCard, AmEx, Discover)</span>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+      <span><strong>Pay 50% upfront</strong>, remaining 50% only once you get funded — a unique benefit</span>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-amber-500 shrink-0"></span>
+      <span>Crypto payments are <strong>not currently supported</strong> for challenge fees</span>
+    </div>
+  </div>
+
+  <!-- Withdrawal Methods -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Withdrawal Methods</h3>
+  <div class="grid sm:grid-cols-2 gap-4 mb-8">
+    <div class="rounded-lg border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Bank Wire</p>
+      <p class="text-xs text-slate-600">No withdrawal fees for bank wire transfers. Funds typically arrive within a few days after processing.</p>
+      <span class="inline-block rounded bg-emerald-50 px-2 py-0.5 text-xs font-medium text-emerald-700 mt-2">No Fee</span>
+    </div>
+    <div class="rounded-lg border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Cryptocurrency</p>
+      <p class="text-xs text-slate-600">5% fee applies on all crypto withdrawals. Crypto-wallet payout errors cannot be reversed.</p>
+      <span class="inline-block rounded bg-amber-50 px-2 py-0.5 text-xs font-medium text-amber-700 mt-2">5% Fee</span>
+    </div>
+  </div>
+
+  <!-- ─── Verdict ─────────────────────────────────────────────────── -->
+  <div class="rounded-xl bg-teal-50 border border-teal-200 p-5">
+    <p class="font-bold text-teal-800 mb-1 text-base">Verdict on Payments and Payouts</p>
+    <p class="text-teal-700 text-sm leading-relaxed">
+      While OneUp Trader's payment options are limited to card-only, their 90% profit split with 100% of the first $10K is very generous. Paying only half the challenge fee upfront and the remainder once funded is a unique benefit. However, the $1,000 minimum withdrawal and card-only payment method limit flexibility, and the 5% crypto withdrawal fee is on the higher side.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SUPPORT SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "support" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-6">
+    OneUp Trader's customer support team is available <strong>24/7</strong> and is known for quick responses. While no free educational resources are available, they provide paid educational programs including mentorship and value-added services.
+  </p>
+
+  <!-- Support Channels -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Support Channels</h3>
+  <div class="grid sm:grid-cols-2 gap-4 mb-8">
+    <div class="rounded-lg border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Live Chat</p>
+      <p class="text-xs text-slate-600">Available 24/7 on their website. Quick response times for general queries.</p>
+      <span class="inline-block rounded bg-emerald-50 px-2 py-0.5 text-xs font-medium text-emerald-700 mt-2">24/7 Available</span>
+    </div>
+    <div class="rounded-lg border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Email Support</p>
+      <p class="text-xs text-slate-600">Available for detailed queries and issue resolution. Response times may vary for complex issues.</p>
+      <span class="inline-block rounded bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600 mt-2">Email</span>
+    </div>
+    <div class="rounded-lg border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Phone Support</p>
+      <p class="text-xs text-slate-600">Direct phone support available as an additional contact method for more urgent matters.</p>
+      <span class="inline-block rounded bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600 mt-2">Phone</span>
+    </div>
+    <div class="rounded-lg border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Contact Form</p>
+      <p class="text-xs text-slate-600">Available on the OneUp Trader website for submitting support tickets and general inquiries.</p>
+      <span class="inline-block rounded bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600 mt-2">Web Form</span>
+    </div>
+  </div>
+
+  <!-- Support Quality Note -->
+  <div class="rounded-lg bg-amber-50 border border-amber-200 p-4 mb-8">
+    <p class="text-amber-800 text-sm">
+      <strong>Note:</strong> While initial response times are fast, some traders report that complex issues can be slow to resolve, and canned responses can make it difficult to escalate problems.
+    </p>
+  </div>
+
+  <!-- Educational Programs -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Educational Programs</h3>
+  <p class="mb-4">
+    OneUp Trader lacks free educational materials but offers two paid programs that can be useful for traders looking to improve.
+  </p>
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <div class="flex items-center justify-between mb-1">
+        <p class="font-bold text-slate-900">OneUp Academy</p>
+        <span class="inline-block rounded bg-teal-50 px-2 py-0.5 text-xs font-semibold text-teal-700">$50</span>
+      </div>
+      <p class="text-xs text-slate-600">A mentorship program offering a one-hour, 1-on-1 trader mindset session focusing on the psychological aspects of trading — discipline, emotions, and overall trading mindset. Currently only available in English.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <div class="flex items-center justify-between mb-1">
+        <p class="font-bold text-slate-900">Beginner Trading Course</p>
+        <span class="inline-block rounded bg-teal-50 px-2 py-0.5 text-xs font-semibold text-teal-700">$720</span>
+      </div>
+      <p class="text-xs text-slate-600 mb-2">Comprehensive program covering technical and fundamental analysis, risk management, and trading strategies. Includes:</p>
+      <ul class="text-xs text-slate-600 space-y-1">
+        <li class="flex items-start gap-1.5">
+          <span class="mt-0.5 block h-1 w-1 rounded-full bg-slate-400 shrink-0"></span>
+          <span>170 pages of educational trading content</span>
+        </li>
+        <li class="flex items-start gap-1.5">
+          <span class="mt-0.5 block h-1 w-1 rounded-full bg-slate-400 shrink-0"></span>
+          <span>Practical tests and trading exercises</span>
+        </li>
+        <li class="flex items-start gap-1.5">
+          <span class="mt-0.5 block h-1 w-1 rounded-full bg-slate-400 shrink-0"></span>
+          <span>Free first-month evaluation fee included</span>
+        </li>
+        <li class="flex items-start gap-1.5">
+          <span class="mt-0.5 block h-1 w-1 rounded-full bg-slate-400 shrink-0"></span>
+          <span>Two free balance resets</span>
+        </li>
+        <li class="flex items-start gap-1.5">
+          <span class="mt-0.5 block h-1 w-1 rounded-full bg-slate-400 shrink-0"></span>
+          <span>Three 1-on-1 mindset sessions (OneUp Academy)</span>
+        </li>
+        <li class="flex items-start gap-1.5">
+          <span class="mt-0.5 block h-1 w-1 rounded-full bg-slate-400 shrink-0"></span>
+          <span>Daily trading newsletter and Discord community access</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ─── Verdict ─────────────────────────────────────────────────── -->
+  <div class="rounded-xl bg-teal-50 border border-teal-200 p-5">
+    <p class="font-bold text-teal-800 mb-1 text-base">Verdict on Customer Support & Education</p>
+    <p class="text-teal-700 text-sm leading-relaxed">
+      OneUp Trader offers fast 24/7 support, but some traders report issues with resolving complex problems. Educational resources are only available through paid programs — the OneUp Academy at $50 and the Beginner Trading Course at $720 — which offer solid value but no free alternatives exist. The course includes a free first-month evaluation fee and balance resets, adding tangible value.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* TRUST SECTION                                                       */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "trust" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- TrustPilot -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">TrustPilot Rating</h3>
+  <div class="flex items-center gap-4 rounded-xl border border-slate-200 p-5 mb-6">
+    <div class="text-center">
+      <p class="text-3xl font-black text-slate-900 leading-none">4.7</p>
+      <p class="text-xs text-slate-500 mt-1">out of 5</p>
+    </div>
+    <div>
+      <div class="flex gap-0.5 text-emerald-500 text-lg mb-1" aria-label="4.7 stars">
+        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span class="text-slate-300">&#9733;</span>
+      </div>
+      <p class="text-sm text-slate-600">Based on <strong>2,000+</strong> reviews on TrustPilot</p>
+    </div>
+  </div>
+
+  <p class="mb-4">
+    OneUp Trader has a strong 4.7/5 TrustPilot rating. Beginners praise the platform's ease of use, potential for fast funding, and simple trading rules. However, some experienced traders have raised concerns about rigid rule enforcement, withdrawal issues, and customer support quality.
+  </p>
+  <div class="rounded-lg bg-amber-50 border border-amber-200 p-4 mb-8">
+    <p class="text-amber-800 text-sm">
+      <strong>Reddit Feedback:</strong> Looking deeper into feedback on Reddit forums (r/futures, r/daytrading), some concerns emerge around inconsistent rule enforcement and disconnections, leading some traders to question whether the model prioritises evaluation fees over trader success.
+    </p>
+  </div>
+
+  <!-- Community -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Community</h3>
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Discord</p>
+      <p class="text-sm font-bold text-slate-900">Private Only</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Twitter/X</p>
+      <p class="text-sm font-bold text-slate-900">1,000+ Followers</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Instagram</p>
+      <p class="text-sm font-bold text-slate-900">Active Presence</p>
+    </div>
+  </div>
+  <p class="mb-8">
+    Unlike many competitors, OneUp Trader does not have a public Discord channel. The firm maintains a <strong>private Discord</strong> channel exclusive to subscribers of the Beginner Trading Course, offering exclusive trading updates and insights. On social media, Twitter has over a thousand followers engaging with traders, while Instagram has a more active presence showcasing successful traders with their payouts and promotional content.
+  </p>
+
+  <!-- Popularity -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">How Popular Is OneUp Trader?</h3>
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Monthly Searches</p>
+      <p class="text-lg font-bold text-slate-900">4,400</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Search Rank</p>
+      <p class="text-lg font-bold text-slate-900">39th</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Monthly Visits</p>
+      <p class="text-lg font-bold text-slate-900">91,898</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Traffic Rank</p>
+      <p class="text-lg font-bold text-slate-900">36th</p>
+    </div>
+  </div>
+  <p class="mb-6">
+    OneUp Trader ranks 39th globally in Google search volume for prop firms, with 4,400 monthly searches as of Q1 2025. Website data confirms a similar trend — 91,898 visits in March 2025, placing it 36th in web traffic. While not among the most visited overall, its specialised focus on futures continues to draw steady attention.
+  </p>
+
+  <!-- Country Search Table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Q1 2025 Monthly Branded Searches By Country</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Country</th>
+          <th class="px-4 py-3 text-center">Monthly Searches</th>
+          <th class="px-4 py-3 text-center">Rank</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">United States</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">880</td>
+          <td class="px-4 py-3 text-center text-slate-900">1st</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">India</td>
+          <td class="px-4 py-3 text-center text-slate-900">260</td>
+          <td class="px-4 py-3 text-center text-slate-900">2nd</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Germany</td>
+          <td class="px-4 py-3 text-center text-slate-900">260</td>
+          <td class="px-4 py-3 text-center text-slate-900">3rd</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Canada</td>
+          <td class="px-4 py-3 text-center text-slate-900">210</td>
+          <td class="px-4 py-3 text-center text-slate-900">4th</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Spain</td>
+          <td class="px-4 py-3 text-center text-slate-900">170</td>
+          <td class="px-4 py-3 text-center text-slate-900">5th</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Nigeria</td>
+          <td class="px-4 py-3 text-center text-slate-900">110</td>
+          <td class="px-4 py-3 text-center text-slate-900">6th</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">United Kingdom</td>
+          <td class="px-4 py-3 text-center text-slate-900">110</td>
+          <td class="px-4 py-3 text-center text-slate-900">7th</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">France</td>
+          <td class="px-4 py-3 text-center text-slate-900">110</td>
+          <td class="px-4 py-3 text-center text-slate-900">8th</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Brazil</td>
+          <td class="px-4 py-3 text-center text-slate-900">110</td>
+          <td class="px-4 py-3 text-center text-slate-900">9th</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">South Africa</td>
+          <td class="px-4 py-3 text-center text-slate-900">90</td>
+          <td class="px-4 py-3 text-center text-slate-900">10th</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Transparency Points -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Transparency & Trust Signals</h3>
+  <div class="space-y-2 mb-8">
+    <div class="flex items-start gap-2">
+      <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+      <span><strong>Strong TrustPilot score</strong> — 4.7/5 from over 2,000 reviews indicates general satisfaction</span>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+      <span><strong>Simple, published rules</strong> — One-step evaluation with clear profit targets and drawdown limits</span>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+      <span><strong>Generous profit split</strong> — 100% of first $10K profits, then 90%, with on-demand withdrawals</span>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-amber-500 shrink-0"></span>
+      <span><strong>No public Discord</strong> — Community access is limited to paid course subscribers only</span>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-amber-500 shrink-0"></span>
+      <span><strong>Mixed experienced trader feedback</strong> — Some concerns on Reddit about rule enforcement and platform stability</span>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-amber-500 shrink-0"></span>
+      <span><strong>Monthly subscription model</strong> — Fees accumulate over time if evaluation is not passed quickly</span>
+    </div>
+  </div>
+
+  <!-- ─── Verdict ─────────────────────────────────────────────────── -->
+  <div class="rounded-xl bg-teal-50 border border-teal-200 p-5">
+    <p class="font-bold text-teal-800 mb-1 text-base">Verdict on Trust and Community</p>
+    <p class="text-teal-700 text-sm leading-relaxed">
+      A high TrustPilot rating and active social media presence paint a generally positive reputation for OneUp Trader. However, a closer look at feedback from experienced traders on forums like r/futures raises some concerns about inconsistent rule enforcement and platform reliability that cannot be ignored. The lack of a public Discord channel also limits community access compared to many competitors.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* FALLBACK                                                            */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{!["challenges","spreads","markets","platforms","payouts","support","trust"].includes(section) && (
+<div class="prose prose-sm max-w-none text-slate-700">
+  {fallbackBody ? <p set:html={fallbackBody} /> : <p>Section content coming soon.</p>}
+</div>
+)}

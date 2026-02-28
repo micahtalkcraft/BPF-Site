@@ -1,0 +1,1100 @@
+---
+// Static editorial content for City Traders Imperium
+// Supports multiple sections via the `section` prop
+interface Props {
+  section: string;
+  fallbackBody?: string;
+}
+const { section, fallbackBody } = Astro.props;
+---
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* CHALLENGES SECTION                                                  */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "challenges" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    City Traders Imperium offers four routes to funding: a One Step challenge, a Two Step challenge, and two Instant Funding models. All challenges and funded accounts operate on simulated accounts, use balance-based drawdown, and have no maximum time limits.
+  </p>
+
+  <!-- Per-challenge summaries -->
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">One Step Challenge</p>
+      <p>Single-phase evaluation with a 10% profit target. Account sizes from $2,500 to $100,000 with fees starting at $49.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">80%–100% profit split · Balance-based drawdown · No time limit</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Two Step Challenge</p>
+      <p>Two-phase evaluation: 10% target in Phase 1, 5% in Phase 2. Account sizes from $2,500 to $100,000 with fees starting at $39.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">80%–100% profit split · Balance-based drawdown · No time limit</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Instant Funding</p>
+      <p>Skip the evaluation entirely and start trading immediately. Account sizes from $2,500 to $80,000 with fees starting at $89. Balance doubles at every 10% milestone.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Up to 100% profit split (scales) · Trailing drawdown · Scaling to $2M per account</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Instant Funding Pro</p>
+      <p>Higher-cost version starting at a higher funding level. Account sizes from $5,000 to $80,000 with fees starting at $329. Same 10% scaling milestones.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Up to 100% profit split (scales) · Trailing drawdown · Accelerated path to larger capital</p>
+    </div>
+  </div>
+
+  <!-- ─── Comparison Table ───────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Comparison</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-10">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Attribute</th>
+          <th class="px-4 py-3 text-center">One Step</th>
+          <th class="px-4 py-3 text-center">Two Step</th>
+          <th class="px-4 py-3 text-center">Instant Funding</th>
+          <th class="px-4 py-3 text-center">Instant Funding Pro</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Evaluation Steps</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">One phase</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">Two phases</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">No evaluation</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">No evaluation</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Account Sizes</td>
+          <td class="px-4 py-3 text-center text-slate-900">$2,500 – $100,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$2,500 – $100,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$2,500 – $80,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5,000 – $80,000</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">One-Time Fee</td>
+          <td class="px-4 py-3 text-center text-slate-900">$49 – $519</td>
+          <td class="px-4 py-3 text-center text-slate-900">$39 – $519</td>
+          <td class="px-4 py-3 text-center text-slate-900">$89 – $2,399</td>
+          <td class="px-4 py-3 text-center text-slate-900">$329 – $4,799</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Time Limit</td>
+          <td class="px-4 py-3 text-center text-slate-900">No limit</td>
+          <td class="px-4 py-3 text-center text-slate-900">No limit</td>
+          <td class="px-4 py-3 text-center text-slate-900">No limit</td>
+          <td class="px-4 py-3 text-center text-slate-900">No limit</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Drawdown Model</td>
+          <td class="px-4 py-3 text-center text-slate-900">Balance-based (static)</td>
+          <td class="px-4 py-3 text-center text-slate-900">Balance-based (static)</td>
+          <td class="px-4 py-3 text-center text-slate-900">Balance-based (static)</td>
+          <td class="px-4 py-3 text-center text-slate-900">Balance-based (static)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Split</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">80%–100%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">80%–100%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">Up to 100% (scales)</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">Up to 100% (scales)</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Scaling Potential</td>
+          <td class="px-4 py-3 text-center text-slate-900">Up to $200K/account</td>
+          <td class="px-4 py-3 text-center text-slate-900">Up to $200K/account</td>
+          <td class="px-4 py-3 text-center text-slate-900">Up to $2M/account</td>
+          <td class="px-4 py-3 text-center text-slate-900">Up to $2M/account</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 1. ONE STEP CHALLENGE                                          -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">1</span>
+      One Step Challenge
+    </h3>
+
+    <p class="mb-3">
+      The One Step Challenge is CTI's simplest evaluation, requiring you to reach a single profit target while staying within defined drawdown limits.
+    </p>
+    <p class="mb-3">
+      You must achieve a <strong>10% profit target</strong> with no time limit, using a balance-based (static) drawdown model. Both a maximum daily drawdown and a maximum overall drawdown apply, and breaching either results in account failure.
+    </p>
+    <p class="mb-4">
+      While CTI markets scaling across its programs, One Step accounts are effectively capped at <strong>$200,000 per account</strong>. This means the widely promoted $4 million scaling potential does not apply to this challenge type.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Drawdown Type</p>
+        <p class="text-sm font-bold text-slate-800">Static (Balance-based)</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Daily Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Overall Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Time Limit</p>
+        <p class="text-sm font-bold text-slate-800">Unlimited</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Scaling Cap</p>
+        <p class="text-sm font-bold text-slate-800">$200K/account</p>
+      </div>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">One-Time Fee</th>
+            <th class="px-4 py-3 text-right">Profit Target ($)</th>
+            <th class="px-4 py-3 text-right">Max Daily DD ($)</th>
+            <th class="px-4 py-3 text-right">Max Overall DD ($)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-900">$49</td>
+            <td class="px-4 py-3 text-right text-slate-700">$250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$125</td>
+            <td class="px-4 py-3 text-right text-slate-700">$250</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$59</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$99</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$179</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$329</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$519</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 2. TWO STEP CHALLENGE                                          -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">2</span>
+      Two Step Challenge
+    </h3>
+
+    <p class="mb-3">
+      The Two Step Challenge follows a more traditional evaluation structure, split across two phases with smaller profit targets.
+    </p>
+    <p class="mb-3">
+      In Phase One, you must reach a <strong>10% profit target</strong>, followed by <strong>5%</strong> in Phase Two, while remaining within the same balance-based drawdown limits. There is no time limit, and CTI requires a minimum number of profitable trading days in each phase.
+    </p>
+    <p class="mb-4">
+      Like the One Step Challenge, Two Step accounts are subject to an effective scaling cap of <strong>$200,000 per account</strong>, making this route more suitable for traders focused on passing an evaluation rather than long-term capital growth.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 1 Target</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 2 Target</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Drawdown Type</p>
+        <p class="text-sm font-bold text-slate-800">Static (Balance-based)</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Daily Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Overall Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">10%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Time Limit</p>
+        <p class="text-sm font-bold text-slate-800">Unlimited</p>
+      </div>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">One-Time Fee</th>
+            <th class="px-4 py-3 text-right">Phase 1 Target ($)</th>
+            <th class="px-4 py-3 text-right">Phase 2 Target ($)</th>
+            <th class="px-4 py-3 text-right">Max Daily DD ($)</th>
+            <th class="px-4 py-3 text-right">Max Overall DD ($)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-900">$39</td>
+            <td class="px-4 py-3 text-right text-slate-700">$250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$125</td>
+            <td class="px-4 py-3 text-right text-slate-700">$125</td>
+            <td class="px-4 py-3 text-right text-slate-700">$250</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$59</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$99</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$179</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$329</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$519</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 3. INSTANT FUNDING                                              -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">3</span>
+      Instant Funding
+    </h3>
+
+    <p class="mb-3">
+      Instant Funding allows you to skip the evaluation process and start trading on a simulated funded account immediately.
+    </p>
+    <p class="mb-3">
+      Each time you reach a <strong>10% profit milestone</strong>, the account balance doubles, allowing you to scale progressively up to <strong>$2 million per account</strong> and <strong>$4 million across multiple accounts</strong>.
+    </p>
+    <p class="mb-4">
+      Profit share starts lower than evaluation-based programs and increases as you scale, reaching up to 100% at higher funding levels. While Instant Funding offers more freedom, including news trading and weekend holding, the early-stage profit split is notably lower than most competing instant funding firms.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Evaluation</p>
+        <p class="text-sm font-bold text-slate-800">None</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Drawdown Type</p>
+        <p class="text-sm font-bold text-slate-800">Balance-based (Static)</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Scaling to Scale ($)</p>
+        <p class="text-sm font-bold text-slate-800">10% milestone</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Per Account</p>
+        <p class="text-sm font-bold text-teal-600">$2M</p>
+      </div>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">One-Time Fee</th>
+            <th class="px-4 py-3 text-right">Starting Balance</th>
+            <th class="px-4 py-3 text-right">Fully Funded Level</th>
+            <th class="px-4 py-3 text-right">Target to Scale ($)</th>
+            <th class="px-4 py-3 text-right">Max Drawdown ($)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-900">$89</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$250</td>
+            <td class="px-4 py-3 text-right text-slate-700">$150</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$249</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$300</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$449</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$600</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$20,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$849</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$20,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,200</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$40,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$1,499</td>
+            <td class="px-4 py-3 text-right text-slate-700">$20,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$40,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$4,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,400</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$80,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$2,399</td>
+            <td class="px-4 py-3 text-right text-slate-700">$40,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$80,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$8,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$4,800</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 4. INSTANT FUNDING PRO                                          -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">4</span>
+      Instant Funding Pro
+    </h3>
+
+    <p class="mb-3">
+      Instant Funding Pro is a higher-cost version of the standard Instant Funding model designed to accelerate access to larger capital.
+    </p>
+    <p class="mb-4">
+      You start at a higher funding level but operate under the same 10% scaling milestones. Profit share still begins at the lower tier and improves only as you progress through the scaling structure. While this model shortens the path to larger account sizes, it does not materially improve early earning potential compared to standard Instant Funding.
+    </p>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">One-Time Fee</th>
+            <th class="px-4 py-3 text-right">Fully Funded Level</th>
+            <th class="px-4 py-3 text-right">Target to Scale ($)</th>
+            <th class="px-4 py-3 text-right">Max Drawdown ($)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$329</td>
+            <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+            <td class="px-4 py-3 text-right text-slate-700">$300</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$599</td>
+            <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$600</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$20,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$1,199</td>
+            <td class="px-4 py-3 text-right text-slate-700">$20,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$1,200</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$40,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$2,399</td>
+            <td class="px-4 py-3 text-right text-slate-700">$40,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$4,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$2,400</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$80,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$4,799</td>
+            <td class="px-4 py-3 text-right text-slate-700">$80,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$8,000</td>
+            <td class="px-4 py-3 text-right text-slate-700">$4,800</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- GOLDEN TRADER LOYALTY PROGRAM                                   -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3">Golden Trader Loyalty Program</h3>
+    <p class="mb-4">
+      CTI's Golden Trader Program rewards long-term consistency rather than short-term performance. It is divided into Bronze, Silver, and Gold tiers.
+    </p>
+
+    <div class="space-y-3 mb-4">
+      <div class="rounded-lg bg-amber-50 border border-amber-200 p-4">
+        <p class="font-bold text-amber-900 mb-1">Bronze</p>
+        <p class="text-sm text-amber-800">Unlocks weekly payouts, a 90% profit share, and additional support benefits after several months of clean trading and multiple successful payouts.</p>
+      </div>
+      <div class="rounded-lg bg-slate-100 border border-slate-300 p-4">
+        <p class="font-bold text-slate-900 mb-1">Silver</p>
+        <p class="text-sm text-slate-700">Moves profit share to 100% and enables on-demand payouts, but requires further months of consistent profitability.</p>
+      </div>
+      <div class="rounded-lg bg-amber-50 border border-amber-300 p-4">
+        <p class="font-bold text-amber-900 mb-1">Gold</p>
+        <p class="text-sm text-amber-800">Offers institutional-style conditions and potential salary arrangements, but progression requires extended performance over many months.</p>
+      </div>
+    </div>
+    <p class="text-xs text-slate-500 italic">While the structure is transparent, the qualification requirements are demanding, and most traders will not reach the higher tiers.</p>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SCALING PLANS                                                    -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3">Scaling Plans</h3>
+    <p class="mb-3">
+      Scaling depends heavily on the account type you choose. One Step and Two Step Challenges scale incrementally but are effectively capped at <strong>$200,000 per account</strong>. Instant Funding and Instant Funding Pro allow balance doubling at every 10% profit milestone, with a maximum of <strong>$2 million per account</strong> and <strong>$4 million in total funding</strong>.
+    </p>
+    <p class="mb-4">
+      Profit splits improve as you scale, particularly on Instant Funding accounts, but meaningful increases require sustained performance over multiple levels.
+    </p>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- VERDICT ON CHALLENGES                                           -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Challenges</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      CTI offers flexibility through multiple funding routes, but each comes with clear trade-offs. Evaluation challenges limit long-term scaling, while Instant Funding provides higher capital potential at the cost of lower early profit splits. Balance-based drawdown and unlimited time limits improve flexibility, but leverage and earning potential remain conservative compared to top-tier competitors. This mix explains why CTI scores 8/10 for challenges — varied and structured, but constrained in ways that matter once you look beyond the surface.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SPREADS / COMMISSION FEES SECTION                                   */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "spreads" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-3">
+    CTI's spreads are reasonable but not the tightest you'll find. EUR/USD averages around <strong>0.3 pips</strong>, which is fine for most strategies, but it isn't consistently lower than other top prop firms.
+  </p>
+  <p class="mb-4">
+    The bigger issue is that CTI doesn't publish much detail beyond the majors, so if you trade indices, commodities, or cross pairs, you're left guessing what your real costs will look like until you're in the account.
+  </p>
+  <p class="mb-4">
+    Execution is handled through <strong>Broctagon</strong>, a CySEC regulated liquidity provider. That setup gives you access to institutional-grade liquidity rather than a forex broker feed.
+  </p>
+  <p class="mb-6">
+    Commission fees are straightforward and competitive, especially for commodities and forex trading where roundturn commission is <strong>$5 per lot</strong>, well below the industry average of $7. Indices are cheaper at <strong>$0.50 per lot</strong>, and crypto is <strong>commission-free</strong>.
+  </p>
+
+  <!-- Commission fee table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Commission Fees</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-5 py-3 text-left">Asset Class</th>
+          <th class="px-5 py-3 text-right">Commission (Per Side)</th>
+          <th class="px-5 py-3 text-right">Commission (Roundturn)</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">Forex</td>
+          <td class="px-5 py-3 text-right text-slate-700">$2.50 per lot</td>
+          <td class="px-5 py-3 text-right font-bold text-teal-600">$5 per lot</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">Commodities</td>
+          <td class="px-5 py-3 text-right text-slate-700">$2.50 per lot</td>
+          <td class="px-5 py-3 text-right font-bold text-teal-600">$5 per lot</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">Indices</td>
+          <td class="px-5 py-3 text-right text-slate-700">$0.25 per lot</td>
+          <td class="px-5 py-3 text-right font-bold text-teal-600">$0.50 per lot</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">Crypto</td>
+          <td class="px-5 py-3 text-right text-slate-700">Zero commission</td>
+          <td class="px-5 py-3 text-right font-bold text-teal-600">Zero commission</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Spreads</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Overall, costs for forex and indices are competitive, and if you're mostly focused on majors, the setup works well. If you trade a broader range of markets, it's harder to judge whether CTI offers good value compared to other firms.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* MARKETS / FINANCIAL MARKETS & LEVERAGE SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "markets" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-3">
+    CTI gives access to <strong>50 instruments</strong> in total, split between 28 forex pairs, 13 indices, 3 commodities, and 6 cryptocurrencies. The coverage is okay but the real issue is <strong>leverage</strong>, which is far lower than you'll find at the majority of prop firms.
+  </p>
+  <p class="mb-4">
+    On CTI's One Step and Two Step challenge accounts, forex leverage is capped at <strong>1:30</strong>, which is similar to what you'd see with regulated retail brokers. Indices and commodities are more restricted at <strong>1:10</strong>, while crypto leverage remains fixed at <strong>1:2</strong>.
+  </p>
+  <p class="mb-6">
+    Leverage becomes more restrictive on Instant Funding accounts. Forex, indices, and commodities are all limited to <strong>1:10</strong>, with crypto still capped at <strong>1:2</strong>. This conservative leverage structure reduces exposure but also limits flexibility, particularly if you rely on position sizing rather than tight stop placement.
+  </p>
+
+  <!-- Leverage table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Markets and Leverage by Asset Class</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Asset Class</th>
+          <th class="px-4 py-3 text-center">No. of Markets</th>
+          <th class="px-4 py-3 text-center">Leverage (1-Step & 2-Step)</th>
+          <th class="px-4 py-3 text-center">Leverage (No Evaluation)</th>
+          <th class="px-4 py-3 text-left">Examples</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Forex Pairs</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">28</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">1:30</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:10</td>
+          <td class="px-4 py-3 text-slate-600">EUR/USD, GBP/JPY, USD/CAD</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Commodities</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">3</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:10</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:10</td>
+          <td class="px-4 py-3 text-slate-600">XAU/USD, XAG/USD, XTI/USD</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Indices</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">13</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:10</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:10</td>
+          <td class="px-4 py-3 text-slate-600">US30, UK100, DE40</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Cryptocurrencies</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">6</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:2</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:2</td>
+          <td class="px-4 py-3 text-slate-600">BTC/USD, ETH/USD, ADA/USD</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="mb-4">
+    Compared to firms like FundedNext, which offers up to 1:100 leverage, or DNA Funded and Blueberry Funded, which both provide up to 1:50 on two-step challenges, CTI's leverage is clearly on the lower end and will feel restrictive if you trade more aggressively.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Markets</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      CTI offers an average product range with forex, indices, commodities, and a few cryptos, but no stocks or broader coverage. The biggest issue is leverage, capped at 1:30 on challenges and only 1:10 on instant funding, which is well below most firms. Minimal markets and low leverage means they only earned a 7/10 score for markets.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PLATFORMS / TRADING PLATFORMS SECTION                                */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "platforms" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    CTI now offers two platforms: <strong>MetaTrader 5 (MT5)</strong> and <strong>MatchTrader</strong> — but what you can use depends on where you live. MT5 is available to traders outside the US, while US clients are limited to MatchTrader.
+  </p>
+
+  <!-- Platform cards -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+    <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+      <p class="text-base font-bold text-slate-900 mb-2">MetaTrader 5 (MT5)</p>
+      <p class="text-sm text-slate-600 mb-3">
+        MT5 is the natural upgrade from MT4, with more timeframes, extra indicators, depth of market, and an integrated economic calendar. It supports automated trading and gives you the flexibility to run advanced strategies, whether you're on desktop, web, or mobile.
+      </p>
+      <div class="flex flex-wrap gap-1.5">
+        <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] font-semibold text-slate-600">Desktop</span>
+        <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] font-semibold text-slate-600">Web</span>
+        <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] font-semibold text-slate-600">Mobile</span>
+        <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] font-semibold text-slate-600">EAs Supported</span>
+      </div>
+      <p class="text-xs text-amber-600 font-semibold mt-3">Available outside the US only</p>
+    </div>
+
+    <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+      <p class="text-base font-bold text-slate-900 mb-2">MatchTrader</p>
+      <p class="text-sm text-slate-600 mb-3">
+        MatchTrader is the alternative for US traders and has fewer features than MT5, but it covers the basics well. You still get multiple order types, solid charting, and mobile or web access, so it works fine if you're looking for an easy-to-use setup without the complexity of MT5.
+      </p>
+      <div class="flex flex-wrap gap-1.5">
+        <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] font-semibold text-slate-600">Web</span>
+        <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] font-semibold text-slate-600">Mobile</span>
+        <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] font-semibold text-slate-600">Multiple Order Types</span>
+      </div>
+      <p class="text-xs text-amber-600 font-semibold mt-3">US clients only</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trading Platforms</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      The split between MT5 and MatchTrader isn't ideal, as US traders miss out on the more advanced platform. Still, having both options does give CTI coverage across regions, and while MT5 is the stronger of the two, MatchTrader holds up as a functional alternative.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PAYOUTS / PAYMENTS & PROFIT PAYOUT SECTION                          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "payouts" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    City Traders Imperium offers flexible payment options for challenge fees and profit payouts, including bank transfers, cryptocurrencies, and credit/debit cards. However, the minimum withdrawal is relatively high, and the withdrawal methods differ from the options available for paying fees.
+  </p>
+
+  <!-- Payout structure summary -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Withdrawal</p>
+      <p class="text-sm font-bold text-slate-800">$100</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Payout Cycle</p>
+      <p class="text-sm font-bold text-slate-800">Bi-weekly (14 days)</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Internal Transfer</p>
+      <p class="text-sm font-bold text-slate-800">2 business days</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">External Withdrawal</p>
+      <p class="text-sm font-bold text-teal-600">1 business day</p>
+    </div>
+  </div>
+
+  <!-- Audition Fee Payment -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Audition Fee Payment</h3>
+  <p class="mb-4">
+    CTI offers multiple payment methods for the one-time audition fee, including credit cards, debit cards, cryptocurrencies, and bank wire transfers. The fee range depends on the evaluation process and funding level selected, ranging from <strong>$39 to $4,799</strong>.
+  </p>
+
+  <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 mb-6">
+    <p class="font-bold text-slate-900 mb-2">Accepted Cryptocurrencies for Fee Payment</p>
+    <div class="flex flex-wrap gap-2">
+      <span class="rounded-full bg-white border border-slate-200 px-3 py-1 text-xs font-semibold text-slate-700">Bitcoin (BTC)</span>
+      <span class="rounded-full bg-white border border-slate-200 px-3 py-1 text-xs font-semibold text-slate-700">Ethereum (ETH)</span>
+      <span class="rounded-full bg-white border border-slate-200 px-3 py-1 text-xs font-semibold text-slate-700">Tether (USDT)</span>
+      <span class="rounded-full bg-white border border-slate-200 px-3 py-1 text-xs font-semibold text-slate-700">Tron (TRX)</span>
+    </div>
+    <p class="text-xs text-slate-500 mt-2 italic">To pay via bank transfer, you'll need to contact support and request an invoice.</p>
+  </div>
+
+  <!-- Fee Refunds -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Fee Refunds</h3>
+  <p class="mb-6">
+    City Traders Imperium does not offer refunds once trading activity has started on an account. The one-time access fee may only be eligible for a refund if the account remains completely inactive and a request is made within seven days of purchase, in line with CTI's refund policy. Fees for Instant Funding programs are non-refundable once access has been granted.
+  </p>
+
+  <!-- Profit Payout Process -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Profit Payout Process</h3>
+  <p class="mb-4">
+    CTI makes profit payouts relatively straightforward through their centralized Dashboard Wallet. Once you reach your profit targets, you can transfer your earnings from the trading account to your Wallet for withdrawal. Payment methods for withdrawals include bank transfers and cryptocurrency wallets.
+  </p>
+
+  <div class="space-y-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Minimum Withdrawal</p>
+      <p>$100 minimum profit withdrawal required.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Payout Qualification</p>
+      <p>Must have been trading for 10 days or have a minimum profit of $100 (or 2% net eligible profit, whichever is greater).</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Processing Times</p>
+      <p>Internal transfers to the Wallet are processed within 2 business days. Withdrawals to bank accounts or crypto wallets are processed within 1 business day.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Third-Party Withdrawals</p>
+      <p>CTI does not allow third-party withdrawals. Funds must be withdrawn to a bank account or wallet under the trader's name.</p>
+    </div>
+  </div>
+
+  <!-- Funded Trader Salary -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Funded Trader Salary Payments</h3>
+  <p class="mb-6">
+    Fully funded traders who meet CTI's salary criteria receive monthly payments based on their account size. These salary payments are separate from profit payouts and are available only to traders who have completed the evaluation phase. Salary payments are deposited directly into the trader's bank or crypto wallet.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Payments and Payouts</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Profit payouts are efficient, with straightforward withdrawal processes via bank transfer or cryptocurrency. The addition of funded trader salaries further rewards consistent performance.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SUPPORT / CUSTOMER SERVICE & EDUCATION SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "support" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    City Traders Imperium focuses on supporting traders through dedicated customer service and comprehensive educational programs.
+  </p>
+
+  <!-- Customer Support -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Customer Support</h3>
+  <p class="mb-6">
+    CTI provides customer support through various channels, including live chat, email, and a comprehensive FAQ section, which is managed by an interactive chatbot. While helpful for basic queries, the chatbot is less advanced compared to AI bots used by prop firms like IC Funded or FundedNext, which may offer more dynamic responses.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Live Chat</p>
+      <p class="text-slate-600">Available via website</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Email Support</p>
+      <p class="text-slate-600">Standard response times</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">FAQ / Chatbot</p>
+      <p class="text-slate-600">Interactive FAQ section</p>
+    </div>
+  </div>
+
+  <!-- Educational Resources -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Educational Resources</h3>
+  <p class="mb-4">
+    City Traders Imperium offers a wide range of educational resources to help traders at all skill levels:
+  </p>
+
+  <div class="space-y-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Bank Level Trading</p>
+      <p>Combines Smart Money Concepts, Wave Theory, and Wyckoff methods to identify high-probability trading opportunities.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">STT Strategy</p>
+      <p>Focuses on swing trading using triangle patterns to find trades with good risk-to-reward ratios.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">CS Strategy</p>
+      <p>Designed for traders who want to capitalise on quick, significant price movements. Teaches how to trade sharp market corrections.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Forex for Beginners</p>
+      <p>A mentoring program that helps new traders learn quickly and start trading with confidence.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Build Your Edge – Trading Psychology</p>
+      <p>Teaches traders how to manage their emotions and make disciplined trading decisions.</p>
+    </div>
+  </div>
+
+  <p class="mb-6">
+    CTI complements these resources with ongoing courses and webinars, diving into specific trading strategies and market analyses, equipping traders with the knowledge to succeed in professional trading environments.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Support</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      CTI provides comprehensive support through live chat, email, and an FAQ section. The active Discord community and educational resources enhance the overall trader experience.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* TRUST / TRUST & COMMUNITY SECTION                                   */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "trust" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-3">
+    City Traders Imperium (CTI), established in 2018 and based in Dubai, has built a reputation for creating a solid prop trading community with generally favourable feedback from clients.
+  </p>
+  <p class="mb-6">
+    While we consider CTI a well-established and trusted prop firm, it is important to note that CTI is not a brokerage service but a proprietary trading firm. They partner with a CySEC regulated broker and liquidity provider, <strong>Broctagon</strong>, to ensure high-quality trading conditions and regulatory compliance, enhancing the security and reliability of their trading environment.
+  </p>
+
+  <!-- Trustpilot -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trustpilot Score</h3>
+
+  <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 mb-4 flex items-center gap-4">
+    <div class="flex-shrink-0">
+      <p class="text-3xl font-black text-slate-900">4.4<span class="text-lg text-slate-400">/5</span></p>
+      <p class="text-xs text-slate-500 font-semibold">TrustScore</p>
+    </div>
+    <div>
+      <p class="text-sm text-slate-700">CTI maintains an excellent TrustPilot score of <strong>4.4 out of 5</strong>. Customer reviews frequently praise the platform for its comprehensive support and prop trading tools.</p>
+    </div>
+  </div>
+
+  <p class="mb-6">
+    There are occasional critiques regarding server reliability during volatile market conditions, which the company actively addresses in its responses, highlighting their commitment to continuous improvement.
+  </p>
+
+  <!-- Community -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Prop Trading Community</h3>
+  <p class="mb-4">
+    The community engagement at CTI is extensive and active, shown by their over <strong>24,000 Discord members</strong>, including over 700 funded traders. CTI's Discord channel provides valuable trading information, client support, and announcements around promotions and giveaways.
+  </p>
+  <p class="mb-4">
+    On social media, CTI has a significant presence with 21,800 followers on Twitter/X, 4,600 on Facebook, and over 21,500 on Instagram. These platforms are used for announcements, support, success stories, and educational content, helping maintain a connected and informed community.
+  </p>
+
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">24K+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Discord</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">21.8K</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Twitter/X</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">21.5K</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Instagram</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">4.6K</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Facebook</p>
+    </div>
+  </div>
+
+  <!-- Popularity -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">How Popular Is City Traders Imperium?</h3>
+  <p class="mb-4">
+    City Traders Imperium sees around <strong>9,900 Google searches</strong> each month, ranking it as the <strong>30th most searched</strong> prop firm in 2025. It also received <strong>189,390 global visits</strong> in March 2025, placing it <strong>26th for website traffic</strong> among the prop firms we track.
+  </p>
+  <p class="mb-4">
+    Since launching in 2018, CTI says it has funded over <strong>36,000 prop traders</strong> and allocated more than <strong>$367 million in capital</strong>, making it one of the most established names in the prop trading industry.
+  </p>
+  <p class="mb-4">
+    Search interest is highest in the United States and India, followed by the United Kingdom, South Africa, and Nigeria, showing where CTI has its largest trading communities.
+  </p>
+
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">9,900</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Monthly Searches</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">30th</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Search Rank</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">189,390</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Monthly Visits</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">26th</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Traffic Rank</p>
+    </div>
+  </div>
+
+  <!-- Top Countries Table -->
+  <h4 class="text-base font-bold text-slate-900 mb-3">Top Branded Searches by Country</h4>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Rank</th>
+          <th class="px-4 py-3 text-left">Country</th>
+          <th class="px-4 py-3 text-right">Monthly Searches</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-bold text-emerald-600">1st</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">United States</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">880</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-bold text-slate-500">2nd</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">India</td>
+          <td class="px-4 py-3 text-right text-slate-700">880</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-bold text-slate-500">3rd</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">United Kingdom</td>
+          <td class="px-4 py-3 text-right text-slate-700">720</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-bold text-slate-500">4th</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">South Africa</td>
+          <td class="px-4 py-3 text-right text-slate-700">390</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-bold text-slate-500">5th</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">Nigeria</td>
+          <td class="px-4 py-3 text-right text-slate-700">390</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-bold text-slate-500">6th</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">Pakistan</td>
+          <td class="px-4 py-3 text-right text-slate-700">260</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-bold text-slate-500">7th</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">Vietnam</td>
+          <td class="px-4 py-3 text-right text-slate-700">260</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-bold text-slate-500">8th</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">Canada</td>
+          <td class="px-4 py-3 text-right text-slate-700">210</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-bold text-slate-500">9th</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">Indonesia</td>
+          <td class="px-4 py-3 text-right text-slate-700">210</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-bold text-slate-500">10th</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">Germany</td>
+          <td class="px-4 py-3 text-right text-slate-700">170</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trust and Community</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      CTI's strong TrustPilot score (4.4/5) and partnerships with CySEC-regulated liquidity providers establish it as a reliable and secure prop trading firm.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* FALLBACK                                                            */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section !== "challenges" && section !== "spreads" && section !== "markets" && section !== "platforms" && section !== "payouts" && section !== "support" && section !== "trust" && fallbackBody && (
+  <div class="text-sm leading-relaxed text-slate-700 space-y-4">
+    {fallbackBody.split("\n\n").map((para) => (
+      <p set:html={para.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")} />
+    ))}
+  </div>
+)}

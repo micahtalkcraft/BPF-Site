@@ -1,11 +1,25 @@
 {
   "id": "rev-city-traders-imperium",
   "propFirmId": "d0000031-0000-0000-0000-000000000031",
-  "summary": "City Traders Imperium (CTI) scores 72/100 in our evaluation. It is a UK-based prop firm offering smaller starting challenges from $2,500, making it accessible for traders with limited capital. With profit splits up to 100% and weekend trading allowed, CTI provides solid features for developing traders.",
-  "pros": ["Profit splits up to 100%", "Small $2.5K challenges available", "Weekend trading allowed", "Commission-free crypto trading"],
-  "cons": ["Limited to 6 crypto pairs", "14-day payout frequency", "Lower overall instrument range"],
-  "bestFor": "Traders seeking smaller challenge sizes and high profit splits",
-  "notIdealFor": "Crypto-focused traders who need wide digital asset access",
+  "summary": "City Traders Imperium (CTI) is an established prop firm founded in 2018 that focuses on structured funding models rather than aggressive growth. You can choose between One Step and Two Step challenges or Instant Funding programs, all of which run on simulated accounts with no time limits and balance-based drawdown rules. Scaling is available, but meaningful growth mainly applies to Instant Funding accounts rather than evaluation challenges.\n\nCompared to newer prop firms, CTI is more restrictive \u2013 account sizes are smaller, leverage is low across all account types, and market coverage is limited, with no stocks and fewer instruments than competitors like DNA Funded or Blueberry Funded. Profit splits can reach 100%, but they start lower on Instant Funding and only improve after hitting multiple profit milestones, which slows early earnings.\n\nCTI is best suited to traders who prefer slower progression, strict risk controls, and long-term consistency over flexibility or fast payouts. If you\u2019re looking for higher leverage, larger starting capital, or broader markets, there are stronger options available in 2026.",
+  "pros": [
+    "Scaling up to $4 million across multiple accounts",
+    "Instant Funding accounts with no evaluation required",
+    "Monthly salary payments for consistent funded traders",
+    "No time limits on any challenge type",
+    "Balance-based (static) drawdown on evaluation challenges",
+    "Competitive $5 roundturn forex commissions"
+  ],
+  "cons": [
+    "US clients restricted to MatchTrader platform only",
+    "No stock or share trading available",
+    "Maximum $100,000 individual account size",
+    "Low leverage compared to competitors (1:30 forex challenges)",
+    "Profit splits start at 50% on Instant Funding",
+    "Only 50 tradeable instruments"
+  ],
+  "bestFor": "Traders who prefer slower progression, strict risk controls, and long-term consistency over flexibility or fast payouts",
+  "notIdealFor": "Traders looking for higher leverage, larger starting capital, broader markets, or firms with stock trading and higher starting profit splits",
   "overallScore": 72,
   "categoryScores": {
     "challenges": 80,
@@ -15,7 +29,41 @@
     "platforms": 70,
     "trust": 70
   },
+  "categorySections": {
+    "challenges": "custom",
+    "spreads": "custom",
+    "markets": "custom",
+    "platforms": "custom",
+    "payouts": "custom",
+    "support": "custom",
+    "trust": "custom"
+  },
+  "verdictBlocks": [
+    {
+      "heading": "Our Final Verdict On City Traders Imperium",
+      "body": "City Traders Imperium is a viable option if you want multiple routes to funding, including One Step, Two Step, and Instant Funding programs, all with no time limits and balance-based drawdown rules. You trade on simulated funded accounts and can scale capital by hitting fixed profit milestones, with profit splits that increase over time and can reach 100% under the VIP structure.\n\nThat said, account sizes, leverage, and market coverage are more limited than many competitors, so CTI makes more sense if you prioritise clear rules and long-term progression over higher risk or aggressive exposure."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How do CTI challenges work?",
+      "a": "City Traders Imperium prop challenges work by requiring you to hit profit targets while staying within fixed drawdown rules, with no time limits to pass. You can choose a One Step Challenge with a single target, a Two Step Challenge that splits the evaluation into two phases, or skip evaluations entirely with Instant Funding and Instant Funding Pro, where you trade on a simulated funded account immediately and scale as you hit profit milestones."
+    },
+    {
+      "q": "Does City Traders Imperium accept US clients?",
+      "a": "Yes, City Traders Imperium is a prop firm accepting US clients, but you'll be limited to using the MatchTrader platform instead of MT5. If you're based outside the US, you can access MT5, while US-based traders still have full access to CTI's challenge programs, Instant Funding models, payouts, and scaling plans through MatchTrader."
+    },
+    {
+      "q": "How much do you get paid in CTI funding?",
+      "a": "Your profit share at CTI depends on the program you choose and how consistently you perform, starting lower and increasing as you scale. On challenge-funded accounts, you typically earn 80% and can increase up to 100%, while Instant Funding starts at 50%, then increases to 70%\u2013100% as you progress through profit milestones and VIP levels. If you trade consistently, you can also qualify for CTI's VIP Program, which unlocks higher profit shares, faster payouts, and potential monthly salary payments."
+    },
+    {
+      "q": "What are proprietary trading firms?",
+      "a": "Proprietary trading firms give you access to funded trading accounts so you can trade financial markets without risking your own capital. Instead of depositing money, you pay a one-time access fee and trade on a simulated account, keeping a percentage of the profits you generate as long as you follow the firm's rules on risk, drawdown, and consistency."
+    }
+  ],
   "verified": true,
+  "flagged": false,
   "methodologyVersion": "1.0",
   "lastReviewedAt": "2026-02-27"
 }

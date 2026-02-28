@@ -1,0 +1,1092 @@
+---
+// Rich editorial content for Elite Trader Funding (FLAGGED)
+// Uses red/amber verdict boxes throughout to reflect caution rating
+interface Props {
+  section: string;
+  fallbackBody?: string;
+}
+const { section, fallbackBody } = Astro.props;
+---
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* CHALLENGES SECTION (3/10)                                           */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "challenges" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    Elite Trader Funding offers six evaluation models including Direct to Funded (DTF), 1 Step, EOD, Fast Track, Static, and Diamond Hands. But passing a challenge doesn't unlock real funding. You're first placed in a Sim-Funded account, which is still demo-based and requires an activation fee. To access real capital, ETF must manually approve you for a LIVE Elite account — a step with no published criteria or guarantees.
+  </p>
+
+  <!-- Key warning -->
+  <div class="rounded-xl border-2 border-red-300 bg-red-50 p-4 mb-8 flex items-start gap-3">
+    <svg class="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.168 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+    </svg>
+    <div>
+      <p class="font-bold text-red-900 text-sm mb-1">No Guaranteed Path to Real Funding</p>
+      <p class="text-xs text-red-800 leading-relaxed">Passing an evaluation only unlocks a Sim-Funded account (demo-based). LIVE Elite access with real capital is entirely at ETF's discretion — there are no published criteria for promotion, and some traders report being denied with no clear explanation.</p>
+    </div>
+  </div>
+
+  <!-- Quick stats -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Eval Models</p>
+      <p class="text-base font-bold text-slate-800">6</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Account Sizes</p>
+      <p class="text-base font-bold text-slate-800">$10K – $300K</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Min Trading Days</p>
+      <p class="text-base font-bold text-slate-800">5</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Eval Fees From</p>
+      <p class="text-base font-bold text-slate-800">$16.50</p>
+    </div>
+  </div>
+
+  <!-- Per-model summaries -->
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1 flex items-center gap-2">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-red-500 text-white text-xs font-black flex items-center justify-center">1</span>
+        Direct to Funded (DTF)
+      </p>
+      <p>Instant funding option — skips evaluation entirely. Placed straight into a Sim-Funded account with a $10,000 payout cap. 10% drawdown, no daily loss limit. $25K and $50K sizes only.</p>
+      <p class="text-xs text-red-600 font-semibold mt-1">No resets allowed. One DTF account at a time. 30-day cooldown after hitting cap.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1 flex items-center gap-2">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-red-500 text-white text-xs font-black flex items-center justify-center">2</span>
+        1 Step Evaluation
+      </p>
+      <p>ETF's most popular format. Uses intraday trailing drawdown that moves with open equity. No daily loss limit or time cap. Accounts from $50K to $300K with fees starting at $16.50.</p>
+      <p class="text-xs text-amber-600 font-semibold mt-1">Resets available at $75. No time limit on evaluations.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1 flex items-center gap-2">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-red-500 text-white text-xs font-black flex items-center justify-center">3</span>
+        EOD Evaluation
+      </p>
+      <p>End-of-Day model with trailing drawdown based on EOD balance, not live equity. Includes a daily loss limit (2.2%). Less prone to mid-trade blowouts than 1 Step. Accounts from $50K to $150K.</p>
+      <p class="text-xs text-amber-600 font-semibold mt-1">Suits swing traders wanting more breathing room during trades.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1 flex items-center gap-2">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-red-500 text-white text-xs font-black flex items-center justify-center">4</span>
+        Fast Track
+      </p>
+      <p>Tightest timeline — just 14 calendar days to hit a 6% profit target. Trailing intraday drawdown. Only $100K and $250K sizes. No weekend holding.</p>
+      <p class="text-xs text-red-600 font-semibold mt-1">No reset option. Fail = buy a new one. Max 3 active Fast Track accounts.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1 flex items-center gap-2">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-red-500 text-white text-xs font-black flex items-center justify-center">5</span>
+        Static Drawdown
+      </p>
+      <p>Fixed drawdowns that don't move as your account grows. Simple to manage. Accounts from $10K to $50K with profit targets of 8–10%.</p>
+      <p class="text-xs text-amber-600 font-semibold mt-1">Suits conservative or newer traders who prefer predictability.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1 flex items-center gap-2">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-red-500 text-white text-xs font-black flex items-center justify-center">6</span>
+        Diamond Hands
+      </p>
+      <p>Special EOD model with weekend holding, daily loss limit (1.5%), and EOD trailing drawdown (3.5%). $100K only. 5% profit target.</p>
+      <p class="text-xs text-amber-600 font-semibold mt-1">Ideal for swing traders and overnight carry positions.</p>
+    </div>
+  </div>
+
+  <!-- ─── Challenge Comparison Table ───────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Comparison</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Challenge Type</th>
+          <th class="px-4 py-3 text-center">Fees</th>
+          <th class="px-4 py-3 text-center">Account Size</th>
+          <th class="px-4 py-3 text-center">Profit Target</th>
+          <th class="px-4 py-3 text-center">Drawdown</th>
+          <th class="px-4 py-3 text-center">Daily Loss</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">DTF 25K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$299.50</td>
+          <td class="px-4 py-3 text-center text-slate-900">$25,000</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A (Cap $10K)</td>
+          <td class="px-4 py-3 text-center text-slate-900">10%</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">DTF 50K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$349.50</td>
+          <td class="px-4 py-3 text-center text-slate-900">$50,000</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A (Cap $10K)</td>
+          <td class="px-4 py-3 text-center text-slate-900">10%</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">1 Step 50K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$16.50</td>
+          <td class="px-4 py-3 text-center text-slate-900">$50,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">6% ($3,000)</td>
+          <td class="px-4 py-3 text-center text-slate-900">4%</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">1 Step 100K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$20.50</td>
+          <td class="px-4 py-3 text-center text-slate-900">$100,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">6% ($6,000)</td>
+          <td class="px-4 py-3 text-center text-slate-900">3%</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">1 Step 150K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$29.50</td>
+          <td class="px-4 py-3 text-center text-slate-900">$150,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">6% ($9,000)</td>
+          <td class="px-4 py-3 text-center text-slate-900">3.3%</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">1 Step 250K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$51.50</td>
+          <td class="px-4 py-3 text-center text-slate-900">$250,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">6% ($15,000)</td>
+          <td class="px-4 py-3 text-center text-slate-900">2.6%</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">1 Step 300K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$65.50</td>
+          <td class="px-4 py-3 text-center text-slate-900">$300,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">6.7% ($20,000)</td>
+          <td class="px-4 py-3 text-center text-slate-900">2.5%</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">Static 10K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$99</td>
+          <td class="px-4 py-3 text-center text-slate-900">$10,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">10% ($1,000)</td>
+          <td class="px-4 py-3 text-center text-slate-900">5% (Fixed)</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">Static 25K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$229</td>
+          <td class="px-4 py-3 text-center text-slate-900">$25,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">8% ($2,000)</td>
+          <td class="px-4 py-3 text-center text-slate-900">4% (Fixed)</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">Static 50K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$449</td>
+          <td class="px-4 py-3 text-center text-slate-900">$50,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">8% ($4,000)</td>
+          <td class="px-4 py-3 text-center text-slate-900">4% (Fixed)</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">Fast Track 100K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$75</td>
+          <td class="px-4 py-3 text-center text-slate-900">$100,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">6% ($6,000)</td>
+          <td class="px-4 py-3 text-center text-slate-900">3%</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">Fast Track 250K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$175</td>
+          <td class="px-4 py-3 text-center text-slate-900">$250,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">6% ($15,000)</td>
+          <td class="px-4 py-3 text-center text-slate-900">2.6%</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">EOD 50K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$29.50</td>
+          <td class="px-4 py-3 text-center text-slate-900">$50,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">6% ($3,000)</td>
+          <td class="px-4 py-3 text-center text-slate-900">4%</td>
+          <td class="px-4 py-3 text-center text-slate-900">2.2%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">EOD 100K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$43</td>
+          <td class="px-4 py-3 text-center text-slate-900">$100,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">6% ($6,000)</td>
+          <td class="px-4 py-3 text-center text-slate-900">3.5%</td>
+          <td class="px-4 py-3 text-center text-slate-900">2.2%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">EOD 150K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$60.50</td>
+          <td class="px-4 py-3 text-center text-slate-900">$150,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">6% ($9,000)</td>
+          <td class="px-4 py-3 text-center text-slate-900">3%</td>
+          <td class="px-4 py-3 text-center text-slate-900">2.2%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">Diamond Hands 100K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$36.50</td>
+          <td class="px-4 py-3 text-center text-slate-900">$100,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">5% ($5,000)</td>
+          <td class="px-4 py-3 text-center text-slate-900">3.5%</td>
+          <td class="px-4 py-3 text-center text-slate-900">1.5%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ─── Funded Accounts Explained ────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">What Happens After Passing</h3>
+  <p class="mb-3">
+    Passing an evaluation at ETF doesn't unlock real capital. Instead, you're offered a <strong>Sim-Funded account</strong> — still a demo account with payout eligibility. To activate it, you must pay an additional fee:
+  </p>
+
+  <div class="grid sm:grid-cols-2 gap-3 mb-4">
+    <div class="rounded-lg bg-amber-50 border border-amber-200 p-4">
+      <p class="font-bold text-amber-900 text-sm">Monthly Plan</p>
+      <p class="text-2xl font-black text-amber-800 mt-1">$80<span class="text-sm font-semibold">/month</span></p>
+      <p class="text-xs text-amber-700 mt-1">Recurring subscription fee</p>
+    </div>
+    <div class="rounded-lg bg-amber-50 border border-amber-200 p-4">
+      <p class="font-bold text-amber-900 text-sm">One-Time Activation</p>
+      <p class="text-2xl font-black text-amber-800 mt-1">$150 – $300</p>
+      <p class="text-xs text-amber-700 mt-1">Single upfront payment (varies by model/size)</p>
+    </div>
+  </div>
+
+  <!-- Activation fee table -->
+  <h4 class="text-base font-bold text-slate-900 mb-2">One-Time Activation Fees by Model</h4>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Size</th>
+          <th class="px-4 py-3 text-center">1 Step</th>
+          <th class="px-4 py-3 text-center">EOD</th>
+          <th class="px-4 py-3 text-center">Static</th>
+          <th class="px-4 py-3 text-center">Diamond Hands</th>
+          <th class="px-4 py-3 text-center">Fast Track</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">75K and Below</td>
+          <td class="px-4 py-3 text-center text-slate-900">$150</td>
+          <td class="px-4 py-3 text-center text-slate-900">$175</td>
+          <td class="px-4 py-3 text-center text-slate-900">$175</td>
+          <td class="px-4 py-3 text-center text-slate-400">—</td>
+          <td class="px-4 py-3 text-center text-red-500 font-semibold">Ineligible</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">100K and Above</td>
+          <td class="px-4 py-3 text-center text-slate-900">$225</td>
+          <td class="px-4 py-3 text-center text-slate-900">$250</td>
+          <td class="px-4 py-3 text-center text-slate-900">$175</td>
+          <td class="px-4 py-3 text-center text-slate-900">$300</td>
+          <td class="px-4 py-3 text-center text-red-500 font-semibold">Ineligible</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="mb-4">
+    Once active, you must complete <strong>10 Active Trading Days</strong> where each day earns at least 23% of your best day's profit (minimum $100–$200). You must surpass your drawdown by $100 to request a payout and stay within position limits.
+  </p>
+
+  <p class="mb-4">
+    To move beyond Sim-Funded to a <strong>LIVE Elite account</strong> with real capital, ETF must invite you based on internal review. There are no published requirements — eligibility is based on Sim-Funded performance, payout history, and risk profile. If approved, your LIVE account is funded via EdgeClear with daily payouts and monthly exchange data fees of $128 per venue.
+  </p>
+
+  <!-- Scaling -->
+  <h4 class="text-base font-bold text-slate-900 mb-2">Scaling Plan</h4>
+  <p class="mb-6">
+    No phased scaling during evaluations — trade full position size from day one (within account limits). ETF allows up to 20 active Sim-Funded accounts, including max 3 Fast Tracks. For LIVE Elite accounts, ETF uses a performance-based scaling model with bonuses at $5K, $10K, and $20K withdrawal milestones.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-red-500 bg-red-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-red-800 mb-1">Verdict on Challenges</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Elite Trader Funding scores 3/10 for challenges because while the variety of evaluation models gives traders options, the real issue lies in what happens after you pass. There's no clear path to real funding, just a paid Sim-Funded account and a vague, discretionary review process for LIVE Elite access. The lack of transparency around who actually gets funded makes this a risky proposition for traders expecting a guaranteed outcome.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SPREADS / PRICING SECTION (5/10)                                    */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "spreads" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    Elite Trader Funding uses real futures exchange pricing with no internal markups, artificial spreads, or broker padding. Every trade is routed to a regulated exchange like CME, CBOT, COMEX, or NYMEX, and all fees are passed on directly. This keeps pricing transparent, but costs can still add up depending on what you trade and how often.
+  </p>
+
+  <!-- Stats grid -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Pricing</p>
+      <p class="text-base font-bold text-slate-800">Per Side</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Source</p>
+      <p class="text-base font-bold text-slate-800">Exchange</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Spread Markup</p>
+      <p class="text-base font-bold text-emerald-600">None</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Data Fees (Live)</p>
+      <p class="text-base font-bold text-red-600">$128/mo</p>
+    </div>
+  </div>
+
+  <p class="mb-4">
+    Spreads reflect the live bid-ask on each contract and fluctuate depending on time of day, volatility, and contract type. Index futures like MES and MNQ typically show a 1-tick spread during US hours, while agricultural products and metals tend to be wider at 1–3 ticks. Crypto futures are the least consistent, with spreads expanding significantly during off-hours.
+  </p>
+
+  <!-- Commission table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Commission Fees (Per Side)</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Market</th>
+          <th class="px-4 py-3 text-right">Commission (Per Side)</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Forex Futures</td>
+          <td class="px-4 py-3 text-right text-slate-900">$2.36 (standard), $0.50 (micro)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Metals</td>
+          <td class="px-4 py-3 text-right text-slate-900">$2.31 (GC, SI, PL), $0.76 (MGC)</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Commodities</td>
+          <td class="px-4 py-3 text-right text-slate-900">$2.81 (standard)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Indices</td>
+          <td class="px-4 py-3 text-right text-slate-900">$2.04 (ES/NQ), $0.51–$0.56 (MES/MNQ)</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Crypto Futures</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$6.76 (BTC), $2.76 (MBT), $0.46 (MET)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Exchange data fees -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Exchange Data Fees (LIVE Accounts Only)</h3>
+  <p class="mb-3">
+    If you reach a LIVE Elite account, ETF begins charging monthly exchange data fees for real-time Level 2 quotes and depth feeds. These are not optional and apply even if you only trade one product from a given exchange.
+  </p>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-4">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Exchange</th>
+          <th class="px-4 py-3 text-right">Monthly Cost</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">CME</td>
+          <td class="px-4 py-3 text-right font-semibold text-red-600">$128</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">CBOT</td>
+          <td class="px-4 py-3 text-right font-semibold text-red-600">$128</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">NYMEX</td>
+          <td class="px-4 py-3 text-right font-semibold text-red-600">$128</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">COMEX</td>
+          <td class="px-4 py-3 text-right font-semibold text-red-600">$128</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Eurex</td>
+          <td class="px-4 py-3 text-right font-semibold text-amber-600">$80</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="rounded-lg bg-red-50 border border-red-200 p-3 mb-6">
+    <p class="text-xs text-red-800"><strong>Note:</strong> Trading across all four US exchanges costs over $500/month in data fees alone. During Evaluation and Sim-Funded stages, ETF absorbs these data fees — you get real-time quotes for free.</p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-amber-500 bg-amber-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-amber-800 mb-1">Verdict on Pricing and Fees</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Elite Trader Funding scores 5/10 for pricing. While all fees are transparent and based on regulated exchange costs, they can quickly accumulate. Commission is reasonable on micros and index contracts, but trading crypto or commodities is noticeably more expensive. Add in mandatory exchange fees once live — over $500/month for full US coverage — and your cost structure becomes harder to manage unless you're trading at scale.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* MARKETS SECTION (5/10)                                              */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "markets" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    Elite Trader Funding gives you full access to the major US futures exchanges — CME, CBOT, COMEX, and NYMEX — through standard, mini, and micro contracts. All trades are routed through exchange order books using real market data. You're not trading synthetic pairs or CFDs here, but live futures on regulated venues.
+  </p>
+
+  <!-- Stats grid -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Exchanges</p>
+      <p class="text-base font-bold text-slate-800">4 US Exchanges</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Asset Type</p>
+      <p class="text-base font-bold text-slate-800">Futures Only</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Contract Types</p>
+      <p class="text-base font-bold text-slate-800">Std + Mini + Micro</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">CFDs / Spot FX</p>
+      <p class="text-base font-bold text-red-600">Not Available</p>
+    </div>
+  </div>
+
+  <!-- Exchange breakdown -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Available Exchanges and Instruments</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Exchange</th>
+          <th class="px-4 py-3 text-left">Key Instruments</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">CME</td>
+          <td class="px-4 py-3 text-slate-700">Forex Futures (6E, 6B, 6J + micros), Crypto (BTC, MBT, ETH, MET), Index Futures (ES, MES, NQ, MNQ, YM, MYM, RTY, M2K), Interest Rates (US Treasuries, Fed Funds)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">CBOT</td>
+          <td class="px-4 py-3 text-slate-700">Corn (ZC), Wheat (ZW), Soybeans (ZS), Soymeal, Soy Oil, Treasury Futures</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">COMEX</td>
+          <td class="px-4 py-3 text-slate-700">Gold (GC, MGC), Silver (SI, SIL), Copper (HG), Platinum (PL), Palladium (PA)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">NYMEX</td>
+          <td class="px-4 py-3 text-slate-700">Crude Oil (CL), Natural Gas (NG), Gasoline (RB), Heating Oil (HO)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Position limits -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Contract Access and Position Limits</h3>
+  <p class="mb-3">
+    ETF doesn't use traditional leverage ratios. Instead, margin is embedded into the exchange-listed contract. The firm enforces strict position caps depending on your account type:
+  </p>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account</th>
+          <th class="px-4 py-3 text-center">Max Minis</th>
+          <th class="px-4 py-3 text-center">Max Micros</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">25K DTF</td>
+          <td class="px-4 py-3 text-center text-slate-900">2</td>
+          <td class="px-4 py-3 text-center text-slate-900">20</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">100K Static</td>
+          <td class="px-4 py-3 text-center text-slate-900">4</td>
+          <td class="px-4 py-3 text-center text-slate-900">40</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">250K Fast Track</td>
+          <td class="px-4 py-3 text-center text-slate-900">24</td>
+          <td class="px-4 py-3 text-center text-slate-900">240</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="rounded-lg bg-red-50 border border-red-200 p-3 mb-6">
+    <p class="text-xs text-red-800"><strong>Warning:</strong> Micros count as 1/10 of a mini. Limits apply across all contracts combined. Breaching position limits results in instant disqualification and forfeiture of profits — no exceptions.</p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-amber-500 bg-amber-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-amber-800 mb-1">Verdict on Markets</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Elite Trader Funding scores 5/10 for markets. You get full exchange access with deep coverage across currencies, indices, commodities, crypto, and rates — all in real futures format. But there's no support for stocks or spot forex, and fixed contract caps limit your ability to scale. For serious futures traders, the breadth is strong, but flexibility is still restricted.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PLATFORMS SECTION (6/10)                                            */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "platforms" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    Elite Trader Funding offers one of the most flexible platform setups in the futures prop space — you can choose from over a dozen Rithmic-compatible platforms, with no forced lock-ins. Platform fees are mostly optional, and real-time data is included during evaluation.
+  </p>
+
+  <!-- Stats grid -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Free Platforms</p>
+      <p class="text-base font-bold text-emerald-600">3</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Paid Options</p>
+      <p class="text-base font-bold text-slate-800">10+</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Data Feed</p>
+      <p class="text-base font-bold text-slate-800">Rithmic</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Vendor Lock-In</p>
+      <p class="text-base font-bold text-emerald-600">None</p>
+    </div>
+  </div>
+
+  <!-- Free platforms -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Free Platforms (Included)</h3>
+  <div class="space-y-3 mb-6">
+    <div class="rounded-xl border border-slate-200 bg-white p-4">
+      <div class="flex items-center gap-3 mb-2">
+        <p class="font-bold text-slate-900">Tradovate</p>
+        <span class="inline-block rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2 py-0.5 uppercase">Free</span>
+      </div>
+      <p class="text-slate-600">Browser and mobile friendly. Beginner-oriented with clean interface.</p>
+    </div>
+    <div class="rounded-xl border border-slate-200 bg-white p-4">
+      <div class="flex items-center gap-3 mb-2">
+        <p class="font-bold text-slate-900">TradingView</p>
+        <span class="inline-block rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2 py-0.5 uppercase">Free</span>
+      </div>
+      <p class="text-slate-600">Web-based with basic charting and Rithmic bridge integration.</p>
+    </div>
+    <div class="rounded-xl border border-slate-200 bg-white p-4">
+      <div class="flex items-center gap-3 mb-2">
+        <p class="font-bold text-slate-900">R | Trader Pro</p>
+        <span class="inline-block rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2 py-0.5 uppercase">Free</span>
+      </div>
+      <p class="text-slate-600">Rithmic's native interface with DOM and ladder tools for order flow trading.</p>
+    </div>
+  </div>
+
+  <!-- Paid platforms -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Paid Platforms (Subscription Required)</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Platform</th>
+          <th class="px-4 py-3 text-right">Approx. Cost</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">EdgeProX</td>
+          <td class="px-4 py-3 text-right text-slate-900">$34.99/month</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">NinjaTrader</td>
+          <td class="px-4 py-3 text-right text-slate-600">Paid license required</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">Sierra Chart</td>
+          <td class="px-4 py-3 text-right text-slate-600">Paid license required</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">Bookmap</td>
+          <td class="px-4 py-3 text-right text-slate-600">Paid license required</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">ATAS, Quantower, MotiveWave, eSignal</td>
+          <td class="px-4 py-3 text-right text-slate-600">Paid licenses required</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="rounded-lg bg-amber-50 border border-amber-200 p-3 mb-6">
+    <p class="text-xs text-amber-800"><strong>Note:</strong> ETF doesn't provide discounts or bundles for paid platforms. If you want order flow, bracket orders, or advanced charting tools, expect to pay for access on top of evaluation and activation fees.</p>
+  </div>
+
+  <!-- Trading rules summary -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Key Trading Rules</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Rule</th>
+          <th class="px-4 py-3 text-left">Detail</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Min Trading Days</td>
+          <td class="px-4 py-3 text-slate-900">5 days (all models). Fast Track has 14-day hard limit.</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">News Trading</td>
+          <td class="px-4 py-3"><span class="text-emerald-600 font-semibold">Allowed</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Weekend Holding</td>
+          <td class="px-4 py-3"><span class="text-red-500 font-semibold">Diamond Hands + LIVE Elite only</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Algo / EA Trading</td>
+          <td class="px-4 py-3 text-slate-900">Allowed with compatible platforms. No martingale, HFT, or scratch trades.</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Copy Trading</td>
+          <td class="px-4 py-3 text-slate-900">Multi-account mirroring post-LIVE Elite with approval only.</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">10 Second Rule</td>
+          <td class="px-4 py-3"><span class="text-red-500 font-semibold">No entering and exiting within 10 seconds</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">VPN / Masking</td>
+          <td class="px-4 py-3"><span class="text-red-500 font-semibold">Banned — stable IP and verified location required</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Consistency Rule</td>
+          <td class="px-4 py-3 text-slate-900">Not during evaluations. Sim-Funded: 23% daily threshold on 10 ATDs.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-amber-500 bg-amber-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-amber-800 mb-1">Verdict on Platforms and Rules</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Elite Trader Funding scores 6/10 for platforms and rules. You get full access to advanced charting tools and execution platforms with no vendor lock-in. The ability to trade algos and mirror accounts (post-funding) adds flexibility. Still, costs can build up quickly if you're using premium tools like Bookmap or Sierra Chart, which ETF doesn't cover.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PAYOUTS SECTION (5/10)                                              */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "payouts" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    Elite Trader Funding supports a mix of upfront and recurring payments depending on your evaluation model and payout tier. While challenge fees are paid at sign-up, additional payments kick in if you pass and want to access Sim-Funded or LIVE Elite accounts. Payouts are handled through Rise, with structured rules around timing, minimums, and profit splits.
+  </p>
+
+  <!-- Stats grid -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">First $12,500</p>
+      <p class="text-base font-bold text-emerald-600">100% Split</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">After $12,500</p>
+      <p class="text-base font-bold text-slate-800">90% Split</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Frequency</p>
+      <p class="text-base font-bold text-slate-800">Weekly</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Payout Provider</p>
+      <p class="text-base font-bold text-slate-800">Rise</p>
+    </div>
+  </div>
+
+  <!-- Payout structure table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payout Structure by Model</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Model</th>
+          <th class="px-4 py-3 text-center">First Payout Trigger</th>
+          <th class="px-4 py-3 text-center">Min Withdrawal</th>
+          <th class="px-4 py-3 text-center">Frequency</th>
+          <th class="px-4 py-3 text-center">Limits</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">1 Step</td>
+          <td class="px-4 py-3 text-center text-slate-900">Drawdown + $100</td>
+          <td class="px-4 py-3 text-center text-slate-900">$100–$2,500</td>
+          <td class="px-4 py-3 text-center text-slate-900">Weekly</td>
+          <td class="px-4 py-3 text-center text-slate-600">Then 90%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">Static</td>
+          <td class="px-4 py-3 text-center text-slate-900">Fixed threshold</td>
+          <td class="px-4 py-3 text-center text-slate-900">$100–$2,500</td>
+          <td class="px-4 py-3 text-center text-slate-900">Weekly</td>
+          <td class="px-4 py-3 text-center text-slate-600">Must maintain static buffer</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">Diamond Hands</td>
+          <td class="px-4 py-3 text-center text-slate-900">EOD + drawdown + $100</td>
+          <td class="px-4 py-3 text-center text-slate-900">$100–$2,500</td>
+          <td class="px-4 py-3 text-center text-slate-900">Weekly</td>
+          <td class="px-4 py-3 text-center text-slate-600">Weekend allowed</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">Fast Track</td>
+          <td class="px-4 py-3 text-center text-slate-900">Safety Net + ATDs in &lt;14 days</td>
+          <td class="px-4 py-3 text-center text-slate-900">$100–$2,500</td>
+          <td class="px-4 py-3 text-center text-slate-900">Weekly</td>
+          <td class="px-4 py-3 text-center text-red-500 font-semibold">No resets, time-limited</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">DTF</td>
+          <td class="px-4 py-3 text-center text-slate-900">Hit $2,600 or $5,100 buffer</td>
+          <td class="px-4 py-3 text-center text-slate-900">$1,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">Weekly</td>
+          <td class="px-4 py-3 text-center text-red-500 font-semibold">Max $10K, 30-day cooldown</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">LIVE Elite</td>
+          <td class="px-4 py-3 text-center text-slate-900">Immediate after KYC</td>
+          <td class="px-4 py-3 text-center text-slate-900">$250</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">Daily</td>
+          <td class="px-4 py-3 text-center text-slate-600">Capital matched, replenishment rules</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="mb-4">
+    Each payout model applies a specific "Safety Net" or buffer requirement. Most accounts also require at least <strong>10 active trading days</strong> before you can request a withdrawal. Full KYC verification is required before any funds are released.
+  </p>
+
+  <!-- Sim-Funded warning -->
+  <div class="rounded-xl border-2 border-red-300 bg-red-50 p-4 mb-6 flex items-start gap-3">
+    <svg class="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.168 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+    </svg>
+    <div>
+      <p class="font-bold text-red-900 text-sm mb-1">Sim-Funded ≠ Real Capital</p>
+      <p class="text-xs text-red-800 leading-relaxed">Sim-Funded accounts are still demo-based. You're trading simulated capital but eligible for real payouts if you stay within the rules. The structure raises questions — you're paying to maintain access ($80/month or one-time activation), and while ETF does deliver payouts, the model benefits the firm whether or not you ever trade real capital.</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-amber-500 bg-amber-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-amber-800 mb-1">Verdict on Payments and Payouts</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Elite Trader Funding scores 5/10 here. Payment options are broad, activation plans are flexible, and the Rise payout system works smoothly once verified. But costs stack up post-evaluation, and high buffer rules mean many traders may hit targets but still miss payout eligibility. It's a fair system if you understand the rules — just don't underestimate how long it can take to actually withdraw.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SUPPORT SECTION (5/10)                                              */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "support" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    Elite Trader Funding gives traders basic but reliable options when it comes to support and learning. There's no live chat or phone line, but you can get help via tickets or ask questions through their active Discord community.
+  </p>
+
+  <!-- Support channels -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Support Channels</h3>
+  <div class="space-y-3 mb-6">
+    <div class="rounded-xl border border-slate-200 bg-white p-4">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center flex-shrink-0">
+          <svg class="h-4 w-4 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+          </svg>
+        </span>
+        <div>
+          <p class="font-bold text-slate-900">Email Ticket System</p>
+          <p class="text-slate-600 text-xs">Primary support method. Responses typically within 24 hours on business days.</p>
+        </div>
+      </div>
+    </div>
+    <div class="rounded-xl border border-slate-200 bg-white p-4">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center flex-shrink-0">
+          <svg class="h-4 w-4 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/>
+          </svg>
+        </span>
+        <div>
+          <p class="font-bold text-slate-900">Discord Community</p>
+          <p class="text-slate-600 text-xs">Nearly 16,000 members. Channels for support, announcements, and trader discussions. Not a replacement for formal ticket support.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rounded-lg bg-amber-50 border border-amber-200 p-3 mb-6">
+    <p class="text-xs text-amber-800"><strong>Limitation:</strong> No phone support or live chat available. For urgent issues, you must submit a ticket and wait for a response. Discord moderators may help informally, but official actions require a formal ticket.</p>
+  </div>
+
+  <!-- Education -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Educational Resources</h3>
+  <div class="space-y-3 mb-6">
+    <div class="rounded-xl border border-slate-200 bg-white p-4">
+      <p class="font-bold text-slate-900 mb-1">Help Center</p>
+      <p class="text-slate-600">Searchable walkthroughs on platform setup, trading rules, and payout eligibility. Updated regularly and beginner-friendly.</p>
+    </div>
+    <div class="rounded-xl border border-slate-200 bg-white p-4">
+      <p class="font-bold text-slate-900 mb-1">YouTube Channel</p>
+      <p class="text-slate-600">Over 250 videos including platform guides, trading tips, interviews, and market commentary.</p>
+    </div>
+    <div class="rounded-xl border border-slate-200 bg-white p-4">
+      <p class="font-bold text-slate-900 mb-1">Blog</p>
+      <p class="text-slate-600">Articles on trading psychology, firm policy changes, and strategy basics. Practical but surface-level content.</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-amber-500 bg-amber-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-amber-800 mb-1">Verdict on Support and Education</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Elite Trader Funding scores 5/10 for support. The support system is responsive but limited to tickets, and there's no direct live help. Discord is active but unofficial. On the education side, ETF provides solid coverage of key topics, but the materials are mostly surface-level and spread across multiple platforms. It's enough to get you going, but if you need deeper trading education, you'll need to look elsewhere.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* TRUST SECTION (4/10)                                                */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "trust" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    Elite Trader Funding is one of the more visible futures prop firms online, with a large user base and consistent public activity. However, some trust concerns remain — especially around communication clarity, shifting rules, and the firm's lack of external audits or verified metrics.
+  </p>
+
+  <div class="rounded-xl border-2 border-red-300 bg-red-50 p-4 mb-8 flex items-start gap-3">
+    <svg class="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.168 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+    </svg>
+    <div>
+      <p class="font-bold text-red-900 text-sm mb-1">Not Broker-Backed During Evaluation</p>
+      <p class="text-xs text-red-800 leading-relaxed">Elite Trader Funding is not regulated or broker-backed during evaluation or Sim-Funded stages. While it partners with EdgeClear for LIVE Elite accounts, there's no oversight or regulation in the earlier phases.</p>
+    </div>
+  </div>
+
+  <!-- Trustpilot -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trustpilot Rating</h3>
+  <div class="rounded-xl border border-slate-200 bg-white p-5 mb-6">
+    <div class="flex items-center gap-4">
+      <div class="text-center flex-shrink-0">
+        <p class="text-3xl font-black text-amber-600">3.8</p>
+        <div class="flex items-center justify-center gap-0.5 mt-1">
+          <span class="text-amber-500 text-sm">&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="text-slate-300 text-sm">&#9733;</span>
+        </div>
+        <p class="text-[10px] text-slate-500 mt-1">900+ reviews</p>
+      </div>
+      <div class="flex-1">
+        <div class="flex items-center gap-2 mb-1">
+          <span class="text-xs text-slate-500 w-14">5-star</span>
+          <div class="flex-1 h-2 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-emerald-500 rounded-full" style="width: 62%"></div></div>
+          <span class="text-xs text-slate-500 w-8 text-right">62%</span>
+        </div>
+        <div class="flex items-center gap-2 mb-1">
+          <span class="text-xs text-slate-500 w-14">4-star</span>
+          <div class="flex-1 h-2 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-lime-500 rounded-full" style="width: 6%"></div></div>
+          <span class="text-xs text-slate-500 w-8 text-right">6%</span>
+        </div>
+        <div class="flex items-center gap-2 mb-1">
+          <span class="text-xs text-slate-500 w-14">3-star</span>
+          <div class="flex-1 h-2 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-amber-500 rounded-full" style="width: 4%"></div></div>
+          <span class="text-xs text-slate-500 w-8 text-right">4%</span>
+        </div>
+        <div class="flex items-center gap-2 mb-1">
+          <span class="text-xs text-slate-500 w-14">2-star</span>
+          <div class="flex-1 h-2 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-orange-500 rounded-full" style="width: 4%"></div></div>
+          <span class="text-xs text-slate-500 w-8 text-right">4%</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-xs text-slate-500 w-14">1-star</span>
+          <div class="flex-1 h-2 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-red-500 rounded-full" style="width: 24%"></div></div>
+          <span class="text-xs font-bold text-red-600 w-8 text-right">24%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Positive/negative feedback split -->
+  <div class="grid sm:grid-cols-2 gap-4 mb-6">
+    <div class="rounded-xl bg-emerald-50 border border-emerald-200 p-4">
+      <p class="font-bold text-emerald-800 text-sm mb-2 flex items-center gap-1.5">
+        <svg class="h-4 w-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+        What Traders Like
+      </p>
+      <ul class="space-y-1.5 text-xs text-emerald-700">
+        <li class="flex items-start gap-1.5">
+          <span class="text-emerald-500 mt-0.5">&#10003;</span>
+          Low-cost evaluations (from $16.50)
+        </li>
+        <li class="flex items-start gap-1.5">
+          <span class="text-emerald-500 mt-0.5">&#10003;</span>
+          Reliable Discord support and active community
+        </li>
+        <li class="flex items-start gap-1.5">
+          <span class="text-emerald-500 mt-0.5">&#10003;</span>
+          Generous first payout tier (100% on first $12,500)
+        </li>
+        <li class="flex items-start gap-1.5">
+          <span class="text-emerald-500 mt-0.5">&#10003;</span>
+          Smooth activation process when rules are followed
+        </li>
+      </ul>
+    </div>
+    <div class="rounded-xl bg-red-50 border border-red-200 p-4">
+      <p class="font-bold text-red-800 text-sm mb-2 flex items-center gap-1.5">
+        <svg class="h-4 w-4 text-red-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.168 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+        Common Complaints
+      </p>
+      <ul class="space-y-1.5 text-xs text-red-700">
+        <li class="flex items-start gap-1.5">
+          <span class="text-red-500 mt-0.5">&#10007;</span>
+          Payout refusals citing vague terms like "dollar cost averaging"
+        </li>
+        <li class="flex items-start gap-1.5">
+          <span class="text-red-500 mt-0.5">&#10007;</span>
+          Account closures with retroactively applied rule interpretations
+        </li>
+        <li class="flex items-start gap-1.5">
+          <span class="text-red-500 mt-0.5">&#10007;</span>
+          Lack of recourse or clarity when payout disputes arise
+        </li>
+        <li class="flex items-start gap-1.5">
+          <span class="text-red-500 mt-0.5">&#10007;</span>
+          Rule updates appearing on Discord before official documentation
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Community -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Community</h3>
+  <p class="mb-4">
+    ETF's Discord is the hub of its community activity, with nearly 16,000 members. It hosts daily support discussions, platform tips, and real user feedback. There's a dedicated testimonials section where users post payout confirmations and occasionally screenshots of denied requests. Social channels like Twitter and YouTube are also active.
+  </p>
+
+  <!-- Trust signals -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trust Signals</h3>
+  <div class="space-y-2 mb-6">
+    <div class="flex items-center gap-2">
+      <span class="flex-shrink-0 w-5 h-5 rounded-full bg-amber-100 flex items-center justify-center">
+        <svg class="h-3 w-3 text-amber-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.168 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+      </span>
+      <span class="text-sm text-slate-700">3.8/5 Trustpilot — solid but 24% of reviews are 1-star</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="flex-shrink-0 w-5 h-5 rounded-full bg-red-100 flex items-center justify-center">
+        <svg class="h-3 w-3 text-red-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      </span>
+      <span class="text-sm text-slate-700">Not regulated or broker-backed during evaluation and Sim-Funded stages</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="flex-shrink-0 w-5 h-5 rounded-full bg-red-100 flex items-center justify-center">
+        <svg class="h-3 w-3 text-red-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      </span>
+      <span class="text-sm text-slate-700">No published criteria for LIVE Elite account approval</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="flex-shrink-0 w-5 h-5 rounded-full bg-amber-100 flex items-center justify-center">
+        <svg class="h-3 w-3 text-amber-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.168 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+      </span>
+      <span class="text-sm text-slate-700">LIVE Elite funded through EdgeClear — but getting there is not guaranteed</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="flex-shrink-0 w-5 h-5 rounded-full bg-red-100 flex items-center justify-center">
+        <svg class="h-3 w-3 text-red-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      </span>
+      <span class="text-sm text-slate-700">Mixed reviews — payout disputes and rule interpretation issues reported</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="flex-shrink-0 w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center">
+        <svg class="h-3 w-3 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+      </span>
+      <span class="text-sm text-slate-700">Active 16,000+ member Discord with regular payout confirmations</span>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-red-500 bg-red-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-red-800 mb-1">Verdict on Trust and Community</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Elite Trader Funding scores 4/10 for trust because while the firm is active, accessible, and runs a genuine community, clarity and consistency remain issues. Reviews are mixed, and while many traders get paid and stick around, the lack of third-party validation and reliance on Discord for updates leaves room for improvement. If you follow closely and know the rules, you'll likely be fine — but it's not fully hands-off.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* FALLBACK                                                            */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{!["challenges", "spreads", "markets", "platforms", "payouts", "support", "trust"].includes(section) && fallbackBody && (
+<div class="text-sm leading-relaxed text-slate-700 space-y-4">
+  {fallbackBody.split("\n\n").map((para) => (
+    <p set:html={para.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")} />
+  ))}
+</div>
+)}

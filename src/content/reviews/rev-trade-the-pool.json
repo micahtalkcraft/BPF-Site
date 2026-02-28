@@ -1,12 +1,70 @@
 {
   "id": "rev-trade-the-pool",
   "propFirmId": "d0000034-0000-0000-0000-000000000034",
-  "summary": "Trade the Pool is a dedicated stock trading prop firm offering funded accounts for US equities, making it a popular choice for stock day traders.",
-  "pros": ["Dedicated stock trading platform", "Access to US equities (NYSE, NASDAQ)", "Short selling allowed"],
-  "cons": ["Limited to stocks only", "Proprietary platform only"],
-  "bestFor": "Stock day traders who want a dedicated equities prop firm",
-  "notIdealFor": "Traders seeking forex, futures, or multi-asset access",
+  "summary": "Trade The Pool is a US stock prop firm offering access to 12,000+ real equities and ETFs using exchange data from NASDAQ, NYSE and CBOE. It scored 70/100 in testing thanks to clear rules and deep market coverage, but its strict volume limits and lack of automation during the evaluation won't suit every style.\n\nThe firm is operated by Five Percent Online Ltd (The 5%ers), but this branch focuses on US stock markets and exchange-traded funds only, rather than forex, crypto or commodity CFDs. You get four one-step challenges across day and swing accounts, giving you a choice between intraday rules or multi-day holding.\n\nIt isn't broker-backed, but you still get real exchange data, clear risk limits, and access to more than 12,000 tradeable symbols. The trading rules can feel strict at first, yet they're consistent, which helps anyone who prefers a straightforward evaluation without hidden conditions.",
+  "pros": [
+    "Access to 12,000+ US stocks and ETFs",
+    "Direct exchange data from NASDAQ, NYSE and CBOE",
+    "Transparent risk management structure",
+    "Overnight and weekend holds on swing accounts",
+    "One-step evaluation across all challenge types",
+    "Scaling plan with proportional account growth"
+  ],
+  "cons": [
+    "Volume limits restrict size on thin tickers",
+    "No automation allowed during evaluations",
+    "Simulated environment only with no broker backing",
+    "Consistency rule affects trade distribution",
+    "Single platform (TraderEvolution only)",
+    "No refund on challenge fees"
+  ],
+  "bestFor": "Manual stock and ETF day traders who want real exchange data, deep US equity coverage, and a straightforward one-step evaluation",
+  "notIdealFor": "Scalpers, algorithmic traders, or multi-asset traders who need tighter costs, automation, or platform flexibility beyond TraderEvolution",
+  "overallScore": 70,
+  "categoryScores": {
+    "challenges": 80,
+    "spreads": 70,
+    "markets": 80,
+    "payouts": 60,
+    "platforms": 60,
+    "support": 60,
+    "trust": 70
+  },
+  "categorySections": {
+    "challenges": "custom",
+    "spreads": "custom",
+    "markets": "custom",
+    "platforms": "custom",
+    "payouts": "custom",
+    "support": "custom",
+    "trust": "custom"
+  },
+  "verdictBlocks": [
+    {
+      "heading": "Our Final Verdict On Trade The Pool",
+      "body": "Trade The Pool ends up at 70/100 because it does a lot right, especially around stock access, real exchange data and simple one-step evaluations. Those strengths push up its overall score and make it a solid choice if you want a realistic US equities environment without the usual CFD limitations.\n\nIt doesn't score higher because trading costs add up on high-volume styles, payouts aren't the most flexible, and you're limited to a single platform with no automation during evaluations. Those factors pull down the Spreads, Platforms and Payouts categories.\n\nOverall, TTP suits manual stock and ETF traders who want depth, clarity and real data. It's less ideal for scalpers, algo traders or multi-asset traders who need tighter costs or more platform options. If you're focused on US equities and trade manually, pick the day or swing challenge that matches how long you like to hold positions and you'll settle in easily."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is Trade the Pool legit?",
+      "a": "Yes, Trade The Pool is considered legitimate as a stock and ETF prop firm with a clear rule set and transparent risk management. It operates under Five Percent Online Ltd, the same company behind The 5%ers, and uses real exchange data from NASDAQ, NYSE and CBOE, which helps keep pricing and executions consistent with the underlying markets. The prop trading program runs entirely in a simulated environment, so it isn't a brokerage, but its rules, evaluation criteria and funded account structure are fully published and easy to verify."
+    },
+    {
+      "q": "Is there a prop firm with as much stock access as Trade the Pool?",
+      "a": "Very few prop firms offer the same stock and ETF access as Trade The Pool. Most stock prop trading firms rely on CFD-style feeds with a few hundred synthetic tickers, while TTP gives you more than 12,000 real US-listed stocks and ETFs with exchange data from NASDAQ, NYSE and CBOE. That includes penny stocks, small caps, sector ETFs and leveraged products, which is wider than what most prop firms offer."
+    },
+    {
+      "q": "Does Trade the Pool pay out?",
+      "a": "Yes, Trade The Pool pays funded traders on a 14-day cycle once the account has at least $300 in profit. Payouts are processed after you close all open positions and the risk team completes a quick review. Payments are sent through the same processors used for initial challenge fee payments, including major credit cards, PayPal and regional methods like SEPA or iDeal."
+    },
+    {
+      "q": "Can I use Interactive Brokers with Trade the Pool?",
+      "a": "No, you cannot use the Interactive Brokers platform with Trade The Pool. Your only option is TraderEvolution, which is their in-house equities platform built around real exchange data. Even though Trade The Pool uses pricing from NASDAQ, NYSE and CBOE, all trading must happen inside their own environment because the evaluation and funded stages run on simulated accounts rather than a live brokerage."
+    }
+  ],
+  "verified": true,
+  "flagged": false,
   "methodologyVersion": "1.0",
-  "lastReviewedAt": "2026-02-26",
-  "verified": false
+  "lastReviewedAt": "2026-02-27"
 }

@@ -1,0 +1,1041 @@
+---
+// Static editorial content for Seacrest Funding (formerly MyFundedFX)
+// Supports multiple sections via the `section` prop
+interface Props {
+  section: string;
+  fallbackBody?: string;
+}
+const { section, fallbackBody } = Astro.props;
+---
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* CHALLENGES SECTION                                                  */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "challenges" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    Seacrest Funded, formerly known as MyFundedFX, offers four different prop trading challenges in total, with funded traders receiving an <strong>80% profit split</strong> for all programs. Each challenge type has different requirements, with set profit targets and loss levels, as well as minimum trading days. While profit shares start at 80% for all programs, for an additional fee (20% of challenge fee), you can increase your profit split to <strong>90%</strong>.
+  </p>
+  <p class="mb-6">
+    The one step evaluations have much stricter risk management requirements, while three step programs are the most relaxed. Here's a breakdown of each challenge type.
+  </p>
+
+  <!-- Per-challenge summaries -->
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <div class="flex items-center gap-2 mb-1">
+        <span class="flex items-center justify-center w-6 h-6 rounded-full bg-teal-500 text-white text-xs font-bold">1</span>
+        <p class="font-bold text-slate-900">1-Step Challenge</p>
+      </div>
+      <p>Account sizes from $5,000 to $200,000 with fees from $50 to $950. 10% profit target, 4% daily drawdown, 6% trailing max drawdown, minimum 3 trading days, and unlimited time.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Suited for experienced traders aiming for quick funding with higher risk tolerance</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <div class="flex items-center gap-2 mb-1">
+        <span class="flex items-center justify-center w-6 h-6 rounded-full bg-teal-500 text-white text-xs font-bold">2</span>
+        <p class="font-bold text-slate-900">2-Step Challenge</p>
+      </div>
+      <p>Account sizes from $5,000 to $100,000 with fees from $50 to $500. Phase 1: 8% target, Phase 2: 5% target, 5% daily drawdown, 8% static max drawdown, minimum 3 trading days per phase.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Good for intermediate traders wanting a balanced approach with moderate risk</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <div class="flex items-center gap-2 mb-1">
+        <span class="flex items-center justify-center w-6 h-6 rounded-full bg-teal-500 text-white text-xs font-bold">3</span>
+        <p class="font-bold text-slate-900">2-Step Max Challenge</p>
+      </div>
+      <p>Account sizes from $5,000 to $200,000 with fees from $38 to $725. Phase 1: 10% target, Phase 2: 5% target, 4% daily drawdown, 10% static max drawdown, minimum 3 trading days per phase.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Fits risk-conscious traders who need more relaxed drawdown limits</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <div class="flex items-center gap-2 mb-1">
+        <span class="flex items-center justify-center w-6 h-6 rounded-full bg-teal-500 text-white text-xs font-bold">4</span>
+        <p class="font-bold text-slate-900">3-Step Challenge</p>
+      </div>
+      <p>Account sizes from $5,000 to $100,000 with fees from $70 to $570. Phase 1 & 2: 6% target, Phase 3: 4% target, 4% daily drawdown, 8% static max drawdown, minimum 1 trading day per phase.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Ideal for beginners or conservative traders preferring a gradual, low-risk evaluation · 5-day payout cycles</p>
+    </div>
+  </div>
+
+  <!-- ─── Comparison Table ───────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Comparison</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-10">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Attribute</th>
+          <th class="px-4 py-3 text-center">1-Step</th>
+          <th class="px-4 py-3 text-center">2-Step</th>
+          <th class="px-4 py-3 text-center">2-Step Max</th>
+          <th class="px-4 py-3 text-center">3-Step</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Account Sizes</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$5K – $200K</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$5K – $100K</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$5K – $200K</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$10K – $200K</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Fee Range</td>
+          <td class="px-4 py-3 text-center text-slate-900">$50 – $950</td>
+          <td class="px-4 py-3 text-center text-slate-900">$50 – $500</td>
+          <td class="px-4 py-3 text-center text-slate-900">$38 – $725</td>
+          <td class="px-4 py-3 text-center text-slate-900">$70 – $570</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Phases</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">One Step</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">Two Step</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">Two Step</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">Three Step</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Target</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">10%</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">8% / 5%</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">10% / 5%</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">6% / 6% / 4%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Max Drawdown</td>
+          <td class="px-4 py-3 text-center font-semibold text-red-600">6% Trailing</td>
+          <td class="px-4 py-3 text-center text-slate-900">8% Static</td>
+          <td class="px-4 py-3 text-center text-slate-900">10% Static</td>
+          <td class="px-4 py-3 text-center text-slate-900">8% Static</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Daily Drawdown</td>
+          <td class="px-4 py-3 text-center text-slate-900">4%</td>
+          <td class="px-4 py-3 text-center text-slate-900">5%</td>
+          <td class="px-4 py-3 text-center text-slate-900">4%</td>
+          <td class="px-4 py-3 text-center text-slate-900">4%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Split</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">80% (90% VIP)</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">80% (90% VIP)</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">80% (90% VIP)</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">80%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Payout Frequency</td>
+          <td class="px-4 py-3 text-center text-slate-900">14 Days</td>
+          <td class="px-4 py-3 text-center text-slate-900">14 Days</td>
+          <td class="px-4 py-3 text-center text-slate-900">14 Days</td>
+          <td class="px-4 py-3 text-center text-slate-900">5 Days</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Min Days (per phase)</td>
+          <td class="px-4 py-3 text-center text-slate-900">3</td>
+          <td class="px-4 py-3 text-center text-slate-900">3</td>
+          <td class="px-4 py-3 text-center text-slate-900">3</td>
+          <td class="px-4 py-3 text-center text-slate-900">1</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Max Days</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">Unlimited</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">Unlimited</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">Unlimited</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">Unlimited</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">VIP Option</td>
+          <td class="px-4 py-3 text-center text-emerald-600 font-semibold">Yes (90%)</td>
+          <td class="px-4 py-3 text-center text-emerald-600 font-semibold">Yes (90%)</td>
+          <td class="px-4 py-3 text-center text-emerald-600 font-semibold">Yes (90%)</td>
+          <td class="px-4 py-3 text-center text-red-500 font-semibold">No</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ─── 1-Step Fee Table ───────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">1-Step Challenge Fees</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Size</th>
+          <th class="px-4 py-3 text-right">Challenge Fee</th>
+          <th class="px-4 py-3 text-right">Phase 1 Target (10%)</th>
+          <th class="px-4 py-3 text-right">Max Drawdown (6%)</th>
+          <th class="px-4 py-3 text-center">Profit Split</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$50</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$500</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$300</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90% VIP)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$100</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$1,000</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$600</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90% VIP)</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$200</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$2,500</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$1,500</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90% VIP)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$300</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$5,000</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$3,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90% VIP)</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$500</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$10,000</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$6,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90% VIP)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$200,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$950</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$20,000</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$12,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90% VIP)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ─── 2-Step Fee Table ───────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">2-Step Challenge Fees</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Size</th>
+          <th class="px-4 py-3 text-right">Challenge Fee</th>
+          <th class="px-4 py-3 text-right">Phase 1 (8%)</th>
+          <th class="px-4 py-3 text-right">Phase 2 (5%)</th>
+          <th class="px-4 py-3 text-right">Max Drawdown (8%)</th>
+          <th class="px-4 py-3 text-center">Profit Split</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$50</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$400</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$250</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$400</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90% VIP)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$100</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$800</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$500</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$800</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90% VIP)</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$200</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$2,000</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$1,250</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$2,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90% VIP)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$300</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$4,000</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$2,500</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$4,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90% VIP)</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$500</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$8,000</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$5,000</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$8,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90% VIP)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ─── 2-Step Max Fee Table ───────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">2-Step Max Challenge Fees</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Size</th>
+          <th class="px-4 py-3 text-right">Challenge Fee</th>
+          <th class="px-4 py-3 text-right">Phase 1 (10%)</th>
+          <th class="px-4 py-3 text-right">Phase 2 (5%)</th>
+          <th class="px-4 py-3 text-right">Max Drawdown (10%)</th>
+          <th class="px-4 py-3 text-center">Profit Split</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$38</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$500</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$250</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$500</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90% VIP)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$75</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$1,000</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$500</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$1,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90% VIP)</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$140</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$2,500</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$1,250</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$2,500</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90% VIP)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$210</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$5,000</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$2,500</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$5,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90% VIP)</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$425</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$10,000</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$5,000</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$10,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90% VIP)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$200,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$725</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$20,000</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$10,000</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$20,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90% VIP)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ─── 3-Step Fee Table ───────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">3-Step Challenge Fees</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Size</th>
+          <th class="px-4 py-3 text-right">Challenge Fee</th>
+          <th class="px-4 py-3 text-right">Phase 1 (6%)</th>
+          <th class="px-4 py-3 text-right">Phase 2 (6%)</th>
+          <th class="px-4 py-3 text-right">Phase 3 (4%)</th>
+          <th class="px-4 py-3 text-right">Max Drawdown (8%)</th>
+          <th class="px-4 py-3 text-center">Profit Split</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$70</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$300</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$300</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$200</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$400</td>
+          <td class="px-4 py-3 text-center text-slate-900">80%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$150</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$600</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$600</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$400</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$800</td>
+          <td class="px-4 py-3 text-center text-slate-900">80%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$250</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$1,500</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$1,500</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$1,000</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$2,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">80%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$375</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$3,000</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$3,000</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$2,000</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$4,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">80%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$570</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$6,000</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$6,000</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$4,000</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$8,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">80%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- VIP Program -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">VIP Program</h3>
+  <p class="mb-4">
+    Seacrest Funded offers a VIP upgrade, allowing traders to increase their profit split to <strong>90%</strong> by paying an additional <strong>20% of the challenge fee</strong>. This option is available across 1-Step, 2-Step, and 2-Step Max challenge types, providing an enhanced return for traders who meet the trading requirements and want to maximise their earnings.
+  </p>
+
+  <!-- Scaling Plan -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Scaling Plan</h3>
+  <p class="mb-4">
+    Seacrest Funded's scaling plan allows traders to grow their account size incrementally, rewarding consistent profitability over a three-month period. To qualify for a scale-up, traders need to achieve a total simulated profit of at least <strong>12% within 90 days</strong>. When these criteria are met, Seacrest Funded increases the demo account's balance by <strong>25% of the initial starting balance</strong>.
+  </p>
+  <div class="rounded-lg bg-amber-50 border border-amber-200 p-4 mb-6">
+    <p class="text-sm text-amber-900"><strong>Scaling Example:</strong> If a trader starts with a $100,000 account and meets the scaling criteria, they would be eligible for an increase of $25,000, bringing their account to $125,000. You can submit a scaling request to the support team, which reviews your account's performance and approves the scale-up based on the criteria.</p>
+  </div>
+
+  <!-- Trading Rules -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules</h3>
+  <ul class="list-disc pl-5 space-y-2 mb-6">
+    <li><strong>Daily Drawdown:</strong> Calculated as a percentage of the balance, strictly enforced across all plans. Exceeding the daily limit terminates the account.</li>
+    <li><strong>Trailing Drawdown (1-Step only):</strong> Max drawdown is trailing, calculated based on the highest balance achieved.</li>
+    <li><strong>Minimum Trading Days:</strong> 1–3 days per phase depending on challenge type to verify consistent performance.</li>
+    <li><strong>News Trading:</strong> Permitted during all challenge phases, allowing flexibility in strategy.</li>
+    <li><strong>Inactivity Rule:</strong> At least one trade every 28 days to keep the account active.</li>
+    <li><strong>Algorithmic Trading:</strong> EAs are not allowed on MetaTrader 5.</li>
+    <li><strong>Copy Trading:</strong> Allowed from your own accounts on other platforms, but not between accounts owned by different individuals.</li>
+    <li><strong>Restricted Strategies:</strong> High-frequency trading, tick scalping, arbitrage, or any bot that exploits demo conditions is prohibited.</li>
+  </ul>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Challenges and Evaluation Process</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Seacrest Funded offers a mix of challenges to suit different trading journeys. The 1-Step is quick but best for experienced traders, while the 2-Step and 2-Step Max bring balanced targets for those wanting more structure. The 3-Step Challenge offers the lowest pressure for a slower path to funding. With options to boost profit splits up to 90% and a solid scaling plan, Seacrest Funded is versatile and rewarding for prop traders looking to grow their funded accounts.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SPREADS SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "spreads" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Seacrest Funded offers competitive spreads and varying commission fees across its four trading platforms. The prop firm partners with multiple liquidity providers to ensure a range of options for traders, from near-zero spreads to flexible commission structures. Spread competitiveness largely depends on the platform, with <strong>MatchTrader and MT5</strong> often providing the lowest rates.
+  </p>
+
+  <!-- Spread Stats -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">0 pips</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Min Forex Spread</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">$3 – $6</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Commission / Lot RT</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">$0</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Index Commission</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">$0</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Crypto Commission</p>
+    </div>
+  </div>
+
+  <!-- Forex Spreads -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Forex Spreads by Platform</h3>
+  <p class="mb-4">
+    Spreads can be as low as <strong>0 pips</strong> during the challenge, but are entirely dependent on the trading platform you choose, with Seacrest Funded using different brokers and liquidity providers for each platform:
+  </p>
+  <ul class="list-disc pl-5 space-y-1 mb-6">
+    <li><strong>MetaTrader 5 (MT5)</strong> — Liquidity provider: Quality-FX</li>
+    <li><strong>cTrader</strong> — Provider: Purple Trading</li>
+    <li><strong>MatchTrader</strong> — Provider: Match-Prime</li>
+    <li><strong>DXTrade</strong> — Provider: Zenfinex</li>
+  </ul>
+  <p class="mb-6">
+    During testing, MatchTrader and MT5 were the most competitive, with spreads as low as 0 pips for major forex pairs like EUR/USD and USD/CAD. cTrader / Purple Trading offered the next most competitive spreads at 0.1 pips, while DXTrade was 0.5 pips.
+  </p>
+
+  <!-- Commission Table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Commission Fees by Platform</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Platform (Per Lot, RT)</th>
+          <th class="px-4 py-3 text-right">Forex</th>
+          <th class="px-4 py-3 text-right">Commodities</th>
+          <th class="px-4 py-3 text-right">Indices</th>
+          <th class="px-4 py-3 text-right">Crypto</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">MatchTrader</td>
+          <td class="px-4 py-3 text-right font-semibold text-emerald-600">$3</td>
+          <td class="px-4 py-3 text-right text-slate-900">$3</td>
+          <td class="px-4 py-3 text-right font-semibold text-emerald-600">$0</td>
+          <td class="px-4 py-3 text-right font-semibold text-emerald-600">$0</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">MetaTrader 5</td>
+          <td class="px-4 py-3 text-right text-slate-900">$5</td>
+          <td class="px-4 py-3 text-right text-slate-900">$5</td>
+          <td class="px-4 py-3 text-right font-semibold text-emerald-600">$0</td>
+          <td class="px-4 py-3 text-right font-semibold text-emerald-600">$0</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">cTrader</td>
+          <td class="px-4 py-3 text-right text-slate-900">$6</td>
+          <td class="px-4 py-3 text-right text-slate-900">$6</td>
+          <td class="px-4 py-3 text-right font-semibold text-emerald-600">$0</td>
+          <td class="px-4 py-3 text-right font-semibold text-emerald-600">$0</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">DXTrade</td>
+          <td class="px-4 py-3 text-right font-semibold text-emerald-600">$3</td>
+          <td class="px-4 py-3 text-right text-slate-900">$3</td>
+          <td class="px-4 py-3 text-right font-semibold text-emerald-600">$0</td>
+          <td class="px-4 py-3 text-right font-semibold text-emerald-600">$0</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="mb-6">
+    When spreads are accounted for, <strong>MatchTrader</strong> is the most cost effective trading environment with spreads from 0 pips + $3 round turn commission.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Spreads and Commission</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Seacrest Funded's spread and commission structure is well-suited to traders seeking flexibility in cost. MatchTrader and MT5 deliver the most competitive pricing on forex pairs, with low to zero spreads and affordable commissions, while cTrader and DXTrade offer higher costs but greater customisation.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* MARKETS SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "markets" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Seacrest Funded offers over <strong>175 trading instruments</strong> across forex, indices, commodities, and crypto, providing you with a solid selection of financial markets to suit different trading strategies.
+  </p>
+
+  <!-- Market Stats -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">175+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Instruments</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">1:30</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Max Forex Leverage</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">1:10</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Indices / Commodities</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">1:2</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Crypto Leverage</p>
+    </div>
+  </div>
+
+  <!-- Financial Markets by Asset Class -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Markets and Leverage</h3>
+  <p class="mb-4">
+    Leverage across Seacrest Funded is capped at <strong>1:30 for forex</strong>, which is conservative compared to other prop firms where leverage can go up to 1:50 on forex. This lower leverage aligns with regulatory limits seen in FCA and ASIC regulated regions, catering to risk-averse traders.
+  </p>
+  <ul class="list-disc pl-5 space-y-2 mb-6">
+    <li><strong>Forex Pairs:</strong> Leverage up to 1:30, including major pairs such as EUR/USD, USD/JPY, and GBP/USD, alongside select minors and exotics.</li>
+    <li><strong>Indices:</strong> Leverage at 1:10, covering popular indices like NASDAQ, S&P 500, and Dow Jones.</li>
+    <li><strong>Commodities:</strong> Access to Gold, Oil and a range of metals and energies, leveraged at 1:10.</li>
+    <li><strong>Crypto:</strong> Includes BTC/USD, ETH/USD and a few others, with maximum leverage of 1:2.</li>
+  </ul>
+
+  <!-- Instruments by Platform -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Instruments by Platform</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Market</th>
+          <th class="px-4 py-3 text-center">MatchTrader</th>
+          <th class="px-4 py-3 text-center">DXTrade</th>
+          <th class="px-4 py-3 text-center">cTrader</th>
+          <th class="px-4 py-3 text-center">MT5</th>
+          <th class="px-4 py-3 text-center">Leverage</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Forex</td>
+          <td class="px-4 py-3 text-center text-slate-900">35</td>
+          <td class="px-4 py-3 text-center text-slate-900">34</td>
+          <td class="px-4 py-3 text-center text-slate-900">36</td>
+          <td class="px-4 py-3 text-center text-slate-900">5</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">30:1</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Indices</td>
+          <td class="px-4 py-3 text-center text-slate-900">7</td>
+          <td class="px-4 py-3 text-center text-slate-900">8</td>
+          <td class="px-4 py-3 text-center text-slate-900">8</td>
+          <td class="px-4 py-3 text-center text-slate-900">5</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">10:1</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Commodities</td>
+          <td class="px-4 py-3 text-center text-slate-900">9</td>
+          <td class="px-4 py-3 text-center text-slate-900">9</td>
+          <td class="px-4 py-3 text-center text-slate-900">10</td>
+          <td class="px-4 py-3 text-center text-slate-900">2</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">10:1</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Crypto</td>
+          <td class="px-4 py-3 text-center text-slate-900">4</td>
+          <td class="px-4 py-3 text-center text-slate-900">5</td>
+          <td class="px-4 py-3 text-center text-slate-900">4</td>
+          <td class="px-4 py-3 text-center text-slate-900">10</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">2:1</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Markets and Leverage</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Seacrest Funded provides a well-rounded range of trading instruments with over 175 assets, although leverage is capped at a modest 1:30 for forex. This limit is lower than some prop trading firms, which offer up to 1:50.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PLATFORMS SECTION                                                   */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "platforms" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Seacrest Funded offers <strong>four trading platforms</strong>, each tailored for different trading styles and preferences. However, there are essential trading rules to consider before choosing your platform — automated trading via Expert Advisors is restricted to specific platforms, and copy trading is limited to accounts owned by the same trader.
+  </p>
+
+  <!-- Platform Cards -->
+  <div class="space-y-4 mb-8">
+    <!-- MT5 -->
+    <div class="rounded-xl border border-slate-200 bg-white p-5">
+      <h4 class="text-base font-bold text-slate-900 mb-2">MetaTrader 5 (MT5)</h4>
+      <p class="mb-3">
+        MT5 is a powerful, widely-used platform suited to technical traders and those looking for robust analysis options. Though EAs are generally not permitted on MT5 within Seacrest Funded's rules, the platform's sophisticated tools make it an excellent choice for manual strategy execution.
+      </p>
+      <div class="flex flex-wrap gap-2">
+        <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">80+ Indicators</span>
+        <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">Multi-Asset</span>
+        <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">Depth of Market</span>
+        <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">Desktop / Web / Mobile</span>
+      </div>
+      <div class="mt-3 rounded-lg bg-amber-50 border border-amber-200 p-3">
+        <p class="text-xs text-amber-900"><strong>Note:</strong> EAs are not allowed on MT5 within Seacrest Funded's trading rules.</p>
+      </div>
+    </div>
+
+    <!-- cTrader -->
+    <div class="rounded-xl border border-slate-200 bg-white p-5">
+      <h4 class="text-base font-bold text-slate-900 mb-2">cTrader</h4>
+      <p class="mb-3">
+        cTrader is popular among prop traders for its user-friendly interface and advanced trading features, particularly suitable for manual trading. It provides efficient trade execution which appeals to traders who employ quick, high-frequency strategies.
+      </p>
+      <div class="flex flex-wrap gap-2">
+        <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">One-Click Trading</span>
+        <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">Advanced Charting</span>
+        <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">Level II Pricing</span>
+        <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">Risk Management Tools</span>
+      </div>
+    </div>
+
+    <!-- MatchTrader -->
+    <div class="rounded-xl border border-slate-200 bg-white p-5">
+      <h4 class="text-base font-bold text-slate-900 mb-2">MatchTrader</h4>
+      <p class="mb-3">
+        MatchTrader is designed with social trading in mind, allowing traders to follow and mirror successful strategies. This platform is ideal for those who benefit from collaborative strategies, though copy trading across different users' accounts is restricted.
+      </p>
+      <div class="flex flex-wrap gap-2">
+        <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">Social Trading</span>
+        <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">Analytics</span>
+        <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">Quick Order Management</span>
+        <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">Mobile Access</span>
+      </div>
+    </div>
+
+    <!-- DXTrade -->
+    <div class="rounded-xl border border-slate-200 bg-white p-5">
+      <h4 class="text-base font-bold text-slate-900 mb-2">DXTrade</h4>
+      <p class="mb-3">
+        DXTrade is known for its customisable interface, making it suitable for traders who want a straightforward platform with control over their layout. It's an accessible choice for those prioritising stability and ease of use over advanced features.
+      </p>
+      <div class="flex flex-wrap gap-2">
+        <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">Customisable Layout</span>
+        <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">Streamlined Orders</span>
+        <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">User-Friendly</span>
+        <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">Built-in Risk Controls</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trading Platforms</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Each trading platform offered by Seacrest Funded has strengths suited to different styles of prop trading, ensuring you can find a platform that complements your strategy, risk tolerance, and trading style.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PAYOUTS SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "payouts" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Seacrest Funded offers a range of payment methods for challenge fees, including credit card and cryptocurrency options, making it accessible for traders worldwide. This flexibility is supported by a streamlined payout process that allows funded traders regular profit payouts.
+  </p>
+
+  <!-- Payout Stats -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-emerald-600">80 – 90%</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Profit Split</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">14 Days</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Payout Cycle</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">$65</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Min Payout</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">5 Days</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">3-Step Payout</p>
+    </div>
+  </div>
+
+  <!-- Challenge Fee Payments -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Fee Payments</h3>
+  <p class="mb-4">
+    For challenge fees, Seacrest Funded accepts <strong>credit cards and cryptocurrency</strong>, offering traders a range of choices. Cryptocurrency payments support various digital assets, so it's essential to select the correct network for the transfer to ensure the payment is processed smoothly.
+  </p>
+
+  <!-- Payout Details -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payouts and Withdrawals</h3>
+  <p class="mb-4">
+    After passing a Seacrest Funded challenge and becoming a funded trader, you're eligible for your first profit payout after <strong>14 calendar days</strong>, and then every fortnight. This payout cycle starts once you place your first trade, with the ability to request withdrawals via <strong>Crypto or Riseworks</strong> through the prop firm's dashboard.
+  </p>
+
+  <!-- Payment Methods -->
+  <h4 class="text-base font-bold text-slate-900 mb-3">Withdrawal Methods</h4>
+  <div class="flex flex-wrap gap-2 mb-6">
+    <span class="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-700">Cryptocurrency</span>
+    <span class="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-700">Riseworks</span>
+  </div>
+
+  <!-- Important Notes -->
+  <h4 class="text-base font-bold text-slate-900 mb-3">Important Payout Notes</h4>
+  <ul class="list-disc pl-5 space-y-2 mb-6">
+    <li>Minimum payout amount is <strong>$65</strong></li>
+    <li>Traders can continue trading while waiting for payout processing</li>
+    <li>Payouts requested over weekends or holidays will be processed on the next business day</li>
+    <li>3-Step Challenge has faster <strong>5-day payout cycles</strong></li>
+    <li>VIP upgrade increases profit split to 90% for an additional 20% fee</li>
+  </ul>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Payments and Payouts</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Seacrest Funded's payment and payout system is streamlined, providing reliable access to funds through crypto and Riseworks payments. The 14-day payout frequency aligns well with prop trading industry standards, and options for both crypto and Riseworks offer additional flexibility for traders.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SUPPORT SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "support" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Seacrest Funded provides a responsive, accessible support experience paired with solid educational resources. The company uses a <strong>live chat feature</strong> and comprehensive FAQs for immediate assistance and offers extensive video resources through YouTube for deeper learning on trading strategies and prop trading processes.
+  </p>
+
+  <!-- Support Channels -->
+  <div class="space-y-3 mb-8">
+    <div class="rounded-xl border border-slate-200 bg-white p-5">
+      <h4 class="text-base font-bold text-slate-900 mb-1">Live Chat</h4>
+      <p>Seacrest Funded's live chat is particularly helpful, offering prompt responses that can quickly address common questions on challenges, trading rules, or account setup. This makes for a smooth support experience, ideal for both new and experienced traders.</p>
+    </div>
+    <div class="rounded-xl border border-slate-200 bg-white p-5">
+      <h4 class="text-base font-bold text-slate-900 mb-1">Social Media Support</h4>
+      <p>You can also contact the Seacrest Funded customer support team via social media channels, including X (formerly Twitter) and Instagram.</p>
+    </div>
+    <div class="rounded-xl border border-slate-200 bg-white p-5">
+      <h4 class="text-base font-bold text-slate-900 mb-1">FAQ & Knowledge Base</h4>
+      <p>Comprehensive FAQ section covering challenges, trading rules, payouts, and account management for self-service queries.</p>
+    </div>
+  </div>
+
+  <!-- Education -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Educational Resources</h3>
+  <p class="mb-4">
+    For educational content, Seacrest Funded's YouTube channel is a key resource, with <strong>31,500 subscribers</strong> and nearly <strong>800 videos</strong> covering everything from trading strategies to passing funded challenges. This extensive library offers traders reliable guidance on improving their trading performance and understanding prop trading dynamics.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Support and Education</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Seacrest Funded's support and educational resources make it a strong choice for traders looking for clear, accessible guidance. The live chat feature and YouTube resources ensure traders can find answers and gain deeper trading insights, solidifying Seacrest Funded as a supportive environment for traders at any level.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* TRUST SECTION                                                       */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "trust" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Seacrest Funded has a strong reputation in the prop trading community, with a <strong>4.3 out of 5 star TrustPilot score</strong> based on over <strong>2,800 reviews</strong>. Feedback highlights fast payouts and responsive support, though some users mention recent rule changes.
+  </p>
+
+  <!-- Trustpilot Block -->
+  <div class="rounded-xl border border-slate-200 bg-white p-5 mb-6">
+    <div class="flex items-center gap-3 mb-3">
+      <span class="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-emerald-600 text-white text-xl font-black">4.3</span>
+      <div>
+        <p class="text-base font-bold text-slate-900">TrustPilot Score</p>
+        <p class="text-sm text-slate-500">Based on 2,800+ reviews</p>
+      </div>
+    </div>
+    <p class="text-sm text-slate-700">
+      Positive reviews often highlight the speed of payouts, with some users noting that funds were received within minutes. Others have shared great experiences with customer support, pointing to quick resolutions for account or platform issues. However, some negative reviews mention dissatisfaction with rule changes and trading limitations.
+    </p>
+  </div>
+
+  <!-- Community Stats -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Community</h3>
+  <p class="mb-4">
+    Seacrest Funded's Discord server, with over <strong>125,100 members</strong> and more than <strong>1,600 funded traders</strong>, is a hub for traders to interact and access resources. Channels include general chat, customer support, payout proofs, competition and trade ideas, and economic news updates.
+  </p>
+
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">125,100+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Discord Members</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">1,600+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Funded Traders</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">154,100</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">X Followers</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">59,000</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Instagram</p>
+    </div>
+  </div>
+
+  <!-- Popularity -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">How Popular Is Seacrest Funded?</h3>
+  <p class="mb-4">
+    Seacrest Funded receives approximately <strong>5,400 branded Google searches</strong> per month, ranking it <strong>38th in global search volume</strong> among proprietary trading firms. According to Similarweb data from March 2025, Seacrest Funded ranks <strong>31st in global web traffic</strong>, attracting <strong>150,258 monthly visits</strong> to its website.
+  </p>
+
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">5,400</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Monthly Searches</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">38th</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Search Rank</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">150,258</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Monthly Visits</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">31st</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Traffic Rank</p>
+    </div>
+  </div>
+
+  <!-- Top Countries Table -->
+  <h4 class="text-base font-bold text-slate-900 mb-3">Top Branded Searches by Country</h4>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Rank</th>
+          <th class="px-4 py-3 text-left">Country</th>
+          <th class="px-4 py-3 text-right">Monthly Searches</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-bold text-emerald-600">1st</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">India</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">90</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-bold text-slate-500">2nd</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">Nigeria</td>
+          <td class="px-4 py-3 text-right text-slate-700">60</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-bold text-slate-500">3rd</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">United Kingdom</td>
+          <td class="px-4 py-3 text-right text-slate-700">30</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-bold text-slate-500">4th</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">Uzbekistan</td>
+          <td class="px-4 py-3 text-right text-slate-700">30</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-bold text-slate-500">5th</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">Malaysia</td>
+          <td class="px-4 py-3 text-right text-slate-700">20</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-bold text-slate-500">6th</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">United States</td>
+          <td class="px-4 py-3 text-right text-slate-700">10</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-bold text-slate-500">7th</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">South Africa</td>
+          <td class="px-4 py-3 text-right text-slate-700">10</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-bold text-slate-500">8th</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">Italy</td>
+          <td class="px-4 py-3 text-right text-slate-700">10</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-bold text-slate-500">9th</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">Germany</td>
+          <td class="px-4 py-3 text-right text-slate-700">10</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-bold text-slate-500">10th</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">Canada</td>
+          <td class="px-4 py-3 text-right text-slate-700">10</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Transparency Points -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Transparency and Trust Signals</h3>
+  <ul class="space-y-2 mb-6">
+    <li class="flex items-start gap-2">
+      <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold">&#10003;</span>
+      <span>4.3/5 TrustPilot score from 2,800+ verified reviews</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold">&#10003;</span>
+      <span>Active Discord community with 125,100+ members and payout proof channels</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold">&#10003;</span>
+      <span>154,100 X followers and 59,000 Instagram followers</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold">&#10003;</span>
+      <span>Fast payout processing — some users report funds received within minutes</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-xs font-bold">!</span>
+      <span>Some negative reviews cite dissatisfaction with rule changes over time</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-xs font-bold">!</span>
+      <span>Recently rebranded from MyFundedFX to Seacrest Funded</span>
+    </li>
+  </ul>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trust and Community</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Seacrest Funded offers a supportive community and maintains a solid reputation in prop trading circles. Its active Discord server and generally positive TrustPilot reviews show a commitment to customer engagement, despite some criticisms around rule changes.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* FALLBACK                                                            */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section !== "challenges" && section !== "spreads" && section !== "markets" && section !== "platforms" && section !== "payouts" && section !== "support" && section !== "trust" && fallbackBody && (
+  <div class="text-sm leading-relaxed text-slate-700 space-y-4">
+    {fallbackBody.split("\n\n").map((para) => (
+      <p set:html={para.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")} />
+    ))}
+  </div>
+)}

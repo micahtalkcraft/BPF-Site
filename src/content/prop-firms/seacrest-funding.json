@@ -3,48 +3,78 @@
   "slug": "seacrest-funding",
   "name": "Seacrest Funding",
   "status": "active",
+  "hqCountry": "US",
   "evaluation": {
-    "types": [],
-    "profitTargets": {},
-    "dailyDrawdown": null,
-    "maxDrawdown": null,
-    "minTradingDays": null,
-    "scalingPlan": null
+    "types": ["1-step", "2-step", "other"],
+    "profitTargets": { "phase1": 10, "phase2": 5 },
+    "dailyDrawdown": 5,
+    "maxDrawdown": 10,
+    "minTradingDays": 1,
+    "scalingPlan": true
   },
   "pricing": {
-    "challengeFees": [],
+    "challengeFees": [
+      { "accountSize": 5000, "fee": 50, "model": "1-step" },
+      { "accountSize": 10000, "fee": 100, "model": "1-step" },
+      { "accountSize": 25000, "fee": 200, "model": "1-step" },
+      { "accountSize": 50000, "fee": 300, "model": "1-step" },
+      { "accountSize": 100000, "fee": 500, "model": "1-step" },
+      { "accountSize": 200000, "fee": 950, "model": "1-step" },
+      { "accountSize": 5000, "fee": 50, "model": "2-step" },
+      { "accountSize": 10000, "fee": 100, "model": "2-step" },
+      { "accountSize": 25000, "fee": 200, "model": "2-step" },
+      { "accountSize": 50000, "fee": 300, "model": "2-step" },
+      { "accountSize": 100000, "fee": 500, "model": "2-step" },
+      { "accountSize": 5000, "fee": 38, "model": "2-step-max" },
+      { "accountSize": 10000, "fee": 75, "model": "2-step-max" },
+      { "accountSize": 25000, "fee": 140, "model": "2-step-max" },
+      { "accountSize": 50000, "fee": 210, "model": "2-step-max" },
+      { "accountSize": 100000, "fee": 425, "model": "2-step-max" },
+      { "accountSize": 200000, "fee": 725, "model": "2-step-max" },
+      { "accountSize": 5000, "fee": 70, "model": "3-step" },
+      { "accountSize": 10000, "fee": 150, "model": "3-step" },
+      { "accountSize": 25000, "fee": 250, "model": "3-step" },
+      { "accountSize": 50000, "fee": 375, "model": "3-step" },
+      { "accountSize": 100000, "fee": 570, "model": "3-step" }
+    ],
     "resetFee": null,
-    "refundPolicy": null
+    "refundPolicy": "No refund on challenge fees. VIP upgrade available for 20% additional fee to increase profit split to 90%."
   },
   "payouts": {
-    "splitMax": null,
-    "schedule": null,
-    "processingTime": null,
-    "firstPayoutDays": null,
-    "methods": []
+    "splitMax": 90,
+    "schedule": "Bi-weekly (14 days)",
+    "processingTime": "1-2 business days",
+    "firstPayoutDays": 14,
+    "methods": ["crypto", "Riseworks"]
   },
   "rules": {
-    "newsTrading": null,
+    "newsTrading": true,
     "weekendHolding": null,
-    "copyTrading": null,
-    "expertAdvisors": null,
+    "copyTrading": true,
+    "expertAdvisors": false,
     "consistencyRule": null,
-    "notes": null
+    "notes": "Formerly known as MyFundedFX (MFFX). Automated trading via EAs not allowed on MT5. Copy trading limited to accounts owned by the same trader. High-frequency trading, tick scalping, arbitrage, and bots exploiting demo conditions are prohibited. Minimum trading days: 1-3 per phase depending on challenge type. Inactivity rule: at least one trade every 28 days. 1-Step uses trailing drawdown; 2-Step and 3-Step use static drawdown."
   },
   "markets": {
-    "platforms": [],
-    "instruments": ""
+    "platforms": ["MT5", "cTrader", "MatchTrader", "DXTrade"],
+    "instruments": "Forex, Indices, Commodities, Crypto (175+ instruments, leverage up to 1:30 forex)"
   },
   "trust": {
-    "trustpilotRating": null,
-    "trustpilotCount": null,
-    "communitySize": null,
-    "notableFlags": []
+    "trustpilotRating": 4.3,
+    "trustpilotCount": 2800,
+    "communitySize": "125,100+ Discord members",
+    "notableFlags": ["Formerly MyFundedFX", "4.3/5 Trustpilot from 2,800+ reviews", "125K+ Discord community with 1,600+ funded traders", "154K X followers, 59K Instagram"]
   },
   "links": { "website": "https://seacrestfunding.com" },
   "media": { "logo": "/images/logos/seacrest.png" },
   "availability": { "restrictedCountries": [] },
-  "custom": { "tags": [] },
+  "support": {
+    "liveChat": true,
+    "email": true
+  },
+  "custom": {
+    "tags": ["4 Challenge Types", "175+ Instruments", "4 Platforms", "VIP Upgrade"]
+  },
   "lastVerifiedAt": "2026-02-27",
   "lastUpdatedAt": "2026-02-27",
   "dataSources": ["https://seacrestfunding.com"]

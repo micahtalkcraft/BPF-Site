@@ -1,0 +1,851 @@
+---
+// Static editorial content for Trade the Pool
+// Supports multiple sections via the `section` prop
+interface Props {
+  section: string;
+  fallbackBody?: string;
+}
+const { section, fallbackBody } = Astro.props;
+---
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* CHALLENGES SECTION                                                  */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "challenges" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    Trade The Pool runs four one-step challenges for stocks and ETFs across day and swing accounts. Each model uses the same core structure but differs in time limits, risk tolerance and minimum activity. Fees range from <strong>$47 to $1,475</strong> and you can choose account sizes between <strong>$2,000 and $200,000</strong>, with <strong>70% profit payouts</strong> across the board once funded.
+  </p>
+  <p class="mb-6">
+    Every trading account uses real exchange data and applies the same basic trade requirements, so the main choice is whether you want intraday rules or the ability to hold positions longer.
+  </p>
+
+  <!-- Per-challenge summaries -->
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <div class="flex items-center gap-2 mb-1">
+        <span class="flex items-center justify-center w-6 h-6 rounded-full bg-teal-500 text-white text-xs font-bold">1</span>
+        <p class="font-bold text-slate-900">Day Trade Beginner</p>
+      </div>
+      <p>Account sizes from $5,000 to $200,000 with fees from $59 to $1,475. 6% profit target, 2% daily pause, 4% max loss, minimum 10 positions, and unlimited trading days.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">50% consistency rule · Trading Booster available on larger accounts</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <div class="flex items-center gap-2 mb-1">
+        <span class="flex items-center justify-center w-6 h-6 rounded-full bg-teal-500 text-white text-xs font-bold">2</span>
+        <p class="font-bold text-slate-900">Day Trade Advanced</p>
+      </div>
+      <p>Account sizes from $5,000 to $200,000 with fees from $47 to $1,100. 6% profit target, 1% daily pause, 3% max loss, minimum 20 positions, and a 60-day trading window.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">30% consistency rule · Tighter risk limits for active intraday traders</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <div class="flex items-center gap-2 mb-1">
+        <span class="flex items-center justify-center w-6 h-6 rounded-full bg-teal-500 text-white text-xs font-bold">3</span>
+        <p class="font-bold text-slate-900">Swing Trade Beginner</p>
+      </div>
+      <p>Account sizes from $2,000 to $40,000 with fees from $87 to $1,240. 15% profit target, 3% daily pause, 7% max loss, minimum 5 positions, and unlimited trading days.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">50% consistency rule · Overnight and weekend holding allowed</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <div class="flex items-center gap-2 mb-1">
+        <span class="flex items-center justify-center w-6 h-6 rounded-full bg-teal-500 text-white text-xs font-bold">4</span>
+        <p class="font-bold text-slate-900">Swing Trade Advanced</p>
+      </div>
+      <p>Account sizes from $2,000 to $40,000 with fees from $69 to $800. 15% profit target, 3% daily pause, 7% max loss, minimum 5 positions, and a 100-day trading window.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">30% consistency rule · Full overnight and extended-hours access</p>
+    </div>
+  </div>
+
+  <!-- ─── Comparison Table ───────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Comparison</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-10">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Attribute</th>
+          <th class="px-4 py-3 text-center">Day Beginner</th>
+          <th class="px-4 py-3 text-center">Day Advanced</th>
+          <th class="px-4 py-3 text-center">Swing Beginner</th>
+          <th class="px-4 py-3 text-center">Swing Advanced</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Account Sizes</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$5K – $200K</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$5K – $200K</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$2K – $40K</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$2K – $40K</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Fee Range</td>
+          <td class="px-4 py-3 text-center text-slate-900">$59 – $1,475</td>
+          <td class="px-4 py-3 text-center text-slate-900">$47 – $1,100</td>
+          <td class="px-4 py-3 text-center text-slate-900">$87 – $1,240</td>
+          <td class="px-4 py-3 text-center text-slate-900">$69 – $800</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Target</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">6%</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">6%</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">15%</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">15%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Daily Pause</td>
+          <td class="px-4 py-3 text-center text-slate-900">2%</td>
+          <td class="px-4 py-3 text-center text-slate-900">1%</td>
+          <td class="px-4 py-3 text-center text-slate-900">3%</td>
+          <td class="px-4 py-3 text-center text-slate-900">3%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Max Loss</td>
+          <td class="px-4 py-3 text-center text-slate-900">4%</td>
+          <td class="px-4 py-3 text-center text-slate-900">3%</td>
+          <td class="px-4 py-3 text-center text-slate-900">7%</td>
+          <td class="px-4 py-3 text-center text-slate-900">7%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Min. Positions</td>
+          <td class="px-4 py-3 text-center text-slate-900">10</td>
+          <td class="px-4 py-3 text-center text-slate-900">20</td>
+          <td class="px-4 py-3 text-center text-slate-900">5</td>
+          <td class="px-4 py-3 text-center text-slate-900">5</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Trading Period</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">Unlimited</td>
+          <td class="px-4 py-3 text-center text-slate-900">60 days</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">Unlimited</td>
+          <td class="px-4 py-3 text-center text-slate-900">100 days</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Consistency Rule</td>
+          <td class="px-4 py-3 text-center text-slate-900">50%</td>
+          <td class="px-4 py-3 text-center text-slate-900">30%</td>
+          <td class="px-4 py-3 text-center text-slate-900">50%</td>
+          <td class="px-4 py-3 text-center text-slate-900">30%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Split</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">70%</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">70%</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">70%</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">70%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ─── Day Trade Beginner Fee Table ─────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Day Trade Beginner Fees</h3>
+  <p class="mb-3">
+    The Day Trade Beginner program is the most flexible option in TTP's day-trading lineup. 6% profit target with unlimited trading days, 2% daily pause and a 4% overall loss limit. Minimum of 10 positions with a 50% consistency rule.
+  </p>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Size</th>
+          <th class="px-4 py-3 text-right">Profit Target (6%)</th>
+          <th class="px-4 py-3 text-right">Daily Pause (2%)</th>
+          <th class="px-4 py-3 text-right">Max Loss (4%)</th>
+          <th class="px-4 py-3 text-right">Fee</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$300</td>
+          <td class="px-4 py-3 text-right text-slate-700">$100</td>
+          <td class="px-4 py-3 text-right text-slate-700">$200</td>
+          <td class="px-4 py-3 text-right font-bold text-slate-900">$59</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
+          <td class="px-4 py-3 text-right text-slate-700">$500</td>
+          <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+          <td class="px-4 py-3 text-right font-bold text-slate-900">$120</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+          <td class="px-4 py-3 text-right font-bold text-slate-900">$285</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$6,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$4,000</td>
+          <td class="px-4 py-3 text-right font-bold text-slate-900">$545</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$200,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$12,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$4,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$8,000</td>
+          <td class="px-4 py-3 text-right font-bold text-slate-900">$1,475</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ─── Day Trade Advanced Fee Table ─────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Day Trade Advanced Fees</h3>
+  <p class="mb-3">
+    The Day Trade Advanced program has tighter risk limits and a higher activity requirement. 6% profit target with a fixed 60-day trading window, 1% daily pause and a 3% overall loss limit. Minimum of 20 positions with a 30% consistency rule.
+  </p>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Size</th>
+          <th class="px-4 py-3 text-right">Profit Target (6%)</th>
+          <th class="px-4 py-3 text-right">Daily Pause (1%)</th>
+          <th class="px-4 py-3 text-right">Max Loss (3%)</th>
+          <th class="px-4 py-3 text-right">Fee</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$300</td>
+          <td class="px-4 py-3 text-right text-slate-700">$50</td>
+          <td class="px-4 py-3 text-right text-slate-700">$150</td>
+          <td class="px-4 py-3 text-right font-bold text-slate-900">$47</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
+          <td class="px-4 py-3 text-right text-slate-700">$250</td>
+          <td class="px-4 py-3 text-right text-slate-700">$750</td>
+          <td class="px-4 py-3 text-right font-bold text-slate-900">$97</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$500</td>
+          <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
+          <td class="px-4 py-3 text-right font-bold text-slate-900">$230</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$6,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+          <td class="px-4 py-3 text-right font-bold text-slate-900">$435</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$200,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$12,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$6,000</td>
+          <td class="px-4 py-3 text-right font-bold text-slate-900">$1,100</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ─── Swing Trade Beginner Fee Table ───────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Swing Trade Beginner Fees</h3>
+  <p class="mb-3">
+    The Swing Beginner program is designed for traders who hold positions longer and need room for multi-day moves. 15% profit target with no time limit, 3% daily pause and a 7% max loss. Minimum of 5 positions with a 50% consistency rule. Overnight, weekend, pre-market and after-hours holding allowed.
+  </p>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Size</th>
+          <th class="px-4 py-3 text-right">Profit Target (15%)</th>
+          <th class="px-4 py-3 text-right">Daily Pause (3%)</th>
+          <th class="px-4 py-3 text-right">Max Loss (7%)</th>
+          <th class="px-4 py-3 text-right">Fee</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$2,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$300</td>
+          <td class="px-4 py-3 text-right text-slate-700">$60</td>
+          <td class="px-4 py-3 text-right text-slate-700">$140</td>
+          <td class="px-4 py-3 text-right font-bold text-slate-900">$87</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
+          <td class="px-4 py-3 text-right text-slate-700">$300</td>
+          <td class="px-4 py-3 text-right text-slate-700">$700</td>
+          <td class="px-4 py-3 text-right font-bold text-slate-900">$420</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$20,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$600</td>
+          <td class="px-4 py-3 text-right text-slate-700">$1,400</td>
+          <td class="px-4 py-3 text-right font-bold text-slate-900">$670</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$40,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$6,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$1,200</td>
+          <td class="px-4 py-3 text-right text-slate-700">$2,800</td>
+          <td class="px-4 py-3 text-right font-bold text-slate-900">$1,240</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ─── Swing Trade Advanced Fee Table ───────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Swing Trade Advanced Fees</h3>
+  <p class="mb-3">
+    The Swing Advanced program uses the same higher target and wider risk limits as Swing Beginner but introduces a 100-day deadline. 15% profit target, 3% daily pause and a 7% max loss. Minimum of 5 positions with a 30% consistency rule. Full overnight, weekend and extended-hours access.
+  </p>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Size</th>
+          <th class="px-4 py-3 text-right">Profit Target (15%)</th>
+          <th class="px-4 py-3 text-right">Daily Pause (3%)</th>
+          <th class="px-4 py-3 text-right">Max Loss (7%)</th>
+          <th class="px-4 py-3 text-right">Fee</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$2,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$300</td>
+          <td class="px-4 py-3 text-right text-slate-700">$60</td>
+          <td class="px-4 py-3 text-right text-slate-700">$140</td>
+          <td class="px-4 py-3 text-right font-bold text-slate-900">$69</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
+          <td class="px-4 py-3 text-right text-slate-700">$300</td>
+          <td class="px-4 py-3 text-right text-slate-700">$700</td>
+          <td class="px-4 py-3 text-right font-bold text-slate-900">$297</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$20,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$600</td>
+          <td class="px-4 py-3 text-right text-slate-700">$1,400</td>
+          <td class="px-4 py-3 text-right font-bold text-slate-900">$447</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$40,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$6,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$1,200</td>
+          <td class="px-4 py-3 text-right text-slate-700">$2,800</td>
+          <td class="px-4 py-3 text-right font-bold text-slate-900">$800</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ─── Trading Rules ────────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules</h3>
+  <p class="mb-4">
+    Trade The Pool uses a consistent rule set across all challenge types, built to keep things realistic around stock and ETF liquidity. Every position must meet the minimum hold and movement requirements, and your trade distribution is checked against the consistency rule.
+  </p>
+  <div class="space-y-2 mb-6">
+    <div class="flex items-start gap-2">
+      <span class="mt-1 w-1.5 h-1.5 rounded-full bg-slate-400 flex-shrink-0"></span>
+      <p>Minimum <strong>30-second hold</strong> on every trade</p>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="mt-1 w-1.5 h-1.5 rounded-full bg-slate-400 flex-shrink-0"></span>
+      <p>Minimum <strong>10-cent movement</strong> for a trade to count as profitable</p>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="mt-1 w-1.5 h-1.5 rounded-full bg-slate-400 flex-shrink-0"></span>
+      <p><strong>Consistency rule</strong> means your best trade cannot exceed 30–50% of total profit (varies by program)</p>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="mt-1 w-1.5 h-1.5 rounded-full bg-slate-400 flex-shrink-0"></span>
+      <p><strong>Volume rule</strong> caps position size at 5% of previous one-minute volume</p>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="mt-1 w-1.5 h-1.5 rounded-full bg-slate-400 flex-shrink-0"></span>
+      <p><strong>Halt and volatility rule</strong> requires no trading during a halt; must wait one minute after reopening</p>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="mt-1 w-1.5 h-1.5 rounded-full bg-slate-400 flex-shrink-0"></span>
+      <p>Overnight and weekend holding allowed <strong>only on Swing accounts</strong></p>
+    </div>
+  </div>
+
+  <!-- ─── Scaling Plan ─────────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Scaling Plan</h3>
+  <p class="mb-4">
+    Trade The Pool's scaling plan is tied to realised profit milestones, increasing your buying power and daily loss allowance each time you grow the funded account by <strong>10%</strong>. These increases are proportional rather than fixed, so the account expands gradually as you hit each step. The system applies the adjustments automatically.
+  </p>
+  <div class="rounded-lg bg-amber-50 border border-amber-200 p-4 mb-6">
+    <p class="text-sm text-amber-800">
+      <strong>Example:</strong> If a $50,000 account reaches $55,000, the buying power and daily loss limit move to the next tier. The following scale occurs at $60,500. Any breach of the account's loss limits resets all scaling progress.
+    </p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Challenges</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Challenges score 8/10 because Trade The Pool's one-step challenges, modest targets on day accounts and clear drawdown rules make the trading programs straightforward to navigate. You get a choice between day and swing models, unlimited time on the beginner tiers and multiple account sizes. The score isn't higher because the consistency rule and volume caps introduce extra limitations that can make certain strategies harder to execute cleanly.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SPREADS SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "spreads" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    Trade The Pool charges a flat stock and ETF commission of <strong>$0.005 per share</strong> with a <strong>$0.75 minimum per order</strong>, and pricing is based on real-time NASDAQ order book data rather than a synthetic feed.
+  </p>
+  <p class="mb-6">
+    That means the spread you see on TraderEvolution closely matches the underlying exchange, but it can still widen around opens, halts and news, and stop orders will fill at the next available price rather than at a guaranteed level.
+  </p>
+
+  <!-- Commission Stats -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">$0.005</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Per Share</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">$0.75</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Min. Per Order</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-emerald-600">$0</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Platform Fee</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-emerald-600">$0</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Data Feed Fee</p>
+    </div>
+  </div>
+
+  <!-- Cost Examples -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Commission Cost Examples</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Position Size</th>
+          <th class="px-4 py-3 text-right">Calculation</th>
+          <th class="px-4 py-3 text-right">Commission</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">50 shares</td>
+          <td class="px-4 py-3 text-right text-slate-700">50 × $0.005 = $0.25</td>
+          <td class="px-4 py-3 text-right font-bold text-slate-900">$0.75 (minimum)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">200 shares</td>
+          <td class="px-4 py-3 text-right text-slate-700">200 × $0.005</td>
+          <td class="px-4 py-3 text-right font-bold text-slate-900">$1.00</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">1,000 shares</td>
+          <td class="px-4 py-3 text-right text-slate-700">1,000 × $0.005</td>
+          <td class="px-4 py-3 text-right font-bold text-slate-900">$5.00</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">2,000 shares</td>
+          <td class="px-4 py-3 text-right text-slate-700">2,000 × $0.005</td>
+          <td class="px-4 py-3 text-right font-bold text-slate-900">$10.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="mb-4">
+    This commission model is cheap for small or medium position sizes but gets expensive if you run very high share counts. You'll want to factor that into any scalping or high-frequency style that leans on many entries and exits, because trading costs can eat into a 6–15% target quickly if your average win size is small.
+  </p>
+  <p class="mb-6">
+    There are no separate platform or market data fees on evaluation accounts, and real-time US stock and ETF prices are included as part of the program.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Spreads and Fees</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Spreads and trading fees score 7/10 because Trade The Pool uses real exchange data from NASDAQ, NYSE and CBOE, giving you accurate pricing and no hidden mark-ups. The per-share commission is transparent and fair for normal position sizes, and there are no extra platform or data fees. The score doesn't go higher because the $0.005 per-share model becomes expensive for high-volume traders, and large share counts can make costs stack up faster than at CFD-style props with capped or all-in fees.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* MARKETS SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "markets" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    Trade The Pool gives access to over <strong>12,000+ US stocks and ETFs</strong> only, using a risk-based buying power system instead of fixed leverage. You trade with a set buying-power figure and daily loss limit, and those limits control your maximum exposure rather than a traditional leverage ratio.
+  </p>
+  <p class="mb-6">
+    All pricing comes directly from <strong>NASDAQ, NYSE and CBOE</strong> feeds, so spreads and depth track the underlying exchange rather than CFD-style synthetic books.
+  </p>
+
+  <!-- Market Stats -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-emerald-600">12,000+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Tradeable Symbols</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">3</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Exchanges</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">Stocks</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Asset Type</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">ETFs</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Asset Type</p>
+    </div>
+  </div>
+
+  <!-- What You Can Trade -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">What You Can Trade</h3>
+  <p class="mb-4">
+    TTP's product list includes large caps like Apple (AAPL) and Microsoft (MSFT), high-volatility names such as Tesla (TSLA), smaller companies and penny stocks, plus hundreds of sector and thematic ETFs ranging from SPDR S&P 500 (SPY) and Invesco QQQ (QQQ) to niche products like Goldman Sachs Physical Gold ETF (AAAU).
+  </p>
+
+  <!-- Day vs Swing -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Day vs Swing Account Differences</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Feature</th>
+          <th class="px-4 py-3 text-center">Day Accounts</th>
+          <th class="px-4 py-3 text-center">Swing Accounts</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Overnight Holding</td>
+          <td class="px-4 py-3 text-center text-red-600 font-semibold">Not Allowed</td>
+          <td class="px-4 py-3 text-center text-emerald-600 font-semibold">Allowed</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Weekend Holding</td>
+          <td class="px-4 py-3 text-center text-red-600 font-semibold">Not Allowed</td>
+          <td class="px-4 py-3 text-center text-emerald-600 font-semibold">Allowed</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Pre-Market Access</td>
+          <td class="px-4 py-3 text-center text-emerald-600 font-semibold">Available</td>
+          <td class="px-4 py-3 text-center text-emerald-600 font-semibold">Available</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">After-Hours Access</td>
+          <td class="px-4 py-3 text-center text-emerald-600 font-semibold">Available</td>
+          <td class="px-4 py-3 text-center text-emerald-600 font-semibold">Available</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Must Be Flat By Close</td>
+          <td class="px-4 py-3 text-center text-red-600 font-semibold">Yes</td>
+          <td class="px-4 py-3 text-center text-emerald-600 font-semibold">No</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="mb-6">
+    Position sizing is shaped by TTP's risk controls: your maximum size is whatever keeps you within your buying power and drawdown limits, and you must stay under the <strong>5% one-minute volume rule</strong>. In practice, most traders keep each position to roughly 30% of the daily loss limit to avoid clipping the pause trigger.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Markets</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Markets score 8/10 because Trade The Pool offers one of the largest stock and ETF selections available, with 12,000+ US-listed symbols covering large caps, small caps, penny stocks and every major sector. Extended-hours access and overnight holding on swing accounts make it flexible for multiple strategies. It doesn't earn a higher score because everything is limited to US equities only, with no forex, crypto, indices or futures, which reduces appeal for multi-asset traders.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PLATFORMS SECTION                                                   */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "platforms" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    Trade The Pool uses the <strong>TraderEvolution</strong> platform for stocks and ETFs, giving you direct exchange data and a stock-focused execution environment rather than a CFD setup. All pricing comes straight from NASDAQ, NYSE and CBOE, so spreads, queues and liquidity display as they do on the exchange.
+  </p>
+
+  <!-- Platform Card -->
+  <div class="rounded-lg bg-slate-50 border border-slate-200 p-5 mb-6">
+    <h4 class="text-base font-bold text-slate-900 mb-3">TraderEvolution</h4>
+    <p class="mb-3">
+      A full-feature desktop platform with ladder trading, Level 2 depth, charting tools, hotkeys and advanced order types. Comfortable for active stock traders coming from brokers like IBKR or Lightspeed. You also get a web platform and mobile apps, but the desktop terminal is the only version with full functionality.
+    </p>
+    <div class="flex flex-wrap gap-2 mb-4">
+      <span class="rounded-full bg-white border border-slate-200 px-3 py-1 text-xs font-semibold text-slate-600">Desktop</span>
+      <span class="rounded-full bg-white border border-slate-200 px-3 py-1 text-xs font-semibold text-slate-600">Web</span>
+      <span class="rounded-full bg-white border border-slate-200 px-3 py-1 text-xs font-semibold text-slate-600">Mobile</span>
+      <span class="rounded-full bg-white border border-slate-200 px-3 py-1 text-xs font-semibold text-slate-600">Level 2 Depth</span>
+      <span class="rounded-full bg-white border border-slate-200 px-3 py-1 text-xs font-semibold text-slate-600">Ladder Trading</span>
+      <span class="rounded-full bg-white border border-slate-200 px-3 py-1 text-xs font-semibold text-slate-600">Hotkeys</span>
+      <span class="rounded-full bg-white border border-slate-200 px-3 py-1 text-xs font-semibold text-slate-600">Advanced Orders</span>
+    </div>
+    <div class="rounded-lg bg-amber-50 border border-amber-200 p-3">
+      <p class="text-xs text-amber-800">
+        <strong>Note:</strong> Only one connection per device type is allowed at a time to avoid duplicate orders or accidental triggers.
+      </p>
+    </div>
+  </div>
+
+  <!-- Automation Restrictions -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Automation Restrictions</h3>
+  <p class="mb-4">
+    Automated trading is <strong>not allowed</strong> during the evaluation process. TTP is trialling a SignalStack integration in beta for funded accounts, but it isn't guaranteed and can be revoked at any time. All challenge phases should be treated as <strong>manual-trading only</strong>.
+  </p>
+  <p class="mb-6">
+    Execution is routed through TTP's internal environment, and fills reflect the live order book and stock market activity. Stop loss orders trigger at market once reached, so you can experience slippage around fast moves, halts or thin names.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Platforms</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Platforms score 6/10 because TraderEvolution provides strong stock trading tools like Level 2, hotkeys, ladder trading and advanced order types, giving manual equity traders everything they need. The drawback is that it's the only platform available, with no support for MT4/MT5, cTrader, TradingView or third-party terminals. Automation is also blocked during evaluations, so algorithmic or multi-platform traders will find the setup restrictive.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PAYOUTS SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "payouts" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-6">
+    Trade The Pool pays funded traders on a <strong>14-day profit payout cycle</strong> with a <strong>$300 minimum balance</strong> required for each withdrawal. Payouts are processed once all positions are closed and the account passes a brief risk review.
+  </p>
+
+  <!-- Payout Stats -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-emerald-600">70%</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Profit Split</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">14 Days</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Payout Cycle</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">$300</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Min. Withdrawal</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-red-600">None</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Fee Refund</p>
+    </div>
+  </div>
+
+  <!-- Payment Methods -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payment Methods</h3>
+  <p class="mb-4">
+    You can pay for your initial challenge fee with major credit cards (Visa, Mastercard, American Express), as well as Maestro, SEPA, EPS, iDeal and PayPal. Payouts are processed through the same payment processors used for initial challenge fee payments.
+  </p>
+  <div class="flex flex-wrap gap-2 mb-6">
+    <span class="rounded-full bg-slate-50 border border-slate-200 px-3 py-1 text-xs font-semibold text-slate-600">Visa</span>
+    <span class="rounded-full bg-slate-50 border border-slate-200 px-3 py-1 text-xs font-semibold text-slate-600">Mastercard</span>
+    <span class="rounded-full bg-slate-50 border border-slate-200 px-3 py-1 text-xs font-semibold text-slate-600">American Express</span>
+    <span class="rounded-full bg-slate-50 border border-slate-200 px-3 py-1 text-xs font-semibold text-slate-600">Maestro</span>
+    <span class="rounded-full bg-slate-50 border border-slate-200 px-3 py-1 text-xs font-semibold text-slate-600">PayPal</span>
+    <span class="rounded-full bg-slate-50 border border-slate-200 px-3 py-1 text-xs font-semibold text-slate-600">SEPA</span>
+    <span class="rounded-full bg-slate-50 border border-slate-200 px-3 py-1 text-xs font-semibold text-slate-600">EPS</span>
+    <span class="rounded-full bg-slate-50 border border-slate-200 px-3 py-1 text-xs font-semibold text-slate-600">iDeal</span>
+  </div>
+
+  <!-- Important Notes -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Important Payout Notes</h3>
+  <div class="space-y-2 mb-6">
+    <div class="flex items-start gap-2">
+      <span class="mt-1 w-1.5 h-1.5 rounded-full bg-slate-400 flex-shrink-0"></span>
+      <p>No fee refund on challenges, regardless of outcome</p>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="mt-1 w-1.5 h-1.5 rounded-full bg-slate-400 flex-shrink-0"></span>
+      <p>Some payout methods may include processing fees</p>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="mt-1 w-1.5 h-1.5 rounded-full bg-slate-400 flex-shrink-0"></span>
+      <p>All positions must be closed before requesting a withdrawal</p>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="mt-1 w-1.5 h-1.5 rounded-full bg-slate-400 flex-shrink-0"></span>
+      <p>Standard KYC checks required before funds are released</p>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="mt-1 w-1.5 h-1.5 rounded-full bg-slate-400 flex-shrink-0"></span>
+      <p>Withdrawals don't affect scaling unless balance drops below the account's safety buffer</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Payouts</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Payouts score 6/10 because the 14-day payout cycle, $300 minimum and 70% split are all standard for US-stock prop firms, and the process is generally reliable. The score isn't higher because the withdrawal minimum is relatively high, challenge fees aren't refunded, and some payout methods may include processing fees. It's a functional system, just not one of the more generous payout structures on the market.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SUPPORT SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "support" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-6">
+    Trade The Pool's customer support team is available during standard business hours and handled mainly through email, their FAQ, and platform guidance. Responses during testing were steady but not instant, which is typical for stock-focused firms.
+  </p>
+
+  <!-- Support Channels -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Support Channels</h3>
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Email Support</p>
+      <p>Helpdesk email available during standard business hours. Responses are steady but not instant.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">FAQ &amp; Knowledge Base</p>
+      <p>The Trader's Area includes basic guides on using TraderEvolution, plus walkthroughs for order types and risk settings.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Program Terms</p>
+      <p>Trading rule explanations are covered in detail through the Program Terms pages, outlining consistency, volume limits and overnight policies.</p>
+    </div>
+  </div>
+
+  <!-- Education -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Education &amp; Resources</h3>
+  <p class="mb-4">
+    Educational materials are light but practical. You get access to short articles, a blog, and occasional trading tips, along with optional third-party tools like Tradersync or TrendSpider through partner trials.
+  </p>
+  <p class="mb-6">
+    There's no large Discord community, which is unusual for a prop firm. However, The 5%ers (the parent company) offers more in-depth educational resources and a large Discord channel if you want to work on your trading skills. TTP's funded trader interviews and platform resources give you the basics to understand how the program expects you to trade.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Support</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Support and education score 6/10 because Trade The Pool covers the basics well with email support, FAQs and platform guides, but doesn't go much beyond that. Response times are reasonable for a stock-focused firm, and the Trader's Area plus Program Terms do a solid job explaining platform use and risk rules. However, there's no 24/7 live chat, no large in-house community like Discord, and educational content is fairly light, so traders who want coaching, webinars or hands-on support will need to look elsewhere.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* TRUST SECTION                                                       */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "trust" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    Trade The Pool shows a solid level of transparency for a stock-focused prop firm, with clear risk management rules and real exchange data underpinning every evaluation. The company operates under <strong>Five Percent Online Ltd</strong>, the same group behind The 5%ers.
+  </p>
+  <p class="mb-6">
+    There is no broker backing, meaning all trading is done inside TTP's own simulated environment rather than through a regulated brokerage partner. Pricing comes directly from NASDAQ, NYSE and CBOE, so quotes, volume and spreads match the underlying exchanges.
+  </p>
+
+  <!-- Trustpilot -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">What Do Users Say?</h3>
+  <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 mb-6">
+    <div class="flex items-center gap-4">
+      <div>
+        <p class="text-3xl font-black text-slate-900">4.5<span class="text-lg text-slate-400">/5</span></p>
+        <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Trustpilot</p>
+      </div>
+      <div class="border-l border-slate-200 pl-4">
+        <p class="text-sm text-slate-700">From <strong>500+ reviews</strong>, with most feedback focused on fair rule enforcement and the clarity of their risk management structure.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Transparency Points -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Transparency &amp; Credibility</h3>
+  <div class="space-y-2 mb-6">
+    <div class="flex items-start gap-2">
+      <span class="mt-1 w-1.5 h-1.5 rounded-full bg-emerald-500 flex-shrink-0"></span>
+      <p>Operated by Five Percent Online Ltd, the same company behind The 5%ers</p>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="mt-1 w-1.5 h-1.5 rounded-full bg-emerald-500 flex-shrink-0"></span>
+      <p>Real exchange data from NASDAQ, NYSE and CBOE</p>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="mt-1 w-1.5 h-1.5 rounded-full bg-emerald-500 flex-shrink-0"></span>
+      <p>Full program terms published and easy to verify</p>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="mt-1 w-1.5 h-1.5 rounded-full bg-emerald-500 flex-shrink-0"></span>
+      <p>Rules and evaluation criteria are consistent and publicly documented</p>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="mt-1 w-1.5 h-1.5 rounded-full bg-amber-500 flex-shrink-0"></span>
+      <p>All trading is simulated with no regulated broker backing</p>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="mt-1 w-1.5 h-1.5 rounded-full bg-amber-500 flex-shrink-0"></span>
+      <p>Automation restrictions and volume caps may frustrate some users</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trust and Transparency</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Trust and transparency score 7/10 because Trade The Pool provides clear rules, full program terms, and real exchange data from NASDAQ, NYSE and CBOE. Its association with Five Percent Online Ltd (The 5%ers) and a strong Trustpilot rating help reinforce credibility. It doesn't score higher because trading is entirely simulated with no regulated broker backing, automation restrictions still apply, and some users report slower response times or confusion around certain rules.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* FALLBACK                                                            */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section !== "challenges" && section !== "spreads" && section !== "markets" && section !== "platforms" && section !== "payouts" && section !== "support" && section !== "trust" && fallbackBody && (
+  <div class="text-sm leading-relaxed text-slate-700 space-y-4">
+    {fallbackBody.split("\n\n").map((para) => (
+      <p set:html={para.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")} />
+    ))}
+  </div>
+)}

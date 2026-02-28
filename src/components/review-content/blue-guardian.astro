@@ -1,0 +1,1179 @@
+---
+// Rich editorial content for Blue Guardian (FLAGGED)
+// Uses red/amber verdict boxes throughout to reflect caution rating
+interface Props {
+  section: string;
+  fallbackBody?: string;
+}
+const { section, fallbackBody } = Astro.props;
+---
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* CHALLENGES SECTION (6/10)                                           */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "challenges" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    Blue Guardian offers six challenge types spread across instant and traditional evaluation models. Each model has different rules for payout, drawdown, and account progression. While the variety gives you plenty of choice, the structure can be inconsistent — especially between Instant Starter, Instant Standard, and the Three Step options. If you're considering this firm, it's worth paying close attention to the fine print on payout caps, consistency rules, and account closure triggers.
+  </p>
+
+  <!-- Quick stats -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Challenge Types</p>
+      <p class="text-base font-bold text-slate-800">6</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Account Sizes</p>
+      <p class="text-base font-bold text-slate-800">$5K – $200K</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Time Limits</p>
+      <p class="text-base font-bold text-emerald-600">None</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Fees From</p>
+      <p class="text-base font-bold text-slate-800">$29</p>
+    </div>
+  </div>
+
+  <!-- Per-model summaries -->
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1 flex items-center gap-2">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-red-500 text-white text-xs font-black flex items-center justify-center">1</span>
+        Instant Funding Starter
+      </p>
+      <p>A single-use option that gives you a $5,000 funded account upfront with no profit target. No evaluation phase, but payouts are capped — you can only withdraw once, and the maximum payout is $250. Once that withdrawal is made, the account is closed permanently.</p>
+      <p class="text-xs text-red-600 font-semibold mt-1">One payout only. Max $250. Account closes after withdrawal. 15% consistency rule.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1 flex items-center gap-2">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-red-500 text-white text-xs font-black flex items-center justify-center">2</span>
+        Instant Funding Standard
+      </p>
+      <p>Immediate access to funded capital across six account sizes, from $5,000 to $200,000. No profit target, but 3% daily and 5% max trailing drawdown. 20% consistency rule and Guardian Shield may close trades if floating losses reach 1%. Payouts available on demand.</p>
+      <p class="text-xs text-amber-600 font-semibold mt-1">80% profit split. 20% consistency rule enforced before each withdrawal.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1 flex items-center gap-2">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-red-500 text-white text-xs font-black flex items-center justify-center">3</span>
+        One Step Evaluation
+      </p>
+      <p>Single-phase evaluation with no deadlines. Hit the profit target and you're eligible for a funded account. Static drawdowns: 3% daily and 6% total. Refundable fee returned after your fourth payout. Payouts every 7 days once funded.</p>
+      <p class="text-xs text-emerald-600 font-semibold mt-1">Up to 90% profit split. Refundable fee. No time limit.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1 flex items-center gap-2">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-red-500 text-white text-xs font-black flex items-center justify-center">4</span>
+        Two Step Standard
+      </p>
+      <p>Classic two-phase evaluation: Phase 1 has a 10% profit target, Phase 2 requires 5%. Static drawdown at 5% max and 3% daily. Refundable fee after fourth payout. Bi-weekly withdrawals at 85% profit split.</p>
+      <p class="text-xs text-amber-600 font-semibold mt-1">85% profit split. Bi-weekly payouts. No time limit.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1 flex items-center gap-2">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-red-500 text-white text-xs font-black flex items-center justify-center">5</span>
+        Two Step Pro
+      </p>
+      <p>A three-phase structure (despite the "Two Step" name). Step 1 and 2 are challenges, Step 3 is the funded phase. Higher drawdowns at 8% total and 4% daily. Fixed 10% profit target for Phase 1. Bi-weekly payouts at 90% split.</p>
+      <p class="text-xs text-amber-600 font-semibold mt-1">90% profit split. Higher drawdown tolerance than Standard.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1 flex items-center gap-2">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-red-500 text-white text-xs font-black flex items-center justify-center">6</span>
+        Three Step Evaluation
+      </p>
+      <p>The most accessible challenge with the lowest entry point ($29 for $10K). Three stages with separate profit targets and trailing drawdown. No deadlines, and payouts every 7 days once funded with up to 90% profit split.</p>
+      <p class="text-xs text-emerald-600 font-semibold mt-1">Lowest fees. Up to 90% split. Weekly payouts once funded.</p>
+    </div>
+  </div>
+
+  <!-- Instant Starter Table -->
+  <h3 class="text-base font-bold text-slate-900 mb-3">Instant Funding Starter</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead>
+        <tr class="bg-slate-800 text-white text-xs uppercase tracking-wide">
+          <th class="px-4 py-3 text-left font-semibold">Account Size</th>
+          <th class="px-4 py-3 text-left font-semibold">Fee</th>
+          <th class="px-4 py-3 text-left font-semibold">Profit Target</th>
+          <th class="px-4 py-3 text-left font-semibold">Daily DD</th>
+          <th class="px-4 py-3 text-left font-semibold">Max DD</th>
+          <th class="px-4 py-3 text-left font-semibold">Split</th>
+          <th class="px-4 py-3 text-left font-semibold">Payouts</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">$5,000</td>
+          <td class="px-4 py-2.5">$54</td>
+          <td class="px-4 py-2.5">None</td>
+          <td class="px-4 py-2.5">$150</td>
+          <td class="px-4 py-2.5">$250</td>
+          <td class="px-4 py-2.5">50%</td>
+          <td class="px-4 py-2.5 text-red-600 font-semibold">1 payout only (max $250)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Instant Standard Table -->
+  <h3 class="text-base font-bold text-slate-900 mb-3">Instant Funding Standard</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead>
+        <tr class="bg-slate-800 text-white text-xs uppercase tracking-wide">
+          <th class="px-4 py-3 text-left font-semibold">Account Size</th>
+          <th class="px-4 py-3 text-left font-semibold">Fee</th>
+          <th class="px-4 py-3 text-left font-semibold">Profit Target</th>
+          <th class="px-4 py-3 text-left font-semibold">Daily DD</th>
+          <th class="px-4 py-3 text-left font-semibold">Max DD</th>
+          <th class="px-4 py-3 text-left font-semibold">Split</th>
+          <th class="px-4 py-3 text-left font-semibold">Payouts</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">$5,000</td>
+          <td class="px-4 py-2.5">$155</td>
+          <td class="px-4 py-2.5">None</td>
+          <td class="px-4 py-2.5">$150</td>
+          <td class="px-4 py-2.5">$250</td>
+          <td class="px-4 py-2.5">80%</td>
+          <td class="px-4 py-2.5">Instant</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">$10,000</td>
+          <td class="px-4 py-2.5">$305</td>
+          <td class="px-4 py-2.5">None</td>
+          <td class="px-4 py-2.5">$300</td>
+          <td class="px-4 py-2.5">$500</td>
+          <td class="px-4 py-2.5">80%</td>
+          <td class="px-4 py-2.5">Instant</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">$25,000</td>
+          <td class="px-4 py-2.5">$520</td>
+          <td class="px-4 py-2.5">None</td>
+          <td class="px-4 py-2.5">$750</td>
+          <td class="px-4 py-2.5">$1,250</td>
+          <td class="px-4 py-2.5">80%</td>
+          <td class="px-4 py-2.5">Instant</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">$50,000</td>
+          <td class="px-4 py-2.5">$652</td>
+          <td class="px-4 py-2.5">None</td>
+          <td class="px-4 py-2.5">$1,500</td>
+          <td class="px-4 py-2.5">$2,500</td>
+          <td class="px-4 py-2.5">80%</td>
+          <td class="px-4 py-2.5">Instant</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">$100,000</td>
+          <td class="px-4 py-2.5">$784</td>
+          <td class="px-4 py-2.5">None</td>
+          <td class="px-4 py-2.5">$3,000</td>
+          <td class="px-4 py-2.5">$5,000</td>
+          <td class="px-4 py-2.5">80%</td>
+          <td class="px-4 py-2.5">Instant</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">$200,000</td>
+          <td class="px-4 py-2.5">$1,044</td>
+          <td class="px-4 py-2.5">None</td>
+          <td class="px-4 py-2.5">$6,000</td>
+          <td class="px-4 py-2.5">$10,000</td>
+          <td class="px-4 py-2.5">80%</td>
+          <td class="px-4 py-2.5">Instant</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- One Step Table -->
+  <h3 class="text-base font-bold text-slate-900 mb-3">One Step Evaluation</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead>
+        <tr class="bg-slate-800 text-white text-xs uppercase tracking-wide">
+          <th class="px-4 py-3 text-left font-semibold">Account Size</th>
+          <th class="px-4 py-3 text-left font-semibold">Fee</th>
+          <th class="px-4 py-3 text-left font-semibold">Profit Target</th>
+          <th class="px-4 py-3 text-left font-semibold">Daily DD</th>
+          <th class="px-4 py-3 text-left font-semibold">Max DD</th>
+          <th class="px-4 py-3 text-left font-semibold">Split</th>
+          <th class="px-4 py-3 text-left font-semibold">Payouts</th>
+          <th class="px-4 py-3 text-left font-semibold">Period</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">$5,000</td>
+          <td class="px-4 py-2.5">$88</td>
+          <td class="px-4 py-2.5">$500</td>
+          <td class="px-4 py-2.5">$150</td>
+          <td class="px-4 py-2.5">$300</td>
+          <td class="px-4 py-2.5">Up to 90%</td>
+          <td class="px-4 py-2.5">Every 7 days</td>
+          <td class="px-4 py-2.5 text-emerald-600 font-semibold">No limit</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">$10,000</td>
+          <td class="px-4 py-2.5">$148</td>
+          <td class="px-4 py-2.5">$1,000</td>
+          <td class="px-4 py-2.5">$300</td>
+          <td class="px-4 py-2.5">$600</td>
+          <td class="px-4 py-2.5">Up to 90%</td>
+          <td class="px-4 py-2.5">Every 7 days</td>
+          <td class="px-4 py-2.5 text-emerald-600 font-semibold">No limit</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">$25,000</td>
+          <td class="px-4 py-2.5">$258</td>
+          <td class="px-4 py-2.5">$2,500</td>
+          <td class="px-4 py-2.5">$750</td>
+          <td class="px-4 py-2.5">$1,500</td>
+          <td class="px-4 py-2.5">Up to 90%</td>
+          <td class="px-4 py-2.5">Every 7 days</td>
+          <td class="px-4 py-2.5 text-emerald-600 font-semibold">No limit</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">$50,000</td>
+          <td class="px-4 py-2.5">$353</td>
+          <td class="px-4 py-2.5">$5,000</td>
+          <td class="px-4 py-2.5">$1,500</td>
+          <td class="px-4 py-2.5">$3,000</td>
+          <td class="px-4 py-2.5">Up to 90%</td>
+          <td class="px-4 py-2.5">Every 7 days</td>
+          <td class="px-4 py-2.5 text-emerald-600 font-semibold">No limit</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">$100,000</td>
+          <td class="px-4 py-2.5">$498</td>
+          <td class="px-4 py-2.5">$10,000</td>
+          <td class="px-4 py-2.5">$3,000</td>
+          <td class="px-4 py-2.5">$6,000</td>
+          <td class="px-4 py-2.5">Up to 90%</td>
+          <td class="px-4 py-2.5">Every 7 days</td>
+          <td class="px-4 py-2.5 text-emerald-600 font-semibold">No limit</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Two Step Standard Table -->
+  <h3 class="text-base font-bold text-slate-900 mb-3">Two Step Standard</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead>
+        <tr class="bg-slate-800 text-white text-xs uppercase tracking-wide">
+          <th class="px-4 py-3 text-left font-semibold">Account Size</th>
+          <th class="px-4 py-3 text-left font-semibold">Fee</th>
+          <th class="px-4 py-3 text-left font-semibold">Phase 1</th>
+          <th class="px-4 py-3 text-left font-semibold">Phase 2</th>
+          <th class="px-4 py-3 text-left font-semibold">Daily DD</th>
+          <th class="px-4 py-3 text-left font-semibold">Max DD</th>
+          <th class="px-4 py-3 text-left font-semibold">Split</th>
+          <th class="px-4 py-3 text-left font-semibold">Payouts</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">$5,000</td>
+          <td class="px-4 py-2.5">$138</td>
+          <td class="px-4 py-2.5">$500</td>
+          <td class="px-4 py-2.5">$250</td>
+          <td class="px-4 py-2.5">$150</td>
+          <td class="px-4 py-2.5">$250</td>
+          <td class="px-4 py-2.5">85%</td>
+          <td class="px-4 py-2.5">Bi-weekly</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">$10,000</td>
+          <td class="px-4 py-2.5">$198</td>
+          <td class="px-4 py-2.5">$1,000</td>
+          <td class="px-4 py-2.5">$500</td>
+          <td class="px-4 py-2.5">$300</td>
+          <td class="px-4 py-2.5">$500</td>
+          <td class="px-4 py-2.5">85%</td>
+          <td class="px-4 py-2.5">Bi-weekly</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">$25,000</td>
+          <td class="px-4 py-2.5">$298</td>
+          <td class="px-4 py-2.5">$2,500</td>
+          <td class="px-4 py-2.5">$1,250</td>
+          <td class="px-4 py-2.5">$750</td>
+          <td class="px-4 py-2.5">$1,250</td>
+          <td class="px-4 py-2.5">85%</td>
+          <td class="px-4 py-2.5">Bi-weekly</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">$50,000</td>
+          <td class="px-4 py-2.5">$368</td>
+          <td class="px-4 py-2.5">$5,000</td>
+          <td class="px-4 py-2.5">$2,500</td>
+          <td class="px-4 py-2.5">$1,500</td>
+          <td class="px-4 py-2.5">$2,500</td>
+          <td class="px-4 py-2.5">85%</td>
+          <td class="px-4 py-2.5">Bi-weekly</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">$100,000</td>
+          <td class="px-4 py-2.5">$498</td>
+          <td class="px-4 py-2.5">$10,000</td>
+          <td class="px-4 py-2.5">$5,000</td>
+          <td class="px-4 py-2.5">$3,000</td>
+          <td class="px-4 py-2.5">$5,000</td>
+          <td class="px-4 py-2.5">85%</td>
+          <td class="px-4 py-2.5">Bi-weekly</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">$150,000</td>
+          <td class="px-4 py-2.5">$748</td>
+          <td class="px-4 py-2.5">$15,000</td>
+          <td class="px-4 py-2.5">$7,500</td>
+          <td class="px-4 py-2.5">$4,500</td>
+          <td class="px-4 py-2.5">$7,500</td>
+          <td class="px-4 py-2.5">85%</td>
+          <td class="px-4 py-2.5">Bi-weekly</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">$200,000</td>
+          <td class="px-4 py-2.5">$948</td>
+          <td class="px-4 py-2.5">$20,000</td>
+          <td class="px-4 py-2.5">$10,000</td>
+          <td class="px-4 py-2.5">$6,000</td>
+          <td class="px-4 py-2.5">$10,000</td>
+          <td class="px-4 py-2.5">85%</td>
+          <td class="px-4 py-2.5">Bi-weekly</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Two Step Pro Table -->
+  <h3 class="text-base font-bold text-slate-900 mb-3">Two Step Pro</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead>
+        <tr class="bg-slate-800 text-white text-xs uppercase tracking-wide">
+          <th class="px-4 py-3 text-left font-semibold">Account Size</th>
+          <th class="px-4 py-3 text-left font-semibold">Fee</th>
+          <th class="px-4 py-3 text-left font-semibold">Phase 1 Target</th>
+          <th class="px-4 py-3 text-left font-semibold">Daily DD</th>
+          <th class="px-4 py-3 text-left font-semibold">Max DD</th>
+          <th class="px-4 py-3 text-left font-semibold">Split</th>
+          <th class="px-4 py-3 text-left font-semibold">Payouts</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">$5,000</td>
+          <td class="px-4 py-2.5">$148</td>
+          <td class="px-4 py-2.5">$500</td>
+          <td class="px-4 py-2.5">$200</td>
+          <td class="px-4 py-2.5">$400</td>
+          <td class="px-4 py-2.5">90%</td>
+          <td class="px-4 py-2.5">Bi-weekly</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">$10,000</td>
+          <td class="px-4 py-2.5">$208</td>
+          <td class="px-4 py-2.5">$1,000</td>
+          <td class="px-4 py-2.5">$400</td>
+          <td class="px-4 py-2.5">$800</td>
+          <td class="px-4 py-2.5">90%</td>
+          <td class="px-4 py-2.5">Bi-weekly</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">$25,000</td>
+          <td class="px-4 py-2.5">$308</td>
+          <td class="px-4 py-2.5">$2,500</td>
+          <td class="px-4 py-2.5">$1,000</td>
+          <td class="px-4 py-2.5">$2,000</td>
+          <td class="px-4 py-2.5">90%</td>
+          <td class="px-4 py-2.5">Bi-weekly</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">$50,000</td>
+          <td class="px-4 py-2.5">$408</td>
+          <td class="px-4 py-2.5">$5,000</td>
+          <td class="px-4 py-2.5">$2,000</td>
+          <td class="px-4 py-2.5">$4,000</td>
+          <td class="px-4 py-2.5">90%</td>
+          <td class="px-4 py-2.5">Bi-weekly</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">$100,000</td>
+          <td class="px-4 py-2.5">$598</td>
+          <td class="px-4 py-2.5">$10,000</td>
+          <td class="px-4 py-2.5">$4,000</td>
+          <td class="px-4 py-2.5">$8,000</td>
+          <td class="px-4 py-2.5">90%</td>
+          <td class="px-4 py-2.5">Bi-weekly</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">$150,000</td>
+          <td class="px-4 py-2.5">$898</td>
+          <td class="px-4 py-2.5">$15,000</td>
+          <td class="px-4 py-2.5">$6,000</td>
+          <td class="px-4 py-2.5">$12,000</td>
+          <td class="px-4 py-2.5">90%</td>
+          <td class="px-4 py-2.5">Bi-weekly</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">$200,000</td>
+          <td class="px-4 py-2.5">$1,098</td>
+          <td class="px-4 py-2.5">$20,000</td>
+          <td class="px-4 py-2.5">$8,000</td>
+          <td class="px-4 py-2.5">$16,000</td>
+          <td class="px-4 py-2.5">90%</td>
+          <td class="px-4 py-2.5">Bi-weekly</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Three Step Table -->
+  <h3 class="text-base font-bold text-slate-900 mb-3">Three Step Evaluation</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead>
+        <tr class="bg-slate-800 text-white text-xs uppercase tracking-wide">
+          <th class="px-4 py-3 text-left font-semibold">Account Size</th>
+          <th class="px-4 py-3 text-left font-semibold">Fee</th>
+          <th class="px-4 py-3 text-left font-semibold">Step 1</th>
+          <th class="px-4 py-3 text-left font-semibold">Step 2</th>
+          <th class="px-4 py-3 text-left font-semibold">Step 3</th>
+          <th class="px-4 py-3 text-left font-semibold">Daily DD</th>
+          <th class="px-4 py-3 text-left font-semibold">Max DD</th>
+          <th class="px-4 py-3 text-left font-semibold">Split</th>
+          <th class="px-4 py-3 text-left font-semibold">Payouts</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">$10,000</td>
+          <td class="px-4 py-2.5">$29</td>
+          <td class="px-4 py-2.5">$800</td>
+          <td class="px-4 py-2.5">$500</td>
+          <td class="px-4 py-2.5">$500</td>
+          <td class="px-4 py-2.5">$300</td>
+          <td class="px-4 py-2.5">$1,000</td>
+          <td class="px-4 py-2.5">Up to 90%</td>
+          <td class="px-4 py-2.5">Every 7 days</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">$25,000</td>
+          <td class="px-4 py-2.5">$88</td>
+          <td class="px-4 py-2.5">$2,000</td>
+          <td class="px-4 py-2.5">$1,250</td>
+          <td class="px-4 py-2.5">$1,250</td>
+          <td class="px-4 py-2.5">$750</td>
+          <td class="px-4 py-2.5">$2,500</td>
+          <td class="px-4 py-2.5">Up to 90%</td>
+          <td class="px-4 py-2.5">Every 7 days</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">$50,000</td>
+          <td class="px-4 py-2.5">$122</td>
+          <td class="px-4 py-2.5">$4,000</td>
+          <td class="px-4 py-2.5">$2,500</td>
+          <td class="px-4 py-2.5">$2,500</td>
+          <td class="px-4 py-2.5">$1,500</td>
+          <td class="px-4 py-2.5">$5,000</td>
+          <td class="px-4 py-2.5">Up to 90%</td>
+          <td class="px-4 py-2.5">Every 7 days</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">$100,000</td>
+          <td class="px-4 py-2.5">$183</td>
+          <td class="px-4 py-2.5">$8,000</td>
+          <td class="px-4 py-2.5">$5,000</td>
+          <td class="px-4 py-2.5">$5,000</td>
+          <td class="px-4 py-2.5">$3,000</td>
+          <td class="px-4 py-2.5">$10,000</td>
+          <td class="px-4 py-2.5">Up to 90%</td>
+          <td class="px-4 py-2.5">Every 7 days</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">$150,000</td>
+          <td class="px-4 py-2.5">$353</td>
+          <td class="px-4 py-2.5">$12,000</td>
+          <td class="px-4 py-2.5">$7,500</td>
+          <td class="px-4 py-2.5">$7,500</td>
+          <td class="px-4 py-2.5">$4,500</td>
+          <td class="px-4 py-2.5">$15,000</td>
+          <td class="px-4 py-2.5">Up to 90%</td>
+          <td class="px-4 py-2.5">Every 7 days</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">$200,000</td>
+          <td class="px-4 py-2.5">$510</td>
+          <td class="px-4 py-2.5">$16,000</td>
+          <td class="px-4 py-2.5">$10,000</td>
+          <td class="px-4 py-2.5">$10,000</td>
+          <td class="px-4 py-2.5">$6,000</td>
+          <td class="px-4 py-2.5">$20,000</td>
+          <td class="px-4 py-2.5">Up to 90%</td>
+          <td class="px-4 py-2.5">Every 7 days</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Scaling Plan -->
+  <h3 class="text-base font-bold text-slate-900 mb-3">Scaling Plan</h3>
+  <p class="mb-3">
+    Blue Guardian offers a scaling option, but it's not automatic or guaranteed. To qualify, you need to complete four payout cycles and show consistent profitability without breaching drawdown or risk rules.
+  </p>
+  <p class="mb-6">
+    The firm doesn't publish fixed timelines or capital increase amounts. Instead, scaling is assessed on a case-by-case basis. If approved, your account size may be increased, though there's no clear framework for how much or how often. This lack of transparency might frustrate traders used to more structured growth plans.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-amber-500 bg-amber-50 p-5">
+    <p class="font-bold text-amber-900 mb-2">Verdict on Challenges — 6/10</p>
+    <p class="text-amber-800 leading-relaxed">Blue Guardian scored 6/10 for challenge options because while they offer flexibility and fast payouts, accounts come with limitations that could catch traders off guard. The $250 cap on Instant Starter, unclear scaling policy, and strict consistency rules on instant accounts all reduce the overall value. That said, the firm does offer fair pricing, no time limits, and clean progression for traditional evaluations.</p>
+  </div>
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SPREADS SECTION (4/10)                                              */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "spreads" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Blue Guardian keeps its pricing model relatively simple, with raw spreads and flat-rate commissions across most instruments. But if you're trying to compare costs upfront, it's not easy — because they don't publish detailed spread data anywhere.
+  </p>
+
+  <!-- Quick stats -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Spread Type</p>
+      <p class="text-base font-bold text-slate-800">Raw</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">FX Commission</p>
+      <p class="text-base font-bold text-slate-800">$5/lot</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Indices Commission</p>
+      <p class="text-base font-bold text-emerald-600">$0</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Spread Data Published</p>
+      <p class="text-base font-bold text-red-600">No</p>
+    </div>
+  </div>
+
+  <!-- Forex Spreads -->
+  <h3 class="text-base font-bold text-slate-900 mb-3">Forex Spreads and Pricing</h3>
+  <p class="mb-4">
+    You'll be trading on raw spreads, but there's no transparency about what those spreads typically look like. The firm doesn't list minimum or average spreads for any asset class, and there's no pricing breakdown per platform either. If you want to get a feel for execution costs, you'll need to watch spreads live while trading.
+  </p>
+
+  <!-- Warning about no spread data -->
+  <div class="rounded-xl border-2 border-red-300 bg-red-50 p-4 mb-8 flex items-start gap-3">
+    <svg class="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.168 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+    </svg>
+    <div>
+      <p class="font-bold text-red-900 text-sm mb-1">No Spread Data Published</p>
+      <p class="text-xs text-red-800 leading-relaxed">Blue Guardian does not publish minimum or average spread data for any instrument. Some users on TrustPilot have reported concerns about spread manipulation and laggy price feeds, though the firm disputes these claims.</p>
+    </div>
+  </div>
+
+  <!-- Commission table -->
+  <h3 class="text-base font-bold text-slate-900 mb-3">Commission Fees</h3>
+  <p class="mb-4">
+    Commission charges are straightforward. You'll pay $5 per round-turn lot on Forex and commodities. Indices and crypto are commission-free, which helps keep overall costs down if you're trading outside the major pairs.
+  </p>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead>
+        <tr class="bg-slate-800 text-white text-xs uppercase tracking-wide">
+          <th class="px-4 py-3 text-left font-semibold">Instrument</th>
+          <th class="px-4 py-3 text-left font-semibold">Commission per Lot</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">Forex</td>
+          <td class="px-4 py-2.5">$5</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">Commodities</td>
+          <td class="px-4 py-2.5">$5</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">Indices</td>
+          <td class="px-4 py-2.5 text-emerald-600 font-semibold">$0</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">Crypto</td>
+          <td class="px-4 py-2.5 text-emerald-600 font-semibold">$0</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-red-500 bg-red-50 p-5">
+    <p class="font-bold text-red-900 mb-2">Verdict on Spreads — 4/10</p>
+    <p class="text-red-800 leading-relaxed">Blue Guardian gives you raw spreads and predictable commission fees, but doesn't provide the actual spread data to back it up. If you're a cost-sensitive trader or rely on tight spreads, this lack of transparency might be frustrating. For most traders though, the flat commissions and no extra fees on crypto or indices should keep things manageable.</p>
+  </div>
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* MARKETS SECTION (4/10)                                              */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "markets" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    You can trade all the major markets through Blue Guardian, including Forex, indices, gold, crypto, and commodities. Leverage is solid for most instruments, but it does get tighter once you're funded. The leverage and asset mix stays the same across all platforms.
+  </p>
+
+  <!-- Quick stats -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">FX Leverage</p>
+      <p class="text-base font-bold text-slate-800">1:50</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Index Leverage</p>
+      <p class="text-base font-bold text-slate-800">1:20 / 1:10</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Commodity Leverage</p>
+      <p class="text-base font-bold text-slate-800">1:20 / 1:10</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Crypto Leverage</p>
+      <p class="text-base font-bold text-slate-800">1:2</p>
+    </div>
+  </div>
+
+  <!-- Leverage table -->
+  <h3 class="text-base font-bold text-slate-900 mb-3">Leverage by Market</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead>
+        <tr class="bg-slate-800 text-white text-xs uppercase tracking-wide">
+          <th class="px-4 py-3 text-left font-semibold">Market</th>
+          <th class="px-4 py-3 text-left font-semibold">Evaluation Leverage</th>
+          <th class="px-4 py-3 text-left font-semibold">Funded Leverage</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">Forex (Major & Minor)</td>
+          <td class="px-4 py-2.5">1:50</td>
+          <td class="px-4 py-2.5">1:50</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">Indices</td>
+          <td class="px-4 py-2.5">1:20</td>
+          <td class="px-4 py-2.5 text-red-600 font-semibold">1:10</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">Commodities (incl. Gold)</td>
+          <td class="px-4 py-2.5">1:20</td>
+          <td class="px-4 py-2.5 text-red-600 font-semibold">1:10</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">Crypto</td>
+          <td class="px-4 py-2.5">1:2</td>
+          <td class="px-4 py-2.5">1:2</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Note about funded leverage reduction -->
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-8">
+    <p class="text-xs text-amber-800 leading-relaxed"><strong>Note:</strong> Indices and commodities leverage drops from 1:20 to 1:10 once you're funded. This can impact position sizing and margin requirements, so plan accordingly when transitioning from evaluation to live accounts.</p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-red-500 bg-red-50 p-5">
+    <p class="font-bold text-red-900 mb-2">Verdict on Markets — 4/10</p>
+    <p class="text-red-800 leading-relaxed">You've got access to all the key markets with decent leverage while testing and slightly tighter rules once you're funded. The crypto leverage is low, but that's normal with prop firms. What stands out is that you're not paying extra for commission-free indices or crypto, and there's no weird asset restriction mid-phase. It's a well-balanced setup that lets you stick to your usual strategy without needing to adjust too much.</p>
+  </div>
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PLATFORMS SECTION (5/10)                                            */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "platforms" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Blue Guardian lets you choose from three of the most popular trading platforms: MetaTrader 5, Match-Trader, and TradeLocker. Each platform has its own feel, but the rules and limits you need to follow stay consistent across them.
+  </p>
+
+  <!-- Quick stats -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Platforms</p>
+      <p class="text-base font-bold text-slate-800">3</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">EAs Allowed</p>
+      <p class="text-base font-bold text-emerald-600">Yes</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Copy Trading</p>
+      <p class="text-base font-bold text-emerald-600">Yes</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">TradingView Charts</p>
+      <p class="text-base font-bold text-emerald-600">Yes</p>
+    </div>
+  </div>
+
+  <!-- Platform cards -->
+  <div class="space-y-4 mb-8">
+    <div class="rounded-xl bg-slate-50 border border-slate-200 p-5">
+      <h3 class="text-base font-bold text-slate-900 mb-2">MetaTrader 5</h3>
+      <p>MT5 is the go-to for many traders because of its wide toolset, algorithmic trading options, and custom indicators. With Blue Guardian, you get raw spreads and direct access to Forex, indices, commodities, and crypto. You can use EAs (Expert Advisors), which makes MT5 ideal if you like automated systems or running strategies across multiple pairs at once. Copy trading and trading bots are also allowed, as long as they comply with the firm's risk rules.</p>
+    </div>
+    <div class="rounded-xl bg-slate-50 border border-slate-200 p-5">
+      <h3 class="text-base font-bold text-slate-900 mb-2">Match-Trader</h3>
+      <p>Match-Trader runs a bit differently but is still easy to use, especially for browser-based trading with solid mobile access. It supports algorithmic tools and comes with TradingView charting built in, which is great for custom visuals or a more intuitive layout. You can change to a different platform after your evaluation phase if needed.</p>
+    </div>
+    <div class="rounded-xl bg-slate-50 border border-slate-200 p-5">
+      <h3 class="text-base font-bold text-slate-900 mb-2">TradeLocker</h3>
+      <p>TradeLocker is also powered by TradingView charts and runs well on both desktop and mobile. It's becoming more popular thanks to its clean interface and direct market access. More visual-focused with less backend customisation than MT5, but great for manual traders who want real-time data overlays. EAs are allowed but must fit within the trading rules.</p>
+    </div>
+  </div>
+
+  <!-- Trading rules table -->
+  <h3 class="text-base font-bold text-slate-900 mb-3">Key Trading Rules</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead>
+        <tr class="bg-slate-800 text-white text-xs uppercase tracking-wide">
+          <th class="px-4 py-3 text-left font-semibold">Rule</th>
+          <th class="px-4 py-3 text-left font-semibold">Details</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">Daily Loss Reset</td>
+          <td class="px-4 py-2.5">5:00 PM EST</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">Stop-Out Level</td>
+          <td class="px-4 py-2.5 text-red-600 font-semibold">100% — trades close immediately at margin level</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">Guardian Shield</td>
+          <td class="px-4 py-2.5 text-red-600 font-semibold">May auto-close trades if floating loss hits 1%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">Platform Switching</td>
+          <td class="px-4 py-2.5">Only after passing a phase with no open trades</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">Copy Trading</td>
+          <td class="px-4 py-2.5 text-emerald-600 font-semibold">Allowed</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">Expert Advisors</td>
+          <td class="px-4 py-2.5 text-emerald-600 font-semibold">Allowed</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">Banned Practices</td>
+          <td class="px-4 py-2.5 text-red-600">Latency arbitrage, tick scalping</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">Spread Type</td>
+          <td class="px-4 py-2.5">Raw spreads</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-amber-500 bg-amber-50 p-5">
+    <p class="font-bold text-amber-900 mb-2">Verdict on Platforms — 5/10</p>
+    <p class="text-amber-800 leading-relaxed">Blue Guardian gives you solid flexibility with platform choice and doesn't restrict how you trade — as long as you stick to the core rules. If you prefer to use EAs or trade with visuals like TradingView, you're covered. Just make sure you understand the margin cutoffs, daily reset time, and the Guardian Shield auto-close feature before trading.</p>
+  </div>
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PAYOUTS SECTION (4/10)                                              */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "payouts" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Blue Guardian keeps things fairly straightforward when it comes to challenge fees and profit withdrawals. You've got multiple ways to pay, plus a clean payout schedule once you're funded. Just be sure to follow the rules to avoid delays or ineligibility.
+  </p>
+
+  <!-- Quick stats -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Max Profit Split</p>
+      <p class="text-base font-bold text-emerald-600">90%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Payout Frequency</p>
+      <p class="text-base font-bold text-slate-800">Bi-weekly</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Processing</p>
+      <p class="text-base font-bold text-slate-800">1–2 days</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Provider</p>
+      <p class="text-base font-bold text-slate-800">Riseworks.io</p>
+    </div>
+  </div>
+
+  <!-- Payment Methods -->
+  <h3 class="text-base font-bold text-slate-900 mb-3">Challenge Fee Payments</h3>
+  <p class="mb-4">
+    You can buy any challenge using debit or credit card, or pay with crypto including BTC, ETH, USDT, USDC, and LTC. Challenge fees are non-refundable unless you reach your fourth payout. If you don't make it that far, even after passing the evaluation, you won't get your fee back. Instant funding accounts are excluded from the refund offer.
+  </p>
+
+  <!-- Payout structure table -->
+  <h3 class="text-base font-bold text-slate-900 mb-3">Profit Splits by Account Type</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead>
+        <tr class="bg-slate-800 text-white text-xs uppercase tracking-wide">
+          <th class="px-4 py-3 text-left font-semibold">Account Type</th>
+          <th class="px-4 py-3 text-left font-semibold">Profit Split</th>
+          <th class="px-4 py-3 text-left font-semibold">Payout Frequency</th>
+          <th class="px-4 py-3 text-left font-semibold">First Payout</th>
+          <th class="px-4 py-3 text-left font-semibold">Min Withdrawal</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">Instant Starter</td>
+          <td class="px-4 py-2.5 text-red-600 font-semibold">50%</td>
+          <td class="px-4 py-2.5 text-red-600 font-semibold">One-time only</td>
+          <td class="px-4 py-2.5">14 days</td>
+          <td class="px-4 py-2.5">$100</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">Instant Standard</td>
+          <td class="px-4 py-2.5">80%</td>
+          <td class="px-4 py-2.5">Every 14 days</td>
+          <td class="px-4 py-2.5">14 days</td>
+          <td class="px-4 py-2.5">$100</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">One Step</td>
+          <td class="px-4 py-2.5 text-emerald-600 font-semibold">Up to 90%</td>
+          <td class="px-4 py-2.5">Every 7 days</td>
+          <td class="px-4 py-2.5">14 days</td>
+          <td class="px-4 py-2.5">$100</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">Two Step Standard</td>
+          <td class="px-4 py-2.5">85%</td>
+          <td class="px-4 py-2.5">Every 14 days</td>
+          <td class="px-4 py-2.5">14 days</td>
+          <td class="px-4 py-2.5">$100</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">Two Step Pro</td>
+          <td class="px-4 py-2.5 text-emerald-600 font-semibold">90%</td>
+          <td class="px-4 py-2.5">Every 14 days</td>
+          <td class="px-4 py-2.5">14 days</td>
+          <td class="px-4 py-2.5">$100</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">Three Step</td>
+          <td class="px-4 py-2.5 text-emerald-600 font-semibold">Up to 90%</td>
+          <td class="px-4 py-2.5">Every 7 days</td>
+          <td class="px-4 py-2.5">14 days</td>
+          <td class="px-4 py-2.5">$100</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Warning about Instant Starter -->
+  <div class="rounded-xl border-2 border-red-300 bg-red-50 p-4 mb-8 flex items-start gap-3">
+    <svg class="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.168 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+    </svg>
+    <div>
+      <p class="font-bold text-red-900 text-sm mb-1">Instant Starter: $250 Max Payout</p>
+      <p class="text-xs text-red-800 leading-relaxed">The Instant Starter account only allows one payout of up to $250 before the account is permanently closed. At a $54 fee with a 50% split, you'd need to earn $500 in profit to reach the cap — but the $250 ceiling significantly limits your upside.</p>
+    </div>
+  </div>
+
+  <!-- Withdrawal details -->
+  <h3 class="text-base font-bold text-slate-900 mb-3">Withdrawal Details</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead>
+        <tr class="bg-slate-800 text-white text-xs uppercase tracking-wide">
+          <th class="px-4 py-3 text-left font-semibold">Detail</th>
+          <th class="px-4 py-3 text-left font-semibold">Info</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">Processor</td>
+          <td class="px-4 py-2.5">Riseworks.io</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">Methods</td>
+          <td class="px-4 py-2.5">Bank transfer, Crypto (BTC, ETH, USDT, USDC, LTC)</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">Crypto Withdrawal Cap</td>
+          <td class="px-4 py-2.5 text-red-600 font-semibold">$2,000 per withdrawal</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">Minimum Withdrawal</td>
+          <td class="px-4 py-2.5">$100</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">Processing Time</td>
+          <td class="px-4 py-2.5">1–2 business days</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">Open Trades</td>
+          <td class="px-4 py-2.5 text-red-600 font-semibold">All must be closed before requesting payout</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">Fee Refund</td>
+          <td class="px-4 py-2.5">After 4th successful payout (excludes instant accounts)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-red-500 bg-red-50 p-5">
+    <p class="font-bold text-red-900 mb-2">Verdict on Payouts — 4/10</p>
+    <p class="text-red-800 leading-relaxed">You're getting fair payout terms and decent profit splits for a mid-tier prop firm. The 14-day wait is standard, and the ability to boost to 90% with an add-on is a nice extra. Crypto withdrawals make life easier if you're not dealing with traditional banks, though the $2,000 cap might be limiting for bigger payouts. The Instant Starter's one-time $250 cap is the biggest letdown here.</p>
+  </div>
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SUPPORT SECTION (no score in rating widget)                         */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "support" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Getting timely help or learning resources can make a big difference when you're trading with a prop firm. Blue Guardian offers the basics, but if you're expecting hands-on guidance or real-time support, the options are a bit limited.
+  </p>
+
+  <!-- Support channels -->
+  <div class="grid sm:grid-cols-2 gap-4 mb-8">
+    <div class="rounded-xl bg-slate-50 border border-slate-200 p-5">
+      <h3 class="text-base font-bold text-slate-900 mb-2">Email Support</h3>
+      <p>Support is handled through email with stated hours from Monday to Friday, 9:00 AM to 5:00 PM UTC. They aim to reply within 24 hours during business days, which should cover most routine issues.</p>
+    </div>
+    <div class="rounded-xl bg-slate-50 border border-slate-200 p-5">
+      <h3 class="text-base font-bold text-slate-900 mb-2">Discord Community</h3>
+      <p>The Discord server is active with over 80,000 members, live support channels, and direct access to moderators. Many users find answers quickly from staff or other traders.</p>
+    </div>
+  </div>
+
+  <!-- Limitations note -->
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-8">
+    <p class="text-xs text-amber-800 leading-relaxed"><strong>Note:</strong> There's no live chat or weekend support available. If something goes wrong outside of business hours, you'll need to wait until the next working day for a response.</p>
+  </div>
+
+  <!-- Education -->
+  <h3 class="text-base font-bold text-slate-900 mb-3">Educational Resources</h3>
+  <p class="mb-4">
+    Blue Guardian doesn't offer a structured learning program. Instead, they publish regular blog content covering trading topics like challenge strategies and risk management. While these posts are helpful for general insights, they're not designed to build skills step by step. There's no library of tutorials, videos, or interactive materials.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-amber-500 bg-amber-50 p-5">
+    <p class="font-bold text-amber-900 mb-2">Verdict on Support</p>
+    <p class="text-amber-800 leading-relaxed">Support is there if you need it, but it's not hands-on or 24/7. And while the blog has some solid tips, there's no formal education or training path. For self-sufficient traders, that might be enough. But if you're after more guidance or fast help, it falls short.</p>
+  </div>
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* TRUST SECTION (4/10)                                                */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "trust" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Blue Guardian's public reputation is mixed. While the firm has an active trading community and a responsive Discord team, its TrustPilot profile has been flagged for guideline breaches, which limits visibility and raises concerns about transparency.
+  </p>
+
+  <!-- Key warning -->
+  <div class="rounded-xl border-2 border-red-300 bg-red-50 p-4 mb-8 flex items-start gap-3">
+    <svg class="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.168 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+    </svg>
+    <div>
+      <p class="font-bold text-red-900 text-sm mb-1">TrustPilot Rating Unavailable</p>
+      <p class="text-xs text-red-800 leading-relaxed">Blue Guardian's TrustPilot profile has been flagged for violating the platform's review guidelines, making their rating unavailable. Despite having 1,400+ reviews on record, this delisting is a significant transparency concern for potential traders.</p>
+    </div>
+  </div>
+
+  <!-- TrustPilot card -->
+  <div class="rounded-xl bg-slate-50 border border-slate-200 p-5 mb-6">
+    <h3 class="text-base font-bold text-slate-900 mb-3">TrustPilot Review Summary</h3>
+    <div class="grid sm:grid-cols-2 gap-4">
+      <div>
+        <p class="text-2xl font-black text-red-600 mb-1">N/A</p>
+        <p class="text-xs text-slate-500">Rating unavailable due to guideline violation</p>
+        <p class="text-xs text-slate-500 mt-1">1,400+ reviews on record</p>
+      </div>
+      <div class="text-xs space-y-1.5">
+        <p class="text-slate-600">Most positive reviews mention helpful staff, fast setup, and smooth payouts. Names like Crownstar, Genexis, and Barms come up frequently in support shoutouts.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Review sentiment split -->
+  <div class="grid sm:grid-cols-2 gap-4 mb-8">
+    <div class="rounded-xl bg-emerald-50 border border-emerald-200 p-5">
+      <h4 class="text-sm font-bold text-emerald-900 mb-2">Positive Feedback</h4>
+      <ul class="text-xs text-emerald-800 space-y-1.5">
+        <li class="flex items-start gap-1.5">
+          <svg class="h-3.5 w-3.5 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          Helpful and responsive staff
+        </li>
+        <li class="flex items-start gap-1.5">
+          <svg class="h-3.5 w-3.5 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          Fast account setup and onboarding
+        </li>
+        <li class="flex items-start gap-1.5">
+          <svg class="h-3.5 w-3.5 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          Smooth payout experience for compliant traders
+        </li>
+        <li class="flex items-start gap-1.5">
+          <svg class="h-3.5 w-3.5 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          Active Discord community and contests
+        </li>
+      </ul>
+    </div>
+    <div class="rounded-xl bg-red-50 border border-red-200 p-5">
+      <h4 class="text-sm font-bold text-red-900 mb-2">Negative Feedback</h4>
+      <ul class="text-xs text-red-800 space-y-1.5">
+        <li class="flex items-start gap-1.5">
+          <svg class="h-3.5 w-3.5 text-red-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          Reports of spread manipulation and laggy price feeds
+        </li>
+        <li class="flex items-start gap-1.5">
+          <svg class="h-3.5 w-3.5 text-red-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          Positions closed unexpectedly by Guardian Shield
+        </li>
+        <li class="flex items-start gap-1.5">
+          <svg class="h-3.5 w-3.5 text-red-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          Inconsistent payout tracking and unclear rules
+        </li>
+        <li class="flex items-start gap-1.5">
+          <svg class="h-3.5 w-3.5 text-red-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          Questions about fair account treatment across traders
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Community stats -->
+  <h3 class="text-base font-bold text-slate-900 mb-3">Community & Stats</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead>
+        <tr class="bg-slate-800 text-white text-xs uppercase tracking-wide">
+          <th class="px-4 py-3 text-left font-semibold">Metric</th>
+          <th class="px-4 py-3 text-left font-semibold">Value</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">Discord Members</td>
+          <td class="px-4 py-2.5 text-emerald-600 font-semibold">80,000+</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">Evaluations Completed</td>
+          <td class="px-4 py-2.5">5,600+</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">Funded Traders</td>
+          <td class="px-4 py-2.5">1,199</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">Total Payouts Claimed</td>
+          <td class="px-4 py-2.5">$16 million+</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-2.5 font-semibold">Broker-Backed</td>
+          <td class="px-4 py-2.5 text-red-600 font-semibold">No</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-2.5 font-semibold">TrustPilot Status</td>
+          <td class="px-4 py-2.5 text-red-600 font-semibold">Delisted (guideline violation)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Trust signals -->
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
+    <div class="flex items-start gap-2 rounded-lg bg-red-50 border border-red-100 px-3 py-2.5">
+      <svg class="h-4 w-4 text-red-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      <p class="text-xs text-red-800 font-medium leading-tight">TrustPilot delisted</p>
+    </div>
+    <div class="flex items-start gap-2 rounded-lg bg-red-50 border border-red-100 px-3 py-2.5">
+      <svg class="h-4 w-4 text-red-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      <p class="text-xs text-red-800 font-medium leading-tight">Not broker-backed</p>
+    </div>
+    <div class="flex items-start gap-2 rounded-lg bg-red-50 border border-red-100 px-3 py-2.5">
+      <svg class="h-4 w-4 text-red-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      <p class="text-xs text-red-800 font-medium leading-tight">Spread complaints</p>
+    </div>
+    <div class="flex items-start gap-2 rounded-lg bg-emerald-50 border border-emerald-100 px-3 py-2.5">
+      <svg class="h-4 w-4 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+      <p class="text-xs text-emerald-800 font-medium leading-tight">80K+ Discord</p>
+    </div>
+    <div class="flex items-start gap-2 rounded-lg bg-emerald-50 border border-emerald-100 px-3 py-2.5">
+      <svg class="h-4 w-4 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+      <p class="text-xs text-emerald-800 font-medium leading-tight">$16M+ payouts</p>
+    </div>
+    <div class="flex items-start gap-2 rounded-lg bg-emerald-50 border border-emerald-100 px-3 py-2.5">
+      <svg class="h-4 w-4 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+      <p class="text-xs text-emerald-800 font-medium leading-tight">1,199 funded traders</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-red-500 bg-red-50 p-5">
+    <p class="font-bold text-red-900 mb-2">Verdict on Trust — 4/10</p>
+    <p class="text-red-800 leading-relaxed">This is a large, vocal community with fast support and active moderators, especially on Discord. But the removed TrustPilot rating is a red flag, and repeated issues around risk parameters and payout policies deserve attention. The transparency gap pulls this section down to a 4/10.</p>
+  </div>
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* FALLBACK                                                            */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{!["challenges", "spreads", "markets", "platforms", "payouts", "support", "trust"].includes(section) && fallbackBody && (
+<div class="text-sm leading-relaxed text-slate-700 space-y-4">
+  <p>{fallbackBody}</p>
+</div>
+)}

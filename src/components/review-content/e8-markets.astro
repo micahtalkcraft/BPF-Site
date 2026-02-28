@@ -1,0 +1,1448 @@
+---
+// Static editorial content for E8 Markets
+// Supports multiple sections via the `section` prop
+interface Props {
+  section: string;
+  fallbackBody?: string;
+}
+const { section, fallbackBody } = Astro.props;
+---
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* CHALLENGES SECTION                                                  */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "challenges" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    E8 Markets gives you four one-step models across Forex, Futures, and Crypto, each with different drawdown systems, platform options, and payout flexibility. The big divider is whether you want full customisation (E8 One) or fixed rules with EOD drawdown (all Signature accounts).
+  </p>
+  <p class="mb-6">
+    All accounts have no time limit or minimum trading days, fair rules, and a clear evaluation process, but it's important to understand the strict rules that vary between models.
+  </p>
+
+  <!-- Per-challenge summaries -->
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">E8 One – Customisable 1-Step</p>
+      <p>Account sizes from $5,000 to $500,000 with configurable drawdown (4%–14%), profit targets that scale with your DD selection, and payout splits upgradeable to 90% or 100%.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Most flexible account — customise drawdown, payout split, and commission structure</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Signature Forex – Fixed 1-Step</p>
+      <p>Fixed $50K, $100K, and $150K accounts with a 6% profit target and EOD trailing drawdown. Simpler rules with higher forex leverage (1:50).</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Best for consistent day traders who want predictable rules</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Signature Futures – CME 1-Step</p>
+      <p>Fixed $50K–$150K accounts trading CME products. Intraday only — positions auto-close at 15:10 CT. No EAs allowed.</p>
+      <p class="text-xs text-red-600 font-semibold mt-1">Strictest model — manual only, intraday only, exchange hours</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Signature Crypto – Crypto-Only 1-Step</p>
+      <p>Fixed $50K–$150K accounts focused on digital assets. 40+ tradable symbols with 5:1 leverage on BTC/ETH and 2:1 on altcoins.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Good for active crypto day traders</p>
+    </div>
+  </div>
+
+  <!-- ─── Comparison Table ───────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Comparison</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-10">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Attribute</th>
+          <th class="px-4 py-3 text-center">E8 One Forex</th>
+          <th class="px-4 py-3 text-center">Signature Forex</th>
+          <th class="px-4 py-3 text-center">Signature Futures</th>
+          <th class="px-4 py-3 text-center">Signature Crypto</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Evaluation Type</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">One step</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">One step</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">One step</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">One step</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Account Sizes</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5k – $500k</td>
+          <td class="px-4 py-3 text-center text-slate-900">$50k – $150k</td>
+          <td class="px-4 py-3 text-center text-slate-900">$50k – $150k</td>
+          <td class="px-4 py-3 text-center text-slate-900">$50k – $150k</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Drawdown Type</td>
+          <td class="px-4 py-3 text-center text-slate-900">Real-time trailing</td>
+          <td class="px-4 py-3 text-center text-slate-900">EOD trailing</td>
+          <td class="px-4 py-3 text-center text-slate-900">EOD trailing</td>
+          <td class="px-4 py-3 text-center text-slate-900">EOD trailing</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Max Drawdown</td>
+          <td class="px-4 py-3 text-center text-slate-900">4% – 14%</td>
+          <td class="px-4 py-3 text-center text-slate-900">3% – 4%</td>
+          <td class="px-4 py-3 text-center text-slate-900">3% – 4%</td>
+          <td class="px-4 py-3 text-center text-slate-900">3% – 4%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Daily Loss Rule</td>
+          <td class="px-4 py-3 text-center text-slate-900">3% (scales with DD)</td>
+          <td class="px-4 py-3 text-center text-slate-900">2% pause (funded)</td>
+          <td class="px-4 py-3 text-center text-slate-900">2% pause (funded)</td>
+          <td class="px-4 py-3 text-center text-slate-900">2% pause (funded)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Target</td>
+          <td class="px-4 py-3 text-center text-slate-900">6% – 21%</td>
+          <td class="px-4 py-3 text-center text-slate-900">6%</td>
+          <td class="px-4 py-3 text-center text-slate-900">6%</td>
+          <td class="px-4 py-3 text-center text-slate-900">6%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Split</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">80% – 100%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">80%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">80%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">80%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Platforms</td>
+          <td class="px-4 py-3 text-center text-slate-900">MatchTrader, cTrader, TradeLocker</td>
+          <td class="px-4 py-3 text-center text-slate-900">MT5, TradeLocker</td>
+          <td class="px-4 py-3 text-center text-slate-900">E8 Futures, Tradovate</td>
+          <td class="px-4 py-3 text-center text-slate-900">MT5, TradeLocker</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">EAs Allowed</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">No</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Weekend Holding</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">No</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">No</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">No</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">News Trading</td>
+          <td class="px-4 py-3 text-center"><span class="text-amber-600 font-semibold">Restricted (funded)</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Min / Max Trading Days</td>
+          <td class="px-4 py-3 text-center text-slate-900">0</td>
+          <td class="px-4 py-3 text-center text-slate-900">0</td>
+          <td class="px-4 py-3 text-center text-slate-900">0</td>
+          <td class="px-4 py-3 text-center text-slate-900">0</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 1. E8 ONE                                                       -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">1</span>
+      E8 One Challenge
+    </h3>
+
+    <p class="mb-3">
+      E8 One is the most flexible option, offering eight account sizes from $5k up to $500k with a configurable profit target that scales with your chosen drawdown, typically sitting around 8%. You can fully customise trailing drawdown choosing an amount between 4–14%, as well as payout splits which you can upgrade to 90% or 100% from the default 80%.
+    </p>
+    <p class="mb-4">
+      It suits confident traders who want control over their parameters and don't mind managing equity more actively than on the EOD-based Signature models.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
+        <p class="text-sm font-bold text-slate-800">6% – 21%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Drawdown Type</p>
+        <p class="text-sm font-bold text-slate-800">Real-time Trailing</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily DD</p>
+        <p class="text-sm font-bold text-slate-800">3% – 9.2%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Drawdown</p>
+        <p class="text-sm font-bold text-slate-800">4% – 14%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
+        <p class="text-sm font-bold text-teal-600">80% – 100%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Trading Days</p>
+        <p class="text-sm font-bold text-slate-800">Unlimited</p>
+      </div>
+    </div>
+
+    <!-- Suited For -->
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
+      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
+      <p class="text-sm text-teal-700">Confident traders who want full control over drawdown, payout split, and risk parameters. Ideal for those who don't mind managing equity actively with real-time trailing drawdown.</p>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">Fee Range</th>
+            <th class="px-4 py-3 text-right">Profit Target</th>
+            <th class="px-4 py-3 text-right">Daily DD</th>
+            <th class="px-4 py-3 text-right">Max DD</th>
+            <th class="px-4 py-3 text-right">DD Type</th>
+            <th class="px-4 py-3 text-right">Profit Split</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$40 – $108</td>
+            <td class="px-4 py-3 text-right text-slate-700">6%–21%</td>
+            <td class="px-4 py-3 text-right text-slate-700">3%–9.2%</td>
+            <td class="px-4 py-3 text-right text-slate-700">4%–14%</td>
+            <td class="px-4 py-3 text-right text-slate-700">Trailing</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%–100%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$72 – $197</td>
+            <td class="px-4 py-3 text-right text-slate-700">6%–21%</td>
+            <td class="px-4 py-3 text-right text-slate-700">3%–9.2%</td>
+            <td class="px-4 py-3 text-right text-slate-700">4%–14%</td>
+            <td class="px-4 py-3 text-right text-slate-700">Trailing</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%–100%</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$154 – $420</td>
+            <td class="px-4 py-3 text-right text-slate-700">6%–21%</td>
+            <td class="px-4 py-3 text-right text-slate-700">3%–9.2%</td>
+            <td class="px-4 py-3 text-right text-slate-700">4%–14%</td>
+            <td class="px-4 py-3 text-right text-slate-700">Trailing</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%–100%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$235 – $643</td>
+            <td class="px-4 py-3 text-right text-slate-700">6%–21%</td>
+            <td class="px-4 py-3 text-right text-slate-700">3%–9.2%</td>
+            <td class="px-4 py-3 text-right text-slate-700">4%–14%</td>
+            <td class="px-4 py-3 text-right text-slate-700">Trailing</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%–100%</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$398 – $1,090</td>
+            <td class="px-4 py-3 text-right text-slate-700">6%–21%</td>
+            <td class="px-4 py-3 text-right text-slate-700">3%–9.2%</td>
+            <td class="px-4 py-3 text-right text-slate-700">4%–14%</td>
+            <td class="px-4 py-3 text-right text-slate-700">Trailing</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%–100%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$200,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$650 – $1,782</td>
+            <td class="px-4 py-3 text-right text-slate-700">6%–21%</td>
+            <td class="px-4 py-3 text-right text-slate-700">3%–9.2%</td>
+            <td class="px-4 py-3 text-right text-slate-700">4%–14%</td>
+            <td class="px-4 py-3 text-right text-slate-700">Trailing</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%–100%</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$400,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$1,301 – $3,567</td>
+            <td class="px-4 py-3 text-right text-slate-700">6%–21%</td>
+            <td class="px-4 py-3 text-right text-slate-700">3%–9.2%</td>
+            <td class="px-4 py-3 text-right text-slate-700">4%–14%</td>
+            <td class="px-4 py-3 text-right text-slate-700">Trailing</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%–100%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$500,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$1,627 – $4,460</td>
+            <td class="px-4 py-3 text-right text-slate-700">6%–21%</td>
+            <td class="px-4 py-3 text-right text-slate-700">3%–9.2%</td>
+            <td class="px-4 py-3 text-right text-slate-700">4%–14%</td>
+            <td class="px-4 py-3 text-right text-slate-700">Trailing</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%–100%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 2. SIGNATURE FOREX                                              -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">2</span>
+      Signature Forex Challenge
+    </h3>
+
+    <p class="mb-3">
+      Signature Forex keeps things simple with fixed $50k, $100k, and $150k accounts and a 6% profit target. The EOD trailing drawdown is softer than E8 One because it only updates once per day, but the no-overnight and no-weekend rule makes it a stricter model for swing traders.
+    </p>
+    <p class="mb-4">
+      It's easiest for consistent day traders who want predictable rules, stable risk limits, and no customisation decisions to worry about.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
+        <p class="text-sm font-bold text-slate-800">6%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Drawdown Type</p>
+        <p class="text-sm font-bold text-slate-800">EOD Trailing</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily DD</p>
+        <p class="text-sm font-bold text-slate-800">2% (funded only)</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max DD</p>
+        <p class="text-sm font-bold text-slate-800">3% – 4% EOD</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
+        <p class="text-sm font-bold text-teal-600">80%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Trading Days</p>
+        <p class="text-sm font-bold text-slate-800">Unlimited</p>
+      </div>
+    </div>
+
+    <!-- Suited For -->
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
+      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
+      <p class="text-sm text-teal-700">Consistent day traders who want predictable fixed rules, higher forex leverage (1:50), and no customisation decisions. Best for intraday CFD traders who only need forex, indices, metals, and energies.</p>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">Fee</th>
+            <th class="px-4 py-3 text-right">Profit Target</th>
+            <th class="px-4 py-3 text-right">Daily DD</th>
+            <th class="px-4 py-3 text-right">Max DD</th>
+            <th class="px-4 py-3 text-right">DD Type</th>
+            <th class="px-4 py-3 text-right">Profit Split</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$130</td>
+            <td class="px-4 py-3 text-right text-slate-700">6%</td>
+            <td class="px-4 py-3 text-right text-slate-700">2% (funded)</td>
+            <td class="px-4 py-3 text-right text-slate-700">4% EOD</td>
+            <td class="px-4 py-3 text-right text-slate-700">EOD trailing</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$260</td>
+            <td class="px-4 py-3 text-right text-slate-700">6%</td>
+            <td class="px-4 py-3 text-right text-slate-700">2% (funded)</td>
+            <td class="px-4 py-3 text-right text-slate-700">3% EOD</td>
+            <td class="px-4 py-3 text-right text-slate-700">EOD trailing</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$150,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$390</td>
+            <td class="px-4 py-3 text-right text-slate-700">6%</td>
+            <td class="px-4 py-3 text-right text-slate-700">2% (funded)</td>
+            <td class="px-4 py-3 text-right text-slate-700">3% EOD</td>
+            <td class="px-4 py-3 text-right text-slate-700">EOD trailing</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 3. SIGNATURE FUTURES                                            -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">3</span>
+      Signature Futures Challenge
+    </h3>
+
+    <p class="mb-3">
+      Signature Futures is the tightest model operationally, with fixed account sizes ($50k–$150k), an EOD trailing drawdown, and a 6% profit target. Positions auto-close at 15:10 CT and automation isn't allowed, so this is a pure intraday futures challenge on CME products.
+    </p>
+    <p class="mb-4">
+      Compared to the forex accounts, this is stricter because you can't hold through sessions and must work within exchange hours, but futures traders who already structure their day around market opens will find it straightforward.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
+        <p class="text-sm font-bold text-slate-800">6%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Drawdown Type</p>
+        <p class="text-sm font-bold text-slate-800">EOD Trailing</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily DD</p>
+        <p class="text-sm font-bold text-slate-800">2% (funded only)</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max DD</p>
+        <p class="text-sm font-bold text-slate-800">3% – 4% EOD</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Session Close</p>
+        <p class="text-sm font-bold text-red-600">15:10 CT</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">EAs</p>
+        <p class="text-sm font-bold text-red-600">Not Allowed</p>
+      </div>
+    </div>
+
+    <!-- Suited For -->
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-4">
+      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
+      <p class="text-sm text-teal-700">Disciplined intraday futures traders who already structure their day around CME market opens and don't need overnight holding or automation.</p>
+    </div>
+    <div class="rounded-xl bg-red-50 border border-red-200 p-4 mb-5">
+      <p class="text-xs font-bold text-red-800 uppercase tracking-wide mb-1">Restrictions</p>
+      <p class="text-sm text-red-700">Manual trading only — no EAs. Positions auto-close at 15:10 CT. No overnight or weekend holding.</p>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">Fee</th>
+            <th class="px-4 py-3 text-right">Profit Target</th>
+            <th class="px-4 py-3 text-right">Daily DD</th>
+            <th class="px-4 py-3 text-right">Max DD</th>
+            <th class="px-4 py-3 text-right">DD Type</th>
+            <th class="px-4 py-3 text-right">Profit Split</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$130</td>
+            <td class="px-4 py-3 text-right text-slate-700">6%</td>
+            <td class="px-4 py-3 text-right text-slate-700">2% (funded)</td>
+            <td class="px-4 py-3 text-right text-slate-700">4% EOD</td>
+            <td class="px-4 py-3 text-right text-slate-700">EOD trailing</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$260</td>
+            <td class="px-4 py-3 text-right text-slate-700">6%</td>
+            <td class="px-4 py-3 text-right text-slate-700">2% (funded)</td>
+            <td class="px-4 py-3 text-right text-slate-700">3% EOD</td>
+            <td class="px-4 py-3 text-right text-slate-700">EOD trailing</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$150,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$390</td>
+            <td class="px-4 py-3 text-right text-slate-700">6%</td>
+            <td class="px-4 py-3 text-right text-slate-700">2% (funded)</td>
+            <td class="px-4 py-3 text-right text-slate-700">3% EOD</td>
+            <td class="px-4 py-3 text-right text-slate-700">EOD trailing</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 4. SIGNATURE CRYPTO                                             -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">4</span>
+      Signature Crypto Challenge
+    </h3>
+
+    <p class="mb-3">
+      Signature Crypto mirrors the Forex version with fixed $50k – $150k accounts, an EOD trailing drawdown, and a 6% profit target, but applies tighter leverage rules across altcoins. Overnight and weekend holding aren't allowed, so it's designed for active crypto day traders rather than swing or momentum strategies.
+    </p>
+    <p class="mb-4">
+      It's easier than E8 One from a drawdown perspective, but stricter in terms of session limits. Algo traders can still use EAs here as long as their strategy isn't HFT or shared.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
+        <p class="text-sm font-bold text-slate-800">6%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Drawdown Type</p>
+        <p class="text-sm font-bold text-slate-800">EOD Trailing</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">BTC/ETH Leverage</p>
+        <p class="text-sm font-bold text-slate-800">1:5</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Altcoin Leverage</p>
+        <p class="text-sm font-bold text-slate-800">1:2</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Symbols</p>
+        <p class="text-sm font-bold text-slate-800">40+</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">EAs</p>
+        <p class="text-sm font-bold text-emerald-600">Allowed</p>
+      </div>
+    </div>
+
+    <!-- Suited For -->
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
+      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
+      <p class="text-sm text-teal-700">Active crypto day traders who specialise in digital assets and don't need access to forex, indices, or traditional markets. Good for EAs as long as the strategy is compliant.</p>
+    </div>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">Fee</th>
+            <th class="px-4 py-3 text-right">Profit Target</th>
+            <th class="px-4 py-3 text-right">Daily DD</th>
+            <th class="px-4 py-3 text-right">Max DD</th>
+            <th class="px-4 py-3 text-right">DD Type</th>
+            <th class="px-4 py-3 text-right">Profit Split</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$130</td>
+            <td class="px-4 py-3 text-right text-slate-700">6%</td>
+            <td class="px-4 py-3 text-right text-slate-700">2% (funded)</td>
+            <td class="px-4 py-3 text-right text-slate-700">4% EOD</td>
+            <td class="px-4 py-3 text-right text-slate-700">EOD trailing</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$260</td>
+            <td class="px-4 py-3 text-right text-slate-700">6%</td>
+            <td class="px-4 py-3 text-right text-slate-700">2% (funded)</td>
+            <td class="px-4 py-3 text-right text-slate-700">3% EOD</td>
+            <td class="px-4 py-3 text-right text-slate-700">EOD trailing</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$150,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$390</td>
+            <td class="px-4 py-3 text-right text-slate-700">6%</td>
+            <td class="px-4 py-3 text-right text-slate-700">2% (funded)</td>
+            <td class="px-4 py-3 text-right text-slate-700">3% EOD</td>
+            <td class="px-4 py-3 text-right text-slate-700">EOD trailing</td>
+            <td class="px-4 py-3 text-right text-teal-600 font-semibold">80%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- ADD-ONS                                                         -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3">Add-Ons</h3>
+
+    <p class="mb-4">
+      Add-ons mainly apply to E8 One, which is the only model that allows meaningful customisation of risk and payout parameters. Signature accounts run on fixed rules and do not allow changes to drawdown, targets, or payout structure.
+    </p>
+
+    <div class="space-y-3 mb-5">
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">Drawdown Customisation (E8 One Only)</p>
+        <p>Choose from 4% to 14% trailing drawdown — profit target and daily DD scale accordingly.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">Payout Split Upgrades (E8 One Only)</p>
+        <p>Upgrade from 80% to 90% or 100% profit split at additional cost.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">Commission-Free Spreads (E8 One Only)</p>
+        <p>Remove per-lot commissions in exchange for wider spreads. Not available on Signature accounts.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">Swap-Free (Signature Forex Only)</p>
+        <p>Fee treatment option that follows the same fixed trading rules — not a risk or rule customisation.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SCALING PLAN                                                    -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3">Scaling Plan</h3>
+    <div class="rounded-xl border border-amber-200 bg-amber-50 p-4">
+      <p class="text-sm text-amber-800">
+        E8 doesn't offer a traditional scaling plan on any of its current models. E8 One and all Signature accounts keep the starting balance fixed, so if you want more buying power you do it by running <strong>multiple funded accounts</strong> rather than growing a single one. Classic balance scaling only applies to legacy E8 Classic and E8 Track accounts, which are no longer part of the main product lineup.
+      </p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- TRADING RULES                                                   -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules</h3>
+    <p class="mb-4">
+      E8's rule set depends heavily on whether you choose E8 One or one of the Signature evaluation accounts. E8 One gives you the most freedom, with overnight holding, weekend holding, EAs, and flexible news handling during the challenge.
+    </p>
+
+    <div class="space-y-2 mb-5">
+      <div class="flex items-start gap-2 rounded-lg bg-slate-50 border border-slate-200 p-3">
+        <span class="text-emerald-600 font-bold text-base mt-0.5">&#10003;</span>
+        <div>
+          <p class="font-bold text-slate-900 text-sm">E8 One</p>
+          <p class="text-sm text-slate-600">Real-time trailing DD, weekend holds allowed, EAs allowed. News trading restricted once funded.</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-2 rounded-lg bg-slate-50 border border-slate-200 p-3">
+        <span class="text-amber-500 font-bold text-base mt-0.5">&#9888;</span>
+        <div>
+          <p class="font-bold text-slate-900 text-sm">Signature Forex &amp; Crypto</p>
+          <p class="text-sm text-slate-600">EOD trailing DD, no overnight/weekend holding, news trading allowed at all times, EAs allowed.</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-2 rounded-lg bg-slate-50 border border-slate-200 p-3">
+        <span class="text-red-500 font-bold text-base mt-0.5">&#10007;</span>
+        <div>
+          <p class="font-bold text-slate-900 text-sm">Signature Futures</p>
+          <p class="text-sm text-slate-600">EOD trailing DD, manual only (no EAs), positions auto-close at 15:10 CT, exchange-hour restrictions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- CHALLENGES VERDICT                                              -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">How We Scored E8's Challenges and Rules</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      E8 scored 5/10 for challenges because, while the one-step structure and flexible sizing options are strong, the rule framework becomes significantly stricter at the funded stage and there's no instant funding or two-step evaluations. Real-time trailing drawdown on E8 One and consistency requirements on Signature accounts create a tougher environment than most competitors, making funding accessible but long-term retention harder.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SPREADS / COMMISSION FEES & PRICING SECTION                         */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "spreads" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    E8's pricing depends on which market you trade, with raw spreads on Forex and Metals, percentage-based fees on Crypto, and full exchange fee schedules on Futures. There are no platform surcharges or data-feed charges, and the only optional cost is choosing commission-free execution on E8 One.
+  </p>
+
+  <!-- Stats grid -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Forex Commission</p>
+      <p class="text-sm font-bold text-slate-800">$5/lot RT</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">EUR/USD Spread</p>
+      <p class="text-sm font-bold text-teal-600">0.8 pips avg</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Crypto Fee</p>
+      <p class="text-sm font-bold text-slate-800">0.07% RT</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Platform Fees</p>
+      <p class="text-sm font-bold text-emerald-600">$0</p>
+    </div>
+  </div>
+
+  <!-- Forex Trading Fees -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Forex Trading Fees</h3>
+  <p class="mb-3">
+    When you trade forex with E8, pricing depends on whether you choose E8 One or the fixed Signature Forex account. Both use raw spreads with per-lot commissions by default, but only E8 One lets you switch to a commission-free setup.
+  </p>
+  <p class="mb-4">
+    With raw pricing, average spreads for EUR/USD are <strong>0.8 pips</strong> plus a <strong>$5 per lot round-turn</strong> commission fee. For metals, indices, and commodities, you'll pay <strong>$6 per lot round-turn</strong>, with spreads for XAU/USD averaging 0.26 pips. Indices commissions can go up to $12 depending on the symbol.
+  </p>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-5 py-3 text-left">Asset Class</th>
+          <th class="px-5 py-3 text-right">Commission (Round-Turn)</th>
+          <th class="px-5 py-3 text-right">Typical Spread</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">Forex (EUR/USD)</td>
+          <td class="px-5 py-3 text-right text-slate-900">$5 / lot</td>
+          <td class="px-5 py-3 text-right font-bold text-teal-600">0.8 pips</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">Metals (XAU/USD)</td>
+          <td class="px-5 py-3 text-right text-slate-900">$6 / lot</td>
+          <td class="px-5 py-3 text-right font-bold text-teal-600">0.26 pips</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-5 py-3 font-semibold text-slate-900">Indices</td>
+          <td class="px-5 py-3 text-right text-slate-900">Up to $12 / lot</td>
+          <td class="px-5 py-3 text-right text-slate-700">Varies by symbol</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-5 py-3 font-semibold text-slate-900">Commodities</td>
+          <td class="px-5 py-3 text-right text-slate-900">$6 / lot</td>
+          <td class="px-5 py-3 text-right text-slate-700">Varies by symbol</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-8">
+    <p class="text-sm font-bold text-amber-900 mb-1">Commission-Free Option (E8 One Only)</p>
+    <p class="text-sm text-amber-800">
+      If you want commission-free trading, you can only do this via an add-on on the E8 One Forex account. Spreads widen to compensate. Signature Forex Accounts are raw pricing only and do not support this add-on.
+    </p>
+  </div>
+
+  <!-- Crypto Trading Fees -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Crypto Trading Fees</h3>
+  <p class="mb-4">
+    Crypto operates on a different structure, using percentage-based commissions instead of lot-based pricing. Each crypto CFD trade incurs a <strong>0.035% in + 0.035% out</strong> commission fee, and spreads vary by asset class. BTC/USD often averages around 11–12 points, with ETH/USD and altcoins sitting much wider based on liquidity. There is no commission-free option for crypto.
+  </p>
+
+  <!-- Futures Trading Fees -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Futures Trading Fees</h3>
+  <p class="mb-3">
+    Futures pricing follows CME-style pricing, so every contract has a fixed cost per trade. There are no platform, data feed, or hidden charges on the E8 Futures interface or Tradovate.
+  </p>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Product</th>
+          <th class="px-4 py-3 text-left">Contracts</th>
+          <th class="px-4 py-3 text-right">Round-Turn Cost</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Equity Indices</td>
+          <td class="px-4 py-3 text-slate-700">/ES, /NQ, /RTY, /YM</td>
+          <td class="px-4 py-3 text-right text-slate-900">$2.80</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Micro Indices</td>
+          <td class="px-4 py-3 text-slate-700">/MES, /MNQ</td>
+          <td class="px-4 py-3 text-right text-slate-900">$0.74</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Metals</td>
+          <td class="px-4 py-3 text-slate-700">/GC, /SI</td>
+          <td class="px-4 py-3 text-right text-slate-900">$3.24</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Micro Metals</td>
+          <td class="px-4 py-3 text-slate-700">Micro Gold, Silver</td>
+          <td class="px-4 py-3 text-right text-slate-900">$1.04 – $2.04</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Energies</td>
+          <td class="px-4 py-3 text-slate-700">/CL, /NG</td>
+          <td class="px-4 py-3 text-right text-slate-900">$3.04 – $3.24</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Micro Energies</td>
+          <td class="px-4 py-3 text-slate-700">Micro CL, NG</td>
+          <td class="px-4 py-3 text-right text-slate-900">$1.04 – $1.24</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Agricultural</td>
+          <td class="px-4 py-3 text-slate-700">/ZC, /ZW, /ZS, /ZM, /ZL, /LE, /HE, /GF</td>
+          <td class="px-4 py-3 text-right text-slate-900">$4.24</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">How We Scored E8's Spreads and Fees</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      E8 scored 6/10 for spreads and fees because its raw pricing on forex and metals is competitive, but indices and crypto are more expensive and the commission-free add-on widens spreads substantially. Some traders also report slippage discrepancies on the simulated CFD feed, which reduces cost transparency.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* MARKETS / FINANCIAL MARKETS & LEVERAGE SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "markets" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    E8 offers different market access depending on which challenge you choose. E8 One has the largest product range with 79 instruments, while the Signature models narrow the focus and give you higher leverage or asset-specific trading conditions.
+  </p>
+
+  <!-- Stats grid -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">E8 One Instruments</p>
+      <p class="text-sm font-bold text-slate-800">79</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Crypto Symbols</p>
+      <p class="text-sm font-bold text-slate-800">40+</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Forex Leverage</p>
+      <p class="text-sm font-bold text-teal-600">1:50</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Futures</p>
+      <p class="text-sm font-bold text-slate-800">CME Products</p>
+    </div>
+  </div>
+
+  <!-- Leverage comparison table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Leverage by Account Type</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Asset Class</th>
+          <th class="px-4 py-3 text-center">E8 One</th>
+          <th class="px-4 py-3 text-center">Signature Forex</th>
+          <th class="px-4 py-3 text-center">Signature Crypto</th>
+          <th class="px-4 py-3 text-center">Signature Futures</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Forex</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:30</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">1:50</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Indices</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:15</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:25</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+          <td class="px-4 py-3 text-center text-slate-900">Exchange margin</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Metals</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:15</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:25</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+          <td class="px-4 py-3 text-center text-slate-900">Exchange margin</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Energies</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:15</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:25</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+          <td class="px-4 py-3 text-center text-slate-900">Exchange margin</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Crypto (BTC/ETH)</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:1</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:5</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Crypto (Altcoins)</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:1</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:2</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Futures (CME)</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+          <td class="px-4 py-3 text-center text-slate-900">Varies by contract</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Per-model market details -->
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">E8 One — Widest Range</p>
+      <p>Largest product range with 79 total instruments. Only account combining forex, indices, commodities, and crypto. Leverage is the most conservative (max 1:30 forex). Best for broad market access, not maximum leverage.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Signature Forex — Highest Forex Leverage</p>
+      <p>Full CFD access except crypto. Highest max leverage (1:50 forex). Smaller product set than E8 One. Good for intraday CFD traders who only need traditional markets.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Signature Crypto — Crypto-Only</p>
+      <p>40+ tradable crypto symbols. 5:1 leverage on BTC/ETH, 2:1 on altcoins. No forex, indices, metals, or energies. Ideal for specialist crypto day traders.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Signature Futures — CME Markets</p>
+      <p>Access to equity indices, FX futures, metals, energies, agricultural markets, and interest rates. Intraday only with margin-based sizing. Positions close at 15:10 CT.</p>
+    </div>
+  </div>
+
+  <!-- Futures margin table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Futures Margin Allowance</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Size</th>
+          <th class="px-4 py-3 text-right">Margin Allowance</th>
+          <th class="px-4 py-3 text-right">Max Standard Contracts</th>
+          <th class="px-4 py-3 text-right">Max Micro Contracts</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$40,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">4 contracts</td>
+          <td class="px-4 py-3 text-right text-slate-700">Up to 40</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$80,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">8 contracts</td>
+          <td class="px-4 py-3 text-right text-slate-700">Up to 80</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$150,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$120,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">12 contracts</td>
+          <td class="px-4 py-3 text-right text-slate-700">Up to 120</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">How We Scored E8's Markets and Leverage</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      E8 scored 7/10 for markets and leverage due to its genuinely broad instrument list (especially on E8 One) but relatively conservative leverage on CFDs and restrictive intraday-only rules for futures. Coverage is wide, but practical flexibility varies sharply by account type.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PLATFORMS / TRADING PLATFORMS SECTION                                */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "platforms" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    E8 offers six trading platforms across its models, but not every platform is available on every account type. E8 One gives you the most choice, while the Signature programs each have fixed platform options.
+  </p>
+
+  <!-- Platform availability table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Platform Availability</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Platform</th>
+          <th class="px-4 py-3 text-center">E8 One</th>
+          <th class="px-4 py-3 text-center">Signature Forex</th>
+          <th class="px-4 py-3 text-center">Signature Crypto</th>
+          <th class="px-4 py-3 text-center">Signature Futures</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Match-Trader</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">MetaTrader 5 (MT5)</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">cTrader</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">TradeLocker</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">E8 Futures Platform</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Tradovate</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Platform details -->
+  <div class="space-y-4 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-2">Match-Trader</p>
+      <p class="mb-2">Available for E8 One, Signature Forex, and Signature Crypto. Uses TradingView-style charting with smooth execution flow.</p>
+      <div class="flex flex-wrap gap-1.5">
+        <span class="inline-block rounded-full bg-teal-100 text-teal-700 px-2 py-0.5 text-xs font-semibold">Clean UI</span>
+        <span class="inline-block rounded-full bg-teal-100 text-teal-700 px-2 py-0.5 text-xs font-semibold">TradingView Charts</span>
+        <span class="inline-block rounded-full bg-teal-100 text-teal-700 px-2 py-0.5 text-xs font-semibold">Web + Mobile</span>
+        <span class="inline-block rounded-full bg-teal-100 text-teal-700 px-2 py-0.5 text-xs font-semibold">No Install</span>
+      </div>
+    </div>
+
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-2">MetaTrader 5 (MT5)</p>
+      <p class="mb-2">Only available on Signature accounts (not E8 One). Deep tooling for indicators, custom scripts, and EAs. Strong mobile and desktop support.</p>
+      <div class="flex flex-wrap gap-1.5">
+        <span class="inline-block rounded-full bg-teal-100 text-teal-700 px-2 py-0.5 text-xs font-semibold">EAs & Scripts</span>
+        <span class="inline-block rounded-full bg-teal-100 text-teal-700 px-2 py-0.5 text-xs font-semibold">Market Depth</span>
+        <span class="inline-block rounded-full bg-teal-100 text-teal-700 px-2 py-0.5 text-xs font-semibold">One-Click Trading</span>
+        <span class="inline-block rounded-full bg-teal-100 text-teal-700 px-2 py-0.5 text-xs font-semibold">Desktop + Mobile</span>
+      </div>
+    </div>
+
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-2">cTrader</p>
+      <p class="mb-2">Available for E8 One and Signature Forex. Advanced charting, native depth of market, and cAlgo support for algorithmic strategies.</p>
+      <div class="flex flex-wrap gap-1.5">
+        <span class="inline-block rounded-full bg-teal-100 text-teal-700 px-2 py-0.5 text-xs font-semibold">Fast Execution</span>
+        <span class="inline-block rounded-full bg-teal-100 text-teal-700 px-2 py-0.5 text-xs font-semibold">Depth of Market</span>
+        <span class="inline-block rounded-full bg-teal-100 text-teal-700 px-2 py-0.5 text-xs font-semibold">cAlgo Support</span>
+        <span class="inline-block rounded-full bg-teal-100 text-teal-700 px-2 py-0.5 text-xs font-semibold">Scalper-Friendly</span>
+      </div>
+    </div>
+
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-2">TradeLocker</p>
+      <p class="mb-2">Lightweight, browser-based platform with TradingView charts. Low system requirements, good mobile app. Available on E8 One, Signature Forex, and Signature Crypto.</p>
+      <div class="flex flex-wrap gap-1.5">
+        <span class="inline-block rounded-full bg-teal-100 text-teal-700 px-2 py-0.5 text-xs font-semibold">Simple Interface</span>
+        <span class="inline-block rounded-full bg-teal-100 text-teal-700 px-2 py-0.5 text-xs font-semibold">TradingView Charts</span>
+        <span class="inline-block rounded-full bg-teal-100 text-teal-700 px-2 py-0.5 text-xs font-semibold">No Install</span>
+        <span class="inline-block rounded-full bg-teal-100 text-teal-700 px-2 py-0.5 text-xs font-semibold">Good Mobile App</span>
+      </div>
+    </div>
+
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-2">E8 Futures Platform</p>
+      <p class="mb-2">E8's own browser-based futures interface for Signature Futures only. Simplified layout for intraday futures trading with depth-of-market style controls.</p>
+      <div class="flex flex-wrap gap-1.5">
+        <span class="inline-block rounded-full bg-teal-100 text-teal-700 px-2 py-0.5 text-xs font-semibold">Browser-Based</span>
+        <span class="inline-block rounded-full bg-teal-100 text-teal-700 px-2 py-0.5 text-xs font-semibold">DOM Controls</span>
+        <span class="inline-block rounded-full bg-teal-100 text-teal-700 px-2 py-0.5 text-xs font-semibold">Simple Interface</span>
+        <span class="inline-block rounded-full bg-teal-100 text-teal-700 px-2 py-0.5 text-xs font-semibold">Fast Execution</span>
+      </div>
+    </div>
+
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-2">Tradovate</p>
+      <p class="mb-2">Advanced futures platform with full depth of market, bracket orders, strong charting tools, and professional-grade interface. CME-style functionality with intraday margin requirements.</p>
+      <div class="flex flex-wrap gap-1.5">
+        <span class="inline-block rounded-full bg-teal-100 text-teal-700 px-2 py-0.5 text-xs font-semibold">Full DOM</span>
+        <span class="inline-block rounded-full bg-teal-100 text-teal-700 px-2 py-0.5 text-xs font-semibold">Bracket Orders</span>
+        <span class="inline-block rounded-full bg-teal-100 text-teal-700 px-2 py-0.5 text-xs font-semibold">Pro-Grade</span>
+        <span class="inline-block rounded-full bg-teal-100 text-teal-700 px-2 py-0.5 text-xs font-semibold">Layout Customisation</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">How We Scored E8's Platforms</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      E8 scored 7/10 for platforms because it offers an above-average range with MT5, cTrader, Match-Trader, TradeLocker, plus two futures platforms. The downside is that platform choice is tied to account selection, meaning traders can't freely mix products and platforms. Occasional user concerns about feed accuracy prevent a higher rating.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PAYOUTS / PAYMENTS & PROFIT PAYOUT SECTION                          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "payouts" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    E8's funding structure is built around simulated capital from start to finish, which means the funded stage works as a virtual funded account. They offer a good range of payment and withdrawal methods, but there are strict criteria you need to meet before you can start requesting payouts.
+  </p>
+
+  <!-- Payout structure summary -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
+      <p class="text-sm font-bold text-teal-600">80% – 100%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Payout Type</p>
+      <p class="text-sm font-bold text-slate-800">On-Demand</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Bank Withdrawal</p>
+      <p class="text-sm font-bold text-slate-800">$50</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Crypto Withdrawal</p>
+      <p class="text-sm font-bold text-slate-800">$250</p>
+    </div>
+  </div>
+
+  <!-- Evaluation Fee Payments -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Evaluation Fee Payments</h3>
+  <p class="mb-4">
+    You can pay with cards, Apple Pay, Google Pay, crypto, or bank transfer, and the evaluation fee is a one-off cost. If you never place a trade, they will refund the fee, but once you start trading the refund window is gone. There are no platform fees, data fees, or inactivity penalties, but E8 One add-ons can add up quickly.
+  </p>
+
+  <!-- From Challenge to Funded -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">From Challenge to Funded Accounts</h3>
+  <p class="mb-3">
+    When you pass a challenge, your account converts into an E8 Trader account, but the entire environment remains simulated. Nothing switches to live execution, and you continue trading on the same platform feed used during the evaluation. KYC must be completed before requesting your first payout.
+  </p>
+  <p class="mb-4">
+    Before you can request your first payout, E8 applies strict requirements that do not exist during the challenge stage. These rules filter out large one-day wins and force a minimum level of consistency.
+  </p>
+
+  <!-- Funded account requirements -->
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Requirement</th>
+          <th class="px-4 py-3 text-center">E8 One</th>
+          <th class="px-4 py-3 text-center">Signature (All)</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Best Day Limit</td>
+          <td class="px-4 py-3 text-center text-slate-900">40% of total profits</td>
+          <td class="px-4 py-3 text-center text-slate-900">35% of total profits</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Payout Must Exceed</td>
+          <td class="px-4 py-3 text-center text-slate-900">50% of daily DD value</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Min Profitable Days (First Payout)</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+          <td class="px-4 py-3 text-center text-slate-900">3 days</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Min Profitable Days (Subsequent)</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+          <td class="px-4 py-3 text-center text-slate-900">5 days</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Profitable Day Definition</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+          <td class="px-4 py-3 text-center text-slate-900">0.3% closed profit</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Payout Buffer</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">None</td>
+          <td class="px-4 py-3 text-center font-semibold text-red-600">Equal to EOD trailing DD</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Payout Caps</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">None</td>
+          <td class="px-4 py-3 text-center font-semibold text-red-600">Yes (progressive)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Payout Caps -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payout Caps (Signature Only)</h3>
+  <p class="mb-3">
+    On Signature accounts, you must keep a payout buffer equal to your EOD trailing drawdown in the account at all times. Payout caps limit how much you can withdraw per cycle and only increase as you build a longer payout history.
+  </p>
+  <p class="mb-4">
+    E8 One has no payout buffer and no payout caps — once you meet the basic consistency rules you can withdraw whatever profit the account has available.
+  </p>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Payout Stage</th>
+          <th class="px-4 py-3 text-right">$50K Account</th>
+          <th class="px-4 py-3 text-right">$100K Account</th>
+          <th class="px-4 py-3 text-right">$150K Account</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">1st &amp; 2nd Payout</td>
+          <td class="px-4 py-3 text-right text-slate-900">$1,250</td>
+          <td class="px-4 py-3 text-right text-slate-900">$2,250</td>
+          <td class="px-4 py-3 text-right text-slate-900">$3,250</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">3rd &amp; 4th Payout</td>
+          <td class="px-4 py-3 text-right text-slate-900">$2,250</td>
+          <td class="px-4 py-3 text-right text-slate-900">$3,250</td>
+          <td class="px-4 py-3 text-right text-slate-900">$4,250</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">5th Payout Onward</td>
+          <td class="px-4 py-3 text-right text-slate-900">$3,250</td>
+          <td class="px-4 py-3 text-right text-slate-900">$4,250</td>
+          <td class="px-4 py-3 text-right text-slate-900">$5,250</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="rounded-xl border border-red-200 bg-red-50 p-4 mb-8">
+    <p class="text-xs font-bold text-red-800 uppercase tracking-wide mb-1">Payout Friction Warning</p>
+    <p class="text-sm text-red-700">
+      The combination of mandatory buffers plus capped payout amounts means you can request withdrawals on demand, but the withdrawal size ramps up gradually as you show consistency. E8 does not charge a withdrawal fee, but both payout methods (bank and crypto networks) can. Approvals typically take <strong>1-2 business days</strong>, then funds arrive within <strong>2-5 business days</strong>.
+    </p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">How We Scored E8's Payouts</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      E8 scored 4/10 for payouts because, even though profit splits range from 80% to 100%, the system is burdened by payout buffers, best-day rules, profitable-day requirements, and strict payout caps. Payout processors are reliable and funding is generally fast, but the number of conditions makes withdrawals harder than at many competing firms.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SUPPORT / CUSTOMER SERVICE & EDUCATION SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "support" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    In terms of support and education, you get extended-hours weekday support via live chat and email, and a detailed FAQ section on their website. But there's no real educational ecosystem behind the prop firm, so new traders won't find much guidance beyond rule explanations.
+  </p>
+
+  <!-- Support channels -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Customer Support</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Live Chat</p>
+      <p class="text-sm text-slate-600">Available during extended weekday hours. Covers account activations, platform issues, and payout queries.</p>
+      <p class="text-xs text-emerald-600 font-semibold mt-1">Available</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Email Support</p>
+      <p class="text-sm text-slate-600">Handles operational queries. Response times generally good during market hours.</p>
+      <p class="text-xs text-emerald-600 font-semibold mt-1">Available</p>
+    </div>
+  </div>
+
+  <p class="mb-6">
+    E8's live chat covers most operational questions quickly, and response times are generally good during market hours. The support team handles account activations, platform issues, and payout queries efficiently, but anything outside that — trading strategy, platform nuances, edge cases around rules — tends to be answered in broader terms.
+  </p>
+
+  <!-- Education -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Educational Resources</h3>
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
+    <p class="text-sm font-bold text-amber-900 mb-1">Limited Education</p>
+    <p class="text-sm text-amber-800">
+      E8 doesn't compete with firms that offer mentorship, webinars, or trading communities. There's no structured education, no verified strategy content, and no in-house analysis. The dashboard tools are clean and functional, but they're not designed to teach you how to trade or manage risk.
+    </p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">How We Scored E8's Support</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      E8's customer support performs well for account-related issues, with responsive weekday live chat and email handling most operational queries efficiently. However, the lack of structured education, coaching, or trader development resources limits its usefulness for newer traders.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* TRUST / TRUST & COMMUNITY SECTION                                   */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "trust" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-3">
+    E8 sits in the middle ground for transparency. The rules, drawdown limits, and payout conditions are published clearly, but pricing is based on internal simulated feeds rather than broker-backed execution. Because everything runs on virtual capital, traders are relying on E8's own systems to behave fairly rather than an external liquidity venue.
+  </p>
+  <p class="mb-6">
+    That isn't unusual for independent prop firms, but it does require a level of trust in how E8 manages its fills and risk controls.
+  </p>
+
+  <!-- Legitimacy -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Is E8 a Legitimate Prop Firm?</h3>
+  <p class="mb-6">
+    Yes, E8 is a legit company and prop firm with a working payout track record, but it is not broker-backed and all trading is done in a simulated environment. You pay for access to their programs, trade virtual capital, and only ever withdraw profit shares via processors like <strong>Plane (bank)</strong> or <strong>RiseWorks (crypto)</strong> once you pass KYC and meet the payout rules. There is no client money held for live trading and no direct brokerage relationship.
+  </p>
+
+  <!-- Trustpilot -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">E8 Markets Trustpilot Score</h3>
+  <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 mb-4 flex items-center gap-4">
+    <div class="flex-shrink-0">
+      <p class="text-3xl font-black text-slate-900">4.4<span class="text-lg text-slate-400">/5</span></p>
+      <p class="text-xs text-slate-500 font-semibold">TrustScore</p>
+    </div>
+    <div>
+      <p class="text-sm text-slate-700">Based on <strong>~3,000 reviews</strong> on Trustpilot, which is strong compared to the industry average. Most ratings are favourable, with the majority of feedback describing smooth processes and reliable support.</p>
+    </div>
+  </div>
+
+  <!-- User reviews summary -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">What Do Users Say About E8?</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+    <div class="rounded-lg bg-emerald-50 border border-emerald-200 p-4">
+      <p class="text-xs font-bold text-emerald-800 uppercase tracking-wide mb-2">Positive Feedback</p>
+      <ul class="space-y-1 text-sm text-emerald-700">
+        <li>Fast payouts</li>
+        <li>Responsive customer support</li>
+        <li>Easy onboarding experience</li>
+        <li>Clean dashboard and smooth platform setup</li>
+      </ul>
+    </div>
+    <div class="rounded-lg bg-red-50 border border-red-200 p-4">
+      <p class="text-xs font-bold text-red-800 uppercase tracking-wide mb-2">Negative Feedback</p>
+      <ul class="space-y-1 text-sm text-red-700">
+        <li>Slippage concerns on simulated feed</li>
+        <li>Confusion around best-day rules and buffers</li>
+        <li>Accounts closed after hitting risk limits</li>
+        <li>Disputes over execution quality</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Trust signals -->
+  <div class="space-y-2 mb-6">
+    <div class="flex items-start gap-2">
+      <span class="text-emerald-600 font-bold mt-0.5">&#10003;</span>
+      <p class="text-sm"><strong>Verified payouts:</strong> Large volume of confirmed payout reports across multiple channels</p>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="text-emerald-600 font-bold mt-0.5">&#10003;</span>
+      <p class="text-sm"><strong>Strong Trustpilot:</strong> 4.4/5 with ~3,000 reviews — above industry average</p>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="text-emerald-600 font-bold mt-0.5">&#10003;</span>
+      <p class="text-sm"><strong>Founded 2021:</strong> Based in Dallas, Texas with a consistent operational history</p>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="text-red-500 font-bold mt-0.5">&#10007;</span>
+      <p class="text-sm"><strong>Not broker-backed:</strong> Fully simulated trading environment with no disclosed liquidity providers</p>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="text-red-500 font-bold mt-0.5">&#10007;</span>
+      <p class="text-sm"><strong>Execution concerns:</strong> Some traders report slippage and feed accuracy issues</p>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="text-amber-500 font-bold mt-0.5">&#9888;</span>
+      <p class="text-sm"><strong>Risk enforcement:</strong> Recurring complaints about accounts closed after hitting risk limits or failing risk interviews</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">How We Scored E8's Trust and Transparency</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      E8 scored 6/10 for trust and transparency. The strong Trustpilot rating and many verified payout reports support credibility, but E8 does not disclose liquidity providers, operates entirely on simulated feeds, and some traders report slippage issues or disagreements around risk rules. Good support and active community presence keep the score above average.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* FALLBACK — sections not customised render the default text          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section !== "challenges" && section !== "spreads" && section !== "markets" && section !== "platforms" && section !== "payouts" && section !== "support" && section !== "trust" && fallbackBody && (
+  <div class="text-sm leading-relaxed text-slate-700 space-y-4">
+    {fallbackBody.split("\n\n").map((para) => (
+      <p set:html={para.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")} />
+    ))}
+  </div>
+)}

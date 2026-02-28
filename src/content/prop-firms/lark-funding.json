@@ -3,52 +3,80 @@
   "slug": "lark-funding",
   "name": "Lark Funding",
   "status": "active",
-  "hqCountry": "US",
+  "hqCountry": "CA",
   "evaluation": {
-    "types": ["1-step", "2-step", "instant"],
-    "profitTargets": { "phase1": 10, "phase2": 5 },
+    "types": ["1-step", "2-step", "3-step", "instant"],
+    "profitTargets": { "phase1": 10, "phase2": 5, "phase3": 3 },
     "dailyDrawdown": 5,
     "maxDrawdown": 10,
     "minTradingDays": 0,
     "scalingPlan": false
   },
   "pricing": {
-    "challengeFees": [],
+    "challengeFees": [
+      { "accountSize": 5000, "fee": 200, "model": "instant", "label": "Instant Funding" },
+      { "accountSize": 10000, "fee": 400, "model": "instant", "label": "Instant Funding" },
+      { "accountSize": 25000, "fee": 1125, "model": "instant", "label": "Instant Funding" },
+      { "accountSize": 50000, "fee": 2250, "model": "instant", "label": "Instant Funding" },
+      { "accountSize": 100000, "fee": 4500, "model": "instant", "label": "Instant Funding" },
+      { "accountSize": 5000, "fee": 75, "model": "1-step" },
+      { "accountSize": 10000, "fee": 105, "model": "1-step" },
+      { "accountSize": 25000, "fee": 225, "model": "1-step" },
+      { "accountSize": 50000, "fee": 325, "model": "1-step" },
+      { "accountSize": 100000, "fee": 525, "model": "1-step" },
+      { "accountSize": 200000, "fee": 1000, "model": "1-step" },
+      { "accountSize": 5000, "fee": 95, "model": "2-step" },
+      { "accountSize": 10000, "fee": 150, "model": "2-step" },
+      { "accountSize": 25000, "fee": 225, "model": "2-step" },
+      { "accountSize": 50000, "fee": 325, "model": "2-step" },
+      { "accountSize": 100000, "fee": 525, "model": "2-step" },
+      { "accountSize": 200000, "fee": 1000, "model": "2-step" },
+      { "accountSize": 5000, "fee": 60, "model": "3-step" },
+      { "accountSize": 10000, "fee": 105, "model": "3-step" },
+      { "accountSize": 25000, "fee": 175, "model": "3-step" },
+      { "accountSize": 50000, "fee": 240, "model": "3-step" },
+      { "accountSize": 100000, "fee": 370, "model": "3-step" },
+      { "accountSize": 200000, "fee": 700, "model": "3-step" }
+    ],
     "resetFee": null,
-    "refundPolicy": null
+    "refundPolicy": "No explicit refund policy disclosed. Optional paid add-ons available: 20% of challenge fee for 90% profit split upgrade, 10% of challenge fee for weekend holding."
   },
   "payouts": {
     "splitMax": 90,
-    "schedule": "Bi-weekly",
-    "processingTime": null,
+    "schedule": "Weekly to every 30 days (varies by challenge type)",
+    "processingTime": "1-3 business days",
     "firstPayoutDays": null,
-    "methods": ["crypto", "bank transfer"]
+    "methods": ["wise", "riseworks"]
   },
   "rules": {
     "newsTrading": true,
-    "weekendHolding": true,
-    "copyTrading": false,
+    "weekendHolding": false,
+    "copyTrading": true,
     "expertAdvisors": true,
     "consistencyRule": null,
-    "notes": null
+    "notes": "Weekend holding available as paid add-on (10% of challenge fee). Copy trading allowed between funded accounts only — not during evaluation. EAs allowed except HFT and arbitrage strategies. Prohibited strategies: all-or-nothing trading, martingale, grid trading, HFT, hedging/arbitrage across accounts. $10,000 daily gain cap. Payout lock rule: upon first payout request, max drawdown locks at initial account balance. All accounts are demo/simulated trading environments."
   },
   "markets": {
-    "platforms": ["MT5", "DXTrade"],
-    "instruments": "Forex, Indices, Commodities, Stocks, Crypto"
+    "platforms": ["cTrader", "DXTrade"],
+    "instruments": "Forex (40+ pairs, 1:15 leverage upgradeable to 1:30), Commodities (Gold, Silver, Oil — 1:15 leverage upgradeable to 1:30), Indices (1:10 leverage), Cryptocurrencies (1:2 leverage), Stocks (~141 CFDs, 1:5 leverage)"
   },
   "trust": {
-    "trustpilotRating": null,
-    "trustpilotCount": null,
-    "communitySize": null,
-    "notableFlags": []
+    "trustpilotRating": 4.5,
+    "trustpilotCount": 500,
+    "communitySize": "14,500+ Discord members",
+    "notableFlags": ["4.5/5 Trustpilot from 500+ reviews", "14,500+ Discord members", "Canada-based", "No live chat support", "Payout lock rule after first withdrawal"]
   },
   "links": { "website": "https://larkfunding.com" },
   "media": { "logo": "/images/logos/lark-funding-logo.png" },
   "availability": { "restrictedCountries": [] },
-  "custom": {
-    "tags": ["Multiple Evaluations", "Stocks", "Instant Funding"]
+  "support": {
+    "liveChat": false,
+    "email": true
   },
-  "lastVerifiedAt": "2026-02-26",
-  "lastUpdatedAt": "2026-02-26",
+  "custom": {
+    "tags": ["Multiple Evaluations", "Instant Funding", "Stocks", "No Scaling Plan"]
+  },
+  "lastVerifiedAt": "2026-02-27",
+  "lastUpdatedAt": "2026-02-27",
   "dataSources": ["https://larkfunding.com"]
 }

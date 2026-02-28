@@ -1,0 +1,1081 @@
+---
+// Static editorial content for Lark Funding
+// Supports multiple sections via the `section` prop
+interface Props {
+  section: string;
+  fallbackBody?: string;
+}
+const { section, fallbackBody } = Astro.props;
+---
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* CHALLENGES SECTION                                                  */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "challenges" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    Lark Funding offers four distinct funding models: <strong>Instant Funding</strong>, <strong>One Step Challenge</strong>, <strong>Two Step Challenge</strong>, and <strong>Three Step Challenge</strong>. Each model caters to traders with different preferences and risk tolerances, from those seeking immediate funding to those who prefer structured multi-phase evaluations.
+  </p>
+  <p class="mb-6">
+    All challenge types offer an <strong>80% profit split</strong> by default, with the option to upgrade to <strong>90%</strong> by paying an additional 20% of the challenge fee. Account sizes range from <strong>$5,000 to $200,000</strong> (up to $100,000 for Instant Funding), with fees starting from <strong>$60</strong> and going up to <strong>$4,500</strong>.
+  </p>
+
+  <!-- Per-challenge summaries -->
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <div class="flex items-center gap-2 mb-1">
+        <span class="flex items-center justify-center w-6 h-6 rounded-full bg-teal-500 text-white text-xs font-bold">1</span>
+        <p class="font-bold text-slate-900">Instant Funding</p>
+      </div>
+      <p>Account sizes from $5,000 to $100,000 with fees from $200 to $4,500. No evaluation required — start trading and earning immediately. 5% trailing drawdown, 5% daily drawdown, 80% profit split (90% with add-on). First payout on demand, then every 30 days.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Ideal for experienced traders ready to trade profitably from day one</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <div class="flex items-center gap-2 mb-1">
+        <span class="flex items-center justify-center w-6 h-6 rounded-full bg-teal-500 text-white text-xs font-bold">2</span>
+        <p class="font-bold text-slate-900">One Step Challenge</p>
+      </div>
+      <p>Account sizes from $5,000 to $200,000 with fees from $75 to $1,000. 10% profit target, 6% static drawdown, 5% daily drawdown, 1:10 leverage. No time limits. Biweekly payouts once funded.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Suited for traders who can achieve strong performance in a single evaluation phase</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <div class="flex items-center gap-2 mb-1">
+        <span class="flex items-center justify-center w-6 h-6 rounded-full bg-teal-500 text-white text-xs font-bold">3</span>
+        <p class="font-bold text-slate-900">Two Step Challenge</p>
+      </div>
+      <p>Account sizes from $5,000 to $200,000 with fees from $95 to $1,000. Phase 1: 8% target, Phase 2: 5% target. 10% static drawdown, 5% daily drawdown, 1:25 leverage. No time limits. Biweekly payouts once funded.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Good for traders wanting to demonstrate consistency over two phases with more relaxed drawdown</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <div class="flex items-center gap-2 mb-1">
+        <span class="flex items-center justify-center w-6 h-6 rounded-full bg-teal-500 text-white text-xs font-bold">4</span>
+        <p class="font-bold text-slate-900">Three Step Challenge</p>
+      </div>
+      <p>Account sizes from $5,000 to $200,000 with fees from $60 to $700. Phase 1: 5%, Phase 2: 4%, Phase 3: 3% targets. 5% static drawdown, no daily drawdown, 1:15 leverage. No time limits. Weekly payouts once funded.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Lowest fees and no daily drawdown — ideal for conservative traders who prefer a gradual path</p>
+    </div>
+  </div>
+
+  <!-- ─── Challenge Comparison Table ─────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Comparison</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-10">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Attribute</th>
+          <th class="px-4 py-3 text-center">Instant</th>
+          <th class="px-4 py-3 text-center">1-Step</th>
+          <th class="px-4 py-3 text-center">2-Step</th>
+          <th class="px-4 py-3 text-center">3-Step</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Account Sizes</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$5K – $100K</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$5K – $200K</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$5K – $200K</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$5K – $200K</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Fee Range</td>
+          <td class="px-4 py-3 text-center text-slate-900">$200 – $4,500</td>
+          <td class="px-4 py-3 text-center text-slate-900">$75 – $1,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$95 – $1,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$60 – $700</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Evaluation Phases</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">None</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">1 Phase</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">2 Phases</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">3 Phases</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Target</td>
+          <td class="px-4 py-3 text-center text-slate-400">—</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">10%</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">8% / 5%</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">5% / 4% / 3%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Max Drawdown</td>
+          <td class="px-4 py-3 text-center font-semibold text-red-600">5% Trailing</td>
+          <td class="px-4 py-3 text-center text-slate-900">6% Static</td>
+          <td class="px-4 py-3 text-center text-slate-900">10% Static</td>
+          <td class="px-4 py-3 text-center text-slate-900">5% Static</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Daily Drawdown</td>
+          <td class="px-4 py-3 text-center text-slate-900">5%</td>
+          <td class="px-4 py-3 text-center text-slate-900">5%</td>
+          <td class="px-4 py-3 text-center text-slate-900">5%</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">None</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Leverage</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:15</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:10</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:25</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:15</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Drawdown Type</td>
+          <td class="px-4 py-3 text-center font-semibold text-red-600">Trailing</td>
+          <td class="px-4 py-3 text-center text-slate-900">Static</td>
+          <td class="px-4 py-3 text-center text-slate-900">Static</td>
+          <td class="px-4 py-3 text-center text-slate-900">Static</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Split</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">80% (90%)</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">80% (90%)</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">80% (90%)</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">80% (90%)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Payout Frequency</td>
+          <td class="px-4 py-3 text-center text-slate-900">On-demand / 30 days</td>
+          <td class="px-4 py-3 text-center text-slate-900">Every 14 days</td>
+          <td class="px-4 py-3 text-center text-slate-900">Every 14 days</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">Weekly</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Weekend Holding</td>
+          <td class="px-4 py-3 text-center text-amber-600 font-semibold">10% Add-On</td>
+          <td class="px-4 py-3 text-center text-amber-600 font-semibold">10% Add-On</td>
+          <td class="px-4 py-3 text-center text-amber-600 font-semibold">10% Add-On</td>
+          <td class="px-4 py-3 text-center text-amber-600 font-semibold">10% Add-On</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Time Limit</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">Unlimited</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">Unlimited</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">Unlimited</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">Unlimited</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ─── Instant Funding Fee Table ────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Instant Funding Fees</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Size</th>
+          <th class="px-4 py-3 text-right">Challenge Fee</th>
+          <th class="px-4 py-3 text-right">Max Drawdown (5%)</th>
+          <th class="px-4 py-3 text-right">Daily Drawdown (5%)</th>
+          <th class="px-4 py-3 text-center">Profit Split</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$200</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$250</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$250</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90%)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$400</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$500</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$500</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90%)</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$1,125</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$1,250</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$1,250</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90%)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$2,250</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$2,500</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$2,500</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90%)</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$4,500</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$5,000</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$5,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90%)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ─── One Step Challenge Fee Table ────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">One Step Challenge Fees</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Size</th>
+          <th class="px-4 py-3 text-right">Challenge Fee</th>
+          <th class="px-4 py-3 text-right">Profit Target (10%)</th>
+          <th class="px-4 py-3 text-right">Max Drawdown (6%)</th>
+          <th class="px-4 py-3 text-right">Daily Drawdown (5%)</th>
+          <th class="px-4 py-3 text-center">Profit Split</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$75</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$500</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$300</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$250</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90%)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$105</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$1,000</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$600</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$500</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90%)</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$225</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$2,500</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$1,500</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$1,250</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90%)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$325</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$5,000</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$3,000</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$2,500</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90%)</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$525</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$10,000</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$6,000</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$5,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90%)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$200,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$1,000</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$20,000</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$12,000</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$10,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90%)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ─── Two Step Challenge Fee Table ────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Two Step Challenge Fees</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Size</th>
+          <th class="px-4 py-3 text-right">Challenge Fee</th>
+          <th class="px-4 py-3 text-right">Phase 1 (8%)</th>
+          <th class="px-4 py-3 text-right">Phase 2 (5%)</th>
+          <th class="px-4 py-3 text-right">Max Drawdown (10%)</th>
+          <th class="px-4 py-3 text-center">Profit Split</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$95</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$400</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$250</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$500</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90%)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$150</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$800</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$500</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$1,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90%)</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$225</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$2,000</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$1,250</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$2,500</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90%)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$325</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$4,000</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$2,500</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$5,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90%)</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$525</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$8,000</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$5,000</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$10,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90%)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$200,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$1,000</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$16,000</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$10,000</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$20,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">80% (90%)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ─── Three Step Challenge Fee Table ──────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Three Step Challenge Fees</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Size</th>
+          <th class="px-4 py-3 text-right">Challenge Fee</th>
+          <th class="px-4 py-3 text-right">Phase 1 (5%)</th>
+          <th class="px-4 py-3 text-right">Phase 2 (4%)</th>
+          <th class="px-4 py-3 text-right">Phase 3 (3%)</th>
+          <th class="px-4 py-3 text-right">Max Drawdown (5%)</th>
+          <th class="px-4 py-3 text-center">Daily DD</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$60</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$250</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$200</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$150</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$250</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">None</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$105</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$500</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$400</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$300</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$500</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">None</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$175</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$1,250</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$1,000</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$750</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$1,250</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">None</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$240</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$2,500</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$2,000</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$1,500</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$2,500</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">None</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$370</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$5,000</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$4,000</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$3,000</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$5,000</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">None</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$200,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$700</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$10,000</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$8,000</td>
+          <td class="px-4 py-3 text-right text-emerald-600 font-semibold">$6,000</td>
+          <td class="px-4 py-3 text-right text-red-600 font-semibold">$10,000</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">None</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ─── Add-On Options ─────────────────────────────────────────── -->
+  <div class="rounded-lg bg-amber-50 border border-amber-200 px-4 py-3 mb-8">
+    <p class="font-semibold text-amber-800 mb-1">Optional Add-Ons</p>
+    <ul class="list-disc list-inside space-y-1 text-amber-900 text-xs">
+      <li><strong>90% Profit Split:</strong> Pay an additional 20% of the challenge fee to upgrade from 80% to 90% profit split</li>
+      <li><strong>Weekend Holding:</strong> Pay an additional 10% of the challenge fee to hold positions over weekends</li>
+      <li><strong>Leverage Upgrade:</strong> Upgrade Forex and Metals leverage from 1:15 to 1:30 at checkout</li>
+    </ul>
+  </div>
+
+  <!-- No Scaling Plan -->
+  <div class="rounded-lg bg-amber-50 border border-amber-200 px-4 py-3 mb-8">
+    <p class="font-semibold text-amber-800 mb-1">No Scaling Plan</p>
+    <p class="text-amber-900 text-xs">Lark Funding does not currently offer a scaling plan. Your account size remains fixed at the level you purchased, regardless of performance.</p>
+  </div>
+
+  <!-- ─── Trading Rules ──────────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules</h3>
+  <ul class="space-y-2 mb-8">
+    <li class="flex items-start gap-2">
+      <span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-emerald-100 flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span></span>
+      <span><strong>Expert Advisors (EAs):</strong> Allowed, except those designed for HFT or arbitrage strategies</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-emerald-100 flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span></span>
+      <span><strong>News Trading:</strong> Allowed during all phases</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-red-100 flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-red-500"></span></span>
+      <span><strong>All-Or-Nothing Trading:</strong> Prohibited — excessive margin use or trades risking drawdown breaches; $10,000 daily gain cap</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-red-100 flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-red-500"></span></span>
+      <span><strong>Martingale Trading:</strong> Prohibited — increasing position sizes after losses to recover quickly</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-red-100 flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-red-500"></span></span>
+      <span><strong>Grid Trading:</strong> Prohibited — placing opposing buy/sell orders that create leverage or risk-free gains</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-red-100 flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-red-500"></span></span>
+      <span><strong>High-Frequency Trading:</strong> Prohibited — rapid execution algorithms for unfair advantages</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-red-100 flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-red-500"></span></span>
+      <span><strong>Hedging / Arbitrage:</strong> Prohibited — hedging positions across multiple accounts or with third parties</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-amber-100 flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span></span>
+      <span><strong>Copy Trading:</strong> Allowed between funded accounts only — not during evaluation phases</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-amber-100 flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span></span>
+      <span><strong>Weekend Holding:</strong> Available as a paid add-on (10% of challenge fee)</span>
+    </li>
+  </ul>
+
+  <!-- Verdict -->
+  <div class="rounded-lg bg-teal-50 border-l-4 border-teal-500 px-4 py-3">
+    <p class="font-semibold text-teal-800 mb-1">Verdict on Challenges</p>
+    <p class="text-teal-900 text-xs">Lark Funding offers decent variety with four challenge types, including Instant Funding and a low-cost Three Step option. However, fees are higher than competitors like DNA Funded, particularly for the Instant Funding accounts. The challenges cater to different risk tolerances, but the lack of a scaling plan and tight drawdown limits should be carefully considered before committing.</p>
+  </div>
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SPREADS SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "spreads" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    Lark Funding's pricing and fee structure leaves several key details unclear, making it harder for traders to assess how competitive it really is. While the firm advertises raw spreads, specific details on average or minimum spreads are not disclosed.
+  </p>
+
+  <!-- Stats Grid -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Forex/Metals Commission</p>
+      <p class="text-base font-bold text-slate-900">$7.00 / lot</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Crypto Commission</p>
+      <p class="text-base font-bold text-emerald-600">Free</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Indices Commission</p>
+      <p class="text-base font-bold text-emerald-600">Free</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Oil Commission</p>
+      <p class="text-base font-bold text-emerald-600">Free</p>
+    </div>
+  </div>
+
+  <!-- Commission Fee Table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Commission Structure</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Instrument</th>
+          <th class="px-4 py-3 text-center">Commission per Lot</th>
+          <th class="px-4 py-3 text-center">Spread Type</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Forex</td>
+          <td class="px-4 py-3 text-center text-slate-900">$7.00 per standard lot</td>
+          <td class="px-4 py-3 text-center text-slate-900">Raw (advertised)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Metals</td>
+          <td class="px-4 py-3 text-center text-slate-900">$7.00 per standard lot</td>
+          <td class="px-4 py-3 text-center text-slate-900">Raw (advertised)</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Crypto</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">Commission-free</td>
+          <td class="px-4 py-3 text-center text-slate-900">Not disclosed</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Indices</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">Commission-free</td>
+          <td class="px-4 py-3 text-center text-slate-900">Not disclosed</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Oil</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">Commission-free</td>
+          <td class="px-4 py-3 text-center text-slate-900">Not disclosed</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Spread Transparency Warning -->
+  <div class="rounded-lg bg-amber-50 border border-amber-200 px-4 py-3 mb-8">
+    <p class="font-semibold text-amber-800 mb-1">Spread Transparency</p>
+    <p class="text-amber-900 text-xs">Lark Funding advertises raw spreads for forex but does not provide specifics on average or minimum spreads. While ThinkMarkets is mentioned as a potential liquidity source, the exact providers are not fully disclosed. For commission-free instruments (Crypto, Indices, Oil), costs may be embedded in wider spreads.</p>
+  </div>
+
+  <!-- Simulated Environment Note -->
+  <div class="rounded-lg bg-amber-50 border border-amber-200 px-4 py-3 mb-8">
+    <p class="font-semibold text-amber-800 mb-1">Simulated Trading Environment</p>
+    <p class="text-amber-900 text-xs">All accounts provided by Lark Funding are demo accounts operating in a simulated trading environment. Traders never execute trades in live markets with real money, even in the funded account stage.</p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-lg bg-teal-50 border-l-4 border-teal-500 px-4 py-3">
+    <p class="font-semibold text-teal-800 mb-1">Verdict on Fees and Pricing</p>
+    <p class="text-teal-900 text-xs">While the commission fees are predictable, the lack of transparency around spreads, pricing sources, and execution creates uncertainty for traders. Compared to other firms that disclose full pricing details, this lack of clarity may make it difficult for traders to plan and optimise their strategies effectively.</p>
+  </div>
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* MARKETS SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "markets" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    Lark Funding provides access to a variety of asset classes for demo trading, including forex, commodities, indices, cryptocurrencies, and stocks. Leverage varies by asset class and can be upgraded for forex and metals at checkout.
+  </p>
+
+  <!-- Stats Grid -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Forex Pairs</p>
+      <p class="text-base font-bold text-slate-900">40+</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Stock CFDs</p>
+      <p class="text-base font-bold text-slate-900">~141</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Asset Classes</p>
+      <p class="text-base font-bold text-slate-900">5</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Max Forex Leverage</p>
+      <p class="text-base font-bold text-emerald-600">1:30</p>
+    </div>
+  </div>
+
+  <!-- Asset Classes -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Available Markets</h3>
+  <ul class="space-y-2 mb-8">
+    <li class="flex items-start gap-2">
+      <span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-emerald-100 flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span></span>
+      <span><strong>Forex:</strong> Over 40 major and minor currency pairs with 1:15 leverage (upgradeable to 1:30 at checkout)</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-emerald-100 flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span></span>
+      <span><strong>Commodities:</strong> Gold, Silver, and Oil with 1:15 leverage (upgradeable to 1:30)</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-emerald-100 flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span></span>
+      <span><strong>Indices:</strong> Global stock indices available with 1:10 leverage</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-amber-100 flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span></span>
+      <span><strong>Cryptocurrencies:</strong> Popular crypto assets with limited 1:2 leverage</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-emerald-100 flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span></span>
+      <span><strong>Stocks:</strong> Approximately 141 stock CFDs available with 1:5 leverage</span>
+    </li>
+  </ul>
+
+  <!-- Leverage Comparison Table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Leverage by Asset Class</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Asset Class</th>
+          <th class="px-4 py-3 text-center">Default Leverage</th>
+          <th class="px-4 py-3 text-center">Upgradeable</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Forex</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:15</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">Yes (1:30)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Commodities (Metals)</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:15</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">Yes (1:30)</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Indices</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:10</td>
+          <td class="px-4 py-3 text-center text-red-500 font-semibold">No</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Cryptocurrencies</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:2</td>
+          <td class="px-4 py-3 text-center text-red-500 font-semibold">No</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Stocks</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:5</td>
+          <td class="px-4 py-3 text-center text-red-500 font-semibold">No</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-lg bg-teal-50 border-l-4 border-teal-500 px-4 py-3">
+    <p class="font-semibold text-teal-800 mb-1">Verdict on Markets</p>
+    <p class="text-teal-900 text-xs">Lark Funding offers a solid range of markets including stocks (~141 CFDs), which is a standout. However, the leverage limits may feel restrictive for some traders. While the option to increase leverage on Forex and Metals adds flexibility, the 1:2 crypto leverage and lack of upgrade options across most asset classes limit the appeal for high-leverage traders.</p>
+  </div>
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PLATFORMS SECTION                                                   */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "platforms" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    Lark Funding offers two trading platforms: <strong>cTrader</strong> and <strong>DXTrade</strong>. While both are solid choices, the firm provides no platform-specific guides or resources to help traders get started.
+  </p>
+
+  <!-- Platform Cards -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-2">cTrader</p>
+      <p class="text-xs text-slate-600 mb-2">Known for its clean interface, advanced charting, and algorithmic trading capabilities. Suitable for experienced traders who want deep market analysis tools and cBot support.</p>
+      <div class="flex flex-wrap gap-1.5">
+        <span class="inline-block rounded-full bg-slate-200 px-2 py-0.5 text-xs font-medium text-slate-700">Advanced Charting</span>
+        <span class="inline-block rounded-full bg-slate-200 px-2 py-0.5 text-xs font-medium text-slate-700">Algo Trading</span>
+        <span class="inline-block rounded-full bg-slate-200 px-2 py-0.5 text-xs font-medium text-slate-700">cBots</span>
+        <span class="inline-block rounded-full bg-slate-200 px-2 py-0.5 text-xs font-medium text-slate-700">Desktop & Web</span>
+      </div>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-2">DXTrade</p>
+      <p class="text-xs text-slate-600 mb-2">A more straightforward platform with integration options, ideal for traders looking for simplicity and efficiency. Web-based and accessible from any device.</p>
+      <div class="flex flex-wrap gap-1.5">
+        <span class="inline-block rounded-full bg-slate-200 px-2 py-0.5 text-xs font-medium text-slate-700">Simple Interface</span>
+        <span class="inline-block rounded-full bg-slate-200 px-2 py-0.5 text-xs font-medium text-slate-700">Web-Based</span>
+        <span class="inline-block rounded-full bg-slate-200 px-2 py-0.5 text-xs font-medium text-slate-700">Multi-Device</span>
+        <span class="inline-block rounded-full bg-slate-200 px-2 py-0.5 text-xs font-medium text-slate-700">Easy Setup</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Platform Limitation Note -->
+  <div class="rounded-lg bg-amber-50 border border-amber-200 px-4 py-3 mb-8">
+    <p class="font-semibold text-amber-800 mb-1">No Platform Guides</p>
+    <p class="text-amber-900 text-xs">Lark Funding does not provide platform-specific tutorials or setup guides. Traders will need to rely on external resources or the platforms' own documentation to get started and make the most of available features.</p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-lg bg-teal-50 border-l-4 border-teal-500 px-4 py-3">
+    <p class="font-semibold text-teal-800 mb-1">Verdict on Trading Platforms</p>
+    <p class="text-teal-900 text-xs">Lark Funding provides cTrader and DXTrade — both strong platforms for different trader preferences. cTrader suits experienced traders with advanced tools and automation, while DXTrade is more accessible for simpler workflows. However, with only 2 platforms available and no guidance materials, the platform offering is more limited than competitors who support MT4/MT5 or provide comprehensive onboarding.</p>
+  </div>
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PAYOUTS SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "payouts" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    Lark Funding offers a range of payment and payout options, but the processes and policies come with specific conditions that traders should be aware of — most notably the <strong>payout lock rule</strong> that reduces your drawdown buffer after withdrawals.
+  </p>
+
+  <!-- Stats Grid -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Profit Split</p>
+      <p class="text-base font-bold text-emerald-600">80% – 90%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Min Withdrawal</p>
+      <p class="text-base font-bold text-slate-900">$100</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Processing Fee</p>
+      <p class="text-base font-bold text-red-600">$40 flat</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Processing Time</p>
+      <p class="text-base font-bold text-slate-900">1-3 days</p>
+    </div>
+  </div>
+
+  <!-- Profit Split Details -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Profit Split Structure</h3>
+  <ul class="space-y-2 mb-8">
+    <li class="flex items-start gap-2">
+      <span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-emerald-100 flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span></span>
+      <span><strong>Standard split:</strong> 80% of profits kept by trader</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-emerald-100 flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span></span>
+      <span><strong>VIP upgrade:</strong> 90% profit split for an additional 20% of the challenge fee</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-amber-100 flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span></span>
+      <span><strong>Minimum withdrawal:</strong> $100 with a $40 flat processing fee per withdrawal</span>
+    </li>
+  </ul>
+
+  <!-- Payout Schedule by Challenge Type -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payout Schedule by Challenge Type</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Challenge Type</th>
+          <th class="px-4 py-3 text-center">First Payout</th>
+          <th class="px-4 py-3 text-center">Ongoing Schedule</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Instant Funding</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">On demand</td>
+          <td class="px-4 py-3 text-center text-slate-900">Every 30 days</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">One Step</td>
+          <td class="px-4 py-3 text-center text-slate-900">After 14 days</td>
+          <td class="px-4 py-3 text-center text-slate-900">Every 14 days</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Two Step</td>
+          <td class="px-4 py-3 text-center text-slate-900">After 14 days</td>
+          <td class="px-4 py-3 text-center text-slate-900">Every 14 days</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Three Step</td>
+          <td class="px-4 py-3 text-center text-slate-900">After 7 days</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">Weekly</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Payment Methods -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payment & Withdrawal Methods</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Challenge Fee Payments</p>
+      <p class="text-xs text-slate-600">Credit cards, debit cards, and cryptocurrency (via Coinbase). Crypto payments processed securely.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Profit Withdrawals</p>
+      <p class="text-xs text-slate-600">Processed through Wise or Riseworks. Typically completed in 1-3 business days. $40 flat processing fee applies.</p>
+    </div>
+  </div>
+
+  <!-- Payout Lock Warning -->
+  <div class="rounded-lg bg-red-50 border border-red-200 px-4 py-3 mb-8">
+    <p class="font-semibold text-red-800 mb-1">Payout Lock Rule</p>
+    <p class="text-red-900 text-xs">Upon your first payout request, the maximum drawdown locks at the initial account balance. This means any withdrawal reduces the available drawdown buffer for future trades, which could increase the risk of breaching the account. Lark Funding recommends maintaining a buffer before requesting payouts to avoid these challenges.</p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-lg bg-teal-50 border-l-4 border-teal-500 px-4 py-3">
+    <p class="font-semibold text-teal-800 mb-1">Verdict on Payments and Payouts</p>
+    <p class="text-teal-900 text-xs">Lark Funding's payment options are flexible, and the on-demand first payout for Instant Funding is appealing. However, the $40 flat withdrawal fee, $100 minimum, and the drawdown lock rule after the first payout make the payout process less trader-friendly compared to firms without similar restrictions. The payout lock rule is particularly restrictive for traders focused on long-term account growth or frequent withdrawals.</p>
+  </div>
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SUPPORT SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "support" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    Lark Funding offers minimal customer support and educational resources, which may leave traders seeking more guidance or immediate assistance at a disadvantage.
+  </p>
+
+  <!-- Support Channels -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Customer Support Channels</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Email Support</p>
+      <p class="text-xs text-slate-600">Available for general enquiries and account-related issues. Response times not specified.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Contact Form</p>
+      <p class="text-xs text-slate-600">Online contact form available on the website for submitting queries.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Chatbot</p>
+      <div class="flex items-center gap-1.5 mb-1">
+        <span class="inline-block rounded-full bg-red-100 px-2 py-0.5 text-xs font-medium text-red-700">FAQ Only</span>
+      </div>
+      <p class="text-xs text-slate-600">Chatbot available but only redirects users to the FAQ section — no personalised assistance.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Live Chat</p>
+      <div class="flex items-center gap-1.5 mb-1">
+        <span class="inline-block rounded-full bg-red-100 px-2 py-0.5 text-xs font-medium text-red-700">Not Available</span>
+      </div>
+      <p class="text-xs text-slate-600">No live chat staffed by actual support team members. Not available 24/7.</p>
+    </div>
+  </div>
+
+  <!-- Support Limitations Warning -->
+  <div class="rounded-lg bg-amber-50 border border-amber-200 px-4 py-3 mb-8">
+    <p class="font-semibold text-amber-800 mb-1">Support Limitations</p>
+    <p class="text-amber-900 text-xs">Lark Funding lacks live chat support with actual team members and does not offer 24/7 availability. The chatbot only directs users to the FAQ section without providing personalised help. This may be frustrating for traders who need immediate assistance, especially across different time zones.</p>
+  </div>
+
+  <!-- Educational Resources -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Educational Resources</h3>
+  <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 mb-8">
+    <p class="font-bold text-slate-900 mb-1">Limited Resources</p>
+    <p class="text-xs text-slate-600">Educational resources are sparse. The FAQ section provides basic answers to common questions, but beyond that, there are no tutorials, webinars, or platform-specific guides. Traders will need to rely on external resources to fill these gaps.</p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-lg bg-teal-50 border-l-4 border-teal-500 px-4 py-3">
+    <p class="font-semibold text-teal-800 mb-1">Verdict on Support</p>
+    <p class="text-teal-900 text-xs">Lark Funding's customer service and education options are underwhelming compared to other prop firms. The lack of live support and comprehensive educational tools could be a significant disadvantage for traders who need extra guidance or immediate assistance during challenges. Beginners especially may find the lack of onboarding resources challenging.</p>
+  </div>
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* TRUST SECTION                                                       */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "trust" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    Lark Funding combines a solid Trustpilot reputation with an engaged online trading community, though certain policies and gaps in resources may limit its appeal for some traders.
+  </p>
+
+  <!-- Trustpilot Score -->
+  <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 mb-8">
+    <div class="flex items-center gap-3 mb-2">
+      <p class="text-3xl font-black text-slate-900">4.5<span class="text-base font-medium text-slate-400">/5</span></p>
+      <div>
+        <p class="font-bold text-slate-900">Trustpilot Score</p>
+        <p class="text-xs text-slate-500">Based on 500+ verified reviews</p>
+      </div>
+    </div>
+    <div class="flex gap-0.5 mb-2">
+      <span class="text-emerald-500">&#9733;</span>
+      <span class="text-emerald-500">&#9733;</span>
+      <span class="text-emerald-500">&#9733;</span>
+      <span class="text-emerald-500">&#9733;</span>
+      <span class="text-slate-300">&#9733;</span>
+    </div>
+    <p class="text-xs text-slate-600">Most reviews praise reliable payouts, transparent communication, and helpful support. Some concerns raised about the payout lock rule and occasional delays in issuing funded accounts.</p>
+  </div>
+
+  <!-- Community -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Community</h3>
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Discord Members</p>
+      <p class="text-base font-bold text-slate-900">14,500+</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Community Channels</p>
+      <p class="text-base font-bold text-slate-900">Active</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Educational Content</p>
+      <p class="text-base font-bold text-red-600">Limited</p>
+    </div>
+  </div>
+
+  <p class="mb-6 text-xs">
+    Lark Funding's Discord community of over 14,500 members features channels for announcements, promotions, payout discussions, and support. While the community fosters collaboration and peer support, it lacks detailed educational resources or beginner guides.
+  </p>
+
+  <!-- Popularity -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Popularity & Search Volume</h3>
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Monthly Searches</p>
+      <p class="text-base font-bold text-slate-900">3,600</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Search Rank</p>
+      <p class="text-base font-bold text-slate-900">46th</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Monthly Visits</p>
+      <p class="text-base font-bold text-slate-900">24,742</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Traffic Rank</p>
+      <p class="text-base font-bold text-slate-900">49th</p>
+    </div>
+  </div>
+
+  <!-- Country Search Volume Table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Q1 2025 Branded Searches by Country</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Country</th>
+          <th class="px-4 py-3 text-right">Monthly Searches</th>
+          <th class="px-4 py-3 text-center">Rank</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">India</td>
+          <td class="px-4 py-3 text-right text-slate-900">1,000</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">1st</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">United States</td>
+          <td class="px-4 py-3 text-right text-slate-900">590</td>
+          <td class="px-4 py-3 text-center text-slate-900">2nd</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Pakistan</td>
+          <td class="px-4 py-3 text-right text-slate-900">390</td>
+          <td class="px-4 py-3 text-center text-slate-900">3rd</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Nigeria</td>
+          <td class="px-4 py-3 text-right text-slate-900">320</td>
+          <td class="px-4 py-3 text-center text-slate-900">4th</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">United Kingdom</td>
+          <td class="px-4 py-3 text-right text-slate-900">260</td>
+          <td class="px-4 py-3 text-center text-slate-900">5th</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Canada</td>
+          <td class="px-4 py-3 text-right text-slate-900">210</td>
+          <td class="px-4 py-3 text-center text-slate-900">6th</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">South Africa</td>
+          <td class="px-4 py-3 text-right text-slate-900">170</td>
+          <td class="px-4 py-3 text-center text-slate-900">7th</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Kenya</td>
+          <td class="px-4 py-3 text-right text-slate-900">140</td>
+          <td class="px-4 py-3 text-center text-slate-900">8th</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Indonesia</td>
+          <td class="px-4 py-3 text-right text-slate-900">110</td>
+          <td class="px-4 py-3 text-center text-slate-900">9th</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Germany</td>
+          <td class="px-4 py-3 text-right text-slate-900">90</td>
+          <td class="px-4 py-3 text-center text-slate-900">10th</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Trust Signals -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trust Signals</h3>
+  <ul class="space-y-2 mb-8">
+    <li class="flex items-start gap-2">
+      <span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-emerald-100 flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span></span>
+      <span>4.5/5 Trustpilot rating with 500+ verified reviews</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-emerald-100 flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span></span>
+      <span>Active Discord community with 14,500+ members</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-emerald-100 flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span></span>
+      <span>Positive reviews for reliable payouts and transparent communication</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-amber-100 flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span></span>
+      <span>Payout lock rule has drawn criticism from some traders</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-amber-100 flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span></span>
+      <span>Isolated complaints about delays in issuing funded accounts</span>
+    </li>
+    <li class="flex items-start gap-2">
+      <span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-amber-100 flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span></span>
+      <span>Limited educational content and no beginner guides in the community</span>
+    </li>
+  </ul>
+
+  <!-- Verdict -->
+  <div class="rounded-lg bg-teal-50 border-l-4 border-teal-500 px-4 py-3">
+    <p class="font-semibold text-teal-800 mb-1">Verdict on Trust and Community</p>
+    <p class="text-teal-900 text-xs">Lark Funding's strong Trustpilot score and engaged community make it a relatively reliable choice for experienced traders. However, the payout lock rule and absence of structured educational content are notable limitations. The Discord server is a valuable resource for connecting with peers but could be enhanced with more learning tools for newcomers.</p>
+  </div>
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* FALLBACK                                                            */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{!["challenges", "spreads", "markets", "platforms", "payouts", "support", "trust"].includes(section) && (
+<div class="text-sm leading-relaxed text-slate-700">
+  <p>{fallbackBody ?? "Section content coming soon."}</p>
+</div>
+)}

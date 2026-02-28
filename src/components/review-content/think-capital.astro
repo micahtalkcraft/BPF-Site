@@ -1,0 +1,897 @@
+---
+// Rich editorial content for ThinkCapital
+// Supports multiple sections via the `section` prop
+interface Props {
+  section: string;
+  fallbackBody?: string;
+}
+const { section, fallbackBody } = Astro.props;
+---
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* CHALLENGES SECTION                                                  */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "challenges" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    ThinkCapital offers three challenges as pathways to funded accounts — the <strong>Lightning</strong>, <strong>Dual Step</strong>, and <strong>Nexus</strong> Challenges — which vary in evaluation steps, maximum leverage, and risk management requirements.
+  </p>
+
+  <!-- Challenge Comparison Table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Types Overview</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Feature</th>
+          <th class="px-4 py-3 text-center">Lightning</th>
+          <th class="px-4 py-3 text-center">Dual Step</th>
+          <th class="px-4 py-3 text-center">Nexus</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Evaluation Process</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">One Step</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">Two Step</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">Three Step</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Fees (Min – Max)</td>
+          <td class="px-4 py-3 text-center text-slate-900">$59 – $949</td>
+          <td class="px-4 py-3 text-center text-slate-900">$59 – $949</td>
+          <td class="px-4 py-3 text-center text-slate-900">$39 – $649</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Account Sizes</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5K – $200K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5K – $200K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5K – $200K</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Total Profit Target</td>
+          <td class="px-4 py-3 text-center text-slate-900">10%</td>
+          <td class="px-4 py-3 text-center text-slate-900">13%</td>
+          <td class="px-4 py-3 text-center text-slate-900">18%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Daily Loss Limit</td>
+          <td class="px-4 py-3 text-center text-slate-900">3%</td>
+          <td class="px-4 py-3 text-center text-slate-900">4%</td>
+          <td class="px-4 py-3 text-center text-slate-900">4%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Max Loss Limit</td>
+          <td class="px-4 py-3 text-center text-slate-900">6%</td>
+          <td class="px-4 py-3 text-center text-slate-900">8%</td>
+          <td class="px-4 py-3 text-center text-slate-900">8%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Split</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">Up to 90%</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">Up to 90%</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">Up to 90%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Payout Frequency</td>
+          <td class="px-4 py-3 text-center text-slate-900">14 days</td>
+          <td class="px-4 py-3 text-center text-slate-900">14 days</td>
+          <td class="px-4 py-3 text-center text-slate-900">14 days</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Leverage</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:30</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:100</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:100</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Lightning Challenge -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+    <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">1</span>
+    Lightning Challenge
+  </h3>
+  <p class="mb-4">
+    The Lightning Challenge is ThinkCapital's simplest option, designed for traders who want a direct path to funding with minimal complexity. This single-step evaluation focuses on achieving a <strong>10% profit target</strong>, with conservative leverage of <strong>1:30</strong> to encourage careful trade management.
+  </p>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Size</th>
+          <th class="px-4 py-3 text-right">Fee</th>
+          <th class="px-4 py-3 text-right">Profit Target</th>
+          <th class="px-4 py-3 text-right">Daily Loss</th>
+          <th class="px-4 py-3 text-right">Max Loss</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$59</td>
+          <td class="px-4 py-3 text-right text-slate-900">$500</td>
+          <td class="px-4 py-3 text-right text-slate-900">$150</td>
+          <td class="px-4 py-3 text-right text-slate-900">$300</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$99</td>
+          <td class="px-4 py-3 text-right text-slate-900">$1,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$300</td>
+          <td class="px-4 py-3 text-right text-slate-900">$600</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$199</td>
+          <td class="px-4 py-3 text-right text-slate-900">$2,500</td>
+          <td class="px-4 py-3 text-right text-slate-900">$750</td>
+          <td class="px-4 py-3 text-right text-slate-900">$1,500</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$299</td>
+          <td class="px-4 py-3 text-right text-slate-900">$5,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$1,500</td>
+          <td class="px-4 py-3 text-right text-slate-900">$3,000</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$499</td>
+          <td class="px-4 py-3 text-right text-slate-900">$10,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$3,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$6,000</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$200,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$949</td>
+          <td class="px-4 py-3 text-right text-slate-900">$20,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$6,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$12,000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Dual Step Challenge -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+    <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">2</span>
+    Dual Step Challenge
+  </h3>
+  <p class="mb-4">
+    The Dual Step Challenge is ideal for traders seeking a balance between structure and flexibility. This two-phase evaluation requires an <strong>8% profit target in Phase 1</strong> and a <strong>5% target in Phase 2</strong>, for a total of 13%. Leverage of <strong>1:100</strong> allows for more significant positions.
+  </p>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Size</th>
+          <th class="px-4 py-3 text-right">Fee</th>
+          <th class="px-4 py-3 text-right">Phase 1</th>
+          <th class="px-4 py-3 text-right">Phase 2</th>
+          <th class="px-4 py-3 text-right">Daily Loss</th>
+          <th class="px-4 py-3 text-right">Max Loss</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$59</td>
+          <td class="px-4 py-3 text-right text-slate-900">$400</td>
+          <td class="px-4 py-3 text-right text-slate-900">$250</td>
+          <td class="px-4 py-3 text-right text-slate-900">$200</td>
+          <td class="px-4 py-3 text-right text-slate-900">$400</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$99</td>
+          <td class="px-4 py-3 text-right text-slate-900">$800</td>
+          <td class="px-4 py-3 text-right text-slate-900">$500</td>
+          <td class="px-4 py-3 text-right text-slate-900">$400</td>
+          <td class="px-4 py-3 text-right text-slate-900">$800</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$199</td>
+          <td class="px-4 py-3 text-right text-slate-900">$2,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$1,250</td>
+          <td class="px-4 py-3 text-right text-slate-900">$1,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$2,000</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$299</td>
+          <td class="px-4 py-3 text-right text-slate-900">$4,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$2,500</td>
+          <td class="px-4 py-3 text-right text-slate-900">$2,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$4,000</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$499</td>
+          <td class="px-4 py-3 text-right text-slate-900">$8,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$5,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$4,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$8,000</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$200,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$949</td>
+          <td class="px-4 py-3 text-right text-slate-900">$16,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$10,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$8,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$16,000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Nexus Challenge -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+    <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">3</span>
+    Nexus Challenge
+  </h3>
+  <p class="mb-4">
+    The Nexus Challenge is the most comprehensive evaluation, with three phases designed to test trading consistency and adaptability. The total profit target is <strong>18%</strong>, divided across three steps. With <strong>1:100 leverage</strong>, this program emphasises balance-based risk management.
+  </p>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Size</th>
+          <th class="px-4 py-3 text-right">Fee</th>
+          <th class="px-4 py-3 text-right">Phase 1</th>
+          <th class="px-4 py-3 text-right">Phase 2</th>
+          <th class="px-4 py-3 text-right">Phase 3</th>
+          <th class="px-4 py-3 text-right">Daily Loss</th>
+          <th class="px-4 py-3 text-right">Max Loss</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$39</td>
+          <td class="px-4 py-3 text-right text-slate-900">$350</td>
+          <td class="px-4 py-3 text-right text-slate-900">$300</td>
+          <td class="px-4 py-3 text-right text-slate-900">$250</td>
+          <td class="px-4 py-3 text-right text-slate-900">$200</td>
+          <td class="px-4 py-3 text-right text-slate-900">$400</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$79</td>
+          <td class="px-4 py-3 text-right text-slate-900">$700</td>
+          <td class="px-4 py-3 text-right text-slate-900">$600</td>
+          <td class="px-4 py-3 text-right text-slate-900">$500</td>
+          <td class="px-4 py-3 text-right text-slate-900">$400</td>
+          <td class="px-4 py-3 text-right text-slate-900">$800</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$139</td>
+          <td class="px-4 py-3 text-right text-slate-900">$1,750</td>
+          <td class="px-4 py-3 text-right text-slate-900">$1,500</td>
+          <td class="px-4 py-3 text-right text-slate-900">$1,250</td>
+          <td class="px-4 py-3 text-right text-slate-900">$1,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$2,000</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$199</td>
+          <td class="px-4 py-3 text-right text-slate-900">$3,500</td>
+          <td class="px-4 py-3 text-right text-slate-900">$3,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$2,500</td>
+          <td class="px-4 py-3 text-right text-slate-900">$2,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$4,000</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$349</td>
+          <td class="px-4 py-3 text-right text-slate-900">$7,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$6,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$5,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$4,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$8,000</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$200,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$649</td>
+          <td class="px-4 py-3 text-right text-slate-900">$14,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$12,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$10,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$8,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$16,000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Add-Ons -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Add-Ons</h3>
+  <p class="mb-4">
+    ThinkCapital's add-ons allow you to enhance your challenge experience based on your trading needs:
+  </p>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Add-On</th>
+          <th class="px-4 py-3 text-center">Lightning</th>
+          <th class="px-4 py-3 text-center">Dual Step</th>
+          <th class="px-4 py-3 text-center">Nexus</th>
+          <th class="px-4 py-3 text-right">Cost</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">Expert Advisors (EAs)</td>
+          <td class="px-4 py-3 text-center text-emerald-600 font-bold">&#10004;</td>
+          <td class="px-4 py-3 text-center text-emerald-600 font-bold">&#10004; <span class="text-xs text-slate-400">(MT5)</span></td>
+          <td class="px-4 py-3 text-center text-emerald-600 font-bold">&#10004; <span class="text-xs text-slate-400">(MT5)</span></td>
+          <td class="px-4 py-3 text-right text-slate-900">+25%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">90% Profit Split</td>
+          <td class="px-4 py-3 text-center text-red-400 font-bold">&#10008;</td>
+          <td class="px-4 py-3 text-center text-emerald-600 font-bold">&#10004;</td>
+          <td class="px-4 py-3 text-center text-emerald-600 font-bold">&#10004;</td>
+          <td class="px-4 py-3 text-right text-slate-900">+25%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">News Trading</td>
+          <td class="px-4 py-3 text-center text-red-400 font-bold">&#10008;</td>
+          <td class="px-4 py-3 text-center text-emerald-600 font-bold">&#10004;</td>
+          <td class="px-4 py-3 text-center text-emerald-600 font-bold">&#10004;</td>
+          <td class="px-4 py-3 text-right text-slate-900">+25%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">Weekly Payouts</td>
+          <td class="px-4 py-3 text-center text-red-400 font-bold">&#10008;</td>
+          <td class="px-4 py-3 text-center text-emerald-600 font-bold">&#10004;</td>
+          <td class="px-4 py-3 text-center text-emerald-600 font-bold">&#10004;</td>
+          <td class="px-4 py-3 text-right text-slate-900">+25%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">Classic 10% / 5%</td>
+          <td class="px-4 py-3 text-center text-red-400 font-bold">&#10008;</td>
+          <td class="px-4 py-3 text-center text-emerald-600 font-bold">&#10004;</td>
+          <td class="px-4 py-3 text-center text-red-400 font-bold">&#10008;</td>
+          <td class="px-4 py-3 text-right text-slate-900">+10%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Scaling Plan -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Scaling Plan</h3>
+  <p class="mb-4">
+    To qualify for scaling, you need to achieve a total profit of <strong>10% within three months</strong>. Each scaling event boosts your initial account balance by <strong>20%</strong>. For example, a $100,000 account grows to $120,000, then $140,000, and so on. Scaling reviews happen every three months, and you must make three withdrawals to remain eligible. The plan allows growth to a maximum of <strong>$1.5 million</strong>.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mt-6">
+    <p class="text-sm font-bold text-teal-800 mb-1">Verdict on Challenges</p>
+    <p class="text-sm text-teal-700">
+      ThinkCapital's evaluation process offers flexibility with three challenges tailored to different trading styles. The Lightning Challenge is ideal for quick funding with minimal complexity, while the Dual Step Challenge balances structure and flexibility for active traders. The Nexus Challenge is best suited for experienced traders seeking a comprehensive evaluation.
+    </p>
+  </div>
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SPREADS SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "spreads" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    When trading with ThinkCapital, the costs depend on which platform you choose — ThinkTrader offers commission-free trading across all asset classes but tends to have slightly wider spreads, while MT5 is geared towards traders who prefer raw spreads.
+  </p>
+
+  <!-- Spreads -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Spreads</h3>
+  <p class="mb-4">
+    ThinkCapital does not publish average spreads, but here's what was observed during testing:
+  </p>
+  <div class="grid sm:grid-cols-2 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-4 py-3">
+      <p class="text-xs font-bold text-slate-500 uppercase tracking-wide mb-1">ThinkTrader Spreads</p>
+      <p class="text-sm text-slate-700">EUR/USD from <strong>0.8 pips</strong>, increasing to 2.5+ pips for minor pairs</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-4 py-3">
+      <p class="text-xs font-bold text-slate-500 uppercase tracking-wide mb-1">MT5 Spreads</p>
+      <p class="text-sm text-slate-700">Tighter raw spreads, ideal for high-frequency and scalping strategies</p>
+    </div>
+  </div>
+
+  <!-- Commission -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Commission Fees</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Platform</th>
+          <th class="px-4 py-3 text-left">Forex &amp; Metals</th>
+          <th class="px-4 py-3 text-left">Other Assets</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">MT5</td>
+          <td class="px-4 py-3 text-slate-900">$4 per lot per side ($8 round-trip)</td>
+          <td class="px-4 py-3 text-emerald-600 font-semibold">Commission-free</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">ThinkTrader</td>
+          <td class="px-4 py-3 text-emerald-600 font-semibold">Commission-free</td>
+          <td class="px-4 py-3 text-emerald-600 font-semibold">Commission-free</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="mb-4">
+    While MT5's commission of $4 per side is slightly above the industry average of $3.00–$3.50, the flexibility to choose between raw spreads (MT5) and commission-free trading (ThinkTrader) gives traders options to suit their strategy.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mt-6">
+    <p class="text-sm font-bold text-teal-800 mb-1">Verdict on Spreads &amp; Commission</p>
+    <p class="text-sm text-teal-700">
+      ThinkCapital gives you flexibility to choose between MT5's raw spreads with a $4 per side commission on forex and metals or ThinkTrader's zero-commission model with wider spreads. MT5 suits forex-heavy strategies, while ThinkTrader is ideal for those seeking simple, cost-free trading across all markets.
+    </p>
+  </div>
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* MARKETS SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "markets" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    ThinkCapital provides access to a wide range of financial instruments across multiple asset classes, including forex, indices, commodities, and cryptocurrencies.
+  </p>
+
+  <!-- Leverage Table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Leverage by Market &amp; Challenge</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Market</th>
+          <th class="px-4 py-3 text-center">MT5 Lightning</th>
+          <th class="px-4 py-3 text-center">MT5 Dual/Nexus</th>
+          <th class="px-4 py-3 text-center">ThinkTrader Lightning</th>
+          <th class="px-4 py-3 text-center">ThinkTrader Dual/Nexus</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Forex</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:30</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:100</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:30</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:100</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Indices</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:5</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:15</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:5</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:15</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Gold &amp; Silver</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:10</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:15</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:20</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:30</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Oil</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:10</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:15</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:10</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:15</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Crypto</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:1</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:1</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:2</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:2</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Market Descriptions -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Forex</h3>
+  <p class="mb-6">
+    Forex trading is at the core of ThinkCapital's offerings, with major, minor, and exotic currency pairs available on both platforms. Leverage ranges from <strong>1:30</strong> for Lightning to <strong>1:100</strong> for Dual Step and Nexus challenges.
+  </p>
+
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Indices</h3>
+  <p class="mb-6">
+    Popular indices like NAS100, SPX500, and GER40 are available with leverage of <strong>1:5</strong> for Lightning and <strong>1:15</strong> for Dual Step and Nexus accounts.
+  </p>
+
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Commodities</h3>
+  <p class="mb-6">
+    Gold, silver, and oil trading is supported across both platforms. ThinkTrader offers higher leverage for precious metals — up to <strong>1:30</strong> compared to MT5's <strong>1:15</strong> for Dual Step and Nexus accounts, making it more appealing for commodities traders.
+  </p>
+
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Cryptocurrencies</h3>
+  <p class="mb-4">
+    Major cryptocurrencies including BTC, ETH, and BCH are available. ThinkTrader offers slightly higher leverage at <strong>1:2</strong> compared to MT5's <strong>1:1</strong>.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mt-6">
+    <p class="text-sm font-bold text-teal-800 mb-1">Verdict on Markets &amp; Leverage</p>
+    <p class="text-sm text-teal-700">
+      ThinkCapital offers diverse trading instruments across forex, indices, commodities, and cryptocurrencies, with leverage tailored to challenge types and platforms. MT5 provides advanced features for forex and commodities, while ThinkTrader offers higher leverage for metals and a more user-friendly setup.
+    </p>
+  </div>
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PLATFORMS SECTION                                                   */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "platforms" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    ThinkCapital offers two trading platforms — <strong>MetaTrader 5 (MT5)</strong> and <strong>ThinkTrader</strong> with TradingView integration. Both platforms provide advanced tools for technical analysis, trade execution, and strategy development.
+  </p>
+
+  <div class="rounded-xl bg-amber-50 border border-amber-200 p-4 mb-6">
+    <p class="text-sm text-amber-800">
+      <strong>Note:</strong> US-based traders and those from US territories cannot use MT5 and will be restricted to ThinkTrader due to regulatory restrictions.
+    </p>
+  </div>
+
+  <!-- Platform Cards -->
+  <div class="grid sm:grid-cols-2 gap-4 mb-6">
+    <div class="rounded-xl border border-slate-200 bg-white p-5">
+      <h4 class="text-base font-bold text-slate-900 mb-2">MetaTrader 5 (MT5)</h4>
+      <ul class="space-y-1.5 text-sm text-slate-600">
+        <li class="flex items-start gap-2">
+          <span class="text-emerald-500 mt-0.5">&#10004;</span>
+          Industry-standard platform
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-emerald-500 mt-0.5">&#10004;</span>
+          Advanced charting tools
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-emerald-500 mt-0.5">&#10004;</span>
+          Expert Advisors support (add-on)
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-emerald-500 mt-0.5">&#10004;</span>
+          Raw spreads with commission
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-emerald-500 mt-0.5">&#10004;</span>
+          Desktop, web, and mobile
+        </li>
+      </ul>
+    </div>
+    <div class="rounded-xl border border-slate-200 bg-white p-5">
+      <h4 class="text-base font-bold text-slate-900 mb-2">ThinkTrader + TradingView</h4>
+      <ul class="space-y-1.5 text-sm text-slate-600">
+        <li class="flex items-start gap-2">
+          <span class="text-emerald-500 mt-0.5">&#10004;</span>
+          TradingView integration
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-emerald-500 mt-0.5">&#10004;</span>
+          User-friendly interface
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-emerald-500 mt-0.5">&#10004;</span>
+          Commission-free trading
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-emerald-500 mt-0.5">&#10004;</span>
+          Real-time collaboration tools
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-emerald-500 mt-0.5">&#10004;</span>
+          Available to US traders
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Trading Rules -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Rule</th>
+          <th class="px-4 py-3 text-left">Details</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">News Trading</td>
+          <td class="px-4 py-3 text-slate-700">Allowed during challenge; restricted on funded accounts without add-on (no trades 10 min before/after high-impact news)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Expert Advisors</td>
+          <td class="px-4 py-3 text-slate-700">Permitted with EA add-on on MT5 only</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Copy Trading</td>
+          <td class="px-4 py-3 text-slate-700">Between ThinkCapital accounts only (EA add-on required); external copying prohibited</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">HFT</td>
+          <td class="px-4 py-3 text-slate-700">Prohibited</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Inactivity</td>
+          <td class="px-4 py-3 text-slate-700">Minimum one trade every 30 days to avoid account termination</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mt-6">
+    <p class="text-sm font-bold text-teal-800 mb-1">Verdict on Trading Platforms</p>
+    <p class="text-sm text-teal-700">
+      ThinkCapital provides strong platform options with MT5 for advanced traders and ThinkTrader integrated with TradingView for user-friendly charting and collaboration. However, US-based traders are restricted to ThinkTrader, as MT5 is unavailable in the region.
+    </p>
+  </div>
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PAYOUTS SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "payouts" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    ThinkCapital offers a straightforward approach to payments and payouts, with competitively priced challenge fees and flexible profit withdrawal options.
+  </p>
+
+  <!-- Payout Details -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Profit Payouts</h3>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-4 py-3">
+      <p class="text-xs font-bold text-slate-500 uppercase tracking-wide mb-1">Profit Split</p>
+      <p class="text-lg font-black text-emerald-600">Up to 90%</p>
+      <p class="text-xs text-slate-400">with add-on</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-4 py-3">
+      <p class="text-xs font-bold text-slate-500 uppercase tracking-wide mb-1">Default Schedule</p>
+      <p class="text-lg font-black text-slate-800">Bi-weekly</p>
+      <p class="text-xs text-slate-400">every 14 days</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-4 py-3">
+      <p class="text-xs font-bold text-slate-500 uppercase tracking-wide mb-1">Processing Time</p>
+      <p class="text-lg font-black text-slate-800">3 days</p>
+      <p class="text-xs text-slate-400">business days</p>
+    </div>
+  </div>
+
+  <p class="mb-4">
+    For those who prefer more frequent access to funds, a <strong>weekly payout option</strong> is available as an add-on for Dual Step and Nexus accounts. All payouts are processed within <strong>three business days</strong>. Crypto withdrawals typically appear within 24 to 48 hours after processing.
+  </p>
+
+  <p class="mb-4">
+    Although there is no minimum payout limit, profits must exceed <strong>$100</strong> to cover transaction fees. ThinkCapital exclusively processes payouts in <strong>cryptocurrency</strong> for now, with bank transfers expected to become available in the near future.
+  </p>
+
+  <!-- Payment Methods -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Fee Payments</h3>
+  <p class="mb-4">
+    Fees range from <strong>$39</strong> for smaller Nexus accounts to <strong>$949</strong> for larger $200,000 Lightning/Dual Step accounts. Payment methods include <strong>cryptocurrency</strong> (such as USDT) and <strong>credit/debit cards</strong>. Bank transfer options are expected to become available soon.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mt-6">
+    <p class="text-sm font-bold text-teal-800 mb-1">Verdict on Payments &amp; Payouts</p>
+    <p class="text-sm text-teal-700">
+      ThinkCapital combines affordable fees and flexible payout options, making it accessible for a wide range of traders. The bi-weekly and weekly payout schedules cater to different needs, while cryptocurrency ensures quick withdrawals.
+    </p>
+  </div>
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SUPPORT SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "support" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    ThinkCapital provides solid customer support and educational resources to help traders refine their skills and maximise their funded trading opportunities.
+  </p>
+
+  <!-- Support Channels -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Customer Support</h3>
+  <div class="grid sm:grid-cols-3 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-4 py-3 text-center">
+      <p class="text-xs font-bold text-slate-500 uppercase tracking-wide mb-1">Live Chat</p>
+      <p class="text-sm font-bold text-emerald-600">Available</p>
+      <p class="text-xs text-slate-400">Instant assistance</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-4 py-3 text-center">
+      <p class="text-xs font-bold text-slate-500 uppercase tracking-wide mb-1">Email</p>
+      <p class="text-sm font-bold text-emerald-600">Available</p>
+      <p class="text-xs text-slate-400">Non-urgent queries</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-4 py-3 text-center">
+      <p class="text-xs font-bold text-slate-500 uppercase tracking-wide mb-1">Contact Form</p>
+      <p class="text-sm font-bold text-emerald-600">Available</p>
+      <p class="text-xs text-slate-400">On website</p>
+    </div>
+  </div>
+
+  <!-- Education -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Educational Resources</h3>
+  <p class="mb-4">
+    ThinkCapital's <strong>YouTube channel</strong> provides an extensive library of over <strong>100 videos</strong>, offering practical resources for traders of all levels. Topics range from risk management strategies to platform tutorials like "How to Set Up and Use the ThinkTrader Platform."
+  </p>
+  <p class="mb-4">
+    The channel also features interviews with successful traders and advanced topics like trading psychology and market analysis, providing insights into both technical skills and mindset development.
+  </p>
+
+  <!-- Verdict -->
+  <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mt-6">
+    <p class="text-sm font-bold text-teal-800 mb-1">Verdict on Support &amp; Education</p>
+    <p class="text-sm text-teal-700">
+      ThinkCapital excels in both customer support and education. The availability of live chat ensures traders can get immediate help, while the YouTube channel provides comprehensive resources to support learning and growth.
+    </p>
+  </div>
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* TRUST SECTION                                                       */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "trust" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-6">
+    ThinkCapital has built a strong reputation as a broker-backed prop trading firm with positive community feedback and growing presence.
+  </p>
+
+  <!-- Trust Stats -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-4 py-3 text-center">
+      <p class="text-xs font-bold text-slate-500 uppercase tracking-wide mb-1">Trustpilot</p>
+      <p class="text-lg font-black text-slate-800">4.3/5</p>
+      <p class="text-xs text-slate-400">500+ reviews</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-4 py-3 text-center">
+      <p class="text-xs font-bold text-slate-500 uppercase tracking-wide mb-1">Discord</p>
+      <p class="text-lg font-black text-slate-800">11,700</p>
+      <p class="text-xs text-slate-400">members</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-4 py-3 text-center">
+      <p class="text-xs font-bold text-slate-500 uppercase tracking-wide mb-1">X (Twitter)</p>
+      <p class="text-lg font-black text-slate-800">17,800+</p>
+      <p class="text-xs text-slate-400">followers</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-4 py-3 text-center">
+      <p class="text-xs font-bold text-slate-500 uppercase tracking-wide mb-1">Funded Traders</p>
+      <p class="text-lg font-black text-emerald-600">10,000+</p>
+      <p class="text-xs text-slate-400">active</p>
+    </div>
+  </div>
+
+  <!-- Trustpilot Details -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trustpilot Score</h3>
+  <p class="mb-4">
+    ThinkCapital has a <strong>Trustpilot rating of 4.3 out of 5</strong> based on 500+ reviews. Most users praise transparent trading rules, fast payout processes, and responsive customer support, with <strong>78% of reviews awarding five stars</strong>.
+  </p>
+  <p class="mb-6">
+    While some negative reviews mention issues like delays in account verification or occasional platform execution concerns, ThinkCapital responds promptly to all critical feedback, typically within 24 hours.
+  </p>
+
+  <!-- Community -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Community</h3>
+  <p class="mb-4">
+    ThinkCapital's Discord server hosts <strong>11,700 members</strong> with dedicated channels for trade psychology, general questions, and trading ideas — providing value to both beginners and experienced traders.
+  </p>
+  <p class="mb-6">
+    On X (Twitter), the firm has over <strong>17,800 followers</strong> with regular updates on trading rules, account features, and promotions.
+  </p>
+
+  <!-- Popularity -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">How Popular Is ThinkCapital?</h3>
+  <p class="mb-4">
+    ThinkCapital sees around <strong>12,100 monthly Google searches</strong>, making it the 29th most searched prop firm. With over <strong>10,000 funded traders</strong> currently using the platform, it's gained real traction as a broker-backed prop option.
+  </p>
+  <p class="mb-4">
+    In terms of website traffic, Similarweb shows <strong>141,681 global visits</strong> (March 2025), placing ThinkCapital 32nd by traffic across all prop firms tracked. Most branded search volume comes from the United States, followed by Canada, India, and the United Kingdom.
+  </p>
+
+  <!-- Top Search Countries -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Top Branded Searches by Country</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Country</th>
+          <th class="px-4 py-3 text-right">Monthly Searches</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">United States</td>
+          <td class="px-4 py-3 text-right text-slate-900">720</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Canada</td>
+          <td class="px-4 py-3 text-right text-slate-900">480</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">India</td>
+          <td class="px-4 py-3 text-right text-slate-900">390</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">United Kingdom</td>
+          <td class="px-4 py-3 text-right text-slate-900">210</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Pakistan</td>
+          <td class="px-4 py-3 text-right text-slate-900">170</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Vietnam</td>
+          <td class="px-4 py-3 text-right text-slate-900">110</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">South Africa</td>
+          <td class="px-4 py-3 text-right text-slate-900">110</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Nigeria</td>
+          <td class="px-4 py-3 text-right text-slate-900">110</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Australia</td>
+          <td class="px-4 py-3 text-right text-slate-900">90</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Germany</td>
+          <td class="px-4 py-3 text-right text-slate-900">70</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mt-6">
+    <p class="text-sm font-bold text-teal-800 mb-1">Verdict on Trust &amp; Community</p>
+    <p class="text-sm text-teal-700">
+      ThinkCapital is well-regarded for its 4.3 Trustpilot rating, reflecting user satisfaction with transparent rules, reliable payouts, and responsive support. While its Discord community of 11,700 members is smaller than competitors, it serves as a valuable hub for strategy sharing and education.
+    </p>
+  </div>
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* FALLBACK — render categorySections markdown body                    */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{!["challenges","spreads","markets","platforms","payouts","support","trust"].includes(section) && fallbackBody && (
+  <div class="text-sm leading-relaxed text-slate-700 space-y-4">
+    {fallbackBody.split("\n\n").map((para) => (
+      <p set:html={para.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")} />
+    ))}
+  </div>
+)}

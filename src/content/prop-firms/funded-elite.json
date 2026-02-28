@@ -3,49 +3,89 @@
   "slug": "funded-elite",
   "name": "Funded Elite",
   "status": "active",
+  "hqCountry": "LC",
   "evaluation": {
-    "types": [],
-    "profitTargets": {},
-    "dailyDrawdown": null,
-    "maxDrawdown": null,
-    "minTradingDays": null,
-    "scalingPlan": null
+    "types": ["1-step", "2-step", "instant"],
+    "profitTargets": { "phase1": 12, "phase2": 5 },
+    "dailyDrawdown": 5,
+    "maxDrawdown": 10,
+    "minTradingDays": 3,
+    "scalingPlan": true
   },
   "pricing": {
-    "challengeFees": [],
+    "challengeFees": [
+      { "accountSize": 7000, "fee": 41, "model": "2-step", "label": "Standard Challenge" },
+      { "accountSize": 15000, "fee": 60, "model": "2-step", "label": "Standard Challenge" },
+      { "accountSize": 25000, "fee": 101, "model": "2-step", "label": "Standard Challenge" },
+      { "accountSize": 50000, "fee": 152, "model": "2-step", "label": "Standard Challenge" },
+      { "accountSize": 100000, "fee": 240, "model": "2-step", "label": "Standard Challenge" },
+      { "accountSize": 200000, "fee": 457, "model": "2-step", "label": "Standard Challenge" },
+      { "accountSize": 300000, "fee": 639, "model": "2-step", "label": "Standard Challenge" },
+      { "accountSize": 5000, "fee": 13, "model": "2-step", "label": "Lite Challenge" },
+      { "accountSize": 10000, "fee": 21, "model": "2-step", "label": "Lite Challenge" },
+      { "accountSize": 15000, "fee": 33, "model": "2-step", "label": "Lite Challenge" },
+      { "accountSize": 25000, "fee": 49, "model": "2-step", "label": "Lite Challenge" },
+      { "accountSize": 50000, "fee": 110, "model": "2-step", "label": "Lite Challenge" },
+      { "accountSize": 100000, "fee": 165, "model": "2-step", "label": "Lite Challenge" },
+      { "accountSize": 200000, "fee": 324, "model": "2-step", "label": "Lite Challenge" },
+      { "accountSize": 300000, "fee": 495, "model": "2-step", "label": "Lite Challenge" },
+      { "accountSize": 7000, "fee": 159, "model": "instant", "label": "Flash Challenge" },
+      { "accountSize": 15000, "fee": 319, "model": "instant", "label": "Flash Challenge" },
+      { "accountSize": 25000, "fee": 419, "model": "instant", "label": "Flash Challenge" },
+      { "accountSize": 50000, "fee": 819, "model": "instant", "label": "Flash Challenge" },
+      { "accountSize": 100000, "fee": 1489, "model": "instant", "label": "Flash Challenge" },
+      { "accountSize": 25000, "fee": 5, "model": "1-step", "label": "Flash Activation Challenge" },
+      { "accountSize": 50000, "fee": 5, "model": "1-step", "label": "Flash Activation Challenge" },
+      { "accountSize": 100000, "fee": 5, "model": "1-step", "label": "Flash Activation Challenge" },
+      { "accountSize": 200000, "fee": 5, "model": "1-step", "label": "Flash Activation Challenge" }
+    ],
     "resetFee": null,
-    "refundPolicy": null
+    "refundPolicy": "Second chance reset available on Standard Challenge only. No refunds after trading begins."
   },
   "payouts": {
-    "splitMax": null,
-    "schedule": null,
-    "processingTime": null,
-    "firstPayoutDays": null,
-    "methods": []
+    "splitMax": 95,
+    "schedule": "3 to 21 days between payouts (adjustable via add-on)",
+    "processingTime": "Processed via Rise payment system",
+    "firstPayoutDays": 21,
+    "methods": ["bank-transfer", "crypto", "paypal"]
   },
   "rules": {
-    "newsTrading": null,
-    "weekendHolding": null,
-    "copyTrading": null,
-    "expertAdvisors": null,
-    "consistencyRule": null,
-    "notes": null
+    "newsTrading": true,
+    "weekendHolding": false,
+    "copyTrading": true,
+    "expertAdvisors": true,
+    "consistencyRule": "3 profitable trading days required with profit/loss of 0.5% of account size (Flash Challenge). Risk limit of no more than half of daily loss limit on a single asset on the same day. Lot size changes monitored for consistency compliance.",
+    "notes": "News trading allowed but no opening or closing positions during high-impact news windows. Weekend holding available as paid add-on at challenge selection. Weekend trading only with add-on. Copy trading permitted only between your own accounts — no social platform mirroring. EAs and automated trading allowed on MT5 but HFT, latency arbitrage, hedging, and micro scalping banned. Martingale allowed but not with over-leveraging or shared EAs. Account sharing, account rolling, and IP sharing strictly forbidden. Switching accounts mid-challenge not allowed. Scalping allowed only with add-on (positions must be held 30+ seconds). Payments accepted via cards, PayPal, bank transfers, wire transfers, and crypto (max $500 via Confirmo.net). Registered in Saint Lucia. Broker connectivity through Purple Trading (CySEC-regulated). MT5 and TradeLocker restricted in US, Cuba, Iran, Iraq, Lebanon, Libya, North Korea, Syria, Somalia, Algeria, Crimea, Donetsk, and Luhansk regions."
   },
   "markets": {
-    "platforms": [],
-    "instruments": ""
+    "platforms": ["MetaTrader 5", "TradeLocker"],
+    "instruments": "Forex (50-70+ pairs, 1:30 base, 1:50 or 1:100 with add-ons), Indices (10-15+, 1:30 base), Metals (5-10+, 1:30 base), Commodities (5-15+, 1:30 base), Crypto CFDs (10-30+, 1:30 base), Stock CFDs (100-150+, 1:30 base), Futures CFDs (50-100+). All leverage adjustable to 1:50 (+10% fee) or 1:100 (+20% fee)."
   },
   "trust": {
-    "trustpilotRating": null,
-    "trustpilotCount": null,
+    "trustpilotRating": 4.5,
+    "trustpilotCount": 562,
     "communitySize": null,
-    "notableFlags": []
+    "notableFlags": [
+      "Registered in Saint Lucia",
+      "Not backed by a regulated broker directly",
+      "Broker connectivity through Purple Trading (CySEC-regulated EU broker)",
+      "4.5/5 Trustpilot with 562 reviews",
+      "Mixed public perception — favorable Trustpilot but payout complaints on other platforms",
+      "Restricted in US, Canada, and several other countries"
+    ]
   },
   "links": { "website": "https://fundedelite.com" },
   "media": { "logo": "/images/logos/fundedlite.png" },
-  "availability": { "restrictedCountries": [] },
-  "custom": { "tags": [] },
-  "lastVerifiedAt": "2026-02-27",
-  "lastUpdatedAt": "2026-02-27",
+  "availability": { "restrictedCountries": ["US", "CA", "DZ", "CU", "IR", "IQ", "LB", "LY", "KP", "SY", "SO"] },
+  "support": {
+    "hours": "24/7 email support",
+    "liveChat": false,
+    "email": true
+  },
+  "custom": {
+    "tags": ["Multiple Challenge Models", "Customisable Add-Ons", "Instant Funding", "Pay Later Model", "300+ CFD Products"]
+  },
+  "lastVerifiedAt": "2026-02-28",
+  "lastUpdatedAt": "2026-02-28",
   "dataSources": ["https://fundedelite.com"]
 }

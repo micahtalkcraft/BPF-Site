@@ -4,48 +4,96 @@
   "name": "Blue Guardian",
   "status": "active",
   "evaluation": {
-    "types": [],
-    "profitTargets": {},
-    "dailyDrawdown": null,
-    "maxDrawdown": null,
+    "types": ["1-step", "2-step", "3-step", "instant"],
+    "profitTargets": { "phase1": 10, "phase2": 5 },
+    "dailyDrawdown": 3,
+    "maxDrawdown": 5,
     "minTradingDays": null,
-    "scalingPlan": null
+    "scalingPlan": true
   },
   "pricing": {
-    "challengeFees": [],
+    "challengeFees": [
+      { "accountSize": 5000, "fee": 54, "model": "instant", "label": "Instant Starter" },
+      { "accountSize": 5000, "fee": 155, "model": "instant", "label": "Instant Standard" },
+      { "accountSize": 10000, "fee": 305, "model": "instant", "label": "Instant Standard" },
+      { "accountSize": 25000, "fee": 520, "model": "instant", "label": "Instant Standard" },
+      { "accountSize": 50000, "fee": 652, "model": "instant", "label": "Instant Standard" },
+      { "accountSize": 100000, "fee": 784, "model": "instant", "label": "Instant Standard" },
+      { "accountSize": 200000, "fee": 1044, "model": "instant", "label": "Instant Standard" },
+      { "accountSize": 5000, "fee": 88, "model": "1-step", "label": "One Step" },
+      { "accountSize": 10000, "fee": 148, "model": "1-step", "label": "One Step" },
+      { "accountSize": 25000, "fee": 258, "model": "1-step", "label": "One Step" },
+      { "accountSize": 50000, "fee": 353, "model": "1-step", "label": "One Step" },
+      { "accountSize": 100000, "fee": 498, "model": "1-step", "label": "One Step" },
+      { "accountSize": 5000, "fee": 138, "model": "2-step", "label": "Two Step Standard" },
+      { "accountSize": 10000, "fee": 198, "model": "2-step", "label": "Two Step Standard" },
+      { "accountSize": 25000, "fee": 298, "model": "2-step", "label": "Two Step Standard" },
+      { "accountSize": 50000, "fee": 368, "model": "2-step", "label": "Two Step Standard" },
+      { "accountSize": 100000, "fee": 498, "model": "2-step", "label": "Two Step Standard" },
+      { "accountSize": 150000, "fee": 748, "model": "2-step", "label": "Two Step Standard" },
+      { "accountSize": 200000, "fee": 948, "model": "2-step", "label": "Two Step Standard" },
+      { "accountSize": 5000, "fee": 148, "model": "2-step", "label": "Two Step Pro" },
+      { "accountSize": 10000, "fee": 208, "model": "2-step", "label": "Two Step Pro" },
+      { "accountSize": 25000, "fee": 308, "model": "2-step", "label": "Two Step Pro" },
+      { "accountSize": 50000, "fee": 408, "model": "2-step", "label": "Two Step Pro" },
+      { "accountSize": 100000, "fee": 598, "model": "2-step", "label": "Two Step Pro" },
+      { "accountSize": 150000, "fee": 898, "model": "2-step", "label": "Two Step Pro" },
+      { "accountSize": 200000, "fee": 1098, "model": "2-step", "label": "Two Step Pro" },
+      { "accountSize": 10000, "fee": 29, "model": "3-step", "label": "Three Step" },
+      { "accountSize": 25000, "fee": 88, "model": "3-step", "label": "Three Step" },
+      { "accountSize": 50000, "fee": 122, "model": "3-step", "label": "Three Step" },
+      { "accountSize": 100000, "fee": 183, "model": "3-step", "label": "Three Step" },
+      { "accountSize": 150000, "fee": 353, "model": "3-step", "label": "Three Step" },
+      { "accountSize": 200000, "fee": 510, "model": "3-step", "label": "Three Step" }
+    ],
     "resetFee": null,
-    "refundPolicy": null
+    "refundPolicy": "Challenge fees are non-refundable unless you reach your fourth payout. Instant funding accounts are excluded from the refund offer. No time limits on evaluations, so no resets needed."
   },
   "payouts": {
-    "splitMax": null,
-    "schedule": null,
-    "processingTime": null,
-    "firstPayoutDays": null,
-    "methods": []
+    "splitMax": 90,
+    "schedule": "Bi-weekly",
+    "processingTime": "1–2 business days via Riseworks.io",
+    "firstPayoutDays": 14,
+    "methods": ["bank-transfer", "crypto"]
   },
   "rules": {
     "newsTrading": null,
     "weekendHolding": null,
-    "copyTrading": null,
-    "expertAdvisors": null,
-    "consistencyRule": null,
-    "notes": null
+    "copyTrading": true,
+    "expertAdvisors": true,
+    "consistencyRule": "Instant Starter accounts have a 15% consistency rule. Instant Standard accounts have a 20% consistency rule: if one trading day accounts for more than the threshold of your total profits, you must keep trading until that day falls under the limit before you can withdraw. No consistency rule on evaluation-based accounts.",
+    "notes": "Max daily loss resets at 5 PM EST. 100% stop-out level means open trades close when margin level drops below full coverage. Guardian Shield may auto-close trades if floating loss hits 1%. Platform switching allowed only after passing a phase with no open trades. Copy trading and EAs allowed — no latency arbitrage, tick scalping, or banned practices. Raw spreads with $5/lot commission on Forex and commodities, zero on indices and crypto. Crypto withdrawals capped at $2,000 per request. Minimum withdrawal $100. All trades must be closed before requesting a payout."
   },
   "markets": {
-    "platforms": [],
-    "instruments": ""
+    "platforms": ["MT5", "Match-Trader", "TradeLocker"],
+    "instruments": "Forex (Major & Minor pairs, 1:50 leverage), Indices (1:20 eval / 1:10 funded), Commodities including Gold (1:20 eval / 1:10 funded), Crypto (1:2 leverage). No stocks or bonds."
   },
   "trust": {
     "trustpilotRating": null,
-    "trustpilotCount": null,
-    "communitySize": null,
-    "notableFlags": []
+    "trustpilotCount": 1400,
+    "communitySize": "80,000+ Discord members",
+    "notableFlags": [
+      "TrustPilot rating unavailable — profile flagged for guideline violation",
+      "Not broker-backed during evaluation or funded phases",
+      "Over $16 million in total payouts claimed",
+      "5,600+ evaluations completed, 1,199 funded traders reported",
+      "Some users report spread manipulation and laggy price feeds",
+      "Guardian Shield auto-close feature draws criticism from traders"
+    ]
   },
   "links": { "website": "https://blueguardian.com" },
-  "media": {},
+  "media": { "logo": "/images/logos/blueguardian_logo.png" },
   "availability": { "restrictedCountries": [] },
-  "custom": { "tags": [] },
-  "lastVerifiedAt": "2026-02-27",
-  "lastUpdatedAt": "2026-02-27",
+  "support": {
+    "hours": "Monday–Friday 9:00 AM – 5:00 PM UTC",
+    "liveChat": false,
+    "email": true,
+    "discord": true
+  },
+  "custom": {
+    "tags": ["Instant Funding", "No Time Limits", "MT5 & TradeLocker", "80K+ Discord", "Up to 90% Split"]
+  },
+  "lastVerifiedAt": "2026-02-28",
+  "lastUpdatedAt": "2026-02-28",
   "dataSources": ["https://blueguardian.com"]
 }

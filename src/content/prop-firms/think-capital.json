@@ -4,47 +4,73 @@
   "name": "Think Capital",
   "status": "active",
   "evaluation": {
-    "types": [],
-    "profitTargets": {},
-    "dailyDrawdown": null,
-    "maxDrawdown": null,
-    "minTradingDays": null,
-    "scalingPlan": null
+    "types": ["1-step", "2-step", "other"],
+    "profitTargets": { "phase1": 10 },
+    "dailyDrawdown": 3,
+    "maxDrawdown": 6,
+    "minTradingDays": 0,
+    "scalingPlan": true
   },
   "pricing": {
-    "challengeFees": [],
+    "challengeFees": [
+      { "accountSize": 5000, "fee": 39, "model": "other", "label": "Nexus" },
+      { "accountSize": 5000, "fee": 59, "model": "1-step", "label": "Lightning" },
+      { "accountSize": 5000, "fee": 59, "model": "2-step", "label": "Dual Step" },
+      { "accountSize": 10000, "fee": 79, "model": "other", "label": "Nexus" },
+      { "accountSize": 10000, "fee": 99, "model": "1-step", "label": "Lightning" },
+      { "accountSize": 10000, "fee": 99, "model": "2-step", "label": "Dual Step" },
+      { "accountSize": 25000, "fee": 139, "model": "other", "label": "Nexus" },
+      { "accountSize": 25000, "fee": 199, "model": "1-step", "label": "Lightning" },
+      { "accountSize": 25000, "fee": 199, "model": "2-step", "label": "Dual Step" },
+      { "accountSize": 50000, "fee": 199, "model": "other", "label": "Nexus" },
+      { "accountSize": 50000, "fee": 299, "model": "1-step", "label": "Lightning" },
+      { "accountSize": 50000, "fee": 299, "model": "2-step", "label": "Dual Step" },
+      { "accountSize": 100000, "fee": 349, "model": "other", "label": "Nexus" },
+      { "accountSize": 100000, "fee": 499, "model": "1-step", "label": "Lightning" },
+      { "accountSize": 100000, "fee": 499, "model": "2-step", "label": "Dual Step" },
+      { "accountSize": 200000, "fee": 649, "model": "other", "label": "Nexus" },
+      { "accountSize": 200000, "fee": 949, "model": "1-step", "label": "Lightning" },
+      { "accountSize": 200000, "fee": 949, "model": "2-step", "label": "Dual Step" }
+    ],
     "resetFee": null,
     "refundPolicy": null
   },
   "payouts": {
-    "splitMax": null,
-    "schedule": null,
-    "processingTime": null,
-    "firstPayoutDays": null,
-    "methods": []
+    "splitMax": 90,
+    "schedule": "Bi-weekly (weekly with add-on)",
+    "processingTime": "3 business days",
+    "firstPayoutDays": 14,
+    "methods": ["crypto"]
   },
   "rules": {
-    "newsTrading": null,
+    "newsTrading": true,
     "weekendHolding": null,
-    "copyTrading": null,
-    "expertAdvisors": null,
+    "copyTrading": true,
+    "expertAdvisors": true,
     "consistencyRule": null,
-    "notes": null
+    "notes": "Three challenge types: Lightning (1-step, 1:30 leverage), Dual Step (2-step, 1:100 leverage), Nexus (3-step, 1:100 leverage). News trading allowed in challenges, restricted on funded accounts without add-on. EAs allowed with add-on on MT5 only. Copy trading between ThinkCapital accounts only (EA add-on required). HFT prohibited. Minimum one trade every 30 days to avoid inactivity termination."
   },
   "markets": {
-    "platforms": [],
-    "instruments": ""
+    "platforms": ["MT5", "ThinkTrader"],
+    "instruments": "Forex, Commodities, Indices, Crypto"
   },
   "trust": {
-    "trustpilotRating": null,
-    "trustpilotCount": null,
-    "communitySize": null,
-    "notableFlags": []
+    "trustpilotRating": 4.3,
+    "trustpilotCount": 500,
+    "communitySize": "11,700+ Discord",
+    "notableFlags": ["Broker-backed"]
   },
   "links": { "website": "https://thinkcapital.com" },
   "media": { "logo": "/images/logos/thinkcapital-icon.png" },
   "availability": { "restrictedCountries": [] },
-  "custom": { "tags": [] },
+  "support": {
+    "liveChat": true,
+    "email": true
+  },
+  "custom": {
+    "tags": ["Broker-backed", "Up to 90% Split", "US Traders Welcome", "Fees from $39"]
+  },
+  "notes": null,
   "lastVerifiedAt": "2026-02-27",
   "lastUpdatedAt": "2026-02-27",
   "dataSources": ["https://thinkcapital.com"]

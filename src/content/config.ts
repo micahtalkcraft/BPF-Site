@@ -15,7 +15,7 @@ const PropFirmSchema = z.object({
 
   // Evaluation (challenge models, targets, drawdowns)
   evaluation: z.object({
-    types: z.array(z.enum(["1-step", "2-step", "instant", "rapid", "synthetic", "other"])),
+    types: z.array(z.enum(["1-step", "2-step", "3-step", "instant", "rapid", "synthetic", "other"])),
     profitTargets: z.record(z.number()).optional(), // { "phase1": 10, "phase2": 5 }
     dailyDrawdown: z.number().min(0).max(100).nullable(),
     maxDrawdown: z.number().min(0).max(100).nullable(),

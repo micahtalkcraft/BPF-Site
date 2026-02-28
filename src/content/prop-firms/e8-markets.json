@@ -3,49 +3,83 @@
   "slug": "e8-markets",
   "name": "E8 Markets",
   "status": "active",
+  "foundedYear": 2021,
+  "hqCountry": "US",
   "evaluation": {
-    "types": [],
-    "profitTargets": {},
-    "dailyDrawdown": null,
-    "maxDrawdown": null,
-    "minTradingDays": null,
-    "scalingPlan": null
+    "types": ["1-step"],
+    "profitTargets": { "phase1": 6 },
+    "dailyDrawdown": 3,
+    "maxDrawdown": 14,
+    "minTradingDays": 0,
+    "scalingPlan": false
   },
   "pricing": {
-    "challengeFees": [],
+    "challengeFees": [
+      { "accountSize": 5000, "fee": 40, "model": "1-step", "label": "E8 One" },
+      { "accountSize": 10000, "fee": 72, "model": "1-step", "label": "E8 One" },
+      { "accountSize": 25000, "fee": 154, "model": "1-step", "label": "E8 One" },
+      { "accountSize": 50000, "fee": 235, "model": "1-step", "label": "E8 One" },
+      { "accountSize": 100000, "fee": 398, "model": "1-step", "label": "E8 One" },
+      { "accountSize": 200000, "fee": 650, "model": "1-step", "label": "E8 One" },
+      { "accountSize": 400000, "fee": 1301, "model": "1-step", "label": "E8 One" },
+      { "accountSize": 500000, "fee": 1627, "model": "1-step", "label": "E8 One" },
+      { "accountSize": 50000, "fee": 130, "model": "1-step", "label": "Signature Forex" },
+      { "accountSize": 100000, "fee": 260, "model": "1-step", "label": "Signature Forex" },
+      { "accountSize": 150000, "fee": 390, "model": "1-step", "label": "Signature Forex" },
+      { "accountSize": 50000, "fee": 130, "model": "1-step", "label": "Signature Futures" },
+      { "accountSize": 100000, "fee": 260, "model": "1-step", "label": "Signature Futures" },
+      { "accountSize": 150000, "fee": 390, "model": "1-step", "label": "Signature Futures" },
+      { "accountSize": 50000, "fee": 130, "model": "1-step", "label": "Signature Crypto" },
+      { "accountSize": 100000, "fee": 260, "model": "1-step", "label": "Signature Crypto" },
+      { "accountSize": 150000, "fee": 390, "model": "1-step", "label": "Signature Crypto" }
+    ],
     "resetFee": null,
-    "refundPolicy": null
+    "refundPolicy": "Refund available only if no trades have been placed. Once trading begins, no refunds are issued."
   },
   "payouts": {
-    "splitMax": null,
-    "schedule": null,
-    "processingTime": null,
+    "splitMax": 100,
+    "schedule": "On-demand (once consistency rules met)",
+    "processingTime": "1-2 business days approval, 2-5 business days payment",
     "firstPayoutDays": null,
-    "methods": []
+    "methods": ["bank-transfer", "crypto"]
   },
   "rules": {
-    "newsTrading": null,
-    "weekendHolding": null,
-    "copyTrading": null,
-    "expertAdvisors": null,
-    "consistencyRule": null,
-    "notes": null
+    "newsTrading": true,
+    "weekendHolding": false,
+    "copyTrading": false,
+    "expertAdvisors": true,
+    "consistencyRule": "E8 One: best day cannot exceed 40% of total profits, payout must exceed 50% of daily DD value. Signature: best day cannot exceed 35%, minimum 3 profitable days for first payout, 5 profitable days between future payouts. A profitable day = 0.3% closed profit.",
+    "notes": "E8 One allows weekend holding and overnight positions — Signature accounts are intraday-only with no overnight or weekend holds. News trading allowed on all Signature accounts at all stages; restricted once funded on E8 One (high-impact news windows). EAs allowed on E8 One, Signature Forex, and Signature Crypto — not allowed on Signature Futures (manual only). Copy trading not permitted on any account. HFT and latency arbitrage prohibited. All trading is simulated — no broker-backed execution. Signature Futures positions auto-close at 15:10 CT. Payments accepted via cards, Apple Pay, Google Pay, crypto, or bank transfer."
   },
   "markets": {
-    "platforms": [],
-    "instruments": ""
+    "platforms": ["Match-Trader", "MT5", "cTrader", "TradeLocker", "E8 Futures Platform", "Tradovate"],
+    "instruments": "Forex (E8 One 1:30, Signature 1:50), Indices (E8 One 1:15, Signature 1:25), Metals (E8 One 1:15, Signature 1:25), Energies (E8 One 1:15, Signature 1:25), Crypto (E8 One 1:1, Signature BTC/ETH 1:5, Altcoins 1:2), Futures (CME contracts — exchange margin, intraday only)"
   },
   "trust": {
-    "trustpilotRating": null,
-    "trustpilotCount": null,
+    "trustpilotRating": 4.4,
+    "trustpilotCount": 3000,
     "communitySize": null,
-    "notableFlags": []
+    "notableFlags": [
+      "Founded 2021 in Dallas, Texas (US)",
+      "Not broker-backed — fully simulated trading environment",
+      "4.4/5 Trustpilot with ~3,000 reviews",
+      "No liquidity providers disclosed",
+      "Payouts via Plane (bank) and RiseWorks (crypto)",
+      "Strict funded-stage payout caps and best-day rules"
+    ]
   },
   "links": { "website": "https://e8markets.com" },
   "media": { "logo": "/images/logos/e8markets.jpg" },
   "availability": { "restrictedCountries": [] },
-  "custom": { "tags": [] },
-  "lastVerifiedAt": "2026-02-27",
-  "lastUpdatedAt": "2026-02-27",
+  "support": {
+    "hours": "Extended weekday hours",
+    "liveChat": true,
+    "email": true
+  },
+  "custom": {
+    "tags": ["One-Step Only", "Futures Trading", "Crypto Trading", "Customisable Drawdown", "Six Platforms"]
+  },
+  "lastVerifiedAt": "2026-02-28",
+  "lastUpdatedAt": "2026-02-28",
   "dataSources": ["https://e8markets.com"]
 }

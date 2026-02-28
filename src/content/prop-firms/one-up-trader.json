@@ -3,48 +3,66 @@
   "slug": "one-up-trader",
   "name": "One Up Trader",
   "status": "active",
+  "hqCountry": "US",
   "evaluation": {
-    "types": [],
-    "profitTargets": {},
+    "types": ["1-step"],
+    "profitTargets": { "phase1": 6 },
     "dailyDrawdown": null,
-    "maxDrawdown": null,
-    "minTradingDays": null,
-    "scalingPlan": null
+    "maxDrawdown": 6,
+    "minTradingDays": 10,
+    "scalingPlan": true
   },
   "pricing": {
-    "challengeFees": [],
-    "resetFee": null,
-    "refundPolicy": null
+    "challengeFees": [
+      { "accountSize": 25000, "fee": 65, "model": "standard", "label": "per month" },
+      { "accountSize": 50000, "fee": 75, "model": "standard", "label": "per month" },
+      { "accountSize": 100000, "fee": 150, "model": "standard", "label": "per month" },
+      { "accountSize": 150000, "fee": 175, "model": "standard", "label": "per month" },
+      { "accountSize": 250000, "fee": 325, "model": "standard", "label": "per month" },
+      { "accountSize": 25000, "fee": 115, "model": "express", "label": "per month" },
+      { "accountSize": 50000, "fee": 125, "model": "express", "label": "per month" },
+      { "accountSize": 100000, "fee": 200, "model": "express", "label": "per month" },
+      { "accountSize": 150000, "fee": 275, "model": "express", "label": "per month" },
+      { "accountSize": 250000, "fee": 425, "model": "express", "label": "per month" }
+    ],
+    "resetFee": 50,
+    "refundPolicy": "No refund on challenge fees. Monthly subscription model — pay 50% upfront, remaining 50% once funded. Account reset: $50 for 25K/50K accounts, $100 for all others."
   },
   "payouts": {
-    "splitMax": null,
-    "schedule": null,
-    "processingTime": null,
+    "splitMax": 90,
+    "schedule": "On demand (anytime)",
+    "processingTime": "1-2 business days",
     "firstPayoutDays": null,
-    "methods": []
+    "methods": ["bank wire", "crypto"]
   },
   "rules": {
-    "newsTrading": null,
+    "newsTrading": true,
     "weekendHolding": null,
-    "copyTrading": null,
-    "expertAdvisors": null,
-    "consistencyRule": null,
-    "notes": null
+    "copyTrading": true,
+    "expertAdvisors": true,
+    "consistencyRule": "Three best other trading days must equal 80% or more of the largest day's net profit",
+    "notes": "Futures-only prop firm. News trading allowed during evaluation; funded traders must avoid trading 1 minute before/after major economic releases (FOMC, employment, inflation, GDP). Copy trading allowed only between accounts under the same name. High-frequency trading and trades under 10 seconds prohibited. Group/synchronized trading not allowed. Hedging across multiple funded accounts not allowed. Weekly trade execution must be at least 50% of average evaluation trades. Trailing drawdown stops at initial balance. No daily loss limits."
   },
   "markets": {
-    "platforms": [],
-    "instruments": ""
+    "platforms": ["NinjaTrader", "R|Trader Pro", "Sierra Chart", "ScalpTool", "Volfix.net", "Agena Trader", "Bookmap", "Jigsaw Trading", "MultiCharts", "Medved Trader", "Track 'n Trade", "Trade Navigator", "MotiveWave", "InsideEDGE Trader", "Vetta", "iTrader", "Order Flow Trading", "Photon Trade"],
+    "instruments": "Futures Markets: 50+ CME-listed products including Equity Indices, Commodities, Currencies, Interest Rates, Agricultural (micro and e-mini contracts, leverage scales with account size)"
   },
   "trust": {
-    "trustpilotRating": null,
-    "trustpilotCount": null,
-    "communitySize": null,
-    "notableFlags": []
+    "trustpilotRating": 4.7,
+    "trustpilotCount": 2000,
+    "communitySize": "Private Discord (course subscribers only)",
+    "notableFlags": ["4.7/5 Trustpilot from 2,000+ reviews", "No public Discord channel", "Active Instagram and Twitter presence", "Paid educational programs available"]
   },
   "links": { "website": "https://oneuptrader.com" },
   "media": { "logo": "/images/logos/one up trader.png" },
   "availability": { "restrictedCountries": [] },
-  "custom": { "tags": [] },
+  "support": {
+    "liveChat": true,
+    "email": true
+  },
+  "custom": {
+    "tags": ["Futures Only", "20+ Platforms", "Free NinjaTrader", "100% First $10K"]
+  },
   "lastVerifiedAt": "2026-02-27",
   "lastUpdatedAt": "2026-02-27",
   "dataSources": ["https://oneuptrader.com"]

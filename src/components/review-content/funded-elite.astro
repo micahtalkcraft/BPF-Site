@@ -1,0 +1,1152 @@
+---
+// Static editorial content for Funded Elite
+// Supports multiple sections via the `section` prop
+interface Props {
+  section: string;
+  fallbackBody?: string;
+}
+const { section, fallbackBody } = Astro.props;
+---
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* CHALLENGES SECTION                                                  */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "challenges" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    Funded Elite offers several challenge models — a Standard Challenge (two-step), Lite Challenge (two-step), Flash Challenge (instant funding), and Flash Activation Challenge (one-step, pay later) — each with adjustable fees, account sizes, profit targets, daily drawdown limits, and payout progression.
+  </p>
+
+  <p class="mb-6">
+    Funded Elite allows you to fully customise your challenge account plan on their web page. You can set scalping permissions, weekend trading, leverage (1:30, 1:50, or 1:100), profit split (60%, 70%, 80%, or 95%), and days between payouts (3, 7, 14, or 21 days).
+  </p>
+
+  <!-- Per-challenge summaries -->
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Standard Challenge – Two Step</p>
+      <p>Account sizes from $7K to $300K with fees starting at $41. Traditional two-step evaluation with adjustable profit targets (Step 1: 6–12%, Step 2: 5%), static drawdown, and free second chance reset available.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Only model with free second chance reset</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Lite Challenge – Two Step</p>
+      <p>Account sizes from $5K to $300K with fees starting at just $13. Same two-step structure as Standard but with a 4% daily loss limit and lower fees. No second chance available.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Lowest entry fees in the lineup</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Flash Challenge – Instant Funding</p>
+      <p>Account sizes from $7K to $100K with fees starting at $159. Skip multi-step evaluation with a fixed 3% daily loss, 6% trailing max drawdown, and no profit target. Requires 3 profitable trading days.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Fastest path to funded trading</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Flash Activation Challenge – Pay Later</p>
+      <p>Account sizes from $25K to $200K with a $5 entry fee. One-step evaluation with 6% profit target and 3% daily drawdown. Activation fee ($159–$989) paid only after passing.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Pay-later structure — only $5 upfront</p>
+    </div>
+  </div>
+
+  <!-- ─── Main Comparison Table ──────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Comparison</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-10">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Feature</th>
+          <th class="px-4 py-3 text-center">Standard Challenge</th>
+          <th class="px-4 py-3 text-center">Lite Challenge</th>
+          <th class="px-4 py-3 text-center">Flash Challenge</th>
+          <th class="px-4 py-3 text-center">Flash Activation</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Steps</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">Two Step</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">Two Step</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">None (Instant)</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">One Step</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Upfront Fees</td>
+          <td class="px-4 py-3 text-center text-slate-900">$41 – $639</td>
+          <td class="px-4 py-3 text-center text-slate-900">$13 – $495</td>
+          <td class="px-4 py-3 text-center text-slate-900">$159 – $1,489</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Account Sizes</td>
+          <td class="px-4 py-3 text-center text-slate-900">$7K – $300K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5K – $300K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$7K – $100K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$25K – $200K</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Target</td>
+          <td class="px-4 py-3 text-center text-slate-900">Step 1: 6–12%, Step 2: 5%</td>
+          <td class="px-4 py-3 text-center text-slate-900">Step 1: 6–12%, Step 2: 5%</td>
+          <td class="px-4 py-3 text-center text-slate-400">None</td>
+          <td class="px-4 py-3 text-center text-slate-900">6%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Max Daily Loss</td>
+          <td class="px-4 py-3 text-center text-slate-900">5%</td>
+          <td class="px-4 py-3 text-center text-slate-900">4%</td>
+          <td class="px-4 py-3 text-center text-slate-900">3% (Trailing)</td>
+          <td class="px-4 py-3 text-center text-slate-900">3%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Max Total Loss</td>
+          <td class="px-4 py-3 text-center text-slate-900">5–10%</td>
+          <td class="px-4 py-3 text-center text-slate-900">6–10%</td>
+          <td class="px-4 py-3 text-center text-slate-900">6%</td>
+          <td class="px-4 py-3 text-center text-slate-900">6–10%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Min Trading Days</td>
+          <td class="px-4 py-3 text-center text-slate-900">3 per step</td>
+          <td class="px-4 py-3 text-center text-slate-900">3 per step</td>
+          <td class="px-4 py-3 text-center text-slate-900">3</td>
+          <td class="px-4 py-3 text-center text-slate-900">1 day (Step), 3 days (Live)</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Share</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">60–95%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">60–95%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">70–95%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">60–95%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Second Chance</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Available</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">No</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">No</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">No</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 1. STANDARD CHALLENGE                                           -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">1</span>
+      Standard Challenge (Two Step)
+    </h3>
+
+    <p class="mb-3">
+      The Standard Challenge is Funded Elite's main evaluation model, specifically designed for traders who prefer a structured approach with adjustable trading rules and profit targets. Account sizes range from $7,000 to $300,000 with fees starting at $41.
+    </p>
+    <p class="mb-3">
+      Step 1 profit targets are adjustable from 6% to 12%, while Step 2 has a fixed 5% target. After the second step, the Live step requires at least 3 trading days with no profit target.
+    </p>
+    <p class="mb-4">
+      You can adjust leverage, profit split, maximum loss limits, and enable scalping or weekend trading at additional cost. This is the only model with a free second chance reset.
+    </p>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">One-Off Fee</th>
+            <th class="px-4 py-3 text-right">Profit Target</th>
+            <th class="px-4 py-3 text-right">Max Daily DD</th>
+            <th class="px-4 py-3 text-right">Max Total DD</th>
+            <th class="px-4 py-3 text-right">Profit Split</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$7,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$41</td>
+            <td class="px-4 py-3 text-right text-slate-700">Step 1: 6–12%, Step 2: 5%</td>
+            <td class="px-4 py-3 text-right text-slate-700">5%</td>
+            <td class="px-4 py-3 text-right text-slate-700">5–10%</td>
+            <td class="px-4 py-3 text-right font-semibold text-teal-600">60–95%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$15,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$60</td>
+            <td class="px-4 py-3 text-right text-slate-700">Step 1: 6–12%, Step 2: 5%</td>
+            <td class="px-4 py-3 text-right text-slate-700">5%</td>
+            <td class="px-4 py-3 text-right text-slate-700">5–10%</td>
+            <td class="px-4 py-3 text-right font-semibold text-teal-600">60–95%</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$101</td>
+            <td class="px-4 py-3 text-right text-slate-700">Step 1: 6–12%, Step 2: 5%</td>
+            <td class="px-4 py-3 text-right text-slate-700">5%</td>
+            <td class="px-4 py-3 text-right text-slate-700">5–10%</td>
+            <td class="px-4 py-3 text-right font-semibold text-teal-600">60–95%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$152</td>
+            <td class="px-4 py-3 text-right text-slate-700">Step 1: 6–12%, Step 2: 5%</td>
+            <td class="px-4 py-3 text-right text-slate-700">5%</td>
+            <td class="px-4 py-3 text-right text-slate-700">5–10%</td>
+            <td class="px-4 py-3 text-right font-semibold text-teal-600">60–95%</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$240</td>
+            <td class="px-4 py-3 text-right text-slate-700">Step 1: 6–12%, Step 2: 5%</td>
+            <td class="px-4 py-3 text-right text-slate-700">5%</td>
+            <td class="px-4 py-3 text-right text-slate-700">5–10%</td>
+            <td class="px-4 py-3 text-right font-semibold text-teal-600">60–95%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$200,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$457</td>
+            <td class="px-4 py-3 text-right text-slate-700">Step 1: 6–12%, Step 2: 5%</td>
+            <td class="px-4 py-3 text-right text-slate-700">5%</td>
+            <td class="px-4 py-3 text-right text-slate-700">5–10%</td>
+            <td class="px-4 py-3 text-right font-semibold text-teal-600">60–95%</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$300,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$639</td>
+            <td class="px-4 py-3 text-right text-slate-700">Step 1: 6–12%, Step 2: 5%</td>
+            <td class="px-4 py-3 text-right text-slate-700">5%</td>
+            <td class="px-4 py-3 text-right text-slate-700">5–10%</td>
+            <td class="px-4 py-3 text-right font-semibold text-teal-600">60–95%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Add-on -->
+    <div class="rounded-xl border border-amber-200 bg-amber-50 p-4">
+      <p class="text-sm font-bold text-amber-900 mb-1">Standard Challenge — Free Second Chance Reset</p>
+      <p class="text-sm text-amber-800">
+        The Standard Challenge is the only model that includes a free second chance reset. If you breach your account during the evaluation, you can restart without paying again. This makes it the safest entry point for traders who want a structured two-step process with a safety net.
+      </p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 2. LITE CHALLENGE                                               -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">2</span>
+      Lite Challenge (Two Step)
+    </h3>
+
+    <p class="mb-3">
+      The Lite Challenge follows the same two-phase evaluation rules as the Standard Challenge, except it has a tighter 4% daily loss limit at a significantly lower fee structure. Account sizes range from $5,000 to $300,000 with fees starting at just $13.
+    </p>
+    <p class="mb-4">
+      It's designed as a beginner-friendly entry point with a lower purchase fee, but there is no second chance available on the Lite model.
+    </p>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">One-Off Fee</th>
+            <th class="px-4 py-3 text-right">Profit Target</th>
+            <th class="px-4 py-3 text-right">Max Daily DD</th>
+            <th class="px-4 py-3 text-right">Max Total DD</th>
+            <th class="px-4 py-3 text-right">Profit Split</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$13</td>
+            <td class="px-4 py-3 text-right text-slate-700">Step 1: 6–12%, Step 2: 5%</td>
+            <td class="px-4 py-3 text-right text-slate-700">4%</td>
+            <td class="px-4 py-3 text-right text-slate-700">6–10%</td>
+            <td class="px-4 py-3 text-right font-semibold text-teal-600">60–95%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$21</td>
+            <td class="px-4 py-3 text-right text-slate-700">Step 1: 6–12%, Step 2: 5%</td>
+            <td class="px-4 py-3 text-right text-slate-700">4%</td>
+            <td class="px-4 py-3 text-right text-slate-700">6–10%</td>
+            <td class="px-4 py-3 text-right font-semibold text-teal-600">60–95%</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$15,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$33</td>
+            <td class="px-4 py-3 text-right text-slate-700">Step 1: 6–12%, Step 2: 5%</td>
+            <td class="px-4 py-3 text-right text-slate-700">4%</td>
+            <td class="px-4 py-3 text-right text-slate-700">6–10%</td>
+            <td class="px-4 py-3 text-right font-semibold text-teal-600">60–95%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$49</td>
+            <td class="px-4 py-3 text-right text-slate-700">Step 1: 6–12%, Step 2: 5%</td>
+            <td class="px-4 py-3 text-right text-slate-700">4%</td>
+            <td class="px-4 py-3 text-right text-slate-700">6–10%</td>
+            <td class="px-4 py-3 text-right font-semibold text-teal-600">60–95%</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$110</td>
+            <td class="px-4 py-3 text-right text-slate-700">Step 1: 6–12%, Step 2: 5%</td>
+            <td class="px-4 py-3 text-right text-slate-700">4%</td>
+            <td class="px-4 py-3 text-right text-slate-700">6–10%</td>
+            <td class="px-4 py-3 text-right font-semibold text-teal-600">60–95%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$165</td>
+            <td class="px-4 py-3 text-right text-slate-700">Step 1: 6–12%, Step 2: 5%</td>
+            <td class="px-4 py-3 text-right text-slate-700">4%</td>
+            <td class="px-4 py-3 text-right text-slate-700">6–10%</td>
+            <td class="px-4 py-3 text-right font-semibold text-teal-600">60–95%</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$200,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$324</td>
+            <td class="px-4 py-3 text-right text-slate-700">Step 1: 6–12%, Step 2: 5%</td>
+            <td class="px-4 py-3 text-right text-slate-700">4%</td>
+            <td class="px-4 py-3 text-right text-slate-700">6–10%</td>
+            <td class="px-4 py-3 text-right font-semibold text-teal-600">60–95%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$300,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$495</td>
+            <td class="px-4 py-3 text-right text-slate-700">Step 1: 6–12%, Step 2: 5%</td>
+            <td class="px-4 py-3 text-right text-slate-700">4%</td>
+            <td class="px-4 py-3 text-right text-slate-700">6–10%</td>
+            <td class="px-4 py-3 text-right font-semibold text-teal-600">60–95%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="rounded-xl border border-red-200 bg-red-50 p-4">
+      <p class="text-xs font-bold text-red-800 uppercase tracking-wide mb-1">No Second Chance</p>
+      <p class="text-sm text-red-700">The Lite Challenge does not include a free second chance reset. If you breach your account, you will need to purchase a new challenge.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 3. FLASH CHALLENGE                                              -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">3</span>
+      Flash Challenge (Instant Funding)
+    </h3>
+
+    <p class="mb-3">
+      The Flash Challenge is the fastest path to funded trading with only a live phase. It uses stricter rules via MT5 and TradeLocker — a fixed 3% daily loss limit, 6% trailing max drawdown, and no profit target. Account sizes range from $7,000 to $100,000.
+    </p>
+    <p class="mb-4">
+      To request a payout, you're required to maintain 3 profitable trading days with a profit/loss of 0.5% of your account size. No second chances and no multi-step support.
+    </p>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">One-Off Fee</th>
+            <th class="px-4 py-3 text-right">Max Daily DD</th>
+            <th class="px-4 py-3 text-right">Max Total DD</th>
+            <th class="px-4 py-3 text-right">Min Trading Days</th>
+            <th class="px-4 py-3 text-right">Profit Split</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$7,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$159+</td>
+            <td class="px-4 py-3 text-right text-slate-700">3%</td>
+            <td class="px-4 py-3 text-right text-slate-700">6% (Trailing)</td>
+            <td class="px-4 py-3 text-right text-slate-700">3</td>
+            <td class="px-4 py-3 text-right font-semibold text-teal-600">70–95%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$15,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$319+</td>
+            <td class="px-4 py-3 text-right text-slate-700">3%</td>
+            <td class="px-4 py-3 text-right text-slate-700">6% (Trailing)</td>
+            <td class="px-4 py-3 text-right text-slate-700">3</td>
+            <td class="px-4 py-3 text-right font-semibold text-teal-600">70–95%</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$419+</td>
+            <td class="px-4 py-3 text-right text-slate-700">3%</td>
+            <td class="px-4 py-3 text-right text-slate-700">6% (Trailing)</td>
+            <td class="px-4 py-3 text-right text-slate-700">3</td>
+            <td class="px-4 py-3 text-right font-semibold text-teal-600">70–95%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$819+</td>
+            <td class="px-4 py-3 text-right text-slate-700">3%</td>
+            <td class="px-4 py-3 text-right text-slate-700">6% (Trailing)</td>
+            <td class="px-4 py-3 text-right text-slate-700">3</td>
+            <td class="px-4 py-3 text-right font-semibold text-teal-600">70–95%</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$1,489+</td>
+            <td class="px-4 py-3 text-right text-slate-700">3%</td>
+            <td class="px-4 py-3 text-right text-slate-700">6% (Trailing)</td>
+            <td class="px-4 py-3 text-right text-slate-700">3</td>
+            <td class="px-4 py-3 text-right font-semibold text-teal-600">70–95%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="rounded-xl border border-amber-200 bg-amber-50 p-4">
+      <p class="text-sm font-bold text-amber-900 mb-1">Consistency Requirement</p>
+      <p class="text-sm text-amber-800">
+        Flash Challenge requires 3 profitable trading days with a profit/loss of at least 0.5% of your account size before you can request a payout. The trailing drawdown type means the max loss limit moves up with your equity highs.
+      </p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 4. FLASH ACTIVATION CHALLENGE                                   -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">4</span>
+      Flash Activation Challenge (Pay Later)
+    </h3>
+
+    <p class="mb-3">
+      The Flash Activation Challenge is a fast adjustable evaluation model with a $5 fee to enter the one-step evaluation. Once you pass, you pay the activation fee ($159–$989 depending on account size) within 29 days and immediately transfer to live trading after completing KYC.
+    </p>
+    <p class="mb-4">
+      This model is specifically designed for traders who want to avoid a large upfront purchase fee and lower risk exposure, but it has strict trading rules and no second chance.
+    </p>
+
+    <!-- Fee table -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Account Size</th>
+            <th class="px-4 py-3 text-right">Evaluation Fee</th>
+            <th class="px-4 py-3 text-right">Activation Fee</th>
+            <th class="px-4 py-3 text-right">Profit Target</th>
+            <th class="px-4 py-3 text-right">Max Daily DD</th>
+            <th class="px-4 py-3 text-right">Max Total DD</th>
+            <th class="px-4 py-3 text-right">Profit Split</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-right font-semibold text-emerald-600">$5</td>
+            <td class="px-4 py-3 text-right text-slate-900">$159</td>
+            <td class="px-4 py-3 text-right text-slate-700">6%</td>
+            <td class="px-4 py-3 text-right text-slate-700">3%</td>
+            <td class="px-4 py-3 text-right text-slate-700">6%</td>
+            <td class="px-4 py-3 text-right font-semibold text-teal-600">60–95%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-right font-semibold text-emerald-600">$5</td>
+            <td class="px-4 py-3 text-right text-slate-900">$329</td>
+            <td class="px-4 py-3 text-right text-slate-700">6%</td>
+            <td class="px-4 py-3 text-right text-slate-700">3%</td>
+            <td class="px-4 py-3 text-right text-slate-700">6%</td>
+            <td class="px-4 py-3 text-right font-semibold text-teal-600">60–95%</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+            <td class="px-4 py-3 text-right font-semibold text-emerald-600">$5</td>
+            <td class="px-4 py-3 text-right text-slate-900">$499</td>
+            <td class="px-4 py-3 text-right text-slate-700">6%</td>
+            <td class="px-4 py-3 text-right text-slate-700">3%</td>
+            <td class="px-4 py-3 text-right text-slate-700">6%</td>
+            <td class="px-4 py-3 text-right font-semibold text-teal-600">60–95%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">$200,000</td>
+            <td class="px-4 py-3 text-right font-semibold text-emerald-600">$5</td>
+            <td class="px-4 py-3 text-right text-slate-900">$989</td>
+            <td class="px-4 py-3 text-right text-slate-700">6%</td>
+            <td class="px-4 py-3 text-right text-slate-700">3%</td>
+            <td class="px-4 py-3 text-right text-slate-700">6%</td>
+            <td class="px-4 py-3 text-right font-semibold text-teal-600">60–95%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="rounded-xl border border-amber-200 bg-amber-50 p-4">
+      <p class="text-sm font-bold text-amber-900 mb-1">Activation Fee Timing</p>
+      <p class="text-sm text-amber-800">
+        The activation fee must be paid within 29 days of passing the evaluation. Once paid, you immediately begin live funded trading after completing KYC and the trader agreement. Min trading days: 1 day for evaluation step, 3 days for live step.
+      </p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- ADD-ONS TABLE                                                   -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3">Available Add-Ons</h3>
+    <p class="mb-4">
+      Funded Elite offers a wide set of add-ons that allow you to adjust your trading conditions, improve payout structures, or modify evaluation rules at a price. These add-ons provide better customisation, although some are restricted depending on the account type.
+    </p>
+
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Add-On</th>
+            <th class="px-4 py-3 text-center">Applies To</th>
+            <th class="px-4 py-3 text-left">Notes</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">Profit Split Adjustment</td>
+            <td class="px-4 py-3 text-center text-slate-700">All accounts</td>
+            <td class="px-4 py-3 text-slate-700">Changes profit share from 60% up to 95% at additional cost</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">Payout Accelerator</td>
+            <td class="px-4 py-3 text-center text-slate-700">All accounts</td>
+            <td class="px-4 py-3 text-slate-700">Reduces days between payouts: 3, 7, 14, or 21 days</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">Maximum Loss Limit</td>
+            <td class="px-4 py-3 text-center text-slate-700">All except Flash</td>
+            <td class="px-4 py-3 text-slate-700">Modifies loss limit, varies by challenge type and step</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">Profit Target</td>
+            <td class="px-4 py-3 text-center text-slate-700">All except Flash</td>
+            <td class="px-4 py-3 text-slate-700">Adjustable from 2–6% (Flash Activation) or 6–12% (others)</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">Second Chance</td>
+            <td class="px-4 py-3 text-center text-slate-700">Standard only</td>
+            <td class="px-4 py-3 text-slate-700">Free second chance reset if account is breached</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">Allow Scalping</td>
+            <td class="px-4 py-3 text-center text-slate-700">All accounts</td>
+            <td class="px-4 py-3 text-slate-700">Allows holding positions for less than 30 seconds</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">Weekend Trading</td>
+            <td class="px-4 py-3 text-center text-slate-700">All accounts</td>
+            <td class="px-4 py-3 text-slate-700">Allows holding open positions over the weekend</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">Leverage Adjustment</td>
+            <td class="px-4 py-3 text-center text-slate-700">All accounts</td>
+            <td class="px-4 py-3 text-slate-700">Upgrade from 1:30 to 1:50 (+10%) or 1:100 (+20%)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- TRADING RULES                                                   -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules</h3>
+    <p class="mb-4">
+      Funded Elite state that they are committed to transparency with a structured rule framework that applies across all challenges and funded accounts.
+    </p>
+
+    <div class="space-y-3 mb-6">
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1 flex items-center gap-2">
+          <span class="text-emerald-600">&#10003;</span> EAs & Automated Trading
+        </p>
+        <p>EAs and automated trading are allowed on MT5, but HFT, latency arbitrage, hedging, and micro scalping are banned. Account sharing, account rolling, and IP sharing is strictly forbidden.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1 flex items-center gap-2">
+          <span class="text-amber-500">&#9888;</span> Copy Trading
+        </p>
+        <p>Copy trading is permitted only via accounts that you own. You cannot mirror trades from social platforms. Account sharing is forbidden and enforced with account termination.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1 flex items-center gap-2">
+          <span class="text-amber-500">&#9888;</span> News & Weekend Trading
+        </p>
+        <p>News trading is allowed but you cannot open new positions during high-impact news windows. Weekend holding requires a paid add-on. Accounts are not swap-free.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1 flex items-center gap-2">
+          <span class="text-red-500">&#10007;</span> Risk Limits
+        </p>
+        <p>You cannot risk more than half of your daily loss limit on a single asset on the same day. For example, with a 5% daily drawdown, you cannot risk more than 2.5% on one instrument. Lot size changes are monitored for consistency compliance.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- VERDICT                                                         -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Funded Elite Challenges</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Funded Elite scores 8/10 in this category because it provides a wide range of evaluation models that are fully customisable with flexible account sizes, clear rules, free second chance options on selected accounts, and useful add-ons. The strict rules and floating loss enforcement, as well as the risk of fast breaches during news trading, may not suit all traders. But there are only a few prop firms that offer this level of flexibility in creating your own challenge requirements.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SPREADS / COMMISSION FEES & PRICING SECTION                         */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "spreads" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-3">
+    Funded Elite uses a straightforward pricing model built around raw spreads from 0 pips and a fixed <strong>$3 per lot per side</strong> commission on all forex pairs, gold, silver, and oil. Most other instruments — indices, crypto, stocks, and futures — trade with no commission fees.
+  </p>
+
+  <!-- Stats grid -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Forex Commission</p>
+      <p class="text-sm font-bold text-slate-800">$3/lot/side</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Spreads From</p>
+      <p class="text-sm font-bold text-emerald-600">0.0 pips</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Indices Commission</p>
+      <p class="text-sm font-bold text-emerald-600">$0</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Crypto Commission</p>
+      <p class="text-sm font-bold text-emerald-600">$0</p>
+    </div>
+  </div>
+
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Raw Spread Symbols (.c)</h3>
+  <p class="mb-4">
+    Funded Elite offers ".c" raw spread symbols (EURUSDc, GBPUSDc, USDJPYc, etc.) that route through the raw feed and typically show extremely tight pricing, often near 0.0 pips in liquid hours. The non-.c versions still use the same $3 per side commission but spreads are naturally wider.
+  </p>
+
+  <!-- Commission table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Commission Structure by Asset Class</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Asset Class</th>
+          <th class="px-4 py-3 text-center">Commission</th>
+          <th class="px-4 py-3 text-left">Spread Profile</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Forex (all pairs)</td>
+          <td class="px-4 py-3 text-center text-slate-900">$3/lot/side</td>
+          <td class="px-4 py-3 text-slate-700">Tightest on .c symbols, wider on non-.c</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Gold, Silver, Oil</td>
+          <td class="px-4 py-3 text-center text-slate-900">$3/lot/side</td>
+          <td class="px-4 py-3 text-slate-700">Raw or near-raw spreads; some futures versions spread-only</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Indices</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">None</td>
+          <td class="px-4 py-3 text-slate-700">Spread-only pricing</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Crypto CFDs</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">None</td>
+          <td class="px-4 py-3 text-slate-700">Spread-only; wider in low-liquidity periods</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Equity CFDs</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">None</td>
+          <td class="px-4 py-3 text-slate-700">Spread-only pricing</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Futures CFDs</td>
+          <td class="px-4 py-3 text-center text-slate-700">Mixed ($0 or $3)</td>
+          <td class="px-4 py-3 text-slate-700">Varies by symbol family and liquidity</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Commission Fees & Pricing</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Funded Elite scores 7/10 for its raw-style spreads, simple commission structure, and cost-effective pricing on major pairs. The lack of commissions on indices, crypto, and equities helps keep overall trading costs predictable. Some instruments, especially niche CFDs and crypto pairs, can show wider spreads at off-peak times, but the core pricing remains competitive for most day-trading styles.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* MARKETS / FINANCIAL MARKETS & LEVERAGE SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "markets" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Funded Elite provides access to a wide set of tradable instruments — more than <strong>300 CFD products</strong> covering forex, commodities, indices, crypto, stocks, and futures with leverage custom-tailored to account settings.
+  </p>
+
+  <!-- Stats grid -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Forex Pairs</p>
+      <p class="text-sm font-bold text-slate-800">50–70+</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Stock CFDs</p>
+      <p class="text-sm font-bold text-slate-800">100–150+</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Base Leverage</p>
+      <p class="text-sm font-bold text-slate-800">1:30</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Leverage</p>
+      <p class="text-sm font-bold text-emerald-600">1:100</p>
+    </div>
+  </div>
+
+  <!-- Markets breakdown -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Available Markets</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Asset Class</th>
+          <th class="px-4 py-3 text-center">No. of Instruments</th>
+          <th class="px-4 py-3 text-left">Notes</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Forex Pairs</td>
+          <td class="px-4 py-3 text-center text-slate-900">50–70+</td>
+          <td class="px-4 py-3 text-slate-700">Includes majors, minors, and exotics</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Metals</td>
+          <td class="px-4 py-3 text-center text-slate-900">5–10+</td>
+          <td class="px-4 py-3 text-slate-700">Gold, Silver, Platinum, and others</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Indices</td>
+          <td class="px-4 py-3 text-center text-slate-900">10–15+</td>
+          <td class="px-4 py-3 text-slate-700">NAS100, GER40, S&P 500, Dow Jones</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Commodities</td>
+          <td class="px-4 py-3 text-center text-slate-900">5–15+</td>
+          <td class="px-4 py-3 text-slate-700">Energy and soft commodities</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Crypto CFDs</td>
+          <td class="px-4 py-3 text-center text-slate-900">10–30+</td>
+          <td class="px-4 py-3 text-slate-700">BTC, ETH, and other digital assets</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Stock CFDs</td>
+          <td class="px-4 py-3 text-center text-slate-900">100–150+</td>
+          <td class="px-4 py-3 text-slate-700">Apple, Tesla, Amazon, Microsoft, Google, Meta</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Futures CFDs</td>
+          <td class="px-4 py-3 text-center text-slate-900">50–100+</td>
+          <td class="px-4 py-3 text-slate-700">Energy, metals, S&P, NASDAQ, currency futures</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Leverage -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Leverage Settings</h3>
+  <p class="mb-4">
+    The base leverage for all accounts is 1:30, but you can purchase add-ons to increase it to 1:50 (+10% fee) or 1:100 (+20% fee). Leverage remains fixed at the selected level regardless of instrument or account balance. Even with higher leverage, you cannot risk more than 2.5% of your account on any single trade.
+  </p>
+
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
+    <p class="text-sm font-bold text-amber-900 mb-1">Risk Limit with Leverage</p>
+    <p class="text-sm text-amber-800">
+      Even with higher leverage settings, you still cannot risk more than half of your daily loss limit on a single asset on the same day. This prevents over-leveraging on any individual position.
+    </p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Financial Markets & Leverage</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Funded Elite scores 7/10 due to its wide product range, realistic leverage settings, and flexible add-ons that allow increased leverage on all accounts. The futures CFDs, crypto CFDs, metals, and global indices improve market diversity. However, downsides include limited single stock selections and variable crypto availability depending on the platform.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PLATFORMS / TRADING PLATFORMS SECTION                                */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "platforms" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Funded Elite lets you choose between <strong>MetaTrader 5 (MT5)</strong> and <strong>TradeLocker</strong>, with the access fee included in your evaluation fee — no platform subscription charges. They are officially licensed by MetaQuotes with direct broker bridging, and for cTrader, the firm uses broker-backed connectivity through Purple Trading.
+  </p>
+
+  <!-- Platform availability -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Platform Availability</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Platform</th>
+          <th class="px-4 py-3 text-center">Standard</th>
+          <th class="px-4 py-3 text-center">Lite</th>
+          <th class="px-4 py-3 text-center">Flash</th>
+          <th class="px-4 py-3 text-center">Flash Activation</th>
+          <th class="px-4 py-3 text-left">Notes</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">MetaTrader 5</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-slate-700">Full EA support, multi-asset</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">TradeLocker</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+          <td class="px-4 py-3 text-slate-700">Browser-based, no EA support</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Platform cards -->
+  <div class="space-y-4 mb-8">
+    <!-- MT5 -->
+    <div class="rounded-xl border border-slate-200 p-5">
+      <h4 class="text-base font-bold text-slate-900 mb-2">MetaTrader 5 (MT5)</h4>
+      <p class="mb-3">
+        MT5 is available for all accounts and offers the industry standard trading environment with indicators, Expert Advisor compatibility, automated strategies, and robust execution tools. It supports forex, metals, indices, commodities, crypto CFDs, and selected stock CFDs.
+      </p>
+      <p class="mb-3">
+        Algorithmic trading is fully enabled on MT5, but Funded Elite forbids any unsupported high-frequency or manipulative strategies.
+      </p>
+      <div class="flex flex-wrap gap-2">
+        <span class="rounded-full bg-teal-100 px-3 py-1 text-xs font-semibold text-teal-700">EA Support</span>
+        <span class="rounded-full bg-teal-100 px-3 py-1 text-xs font-semibold text-teal-700">Multi-Asset</span>
+        <span class="rounded-full bg-teal-100 px-3 py-1 text-xs font-semibold text-teal-700">Desktop & Mobile</span>
+        <span class="rounded-full bg-teal-100 px-3 py-1 text-xs font-semibold text-teal-700">Advanced Charting</span>
+      </div>
+    </div>
+
+    <!-- TradeLocker -->
+    <div class="rounded-xl border border-slate-200 p-5">
+      <h4 class="text-base font-bold text-slate-900 mb-2">TradeLocker</h4>
+      <p class="mb-3">
+        TradeLocker is a browser-based, mobile-friendly trading platform with indicators, drawing tools, and standard order types. It supports forex, metals, indices, commodities, crypto, and CFD futures.
+      </p>
+      <p class="mb-3">
+        Both TradeLocker and MT5 show Level I prices on the feeds. However, TradeLocker does <strong>not support Expert Advisors (EAs)</strong> and is not available for the Flash Activation Challenge.
+      </p>
+      <div class="flex flex-wrap gap-2">
+        <span class="rounded-full bg-teal-100 px-3 py-1 text-xs font-semibold text-teal-700">Browser-Based</span>
+        <span class="rounded-full bg-teal-100 px-3 py-1 text-xs font-semibold text-teal-700">Mobile-Friendly</span>
+        <span class="rounded-full bg-teal-100 px-3 py-1 text-xs font-semibold text-teal-700">Drawing Tools</span>
+        <span class="rounded-full bg-red-100 px-3 py-1 text-xs font-semibold text-red-600">No EA Support</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Country restrictions -->
+  <div class="rounded-xl border border-red-200 bg-red-50 p-4 mb-6">
+    <p class="text-xs font-bold text-red-800 uppercase tracking-wide mb-1">Platform Restrictions</p>
+    <p class="text-sm text-red-700">Traders in Algeria, Cuba, Iran, Iraq, Lebanon, Libya, North Korea, Syria, USA, Somalia, Crimea, Donetsk, and Luhansk regions of Ukraine are prohibited from accessing MT5 and TradeLocker. cTrader was previously available and will be reinstated along with DXtrade in the future.</p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trading Platforms</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Funded Elite scores 5/10 in this category due to its support for MT5 and TradeLocker, which cover major markets and tradable instruments. Automation is fully available on MT5, while TradeLocker provides a lightweight alternative. The lack of automation support on TradeLocker, platform restrictions for many countries, and the limited platform selection reduce the score.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PAYOUTS / PAYMENTS & PROFIT PAYOUT SECTION                          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "payouts" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Once you reach funded status, you receive payouts without fixed withdrawal limits. The profit split starts at <strong>60%</strong> and can be upgraded via paid add-ons up to <strong>95%</strong>. You can set the days between payouts from 3, 7, 14, or 21 days.
+  </p>
+
+  <!-- Stats grid -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
+      <p class="text-sm font-bold text-teal-600">60–95%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">First Payout Cycle</p>
+      <p class="text-sm font-bold text-slate-800">21 days</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Subsequent Cycles</p>
+      <p class="text-sm font-bold text-slate-800">14 days (or 3–7 with add-on)</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Crypto Max</p>
+      <p class="text-sm font-bold text-slate-800">$500 via Confirmo</p>
+    </div>
+  </div>
+
+  <!-- Payment methods -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payment Methods</h3>
+  <p class="mb-4">
+    Funded Elite processes all funding via a third-party system called <strong>Rise</strong> that supports debit and credit cards (Visa/Mastercard), PayPal, bank transfers, wire transfers, and crypto payments (max $500) via Confirmo.net.
+  </p>
+  <p class="mb-4">
+    Funded Elite does not fund traders with real money — instead with virtual capital traded under real-time market conditions. The profit you earn from successful trading is real and paid out to you.
+  </p>
+
+  <!-- Payout structure -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payout Structure</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Detail</th>
+          <th class="px-4 py-3 text-left">Description</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">First Payout Cycle</td>
+          <td class="px-4 py-3 text-slate-700">21 days from funded account start</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Subsequent Cycles</td>
+          <td class="px-4 py-3 text-slate-700">14 days (adjustable to 3, 7, or 21 via add-on)</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Profit Split</td>
+          <td class="px-4 py-3 text-slate-700">60% base, upgradeable to 70%, 80%, or 95%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Refund Policy</td>
+          <td class="px-4 py-3 text-slate-700">Refunds not offered after the fourth withdrawal</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Processing</td>
+          <td class="px-4 py-3 text-slate-700">Via Rise payment system (bank, PayPal, crypto)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Payout warning -->
+  <div class="rounded-xl border border-red-200 bg-red-50 p-4 mb-6">
+    <p class="text-xs font-bold text-red-800 uppercase tracking-wide mb-1">Payout Concerns</p>
+    <p class="text-sm text-red-700">
+      Despite the flexibility, there is a concerning number of negative experiences found on forums and social channels where traders complain that Funded Elite does not always honour the stated waiting period. Some report never receiving their payouts even when promised by the firm. This is a significant factor to consider before choosing Funded Elite.
+    </p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Payments & Profit Payout</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Funded Elite scores 4/10 due to its flexible profit split upgrades and withdrawal methods through Rise. The structured timing and transparent payout rules support predictable earnings once funded. However, a major downside is the significant number of trader complaints regarding non-existent or delayed payments, as well as strict risk controls on payout eligibility.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SUPPORT / CUSTOMER SERVICE & EDUCATION SECTION                      */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "support" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Funded Elite offers support through a ticket system, <strong>24/7 email assistance</strong>, and a structured knowledge base covering account rules, trading conditions, payouts, and platform details. They have clear and tidy web documentation for evaluation rules, add-ons, trading conditions, and platform setup.
+  </p>
+
+  <!-- Support channels -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">24/7 Email Support</p>
+      <p>Ticket-based system with email assistance available around the clock. Response times are predictable based on our testing.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Knowledge Base</p>
+      <p>Structured help center with articles on rule enforcement, activation fees, account setup, and platform configuration.</p>
+    </div>
+  </div>
+
+  <!-- Education -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Educational Resources</h3>
+  <p class="mb-4">
+    The educational resources include guides covering topics like consistency rules, floating loss calculations, max daily drawdown logic, and platform configuration. However, Funded Elite does <strong>not offer formal courses or mentorship programmes</strong>.
+  </p>
+
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
+    <p class="text-sm font-bold text-amber-900 mb-1">Limited Education</p>
+    <p class="text-sm text-amber-800">
+      While the help center and documentation are thorough for rule explanations and account setup, Funded Elite does not provide interactive educational content, formal courses, webinars, or mentorship. Traders looking for learning resources should seek these elsewhere.
+    </p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Customer Service & Education</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Funded Elite scores 6/10 for its help center and 24/7 email support. The documentation covers all key features, trading rules, and account types with clear explanations. Compared to other prop firms, Funded Elite offers fast technical support and clear rule documentation, but the lack of courses and interactive educational content reduces the score.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* TRUST / TRUST & COMMUNITY SECTION                                   */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "trust" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Registered in <strong>Saint Lucia</strong>, Funded Elite is not backed by a regulated broker directly, but they have a solid operational framework supported by broker connectivity through <strong>Purple Trading</strong>, a CySEC-regulated EU broker. They claim transparency for their drawdown rules, trading conditions, payouts, and platform access.
+  </p>
+
+  <!-- Trustpilot -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trustpilot Reviews</h3>
+  <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 mb-6 flex items-center gap-4">
+    <div class="flex-shrink-0">
+      <p class="text-3xl font-black text-slate-900">4.5<span class="text-lg text-slate-400">/5</span></p>
+      <p class="text-xs text-slate-500 font-semibold">TrustScore</p>
+    </div>
+    <div>
+      <p class="text-sm text-slate-700">Based on <strong>562 reviews</strong> on Trustpilot. Feedback commonly refers to the user-friendly system, customisable challenges, clear rules, and polite customer support.</p>
+    </div>
+  </div>
+
+  <!-- Positive and negative feedback -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+    <div class="rounded-xl bg-emerald-50 border border-emerald-200 p-4">
+      <p class="text-xs font-bold text-emerald-800 uppercase tracking-wide mb-2">Positive Feedback</p>
+      <ul class="space-y-1 text-sm text-emerald-700">
+        <li class="flex items-start gap-2"><span class="text-emerald-600 mt-0.5">&#10003;</span> Fast payouts reported by many users</li>
+        <li class="flex items-start gap-2"><span class="text-emerald-600 mt-0.5">&#10003;</span> Clear and well-documented rules</li>
+        <li class="flex items-start gap-2"><span class="text-emerald-600 mt-0.5">&#10003;</span> Customisable challenge settings</li>
+        <li class="flex items-start gap-2"><span class="text-emerald-600 mt-0.5">&#10003;</span> Polite and responsive customer support</li>
+      </ul>
+    </div>
+    <div class="rounded-xl bg-red-50 border border-red-200 p-4">
+      <p class="text-xs font-bold text-red-800 uppercase tracking-wide mb-2">Negative Feedback</p>
+      <ul class="space-y-1 text-sm text-red-700">
+        <li class="flex items-start gap-2"><span class="text-red-500 mt-0.5">&#10007;</span> Delayed or missing payouts on forums</li>
+        <li class="flex items-start gap-2"><span class="text-red-500 mt-0.5">&#10007;</span> Scam allegations on social channels</li>
+        <li class="flex items-start gap-2"><span class="text-red-500 mt-0.5">&#10007;</span> Country restrictions exclude many traders</li>
+        <li class="flex items-start gap-2"><span class="text-red-500 mt-0.5">&#10007;</span> Some report promises not honoured</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Trust signals -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trust Signals</h3>
+  <div class="space-y-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1 flex items-center gap-2">
+        <span class="text-emerald-600">&#10003;</span> Broker Connectivity
+      </p>
+      <p>Connected through Purple Trading, a CySEC-regulated EU broker, which adds a layer of operational credibility and broker-backed infrastructure.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1 flex items-center gap-2">
+        <span class="text-emerald-600">&#10003;</span> Trustpilot Rating
+      </p>
+      <p>4.5/5 with 562 reviews on Trustpilot. Primarily favourable reviews mentioning fast payouts and clear rules.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1 flex items-center gap-2">
+        <span class="text-emerald-600">&#10003;</span> Licensed Platforms
+      </p>
+      <p>Officially licensed by MetaQuotes for MT5 with direct broker bridging. Platform access is legitimate and verified.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1 flex items-center gap-2">
+        <span class="text-red-500">&#10007;</span> Payout Reputation
+      </p>
+      <p>Significant negative feedback on forums and social media about delayed or missing payouts, undermining the otherwise positive Trustpilot presence.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1 flex items-center gap-2">
+        <span class="text-amber-500">&#9888;</span> Saint Lucia Registration
+      </p>
+      <p>Registered in Saint Lucia, a jurisdiction with limited financial regulatory oversight. Not directly backed by a regulated broker.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1 flex items-center gap-2">
+        <span class="text-red-500">&#10007;</span> Country Restrictions
+      </p>
+      <p>Traders in the US, Canada, and several other countries are prohibited from using the platform, limiting global accessibility.</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trust & Community</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Funded Elite scores 5/10 because of its clear public documentation and transparent rule sets, which are significantly undermined by unfavourable reviews on forums and social channels about payout reliability. The broker connectivity through Purple Trading (CySEC-regulated) adds credibility, but the Saint Lucia registration, country restrictions, and mixed public perception prevent a higher score.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* FALLBACK — sections not customised render the default text          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section !== "challenges" && section !== "spreads" && section !== "markets" && section !== "platforms" && section !== "payouts" && section !== "support" && section !== "trust" && fallbackBody && (
+  <div class="text-sm leading-relaxed text-slate-700 space-y-4">
+    {fallbackBody.split("\n\n").map((para) => (
+      <p set:html={para.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")} />
+    ))}
+  </div>
+)}

@@ -1,12 +1,70 @@
 {
   "id": "rev-lark-funding",
   "propFirmId": "d0000035-0000-0000-0000-000000000035",
-  "summary": "Lark Funding offers multiple evaluation processes including instant funding, one-step, and two-step challenges with access to stocks and other markets.",
-  "pros": ["Multiple evaluation options", "Instant funding available", "Stocks and multi-asset access"],
-  "cons": ["Newer firm", "Limited community size"],
-  "bestFor": "Traders who want flexible evaluation choices with stock trading access",
-  "notIdealFor": "Traders seeking an established firm with a long track record",
+  "summary": "Lark Funding scored 52/100 overall. It's a Canada-based prop firm offering four distinct funding models — Instant Funding, One Step, Two Step, and Three Step challenges — with account sizes from $5,000 to $200,000. While the variety of challenge options and instant funding availability are appealing, higher fees, the restrictive payout lock rule, and limited customer support hold it back.\n\nThe firm accepts EAs and news trading, but prohibits martingale, grid trading, and HFT strategies. All trading takes place in a simulated environment. For traders prioritising transparency, lower fees, and stronger support, there are better options available — but Lark Funding may suit experienced traders who are confident in their strategies and risk management.",
+  "pros": [
+    "Instant funding accounts with no evaluation required",
+    "No time limits on completing evaluations",
+    "Four distinct challenge types to match different styles",
+    "EAs and news trading allowed",
+    "Stock CFDs available (~141 options)",
+    "Leverage upgrades available at checkout"
+  ],
+  "cons": [
+    "No scaling plan available",
+    "Payout lock rule reduces drawdown buffer after withdrawals",
+    "$40 flat withdrawal processing fee",
+    "No live chat or 24/7 customer support",
+    "Higher challenge fees than some competitors",
+    "Limited educational resources"
+  ],
+  "bestFor": "Experienced traders who want flexible evaluation choices including instant funding, stock trading access, and are comfortable managing the payout lock drawdown rule",
+  "notIdealFor": "Beginners needing guidance, traders seeking low fees and transparent pricing, or those who want a scaling plan and live customer support",
+  "overallScore": 52,
+  "categoryScores": {
+    "challenges": 60,
+    "spreads": 40,
+    "markets": 60,
+    "payouts": 60,
+    "platforms": 50,
+    "support": 35,
+    "trust": 40
+  },
+  "categorySections": {
+    "challenges": "custom",
+    "spreads": "custom",
+    "markets": "custom",
+    "platforms": "custom",
+    "payouts": "custom",
+    "support": "custom",
+    "trust": "custom"
+  },
+  "verdictBlocks": [
+    {
+      "heading": "Our Final Verdict On Lark Funding",
+      "body": "Lark Funding provides a variety of challenges and a functional trading community, but its policies and lack of transparency may not suit all traders. The payout lock rule and unclear pricing structure make it harder to plan for long-term growth, while limited customer support and the absence of educational resources leave gaps for those who need guidance.\n\nFor traders prioritising transparency, lower fees, and broker-backed reliability, firms like DNA Funded and IC Funded may be better options. These firms often offer more competitive pricing, clearer trading conditions, and stronger support systems, making them a better choice for both new and experienced traders."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Where is Lark Funding based?",
+      "a": "Lark Funding is based in Canada and offers funded trading accounts through evaluation challenges. While it provides global access to various markets like forex and crypto, its higher fees and restrictive policies compared to more competitive options may be a consideration for traders."
+    },
+    {
+      "q": "Who owns Lark Funding?",
+      "a": "Lark Funding is led by CEO Matt L and operates as a Canada-based proprietary trading firm. The exact ownership structure is not publicly disclosed. Unlike broker-backed prop firms, Lark Funding operates independently without direct ties to a brokerage, which may impact its trading conditions and transparency."
+    },
+    {
+      "q": "Does Lark Funding allow copy trading?",
+      "a": "Lark Funding allows copy trading only between funded accounts, not during evaluation. You can copy trades across multiple funded accounts once you pass the evaluation process. Copying trades between evaluation accounts is strictly prohibited, and each evaluation must be passed individually."
+    },
+    {
+      "q": "How long does Lark Funding take to withdraw?",
+      "a": "Lark Funding typically processes withdrawal requests within 1-3 business days via Wise or Riseworks. Payout frequency depends on the challenge type — biweekly for some accounts and monthly for others. Instant funding accounts allow on-demand payouts. All withdrawals are subject to a $100 minimum, a $40 processing fee, and the drawdown lock rule."
+    }
+  ],
+  "verified": true,
+  "flagged": false,
   "methodologyVersion": "1.0",
-  "lastReviewedAt": "2026-02-26",
-  "verified": false
+  "lastReviewedAt": "2026-02-27"
 }
