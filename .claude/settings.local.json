@@ -53,7 +53,8 @@
       "Bash(done)",
       "Bash(for firm in think-capital funded-prime city-traders-imperium the-trading-pit blueberry-futures)",
       "Bash(gh run list:*)",
-      "WebFetch(domain:micahtalkcraft.github.io)"
+      "WebFetch(domain:micahtalkcraft.github.io)",
+      "Bash(npm ls:*)"
     ]
   }
 }
