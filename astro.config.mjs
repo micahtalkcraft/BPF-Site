@@ -4,7 +4,7 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
-import { rehypeBaseUrl } from './src/plugins/rehype-base-url.ts';
+import { remarkBaseUrl } from './src/plugins/remark-base-url.ts';
 
 const siteBase = process.env.CI ? '/BPF-Site' : '/';
 
@@ -18,7 +18,7 @@ export default defineConfig({
   integrations: [react(), sitemap()],
 
   markdown: {
-    rehypePlugins: [[rehypeBaseUrl, { base: siteBase }]],
+    remarkPlugins: [[remarkBaseUrl, { base: siteBase }]],
   },
 
   vite: {

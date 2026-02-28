@@ -3,6 +3,14 @@ import Base from "../../layouts/Base.astro";
 import { getCollection } from "astro:content";
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+/** Prefix local asset paths with the site base URL */
+function assetUrl(path: string | undefined): string | undefined {
+  if (!path) return undefined;
+  if (path.startsWith("http")) return path;
+  return `${base}${path}`;
+}
+
 const posts = await getCollection("blog");
 
 // Sort by date descending
@@ -53,7 +61,7 @@ function formatDate(dateStr: string) {
           {featured.data.coverImage ? (
             <div class="md:w-1/2 flex-shrink-0">
               <img
-                src={featured.data.coverImage}
+                src={assetUrl(featured.data.coverImage)}
                 alt={featured.data.title}
                 class="w-full h-56 md:h-full object-cover"
               />
@@ -145,7 +153,7 @@ function formatDate(dateStr: string) {
           <a href={`${base}/blog/${post.slug}`} class="block">
             {post.data.coverImage ? (
               <img
-                src={post.data.coverImage}
+                src={assetUrl(post.data.coverImage)}
                 alt={post.data.title}
                 class="w-full h-44 object-cover"
                 loading="lazy"
