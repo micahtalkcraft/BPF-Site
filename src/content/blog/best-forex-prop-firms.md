@@ -78,7 +78,7 @@ Use promo code PROPFIRMS to get a 120% refund after passing the challenge — yo
 </div>
 
 <div class="not-prose -mt-3 mb-6 rounded-xl border border-emerald-200 bg-emerald-50/80 px-5 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
-  <a href="https://fundednext.com/?ref=bestpropfirms" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+  <a href="https://fundednext.com/?fpr=noam82" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
     Visit FundedNext
   </a>
@@ -197,18 +197,18 @@ FundedNext is the best forex prop firm in 2026 for traders who want multiple cha
 
 ---
 
-## 2. Eightcap — Day Trading Forex Challenge
+## 2. Eightcap Challenges — Day Trading Forex Challenge
 
-Eightcap is the only forex prop option on this list where the challenges run directly on a regulated broker's infrastructure instead of a traditional prop setup. That means you trade using Eightcap's own raw pricing, execution feed, and trading servers, a big difference compared to prop firms that use private feeds, synthetic spreads or restricted routing.
+Eightcap Challenges is the only forex prop option on this list where the challenges run directly on a regulated broker's infrastructure instead of a traditional prop setup. That means you trade using Eightcap Challenges' own raw pricing, execution feed, and trading servers, a big difference compared to prop firms that use private feeds, synthetic spreads or restricted routing.
 
-You can choose between a simple one-step evaluation, a more structured two-step, or Eightcap's unique timed Day Trader challenge, which condenses the entire evaluation into a 1–8 hour session. If you value stability, raw pricing and clean infrastructure over marketing gimmicks, Eightcap is one of the most reliable forex prop options available.
+You can choose between a simple one-step evaluation, a more structured two-step, or Eightcap Challenges' unique timed Day Trader challenge, which condenses the entire evaluation into a 1–8 hour session. If you value stability, raw pricing and clean infrastructure over marketing gimmicks, Eightcap Challenges is one of the most reliable forex prop options available.
 
 <div class="not-prose my-6 rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
   <div class="flex flex-col sm:flex-row items-stretch">
     <div class="flex items-center gap-4 p-5 flex-1 min-w-0">
-      <img src="/images/logos/eightcap-logo-1.png" alt="Eightcap logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
+      <img src="/images/logos/eightcap-logo-1.png" alt="Eightcap Challenges logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
       <div class="min-w-0">
-        <p class="text-lg font-extrabold text-slate-900 leading-tight">Eightcap</p>
+        <p class="text-lg font-extrabold text-slate-900 leading-tight">Eightcap Challenges</p>
         <p class="text-xs text-slate-500 mt-0.5">Day Trading Forex Challenge</p>
       </div>
     </div>
@@ -233,9 +233,9 @@ You can choose between a simple one-step evaluation, a more structured two-step,
 </div>
 
 <div class="not-prose -mt-3 mb-6 rounded-xl border border-emerald-200 bg-emerald-50/80 px-5 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
-  <a href="https://www.eightcap.com/en/trading/prop-trading/?ref=bestpropfirms" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+  <a href="https://challenges.eightcap.com?campaign_id=1&ref_id=622" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
-    Visit Eightcap
+    Visit Eightcap Challenges
   </a>
   <div class="flex items-center gap-2.5">
     <svg class="h-4 w-4 text-emerald-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" /></svg>
@@ -272,15 +272,15 @@ You can choose between a simple one-step evaluation, a more structured two-step,
 
 ### Prop Firm Details
 
-Eightcap scored 89/100 in our testing, mainly because it offers something structurally different to every other firm on this list. You trade on the broker itself, not a prop-firm-styled server. That means raw pricing, predictable spreads, stable fills, and a lot less uncertainty about feed quality.
+Eightcap Challenges scored 89/100 in our testing, mainly because it offers something structurally different to every other firm on this list. You trade on the broker itself, not a prop-firm-styled server. That means raw pricing, predictable spreads, stable fills, and a lot less uncertainty about feed quality.
 
-The challenge rules are clean and achievable, especially for forex traders who prefer raw pricing and normal brokerage behaviour. The higher fees and lack of a scaling plan restrict it slightly, but Eightcap still feels like one of the most stable places to run a prop evaluation.
+The challenge rules are clean and achievable, especially for forex traders who prefer raw pricing and normal brokerage behaviour. The higher fees and lack of a scaling plan restrict it slightly, but Eightcap Challenges still feels like one of the most stable places to run a prop evaluation.
 
 ### Challenges and Accounts
 
-Eightcap offers three evaluation types:
+Eightcap Challenges offers three evaluation types:
 
-**One Step Challenge:** A straightforward one step evaluation. Drawdown is static, automation is allowed, and execution matches Eightcap's normal raw accounts.
+**One Step Challenge:** A straightforward one step evaluation. Drawdown is static, automation is allowed, and execution matches Eightcap Challenges' normal raw accounts.
 
 **Two Step Challenge:** A two step evaluation with a larger first target and a smaller second target.
 
@@ -299,19 +299,19 @@ Eightcap offers three evaluation types:
 
 ### Profit Splits and Payouts
 
-Eightcap starts funded traders at an 80% profit split, with a paid add-on available to raise it to 90%.
+Eightcap Challenges starts funded traders at an 80% profit split, with a paid add-on available to raise it to 90%.
 
 Standard funded accounts follow a 14-day first payout window, then regular payout cycles afterwards. Crypto can be used for smaller withdrawals, and larger payouts can go through bank transfer after KYC and verification checks.
 
 The Day Trader challenge pays out immediately after a successful session, since there is no ongoing funded account, just one session, one result.
 
-While this payout structure is stable, the delayed first payout and no-fee-refund policy are the main reasons Eightcap didn't score higher in payouts.
+While this payout structure is stable, the delayed first payout and no-fee-refund policy are the main reasons Eightcap Challenges didn't score higher in payouts.
 
 ### Markets and Leverage
 
 You can trade a broad range of markets including forex pairs, indices, commodities, cryptocurrencies, ETFs, and US stock CFDs (Day Trader only).
 
-Leverage is highest on the One Step and Two Step challenges, which makes sense for multi-day forex trading. These accounts behave like typical Eightcap raw-spread brokerage setups, so if you run multi-asset portfolios or EAs, this is the natural fit.
+Leverage is highest on the One Step and Two Step challenges, which makes sense for multi-day forex trading. These accounts behave like typical Eightcap Challenges raw-spread brokerage setups, so if you run multi-asset portfolios or EAs, this is the natural fit.
 
 | Asset Class | One Step | Two Step | Day Trader | Notes |
 |------------|---------|---------|-----------|-------|
@@ -326,7 +326,7 @@ The Day Trader model deliberately reduces leverage across all markets. This keep
 
 ### Trading Platforms and Rules
 
-Eightcap supports MT4, MT5 and TradeLocker, with platform behaviour identical to their real brokerage accounts.
+Eightcap Challenges supports MT4, MT5 and TradeLocker, with platform behaviour identical to their real brokerage accounts.
 
 **MT4 / MT5:** Available on the One Step and Two Step challenges, including full EA support, custom indicators, scripts, and rule-based automation. Charting and execution feel like a real raw account.
 
@@ -334,17 +334,17 @@ Eightcap supports MT4, MT5 and TradeLocker, with platform behaviour identical to
 
 ### Trust and Community
 
-Eightcap is a regulated forex broker, licensed by ASIC in Australia, CySEC in Europe, and the FCA in the UK. It's been operating since 2009, and holds a 4.2/5 Trustpilot rating across thousands of reviews for its brokerage operations.
+Eightcap Challenges is a regulated forex broker, licensed by ASIC in Australia, CySEC in Europe, and the FCA in the UK. It's been operating since 2009, and holds a 4.2/5 Trustpilot rating across thousands of reviews for its brokerage operations.
 
 Because the prop challenges run on that same infrastructure, the conditions feel more transparent and consistent than typical prop firm environments.
 
-Support is responsive through live chat and email, and traders can rely on the same operational backbone that Eightcap uses for its retail clients.
+Support is responsive through live chat and email, and traders can rely on the same operational backbone that Eightcap Challenges uses for its retail clients.
 
-You also get access to the broker's educational materials and research ecosystem, including weekly insights and structured education through Eightcap Labs. These aren't prop-specific resources, but they translate well because they cover the same markets used in the challenges.
+You also get access to the broker's educational materials and research ecosystem, including weekly insights and structured education through Eightcap Challenges Labs. These aren't prop-specific resources, but they translate well because they cover the same markets used in the challenges.
 
-### Our Final Verdict on Eightcap
+### Our Final Verdict on Eightcap Challenges
 
-Eightcap scores 89/100 and takes second place on our forex prop firm shortlist because it's ideal for forex traders who prefer a funded account experience that feels like trading with a real broker. The fees are higher and there's no scaling plan, but the raw pricing, stable execution and full MT4/MT5 automation make it a stronger environment than most independent prop firms.
+Eightcap Challenges scores 89/100 and takes second place on our forex prop firm shortlist because it's ideal for forex traders who prefer a funded account experience that feels like trading with a real broker. The fees are higher and there's no scaling plan, but the raw pricing, stable execution and full MT4/MT5 automation make it a stronger environment than most independent prop firms.
 
 ---
 
@@ -386,7 +386,7 @@ Use promo code PROPFIRMS20 for 20% off challenge fees.
 </div>
 
 <div class="not-prose -mt-3 mb-6 rounded-xl border border-emerald-200 bg-emerald-50/80 px-5 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
-  <a href="https://brightfunded.com/?ref=bestpropfirms" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+  <a href="https://brightfunded.com?affiliateId=rsBbtrzYQSyr3RcHYHQT5w" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
     Visit BrightFunded
   </a>
@@ -523,7 +523,7 @@ Use promo code PROPFIRMS25 to get 25% off your challenge fee, so you can start t
 </div>
 
 <div class="not-prose -mt-3 mb-6 rounded-xl border border-emerald-200 bg-emerald-50/80 px-5 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
-  <a href="https://dnafunded.com/?ref=bestpropfirms" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+  <a href="https://partners.dnafunded.com/click?campaign_id=1&ref_id=30" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
     Visit DNA Funded
   </a>
@@ -678,7 +678,7 @@ Use promo code PROPFIRMS20 to get 20% off your challenge fee.
 </div>
 
 <div class="not-prose -mt-3 mb-6 rounded-xl border border-emerald-200 bg-emerald-50/80 px-5 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
-  <a href="https://blueberryfunded.com/?ref=bestpropfirms" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+  <a href="https://blueberryfunded.com/?utm_source=affiliate&ref=1457" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
     Visit Blueberry Funded
   </a>

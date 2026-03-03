@@ -96,7 +96,7 @@ Use promo code PROPFIRMS25 to get 25% off your challenge fee, making it even che
 </div>
 
 <div class="not-prose -mt-3 mb-6 rounded-xl border border-emerald-200 bg-emerald-50/80 px-5 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
-  <a href="https://dnafunded.com/?ref=bestpropfirms" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+  <a href="https://partners.dnafunded.com/click?campaign_id=1&ref_id=30" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
     Visit DNA Funded
   </a>
@@ -222,7 +222,7 @@ You can use the promo code PROPFIRMS20 for 20% off your evaluation fee.
 </div>
 
 <div class="not-prose -mt-3 mb-6 rounded-xl border border-emerald-200 bg-emerald-50/80 px-5 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
-  <a href="https://brightfunded.com/?ref=bestpropfirms" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+  <a href="https://brightfunded.com?affiliateId=rsBbtrzYQSyr3RcHYHQT5w" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
     Visit BrightFunded
   </a>
@@ -352,7 +352,7 @@ Use promo code PROPFIRMS20 to get 20% off your challenge, so you can get started
 </div>
 
 <div class="not-prose -mt-3 mb-6 rounded-xl border border-emerald-200 bg-emerald-50/80 px-5 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
-  <a href="https://blueberryfunded.com/?ref=bestpropfirms" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+  <a href="https://blueberryfunded.com/?utm_source=affiliate&ref=1457" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
     Visit Blueberry Funded
   </a>
@@ -472,7 +472,7 @@ Use promo code PROPFIRMS to get 120% of your challenge fee refunded — that's y
 </div>
 
 <div class="not-prose -mt-3 mb-6 rounded-xl border border-emerald-200 bg-emerald-50/80 px-5 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
-  <a href="https://fundednext.com/?ref=bestpropfirms" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+  <a href="https://fundednext.com/?fpr=noam82" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
     Visit FundedNext
   </a>
@@ -604,7 +604,7 @@ You can also save 15% on all futures challenge fees by using the promo code PROP
 </div>
 
 <div class="not-prose -mt-3 mb-6 rounded-xl border border-emerald-200 bg-emerald-50/80 px-5 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
-  <a href="https://fxify.com/futures/?ref=bestpropfirms" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+  <a href="https://app.fxifyfutures.com?ref=VNPb7mgMLt63" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
     Visit FXIFY Futures
   </a>
@@ -717,7 +717,7 @@ A few of the top prop firms recently opened futures trading branches, like Funde
 
 ### What's the best forex prop firms?
 
-Top forex prop firms serve different types of traders so the best completely depends on your trading strategy. If you want a day trading challenge, Eightcap now offers 1, 2, 4, and 8 hour programs. If you want a funded account where you can scale up into the millions, try FundedNext or BrightFunded. If your priority is ultra low spreads and fees, DNA Funded or Blueberry Funded might suit.
+Top forex prop firms serve different types of traders so the best completely depends on your trading strategy. If you want a day trading challenge, Eightcap Challenges now offers 1, 2, 4, and 8 hour programs. If you want a funded account where you can scale up into the millions, try FundedNext or BrightFunded. If your priority is ultra low spreads and fees, DNA Funded or Blueberry Funded might suit.
 
 ### What prop firms offer instant funding?
 

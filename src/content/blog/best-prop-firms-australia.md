@@ -73,7 +73,7 @@ DNA Funded ranked 1st place in our list of the best prop firms, earning a top sc
 </div>
 
 <div class="not-prose -mt-3 mb-6 rounded-xl border border-emerald-200 bg-emerald-50/80 px-5 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
-  <a href="https://dnafunded.com/?ref=bestpropfirms" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+  <a href="https://partners.dnafunded.com/click?campaign_id=1&ref_id=30" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
     Visit DNA Funded
   </a>
@@ -202,7 +202,7 @@ BrightFunded earned our #2 spot with a score of 95/100, thanks to its industry-l
 </div>
 
 <div class="not-prose -mt-3 mb-6 rounded-xl border border-emerald-200 bg-emerald-50/80 px-5 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
-  <a href="https://brightfunded.com/?ref=bestpropfirms" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+  <a href="https://brightfunded.com?affiliateId=rsBbtrzYQSyr3RcHYHQT5w" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
     Visit BrightFunded
   </a>
@@ -329,7 +329,7 @@ Blueberry Funded ranks as the 3rd best prop firm thanks to its range of challeng
 </div>
 
 <div class="not-prose -mt-3 mb-6 rounded-xl border border-emerald-200 bg-emerald-50/80 px-5 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
-  <a href="https://blueberryfunded.com/?ref=bestpropfirms" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+  <a href="https://blueberryfunded.com/?utm_source=affiliate&ref=1457" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
     Visit Blueberry Funded
   </a>
@@ -454,7 +454,7 @@ Backed by FXPIG, FXIFY combines tight pricing, fast execution, and an active Dis
 </div>
 
 <div class="not-prose -mt-3 mb-6 rounded-xl border border-emerald-200 bg-emerald-50/80 px-5 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
-  <a href="https://fxify.com/?ref=bestpropfirms" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+  <a href="https://trader.fxify.com/purchasechallenge?affiliateId=5837" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
     Visit FXIFY
   </a>
@@ -570,7 +570,7 @@ FundedNext came in 5th place, offering funded accounts with profit splits up to 
 </div>
 
 <div class="not-prose -mt-3 mb-6 rounded-xl border border-emerald-200 bg-emerald-50/80 px-5 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
-  <a href="https://fundednext.com/?ref=bestpropfirms" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+  <a href="https://fundednext.com/?fpr=noam82" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
     Visit FundedNext
   </a>
@@ -833,7 +833,7 @@ Proprietary trading (prop trading) allows traders to use virtual funds in financ
 
 ### How many prop firms are forex brokers?
 
-Many prop firms have ties to CFD brokers and use them as their providers for pricing and spreads. For example, DNA Funded is backed by Eightcap, a regulated CFD broker. However, when you're doing the challenge, you're in a simulated environment rather than live trading, so the prop firm itself isn't acting as a broker. Only after you pass the challenge and get funded do you start trading in real markets, often through their broker partners.
+Many prop firms have ties to CFD brokers and use them as their providers for pricing and spreads. For example, DNA Funded is backed by Eightcap Challenges, a regulated CFD broker. However, when you're doing the challenge, you're in a simulated environment rather than live trading, so the prop firm itself isn't acting as a broker. Only after you pass the challenge and get funded do you start trading in real markets, often through their broker partners.
 
 View our full list of [broker backed prop firms](/prop-firms).
 
@@ -843,7 +843,7 @@ The main advantage of using a prop firm over a real trading account is limiting 
 
 ### Which is the most trusted prop firm?
 
-The most trusted prop firms are DNA Funded, IC Funded, and OANDA Prop Trader, based on key factors such as reliability, user reviews, and trading conditions. DNA Funded is backed by Eightcap, ensuring low fees and an 80% profit split. IC Funded offers tight spreads, low entry costs, and strong backing from IC Markets. OANDA is ideal for beginner prop traders with low challenge fees and profit splits up to 90%. Each firm is known for transparency and trader support.
+The most trusted prop firms are DNA Funded, IC Funded, and OANDA Prop Trader, based on key factors such as reliability, user reviews, and trading conditions. DNA Funded is backed by Eightcap Challenges, ensuring low fees and an 80% profit split. IC Funded offers tight spreads, low entry costs, and strong backing from IC Markets. OANDA is ideal for beginner prop traders with low challenge fees and profit splits up to 90%. Each firm is known for transparency and trader support.
 
 It's important to understand how these firms make money prior to opening an account.
 

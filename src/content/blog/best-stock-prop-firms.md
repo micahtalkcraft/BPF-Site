@@ -40,7 +40,7 @@ The best stock prop firms provide access to equities with clear evaluation proce
 We reviewed the best prop firms for stock trading and our top 10 list in 2026 is:
 
 1. **Blueberry Funded** — Best Stock Prop Firm
-2. **Eightcap** — Short Session Stock Trading
+2. **Eightcap Challenges** — Short Session Stock Trading
 3. **DNA Funded** — Broker Backed Stock Prop Firm
 4. **FXIFY** — MT5 Stock Prop Firm
 5. **Trade the Pool** — Stocks and ETFs Only
@@ -92,7 +92,7 @@ Blueberry Funded is the best stock prop firm we've tested, scoring 93/100 overal
 </div>
 
 <div class="not-prose -mt-3 mb-6 rounded-xl border border-emerald-200 bg-emerald-50/80 px-5 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
-  <a href="https://blueberryfunded.com/?ref=bestpropfirms" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+  <a href="https://blueberryfunded.com/?utm_source=affiliate&ref=1457" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
     Visit Blueberry Funded
   </a>
@@ -185,18 +185,18 @@ After testing, we found Blueberry Funded to be the best stock prop firm availabl
 
 ---
 
-## 2. Eightcap — Short Session Stock Trading
+## 2. Eightcap Challenges — Short Session Stock Trading
 
-We scored Eightcap 89/100 and gave it second place for stock trading because it gives you a very clean, short session way to trade US equities, and it runs directly on a regulated broker's own infrastructure. You are trading stock CFDs in a simulated environment, but pricing and execution come from Eightcap's live feed, not a separate prop firm setup. That means fills and spreads feel much closer to a real brokerage account than most prop style environments.
+We scored Eightcap Challenges 89/100 and gave it second place for stock trading because it gives you a very clean, short session way to trade US equities, and it runs directly on a regulated broker's own infrastructure. You are trading stock CFDs in a simulated environment, but pricing and execution come from Eightcap Challenges' live feed, not a separate prop firm setup. That means fills and spreads feel much closer to a real brokerage account than most prop style environments.
 
 Stocks sit inside the Day Trader challenge only, which is a timed model rather than a traditional two phase evaluation. You pick a stake, pick a payout multiplier, and work inside a fixed one to eight hour window on a simulated account. It suits equity traders who like to focus on volatility bursts, news windows or specific sessions, rather than holding positions for days.
 
 <div class="not-prose my-6 rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
   <div class="flex flex-col sm:flex-row items-stretch">
     <div class="flex items-center gap-4 p-5 flex-1 min-w-0">
-      <img src="/images/logos/eightcap-logo-1.png" alt="Eightcap logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
+      <img src="/images/logos/eightcap-logo-1.png" alt="Eightcap Challenges logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
       <div class="min-w-0">
-        <p class="text-lg font-extrabold text-slate-900 leading-tight">Eightcap</p>
+        <p class="text-lg font-extrabold text-slate-900 leading-tight">Eightcap Challenges</p>
         <p class="text-xs text-slate-500 mt-0.5">Short Session Stock Trading</p>
       </div>
     </div>
@@ -221,9 +221,9 @@ Stocks sit inside the Day Trader challenge only, which is a timed model rather t
 </div>
 
 <div class="not-prose -mt-3 mb-6 rounded-xl border border-emerald-200 bg-emerald-50/80 px-5 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
-  <a href="https://www.eightcap.com/en/trading/prop-trading/?ref=bestpropfirms" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+  <a href="https://challenges.eightcap.com?campaign_id=1&ref_id=622" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
-    Visit Eightcap
+    Visit Eightcap Challenges
   </a>
   <div class="flex items-center gap-2.5">
     <svg class="h-4 w-4 text-emerald-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" /></svg>
@@ -258,16 +258,16 @@ Stocks sit inside the Day Trader challenge only, which is a timed model rather t
 
 ### Prop Firm Details
 
-Eightcap is a forex and CFD broker that runs its own prop style challenge program. Instead of setting up a separate prop firm brand, it plugs the challenges into the same infrastructure it uses for live clients. For stock traders, that means the equity feed, routing and general behaviour are aligned with a real broker, even though you are in a simulated trading environment.
+Eightcap Challenges is a forex and CFD broker that runs its own prop style challenge program. Instead of setting up a separate prop firm brand, it plugs the challenges into the same infrastructure it uses for live clients. For stock traders, that means the equity feed, routing and general behaviour are aligned with a real broker, even though you are in a simulated trading environment.
 
 ### Stock Markets and Leverage
 
-Stock trading at Eightcap is focused on US names inside the Day Trader challenge. You are working with stock CFDs rather than direct share ownership, and everything runs inside TradeLocker on a fixed simulated balance.
+Stock trading at Eightcap Challenges is focused on US names inside the Day Trader challenge. You are working with stock CFDs rather than direct share ownership, and everything runs inside TradeLocker on a fixed simulated balance.
 
 You get:
 
 - A selection of popular US stock CFDs
-- Broker grade pricing and spreads from Eightcap's live feed
+- Broker grade pricing and spreads from Eightcap Challenges' live feed
 - Leverage that is intentionally conservative for equities
 - No overnight stock positions, since sessions are timed
 
@@ -284,7 +284,7 @@ This structure is aimed at intraday style stock traders who want to lean on vola
 
 ### Challenges and Funded Accounts
 
-Eightcap has three challenge types, but only one matters for stocks.
+Eightcap Challenges has three challenge types, but only one matters for stocks.
 
 - **One Step challenge** — standard evaluation on MT4, MT5 or TradeLocker
 - **Two Step challenge** — phased targets and longer horizon trading
@@ -305,7 +305,7 @@ If you are used to classic stock prop challenges that last weeks, this will feel
 
 You can use MT4 and MT5 for the standard forex focused challenges, but stock trading is only available through TradeLocker on the Day Trader model.
 
-TradeLocker keeps things simple. It runs in the browser or on mobile, has clean charting and quick order handling, and does not bury you in settings when the clock is running. It is also wired directly into Eightcap's live feed, so the stock CFD pricing matches what you would see as a regular Eightcap client.
+TradeLocker keeps things simple. It runs in the browser or on mobile, has clean charting and quick order handling, and does not bury you in settings when the clock is running. It is also wired directly into Eightcap Challenges' live feed, so the stock CFD pricing matches what you would see as a regular Eightcap Challenges client.
 
 Key stock related rules on the Day Trader challenge include:
 
@@ -318,13 +318,13 @@ This keeps the equity environment focused on clean execution rather than finding
 
 ### Trust and Support
 
-Eightcap is a long running broker with multiple regulatory licences and a solid public track record. The prop challenge program benefits from that, since the same operations, infrastructure and support teams sit behind it. From a stock trader's point of view, the main advantage is that you are not guessing how the feed is built or whether fills are being manipulated in the background.
+Eightcap Challenges is a long running broker with multiple regulatory licences and a solid public track record. The prop challenge program benefits from that, since the same operations, infrastructure and support teams sit behind it. From a stock trader's point of view, the main advantage is that you are not guessing how the feed is built or whether fills are being manipulated in the background.
 
-Support is available through live chat and email, and in our testing responses on challenge rules and platform behaviour were clear and reliable. You also have access to Eightcap's broader research and education ecosystem, which can help if you are trading both stocks and other markets around key sessions.
+Support is available through live chat and email, and in our testing responses on challenge rules and platform behaviour were clear and reliable. You also have access to Eightcap Challenges' broader research and education ecosystem, which can help if you are trading both stocks and other markets around key sessions.
 
-### Verdict on Eightcap
+### Verdict on Eightcap Challenges
 
-Eightcap earns the second spot on our stock prop list because it offers a very specific, short session way to trade US stocks on a broker backed feed. It is not the right choice if you want a big dedicated stock challenge with long holding times, but it is a strong option if you care about execution quality and prefer to trade equities in focused intraday windows.
+Eightcap Challenges earns the second spot on our stock prop list because it offers a very specific, short session way to trade US stocks on a broker backed feed. It is not the right choice if you want a big dedicated stock challenge with long holding times, but it is a strong option if you care about execution quality and prefer to trade equities in focused intraday windows.
 
 ---
 
@@ -362,7 +362,7 @@ DNA Funded is rated the 3rd best stock prop firm due to its low fees, flexible c
 </div>
 
 <div class="not-prose -mt-3 mb-6 rounded-xl border border-emerald-200 bg-emerald-50/80 px-5 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
-  <a href="https://dnafunded.com/?ref=bestpropfirms" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+  <a href="https://partners.dnafunded.com/click?campaign_id=1&ref_id=30" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
     Visit DNA Funded
   </a>
@@ -483,7 +483,7 @@ FXIFY offers a balanced approach to prop trading with flexible evaluation option
 </div>
 
 <div class="not-prose -mt-3 mb-6 rounded-xl border border-emerald-200 bg-emerald-50/80 px-5 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
-  <a href="https://fxify.com/?ref=bestpropfirms" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+  <a href="https://trader.fxify.com/purchasechallenge?affiliateId=5837" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
     Visit FXIFY
   </a>

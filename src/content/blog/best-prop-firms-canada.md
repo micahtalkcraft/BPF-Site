@@ -95,7 +95,7 @@ Canadian traders can access a funded account with BrightFunded after completing 
 </div>
 
 <div class="not-prose -mt-3 mb-6 rounded-xl border border-emerald-200 bg-emerald-50/80 px-5 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
-  <a href="https://brightfunded.com/?ref=bestpropfirms" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+  <a href="https://brightfunded.com?affiliateId=rsBbtrzYQSyr3RcHYHQT5w" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
     Visit BrightFunded
   </a>
@@ -237,7 +237,7 @@ OANDA is a good option for beginner prop traders in Canada wanting a simple two-
 </div>
 
 <div class="not-prose -mt-3 mb-6 rounded-xl border border-slate-200 bg-slate-50 px-5 py-3 flex items-center justify-center">
-  <a href="https://www.oanda.com/eu-en/trading/prop-trader/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+  <a href="https://go.oanda.com/visit/?bta=37806&brand=oandapt" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
     Visit OANDA Prop Trader
   </a>
@@ -360,7 +360,7 @@ During testing DNA Funded also ranked as the second best crypto prop firm, secon
 </div>
 
 <div class="not-prose -mt-3 mb-6 rounded-xl border border-emerald-200 bg-emerald-50/80 px-5 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
-  <a href="https://dnafunded.com/?ref=bestpropfirms" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+  <a href="https://partners.dnafunded.com/click?campaign_id=1&ref_id=30" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
     Visit DNA Funded
   </a>
@@ -486,7 +486,7 @@ FundedNext lets you work towards a funded account via a one or two-step challeng
 </div>
 
 <div class="not-prose -mt-3 mb-6 rounded-xl border border-slate-200 bg-slate-50 px-5 py-3 flex items-center justify-center">
-  <a href="https://fundednext.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+  <a href="https://fundednext.com/?fpr=noam82" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
     Visit FundedNext
   </a>
@@ -580,18 +580,18 @@ FundedNext is ideal if you want a payout during the challenge period, fast payme
 
 ---
 
-## 5. Eightcap — Broker Prop Challenge
+## 5. Eightcap Challenges — Broker Prop Challenge
 
-Eightcap is fully available to traders in Canada and operates differently from every other firm on this list. Instead of outsourcing liquidity or running a proprietary feed, it uses the same pricing it provides to its CFD brokerage clients. That results in extremely tight spreads, clean fills during active sessions, and stable chart behaviour — big positives for intraday traders.
+Eightcap Challenges is fully available to traders in Canada and operates differently from every other firm on this list. Instead of outsourcing liquidity or running a proprietary feed, it uses the same pricing it provides to its CFD brokerage clients. That results in extremely tight spreads, clean fills during active sessions, and stable chart behaviour — big positives for intraday traders.
 
 Account sizes go from $10K to $200K for the One Step and Two Step challenges. The Day Trader challenge uses a fixed $10K balance and pays instantly based on the multiplier you choose.
 
 <div class="not-prose my-6 rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
   <div class="flex flex-col sm:flex-row items-stretch">
     <div class="flex items-center gap-4 p-5 flex-1 min-w-0">
-      <img src="/images/logos/eightcap-logo-1.png" alt="Eightcap logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
+      <img src="/images/logos/eightcap-logo-1.png" alt="Eightcap Challenges logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
       <div class="min-w-0">
-        <p class="text-lg font-extrabold text-slate-900 leading-tight">Eightcap</p>
+        <p class="text-lg font-extrabold text-slate-900 leading-tight">Eightcap Challenges</p>
         <p class="text-xs text-slate-500 mt-0.5">Broker Prop Challenge</p>
       </div>
     </div>
@@ -616,9 +616,9 @@ Account sizes go from $10K to $200K for the One Step and Two Step challenges. Th
 </div>
 
 <div class="not-prose -mt-3 mb-6 rounded-xl border border-slate-200 bg-slate-50 px-5 py-3 flex items-center justify-center">
-  <a href="https://www.eightcap.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+  <a href="https://challenges.eightcap.com?campaign_id=1&ref_id=622" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
-    Visit Eightcap
+    Visit Eightcap Challenges
   </a>
 </div>
 
@@ -646,7 +646,7 @@ Account sizes go from $10K to $200K for the One Step and Two Step challenges. Th
 
 ### Challenges and Fees
 
-Eightcap offers three challenge models, each suited to different trading styles:
+Eightcap Challenges offers three challenge models, each suited to different trading styles:
 
 - **One Step Challenge:** Best for traders who want a simple, single-phase evaluation. Trade until you hit the target or breach the limits. Minimum trading days apply, but the structure is straightforward.
 - **Two Step Challenge:** A smoother progression with the target split into two phases. Drawdown limits are wider, so the evaluation feels more forgiving if you manage risk well.
@@ -664,7 +664,7 @@ Eightcap offers three challenge models, each suited to different trading styles:
 
 ### Spreads and Trading Costs
 
-Because Eightcap uses its own live raw-spread feed, pricing is tighter than most prop firms operating in Canada.
+Because Eightcap Challenges uses its own live raw-spread feed, pricing is tighter than most prop firms operating in Canada.
 
 Forex spreads can be 0.0 pips on major pairs, with a flat commission of $5 per round turn across forex, indices, and commodities. Crypto has no commission at all.
 
@@ -682,7 +682,7 @@ Day Trader payouts work differently — you're paid instantly based on your chos
 
 ### Trading Platforms and Markets
 
-Eightcap supports MT4, MT5, and TradeLocker, giving Canadian traders more platform choice than most firms on this list.
+Eightcap Challenges supports MT4, MT5, and TradeLocker, giving Canadian traders more platform choice than most firms on this list.
 
 - **MT4 and MT5:** Available for the One Step and Two Step challenges. Full Expert Advisor support, custom indicators, algo trading, and scripts are all allowed.
 - **TradeLocker:** Required for the Day Trader challenge. Fully manual with clean charting and fast order execution.
@@ -693,13 +693,13 @@ Leverage is highest on the standard challenges, while the Day Trader challenge u
 
 ### Trust and Support
 
-Eightcap is a long-standing global broker regulated by ASIC and the FCA, and its challenge program benefits from the same infrastructure and support team. During testing, live chat replies were quick and handled by real agents.
+Eightcap Challenges is a long-standing global broker regulated by ASIC and the FCA, and its challenge program benefits from the same infrastructure and support team. During testing, live chat replies were quick and handled by real agents.
 
 Unlike many prop firms, the trading environment is transparent and predictable because it's built directly on a real broker's framework rather than outsourced feeds or private liquidity pools.
 
 ### Final Verdict
 
-Eightcap is one of the strongest prop options for Canadian forex traders who value consistent pricing, MT4/MT5 automation, and regulated-broker stability. The fees are higher and there's no traditional scaling plan, but the execution quality and platform environment are noticeably better than most independent firms.
+Eightcap Challenges is one of the strongest prop options for Canadian forex traders who value consistent pricing, MT4/MT5 automation, and regulated-broker stability. The fees are higher and there's no traditional scaling plan, but the execution quality and platform environment are noticeably better than most independent firms.
 
 It's best suited to traders who want a funded-account experience that behaves like a real brokerage account, not a proprietary simulation.
 

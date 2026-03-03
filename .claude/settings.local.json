@@ -54,7 +54,21 @@
       "Bash(for firm in think-capital funded-prime city-traders-imperium the-trading-pit blueberry-futures)",
       "Bash(gh run list:*)",
       "WebFetch(domain:micahtalkcraft.github.io)",
-      "Bash(npm ls:*)"
+      "Bash(npm ls:*)",
+      "Bash(find src/content/blog -name \"*.md\" -exec sed -i 's|https://fxify.com/futures/?ref=bestpropfirms|https://app.fxifyfutures.com?ref=VNPb7mgMLt63|g' {} +)",
+      "Bash(find src/content/blog -name \"*.md\" -exec sed -i 's|https://fxify.com/?ref=bestpropfirms|https://trader.fxify.com/purchasechallenge?affiliateId=5837|g' {} +)",
+      "Bash(find src/content/blog -name \"*.md\" -exec sed -i 's|https://fundednext.com/futures/?ref=bestpropfirms|https://fundednext.com/?fpr=noam82|g' {} +)",
+      "Bash(find src/content/blog -name \"*.md\" -exec sed -i 's|https://fundednext.com/?ref=bestpropfirms|https://fundednext.com/?fpr=noam82|g' {} +)",
+      "Bash(find src/content/blog -name \"*.md\" -exec sed -i 's|href=\"\"https://fundednext.com\"\"|href=\"\"https://fundednext.com/?fpr=noam82\"\"|g' {} +)",
+      "Bash(find src/content/blog -name \"*.md\" -exec sed -i 's|https://fundedprime.com/?ref=bestpropfirms|http://fundedprime.com/?linkId=lp_213737\\\\&sourceId=bestpropfirms\\\\&tenantId=fundedprime|g' {} +)",
+      "Bash(find src/content/blog -name \"*.md\" -exec sed -i 's|https://www.fundedtradingplus.com/?ref=bestpropfirms|https://www.fundedtradingplus.com/?ref=2020|g' {} +)",
+      "Bash(find src/content/blog -name \"*.md\" -exec sed -i 's|href=\"\"https://www.fundedtradingplus.com/\"\"|href=\"\"https://www.fundedtradingplus.com/?ref=2020\"\"|g' {} +)",
+      "Bash(find src/content/blog -name \"*.md\" -exec sed -i 's|https://icfunded.com/?ref=bestpropfirms|https://portal.icfunded.com/challenges?affiliateId=504|g' {} +)",
+      "Bash(find src/content/blog -name \"*.md\" -exec sed -i 's|href=\"\"https://icfunded.com\"\"|href=\"\"https://portal.icfunded.com/challenges?affiliateId=504\"\"|g' {} +)",
+      "Bash(find src/content/blog -name \"*.md\" -exec sed -i 's|https://www.oanda.com/eu-en/trading/prop-trader/|https://go.oanda.com/visit/?bta=37806\\\\&brand=oandapt|g' {} +)",
+      "Bash(find src/content/blog -name \"*.md\" -exec sed -i 's|href=\"\"https://thinkcapital.com\"\"|href=\"\"https://www.thinkcapital.com/?sp_rid=677d98c8fcd21d60b8730003\"\"|g' {} +)",
+      "Bash(find src/content/blog -name \"*.md\" -exec sed -i 's|href=\"\"https://the5ers.com\"\"|href=\"\"https://the5ers.com/?ref=79424\"\"|g' {} +)",
+      "Bash(find src/content/blog -name \"*.md\" -exec sed -i 's|href=\"\"https://maventrading.com\"\"|href=\"\"https://maventrading.com/\"\"|g' {} +)"
     ]
   }
 }

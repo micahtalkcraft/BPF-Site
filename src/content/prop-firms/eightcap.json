@@ -1,7 +1,7 @@
 {
   "id": "d0000027-0000-0000-0000-000000000027",
   "slug": "eightcap",
-  "name": "Eightcap",
+  "name": "Eightcap Challenges",
   "status": "active",
   "foundedYear": 2009,
   "hqCountry": "AU",
@@ -56,7 +56,7 @@
     "communitySize": "Established brokerage with global presence since 2009",
     "notableFlags": []
   },
-  "links": { "website": "https://www.eightcap.com/en/trading/prop-trading/" },
+  "links": { "website": "https://challenges.eightcap.com?campaign_id=1&ref_id=622" },
   "media": { "logo": "/images/logos/eightcap-logo-1.png" },
   "availability": {
     "restrictedCountries": ["US"]

@@ -50,7 +50,7 @@
     "communitySize": "Social media presence (Facebook, X, YouTube)",
     "notableFlags": []
   },
-  "links": { "website": "https://www.oanda.com/eu-en/trading/prop-trader/" },
+  "links": { "website": "https://go.oanda.com/visit/?bta=37806&brand=oandapt" },
   "media": { "logo": "/images/logos/oanda-prop-trader.png" },
   "availability": {
     "restrictedCountries": ["US", "CA", "AU", "NZ", "ES", "CY", "RU", "IR", "KP"]

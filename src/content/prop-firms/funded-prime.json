@@ -29,7 +29,7 @@
     "copyTrading": null,
     "expertAdvisors": true,
     "consistencyRule": null,
-    "notes": "Broker-backed via Eightcap. Weekend trading allowed for meme coins only. Crypto leverage capped at 1:1, meme coins at 10:1. Commission of 0.1% on crypto trades."
+    "notes": "Broker-backed via Eightcap Challenges. Weekend trading allowed for meme coins only. Crypto leverage capped at 1:1, meme coins at 10:1. Commission of 0.1% on crypto trades."
   },
   "markets": {
     "platforms": ["DXTrade", "TradeLocker"],
@@ -41,7 +41,7 @@
     "communitySize": null,
     "notableFlags": []
   },
-  "links": { "website": "https://fundedprime.com" },
+  "links": { "website": "http://fundedprime.com/?linkId=lp_213737&sourceId=bestpropfirms&tenantId=fundedprime" },
   "media": { "logo": "/images/logos/fundedprime-logo.png" },
   "availability": { "restrictedCountries": [] },
   "custom": {

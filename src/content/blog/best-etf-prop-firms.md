@@ -20,11 +20,11 @@ featuredFirms:
 
 ## Who Are the Best Prop Firms for ETFs?
 
-There are only three realistic options for ETF prop trading right now, with Eightcap, Trade the Pool and The Trading Pit. Most prop firms don't offer proper access to any exchange traded funds (ETFs), and many only provide index CFDs instead, so your choice is far narrower than it is prop trading forex, crypto or futures.
+There are only three realistic options for ETF prop trading right now, with Eightcap Challenges, Trade the Pool and The Trading Pit. Most prop firms don't offer proper access to any exchange traded funds (ETFs), and many only provide index CFDs instead, so your choice is far narrower than it is prop trading forex, crypto or futures.
 
 Our shortlist of top prop firms to offer ETFs includes:
 
-1. **Eightcap** — Best ETF Prop Challenges
+1. **Eightcap Challenges** — Best ETF Prop Challenges
 2. **Trade the Pool** — Biggest Range of ETFs
 3. **The Trading Pit** — Automated ETF Trading Strategies
 
@@ -32,18 +32,18 @@ If you are looking to trade ETFs through a prop firm, your decision comes down t
 
 ---
 
-## 1. Eightcap — Best ETF Prop Challenges
+## 1. Eightcap Challenges — Best ETF Prop Challenges
 
-Eightcap scored 89/100 in our testing thanks to its combination of ETF access, trading platform options, and the range of evaluation options available. You can choose a one step challenge, a two step challenge, or a short-session Day Trader challenge that runs for 1 to 8 hours on a fixed $10k balance. Each format suits a different approach, whether you trade broad ETFs like SPY and QQQ, focus on sector rotation, or use fast intraday signals.
+Eightcap Challenges scored 89/100 in our testing thanks to its combination of ETF access, trading platform options, and the range of evaluation options available. You can choose a one step challenge, a two step challenge, or a short-session Day Trader challenge that runs for 1 to 8 hours on a fixed $10k balance. Each format suits a different approach, whether you trade broad ETFs like SPY and QQQ, focus on sector rotation, or use fast intraday signals.
 
-Eightcap is a regulated broker that also offers trading challenges under the same brand, which is different from most proprietary trading firms that run their funding programs separately from their brokerage operations. For ETF traders, this matters because the challenges use the same data, spreads and execution environment as Eightcap's live brokerage. You're trading ETFs, indices and other asset classes on a setup that already handles these markets daily, so the pricing and behaviour feel familiar and consistent.
+Eightcap Challenges is a regulated broker that also offers trading challenges under the same brand, which is different from most proprietary trading firms that run their funding programs separately from their brokerage operations. For ETF traders, this matters because the challenges use the same data, spreads and execution environment as Eightcap Challenges' live brokerage. You're trading ETFs, indices and other asset classes on a setup that already handles these markets daily, so the pricing and behaviour feel familiar and consistent.
 
 <div class="not-prose my-6 rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
   <div class="flex flex-col sm:flex-row items-stretch">
     <div class="flex items-center gap-4 p-5 flex-1 min-w-0">
-      <img src="/images/logos/eightcap-logo-1.png" alt="Eightcap logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
+      <img src="/images/logos/eightcap-logo-1.png" alt="Eightcap Challenges logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
       <div class="min-w-0">
-        <p class="text-lg font-extrabold text-slate-900 leading-tight">Eightcap</p>
+        <p class="text-lg font-extrabold text-slate-900 leading-tight">Eightcap Challenges</p>
         <p class="text-xs text-slate-500 mt-0.5">Best ETF Prop Challenges</p>
       </div>
     </div>
@@ -68,9 +68,9 @@ Eightcap is a regulated broker that also offers trading challenges under the sam
 </div>
 
 <div class="not-prose -mt-3 mb-6 rounded-xl border border-emerald-200 bg-emerald-50/80 px-5 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
-  <a href="https://www.eightcap.com/en/trading/prop-trading/?ref=bestpropfirms" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+  <a href="https://challenges.eightcap.com?campaign_id=1&ref_id=622" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
-    Visit Eightcap
+    Visit Eightcap Challenges
   </a>
   <div class="flex items-center gap-2.5">
     <svg class="h-4 w-4 text-emerald-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" /></svg>
@@ -101,11 +101,11 @@ Eightcap is a regulated broker that also offers trading challenges under the sam
   </div>
 </div>
 
-Eightcap scored 89/100 in our testing and is the strongest choice for ETF traders wanting a challenge and funded account with stable execution, a growing ETF list, and competitive fees. Unlike many prop firm setups, Eightcap sits on a broker-grade infrastructure, which means spreads, data, and fills tend to behave more consistently across ETFs, indices, forex and crypto. The challenge options cover both long-form evaluations and fast, single-session challenges, giving you more control over how you want to approach funding.
+Eightcap Challenges scored 89/100 in our testing and is the strongest choice for ETF traders wanting a challenge and funded account with stable execution, a growing ETF list, and competitive fees. Unlike many prop firm setups, Eightcap Challenges sits on a broker-grade infrastructure, which means spreads, data, and fills tend to behave more consistently across ETFs, indices, forex and crypto. The challenge options cover both long-form evaluations and fast, single-session challenges, giving you more control over how you want to approach funding.
 
 ### Evaluation Process
 
-Eightcap offers three challenge types, a traditional one and two step challenge, plus a unique day trading challenge where you can pick a super short trading window between 1hr – 8hr.
+Eightcap Challenges offers three challenge types, a traditional one and two step challenge, plus a unique day trading challenge where you can pick a super short trading window between 1hr – 8hr.
 
 | Feature | One-Phase Day Trader | Two-Phase Day Trader | Fast Day Trader (1–8 Hour) |
 |---|---|---|---|
@@ -144,7 +144,7 @@ This format suits ETF day-traders who focus on short volatility windows, market 
 
 ### ETFs and Market Access
 
-Eightcap offers one of the most complete ETF CFD ranges available through a challenge program, covering both US and Australian markets. The US list includes the major benchmarks most ETF traders rely on, such as SPY, QQQ, VOO, VTI and DIA, as well as a broad mix of sector ETFs, leveraged products and thematic funds. This gives traders access to the same tools used for intraday ETF momentum, volatility breakouts, and broader swing-based strategies.
+Eightcap Challenges offers one of the most complete ETF CFD ranges available through a challenge program, covering both US and Australian markets. The US list includes the major benchmarks most ETF traders rely on, such as SPY, QQQ, VOO, VTI and DIA, as well as a broad mix of sector ETFs, leveraged products and thematic funds. This gives traders access to the same tools used for intraday ETF momentum, volatility breakouts, and broader swing-based strategies.
 
 You can trade:
 
@@ -163,35 +163,35 @@ The depth of the ETF list also makes correlation-based trading straightforward. 
 - ETF pairs such as QQQ vs. SPY, XLF vs. XLK, IWM vs. VOO
 - ETF-FX blends, e.g., trading USD or JPY strength alongside gold or energy ETFs
 
-Because the ETFs behave close to their underlying funds and follow normal US market liquidity patterns, we found our ETF signals transfer well from our retail charts to Eightcap's challenge accounts.
+Because the ETFs behave close to their underlying funds and follow normal US market liquidity patterns, we found our ETF signals transfer well from our retail charts to Eightcap Challenges' challenge accounts.
 
 ### Trading Rules and Restrictions
 
-Eightcap's rules are consistent across the challenge types, and the only things that change are the drawdown percentages and evaluation timelines. You can use any trading style including day trading, swing trading, news trading and algorithmic trading, and there's no unusual restrictions on holding times or trade frequency.
+Eightcap Challenges' rules are consistent across the challenge types, and the only things that change are the drawdown percentages and evaluation timelines. You can use any trading style including day trading, swing trading, news trading and algorithmic trading, and there's no unusual restrictions on holding times or trade frequency.
 
 Max leverage is 1:100 for all trading accounts which is on the higher side, but this is for forex and ETFs are limited to lower levels to reflect their risk. This encourages disciplined sizing while still giving enough flexibility in trading conditions for intraday ETF systems.
 
 ### Trading Platform and Tools
 
-Eightcap lets you pick between three popular and user friendly trading platforms – MetaTrader 4 (MT4), MetaTrader 5 (MT5), or TradeLocker, but it does depend on the challenge type. MT5 is the most suitable for ETF traders because it handles multi-asset layouts, custom indicators and more advanced trading tools, while MT4 remains available for traders with existing templates or systems. But, if you choose the Day Trader challenge, you'll be restricted to TradeLocker, which is designed for quick execution and simple session tracking.
+Eightcap Challenges lets you pick between three popular and user friendly trading platforms – MetaTrader 4 (MT4), MetaTrader 5 (MT5), or TradeLocker, but it does depend on the challenge type. MT5 is the most suitable for ETF traders because it handles multi-asset layouts, custom indicators and more advanced trading tools, while MT4 remains available for traders with existing templates or systems. But, if you choose the Day Trader challenge, you'll be restricted to TradeLocker, which is designed for quick execution and simple session tracking.
 
 All platforms offer smooth charting, stable execution and easy access to watchlists, which helps you follow several correlated ETFs at once.
 
 ### Profit Payouts
 
-Once you complete the one step or two step challenge, you get your first payout where you keep 80% of profits. Fast payouts can be expected with Eightcap, and scaling options allow you to work toward larger allocations over time.
+Once you complete the one step or two step challenge, you get your first payout where you keep 80% of profits. Fast payouts can be expected with Eightcap Challenges, and scaling options allow you to work toward larger allocations over time.
 
 The Day Trader challenges has a slightly different profit sharing agreement, where you receive your pay out instantly if you beat the target within your time window. This is separate from the normal funded path and is ideal for traders who want quick, session-based earnings rather than long-term accounts.
 
 ### Trading Community and Support
 
-Eightcap has a much stronger support and education presence than most prop trading firms. You get 24/7 customer support, detailed FAQs, a stack of educational resources, indepth trading platform tutorials and regular updates explaining new ETFs, markets and platform improvements. As an ETF trader, these updates will make it easy to keep track of new sector or thematic ETFs as they are added.
+Eightcap Challenges has a much stronger support and education presence than most prop trading firms. You get 24/7 customer support, detailed FAQs, a stack of educational resources, indepth trading platform tutorials and regular updates explaining new ETFs, markets and platform improvements. As an ETF trader, these updates will make it easy to keep track of new sector or thematic ETFs as they are added.
 
-You can also expect a consistent and competitive trading experience. Eightcap has a strong reputation with a bunch of positive testimonials on Trustpilot, where they score 4.1 out of 5 stars from thousands of reviews.
+You can also expect a consistent and competitive trading experience. Eightcap Challenges has a strong reputation with a bunch of positive testimonials on Trustpilot, where they score 4.1 out of 5 stars from thousands of reviews.
 
-### Verdict on Eightcap
+### Verdict on Eightcap Challenges
 
-Eightcap is the best ETF prop challenge provider on our shortlist because it offers the widest mix of ETF markets, three top platforms, and three evaluation processes that cover both long-form and fast-paced trading. ETF traders can run almost any strategy, from short intraday bursts to multi-day rotations, without dealing with restrictive rules or small symbol lists. The ETF access, straightforward pricing and flexible challenge formats make Eightcap easily the most competitive ETF prop challenge available.
+Eightcap Challenges is the best ETF prop challenge provider on our shortlist because it offers the widest mix of ETF markets, three top platforms, and three evaluation processes that cover both long-form and fast-paced trading. ETF traders can run almost any strategy, from short intraday bursts to multi-day rotations, without dealing with restrictive rules or small symbol lists. The ETF access, straightforward pricing and flexible challenge formats make Eightcap Challenges easily the most competitive ETF prop challenge available.
 
 ---
 
@@ -334,7 +334,7 @@ There is also a risk buffer logic tied to your daily loss limit. As the account 
 
 ### Trading Community and Support
 
-Trade the Pool provides written guides, FAQs and program breakdowns that explain the rules, scaling process and risk model. There is also a stats and performance tracking area where you can review your trades and activity, but it's not as extensive as Eightcap Labs. Support is available via helpdesk channels, which is useful if you need clarification on volume rules or whether a specific ETF is tradable.
+Trade the Pool provides written guides, FAQs and program breakdowns that explain the rules, scaling process and risk model. There is also a stats and performance tracking area where you can review your trades and activity, but it's not as extensive as Eightcap Challenges Labs. Support is available via helpdesk channels, which is useful if you need clarification on volume rules or whether a specific ETF is tradable.
 
 In terms of their reputation, the prop firm has a 4.4 out of 5 star TrustPilot score, indicating the majority of their traders are generally happy with their challenges and the lower profitability of a 70% split.
 
@@ -479,7 +479,7 @@ For ETF and index traders, the key point is that once you are funded, you can bu
 
 The Trading Pit offers standard help centre resources, FAQs and documentation explaining the rules, challenge types and platform setup. There is also customer support available via chat and email for account, platform or rules-related questions, and the prop firm has a decent reputation with a 4.4 out of 5 star TrustPilot score.
 
-You won't find the same depth of ETF education you might see at a broker like Eightcap, but there is enough material to get started and clarify how TQQQ and index CFDs fit into the trading program.
+You won't find the same depth of ETF education you might see at a broker like Eightcap Challenges, but there is enough material to get started and clarify how TQQQ and index CFDs fit into the trading program.
 
 ### Verdict on The Trading Pit
 
