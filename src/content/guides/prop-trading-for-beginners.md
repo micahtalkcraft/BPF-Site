@@ -535,7 +535,7 @@ These rules exist to test two core trading skills — your profitability and ris
   </div>
 </div>
 
-To help you further with strategy development, you can read about [prop trading strategies](/blog/prop-trading-strategies) and [risk management techniques](/blog/risk-management-prop-trading).
+To help you further with strategy development, you can read about [prop trading strategies](/guides/prop-trading-strategies) and [risk management techniques](/guides/risk-management-prop-trading).
 
 ## The Prop Profit Sharing Model
 

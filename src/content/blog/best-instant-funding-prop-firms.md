@@ -728,7 +728,7 @@ Prop firm challenges are designed to assess traders' skills and commitment by re
 
 These challenges often involve one or two evaluation phases where traders must meet profit objectives, such as 8-10% within a set period while respecting daily and overall drawdown limits. Successfully passing these challenges leads to a funded account, granting traders access to capital while adhering to ongoing risk parameters.
 
-If you aren't familiar with the prop industry, we recommend you learn more about [prop trading firms](/blog/what-is-a-prop-firm) and how challenges work before you buy an instant funding account.
+If you aren't familiar with the prop industry, we recommend you learn more about [prop trading firms](/guides/what-is-a-prop-firm) and how challenges work before you buy an instant funding account.
 
 ---
 

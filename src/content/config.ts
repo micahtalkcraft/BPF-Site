@@ -221,6 +221,7 @@ export const collections = {
   reviews: defineCollection({ type: "data", schema: ReviewSchema }),
   offers: defineCollection({ type: "data", schema: OfferSchema }),
   blog: defineCollection({ type: "content", schema: BlogSchema }),
+  guides: defineCollection({ type: "content", schema: BlogSchema }),
 };
 
 // ─── Exported types ───────────────────────────────────────────────────────────

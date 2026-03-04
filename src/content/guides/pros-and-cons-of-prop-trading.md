@@ -135,7 +135,7 @@ Here are the top benefits of proprietary trading:
       </div>
       <div>
         <p class="text-sm font-extrabold text-slate-900 mb-1">Structured Risk Management & Support</p>
-        <p class="text-sm text-slate-600 leading-relaxed">While risk rules may seem restrictive, they're actually designed to help you build discipline. Most prop firms have drawdown limits, stop-loss requirements, and profit targets that enforce solid <a href="/blog/risk-management-prop-trading" class="font-semibold text-teal-600 hover:underline">risk management</a>.</p>
+        <p class="text-sm text-slate-600 leading-relaxed">While risk rules may seem restrictive, they're actually designed to help you build discipline. Most prop firms have drawdown limits, stop-loss requirements, and profit targets that enforce solid <a href="/guides/risk-management-prop-trading" class="font-semibold text-teal-600 hover:underline">risk management</a>.</p>
         <p class="text-sm text-slate-600 leading-relaxed mt-2">This structure helps traders develop consistent habits, avoid emotional trading, and reduce the likelihood of account blow-ups. It's especially beneficial for newer traders still learning how to manage volatility and protect capital.</p>
       </div>
     </div>
@@ -335,7 +335,7 @@ Always verify whether a firm is transparent, ethical, and aligned with industry 
 
 ## Should You Start Prop Trading?
 
-If you think you've got solid trading skills and the required discipline and understand how to do proper [risk management](/blog/risk-management-prop-trading), but lack the trading funds to scale, then prop trading can be a great fit. Up-and-coming traders can join prop firms to get funded accounts, allowing access to bigger buying power without risking their entire life savings. Experienced traders can also hugely benefit from joining prop trading companies to scale up quickly and access multiple trading platforms or asset classes.
+If you think you've got solid trading skills and the required discipline and understand how to do proper [risk management](/guides/risk-management-prop-trading), but lack the trading funds to scale, then prop trading can be a great fit. Up-and-coming traders can join prop firms to get funded accounts, allowing access to bigger buying power without risking their entire life savings. Experienced traders can also hugely benefit from joining prop trading companies to scale up quickly and access multiple trading platforms or asset classes.
 
 But before jumping straight in, here are the key details interested traders need to know:
 
@@ -383,14 +383,14 @@ But before jumping straight in, here are the key details interested traders need
         </div>
         <div>
           <p class="text-sm font-bold text-slate-900 mb-0.5">Trading Restrictions and Strategies Allowed</p>
-          <p class="text-sm text-slate-600">Traders must seek out trading firms that align with their risk profile and allow their preferred trading style, whether <a href="/blog/prop-trading-strategies" class="font-semibold text-teal-600 hover:underline">day trading, swing trading, or any other strategy</a>. Some firms may also restrict certain financial instruments, making it necessary to check before traders fully commit to one.</p>
+          <p class="text-sm text-slate-600">Traders must seek out trading firms that align with their risk profile and allow their preferred trading style, whether <a href="/guides/prop-trading-strategies" class="font-semibold text-teal-600 hover:underline">day trading, swing trading, or any other strategy</a>. Some firms may also restrict certain financial instruments, making it necessary to check before traders fully commit to one.</p>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-Prop trading has the potential to make traders earn significant income, but only if they have the trading skills and the discipline to properly manage risk. If you're just getting started, read our [prop trading for beginners guide](/blog/prop-trading-for-beginners) for a complete walkthrough of how it all works.
+Prop trading has the potential to make traders earn significant income, but only if they have the trading skills and the discipline to properly manage risk. If you're just getting started, read our [prop trading for beginners guide](/guides/prop-trading-for-beginners) for a complete walkthrough of how it all works.
 
 ## FAQs
 
