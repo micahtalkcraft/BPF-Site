@@ -1,0 +1,14 @@
+---
+import { regions } from "../config/regions";
+
+interface Props {
+  path: string;
+}
+
+const { path } = Astro.props;
+---
+
+{Object.values(regions).map((r) => (
+  <link rel="alternate" hreflang={r.hreflang} href={`https://${r.subdomain}${path}`} />
+))}
+<link rel="alternate" hreflang="x-default" href={`https://${regions.us.subdomain}${path}`} />

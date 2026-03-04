@@ -8,11 +8,21 @@ import { remarkBaseUrl } from './src/plugins/remark-base-url.ts';
 
 const siteBase = process.env.CI ? '/BPF-Site' : '/';
 
+/** @type {Record<string, string>} */
+const regionSubdomains = {
+  us: 'https://us.bestpropfirms.com',
+  uk: 'https://uk.bestpropfirms.com',
+  ca: 'https://ca.bestpropfirms.com',
+  in: 'https://in.bestpropfirms.com',
+};
+
+const regionSite = regionSubdomains[process.env.REGION ?? 'us'] ?? regionSubdomains.us;
+
 // https://astro.build/config
 export default defineConfig({
   site: process.env.CI
     ? 'https://micahtalkcraft.github.io'
-    : 'https://www.bestpropfirms.com',
+    : regionSite,
   base: siteBase,
   output: 'static',
   integrations: [react(), sitemap()],

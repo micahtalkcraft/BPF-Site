@@ -31,6 +31,18 @@
         "hqCountry": {
           "type": "string"
         },
+        "regions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "us",
+              "uk",
+              "ca",
+              "in"
+            ]
+          }
+        },
         "evaluation": {
           "type": "object",
           "properties": {

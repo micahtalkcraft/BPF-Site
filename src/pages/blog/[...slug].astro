@@ -1,6 +1,7 @@
 ---
 import Base from "../../layouts/Base.astro";
 import { getCollection } from "astro:content";
+import { filterFirmsByRegion, currentRegion } from "../../config/currentRegion";
 import ScoreBadge from "../../components/shared/ScoreBadge.astro";
 
 export async function getStaticPaths() {
@@ -43,6 +44,8 @@ const morePosts = allPosts
   .sort((a, b) => new Date(b.data.publishedAt).getTime() - new Date(a.data.publishedAt).getTime())
   .slice(0, 3);
 
+const siteUrl = `https://${currentRegion.subdomain}`;
+
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -55,14 +58,14 @@ const articleJsonLd = {
   publisher: {
     "@type": "Organization",
     name: "BestPropFirms.com",
-    url: "https://www.bestpropfirms.com",
+    url: siteUrl,
   },
   ...(post.data.coverImage && { image: post.data.coverImage }),
-  mainEntityOfPage: `https://www.bestpropfirms.com/blog/${post.slug}`,
+  mainEntityOfPage: `${siteUrl}/blog/${post.slug}`,
 };
 
 // Load prop firm + review data for featured firms (if any)
-const propFirms = await getCollection("prop-firms");
+const propFirms = filterFirmsByRegion(await getCollection("prop-firms"));
 const reviews = await getCollection("reviews");
 const reviewMap = Object.fromEntries(reviews.map((r) => [r.data.propFirmId, r.data]));
 const firmMap = Object.fromEntries(propFirms.map((f) => [f.data.slug, f.data]));

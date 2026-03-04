@@ -68,7 +68,8 @@
       "Bash(find src/content/blog -name \"*.md\" -exec sed -i 's|https://www.oanda.com/eu-en/trading/prop-trader/|https://go.oanda.com/visit/?bta=37806\\\\&brand=oandapt|g' {} +)",
       "Bash(find src/content/blog -name \"*.md\" -exec sed -i 's|href=\"\"https://thinkcapital.com\"\"|href=\"\"https://www.thinkcapital.com/?sp_rid=677d98c8fcd21d60b8730003\"\"|g' {} +)",
       "Bash(find src/content/blog -name \"*.md\" -exec sed -i 's|href=\"\"https://the5ers.com\"\"|href=\"\"https://the5ers.com/?ref=79424\"\"|g' {} +)",
-      "Bash(find src/content/blog -name \"*.md\" -exec sed -i 's|href=\"\"https://maventrading.com\"\"|href=\"\"https://maventrading.com/\"\"|g' {} +)"
+      "Bash(find src/content/blog -name \"*.md\" -exec sed -i 's|href=\"\"https://maventrading.com\"\"|href=\"\"https://maventrading.com/\"\"|g' {} +)",
+      "Bash(npx astro check)"
     ]
   }
 }

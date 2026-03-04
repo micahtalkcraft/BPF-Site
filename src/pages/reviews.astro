@@ -1,13 +1,15 @@
 ---
 import Base from "../layouts/Base.astro";
 import { getCollection } from "astro:content";
+import { filterFirmsByRegion, currentRegion } from "../config/currentRegion";
 import ScoreBadge from "../components/shared/ScoreBadge.astro";
 import FirmAvatar from "../components/shared/FirmAvatar.astro";
 import * as flags from "country-flag-icons/string/3x2";
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const siteUrl = `https://${currentRegion.subdomain}`;
 
-const propFirms = await getCollection("prop-firms");
+const propFirms = filterFirmsByRegion(await getCollection("prop-firms"));
 const reviews = await getCollection("reviews");
 
 const reviewMap = Object.fromEntries(reviews.map((r) => [r.data.propFirmId, r.data]));
@@ -122,7 +124,7 @@ const jsonLd = {
     "@type": "ListItem",
     position: row.rank,
     name: row.name,
-    url: `https://www.bestpropfirms.com/reviews/${row.slug}`,
+    url: `${siteUrl}/reviews/${row.slug}`,
   })),
 };
 

@@ -1,13 +1,15 @@
 ---
 import Base from "../layouts/Base.astro";
 import { getCollection } from "astro:content";
+import { filterFirmsByRegion, currentRegion } from "../config/currentRegion";
 import FirmListIsland from "../components/prop-firms/FirmListIsland";
 import type { FirmItem } from "../components/prop-firms/FirmListIsland";
 import * as flags from "country-flag-icons/string/3x2";
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const siteUrl = `https://${currentRegion.subdomain}`;
 
-const propFirms = await getCollection("prop-firms");
+const propFirms = filterFirmsByRegion(await getCollection("prop-firms"));
 const reviews = await getCollection("reviews");
 
 const reviewMap = Object.fromEntries(reviews.map((r) => [r.data.propFirmId, r.data]));
@@ -39,11 +41,11 @@ const jsonLd = [
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "BestPropFirms.com",
-    url: "https://www.bestpropfirms.com",
+    url: siteUrl,
     description: "Independent, data-driven rankings and reviews of proprietary trading firms.",
     potentialAction: {
       "@type": "SearchAction",
-      target: "https://www.bestpropfirms.com/reviews?q={search_term_string}",
+      target: `${siteUrl}/reviews?q={search_term_string}`,
       "query-input": "required name=search_term_string",
     },
   },
@@ -51,8 +53,8 @@ const jsonLd = [
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "BestPropFirms.com",
-    url: "https://www.bestpropfirms.com",
-    logo: "https://www.bestpropfirms.com/images/brand/best-prop-firms-site-logo.png",
+    url: siteUrl,
+    logo: `${siteUrl}/images/brand/best-prop-firms-site-logo.png`,
     sameAs: [],
   },
   {
@@ -65,7 +67,7 @@ const jsonLd = [
       "@type": "ListItem",
       position: i + 1,
       name: f.data.name,
-      url: `https://www.bestpropfirms.com/reviews/${f.data.slug}`,
+      url: `${siteUrl}/reviews/${f.data.slug}`,
     })),
   },
   {

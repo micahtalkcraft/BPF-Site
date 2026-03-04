@@ -1,9 +1,10 @@
 ---
 import Base from "../../layouts/Base.astro";
 import { getCollection } from "astro:content";
+import { filterFirmsByRegion } from "../../config/currentRegion";
 import PropFirmCard from "../../components/prop-firms/PropFirmCard.astro";
 
-const propFirms = await getCollection("prop-firms");
+const propFirms = filterFirmsByRegion(await getCollection("prop-firms"));
 const reviews = await getCollection("reviews");
 
 const reviewMap = Object.fromEntries(reviews.map((r) => [r.data.propFirmId, r.data]));
