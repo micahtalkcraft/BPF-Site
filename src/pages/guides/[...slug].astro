@@ -177,16 +177,6 @@ const featuredFirmCards: FeaturedFirmCard[] = (post.data.featuredFirms ?? []).ma
     </div>
   </section>
 
-  <!-- Cover image (only when no video) -->
-  {post.data.coverImage && !post.data.youtubeVideoId && (
-    <div class="mx-auto max-w-3xl px-4 -mt-6 mb-8 relative z-10">
-      <img
-        src={assetUrl(post.data.coverImage)}
-        alt={post.data.title}
-        class="w-full rounded-xl shadow-lg object-cover max-h-96"
-      />
-    </div>
-  )}
 
   <!-- Two-column: Quick-reference sidebar + video -->
   {post.data.youtubeVideoId && featuredFirmCards.length > 0 && (
