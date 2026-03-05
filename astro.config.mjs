@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 import { remarkBaseUrl } from './src/plugins/remark-base-url.ts';
 
-const isGitHubPages = !!process.env.CI;
+const isGitHubPages = !!process.env.GITHUB_ACTIONS;
 const siteBase = isGitHubPages ? '/BPF-Site' : '/';
 
 // https://astro.build/config
