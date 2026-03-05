@@ -31,12 +31,6 @@
           "type": "string",
           "format": "date"
         },
-        "regions": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
         "$schema": {
           "type": "string"
         }

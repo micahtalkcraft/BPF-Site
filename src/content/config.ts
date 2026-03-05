@@ -13,9 +13,6 @@ const PropFirmSchema = z.object({
   foundedYear: z.number().int().min(1900).max(2100).optional(),
   hqCountry: z.string().optional(), // ISO 3166-1 alpha-2
 
-  // Regions this firm is shown in (omit = shown in all regions)
-  regions: z.array(z.enum(["us", "uk", "ca", "in"])).optional(),
-
   // Evaluation (challenge models, targets, drawdowns)
   evaluation: z.object({
     types: z.array(z.enum(["1-step", "2-step", "3-step", "instant", "rapid", "synthetic", "other"])),
@@ -186,7 +183,6 @@ const OfferSchema = z.object({
   terms: z.string(),
   startAt: z.string().date().optional(),
   endAt: z.string().date().optional(),
-  regions: z.array(z.string()).optional(), // ISO 3166-1 alpha-2
 });
 
 // ─── Blog ─────────────────────────────────────────────────────────────────────

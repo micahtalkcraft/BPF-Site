@@ -1,7 +1,7 @@
 import type { APIRoute } from "astro";
 
 export const GET: APIRoute = ({ site }) => {
-  const siteUrl = site?.href.replace(/\/$/, "") ?? "https://us.bestpropfirms.com";
+  const siteUrl = site?.href.replace(/\/$/, "") ?? "https://www.bestpropfirms.com";
   const body = `User-agent: *
 Allow: /
 

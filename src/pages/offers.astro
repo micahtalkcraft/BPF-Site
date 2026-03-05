@@ -1,12 +1,11 @@
 ---
 import Base from "../layouts/Base.astro";
 import { getCollection } from "astro:content";
-import { filterFirmsByRegion } from "../config/currentRegion";
 import FirmAvatar from "../components/shared/FirmAvatar.astro";
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
-const propFirms = filterFirmsByRegion(await getCollection("prop-firms"));
+const propFirms = await getCollection("prop-firms");
 const reviews = await getCollection("reviews");
 
 const reviewMap = Object.fromEntries(reviews.map((r) => [r.data.propFirmId, r.data]));

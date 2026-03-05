@@ -1,9 +1,8 @@
 ---
 import { getCollection } from "astro:content";
-import { filterFirmsByRegion } from "../../config/currentRegion";
 
 export async function getStaticPaths() {
-  const propFirms = filterFirmsByRegion(await getCollection("prop-firms"));
+  const propFirms = await getCollection("prop-firms");
   return propFirms.map((f) => ({
     params: { slug: f.data.slug },
     props: { slug: f.data.slug },

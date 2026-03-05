@@ -1,7 +1,6 @@
 ---
 import Base from "../../layouts/Base.astro";
 import { getCollection } from "astro:content";
-import { filterFirmsByRegion, currentRegion } from "../../config/currentRegion";
 import ScoreBadge from "../../components/shared/ScoreBadge.astro";
 import PropFirmBadges from "../../components/shared/PropFirmBadges.astro";
 import FirmAvatar from "../../components/shared/FirmAvatar.astro";
@@ -9,7 +8,7 @@ import type { PropFirm, Review } from "../../content/config";
 import * as flags from "country-flag-icons/string/3x2";
 
 export async function getStaticPaths() {
-  const propFirms = filterFirmsByRegion(await getCollection("prop-firms"));
+  const propFirms = await getCollection("prop-firms");
   const reviews = await getCollection("reviews");
   const offers = await getCollection("offers");
 
@@ -40,7 +39,7 @@ interface Props {
 }
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
-const siteUrl = `https://${currentRegion.subdomain}`;
+const siteUrl = "https://www.bestpropfirms.com";
 
 const { firm, review, offers } = Astro.props;
 
