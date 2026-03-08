@@ -65,7 +65,7 @@
   "media": { "logo": "/images/logos/fundednext.png" },
   "availability": { "restrictedCountries": [] },
   "custom": {
-    "tags": ["Broker-Backed (FNmarkets)", "Up to 95% Split", "15% During Challenge", "Scaling to $4M"],
+    "tags": ["Broker Backed", "Up to 95% Split", "15% During Challenge", "Scaling to $4M"],
     "discountCode": "PROPFIRMS",
     "discountPercent": null,
     "discountDesc": "Exclusive FundedNext discount code for a 120% challenge fee refund!"

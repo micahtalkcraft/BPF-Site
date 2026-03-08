@@ -54,7 +54,7 @@
   "media": { "logo": "/images/logos/dna-funded-logo.png" },
   "availability": { "restrictedCountries": [] },
   "custom": {
-    "tags": ["Fast Payouts", "Low Spreads", "Scaling Plan", "No Time Limit"],
+    "tags": ["Broker Backed", "Fast Payouts", "Low Spreads", "Instant Funding"],
     "discountCode": "PROPFIRMS25",
     "discountPercent": 25
   },

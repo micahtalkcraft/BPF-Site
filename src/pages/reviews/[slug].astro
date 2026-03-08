@@ -349,15 +349,15 @@ const youtubeId = review.youtubeUrl?.match(/(?:embed\/|v=|youtu\.be\/)([a-zA-Z0-
             </p>
           </div>
           <div class="rounded-xl bg-slate-50 border border-slate-100 px-4 py-3 text-center">
-            <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-1">Drawdown</p>
+            <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-1">Challenge Fees</p>
             <p class="text-sm font-bold text-slate-800">
-              {firm.evaluation.dailyDrawdown !== null ? `${firm.evaluation.dailyDrawdown}%` : "—"} / {firm.evaluation.maxDrawdown !== null ? `${firm.evaluation.maxDrawdown}%` : "—"}
+              {lowestFee !== null ? `Starting from $${lowestFee.fee}` : "—"}
             </p>
           </div>
           <div class="rounded-xl bg-slate-50 border border-slate-100 px-4 py-3 text-center">
-            <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-1">First Payout</p>
+            <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-1">Trading Platforms</p>
             <p class="text-sm font-bold text-slate-800">
-              {firm.payouts.firstPayoutDays !== null ? `${firm.payouts.firstPayoutDays} days` : "—"}
+              {firm.markets.platforms.length > 0 ? firm.markets.platforms.join(", ") : "—"}
             </p>
           </div>
         </div>

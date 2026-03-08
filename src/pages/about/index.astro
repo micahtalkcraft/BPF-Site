@@ -1,5 +1,5 @@
 ---
-import Base from "../layouts/Base.astro";
+import Base from "../../layouts/Base.astro";
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
@@ -82,6 +82,7 @@ const team = [
     name: "Justin Grossbard",
     role: "Co-Founder & Strategic Head Of Research",
     image: "/images/team/justin-grossbard.png",
+    link: "/about/justin-grossbard",
   },
   {
     name: "Noam Korbl",
@@ -179,7 +180,7 @@ const socials = [
         </div>
         <div class="md:col-span-3">
           <p class="text-slate-600 leading-relaxed mb-4">
-            Founded in 2023 by <strong class="text-slate-800">Justin Grossbard</strong> and <strong class="text-slate-800">Noam Korbl</strong>, Best Prop Firms was created to address the needs of a growing community of retail traders. With prop trading now accessible to more traders than ever, the choices can be overwhelming. Our goal is to streamline the process of comparing prop firms by focusing on what's important: transparency, quality information, and an understanding of what different firms offer to traders at every level.
+            Founded in 2023 by <a href={`${base}/about/justin-grossbard`} class="font-bold text-slate-800 hover:text-teal-600 transition-colors">Justin Grossbard</a> and <strong class="text-slate-800">Noam Korbl</strong>, Best Prop Firms was created to address the needs of a growing community of retail traders. With prop trading now accessible to more traders than ever, the choices can be overwhelming. Our goal is to streamline the process of comparing prop firms by focusing on what's important: transparency, quality information, and an understanding of what different firms offer to traders at every level.
           </p>
           <p class="text-slate-600 leading-relaxed">
             Our team's mission is to simplify the trader experience, breaking down complex information into accessible, actionable insights. We provide clear comparisons across key factors, from platform usability and evaluation fees to payout policies and firm reputation, so you can confidently choose a prop firm that aligns with your trading style.
@@ -332,7 +333,11 @@ const socials = [
               <!-- Decorative dot -->
               <div class="absolute bottom-1 right-1 w-5 h-5 rounded-full bg-teal-500 border-[3px] border-slate-100"></div>
             </div>
-            <p class="font-extrabold text-lg text-slate-900">{person.name}</p>
+            {person.link ? (
+              <a href={`${base}${person.link}`} class="font-extrabold text-lg text-slate-900 hover:text-teal-600 transition-colors">{person.name}</a>
+            ) : (
+              <p class="font-extrabold text-lg text-slate-900">{person.name}</p>
+            )}
             <p class="text-sm text-teal-600 font-medium mt-1 max-w-[180px] leading-snug">{person.role}</p>
           </div>
         ))}

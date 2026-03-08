@@ -31,7 +31,6 @@ export interface FirmItem {
 const SORT_OPTIONS = [
   { value: "score-desc", label: "Score: High to Low" },
   { value: "score-asc", label: "Score: Low to High" },
-  { value: "payout-desc", label: "Payout Split: High" },
   { value: "name-asc", label: "Name: A–Z" },
 ];
 
@@ -252,7 +251,6 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
     list.sort((a, b) => {
       if (sort === "score-desc") return (b.overallScore ?? 0) - (a.overallScore ?? 0);
       if (sort === "score-asc") return (a.overallScore ?? 0) - (b.overallScore ?? 0);
-      if (sort === "payout-desc") return (b.splitMax ?? 0) - (a.splitMax ?? 0);
       if (sort === "name-asc") return a.name.localeCompare(b.name);
       return 0;
     });
@@ -406,21 +404,9 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
 
                 {/* Stats */}
                 <div className="hidden md:flex items-center gap-5 text-sm">
-                  <div className="text-center">
-                    <p className="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Payout</p>
-                    <p className={`font-bold text-sm ${firm.splitMax ? "text-teal-600" : "text-slate-300"}`}>
-                      {firm.splitMax ? `${firm.splitMax}%` : "—"}
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <p className="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Max DD</p>
-                    <p className="font-bold text-sm text-slate-700">
-                      {firm.maxDrawdown ? `${firm.maxDrawdown}%` : "—"}
-                    </p>
-                  </div>
                   {firm.lowestFee !== null && (
                     <div className="text-center">
-                      <p className="text-[10px] text-slate-400 uppercase tracking-wide font-medium">From</p>
+                      <p className="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Fees From</p>
                       <p className="font-bold text-sm text-slate-700">${firm.lowestFee}</p>
                     </div>
                   )}

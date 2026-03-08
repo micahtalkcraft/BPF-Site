@@ -26,6 +26,5 @@
     { "q": "What is the new daily profit cap at DNA Funded?", "a": "The new daily profit cap at DNA Funded limits you to earning a maximum of 40% of your payout target in a single trading day. For example, if your target is $10,000, only $4,000 in profit from one day will count toward that goal. This rule was introduced on 15 May 2025 to support consistent trading and meet broker backed prop firm standards." }
   ],
   "methodologyVersion": "1.0",
-  "lastReviewedAt": "2026-02-01",
-  "youtubeUrl": "https://www.youtube.com/embed/dZ7gorgnMvU"
+  "lastReviewedAt": "2026-02-01"
 }

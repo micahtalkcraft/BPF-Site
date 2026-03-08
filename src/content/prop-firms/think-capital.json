@@ -58,7 +58,7 @@
     "trustpilotRating": 4.3,
     "trustpilotCount": 500,
     "communitySize": "11,700+ Discord",
-    "notableFlags": ["Broker-backed"]
+    "notableFlags": ["Broker Backed"]
   },
   "links": { "website": "https://www.thinkcapital.com/?sp_rid=677d98c8fcd21d60b8730003" },
   "media": { "logo": "/images/logos/thinkcapital-icon.png" },
@@ -68,7 +68,7 @@
     "email": true
   },
   "custom": {
-    "tags": ["Broker-backed", "Up to 90% Split", "US Traders Welcome", "Fees from $39"]
+    "tags": ["Broker Backed", "Up to 90% Split", "US Traders Welcome", "Fees from $39"]
   },
   "notes": null,
   "lastVerifiedAt": "2026-02-27",

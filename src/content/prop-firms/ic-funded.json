@@ -61,7 +61,7 @@
   "media": { "logo": "/images/logos/ic-funded-logo.png" },
   "availability": { "restrictedCountries": [] },
   "custom": {
-    "tags": ["IC Markets Backed", "Spreads From 0 Pips", "$3.50 Commission", "Fees From $29.75"],
+    "tags": ["Broker Backed", "Spreads From 0 Pips", "$3.50 Commission", "Fees From $29.75"],
     "discountCode": "PROPFIRMS25",
     "discountPercent": 25
   },

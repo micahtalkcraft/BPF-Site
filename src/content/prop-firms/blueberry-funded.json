@@ -61,7 +61,7 @@
   "media": { "logo": "/images/logos/blueberry-funded-logo.png" },
   "availability": { "restrictedCountries": [] },
   "custom": {
-    "tags": ["ASIC-Backed Broker", "1,100+ Instruments", "Scaling to $2M", "Synthetics Trading"],
+    "tags": ["Broker Backed", "1,100+ Instruments", "Scaling to $2M", "Synthetics Trading"],
     "discountCode": "PROPFIRMS20",
     "discountPercent": 20
   },

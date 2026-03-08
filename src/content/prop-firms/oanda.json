@@ -60,7 +60,7 @@
     "email": true
   },
   "custom": {
-    "tags": ["Broker-Backed", "Two Step", "MT5 Only", "80% Split"],
+    "tags": ["Broker Backed", "Two Step", "MT5 Only", "80% Split"],
     "discountCode": "PROPFIRMS",
     "discountPercent": 20
   },
