@@ -13,8 +13,6 @@ youtubeVideoId: "QHPnbIvv2qA"
 featuredFirms:
   - slug: "brightfunded"
     descriptor: "Best Prop Firm in Canada Overall"
-  - slug: "oanda"
-    descriptor: "Best Prop Firm for Beginners"
   - slug: "dna-funded"
     descriptor: "Broker Backed Prop Firm"
   - slug: "fundednext"
@@ -203,128 +201,7 @@ Our team found BrightFunded to be the best prop firm in Canada because of its ov
 
 ---
 
-## 2. OANDA Prop Trader — Best Prop Firm for Beginners
-
-OANDA is a good option for beginner prop traders in Canada wanting a simple two-step challenge without an overwhelming number of modifications or options. Profit splits are decent between 80% and 90%, and spreads are pretty competitive too.
-
-<div class="not-prose my-6 rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
-  <div class="flex flex-col sm:flex-row items-stretch">
-    <div class="flex items-center gap-4 p-5 flex-1 min-w-0">
-      <img src="/images/logos/oanda-prop-trader.png" alt="OANDA Prop Trader logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
-      <div class="min-w-0">
-        <p class="text-lg font-extrabold text-slate-900 leading-tight">OANDA Prop Trader</p>
-        <p class="text-xs text-slate-500 mt-0.5">Best Prop Firm for Beginners</p>
-      </div>
-    </div>
-    <div class="flex items-center gap-6 px-5 py-3 sm:py-5 border-t sm:border-t-0 sm:border-l border-slate-100 bg-slate-50/50 text-center">
-      <div>
-        <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Split</p>
-        <p class="text-sm font-bold text-teal-600">90%</p>
-      </div>
-      <div>
-        <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Max DD</p>
-        <p class="text-sm font-bold text-slate-800">10%</p>
-      </div>
-      <div>
-        <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
-        <p class="text-sm font-bold text-slate-800">4.3 <span class="text-amber-500">★</span></p>
-      </div>
-      <a href="/reviews/oanda" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
-        Full Review →
-      </a>
-    </div>
-  </div>
-</div>
-
-<div class="not-prose -mt-3 mb-6 rounded-xl border border-slate-200 bg-slate-50 px-5 py-3 flex items-center justify-center">
-  <a href="https://go.oanda.com/visit/?bta=37806&brand=oandapt" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
-    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
-    Visit OANDA Prop Trader
-  </a>
-</div>
-
-<div class="not-prose my-6 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-  <p class="text-sm font-bold text-slate-900 mb-3">Pros & Cons</p>
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-    <div>
-      <p class="text-xs font-bold text-emerald-600 uppercase tracking-wide mb-2">Pros</p>
-      <ul class="space-y-1.5 text-sm text-slate-700">
-        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Account sizes from $5,000 to $500,000</li>
-        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Profit splits of 80% to 90%</li>
-        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Transparent fee structure</li>
-        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Advanced trading features with MT5</li>
-        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Scaling plans for consistent traders</li>
-      </ul>
-    </div>
-    <div>
-      <p class="text-xs font-bold text-red-500 uppercase tracking-wide mb-2">Cons</p>
-      <ul class="space-y-1.5 text-sm text-slate-700">
-        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>No cryptocurrency trading</li>
-        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>Limited to MT5 platform</li>
-        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>Higher spreads than other prop firms</li>
-        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>Live chat support can be inconsistent</li>
-        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>Minimum payout threshold is $200</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-### Challenges and Fees
-
-OANDA Prop Trader keeps things nice and simple with two models: **Classic** and **Boost**. The main differences between the two are fees, drawdown type, and profit split.
-
-Classic challenges have a fixed profit share at 80%, whereas with the Boost challenge you start at 80% but increase to 90% after your first profit payout.
-
-There's quite a big difference between fees, with Classic challenges starting at $35 for a $5K account, and Boost starting at $99 for a $10K. Both models have a max account size of $500K, which is much higher than most prop firms.
-
-One of the biggest differences between the challenges is the Classic uses a trailing drawdown, while the Boost has a static drawdown, meaning risk limits don't increase as your profits grow.
-
-- **Classic Challenges:** Great for beginner traders wanting low challenge fees and reasonable risk requirements.
-- **Boost Challenges:** Designed for the more experienced prop traders wanting higher payouts and who don't mind stricter risk limits.
-
-Both challenges have strict news trading rules, where you can't trade two minutes before or after major events. You also must trade at least once every 20 days to keep your challenge or funded account active.
-
-A nice perk is that when you pass the challenge, your initial fee is refunded when you receive your first payout as a funded trader. This means if you are successful, the challenge doesn't end up costing you anything.
-
-### Spreads and Trading Costs
-
-Being a broker-backed prop firm, OANDA has competitive spreads and a simple fee structure with commission-free trading.
-
-Spreads for major forex pairs like EUR/USD start at 1.1 pips, while pairs such as USD/JPY average around 1.4 pips. As there's no commission attached to this, it's an easy intro for beginners.
-
-### Profit Payouts
-
-The minimum withdrawal is $200 which is slightly higher than some prop firms, and payouts are paid every 14 days which is a bit slower than others too. But, they make up for it by letting you use bank transfer, Skrill, and Neteller to withdraw funds, and you can even transfer your balance to an OANDA brokerage account.
-
-### Trading Platforms and Markets
-
-OANDA Prop Trader only offers **MetaTrader 5 (MT5)**. While you don't get a choice of platforms, you do get one of the most popular trading platforms with all the tools you need.
-
-MT5 is excellent for running automated strategies with Expert Advisors. The platform also comes with 21 timeframes, advanced charting tools, Depth of Market, and an integrated economic calendar.
-
-While trading tools are great, markets are limited compared to some other prop firms. You get access to forex, indices, and commodities, but no crypto.
-
-- **Forex:** 36 pairs with leverage up to 1:100
-- **Indices:** 15 global indices with leverage up to 1:50
-- **Commodities:** 5 markets including gold, silver, and crude oil with leverage up to 1:50
-
-### Trust and Support
-
-OANDA Prop Trader is a branch of the globally recognised OANDA brand. As OANDA is a licensed and regulated broker, it adds another level of trust to its prop trading services.
-
-However, it is important to note that prop trading is not regulated, and you don't receive the same protection as you would with their CFD trading services.
-
-- **Reputation:** A Trustpilot score of 4.3 out of 5 stars, based on hundreds of reviews. We found a lot of good reviews around the MT5 offering and pricing.
-- **Customer Support:** Email and live chat support available, though live chat availability can be inconsistent and there were a few bad reviews around customer support quality.
-- **Educational Materials:** Educational resources through OANDA Labs include tools like order books, sentiment indicators, and platform tutorials.
-
-### Final Verdict
-
-OANDA Prop Trader is a good option if you are a beginner trader in Canada, but it may be a little limited for anyone more experienced. Fees are low, profit splits are decent, and trading tools are solid, but if you've already completed a few challenges, you might not love the limited product range and commission structure.
-
----
-
-## 3. DNA Funded — Broker Backed Prop Firm
+## 2. DNA Funded — Broker Backed Prop Firm
 
 Backed by DNA Markets, an ASIC-regulated forex broker, DNA Funded gives you some of the most reliable trading conditions and lowest pricing. There are three challenge types including a rapid option, one-step, or two-step evaluation.
 
@@ -452,7 +329,7 @@ DNA Funded is one of the strongest all-round prop firms if you want access to mo
 
 ---
 
-## 4. FundedNext — Flexible Prop Challenges
+## 3. FundedNext — Flexible Prop Challenges
 
 FundedNext lets you work towards a funded account via a one or two-step challenge, with account sizes from $5,000 to $200,000. Profit splits start at 80% and scale up to 95%, and you even receive a 15% profit split during the challenge phase, which is nearly unheard of. We tested the prop firm's Stellar Two Step challenge on MT5, and it took around two months to pass both phases and receive a funded account. It's one of the best all-rounder prop firms we've traded with, earning it 4th place on our shortlist for Canadian traders.
 
@@ -580,7 +457,7 @@ FundedNext is ideal if you want a payout during the challenge period, fast payme
 
 ---
 
-## 5. Eightcap Challenges — Broker Prop Challenge
+## 4. Eightcap Challenges — Broker Prop Challenge
 
 Eightcap Challenges is fully available to traders in Canada and operates differently from every other firm on this list. Instead of outsourcing liquidity or running a proprietary feed, it uses the same pricing it provides to its CFD brokerage clients. That results in extremely tight spreads, clean fills during active sessions, and stable chart behaviour — big positives for intraday traders.
 
@@ -845,12 +722,6 @@ Search volume is a useful indicator of trader attention — but doesn't always r
       <img src="/images/logos/dna-funded-logo.png" alt="DNA Funded" class="w-6 h-6 rounded-md object-contain border border-slate-200 bg-white p-0.5 flex-shrink-0" />
       <span class="flex-1 text-sm font-bold text-slate-900">DNA Funded</span>
       <span class="text-sm font-semibold text-slate-500">40</span>
-    </div>
-    <div class="flex items-center gap-3 px-5 py-2.5 hover:bg-teal-50/50 transition-colors">
-      <span class="flex-shrink-0 w-6 text-xs font-black text-slate-400">10.</span>
-      <img src="/images/logos/oanda-prop-trader.png" alt="OANDA Prop Trader" class="w-6 h-6 rounded-md object-contain border border-slate-200 bg-white p-0.5 flex-shrink-0" />
-      <span class="flex-1 text-sm font-bold text-slate-900">OANDA Prop Trader</span>
-      <span class="text-sm font-semibold text-slate-500">20</span>
     </div>
   </div>
 </div>

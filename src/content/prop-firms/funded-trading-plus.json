@@ -3,6 +3,7 @@
   "slug": "funded-trading-plus",
   "name": "Funded Trading Plus",
   "status": "active",
+  "foundedYear": 2021,
   "hqCountry": "GB",
   "evaluation": {
     "types": ["1-step", "2-step", "instant"],

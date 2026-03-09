@@ -87,7 +87,7 @@ const jsonLd = [
 const awardWinnerSlugs = new Set(["dna-funded", "blueberry-funded", "fundednext", "brightfunded", "fxify", "fxify-futures"]);
 
 // Broker-backed firms
-const brokerBackedSlugs = new Set(["dna-funded", "blueberry-funded", "fundednext", "ic-funded", "fxify-futures", "fxify", "oanda", "fundednext-futures", "hantec-trader", "alpha-capital"]);
+const brokerBackedSlugs = new Set(["dna-funded", "blueberry-funded", "fundednext", "ic-funded", "fxify-futures", "fxify", "fundednext-futures", "hantec-trader", "alpha-capital"]);
 
 const videos = [
   { id: "1otayPx_z1s", title: "The5ers Prop Firm Review | We Tested the Challenge", views: "2.5K", timeAgo: "3 weeks ago" },
@@ -121,6 +121,7 @@ const firmItems: FirmItem[] = sortedFirms.map((f, idx) => {
     website: f.data.links?.website,
     hasReview: !!review,
     flagged: review?.flagged === true,
+    verified: review?.verified !== false,
     isAwardWinner: awardWinnerSlugs.has(f.data.slug),
     isBrokerBacked: brokerBackedSlugs.has(f.data.slug),
     foundedYear: f.data.foundedYear,
@@ -412,7 +413,7 @@ const firmItems: FirmItem[] = sortedFirms.map((f, idx) => {
             Join The Trading Desk
           </h2>
           <p class="text-sm text-white/70 leading-relaxed max-w-lg md:max-w-lg mx-auto md:mx-0">
-            Connect with thousands of prop firm traders. Get real-time deal alerts, payout proof, firm updates, and trading discussion — all in one place.
+            Connect with thousands of prop firm traders. Get real-time deal alerts, payout proof, firm updates, and trading discussion all in one place.
           </p>
         </div>
 

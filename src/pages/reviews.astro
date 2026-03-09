@@ -68,7 +68,7 @@ interface RankedRow {
 }
 
 const awardWinnerSlugs = new Set(["dna-funded", "blueberry-funded", "fundednext", "brightfunded", "fxify", "fxify-futures"]);
-const brokerBackedSlugs = new Set(["dna-funded", "blueberry-funded", "fundednext", "ic-funded", "fxify-futures", "fxify", "oanda", "fundednext-futures", "hantec-trader", "alpha-capital"]);
+const brokerBackedSlugs = new Set(["dna-funded", "blueberry-funded", "fundednext", "ic-funded", "fxify-futures", "fxify", "fundednext-futures", "hantec-trader", "alpha-capital"]);
 
 const rows: RankedRow[] = sorted.map(({ firm, review }, i) => {
   const rank = i + 1;
@@ -233,8 +233,9 @@ const hasFuturesFirms = rows.some((r) => r.tags.some((t) => t.includes("Futures"
                             <svg class="h-[18px] w-[18px] text-red-500" fill="currentColor" viewBox="0 0 20 20" aria-label="Caution">
                               <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.168 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
                             </svg>
-                            <span class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-gray-900 px-2 py-1 text-[11px] font-semibold text-white opacity-0 group-hover/caution:opacity-100 transition-opacity duration-150 shadow-lg z-10">
+                            <span class="pointer-events-none absolute top-7 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-gray-900 px-2 py-1 text-[11px] font-semibold text-white opacity-0 group-hover/caution:opacity-100 transition-opacity duration-150 shadow-lg z-10">
                               Caution
+                              <span class="absolute -top-1 left-1/2 -translate-x-1/2 h-2 w-2 rotate-45 bg-gray-900"></span>
                             </span>
                           </span>
                         )}
@@ -254,8 +255,9 @@ const hasFuturesFirms = rows.some((r) => r.tags.some((t) => t.includes("Futures"
                             <svg class="h-[18px] w-[18px] text-amber-500" fill="currentColor" viewBox="0 0 20 20" aria-label="Unverified">
                               <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.168 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
                             </svg>
-                            <span class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-gray-900 px-2 py-1 text-[11px] font-semibold text-white opacity-0 group-hover/unverified:opacity-100 transition-opacity duration-150 shadow-lg z-10">
+                            <span class="pointer-events-none absolute top-7 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-gray-900 px-2 py-1 text-[11px] font-semibold text-white opacity-0 group-hover/unverified:opacity-100 transition-opacity duration-150 shadow-lg z-10">
                               Unverified
+                              <span class="absolute -top-1 left-1/2 -translate-x-1/2 h-2 w-2 rotate-45 bg-gray-900"></span>
                             </span>
                           </span>
                         )}

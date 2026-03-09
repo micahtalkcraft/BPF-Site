@@ -3,6 +3,8 @@
   "slug": "funded-prime",
   "name": "Funded Prime",
   "status": "active",
+  "foundedYear": 2023,
+  "hqCountry": "AU",
   "evaluation": {
     "types": ["1-step", "2-step", "other"],
     "profitTargets": { "phase1": 10, "phase2": 5 },
@@ -12,7 +14,7 @@
     "scalingPlan": null
   },
   "pricing": {
-    "challengeFees": [],
+    "challengeFees": [{ "accountSize": 5000, "fee": 35 }],
     "resetFee": null,
     "refundPolicy": null
   },
@@ -45,7 +47,7 @@
   "media": { "logo": "/images/logos/fundedprime-logo.png" },
   "availability": { "restrictedCountries": [] },
   "custom": {
-    "tags": ["250+ Crypto Pairs", "Meme Coin Trading", "10:1 Meme Leverage", "Up to 90% Split"],
+    "tags": ["250+ Crypto Pairs", "Meme Coin Trading", "Meme Coin Challenge", "Up to 90% Split"],
     "discountCode": "PROPFIRMS25",
     "discountPercent": 25
   },

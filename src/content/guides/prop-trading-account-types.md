@@ -301,56 +301,9 @@ This structure may appeal if you're comfortable with evaluation but prefer a bit
 
 ### Best Prop Firms for Two-Step Challenges
 
-IC Funded and OANDA Prop Trader both offer two-step evaluations, ideal for traders seeking a structured pathway to a funded account.
-
-IC Funded partners with IC Markets, providing competitive spreads from 0 pips, low entry fees starting at $49, and profit splits from 75% to 80%. OANDA Prop Trader offers accessible fees from $35, profit splits up to 90%, and the MetaTrader 5 platform.
+IC Funded offers a strong two-step evaluation, ideal for traders seeking a structured pathway to a funded account. IC Funded partners with IC Markets, providing competitive spreads from 0 pips, low entry fees starting at $49, and profit splits from 75% to 80%.
 
 <div class="not-prose my-8 space-y-4">
-  <div class="relative group bg-white border border-slate-200 rounded-2xl shadow-sm hover:shadow-md hover:border-teal-200 transition-all duration-200 overflow-hidden">
-    <span class="absolute left-0 top-4 bottom-4 w-1 rounded-r-full bg-gradient-to-b from-teal-400 to-teal-600 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
-    <div class="p-5 sm:p-6">
-      <div class="flex items-center gap-4">
-        <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-white border border-slate-200 flex items-center justify-center overflow-hidden shadow-sm">
-          <img src="/images/logos/oanda-prop-trader.png" alt="OANDA Prop Trader logo" class="w-full h-full object-contain p-1.5" loading="lazy"/>
-        </div>
-        <div class="flex-1 min-w-0">
-          <div class="flex items-center gap-2 flex-wrap">
-            <a href="/reviews/oanda" class="text-lg font-extrabold text-slate-900 hover:text-teal-600 transition-colors">OANDA Prop Trader</a>
-          </div>
-          <p class="text-xs text-slate-500 mt-0.5">Two-step evaluation with fees from $35 and up to 80% profit split on MT5</p>
-        </div>
-        <div class="flex-shrink-0 rounded-xl bg-teal-500 w-14 h-14 flex flex-col items-center justify-center">
-          <span class="text-xl font-black text-white leading-none">85</span>
-          <span class="text-[8px] text-teal-100 font-medium">/100</span>
-        </div>
-      </div>
-      <div class="flex items-center gap-3 sm:gap-5 flex-wrap mt-4 mb-4">
-        <div class="rounded-lg bg-slate-50 px-3 py-2 text-center min-w-[70px]">
-          <p class="text-[9px] text-slate-400 uppercase tracking-wide font-medium mb-0.5">Max Split</p>
-          <p class="font-bold text-sm text-teal-600">80%</p>
-        </div>
-        <div class="rounded-lg bg-slate-50 px-3 py-2 text-center min-w-[70px]">
-          <p class="text-[9px] text-slate-400 uppercase tracking-wide font-medium mb-0.5">Models</p>
-          <p class="font-bold text-xs text-slate-700">2-Step</p>
-        </div>
-        <div class="rounded-lg bg-slate-50 px-3 py-2 text-center min-w-[70px]">
-          <p class="text-[9px] text-slate-400 uppercase tracking-wide font-medium mb-0.5">Trustpilot</p>
-          <p class="font-bold text-sm text-slate-700">3.7 <span class="text-amber-400">★</span></p>
-        </div>
-      </div>
-      <div class="flex items-center justify-end gap-2 pt-3 border-t border-slate-100">
-        <a href="/reviews/oanda" class="inline-flex items-center gap-1.5 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
-          Read Review
-          <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-        </a>
-        <a href="https://go.oanda.com/visit/?bta=37806&brand=oandapt" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 rounded-lg border border-slate-200 px-3 py-2 text-xs font-semibold text-slate-600 hover:border-teal-300 hover:text-teal-600 transition-colors whitespace-nowrap">
-          Visit Site
-          <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-        </a>
-      </div>
-    </div>
-  </div>
-
   <div class="relative group bg-white border border-slate-200 rounded-2xl shadow-sm hover:shadow-md hover:border-teal-200 transition-all duration-200 overflow-hidden">
     <span class="absolute left-0 top-4 bottom-4 w-1 rounded-r-full bg-gradient-to-b from-teal-400 to-teal-600 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
     <div class="p-5 sm:p-6">

@@ -68,7 +68,7 @@ The personal financial risk of prop trading is usually limited to your initial c
 
 ## What are the Best Prop Trading Firms for Beginners?
 
-The best prop firms for beginners we've reviewed are reputable or broker backed firms like OANDA Prop Trader, BrightFunded, and FundedNext. They offer a combo of beginner friendly evaluation processes, supportive environments, and clear trading rules that help new traders learn consistency while having all the educational resources and support they need along the way.
+The best prop firms for beginners we've reviewed are reputable or broker backed firms like BrightFunded and FundedNext. They offer a combo of beginner friendly evaluation processes, supportive environments, and clear trading rules that help new traders learn consistency while having all the educational resources and support they need along the way.
 
 <div class="not-prose my-8 space-y-5">
 
@@ -77,64 +77,6 @@ The best prop firms for beginners we've reviewed are reputable or broker backed 
     <div class="p-5 sm:p-6">
       <div class="flex items-center gap-4 mb-4">
         <span class="hidden sm:block flex-shrink-0 text-2xl font-black text-amber-400 w-8 text-center select-none">01</span>
-        <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-white border border-slate-200 flex items-center justify-center overflow-hidden shadow-sm">
-          <img src="/images/logos/oanda-prop-trader.png" alt="OANDA Prop Trader logo" class="w-full h-full object-contain p-1.5" loading="lazy"/>
-        </div>
-        <div class="flex-1 min-w-0">
-          <div class="flex items-center gap-2 flex-wrap">
-            <a href="/reviews/oanda" class="text-lg font-extrabold text-slate-900 hover:text-teal-600 transition-colors">OANDA Prop Trader</a>
-            <span class="inline-flex items-center text-[9px] font-bold uppercase tracking-wider bg-teal-50 text-teal-700 border border-teal-200 px-2 py-0.5 rounded-md">Best for Beginners</span>
-          </div>
-          <p class="text-xs text-slate-500 mt-0.5">A globally known name in finance with clear rules and educational resources for MT5</p>
-        </div>
-        <div class="flex-shrink-0 rounded-xl bg-teal-500 w-14 h-14 flex flex-col items-center justify-center">
-          <span class="text-xl font-black text-white leading-none">85</span>
-          <span class="text-[8px] text-teal-100 font-medium">/100</span>
-        </div>
-      </div>
-      <div class="flex items-center gap-3 sm:gap-5 flex-wrap mb-4">
-        <div class="rounded-lg bg-slate-50 px-3 py-2 text-center min-w-[70px]">
-          <p class="text-[9px] text-slate-400 uppercase tracking-wide font-medium mb-0.5">Challenges</p>
-          <p class="font-bold text-xs text-slate-700">Two Step</p>
-        </div>
-        <div class="rounded-lg bg-slate-50 px-3 py-2 text-center min-w-[70px]">
-          <p class="text-[9px] text-slate-400 uppercase tracking-wide font-medium mb-0.5">Split</p>
-          <p class="font-bold text-sm text-teal-600">80%</p>
-        </div>
-        <div class="rounded-lg bg-slate-50 px-3 py-2 text-center min-w-[70px]">
-          <p class="text-[9px] text-slate-400 uppercase tracking-wide font-medium mb-0.5">From</p>
-          <p class="font-bold text-xs text-slate-700">$35</p>
-        </div>
-        <div class="rounded-lg bg-slate-50 px-3 py-2 text-center min-w-[70px]">
-          <p class="text-[9px] text-slate-400 uppercase tracking-wide font-medium mb-0.5">Platform</p>
-          <p class="font-bold text-xs text-slate-700">MT5</p>
-        </div>
-        <div class="rounded-lg bg-slate-50 px-3 py-2 text-center min-w-[70px]">
-          <p class="text-[9px] text-slate-400 uppercase tracking-wide font-medium mb-0.5">Trustpilot</p>
-          <p class="font-bold text-sm text-slate-700">3.7 <span class="text-amber-400">★</span></p>
-        </div>
-      </div>
-      <div class="flex items-center justify-between gap-3 pt-3 border-t border-slate-100">
-        <div class="flex items-center gap-1.5 flex-wrap text-[11px] text-slate-400"></div>
-        <div class="flex items-center gap-2 flex-shrink-0">
-          <a href="/reviews/oanda" class="inline-flex items-center gap-1.5 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
-            Read Review
-            <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-          </a>
-          <a href="https://go.oanda.com/visit/?bta=37806&brand=oandapt" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 rounded-lg border border-slate-200 px-3 py-2 text-xs font-semibold text-slate-600 hover:border-teal-300 hover:text-teal-600 transition-colors whitespace-nowrap">
-            Visit Site
-            <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="relative group bg-white border border-slate-200 rounded-2xl shadow-sm hover:shadow-md hover:border-teal-200 transition-all duration-200 overflow-hidden">
-    <span class="absolute left-0 top-4 bottom-4 w-1 rounded-r-full bg-gradient-to-b from-teal-400 to-teal-600 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
-    <div class="p-5 sm:p-6">
-      <div class="flex items-center gap-4 mb-4">
-        <span class="hidden sm:block flex-shrink-0 text-2xl font-black text-slate-400 w-8 text-center select-none">02</span>
         <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-white border border-slate-200 flex items-center justify-center overflow-hidden shadow-sm">
           <img src="/images/logos/brightfunded-logo.png" alt="BrightFunded logo" class="w-full h-full object-contain p-1.5" loading="lazy"/>
         </div>
@@ -197,7 +139,7 @@ The best prop firms for beginners we've reviewed are reputable or broker backed 
     <span class="absolute left-0 top-4 bottom-4 w-1 rounded-r-full bg-gradient-to-b from-teal-400 to-teal-600 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
     <div class="p-5 sm:p-6">
       <div class="flex items-center gap-4 mb-4">
-        <span class="hidden sm:block flex-shrink-0 text-2xl font-black text-amber-600 w-8 text-center select-none">03</span>
+        <span class="hidden sm:block flex-shrink-0 text-2xl font-black text-slate-400 w-8 text-center select-none">02</span>
         <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-white border border-slate-200 flex items-center justify-center overflow-hidden shadow-sm">
           <img src="/images/logos/fundednext.png" alt="FundedNext logo" class="w-full h-full object-contain p-1.5" loading="lazy"/>
         </div>
@@ -262,22 +204,9 @@ The best prop firms for beginners we've reviewed are reputable or broker backed 
 
 If you are a new trader, it's best to opt for low cost challenges so you are keeping your personal risk low. You also want to make sure you are choosing a reputable prop so if you do pass the challenge and get a funded account, you can rely on payouts being paid promptly with no issues.
 
-We recommended OANDA, BrightFunded, and FundedNext for beginner traders, and also starting with a smaller account size:
+We recommended BrightFunded and FundedNext for beginner traders, and also starting with a smaller account size:
 
 <div class="not-prose my-8 space-y-4">
-
-  <div class="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 shadow-sm">
-    <div class="flex items-center gap-3 mb-3">
-      <div class="flex-shrink-0 w-9 h-9 rounded-lg bg-white border border-slate-200 flex items-center justify-center overflow-hidden">
-        <img src="/images/logos/oanda-prop-trader.png" alt="OANDA" class="w-full h-full object-contain p-1" loading="lazy"/>
-      </div>
-      <div>
-        <p class="text-sm font-extrabold text-slate-900">OANDA Classic Challenge</p>
-        <p class="text-[11px] text-slate-400">Starting from $35 for a 5K account</p>
-      </div>
-    </div>
-    <p class="text-sm text-slate-600 leading-relaxed">This two step evaluation requires <strong>8% in Phase 1</strong> and <strong>5% in Phase 2</strong>, with a <strong>5% daily loss limit</strong>. The trailing drawdown grows with your profits, making it both educational and more forgiving, ideal for beginners learning prop risk management techniques.</p>
-  </div>
 
   <div class="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 shadow-sm">
     <div class="flex items-center gap-3 mb-3">
@@ -835,7 +764,7 @@ You can also join the Best Prop Firms Discord, where you can find info on tradin
 
 ### Are prop firms good for beginners?
 
-Prop firms can be useful for beginner traders but they need to be aware of the high risks involved in any form of online trading. Most new traders struggle to pass challenges, and it's easy to lose your entry fee if you don't yet have a consistent strategy. Some beginner traders will practise on a demo account before paying for a prop evaluation. But once you can manage risk, stick to rules, and trade consistently, look for a top beginner prop firm like OANDA, BrightFunded, or FundedNext.
+Prop firms can be useful for beginner traders but they need to be aware of the high risks involved in any form of online trading. Most new traders struggle to pass challenges, and it's easy to lose your entry fee if you don't yet have a consistent strategy. Some beginner traders will practise on a demo account before paying for a prop evaluation. But once you can manage risk, stick to rules, and trade consistently, look for a top beginner prop firm like BrightFunded or FundedNext.
 
 ### How does prop trading work?
 

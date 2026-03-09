@@ -27,8 +27,6 @@ featuredFirms:
     descriptor: "Top Forex Prop Firm"
   - slug: "fxify-futures"
     descriptor: "Best Futures Prop Firm"
-  - slug: "oanda"
-    descriptor: "Prop Firm for Beginners"
   - slug: "ftmo"
     descriptor: "Good Scaling Plan"
 ---
@@ -771,10 +769,10 @@ To choose the best prop trading firm, you need to compare features that directly
 To become a prop trader, you need to sign up with a proprietary trading firm, complete their evaluation process, and meet specific trading requirements. Most firms require traders to pass a challenge or evaluation phase before providing access to a funded account. Here's a step-by-step guide on how to get started:
 
 1. **Choose the right prop firm:** Research prop trading firms based on factors such as evaluation fees, profit splits, trading platforms, and the types of financial instruments they offer (forex, equities, futures, etc.). Select the firm that aligns with your trading style and objectives. We have specific pages for:
-   - [UK Prop Traders](/blog/best-prop-firms-uk)
-   - [Canadian Prop Traders](/blog/best-prop-firms-canada)
-   - [Indian Prop Traders](/blog/best-prop-firms-india)
-   - [Australian Prop Traders](/blog/best-prop-firms-australia)
+   - [UK Prop Traders](/blog/uk)
+   - [Canadian Prop Traders](/blog/canada)
+   - [Indian Prop Traders](/blog/india)
+   - [Australian Prop Traders](/blog/australia)
 2. **Sign up and pay the evaluation fee:** Register with the firm and pay the fee to start the evaluation process or challenge. Fees will vary depending on the account size and the specific challenge you choose.
 3. **Complete the evaluation or challenge:** Follow the firm's guidelines during the challenge. You'll need to meet profit targets and avoid exceeding drawdown limits (maximum allowable losses). Challenges can vary in structure, with some requiring a single evaluation phase and others requiring two.
 4. **Pass the challenge to get funded:** Once you successfully complete the evaluation, the firm will provide a funded account. This account allows you to trade using the firm's capital.
@@ -843,7 +841,7 @@ The main advantage of using a prop firm over a real trading account is limiting 
 
 ### Which is the most trusted prop firm?
 
-The most trusted prop firms are DNA Funded, IC Funded, and OANDA Prop Trader, based on key factors such as reliability, user reviews, and trading conditions. DNA Funded is backed by Eightcap Challenges, ensuring low fees and an 80% profit split. IC Funded offers tight spreads, low entry costs, and strong backing from IC Markets. OANDA is ideal for beginner prop traders with low challenge fees and profit splits up to 90%. Each firm is known for transparency and trader support.
+The most trusted prop firms are DNA Funded and IC Funded, based on key factors such as reliability, user reviews, and trading conditions. DNA Funded is backed by Eightcap Challenges, ensuring low fees and an 80% profit split. IC Funded offers tight spreads, low entry costs, and strong backing from IC Markets. Each firm is known for transparency and trader support.
 
 It's important to understand how these firms make money prior to opening an account.
 
@@ -857,7 +855,7 @@ DNA Funded and IC Funded can be better options than FTMO, depending on what you'
 
 ### What are the top prop trading firms with the highest profit splits?
 
-Top prop trading firms with the highest profit splits include Topstep, which offers up to 100% profit split on the first $10,000 earned and 90% after that. Funded Trading Plus provides profit splits that can go up to 100%, making it a strong option for traders. OANDA Prop Trader offers up to 90% profit split for their Boost Challenge, aimed at experienced traders offering an excellent futures prop trading facility.
+Top prop trading firms with the highest profit splits include Topstep, which offers up to 100% profit split on the first $10,000 earned and 90% after that. Funded Trading Plus provides profit splits that can go up to 100%, making it a strong option for traders.
 
 While high profit splits are appealing, it's crucial to also consider other factors such as challenge difficulty, fees, trading conditions, and customer support. Some firms with higher splits may have stricter rules or higher fees, so weigh the overall offering against your trading goals.
 

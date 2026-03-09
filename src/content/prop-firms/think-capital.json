@@ -3,6 +3,7 @@
   "slug": "think-capital",
   "name": "Think Capital",
   "status": "active",
+  "foundedYear": 2024,
   "evaluation": {
     "types": ["1-step", "2-step", "other"],
     "profitTargets": { "phase1": 10 },
@@ -68,7 +69,7 @@
     "email": true
   },
   "custom": {
-    "tags": ["Broker Backed", "Up to 90% Split", "US Traders Welcome", "Fees from $39"]
+    "tags": ["Broker Backed", "Up to 90% Split", "Accepts US Traders", "Fees from $39"]
   },
   "notes": null,
   "lastVerifiedAt": "2026-02-27",

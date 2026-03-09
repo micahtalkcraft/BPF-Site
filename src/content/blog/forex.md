@@ -20,8 +20,6 @@ featuredFirms:
     descriptor: "Low Commission Fees"
   - slug: "blueberry-funded"
     descriptor: "Scaling to $2 million"
-  - slug: "oanda"
-    descriptor: "Best for Beginner Forex Traders"
   - slug: "fxify"
     descriptor: "Good Challenge Add Ons"
   - slug: "ftmo"
@@ -842,7 +840,7 @@ DNA Funded also offers low fees, up to 90% profit split, and flexible account ty
 
 ### Which prop firm has the highest leverage?
 
-OANDA tops the list with leverage up to 100:1 on forex pairs, offering prop traders a strong option for increased market exposure. FundedNext also matches this leverage on forex, giving traders similar high-exposure potential. For commodities and indices, both prop trading firms apply a leverage cap of 50:1. As with CFD trading, make sure you employ solid risk management strategies when participating in prop challenges.
+FundedNext offers leverage up to 100:1 on forex pairs, giving traders strong high-exposure potential. For commodities and indices, a leverage cap of 50:1 is common among top prop firms. As with CFD trading, make sure you employ solid risk management strategies when participating in prop challenges.
 
 ### Which prop firm is better than FTMO?
 

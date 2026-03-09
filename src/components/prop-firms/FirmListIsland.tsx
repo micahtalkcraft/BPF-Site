@@ -24,6 +24,7 @@ export interface FirmItem {
   hqCountry?: string;
   flagDataUri?: string;
   flagged?: boolean;
+  verified?: boolean;
   isAwardWinner?: boolean;
   isBrokerBacked?: boolean;
 }
@@ -116,8 +117,23 @@ function CautionBadge() {
       <svg className="h-[18px] w-[18px] text-red-500" viewBox="0 0 24 24" fill="currentColor" aria-label="Caution">
         <path d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM11 16h2v2h-2zm0-6h2v4h-2z"/>
       </svg>
-      <span className="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-gray-900 px-2 py-1 text-[11px] font-semibold text-white opacity-0 group-hover/caution:opacity-100 transition-opacity duration-150 shadow-lg z-10">
+      <span className="pointer-events-none absolute top-7 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-gray-900 px-2 py-1 text-[11px] font-semibold text-white opacity-0 group-hover/caution:opacity-100 transition-opacity duration-150 shadow-lg z-10">
         Caution
+        <span className="absolute -top-1 left-1/2 -translate-x-1/2 h-2 w-2 rotate-45 bg-gray-900"></span>
+      </span>
+    </span>
+  );
+}
+
+function UnverifiedBadge() {
+  return (
+    <span className="relative group/unverified flex-shrink-0">
+      <svg className="h-[18px] w-[18px] text-amber-400" viewBox="0 0 24 24" fill="currentColor" aria-label="Unverified">
+        <path d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM11 16h2v2h-2zm0-6h2v4h-2z"/>
+      </svg>
+      <span className="pointer-events-none absolute top-7 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-gray-900 px-2 py-1 text-[11px] font-semibold text-white opacity-0 group-hover/unverified:opacity-100 transition-opacity duration-150 shadow-lg z-10">
+        Unverified
+        <span className="absolute -top-1 left-1/2 -translate-x-1/2 h-2 w-2 rotate-45 bg-gray-900"></span>
       </span>
     </span>
   );
@@ -365,7 +381,7 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
                     >
                       {firm.name}
                     </a>
-                    {firm.flagged ? <CautionBadge /> : firm.hasReview && <VerifiedBadge />}
+                    {firm.flagged ? <CautionBadge /> : firm.verified === false ? <UnverifiedBadge /> : firm.hasReview && <VerifiedBadge />}
                     {firm.isAwardWinner && <AwardBadge />}
                     <RankBadge rank={firm.rank} />
                     {firm.status !== "active" && (
@@ -389,7 +405,10 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
                   )}
                   {/* Tags row */}
                   <div className="flex items-center gap-1.5 mt-1.5 overflow-hidden">
-                    {firm.evaluationTypes.filter((t) => t !== "other").map((t) => (
+                    {firm.evaluationTypes
+                      .filter((t) => t !== "other")
+                      .filter((t) => !(firm.tags ?? []).some((tag) => tag.toLowerCase().includes(t.toLowerCase())))
+                      .map((t) => (
                       <span key={t} className="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-medium capitalize whitespace-nowrap flex-shrink-0">
                         {t}
                       </span>

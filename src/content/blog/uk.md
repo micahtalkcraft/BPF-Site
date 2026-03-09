@@ -773,10 +773,6 @@ The most trusted prop firms are broker-backed firms like DNA Funded, Blueberry F
 
 Yes, FTMO accepts UK clients. The firm provides access to its evaluation challenges and funded accounts to traders in the UK, offering account sizes up to $200,000. FTMO's platforms include MT4, MT5, and cTrader, supporting a range of trading strategies. While not broker-backed, FTMO is widely recognised for its transparent profit-sharing model, which starts at 80% and can scale to 90%. UK traders benefit from access to global markets with competitive trading conditions.
 
-### Does OANDA Prop Trader accept UK traders?
-
-No, OANDA Prop Trader does not accept UK traders. Although OANDA is a globally recognised broker regulated by top-tier authorities like the FCA, its prop trading services are currently limited to select regions. UK traders seeking broker-backed prop firms can consider alternatives like DNA Funded or Blueberry Funded, both of which accept UK clients and provide competitive trading conditions alongside flexible profit-sharing models.
-
 ### What is the best prop firm for instant payouts?
 
 Funded Trading Plus (FTP) offers the best instant payouts, allowing withdrawals every 3, 5, or 7 days. This frequent payout schedule provides traders quicker access to earnings compared to firms with bi-weekly or monthly payouts. FTP also features the Master Trader Program, offering true instant funding with account sizes up to $100,000.

@@ -27,8 +27,6 @@ featuredFirms:
     descriptor: "Low Fee Prop Challenges"
   - slug: "ftmo"
     descriptor: "Best Stock Prop Firm"
-  - slug: "oanda"
-    descriptor: "Good Prop Firm for Beginners"
   - slug: "the-funded-trader"
     descriptor: "Large Prop Trading Community"
 ---
@@ -766,12 +764,6 @@ Other firms like FXIFY (4,400) and Blueberry Funded (3,600) show growing interes
       <img src="/images/logos/dna-funded-logo.png" alt="DNA Funded" class="w-6 h-6 rounded-md object-contain border border-slate-200 bg-white p-0.5 flex-shrink-0" />
       <span class="flex-1 text-sm font-bold text-slate-900">DNA Funded</span>
       <span class="text-sm font-semibold text-slate-500">150</span>
-    </div>
-    <div class="flex items-center gap-3 px-5 py-2.5 hover:bg-teal-50/50 transition-colors">
-      <span class="flex-shrink-0 w-6 text-xs font-black text-slate-400">10.</span>
-      <img src="/images/logos/oanda-prop-trader.png" alt="OANDA Prop Trader" class="w-6 h-6 rounded-md object-contain border border-slate-200 bg-white p-0.5 flex-shrink-0" />
-      <span class="flex-1 text-sm font-bold text-slate-900">OANDA Prop Trader</span>
-      <span class="text-sm font-semibold text-slate-500">110</span>
     </div>
   </div>
 </div>

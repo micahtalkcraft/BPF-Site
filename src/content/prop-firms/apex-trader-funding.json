@@ -68,7 +68,7 @@
     "discord": true
   },
   "custom": {
-    "tags": ["Flagged", "Futures Only", "Monthly Fees"],
+    "tags": ["Monthly Fees", "Payout Complaints", "Futures Trading Only", "Accepts US Traders"],
     "discountCode": null,
     "discountPercent": null
   },

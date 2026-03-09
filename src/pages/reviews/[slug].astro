@@ -120,6 +120,7 @@ const FirmDetailContent = contentModules[firmContentPath]
 
 const discountCode = (firm.custom as Record<string, unknown>)?.discountCode as string | undefined;
 const discountPercent = (firm.custom as Record<string, unknown>)?.discountPercent as number | undefined;
+const customTags = ((firm.custom as Record<string, unknown>)?.tags as string[] | undefined) ?? [];
 const ctaUrl = offers[0]?.trackingUrl ?? firm.links?.website;
 const lowestFee = firm.pricing.challengeFees.length > 0
   ? firm.pricing.challengeFees.reduce((min, f) => f.fee < min.fee ? f : min)
@@ -243,6 +244,17 @@ const youtubeId = review.youtubeUrl?.match(/(?:embed\/|v=|youtu\.be\/)([a-zA-Z0-
         <div class="mb-4">
           <PropFirmBadges firm={firm} review={review} />
         </div>
+
+        <!-- Custom tags -->
+        {customTags.length > 0 && (
+          <div class="flex flex-wrap gap-1.5 mb-4">
+            {customTags.map((tag) => (
+              <span class="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600 ring-1 ring-slate-200">
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
 
         <!-- Flagged firm warning -->
         {isFlagged && review.flaggedWarning && (
