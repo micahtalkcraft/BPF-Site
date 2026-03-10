@@ -8,7 +8,7 @@
   "evaluation": {
     "types": ["instant", "1-step", "2-step", "rapid", "synthetic", "other"],
     "profitTargets": { "phase1": 10, "phase2": 5 },
-    "dailyDrawdown": 5,
+    "dailyDrawdown": 4,
     "maxDrawdown": 10,
     "minTradingDays": 3,
     "scalingPlan": true
@@ -27,6 +27,18 @@
       { "accountSize": 50000, "fee": 275, "model": "1-step", "label": "One Step" },
       { "accountSize": 100000, "fee": 550, "model": "1-step", "label": "One Step" },
       { "accountSize": 200000, "fee": 1100, "model": "1-step", "label": "One Step" },
+      { "accountSize": 2500, "fee": 75, "model": "instant", "label": "Instant Lite" },
+      { "accountSize": 5000, "fee": 150, "model": "instant", "label": "Instant Lite" },
+      { "accountSize": 10000, "fee": 275, "model": "instant", "label": "Instant Lite" },
+      { "accountSize": 25000, "fee": 625, "model": "instant", "label": "Instant Lite" },
+      { "accountSize": 5000, "fee": 250, "model": "instant", "label": "Instant Elite" },
+      { "accountSize": 10000, "fee": 450, "model": "instant", "label": "Instant Elite" },
+      { "accountSize": 25000, "fee": 1050, "model": "instant", "label": "Instant Elite" },
+      { "accountSize": 50000, "fee": 1950, "model": "instant", "label": "Instant Elite" },
+      { "accountSize": 5000, "fee": 200, "model": "instant", "label": "Instant Pro" },
+      { "accountSize": 10000, "fee": 375, "model": "instant", "label": "Instant Pro" },
+      { "accountSize": 25000, "fee": 875, "model": "instant", "label": "Instant Pro" },
+      { "accountSize": 50000, "fee": 1650, "model": "instant", "label": "Instant Pro" },
       { "accountSize": 5000, "fee": 25, "model": "synthetic", "label": "Synthetic" }
     ],
     "resetFee": null,
@@ -44,8 +56,8 @@
     "weekendHolding": true,
     "copyTrading": false,
     "expertAdvisors": true,
-    "consistencyRule": null,
-    "notes": "News trading restricted with 10-minute window either side of high-impact events. Copy trading between own accounts only. Martingale, grid trading, HFT, tick scalping, and latency arbitrage are prohibited."
+    "consistencyRule": "30% — no more than 30% of total profit can come from a single trading day",
+    "notes": "News trading prohibited — opening or closing trades within 2 minutes of high-impact news is not allowed (Prime accounts allow closing but not opening during news). Copy trading between own accounts is allowed but copying from third-party accounts is prohibited. Positions must remain open at least 5 minutes to count as valid trades. Martingale, grid trading, HFT, tick scalping, and latency arbitrage are prohibited."
   },
   "markets": {
     "platforms": ["MT4", "MT5", "DXTrade", "TradeLocker"],

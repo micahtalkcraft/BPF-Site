@@ -6,39 +6,43 @@
   "foundedYear": 2012,
   "hqCountry": "US",
   "evaluation": {
-    "types": ["2-step"],
-    "profitTargets": { "phase1": 6 },
-    "dailyDrawdown": 2,
-    "maxDrawdown": 4,
+    "types": ["other"],
+    "profitTargets": {},
+    "dailyDrawdown": null,
+    "maxDrawdown": null,
     "minTradingDays": null,
-    "scalingPlan": true
+    "scalingPlan": true,
+    "notes": "One evaluation step: Trading Combine. After passing, traders move to an Express Funded Account where payouts begin. A Live Funded Account is a later upgrade, not part of the challenge steps. Two Trading Combine paths: Standard ($49/$99/$149 per month, $149 activation fee when funded) and No Activation Fee ($109/$159/$209 per month, no activation fee when funded). Profit targets: $3,000 ($50K), $6,000 ($100K), $9,000 ($150K). Daily loss limits: $1,000 ($50K), $1,500 ($100K), $2,000 ($150K). Maximum loss limits: $2,000 ($50K), $3,000 ($100K), $4,500 ($150K). No time limits on the Trading Combine. Consistency target: Best Day Profit / Overall Profit must not exceed 50%. Scaling plan: 5 lots ($50K), 10 lots ($100K), 15 lots ($150K). TopstepX uses 10:1 micro-to-mini ratio. All positions must be closed by 3:10 PM CT daily. Express Funded Account payout paths: Standard (5 winning days at $150+ Net P&L, up to $5,000 per request) and Consistency (3 days + 40% consistency target, up to $6,000 per request), both limited to 50% of account balance. After first payout in Express Funded, Maximum Loss Limit is set to $0. Live Funded Account: daily payouts up to 100% after 30 winning days."
   },
   "pricing": {
     "challengeFees": [
-      { "accountSize": 50000, "fee": 49, "model": "other", "label": "Trading Combine (monthly)" },
-      { "accountSize": 100000, "fee": 99, "model": "other", "label": "Trading Combine (monthly)" },
-      { "accountSize": 150000, "fee": 149, "model": "other", "label": "Trading Combine (monthly)" },
-      { "accountSize": 50000, "fee": 149, "model": "other", "label": "Express Funded Activation" },
-      { "accountSize": 100000, "fee": 149, "model": "other", "label": "Express Funded Activation" },
-      { "accountSize": 150000, "fee": 149, "model": "other", "label": "Express Funded Activation" }
+      { "accountSize": 50000, "fee": 49, "model": "other", "label": "Trading Combine Standard (monthly)" },
+      { "accountSize": 100000, "fee": 99, "model": "other", "label": "Trading Combine Standard (monthly)" },
+      { "accountSize": 150000, "fee": 149, "model": "other", "label": "Trading Combine Standard (monthly)" },
+      { "accountSize": 50000, "fee": 109, "model": "other", "label": "Trading Combine No Activation Fee (monthly)" },
+      { "accountSize": 100000, "fee": 159, "model": "other", "label": "Trading Combine No Activation Fee (monthly)" },
+      { "accountSize": 150000, "fee": 209, "model": "other", "label": "Trading Combine No Activation Fee (monthly)" },
+      { "accountSize": 50000, "fee": 149, "model": "other", "label": "Express Funded Activation (Standard path only)" },
+      { "accountSize": 100000, "fee": 149, "model": "other", "label": "Express Funded Activation (Standard path only)" },
+      { "accountSize": 150000, "fee": 149, "model": "other", "label": "Express Funded Activation (Standard path only)" }
     ],
-    "resetFee": 49,
+    "resetFee": null,
     "refundPolicy": null
   },
   "payouts": {
-    "splitMax": 100,
-    "schedule": "On-demand (after 5 winning days)",
-    "processingTime": "1-10 business days",
+    "splitMax": 90,
+    "schedule": "On-demand (as little as 3 days); Express Funded Standard or Consistency path",
+    "processingTime": "1-3 business days",
     "firstPayoutDays": null,
     "methods": ["Wise", "ACH", "Wire Transfer", "SWIFT"]
   },
   "rules": {
     "newsTrading": true,
     "weekendHolding": false,
-    "copyTrading": true,
-    "expertAdvisors": true,
+    "copyTrading": null,
+    "expertAdvisors": null,
     "consistencyRule": "Best Day Profit / Overall Profit must not exceed 50%",
-    "notes": "Three-stage process: Trading Combine (monthly subscription, simulated) → Express Funded ($149 activation, simulated with real profits) → Live Funded (real capital). All positions must be closed by 3:10 PM CT daily — no overnight or weekend holding. Automated strategies (EAs) allowed but unsupported by Topstep. Copy trading allowed via trade copiers. News trading permitted but caution advised. Prohibited: system manipulation, spoofing, ultra-high-speed trading. Scaling plan limits: $50K = 5 lots, $100K = 10 lots, $150K = 15 lots. TopstepX uses 10:1 micro-to-mini ratio."
+    "notes": "One evaluation step: Trading Combine → Express Funded Account (payouts begin) → Live Funded Account (later upgrade). Two Trading Combine paths: Standard and No Activation Fee. All positions must be closed by 3:10 PM CT daily — no overnight or weekend holding. News trading permitted but caution advised. Copy trading and EAs: not presented as cleanly supported features by Topstep. HFT, system manipulation, spoofing prohibited. Scaling plan: 5 lots ($50K), 10 lots ($100K), 15 lots ($150K). TopstepX uses 10:1 micro-to-mini ratio. TopstepX allows personal daily loss limit on new or reset accounts. Minimum payout request: $125. ACH and Wire payout requests include a $30 processing fee. After first payout, Maximum Loss Limit is set to $0. For traders who joined on or after 12 January 2026, payouts are subject to a 90/10 split."
   },
   "markets": {
     "platforms": ["TopstepX", "NinjaTrader", "TradingView", "Tradovate", "Quantower", "T4"],
@@ -60,12 +64,12 @@
     "discord": true
   },
   "custom": {
-    "tags": ["Futures Trading Only", "100% First $10K", "155K+ Discord"],
+    "tags": ["Futures Trading Only", "Up to 90% Split", "155K+ Discord"],
     "discountCode": null,
     "discountPercent": null
   },
   "notes": null,
-  "lastVerifiedAt": "2026-02-24",
-  "lastUpdatedAt": "2026-02-24",
+  "lastVerifiedAt": "2026-03-11",
+  "lastUpdatedAt": "2026-03-11",
   "dataSources": ["https://topstep.com"]
 }

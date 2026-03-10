@@ -164,7 +164,7 @@ const challengeRows = allOffers
         <button id="tab-savings" class="offer-tab px-6 py-2.5 rounded-lg text-sm font-bold transition-all bg-teal-500 text-white shadow-md shadow-teal-500/20 cursor-pointer">
           Coupons
         </button>
-        <button id="tab-challenges" class="offer-tab px-6 py-2.5 rounded-lg text-sm font-bold transition-all text-slate-500 hover:text-slate-700 hover:bg-slate-50 cursor-pointer">
+        <button id="tab-challenges" class="offer-tab px-6 py-2.5 rounded-lg text-sm font-bold transition-all text-slate-500 cursor-pointer">
           Savings
         </button>
       </div>
@@ -493,7 +493,7 @@ const challengeRows = allOffers
                     {row.firm.trust.trustpilotRating && (
                       <div class="flex items-center gap-1 mt-0.5">
                         <span class="text-amber-400 text-xs">{'★'.repeat(Math.round(row.firm.trust.trustpilotRating))}</span>
-                        <span class="text-[11px] text-slate-400">{row.firm.trust.trustpilotRating} · {row.firm.trust.trustpilotCount?.toLocaleString()} reviews</span>
+                        <span class="text-[11px] text-slate-400">{row.firm.trust.trustpilotRating}</span>
                       </div>
                     )}
                   </div>

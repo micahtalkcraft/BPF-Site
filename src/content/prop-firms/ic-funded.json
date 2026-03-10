@@ -4,37 +4,36 @@
   "name": "IC Funded",
   "status": "active",
   "foundedYear": 2023,
-  "hqCountry": "AU",
+  "hqCountry": "LC",
   "evaluation": {
-    "types": ["1-step", "2-step", "other"],
+    "types": ["1-step", "2-step"],
     "profitTargets": { "phase1": 10, "phase2": 5 },
-    "dailyDrawdown": 5,
-    "maxDrawdown": 10,
-    "minTradingDays": 5,
-    "scalingPlan": true
+    "dailyDrawdown": 3,
+    "maxDrawdown": 6,
+    "minTradingDays": 3,
+    "scalingPlan": true,
+    "notes": "1-Step: 3% daily drawdown, 6% max drawdown, 3 min trading days, 45% consistency rule, no weekend holding. 2-Step: Step 1 has 4% daily drawdown and 8% max drawdown; Step 2 has 5% daily drawdown and 10% max drawdown for $5k–$50k or 8% for $100k–$200k. 2-Step requires 3 min trading days per step with a soft 45% consistency rule in Step 1. Funded stage: 1-Step has 3% daily drawdown and 7% max drawdown; 2-Step has 5% daily drawdown and 10% max drawdown. All trading is conducted in a simulated environment."
   },
   "pricing": {
     "challengeFees": [
-      { "accountSize": 5000, "fee": 29.75, "model": "1-step", "label": "One Step" },
-      { "accountSize": 10000, "fee": 59.50, "model": "1-step", "label": "One Step" },
-      { "accountSize": 25000, "fee": 148.75, "model": "1-step", "label": "One Step" },
-      { "accountSize": 50000, "fee": 297.50, "model": "1-step", "label": "One Step" },
-      { "accountSize": 100000, "fee": 595, "model": "1-step", "label": "One Step" },
-      { "accountSize": 250000, "fee": 1487.50, "model": "1-step", "label": "One Step" },
-      { "accountSize": 5000, "fee": 49, "model": "2-step", "label": "Two Step" },
-      { "accountSize": 10000, "fee": 99, "model": "2-step", "label": "Two Step" },
-      { "accountSize": 25000, "fee": 149, "model": "2-step", "label": "Two Step" },
-      { "accountSize": 50000, "fee": 289, "model": "2-step", "label": "Two Step" },
-      { "accountSize": 100000, "fee": 499, "model": "2-step", "label": "Two Step" },
-      { "accountSize": 250000, "fee": 1249, "model": "2-step", "label": "Two Step" },
-      { "accountSize": 500000, "fee": 2498, "model": "2-step", "label": "Two Step" }
+      { "accountSize": 10000, "fee": 154, "model": "1-step", "label": "One Step" },
+      { "accountSize": 25000, "fee": 309, "model": "1-step", "label": "One Step" },
+      { "accountSize": 50000, "fee": 469, "model": "1-step", "label": "One Step" },
+      { "accountSize": 100000, "fee": 809, "model": "1-step", "label": "One Step" },
+      { "accountSize": 200000, "fee": 1495, "model": "1-step", "label": "One Step" },
+      { "accountSize": 5000, "fee": 74, "model": "2-step", "label": "Two Step" },
+      { "accountSize": 10000, "fee": 125, "model": "2-step", "label": "Two Step" },
+      { "accountSize": 25000, "fee": 249, "model": "2-step", "label": "Two Step" },
+      { "accountSize": 50000, "fee": 449, "model": "2-step", "label": "Two Step" },
+      { "accountSize": 100000, "fee": 789, "model": "2-step", "label": "Two Step" },
+      { "accountSize": 200000, "fee": 1475, "model": "2-step", "label": "Two Step" }
     ],
     "resetFee": null,
-    "refundPolicy": "Fee refunded with first payout after 30 days of trading"
+    "refundPolicy": "Challenge fee refunded with the third profit share payout, provided there is a profit share"
   },
   "payouts": {
     "splitMax": 80,
-    "schedule": "Monthly (bi-weekly or on-demand available)",
+    "schedule": "Bi-weekly (every 14 calendar days)",
     "processingTime": "1-3 business days",
     "firstPayoutDays": 14,
     "methods": ["bank transfer", "crypto", "Skrill"]
@@ -44,28 +43,28 @@
     "weekendHolding": false,
     "copyTrading": false,
     "expertAdvisors": true,
-    "consistencyRule": null,
-    "notes": "EAs allowed but trader must own the source code. Copy trading not allowed. HFT prohibited. Scalping allowed. Weekend holding not allowed — all positions must be closed before Friday market close. Accounts closed after 30 days of inactivity. KYC required for withdrawals."
+    "consistencyRule": "45% (1-Step); soft 45% (2-Step Step 1)",
+    "notes": "EAs permitted only if they do not copy trades and the trader owns or controls the source logic. Copy trading not allowed. HFT prohibited. Scalping allowed. Weekend holding not allowed for 1-Step; 2-Step traders may hold positions over the weekend within risk limits. Accounts closed after 30 days of inactivity. KYC required before progression to funded stage and IC Funded reserves the right to request identity verification at any stage. First payout requires minimum 14 calendar days, at least 5 profitable trading days, and each profitable trade must be at least 0.5% of account balance. A profitable day is any trading day that closes with a net positive balance increase of at least 0.5% of the account value. Funded-stage minimum withdrawal is at least 1% of the account balance. All trading is conducted in a simulated trading environment including evaluation and funded stages. IC Funded does not provide services in multiple restricted jurisdictions including the United States and Canada."
   },
   "markets": {
-    "platforms": ["MT4", "MT5", "cTrader"],
+    "platforms": ["MT5"],
     "instruments": "Forex, Indices, Commodities"
   },
   "trust": {
     "trustpilotRating": 2.7,
     "trustpilotCount": null,
-    "communitySize": "Custom chat platform",
+    "communitySize": null,
     "notableFlags": []
   },
   "links": { "website": "https://portal.icfunded.com/challenges?affiliateId=504" },
   "media": { "logo": "/images/logos/ic-funded-logo.png" },
-  "availability": { "restrictedCountries": [] },
+  "availability": { "restrictedCountries": ["US", "CA"] },
   "custom": {
-    "tags": ["Broker Backed", "Spreads From 0 Pips", "$3.50 Commission", "Fees From $29.75"],
+    "tags": ["Broker Backed", "Fees from $74", "Up to 80% Split"],
     "discountCode": "PROPFIRMS25",
     "discountPercent": 25
   },
-  "lastVerifiedAt": "2026-02-24",
-  "lastUpdatedAt": "2026-02-24",
+  "lastVerifiedAt": "2026-03-10",
+  "lastUpdatedAt": "2026-03-10",
   "dataSources": ["https://icfunded.com"]
 }

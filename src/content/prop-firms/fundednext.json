@@ -38,10 +38,10 @@
   },
   "payouts": {
     "splitMax": 95,
-    "schedule": "Bi-weekly (5 business days for Stellar 1-Step)",
+    "schedule": "Varies by model (5-day for Stellar 1-Step, bi-weekly for others after initial period)",
     "processingTime": "1-2 business days",
     "firstPayoutDays": 5,
-    "methods": ["bank transfer", "crypto", "Deel"]
+    "methods": ["bank transfer", "crypto", "card"]
   },
   "rules": {
     "newsTrading": true,
@@ -49,7 +49,7 @@
     "copyTrading": false,
     "expertAdvisors": true,
     "consistencyRule": null,
-    "notes": "News trading allowed but funded traders have a 5-minute window rule around high-impact events (40% profit counted). Copy trading only between own accounts. EAs allowed on MT4/MT5 only, not cTrader. HFT, grid trading, and latency arbitrage prohibited."
+    "notes": "News trading is allowed during challenges but on funded accounts, trades opened or closed within 5 minutes of high-impact news only count 40% of profit toward payouts while losses still count fully. EAs are allowed on MT4 and MT5 only — not permitted on cTrader, and some models restrict automation or third-party indicators. Copy trading only between own accounts. Daily loss limits are calculated using starting balance plus same-day profits, reset daily, and include open and closed trades. Maximum loss limits are based on initial balance and equity — breaching either fails the account. HFT, grid trading, and latency arbitrage prohibited."
   },
   "markets": {
     "platforms": ["MT4", "MT5", "cTrader", "Match-Trader"],

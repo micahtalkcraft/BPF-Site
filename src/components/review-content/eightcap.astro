@@ -16,27 +16,27 @@ const { section, fallbackBody } = Astro.props;
 
   <!-- Overview -->
   <p class="mb-4">
-    Eightcap Challenges gives you three evaluation processes to choose from with its One Step, Two Step and short-session Day Trader challenges. The forex broker has created an interesting selection of challenges with something for everyone, and each operates within a simulated environment rather than a live market.
+    Eightcap Challenges gives you three evaluation types to choose from: the <strong>Day Trader</strong>, <strong>One Phase</strong> and <strong>Two Phase</strong> challenges. Each operates within a simulated environment rather than a live market.
   </p>
   <p class="mb-4">
-    The standard challenges range from $10K to $200K, with fees starting from $99 for the Two Step and $119 for the One Step. The fast-paced Day Trader challenges are much cheaper, with entry costs from $5, but all run on a fixed $10,000 balance.
+    One Phase and Two Phase challenges both run from <strong>$5,000 to $200,000</strong>, with fees starting from <strong>$59</strong> for the Two Phase and <strong>$69</strong> for the One Phase. The fast-paced Day Trader challenges are much cheaper, with entry costs from $5 to $500, but all run on a fixed $10,000 balance.
   </p>
 
   <!-- Per-challenge summaries -->
   <div class="space-y-3 mb-8">
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">One Step Challenge</p>
-      <p>Account sizes from $10,000 to $200,000 with a single 10% profit target, 4% daily and 8% total drawdown. Minimum 5 trading days.</p>
-      <p class="text-xs text-teal-600 font-semibold mt-1">Add-on options: Earlier payout (7 days) or higher 90% profit split</p>
+      <p class="font-bold text-slate-900 mb-1">One Phase Challenge</p>
+      <p>Account sizes from $5,000 to $200,000 with a single 10% profit target, 4% daily and 8% total drawdown. Minimum 5 trading days.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Add-on options: Earlier payout (7 days) or 90% profit split (standard is 80%)</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Two Step Challenge</p>
-      <p>Account sizes from $10,000 to $200,000 with a 10% Phase 1 and 8% Phase 2 target, 5% daily and 10% total drawdown. Minimum 3 trading days per step.</p>
-      <p class="text-xs text-teal-600 font-semibold mt-1">Add-on options: Earlier payout (7 days) or higher 90% profit split</p>
+      <p class="font-bold text-slate-900 mb-1">Two Phase Challenge</p>
+      <p>Account sizes from $5,000 to $200,000 with a 10% Phase 1 and 8% Phase 2 target, 5% daily and 10% total drawdown. Minimum 3 trading days per step.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Add-on options: Earlier payout (7 days) or 90% profit split (standard is 80%)</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Day Trader Challenge (1–8 Hours)</p>
-      <p>Fixed $10,000 balance with stakes from $5 to $250. Choose a 1, 2, 4 or 8-hour session and a 2x, 5x or 10x payout multiplier. Instant payouts after successful sessions.</p>
+      <p>Fixed $10,000 balance with stakes from $5 to $500. Choose a 1, 2, 4 or 8-hour session and a 2x, 5x or 10x payout multiplier. A successful stake is multiplied and paid instantly.</p>
       <p class="text-xs text-teal-600 font-semibold mt-1">No add-ons available — payouts are instant based on multiplier</p>
     </div>
   </div>
@@ -48,28 +48,28 @@ const { section, fallbackBody } = Astro.props;
       <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
         <tr>
           <th class="px-4 py-3 text-left">Feature</th>
-          <th class="px-4 py-3 text-center">One Step</th>
-          <th class="px-4 py-3 text-center">Two Step</th>
+          <th class="px-4 py-3 text-center">One Phase</th>
+          <th class="px-4 py-3 text-center">Two Phase</th>
           <th class="px-4 py-3 text-center">Day Trader (1–8 Hr)</th>
         </tr>
       </thead>
       <tbody class="divide-y divide-slate-100">
         <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-600">Account Size Range</td>
-          <td class="px-4 py-3 text-center text-slate-900">$10,000 – $200,000</td>
-          <td class="px-4 py-3 text-center text-slate-900">$10,000 – $200,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5,000 – $200,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5,000 – $200,000</td>
           <td class="px-4 py-3 text-center text-slate-900">Fixed $10,000</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-medium text-slate-600">Fee Range</td>
-          <td class="px-4 py-3 text-center text-slate-900">$119 – $1,299</td>
-          <td class="px-4 py-3 text-center text-slate-900">$99 – $1,199</td>
-          <td class="px-4 py-3 text-center text-slate-900">$5 – $250</td>
+          <td class="px-4 py-3 text-center text-slate-900">$69 – $1,299</td>
+          <td class="px-4 py-3 text-center text-slate-900">$59 – $1,199</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5 – $500</td>
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-600">Evaluation Process</td>
-          <td class="px-4 py-3 text-center font-semibold text-slate-900">One Step</td>
-          <td class="px-4 py-3 text-center font-semibold text-slate-900">Two Step</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">One Phase</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">Two Phase</td>
           <td class="px-4 py-3 text-center font-semibold text-slate-900">1, 2, 4 or 8-hour</td>
         </tr>
         <tr class="bg-slate-50">
@@ -98,37 +98,43 @@ const { section, fallbackBody } = Astro.props;
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-medium text-slate-600">Profit Split</td>
-          <td class="px-4 py-3 text-center font-semibold text-teal-600">80%</td>
-          <td class="px-4 py-3 text-center font-semibold text-teal-600">80%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">80% (90% with add-on)</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">80% (90% with add-on)</td>
           <td class="px-4 py-3 text-center font-semibold text-teal-600">2x, 5x or 10x multiplier</td>
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-600">Max Leverage (Forex)</td>
           <td class="px-4 py-3 text-center text-slate-900">1:100</td>
           <td class="px-4 py-3 text-center text-slate-900">1:100</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:30</td>
+          <td class="px-4 py-3 text-center text-slate-400">—</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Platforms</td>
+          <td class="px-4 py-3 text-center text-slate-900">MT4, MT5, TradeLocker</td>
+          <td class="px-4 py-3 text-center text-slate-900">MT4, MT5, TradeLocker</td>
+          <td class="px-4 py-3 text-center text-slate-900">MT5, MT4, TradeLocker</td>
         </tr>
       </tbody>
     </table>
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- 1. ONE STEP CHALLENGE                                          -->
+  <!-- 1. ONE PHASE CHALLENGE                                         -->
   <!-- ═══════════════════════════════════════════════════════════════ -->
   <div class="mb-10">
     <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
       <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">1</span>
-      One Step Challenge
+      One Phase Challenge
     </h3>
 
     <p class="mb-3">
-      The One Step Challenge is the most direct evaluation because you only work through a single step before entering the payout stage, and the rules stay fixed from the moment your account is created.
+      The One Phase Challenge is the most direct evaluation because you only work through a single phase before entering the payout stage, and the rules stay fixed from the moment your account is created.
     </p>
     <p class="mb-3">
-      You choose an account size from $10,000 to $200,000, pay the one-off fee, and trade until you reach the 10% target or breach either the 4% daily or 8% total drawdown. The minimum of five trading days stops you from passing in a single move, but otherwise the pacing is flexible.
+      You choose an account size from $5,000 to $200,000, pay the one-off fee, and trade until you reach the 10% target or breach either the 4% daily or 8% total drawdown. The minimum of five trading days stops you from passing in a single move, but otherwise the pacing is flexible.
     </p>
     <p class="mb-4">
-      The daily drawdown is based on the previous day's balance, so you begin each session knowing exactly how much room you have. The total drawdown never trails your equity, which removes the stress of watching a limit move against you during profitable streaks.
+      The daily drawdown is balance-based and calculated from the previous day's balance snapshot. If the limit is exceeded on equity, the account breaches. The standard profit split is <strong>80%</strong>, with <strong>90%</strong> available only through the paid profit split add-on.
     </p>
 
     <!-- Key specs -->
@@ -155,14 +161,14 @@ const { section, fallbackBody } = Astro.props;
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
-        <p class="text-sm font-bold text-teal-600">80%</p>
+        <p class="text-sm font-bold text-teal-600">80% (90% add-on)</p>
       </div>
     </div>
 
     <!-- Suited For -->
     <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
       <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
-      <p class="text-sm text-teal-700">Traders who prefer a simple, single-step evaluation with static drawdown rules and no time pressure beyond the minimum 5 trading days.</p>
+      <p class="text-sm text-teal-700">Traders who prefer a simple, single-phase evaluation with static drawdown rules and no time pressure beyond the minimum 5 trading days.</p>
     </div>
 
     <!-- Fee table -->
@@ -179,34 +185,41 @@ const { section, fallbackBody } = Astro.props;
         </thead>
         <tbody class="divide-y divide-slate-100">
           <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-4 py-3 text-right text-slate-900">$69</td>
+            <td class="px-4 py-3 text-right text-slate-700">$200</td>
+            <td class="px-4 py-3 text-right text-slate-700">$400</td>
+            <td class="px-4 py-3 text-right text-slate-700">$500</td>
+          </tr>
+          <tr class="bg-slate-50">
             <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
             <td class="px-4 py-3 text-right text-slate-900">$119</td>
             <td class="px-4 py-3 text-right text-slate-700">$400</td>
             <td class="px-4 py-3 text-right text-slate-700">$800</td>
             <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
           </tr>
-          <tr class="bg-slate-50">
+          <tr class="bg-white">
             <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
             <td class="px-4 py-3 text-right text-slate-900">$259</td>
             <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
             <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
             <td class="px-4 py-3 text-right text-slate-700">$2,500</td>
           </tr>
-          <tr class="bg-white">
+          <tr class="bg-slate-50">
             <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
             <td class="px-4 py-3 text-right text-slate-900">$429</td>
             <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
             <td class="px-4 py-3 text-right text-slate-700">$4,000</td>
             <td class="px-4 py-3 text-right text-slate-700">$5,000</td>
           </tr>
-          <tr class="bg-slate-50">
+          <tr class="bg-white">
             <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
             <td class="px-4 py-3 text-right text-slate-900">$659</td>
             <td class="px-4 py-3 text-right text-slate-700">$4,000</td>
             <td class="px-4 py-3 text-right text-slate-700">$8,000</td>
             <td class="px-4 py-3 text-right text-slate-700">$10,000</td>
           </tr>
-          <tr class="bg-white">
+          <tr class="bg-slate-50">
             <td class="px-4 py-3 font-semibold text-slate-900">$200,000</td>
             <td class="px-4 py-3 text-right text-slate-900">$1,299</td>
             <td class="px-4 py-3 text-right text-slate-700">$8,000</td>
@@ -219,22 +232,22 @@ const { section, fallbackBody } = Astro.props;
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- 2. TWO STEP CHALLENGE                                          -->
+  <!-- 2. TWO PHASE CHALLENGE                                         -->
   <!-- ═══════════════════════════════════════════════════════════════ -->
   <div class="mb-10">
     <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
       <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">2</span>
-      Two Step Challenge
+      Two Phase Challenge
     </h3>
 
     <p class="mb-3">
-      The Two Step Challenge offers more breathing room through wider limits, and many traders prefer it because the structure feels smoother across different market conditions.
+      The Two Phase Challenge offers more breathing room through wider limits, and many traders prefer it because the structure feels smoother across different market conditions.
     </p>
     <p class="mb-3">
-      You still choose from $10,000 to $200,000, but the evaluation is split into a 10% target in Step 1 and an 8% target in Step 2, which is easier to manage than trying to hit a single large target at once.
+      You choose from $5,000 to $200,000, and the evaluation is split into a 10% target in Phase 1 and an 8% target in Phase 2, which is easier to manage than trying to hit a single large target at once.
     </p>
     <p class="mb-4">
-      The 5% daily and 10% overall drawdowns allow for steadier trade management, and each step requires at least three trading days before you can move forward.
+      The 5% daily and 10% overall drawdowns allow for steadier trade management, and each phase requires at least three trading days before you can move forward. The standard profit split is <strong>80%</strong>, with <strong>90%</strong> available only through the paid add-on.
     </p>
 
     <!-- Key specs -->
@@ -257,7 +270,7 @@ const { section, fallbackBody } = Astro.props;
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Trading Days</p>
-        <p class="text-sm font-bold text-slate-800">3 per step</p>
+        <p class="text-sm font-bold text-slate-800">3 per phase</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Leverage</p>
@@ -265,7 +278,7 @@ const { section, fallbackBody } = Astro.props;
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
-        <p class="text-sm font-bold text-teal-600">80%</p>
+        <p class="text-sm font-bold text-teal-600">80% (90% add-on)</p>
       </div>
     </div>
 
@@ -290,6 +303,14 @@ const { section, fallbackBody } = Astro.props;
         </thead>
         <tbody class="divide-y divide-slate-100">
           <tr class="bg-white">
+            <td class="px-3 py-3 font-semibold text-slate-900">$5,000</td>
+            <td class="px-3 py-3 text-right text-slate-900">$59</td>
+            <td class="px-3 py-3 text-right text-slate-700">$250</td>
+            <td class="px-3 py-3 text-right text-slate-700">$500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$400</td>
+          </tr>
+          <tr class="bg-slate-50">
             <td class="px-3 py-3 font-semibold text-slate-900">$10,000</td>
             <td class="px-3 py-3 text-right text-slate-900">$99</td>
             <td class="px-3 py-3 text-right text-slate-700">$500</td>
@@ -297,7 +318,7 @@ const { section, fallbackBody } = Astro.props;
             <td class="px-3 py-3 text-right text-slate-700">$1,000</td>
             <td class="px-3 py-3 text-right text-slate-700">$800</td>
           </tr>
-          <tr class="bg-slate-50">
+          <tr class="bg-white">
             <td class="px-3 py-3 font-semibold text-slate-900">$25,000</td>
             <td class="px-3 py-3 text-right text-slate-900">$219</td>
             <td class="px-3 py-3 text-right text-slate-700">$1,250</td>
@@ -305,7 +326,7 @@ const { section, fallbackBody } = Astro.props;
             <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
             <td class="px-3 py-3 text-right text-slate-700">$2,000</td>
           </tr>
-          <tr class="bg-white">
+          <tr class="bg-slate-50">
             <td class="px-3 py-3 font-semibold text-slate-900">$50,000</td>
             <td class="px-3 py-3 text-right text-slate-900">$389</td>
             <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
@@ -313,7 +334,7 @@ const { section, fallbackBody } = Astro.props;
             <td class="px-3 py-3 text-right text-slate-700">$5,000</td>
             <td class="px-3 py-3 text-right text-slate-700">$4,000</td>
           </tr>
-          <tr class="bg-slate-50">
+          <tr class="bg-white">
             <td class="px-3 py-3 font-semibold text-slate-900">$100,000</td>
             <td class="px-3 py-3 text-right text-slate-900">$599</td>
             <td class="px-3 py-3 text-right text-slate-700">$5,000</td>
@@ -321,7 +342,7 @@ const { section, fallbackBody } = Astro.props;
             <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
             <td class="px-3 py-3 text-right text-slate-700">$8,000</td>
           </tr>
-          <tr class="bg-white">
+          <tr class="bg-slate-50">
             <td class="px-3 py-3 font-semibold text-slate-900">$200,000</td>
             <td class="px-3 py-3 text-right text-slate-900">$1,199</td>
             <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
@@ -347,10 +368,10 @@ const { section, fallbackBody } = Astro.props;
       The Day Trader Challenge is completely different because it compresses the entire evaluation into a timed session, which creates a faster and more tactical experience.
     </p>
     <p class="mb-3">
-      Every challenge begins with a fixed $10,000 balance, and you choose a stake between $5 and $250 along with a multiplier that sets your target and drawdown. Once the session starts, you work inside a 1, 2, 4 or 8-hour window and try to reach your target before either the timer or your drawdown runs out.
+      Every challenge begins with a fixed $10,000 balance, and you choose a stake between <strong>$5 and $500</strong> along with a multiplier that sets your target and drawdown. Once the session starts, you work inside a 1, 2, 4 or 8-hour window and try to reach your target before either the timer or your drawdown runs out.
     </p>
     <p class="mb-4">
-      You can only run one Day Trader challenge at a time, automated trading isn't available, and there's a single instrument profit cap of 75% of the target to stop the challenge from turning into a single lucky entry.
+      You can only run one Day Trader challenge at a time, and there's a single instrument profit cap of 75% of the target to stop the challenge from turning into a single lucky entry. Day Trader challenges can be traded on <strong>MT5, MT4, or TradeLocker</strong>.
     </p>
 
     <!-- Key specs -->
@@ -361,23 +382,19 @@ const { section, fallbackBody } = Astro.props;
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Stake Range</p>
-        <p class="text-sm font-bold text-slate-800">$5 – $250</p>
+        <p class="text-sm font-bold text-slate-800">$5 – $500</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Multipliers</p>
         <p class="text-sm font-bold text-teal-600">2x, 5x, 10x</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Leverage (Forex)</p>
-        <p class="text-sm font-bold text-slate-800">1:30</p>
-      </div>
-      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Platform</p>
-        <p class="text-sm font-bold text-slate-800">TradeLocker only</p>
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Platforms</p>
+        <p class="text-sm font-bold text-slate-800">MT5, MT4, TradeLocker</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Payout</p>
-        <p class="text-sm font-bold text-teal-600">Instant</p>
+        <p class="text-sm font-bold text-teal-600">Instant on success</p>
       </div>
     </div>
 
@@ -404,28 +421,28 @@ const { section, fallbackBody } = Astro.props;
             <td class="px-4 py-3 font-semibold text-slate-900">DT-1</td>
             <td class="px-4 py-3 text-center text-slate-900">1 hour</td>
             <td class="px-4 py-3 text-center text-slate-700">$10,000</td>
-            <td class="px-4 py-3 text-center text-slate-700">$5 – $250</td>
+            <td class="px-4 py-3 text-center text-slate-700">$5 – $500</td>
             <td class="px-4 py-3 text-center font-semibold text-teal-600">2x, 5x, 10x</td>
           </tr>
           <tr class="bg-slate-50">
             <td class="px-4 py-3 font-semibold text-slate-900">DT-2</td>
             <td class="px-4 py-3 text-center text-slate-900">2 hours</td>
             <td class="px-4 py-3 text-center text-slate-700">$10,000</td>
-            <td class="px-4 py-3 text-center text-slate-700">$5 – $250</td>
+            <td class="px-4 py-3 text-center text-slate-700">$5 – $500</td>
             <td class="px-4 py-3 text-center font-semibold text-teal-600">2x, 5x, 10x</td>
           </tr>
           <tr class="bg-white">
             <td class="px-4 py-3 font-semibold text-slate-900">DT-4</td>
             <td class="px-4 py-3 text-center text-slate-900">4 hours</td>
             <td class="px-4 py-3 text-center text-slate-700">$10,000</td>
-            <td class="px-4 py-3 text-center text-slate-700">$5 – $250</td>
+            <td class="px-4 py-3 text-center text-slate-700">$5 – $500</td>
             <td class="px-4 py-3 text-center font-semibold text-teal-600">2x, 5x, 10x</td>
           </tr>
           <tr class="bg-slate-50">
             <td class="px-4 py-3 font-semibold text-slate-900">DT-8</td>
             <td class="px-4 py-3 text-center text-slate-900">8 hours</td>
             <td class="px-4 py-3 text-center text-slate-700">$10,000</td>
-            <td class="px-4 py-3 text-center text-slate-700">$5 – $250</td>
+            <td class="px-4 py-3 text-center text-slate-700">$5 – $500</td>
             <td class="px-4 py-3 text-center font-semibold text-teal-600">2x, 5x, 10x</td>
           </tr>
         </tbody>
@@ -437,10 +454,10 @@ const { section, fallbackBody } = Astro.props;
   <!-- ADD-ONS                                                        -->
   <!-- ═══════════════════════════════════════════════════════════════ -->
   <div class="mb-10">
-    <h3 class="text-lg font-bold text-slate-900 mb-3">Add-Ons (One Step & Two Step Only)</h3>
+    <h3 class="text-lg font-bold text-slate-900 mb-3">Add-Ons (One Phase & Two Phase Only)</h3>
 
     <p class="mb-4">
-      Eightcap Challenges offers two optional add-ons for the funded account stage on One Step and Two Step challenges. These do not apply to the Day Trader challenge, since that model pays instantly once the session finishes.
+      Eightcap Challenges offers two optional add-ons for the funded account stage on One Phase and Two Phase challenges. These do not apply to the Day Trader challenge, since that model pays instantly once the session finishes. The standard profit split is <strong>80%</strong> — the <strong>90% split is only available with the paid add-on</strong>.
     </p>
 
     <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
@@ -474,7 +491,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="mb-10">
     <h3 class="text-lg font-bold text-slate-900 mb-3">Scaling Plan</h3>
     <p class="mb-3">
-      Eightcap Challenges does not offer a traditional scaling plan at the moment, but you can increase your total allocation by holding multiple active accounts across the One Step and Two Step challenges.
+      Eightcap Challenges does not offer a traditional scaling plan at the moment, but you can increase your total allocation by holding multiple active accounts across the One Phase and Two Phase challenges.
     </p>
     <p class="mb-3">
       The combined limit across all funded accounts is <strong>$600,000</strong>, which gives you room to grow as long as you stay within the risk rules and avoid inactivity.
@@ -494,23 +511,39 @@ const { section, fallbackBody } = Astro.props;
     <div class="space-y-3 mb-6">
       <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
         <p class="font-bold text-slate-900 mb-1">Automated Trading</p>
-        <p>EAs and scripts are allowed on the One Step and Two Step challenges, but they are <strong>not allowed</strong> on the Day Trader challenge.</p>
+        <p>EAs and indicators are allowed, but prohibited strategies include <strong>martingale, hedging across accounts, grid trading, tick trading, copy trading with other traders, latency arbitrage, reverse arbitrage, gap trading, and account management</strong>. Violations in payout stage may lead to termination.</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
         <p class="font-bold text-slate-900 mb-1">News Restrictions</p>
-        <p>One Step and Two Step accounts cannot trade within <strong>10 minutes</strong> of major news during the payout stage. Day Trader sessions have a <strong>5-minute</strong> restriction once you reach payout. These rules do not apply during evaluation.</p>
+        <p>Trading during major news events is restricted. You cannot place trades <strong>10 minutes before or after high-impact events</strong>. If breached, it is treated as a <strong>soft breach</strong> — profits from those trades are removed while the account remains active.</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-        <p class="font-bold text-slate-900 mb-1">Weekend Holding</p>
-        <p>Weekend holding is allowed on all standard challenges.</p>
+        <p class="font-bold text-slate-900 mb-1">Copy Trading</p>
+        <p>Copy trading from other traders is prohibited. Copy trading between your own accounts is allowed if all accounts are registered under the same email address. Severe breaches can lead to account termination, while other breaches may lead to profit removal.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">Weekend & Swing Trading</p>
+        <p>Weekend trading and swing trading are allowed. The platform supports <strong>24/7 trading</strong>.</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
         <p class="font-bold text-slate-900 mb-1">Position Limits</p>
-        <p>All accounts share the same per-instrument maximums: <strong>40 forex lots</strong>, <strong>20 index lots</strong> and <strong>10 commodity lots</strong>. Standard challenges also cap at <strong>10 open trades</strong> at a time.</p>
+        <p>Traders can open up to <strong>10 simultaneous trades</strong> at once. Symbol exposure limits: <strong>Forex 100 lots</strong>, <strong>Metals 50 lots</strong> (Silver 10 lots), <strong>Oil 50 lots</strong>, <strong>Indices 25 lots</strong> (except JPN225), <strong>Stocks 50 lots</strong>, <strong>BTCUSD 5 lots</strong>.</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-        <p class="font-bold text-slate-900 mb-1">Prohibited Strategies</p>
-        <p>Martingale, grid trading, 30-second scalping, tick scalping, latency arbitrage, copy trading, hedging across accounts and any form of market abuse are not allowed.</p>
+        <p class="font-bold text-slate-900 mb-1">Drawdown Rules</p>
+        <p>Daily drawdown is balance-based and calculated from the previous day's balance snapshot. If the limit is exceeded on equity, the account breaches. The floating drawdown is monitored from highest equity to current equity including open trades.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">Breach Handling</p>
+        <p>When an account is breached, the platform is automatically restricted and new positions cannot be opened.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">Inactivity Rule</p>
+        <p>Accounts are terminated after <strong>30 consecutive days</strong> with no trades.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">IP Address Restriction</p>
+        <p>Traders must access their account from the same IP address. Multiple IPs or locations may lead to restrictions or suspension.</p>
       </div>
     </div>
   </div>
@@ -521,7 +554,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">How We Tested Eightcap Challenges' Challenges (9/10)</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      We scored Eightcap Challenges' challenges by mapping their trading rules against our framework for targets, drawdown, costs and flexibility, then running live test accounts in the Two Step challenge. We checked that the 10% and 8% targets, 4-5% daily drawdown and 8-10% max loss sat inside our preferred bands. The extra point came from the short-session Day Trader challenge and the funded account add-ons, while higher fees on larger accounts and the lack of a traditional scaling plan kept the score at 9/10.
+      We scored Eightcap Challenges' challenges by mapping their trading rules against our framework for targets, drawdown, costs and flexibility, then running test accounts in the Two Phase challenge. We checked that the 10% and 8% targets, 4-5% daily drawdown and 8-10% max loss sat inside our preferred bands. The extra point came from the short-session Day Trader challenge and the funded account add-ons, while higher fees on larger accounts and the lack of a traditional scaling plan kept the score at 9/10.
     </p>
   </div>
 
@@ -535,41 +568,37 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-3">
-    Eightcap Challenges runs raw pricing across all challenge accounts, with forex spreads starting from <strong>0 pips</strong> and a <strong>$5 round-turn commission</strong> for every non-crypto CFD.
+    Eightcap Challenges runs RAW account pricing across all challenge accounts, with spreads starting from <strong>0.0 pips or points</strong> and a <strong>$5 per lot commission</strong> for all instruments except Cryptocurrency (<strong>$0</strong>).
   </p>
   <p class="mb-4">
-    This is the same across all trading platforms, and the pricing is pulled directly from Eightcap Challenges' live feed rather than a simulated or widened challenge-only stream.
-  </p>
-
-  <p class="mb-4">
-    Forex spreads for majors like EUR/USD start at 0 pips, while GBP/USD and USD/JPY can be as low as 0.1 pips. Crypto is the only asset class with no commission fees. US stocks (Day Trader only) carry a $4 round-turn commission, while ASX ETFs use a 0.1% round-trip commission.
+    Live spreads can be viewed directly in platform. The pricing is designed to mirror live conditions within the simulated challenge environment.
   </p>
 
   <!-- Commission structure table -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Commission Structure by Asset Class</h3>
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Commission Structure</h3>
   <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
     <table class="w-full text-sm">
       <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
         <tr>
           <th class="px-5 py-3 text-left">Asset Class</th>
-          <th class="px-5 py-3 text-right">Spread From</th>
-          <th class="px-5 py-3 text-right">Commission (Round-Turn)</th>
+          <th class="px-5 py-3 text-right">Spread</th>
+          <th class="px-5 py-3 text-right">Commission</th>
         </tr>
       </thead>
       <tbody class="divide-y divide-slate-100">
         <tr class="bg-white">
-          <td class="px-5 py-3 font-semibold text-slate-900">Forex (Majors)</td>
-          <td class="px-5 py-3 text-right font-bold text-teal-600">0.0 pips</td>
+          <td class="px-5 py-3 font-semibold text-slate-900">Forex</td>
+          <td class="px-5 py-3 text-right text-slate-700">RAW from 0.0 pips</td>
           <td class="px-5 py-3 text-right text-slate-900">$5 per lot</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-5 py-3 font-semibold text-slate-900">Indices</td>
-          <td class="px-5 py-3 text-right text-slate-700">From 12 points</td>
+          <td class="px-5 py-3 text-right text-slate-700">RAW from 0.0 points</td>
           <td class="px-5 py-3 text-right text-slate-900">$5 per lot</td>
         </tr>
         <tr class="bg-white">
           <td class="px-5 py-3 font-semibold text-slate-900">Commodities</td>
-          <td class="px-5 py-3 text-right text-slate-700">From 1.2 points (Gold)</td>
+          <td class="px-5 py-3 text-right text-slate-700">RAW from 0.0 points</td>
           <td class="px-5 py-3 text-right text-slate-900">$5 per lot</td>
         </tr>
         <tr class="bg-slate-50">
@@ -577,57 +606,15 @@ const { section, fallbackBody } = Astro.props;
           <td class="px-5 py-3 text-right text-slate-700">Variable</td>
           <td class="px-5 py-3 text-right font-semibold text-teal-600">$0 (No commission)</td>
         </tr>
-        <tr class="bg-white">
-          <td class="px-5 py-3 font-semibold text-slate-900">US Stocks (Day Trader)</td>
-          <td class="px-5 py-3 text-right text-slate-700">Variable</td>
-          <td class="px-5 py-3 text-right text-slate-900">$4 per round-turn</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-5 py-3 font-semibold text-slate-900">US ETFs</td>
-          <td class="px-5 py-3 text-right text-slate-700">Variable</td>
-          <td class="px-5 py-3 text-right text-slate-900">$4 per round-turn</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-5 py-3 font-semibold text-slate-900">ASX ETFs</td>
-          <td class="px-5 py-3 text-right text-slate-700">Variable</td>
-          <td class="px-5 py-3 text-right text-slate-900">0.1% round-trip</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- Typical spreads on forex -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Typical Spreads on Popular Forex Pairs</h3>
-  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
-    <table class="w-full text-sm">
-      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
-        <tr>
-          <th class="px-5 py-3 text-left">Currency Pair</th>
-          <th class="px-5 py-3 text-right">Spread From (pips)</th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-slate-100">
-        <tr class="bg-white">
-          <td class="px-5 py-3 font-semibold text-slate-900">EUR/USD</td>
-          <td class="px-5 py-3 text-right font-bold text-teal-600">0.0</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-5 py-3 font-semibold text-slate-900">GBP/USD</td>
-          <td class="px-5 py-3 text-right font-bold text-teal-600">0.1</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-5 py-3 font-semibold text-slate-900">USD/JPY</td>
-          <td class="px-5 py-3 text-right font-bold text-teal-600">0.1</td>
-        </tr>
       </tbody>
     </table>
   </div>
 
   <!-- Verdict -->
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
-    <p class="text-sm font-semibold text-teal-800 mb-1">How We Tested Eightcap Challenges' Spreads & Fees (9.5/10)</p>
+    <p class="text-sm font-semibold text-teal-800 mb-1">How We Tested Eightcap Challenges' Spreads & Fees (9/10)</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      We evaluated Eightcap Challenges' spreads by connecting a live MT5 test account during active London and New York sessions, then comparing real-time bid/ask data against our benchmark. Majors consistently printed at 0.0–0.1 pips and the $5 round-trip commission aligned with the flat-fee model we use in scoring. The 0.5-point deduction reflects the fact that some competitors offer $3.50 round-turn commissions, which is our ideal benchmark for perfect scoring.
+      We evaluated Eightcap Challenges' spreads by connecting a test account during active London and New York sessions. The RAW account spreads start from 0.0 pips or points and the $5 per lot commission aligned with the flat-fee model we use in scoring. Crypto at $0 commission is a strong point. The 1-point deduction reflects the fact that some competitors offer lower round-turn commissions, which is our ideal benchmark for perfect scoring.
     </p>
   </div>
 
@@ -641,14 +628,14 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-3">
-    You can trade forex, indices, commodities, cryptocurrency, and ETFs across all challenges, but <strong>US stocks are only available via the Day Trader challenge</strong>, and leverage depends on the model you choose.
+    You can trade <strong>forex, indices, commodities, and cryptocurrency</strong> across all challenges. Leverage depends on the model you choose.
   </p>
   <p class="mb-4">
-    The One Step and Two Step accounts use the highest leverage, with forex capped at 1:100 and the rest of the market using predictable tiers. Cryptocurrency runs at 1:3, and ETFs sit at 1:5 across all account types.
+    The One Phase and Two Phase accounts use the highest leverage, with forex capped at 1:100. The official leverage FAQ confirms leverage for One Phase and Two Phase only.
   </p>
 
   <!-- Asset class grid -->
-  <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
       <p class="text-lg font-black text-slate-900">Forex</p>
       <p class="text-xs text-slate-500">Majors, minors, exotics</p>
@@ -663,29 +650,19 @@ const { section, fallbackBody } = Astro.props;
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
       <p class="text-lg font-black text-slate-900">Crypto</p>
-      <p class="text-xs text-slate-500">Wide crypto list</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
-      <p class="text-lg font-black text-slate-900">ETFs</p>
-      <p class="text-xs text-slate-500">ASX & US ETFs</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
-      <p class="text-lg font-black text-slate-900">US Stocks</p>
-      <p class="text-xs text-amber-600 font-semibold">Day Trader only</p>
+      <p class="text-xs text-slate-500">Cryptocurrency CFDs</p>
     </div>
   </div>
 
-  <!-- Leverage table by challenge type -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Leverage by Challenge Type</h3>
+  <!-- Leverage table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Leverage (One Phase & Two Phase)</h3>
   <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
     <table class="w-full text-sm whitespace-nowrap">
       <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
         <tr>
           <th class="px-4 py-3 text-left">Asset Class</th>
-          <th class="px-4 py-3 text-center">One Step</th>
-          <th class="px-4 py-3 text-center">Two Step</th>
-          <th class="px-4 py-3 text-center">Day Trader</th>
-          <th class="px-4 py-3 text-left">Notes</th>
+          <th class="px-4 py-3 text-center">One Phase</th>
+          <th class="px-4 py-3 text-center">Two Phase</th>
         </tr>
       </thead>
       <tbody class="divide-y divide-slate-100">
@@ -693,57 +670,39 @@ const { section, fallbackBody } = Astro.props;
           <td class="px-4 py-3 font-semibold text-slate-900">Forex</td>
           <td class="px-4 py-3 text-center font-semibold text-teal-600">1:100</td>
           <td class="px-4 py-3 text-center font-semibold text-teal-600">1:100</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:30</td>
-          <td class="px-4 py-3 text-slate-500 text-xs">Majors, minors, exotics</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-semibold text-slate-900">Indices</td>
           <td class="px-4 py-3 text-center text-slate-900">1:30</td>
           <td class="px-4 py-3 text-center text-slate-900">1:30</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:10</td>
-          <td class="px-4 py-3 text-slate-500 text-xs">US30, NAS100, SPX500, UK100, GER40</td>
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-semibold text-slate-900">Commodities</td>
           <td class="px-4 py-3 text-center text-slate-900">1:20</td>
           <td class="px-4 py-3 text-center text-slate-900">1:20</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:10</td>
-          <td class="px-4 py-3 text-slate-500 text-xs">Metals and energies</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-semibold text-slate-900">Crypto</td>
           <td class="px-4 py-3 text-center text-slate-900">1:3</td>
           <td class="px-4 py-3 text-center text-slate-900">1:3</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:2</td>
-          <td class="px-4 py-3 text-slate-500 text-xs">Wide crypto list across all models</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-semibold text-slate-900">US Stocks</td>
-          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
-          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:5</td>
-          <td class="px-4 py-3 text-slate-500 text-xs">Day Trader only</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-semibold text-slate-900">ETFs</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:5</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:5</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:5</td>
-          <td class="px-4 py-3 text-slate-500 text-xs">ASX and US ETFs available</td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <p class="mb-4">
-    The Day Trader challenge intentionally uses lower leverage on every market, with forex reduced to 1:30, indices to 1:10 and crypto to 1:2. This creates a more controlled environment for shorter sessions, where results depend on timing and risk control rather than raw position size.
-  </p>
+  <!-- Note about stock trading -->
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
+    <p class="text-sm font-bold text-amber-900 mb-1">Stock Trading</p>
+    <p class="text-sm text-amber-800">
+      The official FAQ states that stock trading is not currently available on the platform.
+    </p>
+  </div>
 
   <!-- Verdict -->
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
-    <p class="text-sm font-semibold text-teal-800 mb-1">How We Tested Eightcap Challenges' Markets & Leverage (9/10)</p>
+    <p class="text-sm font-semibold text-teal-800 mb-1">How We Tested Eightcap Challenges' Markets & Leverage (8.5/10)</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      We tested Eightcap Challenges' market depth by trading across different asset classes on their Two Step challenge account, comparing instrument availability to our broad market requirement. Eightcap Challenges met these standards with a strong asset list, but it lost a point due to US stock CFDs being restricted to Day Trader only and no futures trading — a limitation under our full-range market access ideal.
+      We tested Eightcap Challenges' market depth by trading across different asset classes on their Two Phase challenge account, comparing instrument availability to our broad market requirement. Eightcap Challenges provides solid access to core instruments (forex, indices, commodities and crypto), but lost points due to stock trading not currently being available and no futures trading.
     </p>
   </div>
 
@@ -757,7 +716,7 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-4">
-    Eightcap Challenges challenge accounts run on <strong>MetaTrader 4 (MT4)</strong>, <strong>MetaTrader 5 (MT5)</strong> and <strong>TradeLocker</strong>, and all three platforms use the broker's live pricing feed so spreads, commissions and execution behaviour match what you would see on a real Eightcap Challenges account.
+    Eightcap Challenges runs on <strong>MetaTrader 4 (MT4)</strong>, <strong>MetaTrader 5 (MT5)</strong> and <strong>TradeLocker</strong>. All three platforms are available across all challenge types, including the Day Trader challenge.
   </p>
 
   <!-- Platform cards -->
@@ -769,14 +728,11 @@ const { section, fallbackBody } = Astro.props;
         <span class="flex-shrink-0 w-10 h-10 rounded-lg bg-blue-100 text-blue-700 font-black text-sm flex items-center justify-center">MT4</span>
         <div>
           <p class="font-bold text-slate-900 text-base">MetaTrader 4</p>
-          <p class="text-xs text-slate-500">Available for One Step & Two Step challenges</p>
+          <p class="text-xs text-slate-500">Available for all challenge types</p>
         </div>
       </div>
       <p class="mb-2">
         Supports the full set of Expert Advisors (EAs), custom indicators and MQL4 scripts. A strong fit if your strategy relies on automation, backtesting or rule-based execution.
-      </p>
-      <p>
-        MT4 handles all supported asset classes except US stock CFDs. You can hold positions over the weekend without restrictions.
       </p>
     </div>
 
@@ -786,14 +742,11 @@ const { section, fallbackBody } = Astro.props;
         <span class="flex-shrink-0 w-10 h-10 rounded-lg bg-indigo-100 text-indigo-700 font-black text-sm flex items-center justify-center">MT5</span>
         <div>
           <p class="font-bold text-slate-900 text-base">MetaTrader 5</p>
-          <p class="text-xs text-slate-500">Available for One Step & Two Step challenges</p>
+          <p class="text-xs text-slate-500">Available for all challenge types</p>
         </div>
       </div>
       <p class="mb-2">
         Offers a more modern layout, faster charting, and supports automated trading through MQL5 Expert Advisors and scripts. Extra timeframes, depth-of-market window and broader indicator list.
-      </p>
-      <p>
-        Generally feels smoother than MT4 for intraday trading and pairs well with Eightcap Challenges' raw pricing feed, especially for indices, metals or crypto.
       </p>
     </div>
 
@@ -803,14 +756,11 @@ const { section, fallbackBody } = Astro.props;
         <span class="flex-shrink-0 w-10 h-10 rounded-lg bg-emerald-100 text-emerald-700 font-black text-sm flex items-center justify-center">TL</span>
         <div>
           <p class="font-bold text-slate-900 text-base">TradeLocker</p>
-          <p class="text-xs text-slate-500">Required for Day Trader · Optional for One Step & Two Step</p>
+          <p class="text-xs text-slate-500">Available for all challenge types</p>
         </div>
       </div>
       <p class="mb-2">
-        The only platform available for the Day Trader challenge, and it is fully manual — no automated trading, no scripts and no copy trading allowed.
-      </p>
-      <p>
-        The interface is lightweight and responsive for time-boxed sessions. Covers the full list of Day Trader instruments, including US stock CFDs.
+        The interface is lightweight and responsive, particularly suitable for time-boxed Day Trader sessions.
       </p>
     </div>
 
@@ -828,7 +778,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">How We Tested Eightcap Challenges' Trading Platforms (9/10)</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      We scored Eightcap Challenges' platforms by running both automated and manual trades on MT5 during a Two Step challenge, and then completing a timed session on TradeLocker. Eightcap Challenges scored strongly because MT4/MT5 provide full EA and MQL automation support, and TradeLocker delivered clean manual execution for the short session model. The missing point came from the absence of TradingView and cTrader, which are part of our benchmark for a perfect platform score.
+      We scored Eightcap Challenges' platforms by running both automated and manual trades on MT5 during a Two Phase challenge, and then completing a timed session on TradeLocker. Eightcap Challenges scored strongly because MT4/MT5 provide full EA and MQL automation support, and TradeLocker delivered clean manual execution. The missing point came from the absence of TradingView and cTrader, which are part of our benchmark for a perfect platform score.
     </p>
   </div>
 
@@ -842,10 +792,10 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-3">
-    Eightcap Challenges processes profit payouts quickly once you qualify, with your first payout after <strong>14 days</strong> for the One Step and Two Step accounts, and <strong>instant payouts</strong> on the Day Trader challenge.
+    Eightcap Challenges processes profit payouts once you qualify, with eligibility to request a payout starting after <strong>14 days</strong> in payout stage (or <strong>7 days</strong> with the Earlier Payout add-on) for One Phase and Two Phase accounts, subject to minimum trading day requirements.
   </p>
   <p class="mb-6">
-    The default profit split is <strong>80%</strong>, upgradeable to <strong>90%</strong> with the paid add-on. Eightcap Challenges does not refund challenge fees after you pass, regardless of challenge type.
+    The standard profit split is <strong>80%</strong>, upgradeable to <strong>90%</strong> with the paid add-on on One Phase and Two Phase challenges only.
   </p>
 
   <!-- Payout summary stats -->
@@ -859,46 +809,72 @@ const { section, fallbackBody } = Astro.props;
       <p class="text-sm font-bold text-teal-600">90%</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">First Payout</p>
-      <p class="text-sm font-bold text-slate-800">14 Days</p>
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">First Payout After</p>
+      <p class="text-sm font-bold text-slate-800">14 days (7 w/ add-on)</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
       <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Processing Time</p>
-      <p class="text-sm font-bold text-slate-800">24–48 hours</p>
+      <p class="text-sm font-bold text-slate-800">2 business days</p>
     </div>
   </div>
 
-  <!-- One Step & Two Step payouts -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">One Step & Two Step Payouts</h3>
+  <!-- Profit Caps -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Profit Caps</h3>
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">One Phase Profit Cap</p>
+      <p><strong>5% of the initial balance</strong> — applies to all approved payouts.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Two Phase Profit Cap</p>
+      <p><strong>10% of the initial balance</strong> — applies to all approved payouts. Accounts created before February 11 are not subject to a profit cap for the Two Phase challenge.</p>
+    </div>
+  </div>
+
+  <!-- Payout-stage requirements -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payout Stage Requirements</h3>
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Minimum Trading Days</p>
+      <p>One Phase payout stage requires <strong>7 minimum trading days</strong>. Two Phase payout stage requires <strong>5 minimum trading days</strong>. A trade must remain open at least <strong>60 seconds</strong> to count as a trading day.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Daily Profit Distribution</p>
+      <p>Payout-phase daily profit distribution rules apply. For accounts created on or after Feb 11: <strong>One Phase 30%</strong>, <strong>Two Phase 35%</strong>. For older accounts: One Phase 25%, Two Phase 30%.</p>
+    </div>
+  </div>
+
+  <!-- One Phase & Two Phase payouts -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">One Phase & Two Phase Payouts</h3>
   <p class="mb-3">
-    You can request your first payout after 14 days from account activation or from your previous payout. The minimum withdrawal is <strong>$100</strong>, and anything below that can only be paid in crypto.
+    Payouts can be requested once payout-stage requirements are met and KYC verification is completed if required. The minimum payout amount is <strong>$100</strong> after the profit split. If the post-split amount is under $100, the payout request is declined and the amount remains in the account.
   </p>
   <p class="mb-3">
-    All payout requests must pass KYC and a risk review, and Eightcap Challenges notes that phone or video verification may be required. Approved withdrawals are normally processed within 24 to 48 hours, although they can take 2 to 5 business days depending on banking times.
+    Payouts are typically processed within <strong>2 business days</strong> and only on business days. Only fully earned profit can be withdrawn — <strong>partial payouts are not supported</strong>.
   </p>
   <p class="mb-6">
-    The <strong>One Step challenge includes a profit cap for your first three payouts</strong>, set at 5% of your starting balance. The Two Step challenge has <strong>no profit cap</strong> at all.
+    Trading is <strong>paused while a payout request is under review</strong>, and resumes once the payout is finalised.
   </p>
 
   <!-- Day Trader payouts -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Day Trader Payouts</h3>
   <p class="mb-3">
-    Day Trader payouts work differently — instead of a profit split, your payout is calculated by multiplying your initial stake by the multiplier you selected. You become eligible immediately after a successful session with no waiting period.
+    Day Trader payouts work differently — a successful stake is multiplied and paid instantly. You become eligible immediately after a successful session with no waiting period.
   </p>
   <p class="mb-6">
-    The minimum withdrawal is <strong>$10</strong> when using crypto, and payouts under $100 can only be sent via crypto. Because each session stands alone, there is no recurring payout cycle or fee refund.
+    The minimum withdrawal is <strong>$10</strong> when using crypto.
   </p>
 
-  <!-- Payment methods -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Payment Methods</h3>
+  <!-- Payment methods & fees -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payment Methods & Fees</h3>
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Bank Transfer</p>
-      <p>Available for withdrawals of $100+. International transfers may take an additional 4–5 business days.</p>
+      <p>Available for withdrawals of $100+. <strong>Flat $50 fee</strong> per bank wire withdrawal.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Cryptocurrency</p>
-      <p>USDT (TRC20 or ERC20) and BTC supported. Minimum $10 withdrawal for Day Trader, $100 for standard challenges.</p>
+      <p>USDT (TRC20 or ERC20) and BTC supported. <strong>1% fee</strong> on crypto withdrawals. Minimum $10 for Day Trader, $100 for standard challenges.</p>
     </div>
   </div>
 
@@ -906,7 +882,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
     <p class="text-sm font-bold text-amber-900 mb-1">Important Payout Notes</p>
     <p class="text-sm text-amber-800">
-      Payouts are processed on business days only — weekend and holiday requests roll to the next business day. Eightcap Challenges does not refund challenge fees after you pass, regardless of challenge type.
+      Payouts are processed on business days only — weekend and holiday requests roll to the next business day. Only fully earned profit can be withdrawn; partial payouts are not supported. Trading is paused while a payout request is under review.
     </p>
   </div>
 
@@ -914,7 +890,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">How We Tested Eightcap Challenges' Payout System (8/10)</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      We tested payouts by completing a Two Step challenge and submitting a withdrawal request. We verified the 14-day first-payout rule, the $100 minimum, the KYC+risk review step, and the expected 24–48 hour processing window. Eightcap Challenges landed at 8/10 because One Step accounts include a temporary 5% payout cap, minimums are stricter than our ideal, and no challenge fee refund is offered.
+      We tested payouts by completing a Two Phase challenge and submitting a withdrawal request. We verified the 14-day first-payout rule, the $100 minimum, the KYC verification step, and the expected 2 business day processing window. Eightcap Challenges landed at 8/10 because of the profit caps (5% One Phase, 10% Two Phase), payout fees (1% crypto, $50 bank wire), and no partial payouts.
     </p>
   </div>
 
@@ -950,7 +926,7 @@ const { section, fallbackBody } = Astro.props;
   <!-- Education -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Educational Resources</h3>
   <p class="mb-4">
-    The education offering is stronger than what most prop firms provide, since you also get access to Eightcap Challenges' ecosystem of research tools.
+    The education offering is stronger than what most prop firms provide, since you also get access to Eightcap's ecosystem of research tools.
   </p>
 
   <div class="space-y-3 mb-8">
@@ -959,7 +935,7 @@ const { section, fallbackBody } = Astro.props;
       <p>Weekly market insights, session previews and technical breakdowns covering the same instruments and trading conditions you'll see on challenge accounts.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Eightcap Challenges Labs</p>
+      <p class="font-bold text-slate-900 mb-1">Eightcap Labs</p>
       <p>More structured guides on trading concepts, risk management ideas and strategy building. Designed for retail clients but translates well to challenge trading.</p>
     </div>
   </div>
@@ -968,7 +944,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">How We Tested Eightcap Challenges' Support & Education (9/10)</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      We tested Eightcap Challenges' support by contacting live chat and email with payout, KYC and platform questions, checking response speed and accuracy. They scored strongly because replies were fast, 24/7 and handled by real agents. For educational resources, we reviewed Trade Zone and Eightcap Challenges Labs for market insights and practical guidance. We deducted one point because the material isn't challenge-specific.
+      We tested Eightcap Challenges' support by contacting live chat and email with payout, KYC and platform questions, checking response speed and accuracy. They scored strongly because replies were fast, 24/7 and handled by real agents. For educational resources, we reviewed Trade Zone and Eightcap Labs for market insights and practical guidance. We deducted one point because the material isn't challenge-specific.
     </p>
   </div>
 
@@ -982,10 +958,10 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-3">
-    Eightcap Challenges' challenge program works differently from most because it isn't a broker-backed prop firm — it is <strong>run directly by the broker itself</strong>, using the same technical infrastructure, pricing feeds and platform environment offered to live clients.
+    The challenge website is operated by <strong>Eightcap International Ltd in Seychelles</strong>, and the challenge products are explicitly outside regulated brokerage or investment services. While the environment is designed to mirror live conditions, all activities are simulated and do not create a brokerage client relationship.
   </p>
   <p class="mb-6">
-    You trade on simulated accounts, but the execution, spreads and market data all mirror Eightcap Challenges' real-time pricing feed, which removes the uncertainty that usually comes with prop firms using private or manipulated pricing sources.
+    The Eightcap group has been operating since 2009 and holds multiple regulatory licences for its brokerage services, which provides a trust foundation for the challenge products.
   </p>
 
   <!-- Company info grid -->
@@ -995,8 +971,8 @@ const { section, fallbackBody } = Astro.props;
       <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Founded</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
-      <p class="text-2xl font-black text-slate-900">AU</p>
-      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Headquarters</p>
+      <p class="text-2xl font-black text-slate-900">SC</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Challenge Entity</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
       <p class="text-2xl font-black text-teal-600">4.0/5</p>
@@ -1009,9 +985,9 @@ const { section, fallbackBody } = Astro.props;
   </div>
 
   <!-- Regulation -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Regulatory Status</h3>
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Eightcap Group Regulatory Status</h3>
   <p class="mb-4">
-    Eightcap Challenges has been operating since 2009 and is based in Australia, regulated by top-tier financial authorities including:
+    The Eightcap brokerage group holds licences from top-tier financial authorities. Note that these licences apply to the brokerage services, not to the challenge products operated by Eightcap International Ltd in Seychelles:
   </p>
 
   <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
@@ -1033,22 +1009,22 @@ const { section, fallbackBody } = Astro.props;
     </div>
   </div>
 
+  <!-- Simulated environment callout -->
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
+    <p class="text-sm font-bold text-amber-900 mb-1">Simulated Environment</p>
+    <p class="text-sm text-amber-800">
+      All challenge activities are simulated and do not create a brokerage client relationship. The challenge products are operated by Eightcap International Ltd in Seychelles and are explicitly outside regulated brokerage or investment services. Challenge accounts do not carry investor protections like traditional CFD trading accounts.
+    </p>
+  </div>
+
   <!-- Transparency -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Transparency</h3>
   <p class="mb-3">
     Eightcap Challenges is transparent about how payouts work, what triggers a review and which documents are required for KYC, and the 14-day first-payout window is stated openly rather than buried in fine print.
   </p>
   <p class="mb-6">
-    Monthly trading instrument updates and clear leverage tables help you understand exactly what you can trade before starting a challenge. Even though these accounts are simulated environments, the combination of broker-level infrastructure, public rule documentation and a long operating history makes the overall setup more predictable and trustworthy than most independent prop firms.
+    Monthly trading instrument updates and clear leverage tables help you understand exactly what you can trade before starting a challenge. The combination of the Eightcap group's long operating history and public rule documentation makes the overall setup more predictable than many independent prop firms.
   </p>
-
-  <!-- Country restrictions warning -->
-  <div class="rounded-xl border border-red-200 bg-red-50 p-4 mb-6">
-    <p class="text-sm font-bold text-red-800 mb-1">Availability Restriction</p>
-    <p class="text-sm text-red-700">
-      Eightcap Challenges is <strong>not available to US residents</strong>. The challenge accounts follow the same geographic restrictions as Eightcap Challenges' brokerage services. This is due to regulatory limitations rather than a technical barrier.
-    </p>
-  </div>
 
   <!-- Trustpilot -->
   <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 mb-6 flex items-center gap-4">
@@ -1065,7 +1041,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">How We Tested Eightcap Challenges' Trust & Transparency (9/10)</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      We assessed trust using our three-pillar model: regulation, reputation, and operational transparency. We verified Eightcap Challenges' licences (ASIC, FCA, CySEC, SCB), checked its 4.0/5 Trustpilot score, and assessed whether challenge accounts genuinely mirror the broker's live pricing. The only deduction came from the simulated trading environment nature of challenge accounts, which do not carry investor protections like Eightcap Challenges' traditional CFD trading accounts.
+      We assessed trust using our three-pillar model: regulation, reputation, and operational transparency. We verified the Eightcap group's licences (ASIC, FCA, CySEC, SCB), checked the 4.0/5 Trustpilot score, and noted that challenge products are operated by Eightcap International Ltd in Seychelles outside of regulated brokerage services. The deduction came from the simulated trading environment nature of challenge accounts, which do not carry investor protections.
     </p>
   </div>
 

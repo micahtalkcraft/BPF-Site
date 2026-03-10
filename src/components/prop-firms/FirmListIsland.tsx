@@ -378,8 +378,9 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
     <div>
       {/* Search + controls */}
       <div className="bg-white border border-slate-200 rounded-xl shadow-sm p-4 mb-6">
-        <div className="flex gap-3">
-          <div className="relative flex-1">
+        <div className="flex flex-col sm:flex-row gap-3">
+          {/* Search — full width on mobile, flex-1 on desktop */}
+          <div className="relative w-full sm:flex-1">
             <svg
               className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400"
               fill="none" viewBox="0 0 24 24" stroke="currentColor"
@@ -395,64 +396,67 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
               className="w-full pl-10 pr-4 py-2.5 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
             />
           </div>
-          <div className="relative">
-            <select
-              value={sort}
-              onChange={(e) => handleSort(e.target.value)}
-              className="appearance-none pl-3 pr-8 py-2.5 text-sm border border-slate-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-teal-500 cursor-pointer font-medium text-slate-700"
-            >
-              {SORT_OPTIONS.map((o) => (
-                <option key={o.value} value={o.value}>{o.label}</option>
-              ))}
-            </select>
-            <svg className="absolute right-2.5 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-slate-400 pointer-events-none"
-              fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </div>
-          {/* Country filter dropdown */}
-          <div className="relative" ref={countryRef}>
-            <button
-              onClick={() => setCountryOpen(!countryOpen)}
-              className={`h-full inline-flex items-center gap-1.5 px-3 py-2.5 text-sm border rounded-lg transition-colors cursor-pointer font-medium whitespace-nowrap ${
-                countryFilter
-                  ? "border-teal-500 bg-teal-50 text-teal-700"
-                  : "border-slate-200 bg-white text-slate-700 hover:border-teal-300"
-              }`}
-              title="Filter by country"
-            >
-              <svg className="h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5a17.92 17.92 0 01-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+          {/* Sort + Country — side by side row on mobile, inline on desktop */}
+          <div className="flex gap-3">
+            <div className="relative flex-1 sm:flex-none">
+              <select
+                value={sort}
+                onChange={(e) => handleSort(e.target.value)}
+                className="w-full appearance-none pl-3 pr-8 py-2.5 text-sm border border-slate-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-teal-500 cursor-pointer font-medium text-slate-700"
+              >
+                {SORT_OPTIONS.map((o) => (
+                  <option key={o.value} value={o.value}>{o.label}</option>
+                ))}
+              </select>
+              <svg className="absolute right-2.5 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-slate-400 pointer-events-none"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
-              {countryFilter ? COUNTRY_FILTERS.find((c) => c.code === countryFilter)?.label ?? countryFilter : "Country"}
-              <svg className={`h-3 w-3 text-slate-400 transition-transform flex-shrink-0 ${countryOpen ? "rotate-180" : ""}`}
-                fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            {countryOpen && (
-              <div className="absolute right-0 top-full mt-1.5 w-48 bg-white border border-slate-200 rounded-lg shadow-lg z-20 py-1">
-                <button
-                  onClick={() => handleCountry(null)}
-                  className={`w-full text-left px-3 py-2 text-sm transition-colors ${
-                    !countryFilter ? "bg-teal-50 text-teal-700 font-semibold" : "text-slate-700 hover:bg-slate-50"
-                  }`}
-                >
-                  All Countries
-                </button>
-                {COUNTRY_FILTERS.map((c) => (
+            </div>
+            {/* Country filter dropdown */}
+            <div className="relative flex-1 sm:flex-none" ref={countryRef}>
+              <button
+                onClick={() => setCountryOpen(!countryOpen)}
+                className={`w-full h-full inline-flex items-center justify-center gap-1.5 px-3 py-2.5 text-sm border rounded-lg transition-colors cursor-pointer font-medium whitespace-nowrap ${
+                  countryFilter
+                    ? "border-teal-500 bg-teal-50 text-teal-700"
+                    : "border-slate-200 bg-white text-slate-700 hover:border-teal-300"
+                }`}
+                title="Filter by country"
+              >
+                <svg className="h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5a17.92 17.92 0 01-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                </svg>
+                {countryFilter ? COUNTRY_FILTERS.find((c) => c.code === countryFilter)?.label ?? countryFilter : "Country"}
+                <svg className={`h-3 w-3 text-slate-400 transition-transform flex-shrink-0 ${countryOpen ? "rotate-180" : ""}`}
+                  fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {countryOpen && (
+                <div className="absolute right-0 top-full mt-1.5 w-48 bg-white border border-slate-200 rounded-lg shadow-lg z-20 py-1">
                   <button
-                    key={c.code}
-                    onClick={() => handleCountry(c.code)}
+                    onClick={() => handleCountry(null)}
                     className={`w-full text-left px-3 py-2 text-sm transition-colors ${
-                      countryFilter === c.code ? "bg-teal-50 text-teal-700 font-semibold" : "text-slate-700 hover:bg-slate-50"
+                      !countryFilter ? "bg-teal-50 text-teal-700 font-semibold" : "text-slate-700 hover:bg-slate-50"
                     }`}
                   >
-                    {c.label}
+                    All Countries
                   </button>
-                ))}
-              </div>
-            )}
+                  {COUNTRY_FILTERS.map((c) => (
+                    <button
+                      key={c.code}
+                      onClick={() => handleCountry(c.code)}
+                      className={`w-full text-left px-3 py-2 text-sm transition-colors ${
+                        countryFilter === c.code ? "bg-teal-50 text-teal-700 font-semibold" : "text-slate-700 hover:bg-slate-50"
+                      }`}
+                    >
+                      {c.label}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         </div>
 

@@ -139,6 +139,10 @@ const { section, fallbackBody } = Astro.props;
     <p class="mb-4">
       There's no time restriction, and you get a <strong>15% profit share from day one</strong>, even during the challenge phase. This model suits confident, experienced traders who want to skip the two-step grind and fast-track to a funded account.
     </p>
+    <div class="rounded-xl border border-slate-200 bg-slate-50 p-4 mb-4">
+      <p class="text-xs font-bold text-slate-600 uppercase tracking-wide mb-1">How Drawdown Limits Work</p>
+      <p class="text-sm text-slate-700">Daily loss limits are calculated using your starting balance plus any same-day profits, reset daily, and include both open and closed trades. Maximum loss limits are based on your initial balance and equity &mdash; breaching either limit will fail the account.</p>
+    </div>
 
     <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
       <table class="w-full text-sm">
@@ -374,7 +378,7 @@ const { section, fallbackBody } = Astro.props;
       </thead>
       <tbody class="divide-y divide-slate-100">
         <tr class="bg-white">
-          <td class="px-3 py-3 font-semibold text-slate-900">Lifetime Payout 95%</td>
+          <td class="px-3 py-3 font-semibold text-slate-900">Lifetime Payout + 95% Split</td>
           <td class="px-3 py-3 text-right text-slate-900">+30%</td>
           <td class="px-3 py-3 text-center text-slate-700">All sizes</td>
           <td class="px-3 py-3 text-center text-slate-700">All sizes</td>
@@ -417,6 +421,11 @@ const { section, fallbackBody } = Astro.props;
         </tr>
       </tbody>
     </table>
+  </div>
+
+  <div class="rounded-xl border border-slate-200 bg-slate-50 p-4 mb-8">
+    <p class="text-xs font-bold text-slate-600 uppercase tracking-wide mb-1">Note on "Lifetime Payout + 95% Split"</p>
+    <p class="text-sm text-slate-700">"Lifetime Payout" refers to ongoing payout eligibility (your funded account stays active for payouts indefinitely), while 95% refers to the maximum profit split achievable. These are two separate features bundled into one add-on.</p>
   </div>
 
   <!-- ─── Scaling Plan ────────────────────────────────────────────── -->
@@ -717,11 +726,11 @@ const { section, fallbackBody } = Astro.props;
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
       <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Withdrawal</p>
-      <p class="text-sm font-bold text-slate-800">$20</p>
+      <p class="text-sm font-bold text-slate-800">Not confirmed</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
       <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Payout Processor</p>
-      <p class="text-sm font-bold text-slate-800">Deel</p>
+      <p class="text-sm font-bold text-slate-800">Not confirmed</p>
     </div>
   </div>
 
@@ -745,24 +754,20 @@ const { section, fallbackBody } = Astro.props;
   <!-- Payout Policy -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Profit Payouts</h3>
   <p class="mb-4">
-    Payouts are handled through <strong>Deel</strong>. The minimum withdrawal is $20, with restrictions based on amount:
+    Payout processing details, including the specific processor used and minimum withdrawal amounts, have not been confirmed in available source material. Payment processing is now routed through FundedNext's broker-backed setup via <strong>Incenteco Trading Ltd</strong>.
   </p>
 
   <div class="space-y-3 mb-6">
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">$20 &ndash; $50 payouts</p>
-      <p>Must be withdrawn via crypto</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">$50+ payouts</p>
-      <p>Can be withdrawn via Deel using standard methods (bank, card, or e-wallet)</p>
+      <p class="font-bold text-slate-900 mb-1">Payout Schedule</p>
+      <p>Varies by model: Stellar 1-Step every <strong>5 business days</strong>, Stellar 2-Step starts monthly then bi-weekly, Stellar Lite starts at 21 days then bi-weekly.</p>
     </div>
   </div>
 
   <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
     <p class="text-sm font-bold text-amber-900 mb-1">KYC Required</p>
     <p class="text-sm text-amber-800">
-      Before receiving any payout, you'll need to pass KYC verification (48&ndash;72 hours), which includes submitting a valid government-issued ID and address document via Veriff or Sumsub.
+      KYC verification is required before payouts can be processed. This includes submitting a valid government-issued ID and proof of address. Specific verification timeframes and providers have not been confirmed in available sources.
     </p>
   </div>
 
@@ -770,7 +775,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Payment Methods &amp; Payouts</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      FundedNext offers a solid mix of modern and traditional payment options, including crypto, cards, and bank transfers. With payment processing now routed through their broker-backed setup, most traders should see smoother funding and reliable withdrawals through Deel.
+      FundedNext offers a solid mix of modern and traditional payment options, including crypto, cards, and bank transfers. With payment processing now routed through their broker-backed setup via Incenteco Trading Ltd, most traders should see smoother funding and reliable withdrawals. Payout frequency varies by model, so check the specific schedule for your challenge type.
     </p>
   </div>
 

@@ -1,30 +1,30 @@
 {
   "id": "rev-eightcap",
   "propFirmId": "d0000027-0000-0000-0000-000000000027",
-  "summary": "With an overall score of 89/100, Eightcap Challenges is one of the highest-scoring prop firms we've reviewed. What sets it apart is that the entire challenge program is operated directly by a regulated forex broker rather than an independent prop firm. You get access to Eightcap Challenges' own live pricing, execution feed and trading platforms (MT4, MT5 and TradeLocker), but within prop-style rules and targets.\n\nThe One Step, Two Step and Day Trader challenges cover both structured, multi-day evaluations and fast, timed sessions, with extremely competitive tight spreads from 0 pips and a $5 round-turn commission on non-crypto CFDs. We think this will suit serious forex traders who want a trading environment that feels familiar and efficient.",
+  "summary": "With an overall score of 89/100, Eightcap Challenges is one of the highest-scoring prop firms we've reviewed. The challenge website is operated by Eightcap International Ltd in Seychelles, and while the environment is designed to mirror live conditions, all activities are simulated and do not create a brokerage client relationship.\n\nThe Day Trader, One Phase and Two Phase challenges cover both structured multi-day evaluations and fast timed sessions, with RAW account spreads starting from 0.0 pips or points and a $5 per lot commission on all instruments except Cryptocurrency ($0). Both One Phase and Two Phase challenges range from $5,000 to $200,000, with the standard profit split at 80% (up to 90% only with the paid add-on). We think this will suit serious forex traders who want a trading environment that feels familiar and efficient.",
   "pros": [
-    "Raw spreads from 0 pips with fast execution",
+    "RAW spreads from 0.0 pips with $5/lot commission",
     "MT4, MT5, and TradeLocker platform access",
     "Unique Day Trader challenge format (1-8 hour sessions)",
-    "Operated directly by an ASIC/FCA-regulated broker",
     "Three distinct challenge types for different trading styles",
-    "Clear, transparent rules across all account types"
+    "Clear, transparent rules across all account types",
+    "Account sizes from $5,000 to $200,000"
   ],
   "cons": [
     "No traditional scaling plan available",
-    "No challenge fee refunds offered",
-    "Strict news trading restrictions during payout stage",
+    "One Phase profit cap of 5% on all payouts",
+    "Two Phase profit cap of 10% on all payouts",
+    "News trading restricted around high-impact events",
     "Higher fees on larger account sizes",
-    "14-day wait before first payout on standard challenges",
-    "One Step accounts have a 5% payout cap for the first three payouts"
+    "14-day wait before first payout on standard challenges"
   ],
-  "bestFor": "Serious forex traders who want broker-level infrastructure, regulated oversight, and consistent pricing with multiple challenge formats including unique short-session Day Trader challenges",
-  "notIdealFor": "Traders wanting traditional scaling plans, challenge fee refunds, US-based traders, or those needing instant payouts and unlimited profit withdrawal on standard challenges from day one",
+  "bestFor": "Serious forex traders who want broker-level infrastructure, consistent pricing with multiple challenge formats including unique short-session Day Trader challenges",
+  "notIdealFor": "Traders wanting traditional scaling plans, unlimited profit withdrawal on standard challenges from day one, or those needing instant payouts on standard accounts",
   "overallScore": 89,
   "categoryScores": {
     "challenges": 90,
-    "spreads": 95,
-    "markets": 90,
+    "spreads": 90,
+    "markets": 85,
     "payouts": 80,
     "platforms": 90,
     "trust": 90
@@ -41,25 +41,29 @@
   "verdictBlocks": [
     {
       "heading": "Our Final Verdict On Eightcap Challenges",
-      "body": "Eightcap Challenges earns a solid overall score of 89/100, largely because it offers something structurally different from typical prop firms — a challenge system operated directly by a regulated broker using its own pricing, infrastructure and execution environment. This removes many of the uncertainties you can face with some prop firms, such as private liquidity pools, artificial spreads or inconsistent fills.\n\nThe challenge formats are balanced and achievable, the Day Trader model offers a genuinely alternative way to prop trade, and MT4/MT5 support gives you access to a proper technical environment rather than a simplified web platform. Costs are competitive, spreads are extremely tight, and the trading rules are clear and transparent.\n\nThe main limitations are the higher fees on larger account sizes, no traditional scaling plan, and the 14-day wait before the first payout on the standard challenges. Even with those drawbacks, the overall package feels more stable and predictable than many independent prop firms because everything is built on top of Eightcap Challenges' brokerage framework, rather than outsourced infrastructure."
+      "body": "Eightcap Challenges earns a solid overall score of 89/100. The challenge website is operated by Eightcap International Ltd in Seychelles, and while the environment is designed to mirror live conditions, all activities are simulated and do not create a brokerage client relationship.\n\nThe challenge formats are balanced and achievable. The Day Trader model offers a genuinely alternative way to prop trade, and MT4, MT5 and TradeLocker support gives you access to a proper technical environment. Costs are competitive starting from $59, RAW spreads start from 0.0 pips, and the trading rules are clear and transparent.\n\nThe main limitations are the profit caps on payouts (5% for One Phase, 10% for Two Phase), no traditional scaling plan, and the 14-day wait before the first payout on standard challenges. The overall package feels more stable and predictable than many independent prop firms because everything is built on top of Eightcap's infrastructure."
     }
   ],
   "faq": [
     {
-      "q": "Is Eightcap Challenges allowed in the US?",
-      "a": "No, Eightcap Challenges' brokerage services are not available to US residents, and the challenge accounts follow the same geographic restrictions. Traders in the United States cannot open an Eightcap Challenges live account or participate in the One Step, Two Step or Day Trader challenges. This is due to regulatory limitations rather than a technical barrier, and there are no workarounds such as VPN trading or offshore onboarding."
+      "q": "What challenge types does Eightcap Challenges offer?",
+      "a": "Eightcap Challenges offers three evaluation types: Day Trader, One Phase, and Two Phase. One Phase and Two Phase account sizes range from $5,000 to $200,000. Day Trader uses a fixed $10,000 balance with stakes from $5 to $500. All challenges operate in a simulated environment."
     },
     {
       "q": "How long do Eightcap Challenges payouts take?",
-      "a": "Eightcap Challenges payouts usually take 24 to 48 hours to process once they pass KYC and risk review, although the FAQ notes they can take 2 to 5 business days depending on your bank or crypto network. The first payout for One Step and Two Step accounts is available after 14 days, with a $100 minimum withdrawal. Day Trader payouts are instant after a successful session and can be withdrawn from $10 in crypto."
+      "a": "Payouts are typically processed within 2 business days and only on business days. The first payout for One Phase and Two Phase accounts is available after 14 days (or 7 days with the Earlier Payout add-on), subject to minimum trading day requirements. Minimum payout is $100 after the profit split for standard challenges. Crypto withdrawals incur a 1% fee and bank wire withdrawals incur a flat $50 fee."
+    },
+    {
+      "q": "What are the profit caps on Eightcap Challenges?",
+      "a": "One Phase profit cap is 5% of the initial balance and applies to all approved payouts. Two Phase profit cap is 10% of the initial balance for all approved payouts. Accounts created before February 11 are not subject to a profit cap for the Two Phase challenge. Only fully earned profit can be withdrawn — partial payouts are not supported."
     },
     {
       "q": "Is there an Eightcap Challenges demo account for challenges?",
-      "a": "No, Eightcap Challenges does not offer a demo version of its prop challenges, because each challenge relies on a simulated live feed that must be purchased and activated through your account. The challenge environment uses the same pricing as Eightcap Challenges' live markets, but you can't trial the evaluation rules or test pass conditions without buying a challenge first. If you want to practise, you can use a free MT4 or MT5 demo, but it won't replicate challenge drawdowns or targets."
+      "a": "No, Eightcap Challenges does not offer a demo version of its prop challenges. The challenge environment uses simulated conditions, but you can't trial the evaluation rules or test pass conditions without buying a challenge first. If you want to practise, you can use a free MT4 or MT5 demo, but it won't replicate challenge drawdowns or targets."
     }
   ],
   "verified": true,
   "flagged": false,
   "methodologyVersion": "1.0",
-  "lastReviewedAt": "2026-02-24"
+  "lastReviewedAt": "2026-03-10"
 }

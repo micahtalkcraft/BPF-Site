@@ -11,7 +11,8 @@
     "dailyDrawdown": 3,
     "maxDrawdown": 10,
     "minTradingDays": 5,
-    "scalingPlan": true
+    "scalingPlan": true,
+    "notes": "CFD programmes: Instant Funding (no evaluation, 8% trailing drawdown), Lightning (7-day evaluation, 5% target, 3% daily / 4% trailing), One Phase (10% target, 3% daily / 6% trailing), Two Phase (10%/5% targets, 4% daily / 10% trailing), Three Phase (5% per phase, 5% daily / 10% static). Crypto programmes: Crypto Instant Funding (no evaluation, 3% daily drawdown, 6% max trailing drawdown, 25% consistency rule, 7 min trading days before payout, 7-day inactivity limit) and Crypto Standard 1 Step (9% profit target, 3% daily drawdown, 6% max trailing drawdown, 25% consistency rule, 4 min trading days in eval, 7 min trading days funded, 7-day inactivity limit). Crypto leverage: 5:1 on BTC/ETH/SOL, 2:1 on other crypto. Crypto payout: $50 minimum profit target payout, lock upon payout applies. Crypto news trading: not allowed 5 minutes before or after events. TradingView on crypto: available (coming soon). All accounts use simulated trading environments."
   },
   "pricing": {
     "challengeFees": [
@@ -48,29 +49,31 @@
       { "accountSize": 50000, "fee": 249, "model": "other", "label": "Three Phase" },
       { "accountSize": 100000, "fee": 399, "model": "other", "label": "Three Phase" },
       { "accountSize": 200000, "fee": 799, "model": "other", "label": "Three Phase" },
-      { "accountSize": 400000, "fee": 1599, "model": "other", "label": "Three Phase" }
+      { "accountSize": 400000, "fee": 1599, "model": "other", "label": "Three Phase" },
+      { "accountSize": 5000, "fee": 125, "model": "instant", "label": "Crypto Instant Funding" },
+      { "accountSize": 5000, "fee": 59, "model": "1-step", "label": "Crypto Standard (1 Step)" }
     ],
     "resetFee": null,
     "refundPolicy": "Challenge fee refunded with first profitable payout"
   },
   "payouts": {
-    "splitMax": 90,
-    "schedule": "Monthly (bi-weekly with add-on)",
+    "splitMax": 100,
+    "schedule": "On-demand first payout (eval accounts); bi-weekly thereafter; 14-day cycle (Instant Funding)",
     "processingTime": "24-48 hours",
-    "firstPayoutDays": 14,
+    "firstPayoutDays": null,
     "methods": ["bank transfer", "crypto", "Deel"]
   },
   "rules": {
     "newsTrading": true,
     "weekendHolding": true,
-    "copyTrading": false,
+    "copyTrading": true,
     "expertAdvisors": true,
-    "consistencyRule": null,
-    "notes": "Five challenge types: Instant Funding (no evaluation, 8% trailing drawdown), Lightning (7-day evaluation, 5% target, no weekend/news), One Phase (10% target, 6% trailing), Two Phase (10%/5% targets, 10% trailing), Three Phase (5% per phase, 10% static). Lightning: no weekend holding, no news trading within 5 min of events, stop-loss required. EAs allowed on MT4/MT5 only (not DXTrade or Lightning). Copy trading between own FXIFY accounts only. HFT, latency arbitrage, tick scalping prohibited. Add-ons: 90% profit split (+20% fee), bi-weekly payouts (+5%), performance protect (+15%), 50:1 leverage (+25%)."
+    "consistencyRule": "25% (crypto programmes only)",
+    "notes": "CFD programmes: Instant Funding, Lightning, One Phase, Two Phase, Three Phase. Crypto programmes: Crypto Instant Funding and Crypto Standard (1 Step). Lightning: no weekend holding, no news trading within 5 min of events, stop-loss required. Crypto programmes: no news trading 5 min before/after events, 25% consistency rule, 7-day inactivity limit, $50 minimum profit target payout, lock upon payout applies. EAs allowed on MT4/MT5 only (not DXTrade or Lightning). Copy trading allowed between own FXIFY accounts; third-party copy trading requires verification. HFT, latency arbitrage, tick scalping prohibited. Add-ons: 90% profit split (+20% fee), bi-weekly payouts (+5%), performance protect (+15%), 50:1 leverage (+25%). Crypto leverage: 5:1 BTC/ETH/SOL, 2:1 other crypto."
   },
   "markets": {
-    "platforms": ["MT4", "MT5", "DXTrade"],
-    "instruments": "Forex, Indices, Commodities, Stocks, Crypto"
+    "platforms": ["MT4", "MT5", "DXTrade", "TradingView"],
+    "instruments": "Forex, Indices, Commodities, Stocks, Crypto (300+ symbols on CFD; 80+ crypto assets on crypto programmes)"
   },
   "trust": {
     "trustpilotRating": 4.4,
@@ -88,12 +91,12 @@
     "discord": true
   },
   "custom": {
-    "tags": ["5 Challenge Types", "Scaling to $4M", "Up to 90% Split", "Broker Backed"],
+    "tags": ["7 Challenge Types", "Scaling to $4M", "Up to 100% Split (Crypto)", "80+ Crypto Assets", "Broker Backed"],
     "discountCode": "PROPFIRMS15",
     "discountPercent": 15
   },
   "notes": null,
-  "lastVerifiedAt": "2026-02-24",
-  "lastUpdatedAt": "2026-02-24",
+  "lastVerifiedAt": "2026-03-11",
+  "lastUpdatedAt": "2026-03-11",
   "dataSources": ["https://fxify.com"]
 }

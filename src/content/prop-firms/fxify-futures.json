@@ -11,19 +11,23 @@
     "dailyDrawdown": 3,
     "maxDrawdown": 5,
     "minTradingDays": 3,
-    "scalingPlan": false
+    "scalingPlan": false,
+    "notes": "Three programs: Standard Plan, Expert Plan, and Straight to Sim Live Plan. Standard Plan: one-step evaluation, 2% daily loss limit, 4% max loss, 4 minimum trading days, 30% consistency rule, $125 activation fee, 80% profit split (90% with add-on). Expert Plan: one-step evaluation, 3% daily loss limit, max loss varies by account size (5% on $50K, 4.5% on $100K, 4% on $150K), 3 minimum trading days, 40% consistency rule (funded stage), no activation fee, 90% profit split (100% with add-on). Straight to Sim Live Plan: direct simulated funded account without evaluation, 2.5% daily loss limit, max loss varies (4% on $50K, 4% on $100K, 3.75% on $150K), 20% consistency rule, no activation fee, 90% profit split (100% with add-on). Standard and Expert evaluations are monthly subscriptions that rebill until passed or cancelled. All positions must be closed by 4:59 PM ET each day. Markets close Friday 5 PM ET and reopen Sunday 6 PM ET. All accounts operate in a simulated trading environment. Traders can hold up to 5 evaluation/funded accounts combined plus 1 Straight to Sim Live account."
   },
   "pricing": {
     "challengeFees": [
-      { "accountSize": 50000, "fee": 89, "model": "1-step", "label": "Starter Plan" },
-      { "accountSize": 100000, "fee": 149, "model": "1-step", "label": "Starter Plan" },
-      { "accountSize": 150000, "fee": 225, "model": "1-step", "label": "Starter Plan" },
+      { "accountSize": 50000, "fee": 89, "model": "1-step", "label": "Standard Plan" },
+      { "accountSize": 100000, "fee": 149, "model": "1-step", "label": "Standard Plan" },
+      { "accountSize": 150000, "fee": 225, "model": "1-step", "label": "Standard Plan" },
       { "accountSize": 50000, "fee": 149, "model": "1-step", "label": "Expert Plan" },
       { "accountSize": 100000, "fee": 249, "model": "1-step", "label": "Expert Plan" },
-      { "accountSize": 150000, "fee": 349, "model": "1-step", "label": "Expert Plan" }
+      { "accountSize": 150000, "fee": 349, "model": "1-step", "label": "Expert Plan" },
+      { "accountSize": 50000, "fee": 149, "model": "other", "label": "Straight to Sim Live" },
+      { "accountSize": 100000, "fee": 249, "model": "other", "label": "Straight to Sim Live" },
+      { "accountSize": 150000, "fee": 349, "model": "other", "label": "Straight to Sim Live" }
     ],
     "resetFee": null,
-    "refundPolicy": "No recurring fees after funding"
+    "refundPolicy": "Monthly subscription; rebills until passed or cancelled"
   },
   "payouts": {
     "splitMax": 100,
@@ -36,12 +40,12 @@
     "newsTrading": true,
     "weekendHolding": false,
     "copyTrading": false,
-    "expertAdvisors": true,
-    "consistencyRule": "30% (Starter) / 40% (Expert) single-day profit cap",
-    "notes": "Copy trading not allowed. HFT and latency arbitrage prohibited. Trading within 2% of CME price limit not allowed. Trailing drawdown adjusts based on end-of-day balance. Funded accounts cannot be reset. EAs permitted but not currently supported on FFX Platform."
+    "expertAdvisors": false,
+    "consistencyRule": "30% (Standard) / 40% (Expert, funded stage) / 20% (Straight to Sim Live) single-day profit cap",
+    "notes": "Expert Advisors are not permitted on FXIFY Futures. Copy trading is allowed only between accounts owned by the same user and must be approved first; third-party copy trading is prohibited. News trading is allowed but high-leverage news trading strategies are prohibited. HFT and latency arbitrage prohibited. Trading within 2% of CME price limit not allowed. Trailing drawdown adjusts based on end-of-day balance. Funded accounts cannot be reset. All positions must be closed by 4:59 PM ET each day. Markets close Friday 5 PM ET and reopen Sunday 6 PM ET. Standard funded accounts require a $125 activation fee; Expert and Sim Live accounts have no activation fee. Standard and Expert evaluations are monthly subscriptions that rebill until passed or cancelled. Evaluation accounts require ongoing activity due to monthly subscription. Payout caps: Standard/Expert $5K on $50K accounts, $10K on $100K, $15K on $150K. Sim Live caps: $3K on $50K, $6K on $100K, $12K on $150K (varies by account size). Standard accounts can withdraw 60% of profits within the buffer zone once; Expert accounts can withdraw 70%. Minimum payout: $100 for Standard/Expert; 3% of account balance for Straight to Sim Live. Payouts are processed through Rise before withdrawal via bank transfer or cryptocurrency. Traders can hold up to 5 evaluation/funded accounts combined plus 1 Straight to Sim Live account. All accounts operate in a simulated trading environment designed to mirror futures market conditions."
   },
   "markets": {
-    "platforms": ["FFX Platform"],
+    "platforms": ["Tradovate", "TradingView", "NinjaTrader"],
     "instruments": "Futures (CME Equity, FX, Commodities, Bonds, Metals)"
   },
   "trust": {
@@ -54,11 +58,11 @@
   "media": { "logo": "/images/logos/fxify-futures.png" },
   "availability": { "restrictedCountries": [] },
   "custom": {
-    "tags": ["Futures", "Profit Split to 100%", "No Recurring Fees", "TradingView Charts"],
+    "tags": ["Futures", "Three Programs", "Tradovate/NinjaTrader/TradingView", "Up to 100% Split"],
     "discountCode": "PROPFIRMS15",
     "discountPercent": 15
   },
-  "lastVerifiedAt": "2026-02-24",
-  "lastUpdatedAt": "2026-02-24",
+  "lastVerifiedAt": "2026-03-10",
+  "lastUpdatedAt": "2026-03-10",
   "dataSources": ["https://fxify.com/futures"]
 }

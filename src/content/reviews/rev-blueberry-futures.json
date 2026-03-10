@@ -1,23 +1,22 @@
 {
   "id": "rev-blueberry-futures",
   "propFirmId": "d0000036-0000-0000-0000-000000000036",
-  "summary": "With an overall rating of 85/100, Blueberry Futures enters the market as a new futures-focused arm of the Blueberry brand, offering two one-step challenges with fast execution and clear trading rules. You can trade deep-liquidity CME markets covering forex, commodities, and indices on the prop firm's BlackArrow futures trading platform.\n\nBlueberry Futures is the second major prop trading product launched under the Blueberry Markets brand, following the success of Blueberry Funded, their CFD-based prop firm. The setup is intentionally simple — you have two one-step challenges, identical targets across all account sizes, and a choice between the more forgiving Ascent (end-of-day drawdown) or the tighter Accelerated (real-time trailing drawdown). Fast execution through BlackArrow and a focused CME market list keep the trading conditions clean and predictable, giving you a user-friendly and straightforward path to funded trading without unnecessary complexity.",
+  "summary": "With an overall rating of 85/100, Blueberry Futures is a futures-focused evaluation platform under the Blueberry family of brands, offering two one-step challenges with clear trading rules. Blueberry Futures offers $25K, $50K, $100K, and $150K accounts on both Ascent and Accelerated programs. You can trade CME futures covering equity futures, micro equity futures, FX futures, livestock, and micro crypto on the BlackArrow trading terminal, available via desktop app, web terminal, and mobile app.\n\nBlueberry Futures is part of the Blueberry family of brands. The setup is straightforward — two one-step challenges, identical targets across all account sizes, and a choice between the more forgiving Ascent (end-of-day drawdown) or the tighter Accelerated (real-time trailing drawdown). Fees start at $129 for the Accelerated $25K account and $139 for the Ascent $25K account. No activation fees are charged. All accounts operate in a simulated trading environment.",
   "pros": [
-    "Broker backed by ASIC regulated Blueberry Markets",
+    "Part of the Blueberry family of brands",
     "Simple one-step challenges with clear rules",
-    "No commissions or hidden trading fees",
-    "Strong CME market selection with deep liquidity",
-    "Fast execution on BlackArrow"
+    "Level 1 CME data included, no activation fees",
+    "CME market selection including micro crypto (MBT, MET)",
+    "BlackArrow available on desktop, web, and mobile"
   ],
   "cons": [
-    "Manual trading only, no automation",
-    "No overnight or weekend holds",
+    "Manual trading only",
     "Payout caps and buffer reduce flexibility",
-    "Single platform option",
+    "Single trading terminal (BlackArrow)",
     "Strict DCA and behaviour rules"
   ],
-  "bestFor": "Futures traders who value clear rules, fast execution, and strong broker backing from an ASIC-regulated parent company",
-  "notIdealFor": "Grid traders, heavy martingale users, and anyone who depends on automation, overnight swing holding, or needs multiple platform options",
+  "bestFor": "Futures traders who value clear rules, fast execution, and the operational backing of an established brand family",
+  "notIdealFor": "Grid traders, heavy martingale users, and anyone who depends on automation or needs multiple platform options",
   "overallScore": 85,
   "categoryScores": {
     "challenges": 90,
@@ -28,28 +27,32 @@
     "trust": 90
   },
   "categorySections": {
-    "challenges": "Blueberry Futures offers two one-step challenges — **Ascent** (EOD drawdown) and **Accelerated** (trailing drawdown) — across $50K, $100K, and $150K account sizes. Both share the same profit targets ($3,000, $6,000, $10,000) and 30-day completion window. Ascent requires 2 active days with $200+ profit, while Accelerated needs just 1 day. Fees start at **$184** (Accelerated) and **$245** (Ascent). No daily loss limit — only the global drawdown matters. Contract caps scale with account size: 2/6/9 minis or 20/60/90 micros. Blueberry earned **9/10** for challenges.",
-    "spreads": "Blueberry Futures uses a **commission-free** structure where all execution costs are built into the BlackArrow environment. No per-contract platform fees, routing charges, or exchange costs during evaluations or funded accounts. The one-off challenge fee covers full access to BlackArrow, real-time Level 1 CME data, and all supported markets. Optional costs include the **$61/month** professional DOM feed and a monthly subscription for premium analytics and 15% reset discounts. Reset fees range from **$79–$310** depending on account type and size. Blueberry earned **9/10** for pricing.",
-    "markets": "Blueberry Futures provides a focused set of **CME futures** covering index futures (ES, NQ, RTY, EMD), micro equities (MES, MNQ, M2K), forex futures (6E, 6B, 6A, 6C, 6J, 6S, 6N), livestock (HE, LE, GF), and micro crypto (MBT, MET). All instruments trade on CME, CBOT, NYMEX, or COMEX with standard tick values and contract caps per account size. The absence of crypto, stocks, ETFs, or energy futures trims a point. Blueberry earned **9/10** for markets.",
-    "platforms": "Blueberry Futures uses **BlackArrow** as its sole trading platform across evaluations and funded accounts. The platform is purpose-built for futures with fast execution, DOM support, and chart tools. Desktop offers the most complete setup, web trader is reliable for routine management, and the mobile app suits monitoring. No MT4/MT5/TradingView integration. Manual execution required under Blueberry rules — no automation hooks or copy trading features. Blueberry earned **7.5/10** for platforms.",
-    "payouts": "Profit splits reach up to **90%**. Payout cycles require five profitable trading days with at least $200 net profit each. Withdrawals range from **$500 to $2,500** per cycle. A $2,100 account buffer must be maintained after each payout. Blueberry processes withdrawals through **RiseWorks** (bank transfers) and **USDT on TRC-20**. KYC verification through Veriff is required before the first withdrawal. Blueberry earned **8/10** for payouts.",
-    "support": "Blueberry Futures has 7-day customer support availability with ticketing and chat. The Discord server provides announcements, promotions, and community discussion. Educational tools sit inside the dashboard — the monthly subscription provides extended analytics, heatmaps, and journaling features. No formal course or training library is available. Blueberry earned **7/10** for support.",
-    "trust": "Blueberry Futures is backed by **Blueberry Markets**, an **ASIC-regulated** CFD brokerage, and supported by the established **Blueberry Funded** prop firm. The wider ecosystem includes over 15,000 active traders and $3.6 million in total payouts. Country restrictions cover Australia, Russia, Belarus, Iran, Myanmar, Sudan, Zimbabwe, and sanctioned Ukrainian regions. As a newly launched futures product, it does not yet have Trustpilot history but benefits heavily from its parent brand infrastructure. Blueberry earned **9.5/10** for trust."
+    "challenges": "custom",
+    "spreads": "custom",
+    "markets": "custom",
+    "platforms": "custom",
+    "payouts": "custom",
+    "support": "custom",
+    "trust": "custom"
   },
   "verdictBlocks": [
     {
       "heading": "Blueberry Futures Final Score",
-      "body": "Blueberry Futures lands at 85/100 overall, helped by strong challenges, tight pricing, deep CME markets, and one of the best trust profiles in the futures prop space. It suits traders who already understand futures behaviour and want a clean, rules-based trading environment backed by a regulated brokerage, rather than a flashy start-up. Ascent is a good fit if you like EOD-style risk with room to hold through noise, while Accelerated appeals more to disciplined intraday traders who are comfortable protecting equity highs.\n\nIt will not suit everyone — grid traders, heavy martingale users, and anyone who depends on automation or overnight swing holding will likely find the rules too restrictive. If you want the broadest platform choice, or you rely heavily on built-in news and research, you may prefer a different setup like FXIFY Futures or FundedNext Futures.\n\nBut for futures traders who value clear rules, consistently fast execution, and strong CFD broker backing, it's one of the best futures prop firms."
+      "body": "Blueberry Futures lands at 85/100 overall, helped by strong challenges, competitive pricing, CME market access including micro crypto, and the operational backing of the Blueberry brand family. Blueberry Futures is an educational and evaluation platform, not a broker. It suits traders who already understand futures behaviour and want a clean, rules-based simulated trading environment.\n\nAscent is a good fit if you like EOD-style risk with room to hold through noise, while Accelerated appeals more to disciplined intraday traders who are comfortable protecting equity highs. Account sizes range from $25K to $150K on both programs, with fees starting at $129 (Accelerated) and $139 (Ascent). No activation fees are charged.\n\nTraders become eligible for live-account review after 7 successful payout cycles or $28,000 in total withdrawals from one funded account. If approved, the live funded amount equals the original plan's max drawdown: $25K → $1,000, $50K → $2,000, $100K → $3,000, $150K → $4,500. Eligibility does not guarantee approval."
     }
   ],
   "faq": [
     {
       "q": "Is Blueberry trusted?",
-      "a": "Yes, Blueberry is considered a trusted brand because it is a broker-backed prop firm, connected to Blueberry Markets, a regulated CFD brokerage, and supported by the established Blueberry Funded prop firm. While Blueberry Futures itself is new and still building independent reviews, the wider ecosystem provides a stable operational base, treasury management, and verified payout history."
+      "a": "Blueberry Futures is part of the Blueberry family of brands, which includes Blueberry Markets and Blueberry Funded. However, Blueberry Futures itself is an educational and evaluation platform, not a broker. While it benefits from the wider ecosystem's operational infrastructure, the futures program should not be confused with the regulated brokerage entity. Blueberry Futures is still building independent review history."
     },
     {
-      "q": "Is Blueberry Futures commission free?",
-      "a": "Yes, Blueberry Futures is effectively commission free because all execution costs are already built into the BlackArrow environment. You do not pay separate routing fees, platform charges, or per-contract commissions during evaluations or funded accounts. You only pay the initial challenge fee, optional add-ons, or a reset if you breach the drawdown."
+      "q": "What are the trading costs on Blueberry Futures?",
+      "a": "Level 1 CME data is included with all accounts, and no activation fees are charged. Level 2/DOM data is optional at $61/month for funded traders. The challenge fee covers full access to BlackArrow and all supported markets. Payout withdrawals are processed through RiseWorks and USDT on TRC-20, with Veriff KYC required before the first payout."
+    },
+    {
+      "q": "What is the refund policy?",
+      "a": "A full refund is available only if no trade has been placed and the request is made within 14 days of purchase. After trading starts, refunds are not available."
     },
     {
       "q": "Is prop trading high risk?",
@@ -57,6 +60,7 @@
     }
   ],
   "verified": true,
+  "flagged": false,
   "methodologyVersion": "1.0",
-  "lastReviewedAt": "2026-02-27"
+  "lastReviewedAt": "2026-03-10"
 }

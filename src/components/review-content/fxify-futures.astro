@@ -16,31 +16,41 @@ const { section, fallbackBody } = Astro.props;
 
   <!-- Overview -->
   <p class="mb-4">
-    FXIFY Futures allows you to choose from two challenge types for futures trading, designed to suit different experience levels:
+    FXIFY Futures offers three programs for simulated futures trading, designed to suit different experience levels and preferences. All accounts operate in a <strong>simulated trading environment</strong> designed to mirror futures market conditions.
   </p>
 
   <div class="space-y-3 mb-8">
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Starter Plan</p>
-      <p>Ideal if you prefer a structured futures evaluation with a lower entry fee and a step-by-step growth process.</p>
+      <p class="font-bold text-slate-900 mb-1">Standard Plan</p>
+      <p>A cost-effective one-step evaluation with structured risk management and a step-by-step growth process. Monthly subscription from <strong>$89</strong>.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Expert Plan</p>
-      <p>Best for experienced traders wanting higher trading limits, no activation fees, and faster payouts with a higher profit split.</p>
+      <p>Higher position limits, no activation fee, and a higher default profit split for experienced traders. Monthly subscription from <strong>$149</strong>.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Straight to Sim Live Plan</p>
+      <p>Provides a direct simulated funded account without an evaluation phase. Skip the challenge and start trading immediately.</p>
     </div>
   </div>
 
+  <div class="rounded-xl border-l-4 border-amber-400 bg-amber-50/60 px-5 py-4 mb-8">
+    <p class="text-sm text-slate-700 leading-relaxed">
+      <strong>Subscription billing:</strong> Standard and Expert evaluations are <strong>monthly subscriptions</strong> that rebill until passed or cancelled. If you cancel your subscription, it remains active until the end of the billing cycle.
+    </p>
+  </div>
+
   <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- STARTER PLAN                                                     -->
+  <!-- STANDARD PLAN                                                    -->
   <!-- ═══════════════════════════════════════════════════════════════ -->
   <div class="mb-10">
     <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
       <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">1</span>
-      Starter Plan
+      Standard Plan
     </h3>
 
     <p class="mb-3">
-      The Starter Plan is perfect if you're looking for a cost-effective challenge with structured risk management. You'll follow a <strong>one-step evaluation</strong>, with no time limits and a minimum of <strong>four trading days</strong> required to pass. Once you meet the objectives, you can get funded with up to $150,000 in simulated capital.
+      The Standard Plan is a <strong>one-step evaluation</strong> with no time limits and a minimum of <strong>four trading days</strong> required to pass. Once you meet the objectives, you can get funded with up to $150,000 in simulated capital. A <strong>$125 activation fee</strong> applies when transitioning to a funded account.
     </p>
 
     <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-5">
@@ -49,20 +59,20 @@ const { section, fallbackBody } = Astro.props;
         <p class="text-sm font-bold text-teal-600">80% (up to 90%)</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Loss Limit</p>
+        <p class="text-sm font-bold text-slate-800">2%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Loss</p>
+        <p class="text-sm font-bold text-slate-800">4%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Trading Days</p>
         <p class="text-sm font-bold text-slate-800">4 days</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Time Limit</p>
-        <p class="text-sm font-bold text-teal-600">Unlimited</p>
-      </div>
-      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Position Size</p>
-        <p class="text-sm font-bold text-slate-800">Up to 12 contracts</p>
-      </div>
-      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">First Payout</p>
-        <p class="text-sm font-bold text-slate-800">After 14 days</p>
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Consistency Rule</p>
+        <p class="text-sm font-bold text-slate-800">30%</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Activation Fee</p>
@@ -130,7 +140,7 @@ const { section, fallbackBody } = Astro.props;
     </h3>
 
     <p class="mb-3">
-      The Expert Plan is a better option if you're looking for higher position limits, faster payouts, and <strong>no activation fees</strong>. This plan offers more flexibility, allowing you to scale up quickly while benefiting from higher profit splits. With a minimum of <strong>three trading days</strong>, you can pass the evaluation and start earning from your funded account faster.
+      The Expert Plan offers higher position limits, <strong>no activation fee</strong>, and a higher default profit split of <strong>90%</strong> (upgradeable to 100% with the add-on). With a minimum of <strong>three trading days</strong>, you can pass the one-step evaluation faster. The <strong>daily loss limit is 3%</strong> and the <strong>max loss varies by account size</strong>.
     </p>
 
     <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-5">
@@ -139,20 +149,20 @@ const { section, fallbackBody } = Astro.props;
         <p class="text-sm font-bold text-teal-600">90% (up to 100%)</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Loss Limit</p>
+        <p class="text-sm font-bold text-slate-800">3%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Loss</p>
+        <p class="text-sm font-bold text-slate-800">4&ndash;5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Trading Days</p>
         <p class="text-sm font-bold text-slate-800">3 days</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Time Limit</p>
-        <p class="text-sm font-bold text-teal-600">Unlimited</p>
-      </div>
-      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Position Size</p>
-        <p class="text-sm font-bold text-slate-800">Up to 15 contracts</p>
-      </div>
-      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">First Payout</p>
-        <p class="text-sm font-bold text-slate-800">After 14 days</p>
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Consistency Rule</p>
+        <p class="text-sm font-bold text-slate-800">40% (funded)</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Activation Fee</p>
@@ -168,7 +178,7 @@ const { section, fallbackBody } = Astro.props;
             <th class="px-3 py-3 text-right">Monthly Fee</th>
             <th class="px-3 py-3 text-right">Profit Target</th>
             <th class="px-3 py-3 text-right">Daily Loss (3%)</th>
-            <th class="px-3 py-3 text-right">Max Loss (4&ndash;5%)</th>
+            <th class="px-3 py-3 text-right">Max Loss</th>
             <th class="px-3 py-3 text-center">Max Contracts</th>
             <th class="px-3 py-3 text-right">Activation Fee</th>
             <th class="px-3 py-3 text-right">Reset Fee</th>
@@ -180,7 +190,7 @@ const { section, fallbackBody } = Astro.props;
             <td class="px-3 py-3 text-right text-slate-900">$149</td>
             <td class="px-3 py-3 text-right text-slate-700">$3,500</td>
             <td class="px-3 py-3 text-right text-slate-700">$1,500</td>
-            <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$2,500 (5%)</td>
             <td class="px-3 py-3 text-center text-slate-900">5</td>
             <td class="px-3 py-3 text-right font-semibold text-teal-600">$0</td>
             <td class="px-3 py-3 text-right text-slate-700">$125</td>
@@ -190,7 +200,7 @@ const { section, fallbackBody } = Astro.props;
             <td class="px-3 py-3 text-right text-slate-900">$249</td>
             <td class="px-3 py-3 text-right text-slate-700">$7,000</td>
             <td class="px-3 py-3 text-right text-slate-700">$3,000</td>
-            <td class="px-3 py-3 text-right text-slate-700">$4,500</td>
+            <td class="px-3 py-3 text-right text-slate-700">$4,500 (4.5%)</td>
             <td class="px-3 py-3 text-center text-slate-900">10</td>
             <td class="px-3 py-3 text-right font-semibold text-teal-600">$0</td>
             <td class="px-3 py-3 text-right text-slate-700">$225</td>
@@ -200,7 +210,7 @@ const { section, fallbackBody } = Astro.props;
             <td class="px-3 py-3 text-right text-slate-900">$349</td>
             <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
             <td class="px-3 py-3 text-right text-slate-700">$4,500</td>
-            <td class="px-3 py-3 text-right text-slate-700">$6,000</td>
+            <td class="px-3 py-3 text-right text-slate-700">$6,000 (4%)</td>
             <td class="px-3 py-3 text-center text-slate-900">15</td>
             <td class="px-3 py-3 text-right font-semibold text-teal-600">$0</td>
             <td class="px-3 py-3 text-right text-slate-700">$299</td>
@@ -210,16 +220,57 @@ const { section, fallbackBody } = Astro.props;
     </div>
   </div>
 
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- STRAIGHT TO SIM LIVE PLAN                                        -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">3</span>
+      Straight to Sim Live Plan
+    </h3>
+
+    <p class="mb-3">
+      The Straight to Sim Live Plan provides a <strong>direct simulated funded account</strong> without an evaluation. You skip the challenge entirely and begin trading immediately. The daily loss limit is <strong>2.5%</strong>, with max loss ranging from <strong>3.75% to 4%</strong> depending on account size. The <strong>consistency rule is 20%</strong> and there is <strong>no activation fee</strong>.
+    </p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-5">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
+        <p class="text-sm font-bold text-teal-600">90% (up to 100%)</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Loss Limit</p>
+        <p class="text-sm font-bold text-slate-800">2.5%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Loss</p>
+        <p class="text-sm font-bold text-slate-800">3.75&ndash;4%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Evaluation</p>
+        <p class="text-sm font-bold text-teal-600">None</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Consistency Rule</p>
+        <p class="text-sm font-bold text-slate-800">20%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Activation Fee</p>
+        <p class="text-sm font-bold text-teal-600">$0</p>
+      </div>
+    </div>
+  </div>
+
   <!-- ─── Add-Ons ─────────────────────────────────────────────────── -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Futures Account Add-Ons</h3>
   <p class="mb-4">
-    FXIFY Futures offers two optional upgrades at checkout to give you more flexibility and maximize your earnings:
+    FXIFY Futures offers optional upgrades at checkout to give you more flexibility and maximize your earnings:
   </p>
 
   <div class="space-y-3 mb-8">
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Profit Split Increase <span class="text-xs font-normal text-slate-500">(+10% of account price)</span></p>
-      <p>Boosts your share by 10%, raising Starter accounts from 80% to 90% and Expert accounts from 90% to 100%.</p>
+      <p>Boosts your share by 10%, raising Standard accounts from 80% to 90%, and Expert/Sim Live accounts from 90% to 100%.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Remove Daily Drawdown <span class="text-xs font-normal text-slate-500">(+10% of account price &mdash; Expert only)</span></p>
@@ -230,7 +281,7 @@ const { section, fallbackBody } = Astro.props;
   <!-- ─── Trading Rules ───────────────────────────────────────────── -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules</h3>
   <p class="mb-4">
-    FXIFY Futures gives you the freedom to trade futures on your own terms, but you'll need to follow a few key rules to keep your account active and eligible for payouts.
+    FXIFY Futures provides simulated futures trading programs with clear rules to maintain account eligibility and payout access.
   </p>
 
   <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
@@ -248,19 +299,19 @@ const { section, fallbackBody } = Astro.props;
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-medium text-slate-900">Consistency Rule</td>
-          <td class="px-4 py-3 text-center"><span class="text-slate-600">30% (Starter) / 40% (Expert) single-day cap</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-slate-600">30% (Standard) / 40% (Expert, funded) / 20% (Sim Live)</span></td>
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-900">News Trading</td>
-          <td class="px-4 py-3 text-center"><span class="text-teal-600 font-bold">&#10003;</span> <span class="text-slate-600">Allowed (manage risk accordingly)</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-teal-600 font-bold">&#10003;</span> <span class="text-slate-600">Allowed (high-leverage news strategies prohibited)</span></td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-medium text-slate-900">Expert Advisors (EAs)</td>
-          <td class="px-4 py-3 text-center"><span class="text-teal-600 font-bold">&#10003;</span> <span class="text-slate-600">Permitted (must follow FXIFY rules)</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span> <span class="text-slate-600">Not permitted</span></td>
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-900">Copy Trading</td>
-          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span> <span class="text-slate-600">Not allowed</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-slate-600">Own accounts only (must be approved); third-party prohibited</span></td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-medium text-slate-900">HFT / Latency Arbitrage</td>
@@ -271,22 +322,37 @@ const { section, fallbackBody } = Astro.props;
           <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span> <span class="text-slate-600">No trading within 2% of price limit</span></td>
         </tr>
         <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">Position Closing</td>
+          <td class="px-4 py-3 text-center"><span class="text-slate-600">All positions closed by 4:59 PM ET daily</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">Market Hours</td>
+          <td class="px-4 py-3 text-center"><span class="text-slate-600">Close Friday 5 PM ET, reopen Sunday 6 PM ET</span></td>
+        </tr>
+        <tr class="bg-slate-50">
           <td class="px-4 py-3 font-medium text-slate-900">Funded Account Reset</td>
           <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span> <span class="text-slate-600">Funded accounts cannot be reset</span></td>
         </tr>
         <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-900">Inactivity Penalty</td>
-          <td class="px-4 py-3 text-center"><span class="text-teal-600 font-bold">&#10003;</span> <span class="text-slate-600">No penalty</span></td>
+          <td class="px-4 py-3 font-medium text-slate-900">Account Limit</td>
+          <td class="px-4 py-3 text-center"><span class="text-slate-600">Up to 5 eval/funded + 1 Sim Live account</span></td>
         </tr>
       </tbody>
     </table>
+  </div>
+
+  <!-- Simulated environment callout -->
+  <div class="rounded-xl border-l-4 border-amber-400 bg-amber-50/60 px-5 py-4 mb-6">
+    <p class="text-sm text-slate-700 leading-relaxed">
+      <strong>Simulated environment:</strong> All FXIFY Futures accounts operate in a simulated trading environment designed to mirror futures market conditions. FXIFY Futures provides simulated futures trading programs, not brokerage services.
+    </p>
   </div>
 
   <!-- Verdict -->
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Futures Challenges &amp; Rules</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      FXIFY Futures offers a straightforward path to funded futures trading with flexible challenges, high profit splits, and no time limits. The clear risk rules and fair trading conditions make it one of the best futures prop firms if you can trade consistently and stay within the guidelines.
+      FXIFY Futures offers three distinct programs &mdash; Standard, Expert, and Straight to Sim Live &mdash; with no time limits on evaluations, clear risk rules, and flexible profit splits. The Straight to Sim Live option is particularly appealing for traders who want to skip the evaluation entirely. Daily loss limits and max loss vary by plan and account size, so review the specifics for your chosen program.
     </p>
   </div>
 
@@ -385,7 +451,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Futures Markets &amp; Pricing</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      FXIFY Futures offers transparent, competitive pricing that aligns with industry standards. With lower fees on index futures and cost-effective micro contract pricing, it stands out as a strong alternative to Topstep and other leading prop firms. Whether you're trading equities, commodities, or forex futures, FXIFY provides clear, predictable costs without hidden fees.
+      FXIFY Futures offers transparent, competitive pricing that aligns with industry standards. With lower fees on index futures and cost-effective micro contract pricing, it stands out as a strong alternative to Topstep and other leading prop firms. FXIFY Futures scored 9/10 for spreads and pricing.
     </p>
   </div>
 
@@ -458,27 +524,23 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-6">
-    FXIFY Futures operates exclusively on its proprietary <strong>FFX Platform</strong>, a web-based trading system designed for futures traders. Unlike other prop firms that support NinjaTrader, Rithmic, or Tradovate, FXIFY does not currently offer third-party platform integrations.
+    FXIFY Futures supports three trading platforms: <strong>Tradovate</strong>, <strong>TradingView</strong> (via Tradovate integration), and <strong>NinjaTrader</strong>.
   </p>
 
   <!-- Platform Features -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">FFX Platform Features</h3>
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Supported Platforms</h3>
   <div class="space-y-3 mb-8">
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">TradingView-Powered Charting</p>
-      <p>Advanced indicators and drawing tools powered by TradingView's charting engine.</p>
+      <p class="font-bold text-slate-900 mb-1">Tradovate</p>
+      <p>Web-based and desktop futures trading platform with real-time CME data, bracket orders, and advanced charting tools.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Real-Time CME Data Feed</p>
-      <p>Accurate price updates and execution directly from CME markets.</p>
+      <p class="font-bold text-slate-900 mb-1">TradingView</p>
+      <p>Connected via Tradovate integration, providing TradingView's advanced charting engine with direct order execution for futures trading.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Simplified Order Management</p>
-      <p>Bracket orders and drag-and-drop controls for intuitive trade execution.</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Automatic Risk Management</p>
-      <p>Automatic contract rollovers and daily position closures built into the platform.</p>
+      <p class="font-bold text-slate-900 mb-1">NinjaTrader</p>
+      <p>Professional-grade futures trading platform with advanced charting, market analysis tools, and automated strategy capabilities.</p>
     </div>
   </div>
 
@@ -496,9 +558,9 @@ const { section, fallbackBody } = Astro.props;
   </div>
 
   <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
-    <p class="text-sm font-bold text-amber-900 mb-1">No Third-Party Platform Support</p>
+    <p class="text-sm font-bold text-amber-900 mb-1">Expert Advisors Not Supported</p>
     <p class="text-sm text-amber-800">
-      FXIFY Futures does not currently support NinjaTrader, Rithmic, or Tradovate. EAs are not currently supported on the FFX Platform, though FXIFY has indicated EA compatibility could be introduced in the future.
+      Expert Advisors (EAs) are not permitted on FXIFY Futures. Automated trading strategies through EAs are not allowed on any of the supported platforms.
     </p>
   </div>
 
@@ -506,7 +568,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trading Platforms</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      While the FFX Platform is built specifically for FXIFY traders and includes essential features like TradingView charting and real-time CME data, it lacks compatibility with popular futures platforms like NinjaTrader and Rithmic. Traders who prefer a web-based platform with built-in charting and execution tools will find it sufficient, but those looking for third-party integrations or EA support may find the options limited.
+      FXIFY Futures now supports Tradovate, TradingView, and NinjaTrader, giving traders access to established futures trading platforms with real-time CME data. The main limitation is the prohibition of Expert Advisors. FXIFY Futures scored 7/10 for platforms.
     </p>
   </div>
 
@@ -520,7 +582,7 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-6">
-    FXIFY Futures offers structured and transparent payments for both challenge fees and profit withdrawals. Traders must complete <strong>KYC verification</strong> before receiving payouts, and all transactions are processed through <strong>Riseworks</strong> for security.
+    FXIFY Futures offers structured and transparent payments for both challenge fees and profit withdrawals. Traders must complete <strong>KYC verification</strong> before receiving payouts. Payouts are processed through <strong>Rise</strong> before withdrawal via bank transfer or cryptocurrency.
   </p>
 
   <!-- Payment Methods -->
@@ -537,19 +599,19 @@ const { section, fallbackBody } = Astro.props;
     </div>
   </div>
   <p class="mb-8 text-xs text-slate-500">
-    Subscriptions are billed monthly until you pass the evaluation. If you cancel your subscription, it remains active until the end of the billing cycle.
+    Standard and Expert evaluations are monthly subscriptions that rebill until passed or cancelled. If you cancel your subscription, it remains active until the end of the billing cycle.
   </p>
 
   <!-- Profit Splits -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Profit Splits &amp; Payout Policy</h3>
   <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Starter Split</p>
-      <p class="text-sm font-bold text-teal-600">80% &ndash; 90%</p>
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Standard Split</p>
+      <p class="text-sm font-bold text-slate-800">80% (90% w/ add-on)</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Expert Split</p>
-      <p class="text-sm font-bold text-teal-600">90% &ndash; 100%</p>
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Expert / Sim Live Split</p>
+      <p class="text-sm font-bold text-teal-600">90% (100% w/ add-on)</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
       <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Payout Frequency</p>
@@ -557,14 +619,62 @@ const { section, fallbackBody } = Astro.props;
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
       <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Processor</p>
-      <p class="text-sm font-bold text-slate-800">Riseworks</p>
+      <p class="text-sm font-bold text-slate-800">Rise</p>
+    </div>
+  </div>
+
+  <p class="mb-6">
+    Payouts can be requested every <strong>14 days</strong> from the first funded trade. All payouts are processed through <strong>Rise</strong> before withdrawal via bank transfer or cryptocurrency.
+  </p>
+
+  <!-- Payout Caps -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payout Caps</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Size</th>
+          <th class="px-4 py-3 text-center">Standard / Expert Cap</th>
+          <th class="px-4 py-3 text-center">Sim Live Cap</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$3,000</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$10,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$6,000</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$150,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$15,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$12,000&ndash;$15,000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Minimum Payouts -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Minimum Payout Requirements</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Standard &amp; Expert</p>
+      <p>Minimum payout of <strong>$100</strong> above the buffer zone.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Straight to Sim Live</p>
+      <p>Minimum payout of <strong>3% of account balance</strong>.</p>
     </div>
   </div>
 
   <!-- Buffer Zone -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Buffer Zone Requirements</h3>
   <p class="mb-4">
-    FXIFY Futures enforces a <strong>buffer zone</strong>, meaning a portion of profits must remain in the account before a withdrawal. The buffer zone also serves as the new max drawdown limit after each payout. The minimum required profit above the buffer zone to request a withdrawal is <strong>$100</strong>.
+    FXIFY Futures enforces a <strong>buffer zone</strong>, meaning a portion of profits must remain in the account before a withdrawal. The buffer zone also serves as the new max drawdown limit after each payout.
   </p>
 
   <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
@@ -572,7 +682,7 @@ const { section, fallbackBody } = Astro.props;
       <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
         <tr>
           <th class="px-4 py-3 text-left">Account Size</th>
-          <th class="px-4 py-3 text-center">Starter Buffer Zone</th>
+          <th class="px-4 py-3 text-center">Standard Buffer Zone</th>
           <th class="px-4 py-3 text-center">Expert Buffer Zone</th>
         </tr>
       </thead>
@@ -636,9 +746,9 @@ const { section, fallbackBody } = Astro.props;
   </div>
 
   <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
-    <p class="text-sm font-bold text-amber-900 mb-1">Buffer Zone Exception</p>
+    <p class="text-sm font-bold text-amber-900 mb-1">Buffer Zone Withdrawal Exception</p>
     <p class="text-sm text-amber-800">
-      Traders are allowed one exception to withdraw while still within the buffer zone. Starter accounts can withdraw 60% of profits within the buffer, while Expert accounts can withdraw 70%. If you choose to withdraw all available profits, your account will be closed permanently.
+      Standard accounts can withdraw <strong>60%</strong> of profits within the buffer zone once. Expert accounts can withdraw <strong>70%</strong>. If you choose to withdraw all available profits, your account will be closed permanently.
     </p>
   </div>
 
@@ -646,7 +756,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Payments &amp; Profit Shares</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      FXIFY Futures offers structured and progressive payouts, balancing risk management with trader profitability. The 14-day payout cycle and buffer zone system may require patience, but the scaling withdrawal model rewards consistency. While withdrawals are restricted at first, traders who maintain steady performance unlock full access to their earnings over time.
+      FXIFY Futures offers structured and progressive payouts with payout caps per account size, balancing risk management with trader profitability. The 14-day payout cycle and buffer zone system may require patience, but the scaling withdrawal model rewards consistency. Payouts are processed through Rise via bank transfer or cryptocurrency. FXIFY Futures scored 9/10 for payouts.
     </p>
   </div>
 
@@ -706,6 +816,13 @@ const { section, fallbackBody } = Astro.props;
     FXIFY Futures has an active community presence through Discord, where traders can engage in discussions and access payout proof channels. The firm is linked to <strong>FXIFY</strong> (CFD prop firm) and <strong>FXPIG</strong> (regulated forex broker), which adds credibility.
   </p>
 
+  <!-- Simulated environment callout -->
+  <div class="rounded-xl border-l-4 border-amber-400 bg-amber-50/60 px-5 py-4 mb-6">
+    <p class="text-sm text-slate-700 leading-relaxed">
+      <strong>About FXIFY Futures:</strong> FXIFY Futures provides simulated futures trading programs, not brokerage services. All accounts operate in a simulated trading environment designed to mirror futures market conditions.
+    </p>
+  </div>
+
   <!-- Trustpilot -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">FXIFY Futures TrustPilot Score</h3>
 
@@ -715,7 +832,7 @@ const { section, fallbackBody } = Astro.props;
       <p class="text-xs text-slate-500 font-semibold">Mixed (4 reviews)</p>
     </div>
     <div>
-      <p class="text-sm text-slate-700">As a new firm, FXIFY Futures has received mixed reviews with an average score of <strong>3.9/5 stars</strong> based on only 4 reviews, making it too early to gauge a strong reputation. Some traders praise the payout process and platform, while others raise concerns about country restrictions and customer support response times.</p>
+      <p class="text-sm text-slate-700">As a newer firm, FXIFY Futures has received mixed reviews with an average score of <strong>3.9/5 stars</strong> based on only 4 reviews, making it too early to gauge a strong reputation. Some traders praise the payout process and platform, while others raise concerns about country restrictions and customer support response times.</p>
     </div>
   </div>
 
@@ -744,7 +861,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trust &amp; Community</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      FXIFY Futures is still building its reputation. Its association with FXIFY (CFD prop firm) and FXPIG (brokerage) adds credibility, but traders should be aware of policy restrictions and limited customer support responsiveness before committing. The active Discord community with payout proof helps build trust, though the Trustpilot profile is still in its early stages.
+      FXIFY Futures is still building its reputation. Its association with FXIFY (CFD prop firm) and FXPIG (brokerage) adds credibility, but traders should be aware of policy restrictions and limited customer support responsiveness before committing. The active Discord community with payout proof helps build trust, though the Trustpilot profile is still in its early stages. FXIFY Futures scored 9/10 for trust.
     </p>
   </div>
 

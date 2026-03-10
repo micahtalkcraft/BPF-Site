@@ -6,35 +6,38 @@
   "foundedYear": 2009,
   "hqCountry": "AU",
   "evaluation": {
-    "types": ["1-step", "2-step"],
+    "types": ["1-step", "2-step", "other"],
     "profitTargets": { "phase1": 10, "phase2": 8 },
     "dailyDrawdown": 5,
     "maxDrawdown": 10,
     "minTradingDays": 3,
-    "scalingPlan": false
+    "scalingPlan": false,
+    "notes": "One Phase (1-Step): 10% profit target, 4% daily drawdown, 8% max drawdown, 5 min trading days. Two Phase (2-Step): 10% Phase 1 and 8% Phase 2 targets, 5% daily drawdown, 10% max drawdown, 3 min trading days per step. Day Trader: fixed $10,000 balance, stakes from $5 to $500, 1/2/4/8-hour sessions with 2x/5x/10x multipliers. All challenges operate in a simulated environment. Standard profit split is 80%; up to 90% only with the paid profit split add-on on One Phase and Two Phase. One Phase and Two Phase account sizes range from $5,000 to $200,000. Combined funded account limit: $600,000."
   },
   "pricing": {
     "challengeFees": [
-      { "accountSize": 10000, "fee": 119, "model": "one-step" },
-      { "accountSize": 25000, "fee": 259, "model": "one-step" },
-      { "accountSize": 50000, "fee": 429, "model": "one-step" },
-      { "accountSize": 100000, "fee": 659, "model": "one-step" },
-      { "accountSize": 200000, "fee": 1299, "model": "one-step" },
-      { "accountSize": 10000, "fee": 99, "model": "two-step" },
-      { "accountSize": 25000, "fee": 219, "model": "two-step" },
-      { "accountSize": 50000, "fee": 389, "model": "two-step" },
-      { "accountSize": 100000, "fee": 599, "model": "two-step" },
-      { "accountSize": 200000, "fee": 1199, "model": "two-step" },
-      { "accountSize": 10000, "fee": 5, "model": "day-trader", "label": "Day Trader (stake)" },
-      { "accountSize": 10000, "fee": 250, "model": "day-trader", "label": "Day Trader (max stake)" }
+      { "accountSize": 5000, "fee": 69, "model": "one-phase", "label": "One Phase" },
+      { "accountSize": 10000, "fee": 119, "model": "one-phase", "label": "One Phase" },
+      { "accountSize": 25000, "fee": 259, "model": "one-phase", "label": "One Phase" },
+      { "accountSize": 50000, "fee": 429, "model": "one-phase", "label": "One Phase" },
+      { "accountSize": 100000, "fee": 659, "model": "one-phase", "label": "One Phase" },
+      { "accountSize": 200000, "fee": 1299, "model": "one-phase", "label": "One Phase" },
+      { "accountSize": 5000, "fee": 59, "model": "two-phase", "label": "Two Phase" },
+      { "accountSize": 10000, "fee": 99, "model": "two-phase", "label": "Two Phase" },
+      { "accountSize": 25000, "fee": 219, "model": "two-phase", "label": "Two Phase" },
+      { "accountSize": 50000, "fee": 389, "model": "two-phase", "label": "Two Phase" },
+      { "accountSize": 100000, "fee": 599, "model": "two-phase", "label": "Two Phase" },
+      { "accountSize": 200000, "fee": 1199, "model": "two-phase", "label": "Two Phase" },
+      { "accountSize": 10000, "fee": 5, "model": "day-trader", "label": "Day Trader (min stake)" },
+      { "accountSize": 10000, "fee": 500, "model": "day-trader", "label": "Day Trader (max stake)" }
     ],
     "resetFee": null,
-    "refundPolicy": "No challenge fee refunds offered"
+    "refundPolicy": null
   },
   "payouts": {
-    "splitMax": 90,
+    "splitMax": 80,
     "schedule": "14-day cycle",
-    "processingTime": "24-48 hours",
+    "processingTime": "2 business days",
     "firstPayoutDays": 14,
     "methods": ["Bank Transfer", "Crypto (USDT TRC20/ERC20)", "Crypto (BTC)"]
   },
@@ -43,12 +46,12 @@
     "weekendHolding": true,
     "copyTrading": false,
     "expertAdvisors": true,
-    "consistencyRule": "Single instrument profit cap of 75% on Day Trader challenge. One Step has a 5% payout cap for the first three payouts.",
-    "notes": "News restriction: no trading within 10 minutes of major news during payout stage (5 minutes for Day Trader). EAs allowed on One Step and Two Step only, not Day Trader. Position limits: 40 forex lots, 20 index lots, 10 commodity lots. Max 10 open trades on standard challenges. Prohibited: martingale, grid trading, 30-second scalping, tick scalping, latency arbitrage, hedging across accounts. Combined funded account limit: $600,000."
+    "consistencyRule": "Single instrument profit cap of 75% on Day Trader. One Phase profit cap: 5% of initial balance on all payouts. Two Phase profit cap: 10% of initial balance on all payouts (accounts before Feb 11 exempt). Payout-phase daily profit distribution: One Phase 30%, Two Phase 35% (older accounts: One Phase 25%, Two Phase 30%).",
+    "notes": "News restriction: trading restricted 10 minutes before and after high-impact events; breach is a soft breach (profits removed, account stays active). EAs and indicators allowed, but prohibited strategies include martingale, hedging across accounts, grid trading, tick trading, copy trading with other traders, latency arbitrage, reverse arbitrage, gap trading, and account management. Copy trading between own accounts allowed if all under same email. Weekend and swing trading allowed; 24/7 trading supported. Max 10 simultaneous trades. Symbol exposure limits: Forex 100 lots, Metals 50 lots (Silver 10 lots), Oil 50 lots, Indices 25 lots (except JPN225), Stocks 50 lots, BTCUSD 5 lots. Accounts terminated after 30 consecutive days with no trades. Traders must access account from same IP address; multiple IPs may lead to restrictions. When account is breached, platform is automatically restricted and new positions cannot be opened. Trading paused while payout request is under review. One Phase payout stage: 7 min trading days. Two Phase payout stage: 5 min trading days. Trade must remain open at least 60 seconds to count as a trading day. Payout fees: crypto 1%, bank wire $50 flat. Partial payouts not supported. Minimum payout $100 after profit split for One Phase and Two Phase; if under $100, request declined and amount stays in account. Combined funded account limit: $600,000. All trading conducted in simulated environment. Challenge website operated by Eightcap International Ltd in Seychelles; challenge products are outside regulated brokerage or investment services."
   },
   "markets": {
     "platforms": ["MT4", "MT5", "TradeLocker"],
-    "instruments": "Forex, Indices, Commodities, Cryptocurrency, ETFs, US Stocks (Day Trader only)"
+    "instruments": "Forex, Indices, Commodities, Cryptocurrency"
   },
   "trust": {
     "trustpilotRating": 4.0,
@@ -59,7 +62,7 @@
   "links": { "website": "https://challenges.eightcap.com?campaign_id=1&ref_id=622" },
   "media": { "logo": "/images/logos/eightcap-logo-1.png" },
   "availability": {
-    "restrictedCountries": ["US"]
+    "restrictedCountries": []
   },
   "support": {
     "liveChat": true,
@@ -70,7 +73,7 @@
     "discountCode": "PROPFIRMS20",
     "discountPercent": 20
   },
-  "lastVerifiedAt": "2026-02-24",
-  "lastUpdatedAt": "2026-02-24",
+  "lastVerifiedAt": "2026-03-10",
+  "lastUpdatedAt": "2026-03-10",
   "dataSources": ["https://www.eightcap.com/en/trading/prop-trading/"]
 }

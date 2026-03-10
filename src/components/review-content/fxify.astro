@@ -1,5 +1,5 @@
 ---
-// Static editorial content for FXIFY (CFD)
+// Static editorial content for FXIFY (CFD + Crypto)
 // Supports multiple sections via the `section` prop
 interface Props {
   section: string;
@@ -16,11 +16,11 @@ const { section, fallbackBody } = Astro.props;
 
   <!-- Overview -->
   <p class="mb-4">
-    FXIFY offers an excellent selection of challenge types, including <strong>Instant</strong>, <strong>Lightning</strong>, <strong>One Step</strong>, <strong>Two Step</strong>, and <strong>Three Step</strong> evaluation processes. Each type has its own requirements in terms of evaluation phases, account size, fees, and risk parameters.
+    FXIFY now offers seven programme types — <strong>Instant Funding</strong>, <strong>Lightning</strong>, <strong>One Phase</strong>, <strong>Two Phase</strong>, and <strong>Three Phase</strong> for CFD trading, plus the new <strong>Crypto Instant Funding</strong> and <strong>Crypto Standard (1 Step)</strong> for crypto-only trading. Each type has its own requirements in terms of evaluation phases, account size, fees, and risk parameters.
   </p>
 
-  <!-- ─── Challenge Comparison Table ──────────────────────────────── -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Comparison</h3>
+  <!-- ─── CFD Challenge Comparison Table ──────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">CFD Challenge Comparison</h3>
   <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
     <table class="w-full text-sm whitespace-nowrap">
       <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
@@ -135,6 +135,103 @@ const { section, fallbackBody } = Astro.props;
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- CRYPTO PROGRAMMES                                               -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Crypto Programmes</h3>
+  <p class="mb-4">
+    FXIFY has added two crypto-only funding paths built specifically for crypto volatility: <strong>Crypto Instant Funding</strong> and <strong>Crypto Standard (1 Step)</strong>. These programmes feature <strong>80+ crypto assets</strong>, up to <strong>100% performance split</strong> on eligible plans, and crypto-specific rules that differ from the main CFD programmes.
+  </p>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-3 py-3 text-left">Feature</th>
+          <th class="px-3 py-3 text-center">Crypto Instant Funding</th>
+          <th class="px-3 py-3 text-center">Crypto Standard (1 Step)</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-medium text-slate-900">Evaluation</td>
+          <td class="px-3 py-3 text-center text-emerald-600 font-semibold">None</td>
+          <td class="px-3 py-3 text-center">1 Step</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-medium text-slate-900">Profit Target</td>
+          <td class="px-3 py-3 text-center">&mdash;</td>
+          <td class="px-3 py-3 text-center">9%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-medium text-slate-900">Daily Drawdown</td>
+          <td class="px-3 py-3 text-center">3%</td>
+          <td class="px-3 py-3 text-center">3%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-medium text-slate-900">Max Trailing Drawdown</td>
+          <td class="px-3 py-3 text-center">6%</td>
+          <td class="px-3 py-3 text-center">6%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-medium text-slate-900">Consistency Rule</td>
+          <td class="px-3 py-3 text-center">25%</td>
+          <td class="px-3 py-3 text-center">25%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-medium text-slate-900">Min Trading Days (Eval)</td>
+          <td class="px-3 py-3 text-center">&mdash;</td>
+          <td class="px-3 py-3 text-center">4 days</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-medium text-slate-900">Min Trading Days (Funded)</td>
+          <td class="px-3 py-3 text-center">7 days</td>
+          <td class="px-3 py-3 text-center">7 days</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-medium text-slate-900">Inactivity Limit</td>
+          <td class="px-3 py-3 text-center">7 days</td>
+          <td class="px-3 py-3 text-center">7 days</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-medium text-slate-900">Leverage (BTC/ETH/SOL)</td>
+          <td class="px-3 py-3 text-center">5:1</td>
+          <td class="px-3 py-3 text-center">5:1</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-medium text-slate-900">Leverage (Other Crypto)</td>
+          <td class="px-3 py-3 text-center">2:1</td>
+          <td class="px-3 py-3 text-center">2:1</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-medium text-slate-900">News Trading</td>
+          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span> <span class="text-xs text-slate-500">5 min buffer</span></td>
+          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span> <span class="text-xs text-slate-500">5 min buffer</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-medium text-slate-900">Min Payout</td>
+          <td class="px-3 py-3 text-center">$50</td>
+          <td class="px-3 py-3 text-center">$50</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-medium text-slate-900">Lock Upon Payout</td>
+          <td class="px-3 py-3 text-center"><span class="text-amber-600 font-semibold">Yes</span></td>
+          <td class="px-3 py-3 text-center"><span class="text-amber-600 font-semibold">Yes</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-3 py-3 font-medium text-slate-900">Performance Split</td>
+          <td class="px-3 py-3 text-center font-semibold text-emerald-600">Up to 100%</td>
+          <td class="px-3 py-3 text-center font-semibold text-emerald-600">Up to 100%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-3 py-3 font-medium text-slate-900">Starting Fee</td>
+          <td class="px-3 py-3 text-center">From $125 ($5K)</td>
+          <td class="px-3 py-3 text-center">From $59 ($5K)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
   <!-- INSTANT FUNDING                                                  -->
   <!-- ═══════════════════════════════════════════════════════════════ -->
   <div class="mb-10">
@@ -144,7 +241,7 @@ const { section, fallbackBody } = Astro.props;
     </h3>
 
     <p class="mb-3">
-      The Instant Funding Account gives you immediate access to trading capital without any evaluation process. You can start trading right away, earn up to a <strong>90% profit split</strong>, and withdraw profits every 14 days. With a fixed 8% trailing drawdown and no minimum trading days, this account is perfect if you want to skip challenges and start earning from day one.
+      The Instant Funding Account gives you immediate access to trading capital without any evaluation process. With a fixed 8% trailing drawdown and no minimum trading days, this account is designed for experienced traders who want to skip challenges. Instant Funding operates on a <strong>14-day payout cycle</strong>.
     </p>
 
     <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
@@ -209,7 +306,7 @@ const { section, fallbackBody } = Astro.props;
     </h3>
 
     <p class="mb-3">
-      The Lightning Challenge is FXIFY's fastest evaluation model, allowing traders to get funded in just <strong>7 days</strong>. With a low 5% profit target, a 3% daily loss limit, and a 4% trailing max drawdown, this challenge is ideal for confident traders who want a quick path to funding. First payout available within 7 days of reaching the funded stage.
+      The Lightning Challenge is FXIFY's fastest evaluation model, allowing traders to get funded in just <strong>7 days</strong>. With a low 5% profit target, a 3% daily loss limit, and a 4% trailing max drawdown, this challenge is ideal for confident traders who want a quick path to funding.
     </p>
 
     <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
@@ -353,7 +450,7 @@ const { section, fallbackBody } = Astro.props;
     </h3>
 
     <p class="mb-3">
-      The Two Phase Challenge is a structured evaluation that gives you two steps to prove consistency. In Phase 1, you must hit a <strong>10% profit target</strong>, and in Phase 2, you need to achieve <strong>5%</strong>, while staying within a 4% daily loss limit and a 10% trailing drawdown. Ideal if you prefer a measured approach to securing funding.
+      The Two Phase Challenge is a structured evaluation that gives you two steps to prove consistency. In Phase 1, you must hit a <strong>10% profit target</strong>, and in Phase 2, you need to achieve <strong>5%</strong>, while staying within a 4% daily loss limit and a 10% trailing drawdown.
     </p>
 
     <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
@@ -448,7 +545,7 @@ const { section, fallbackBody } = Astro.props;
     </h3>
 
     <p class="mb-3">
-      The Three Phase Challenge gives you a slower, lower-risk path to funding with three evaluation phases. You need to achieve a <strong>5% profit target in each phase</strong> while staying within a 5% daily loss limit and a <strong>10% static max drawdown</strong>. The lowest fees of any FXIFY challenge type.
+      The Three Phase Challenge gives you a slower, lower-risk path to funding with three evaluation phases. You need to achieve a <strong>5% profit target in each phase</strong> while staying within a 5% daily loss limit and a <strong>10% static max drawdown</strong>. The lowest fees of any FXIFY challenge type, starting from just <strong>$39</strong>.
     </p>
 
     <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
@@ -527,7 +624,7 @@ const { section, fallbackBody } = Astro.props;
   <!-- ─── Add-Ons ─────────────────────────────────────────────────── -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Account Add-Ons</h3>
   <p class="mb-4">
-    FXIFY allows you to customize your account with optional add-ons that enhance your profit split, payout frequency, leverage, and account protection. These upgrades must be selected at checkout and cannot be added after reaching the funded stage.
+    FXIFY allows you to customize your CFD account with optional add-ons that enhance your profit split, payout frequency, leverage, and account protection. These upgrades must be selected at checkout and cannot be added after reaching the funded stage.
   </p>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
@@ -577,59 +674,72 @@ const { section, fallbackBody } = Astro.props;
   <!-- ─── Trading Rules ───────────────────────────────────────────── -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules</h3>
   <p class="mb-4">
-    FXIFY enforces a clear set of rules to promote risk management and responsible trading across all account types.
+    FXIFY enforces a clear set of rules to promote risk management and responsible trading. Rules differ between CFD and crypto programmes.
   </p>
 
-  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-4">
     <table class="w-full text-sm">
       <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
         <tr>
           <th class="px-4 py-3 text-left">Rule</th>
-          <th class="px-4 py-3 text-center">Status</th>
+          <th class="px-4 py-3 text-center">CFD Programmes</th>
+          <th class="px-4 py-3 text-center">Crypto Programmes</th>
         </tr>
       </thead>
       <tbody class="divide-y divide-slate-100">
         <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-900">News Trading</td>
-          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span> <span class="text-slate-600">Allowed (except Lightning &mdash; 5 min buffer)</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span> <span class="text-xs text-slate-500">(except Lightning)</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span> <span class="text-xs text-slate-500">5 min buffer</span></td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-medium text-slate-900">Weekend Holding</td>
-          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span> <span class="text-slate-600">Allowed (except Lightning)</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span> <span class="text-xs text-slate-500">(except Lightning)</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-slate-500">Crypto-specific rules apply</span></td>
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-900">Expert Advisors (EAs)</td>
-          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span> <span class="text-slate-600">MT4 &amp; MT5 only (not DXTrade or Lightning)</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span> <span class="text-xs text-slate-500">MT4/MT5 only</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-slate-500">&mdash;</span></td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-medium text-slate-900">Copy Trading</td>
-          <td class="px-4 py-3 text-center"><span class="text-slate-600">Own FXIFY accounts only (third-party requires verification)</span></td>
+          <td class="px-4 py-3 text-center" colspan="2"><span class="text-slate-600">Own FXIFY accounts allowed; third-party requires verification</span></td>
         </tr>
         <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-900">Stop-Loss Required</td>
-          <td class="px-4 py-3 text-center"><span class="text-slate-600">Lightning accounts only</span></td>
+          <td class="px-4 py-3 font-medium text-slate-900">Consistency Rule</td>
+          <td class="px-4 py-3 text-center"><span class="text-slate-500">&mdash;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-amber-600 font-semibold">25%</span></td>
         </tr>
         <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">Inactivity Limit</td>
+          <td class="px-4 py-3 text-center"><span class="text-slate-500">&mdash;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-amber-600 font-semibold">7 days</span></td>
+        </tr>
+        <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-900">HFT / Latency Arbitrage</td>
-          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span> <span class="text-slate-600">Prohibited</span></td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-900">Tick Scalping</td>
-          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span> <span class="text-slate-600">Prohibited</span></td>
+          <td class="px-4 py-3 text-center" colspan="2"><span class="text-red-400 font-bold">&#10007;</span> <span class="text-slate-600">Prohibited</span></td>
         </tr>
         <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-medium text-slate-900">Account Sharing</td>
-          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span> <span class="text-slate-600">Not allowed</span></td>
+          <td class="px-4 py-3 font-medium text-slate-900">Tick Scalping</td>
+          <td class="px-4 py-3 text-center" colspan="2"><span class="text-red-400 font-bold">&#10007;</span> <span class="text-slate-600">Prohibited</span></td>
         </tr>
       </tbody>
     </table>
+  </div>
+
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-8">
+    <p class="text-sm font-bold text-amber-900 mb-1">Crypto-Specific Rules</p>
+    <p class="text-sm text-amber-800">
+      The crypto programmes have their own risk parameters: 3% daily drawdown, 6% max trailing drawdown, 25% consistency rule, 7-day inactivity limit, and no news trading within 5 minutes of events. Crypto Standard (1 Step) requires 4 minimum trading days in evaluation and 7 minimum trading days on the funded account. Always review the specific rules for your chosen programme.
+    </p>
   </div>
 
   <!-- Verdict -->
   <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Challenge Accounts</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      FXIFY's accounts cater to diverse trading preferences, offering flexibility through the single-step One Phase Challenge, the consistency-focused Two Phase Challenge, and the gradual Three Phase Challenge. The Lightning and Instant Funding options provide quick access to trading capital for experienced traders. Optional add-ons and a scaling plan up to $4M round out a strong offering.
+      FXIFY now offers seven programme types covering both CFD and crypto trading. The CFD lineup includes the single-step One Phase, the consistency-focused Two Phase, the gradual Three Phase, the quick Lightning, and Instant Funding. The new Crypto Instant Funding and Crypto Standard (1 Step) add dedicated crypto-only paths with 80+ crypto assets, up to 100% performance split, and crypto-specific risk rules. Optional add-ons and a scaling plan up to $4M round out a strong and expanding offering.
     </p>
   </div>
 
@@ -643,7 +753,7 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-6">
-    FXIFY gives traders flexibility with two pricing models: <strong>raw spreads from 0 pips</strong> with a competitive commission fee, or higher &lsquo;all in&rsquo; spreads with <strong>no commission fees</strong>. This setup allows you to pick the structure that best suits your trading style.
+    FXIFY gives traders flexibility with two pricing models on CFD accounts: <strong>raw spreads from 0 pips</strong> with a competitive commission fee, or higher &lsquo;all in&rsquo; spreads with <strong>no commission fees</strong>. This setup allows you to pick the structure that best suits your trading style.
   </p>
 
   <!-- Pricing Models -->
@@ -691,11 +801,17 @@ const { section, fallbackBody } = Astro.props;
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-semibold text-slate-900">Crypto</td>
           <td class="px-4 py-3 text-right font-semibold text-slate-900">$6 per lot</td>
-          <td class="px-4 py-3 text-slate-700">BTC, ETH, and more (MT4/MT5 only)</td>
+          <td class="px-4 py-3 text-slate-700">BTC, ETH, and more (MT4/MT5 only on CFD accounts)</td>
         </tr>
       </tbody>
     </table>
   </div>
+
+  <!-- Challenge Fee Range -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Fee Range</h3>
+  <p class="mb-4">
+    CFD challenge fees start from <strong>$39</strong> (Three Phase $5K account) and go up to $2,950 for $400K accounts. Crypto Instant Funding starts at <strong>$125</strong> for the $5K account. Fees can increase with optional add-ons.
+  </p>
 
   <!-- Notes -->
   <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
@@ -709,7 +825,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Commissions &amp; Pricing</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      FXIFY's pricing offers solid flexibility, whether you're aiming for minimal spreads with a per-lot commission or a straightforward all-inclusive fee. While their spread data transparency could improve, and the absence of swap-free accounts may deter some, FXIFY provides a reasonable cost structure that suits different trading needs.
+      FXIFY's pricing offers solid flexibility, whether you're aiming for minimal spreads with a per-lot commission or a straightforward all-inclusive fee. The addition of crypto programmes with their own fee structure broadens the options further. While their spread data transparency could improve, FXIFY provides a reasonable cost structure that suits different trading needs.
     </p>
   </div>
 
@@ -723,11 +839,11 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-6">
-    With a total of <strong>101 instruments on MT5</strong> across various asset classes, FXIFY offers a reasonable range of trading opportunities. Availability varies depending on the platform used.
+    FXIFY now highlights <strong>over 300 symbols</strong> to trade across its CFD platforms, plus a dedicated crypto section with <strong>80+ crypto assets</strong>. The main site covers forex, indices, commodities, stocks, and crypto on CFD accounts, while the new crypto programmes offer a focused crypto-only trading experience.
   </p>
 
-  <!-- Instrument Availability Table -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Instruments by Platform</h3>
+  <!-- CFD Instrument Availability Table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">CFD Instruments by Platform</h3>
   <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
     <table class="w-full text-sm">
       <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
@@ -764,7 +880,7 @@ const { section, fallbackBody } = Astro.props;
           <td class="px-4 py-3 text-center font-semibold text-emerald-600">30</td>
         </tr>
         <tr class="bg-white">
-          <td class="px-4 py-3 font-semibold text-slate-900">Cryptocurrencies</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">Cryptocurrencies (CFD)</td>
           <td class="px-4 py-3 text-center text-slate-400">&mdash;</td>
           <td class="px-4 py-3 text-center text-slate-900">7</td>
           <td class="px-4 py-3 text-center text-slate-900">7</td>
@@ -775,14 +891,17 @@ const { section, fallbackBody } = Astro.props;
           <td class="px-4 py-3 text-center text-slate-900">2</td>
           <td class="px-4 py-3 text-center text-slate-900">2</td>
         </tr>
-        <tr class="bg-white font-bold">
-          <td class="px-4 py-3 text-slate-900">Total</td>
-          <td class="px-4 py-3 text-center text-slate-900">62</td>
-          <td class="px-4 py-3 text-center text-slate-900">71</td>
-          <td class="px-4 py-3 text-center text-emerald-600">101</td>
-        </tr>
       </tbody>
     </table>
+  </div>
+
+  <!-- Crypto Programme Markets -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Crypto Programme Markets</h3>
+  <div class="rounded-xl bg-emerald-50 border border-emerald-200 p-4 mb-8">
+    <p class="text-xs font-bold text-emerald-800 uppercase tracking-wide mb-1">80+ Crypto Assets</p>
+    <p class="text-sm text-emerald-700">
+      The new Crypto Instant Funding and Crypto Standard (1 Step) programmes provide access to <strong>80+ crypto assets</strong> in a dedicated crypto-only trading environment. This is separate from the 7 crypto CFDs available on MT4/MT5 in the standard programmes. The crypto programmes are built specifically for crypto volatility with their own leverage, drawdown, and consistency rules.
+    </p>
   </div>
 
   <!-- Asset Classes -->
@@ -790,7 +909,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Forex Pairs</p>
-      <p>42 major, minor, and exotic currency pairs across all platforms.</p>
+      <p>42 major, minor, and exotic currency pairs across all CFD platforms.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Indices</p>
@@ -805,12 +924,12 @@ const { section, fallbackBody } = Astro.props;
       <p>30 well-known stocks including Apple, Amazon, and Tesla.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Crypto <span class="text-xs font-normal text-slate-500">(MT4 &amp; MT5 only)</span></p>
-      <p>7 popular assets including Bitcoin, Ethereum, and Ripple.</p>
+      <p class="font-bold text-slate-900 mb-1">Crypto (CFD) <span class="text-xs font-normal text-slate-500">(MT4 &amp; MT5)</span></p>
+      <p>7 popular assets including Bitcoin, Ethereum, and Ripple on CFD accounts.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Other</p>
-      <p>Volatility Index and US Dollar Index for additional market indicators.</p>
+      <p class="font-bold text-slate-900 mb-1">Crypto Programme <span class="text-xs font-normal text-emerald-600">(NEW)</span></p>
+      <p><strong>80+ crypto assets</strong> on dedicated crypto-only plans with 5:1 leverage on BTC/ETH/SOL and 2:1 on others.</p>
     </div>
   </div>
 
@@ -821,8 +940,9 @@ const { section, fallbackBody } = Astro.props;
       <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
         <tr>
           <th class="px-4 py-3 text-left">Asset Class</th>
-          <th class="px-4 py-3 text-center">Default Leverage</th>
-          <th class="px-4 py-3 text-center">With Add-On</th>
+          <th class="px-4 py-3 text-center">CFD Default</th>
+          <th class="px-4 py-3 text-center">CFD With Add-On</th>
+          <th class="px-4 py-3 text-center">Crypto Programme</th>
         </tr>
       </thead>
       <tbody class="divide-y divide-slate-100">
@@ -830,21 +950,31 @@ const { section, fallbackBody } = Astro.props;
           <td class="px-4 py-3 font-semibold text-slate-900">Forex &amp; Gold</td>
           <td class="px-4 py-3 text-center text-slate-900">30:1</td>
           <td class="px-4 py-3 text-center font-semibold text-emerald-600">50:1</td>
+          <td class="px-4 py-3 text-center text-slate-400">&mdash;</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-semibold text-slate-900">Indices</td>
           <td class="px-4 py-3 text-center text-slate-900">10:1</td>
+          <td class="px-4 py-3 text-center text-slate-400">&mdash;</td>
           <td class="px-4 py-3 text-center text-slate-400">&mdash;</td>
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-semibold text-slate-900">Stocks</td>
           <td class="px-4 py-3 text-center text-slate-900">2:1</td>
           <td class="px-4 py-3 text-center text-slate-400">&mdash;</td>
+          <td class="px-4 py-3 text-center text-slate-400">&mdash;</td>
         </tr>
         <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-semibold text-slate-900">Cryptocurrencies</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">BTC / ETH / SOL</td>
           <td class="px-4 py-3 text-center text-slate-900">2:1</td>
           <td class="px-4 py-3 text-center text-slate-400">&mdash;</td>
+          <td class="px-4 py-3 text-center font-semibold text-emerald-600">5:1</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Other Crypto</td>
+          <td class="px-4 py-3 text-center text-slate-900">2:1</td>
+          <td class="px-4 py-3 text-center text-slate-400">&mdash;</td>
+          <td class="px-4 py-3 text-center text-slate-900">2:1</td>
         </tr>
       </tbody>
     </table>
@@ -854,7 +984,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Financial Markets &amp; Leverage</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      FXIFY offers a balanced selection of markets, though limited in stocks and cryptocurrencies. MT5 provides the widest range, including stock trading, while DXTrade and MT4 cater to other trading needs. The leverage options are conservative, promoting responsible trading with an option to increase leverage on select assets.
+      FXIFY has significantly expanded its market offering. The CFD platforms provide over 300 symbols across forex, indices, commodities, stocks, and crypto, while the new crypto programmes add 80+ crypto assets with higher leverage on BTC/ETH/SOL (5:1). MT5 provides the widest CFD range including stock trading, while the crypto programmes offer a focused, crypto-optimised environment. The leverage options are well-structured across both CFD and crypto programmes.
     </p>
   </div>
 
@@ -868,7 +998,7 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-6">
-    FXIFY gives you access to three major trading platforms: <strong>MetaTrader 4 (MT4)</strong>, <strong>MetaTrader 5 (MT5)</strong>, and <strong>DXTrade with TradingView integration</strong>, though availability depends on your challenge account type.
+    FXIFY now lists four trading platforms across its programme pages and purchase flow: <strong>MetaTrader 4 (MT4)</strong>, <strong>MetaTrader 5 (MT5)</strong>, <strong>DXTrade</strong>, and <strong>TradingView</strong>. Platform availability depends on your challenge account type.
   </p>
 
   <!-- Platform Availability Table -->
@@ -881,11 +1011,13 @@ const { section, fallbackBody } = Astro.props;
           <th class="px-4 py-3 text-center">MT4</th>
           <th class="px-4 py-3 text-center">MT5</th>
           <th class="px-4 py-3 text-center">DXTrade</th>
+          <th class="px-4 py-3 text-center">TradingView</th>
         </tr>
       </thead>
       <tbody class="divide-y divide-slate-100">
         <tr class="bg-white">
           <td class="px-4 py-3 font-semibold text-slate-900">One Phase</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
           <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
           <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
           <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
@@ -895,9 +1027,11 @@ const { section, fallbackBody } = Astro.props;
           <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
           <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
           <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-semibold text-slate-900">Three Phase</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
           <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
           <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
           <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
@@ -907,12 +1041,21 @@ const { section, fallbackBody } = Astro.props;
           <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
           <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
           <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-semibold text-slate-900">Lightning</td>
           <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
           <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
           <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Crypto Programmes</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-slate-500">&mdash;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-slate-500">&mdash;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-amber-500 font-semibold">Coming Soon</span></td>
         </tr>
       </tbody>
     </table>
@@ -943,14 +1086,13 @@ const { section, fallbackBody } = Astro.props;
         <li>Improved backtesting tools for automated strategies</li>
         <li>Access to stocks, indices, commodities, forex, and crypto</li>
       </ul>
-      <p class="text-xs text-slate-500 mt-2">Available for all account types, including Instant Funding and Lightning.</p>
+      <p class="text-xs text-slate-500 mt-2">Available for all CFD account types, including Instant Funding and Lightning.</p>
     </div>
 
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-2">DXTrade + TradingView</p>
-      <p class="mb-2">A modern, web-based trading experience with powerful charting and advanced analytics. No software downloads required.</p>
+      <p class="font-bold text-slate-900 mb-2">DXTrade</p>
+      <p class="mb-2">A modern, web-based trading platform with clean interface and fast execution. No software downloads required.</p>
       <ul class="list-disc list-inside text-slate-600 space-y-1 text-xs">
-        <li>TradingView-powered charting with 100+ indicators and drawing tools</li>
         <li>Fully customizable drag-and-drop layouts</li>
         <li>Fast execution with minimal slippage</li>
         <li>Cloud-based &mdash; trade from any device</li>
@@ -958,13 +1100,25 @@ const { section, fallbackBody } = Astro.props;
       </ul>
       <p class="text-xs text-slate-500 mt-2">Available for One Phase, Two Phase, Three Phase, and Instant Funding accounts.</p>
     </div>
+
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-2">TradingView <span class="text-xs font-normal text-emerald-600">(NEW)</span></p>
+      <p class="mb-2">FXIFY now lists TradingView as a platform option across its programme pages and purchase flow. TradingView is known for powerful charting and a large community of traders sharing ideas.</p>
+      <ul class="list-disc list-inside text-slate-600 space-y-1 text-xs">
+        <li>100+ built-in indicators and drawing tools</li>
+        <li>Customizable chart layouts and multi-monitor support</li>
+        <li>Cloud-based with mobile, desktop, and web access</li>
+        <li>Social features and community-driven analysis</li>
+      </ul>
+      <p class="text-xs text-slate-500 mt-2">Available for most CFD account types. On crypto programmes, TradingView is noted as <strong>coming soon</strong>.</p>
+    </div>
   </div>
 
   <!-- Verdict -->
   <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Trading Platforms</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      FXIFY provides a solid selection of platforms covering different trading needs. MT4 excels for EA-based automation, MT5 offers the widest instrument access with multi-asset support, and DXTrade with TradingView delivers a modern web-based experience. Platform availability varies by challenge type, so choose carefully at checkout.
+      FXIFY provides a strong selection of four platforms covering different trading needs. MT4 excels for EA-based automation, MT5 offers the widest instrument access with multi-asset support, DXTrade delivers a clean web-based experience, and TradingView brings powerful charting and community features. Platform availability varies by challenge type and programme, so choose carefully at checkout. Note that TradingView on crypto programmes is still listed as coming soon.
     </p>
   </div>
 
@@ -984,7 +1138,7 @@ const { section, fallbackBody } = Astro.props;
   <!-- Payment Methods -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Payment Methods for Challenge Fees</h3>
   <p class="mb-4">
-    Challenge fees range from <strong>$39 to $2,950</strong> depending on account size and challenge type. Fees can increase with optional add-ons, reaching around $3,298 for a fully configured $400K account.
+    CFD challenge fees range from <strong>$39</strong> (Three Phase $5K) to <strong>$2,950</strong> ($400K accounts). Crypto Instant Funding starts at <strong>$125</strong> ($5K account). Fees can increase with optional add-ons.
   </p>
 
   <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
@@ -1006,16 +1160,16 @@ const { section, fallbackBody } = Astro.props;
   <h3 class="text-lg font-bold text-slate-900 mb-3">Profit Splits &amp; Payout Policy</h3>
   <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Base Profit Split</p>
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">CFD Base Split</p>
       <p class="text-sm font-bold text-slate-800">80%</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">With Add-On</p>
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">CFD With Add-On</p>
       <p class="text-sm font-bold text-emerald-600">90%</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Default Frequency</p>
-      <p class="text-sm font-bold text-slate-800">Monthly</p>
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Crypto Split</p>
+      <p class="text-sm font-bold text-emerald-600">Up to 100%</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
       <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Processing Time</p>
@@ -1027,12 +1181,16 @@ const { section, fallbackBody } = Astro.props;
   <h3 class="text-lg font-bold text-slate-900 mb-3">Withdrawal Details</h3>
   <div class="space-y-3 mb-6">
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Initial Withdrawal</p>
-      <p>On-demand after the first profitable live trade. Instant Funding accounts require a $50 minimum and 14-day waiting period.</p>
+      <p class="font-bold text-slate-900 mb-1">Evaluation Accounts (1, 2, 3 Phase)</p>
+      <p>First payout is <strong>on demand</strong> from the first funded trading day after closing a successful trade. After that, payouts can be <strong>every two weeks</strong>.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Subsequent Withdrawals</p>
-      <p>Monthly by default, or bi-weekly if the optional add-on was purchased (+5% of challenge fee).</p>
+      <p class="font-bold text-slate-900 mb-1">Instant Funding Accounts</p>
+      <p>Payouts follow a <strong>14-day cycle</strong> with a $50 minimum for Instant Funding.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Crypto Programmes</p>
+      <p><strong>$50 minimum profit target payout</strong>. <strong>Lock upon payout</strong> applies &mdash; positions may be locked during withdrawal processing. 7 minimum trading days required before payout eligibility.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Withdrawal Methods</p>
@@ -1052,7 +1210,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Payments &amp; Profit Shares</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      FXIFY makes payouts straightforward and flexible, offering fast processing, multiple withdrawal options, and clear public proof of trader payments every week. With strong execution during testing and added transparency through regular payout proof posts, FXIFY earned a 9/10 rating for payments and payouts. Minor deductions reflect the need to purchase add-ons for maximum flexibility.
+      FXIFY makes payouts straightforward and flexible. Evaluation accounts now benefit from on-demand first payouts, and the crypto programmes offer up to 100% performance split on eligible plans. Multiple withdrawal options, fast processing, and clear public proof of trader payments every week round out a strong payout structure. The crypto programmes add a $50 minimum payout and lock-upon-payout rule that traders should be aware of.
     </p>
   </div>
 

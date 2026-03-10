@@ -11,58 +11,61 @@
     "dailyDrawdown": null,
     "maxDrawdown": null,
     "minTradingDays": 1,
-    "scalingPlan": true
+    "scalingPlan": false,
+    "notes": "Two one-step challenges: Ascent (EOD drawdown) and Accelerated (trailing drawdown). Account sizes: $25K, $50K, $100K, and $150K on both programs. Profit targets: $1,500 ($25K), $3,000 ($50K), $6,000 ($100K), $10,000 ($150K). Max drawdown: $1,000 ($25K), $2,000 ($50K), $3,000 ($100K), $4,500 ($150K). No daily loss limit — only global drawdown applies. Contract caps scale with account size. Consistency rule: 35% (Ascent) / 20% (Accelerated) single-day profit cap on funded accounts. Payout cycle requires 5 profitable days with at least $200 net profit each. No activation fees. Full refund available only if no trade has been placed and refund is requested within 14 days of purchase; after trading starts, refunds are not available. All accounts operate in a simulated trading environment. Live-account eligibility after 7 successful payout cycles or $28,000 in total withdrawals from one funded account; eligibility does not guarantee approval. If approved for a live account, the live funded amount equals the original plan's max drawdown: $25K → $1,000, $50K → $2,000, $100K → $3,000, $150K → $4,500."
   },
   "pricing": {
     "challengeFees": [
+      { "accountSize": 25000, "fee": 139, "model": "1-step", "label": "Ascent (EOD)" },
       { "accountSize": 50000, "fee": 245, "model": "1-step", "label": "Ascent (EOD)" },
       { "accountSize": 100000, "fee": 370, "model": "1-step", "label": "Ascent (EOD)" },
       { "accountSize": 150000, "fee": 610, "model": "1-step", "label": "Ascent (EOD)" },
+      { "accountSize": 25000, "fee": 129, "model": "1-step", "label": "Accelerated (Trailing)" },
       { "accountSize": 50000, "fee": 184, "model": "1-step", "label": "Accelerated (Trailing)" },
       { "accountSize": 100000, "fee": 276, "model": "1-step", "label": "Accelerated (Trailing)" },
       { "accountSize": 150000, "fee": 456, "model": "1-step", "label": "Accelerated (Trailing)" }
     ],
     "resetFee": null,
-    "refundPolicy": null
+    "refundPolicy": "Full refund within 14 days if no trade placed; no refund after trading starts"
   },
   "payouts": {
     "splitMax": 90,
-    "schedule": "Per payout cycle (5 profitable days)",
+    "schedule": "Per payout cycle (5 profitable days of $200+ each)",
     "processingTime": null,
     "firstPayoutDays": null,
     "methods": ["bank transfer", "crypto"]
   },
   "rules": {
-    "newsTrading": false,
-    "weekendHolding": false,
+    "newsTrading": true,
+    "weekendHolding": true,
     "copyTrading": false,
     "expertAdvisors": false,
     "consistencyRule": "35% (Ascent) / 20% (Accelerated) single-day profit cap",
-    "notes": "Manual trading only. No automated systems, trade copiers, hedging, or HFT. Cannot open new trades 3 minutes before/after high-impact news. No overnight or weekend holds. One entry plus two add-ons per position; fourth add counts as stacking violation. Min $500 / max $2,500 withdrawal per cycle. $2,100 account buffer required."
+    "notes": "Manual trading only. The supplied terms prohibit certain automated and abusive strategies including HFT and latency arbitrage. The terms prohibit account sharing and manipulative coordinated trading. One entry plus two add-ons per position; fourth add counts as stacking violation. Min $500 / max $2,500 withdrawal per payout cycle. $2,100 account buffer required after payouts; if balance falls below buffer, account may be closed and remaining profit split 60% trader / 40% firm. No activation fees charged. Level 1 CME data included; Level 2/DOM optional at $61/month for funded traders. Withdrawals via RiseWorks and USDT on TRC-20; Veriff KYC required before first payout. All accounts operate in a simulated trading environment."
   },
   "markets": {
     "platforms": ["BlackArrow"],
-    "instruments": "Futures (CME Equity, FX, Commodities, Livestock, Micro Crypto)"
+    "instruments": "Futures (CME Equity, Micro Equity, FX, Livestock, Micro Crypto)"
   },
   "trust": {
     "trustpilotRating": null,
     "trustpilotCount": null,
-    "communitySize": "15,000+ active traders",
+    "communitySize": "Discord",
     "notableFlags": []
   },
   "links": { "website": "https://blueberryfunded.com/futures" },
   "media": { "logo": "/images/logos/blueberryfutures.jpg" },
-  "availability": { "restrictedCountries": ["AU", "RU", "BY", "IR", "MM", "SD", "ZW"] },
+  "availability": { "restrictedCountries": ["AU", "CU", "IR", "KP", "SY", "PK", "SO", "RU", "BY", "VE", "MM", "SD", "ZW"] },
   "support": {
     "liveChat": true,
     "email": true,
     "discord": true
   },
   "custom": {
-    "tags": ["Futures", "Broker Backed", "Commission Free", "BlackArrow Platform"]
+    "tags": ["Futures", "Blueberry Family", "BlackArrow Platform", "No Activation Fee"]
   },
   "notes": null,
-  "lastVerifiedAt": "2026-02-27",
-  "lastUpdatedAt": "2026-02-27",
+  "lastVerifiedAt": "2026-03-10",
+  "lastUpdatedAt": "2026-03-10",
   "dataSources": ["https://blueberryfunded.com/futures"]
 }

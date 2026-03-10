@@ -13,69 +13,77 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-4">
-    Topstep offers a two-step evaluation process for futures traders to earn funding. Step one starts with the <strong>Trading Combine</strong>, then you move onto the <strong>Express Funded Account</strong>, then you'll receive a <strong>Live Funded Account</strong>.
+    Topstep has <strong>one evaluation step</strong> &mdash; the <strong>Trading Combine</strong>. After passing, traders move directly to an <strong>Express Funded Account</strong> where payouts begin. A <strong>Live Funded Account</strong> is only a later upgrade and not part of the challenge steps.
   </p>
 
   <div class="space-y-3 mb-8">
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Step 1 &mdash; Trading Combine</p>
-      <p>Traders are evaluated in a simulated environment with specific profit and risk targets, paying a monthly fee based on account size.</p>
+      <p class="font-bold text-slate-900 mb-1">Trading Combine <span class="text-xs font-normal text-emerald-600">&mdash; Evaluation Step</span></p>
+      <p>Traders are evaluated in a simulated environment with specific profit and risk targets, paying a monthly fee based on account size and path chosen.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Step 2 &mdash; Express Funded Account</p>
-      <p>A simulated account where traders earn real profits. No monthly fee, but a $149 activation fee applies.</p>
+      <p class="font-bold text-slate-900 mb-1">Express Funded Account <span class="text-xs font-normal text-emerald-600">&mdash; Payouts Begin Here</span></p>
+      <p>After passing the Trading Combine, traders earn real profits. On the Standard path, a $149 activation fee applies. On the No Activation Fee path, there is no activation fee.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Live Funded Account</p>
-      <p>Traders access real capital, with higher stakes. Breaching the maximum loss limit can result in closure of your live trading account.</p>
+      <p class="font-bold text-slate-900 mb-1">Live Funded Account <span class="text-xs font-normal text-slate-500">&mdash; Later Upgrade</span></p>
+      <p>A later upgrade from Express Funded, not a required challenge step. Provides access to live capital with stricter rules.</p>
     </div>
   </div>
 
-  <p class="mb-6">
-    As with all prop challenges, the key to success in the Topstep trading program is managing risk effectively, hitting profit targets, and maintaining consistency.
+  <!-- ─── Two Paths ─────────────────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Combine Paths</h3>
+  <p class="mb-4">
+    Topstep now offers two paths for the Trading Combine: <strong>Standard</strong> and <strong>No Activation Fee</strong>. The Standard path has a lower monthly fee but charges a $149 activation fee when you reach Express Funded. The No Activation Fee path has a higher monthly fee but no activation fee when funded.
   </p>
 
-  <!-- ─── Overview Table ───────────────────────────────────────────── -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Account Overview</h3>
   <div class="overflow-x-auto rounded-xl border border-slate-200 mb-10">
     <table class="w-full text-sm whitespace-nowrap">
       <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
         <tr>
           <th class="px-4 py-3 text-left">Account Size</th>
-          <th class="px-4 py-3 text-right">Trading Combine</th>
-          <th class="px-4 py-3 text-right">Express Funded Activation</th>
+          <th class="px-4 py-3 text-right">Standard (monthly)</th>
+          <th class="px-4 py-3 text-right">No Activation Fee (monthly)</th>
+          <th class="px-4 py-3 text-right">Activation Fee</th>
           <th class="px-4 py-3 text-right">Profit Target</th>
           <th class="px-4 py-3 text-right">Max Loss Limit</th>
+          <th class="px-4 py-3 text-right">Daily Loss Limit</th>
         </tr>
       </thead>
       <tbody class="divide-y divide-slate-100">
         <tr class="bg-white">
           <td class="px-4 py-3 font-semibold text-slate-900">$50K</td>
           <td class="px-4 py-3 text-right text-slate-900">$49/month</td>
-          <td class="px-4 py-3 text-right text-slate-900">$149</td>
+          <td class="px-4 py-3 text-right text-slate-900">$109/month</td>
+          <td class="px-4 py-3 text-right text-slate-700">$149 (Standard only)</td>
           <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
           <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-semibold text-slate-900">$100K</td>
           <td class="px-4 py-3 text-right text-slate-900">$99/month</td>
-          <td class="px-4 py-3 text-right text-slate-900">$149</td>
+          <td class="px-4 py-3 text-right text-slate-900">$159/month</td>
+          <td class="px-4 py-3 text-right text-slate-700">$149 (Standard only)</td>
           <td class="px-4 py-3 text-right text-slate-700">$6,000</td>
           <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
+          <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-semibold text-slate-900">$150K</td>
           <td class="px-4 py-3 text-right text-slate-900">$149/month</td>
-          <td class="px-4 py-3 text-right text-slate-900">$149</td>
+          <td class="px-4 py-3 text-right text-slate-900">$209/month</td>
+          <td class="px-4 py-3 text-right text-slate-700">$149 (Standard only)</td>
           <td class="px-4 py-3 text-right text-slate-700">$9,000</td>
           <td class="px-4 py-3 text-right text-slate-700">$4,500</td>
+          <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
         </tr>
       </tbody>
     </table>
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- 1. TRADING COMBINE                                              -->
+  <!-- TRADING COMBINE DETAILS                                         -->
   <!-- ═══════════════════════════════════════════════════════════════ -->
   <div class="mb-10">
     <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
@@ -84,57 +92,17 @@ const { section, fallbackBody } = Astro.props;
     </h3>
 
     <p class="mb-3">
-      The Topstep Trading Combine is the first evaluation stage where traders are tested on their ability to manage risk, follow trading rules, and hit profit targets. The Trading Combine has a monthly subscription fee ranging from <strong>$49 &ndash; $149 per month</strong>, based on account size.
+      The Trading Combine is the <strong>only evaluation step</strong>. Traders must hit profit targets while staying within daily loss limits and maximum loss limits. The Trading Combine has <strong>no time limits</strong>.
     </p>
-    <p class="mb-4">
-      Traders can take as long as necessary to pass this phase, as there are <strong>no time limits</strong>, but they must avoid breaching the maximum loss or daily loss limits.
-    </p>
-
-    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
-      <table class="w-full text-sm whitespace-nowrap">
-        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
-          <tr>
-            <th class="px-4 py-3 text-left">Account Size</th>
-            <th class="px-4 py-3 text-right">Fees</th>
-            <th class="px-4 py-3 text-right">Profit Target</th>
-            <th class="px-4 py-3 text-right">Max Loss Limit</th>
-            <th class="px-4 py-3 text-right">Daily Loss Limit</th>
-          </tr>
-        </thead>
-        <tbody class="divide-y divide-slate-100">
-          <tr class="bg-white">
-            <td class="px-4 py-3 font-semibold text-slate-900">$50K</td>
-            <td class="px-4 py-3 text-right text-slate-900">$49/month</td>
-            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
-            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
-            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
-          </tr>
-          <tr class="bg-slate-50">
-            <td class="px-4 py-3 font-semibold text-slate-900">$100K</td>
-            <td class="px-4 py-3 text-right text-slate-900">$99/month</td>
-            <td class="px-4 py-3 text-right text-slate-700">$6,000</td>
-            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
-            <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
-          </tr>
-          <tr class="bg-white">
-            <td class="px-4 py-3 font-semibold text-slate-900">$150K</td>
-            <td class="px-4 py-3 text-right text-slate-900">$149/month</td>
-            <td class="px-4 py-3 text-right text-slate-700">$9,000</td>
-            <td class="px-4 py-3 text-right text-slate-700">$4,500</td>
-            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
 
     <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-4">
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
-        <p class="text-sm font-bold text-slate-800">6% of account</p>
+        <p class="text-sm font-bold text-slate-800">$3K / $6K / $9K</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Loss Limit</p>
-        <p class="text-sm font-bold text-slate-800">3&ndash;4% of account</p>
+        <p class="text-sm font-bold text-slate-800">$2K / $3K / $4.5K</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Time Limit</p>
@@ -146,29 +114,29 @@ const { section, fallbackBody } = Astro.props;
     <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-5">
       <p class="text-sm font-bold text-amber-900 mb-1">Topstep Consistency Target</p>
       <p class="text-sm text-amber-800 mb-2">
-        The Consistency Target rule ensures that traders do not rely on one highly profitable trading day to pass the challenge. This target requires traders to spread their profits more evenly across multiple trading sessions, demonstrating sustained performance.
+        The Consistency Target ensures traders do not rely on one highly profitable day to pass. Profits must be spread across multiple sessions.
       </p>
       <p class="text-sm text-amber-800">
-        Topstep's consistency rule is calculated as: <strong>Best Day Profit &divide; Overall Profit = Best Day % of Total Profit</strong>. No more than <strong>50%</strong> of total profits can be generated in one day.
+        <strong>Best Day Profit &divide; Overall Profit = Best Day % of Total Profit</strong>. No more than <strong>50%</strong> of total profits can come from one day.
       </p>
     </div>
 
-    <!-- Flexible Daily Loss -->
+    <!-- Personal Daily Loss -->
     <div class="rounded-xl border border-slate-200 bg-slate-50 p-4 mb-5">
-      <p class="text-sm font-bold text-slate-900 mb-1">Flexible Daily Loss Limits</p>
+      <p class="text-sm font-bold text-slate-900 mb-1">TopstepX Personal Daily Loss Limit</p>
       <p class="text-sm text-slate-700">
-        All new or Reset accounts on the TopstepX platform can now set their own <strong>Personal Daily Loss Limit</strong> based on their risk tolerance, giving them more control over trading strategies. This change applies to TopstepX accounts only, while the standard Daily Loss Limit remains in place for other platforms such as NinjaTrader and TradingView.
+        On the TopstepX platform, all new or reset accounts can set a <strong>Personal Daily Loss Limit</strong> based on risk tolerance. This applies to TopstepX accounts only; the standard daily loss limits remain in place for other platforms.
       </p>
     </div>
 
     <div class="rounded-xl bg-emerald-50 border border-emerald-200 p-4 mb-5">
       <p class="text-xs font-bold text-emerald-800 uppercase tracking-wide mb-1">Best Suited For</p>
-      <p class="text-sm text-emerald-700">Futures traders who value a no-pressure evaluation with unlimited time. Ideal for disciplined traders focused on consistency and risk management.</p>
+      <p class="text-sm text-emerald-700">Futures traders who value a no-pressure evaluation with unlimited time, and the choice between Standard and No Activation Fee paths.</p>
     </div>
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- 2. EXPRESS FUNDED ACCOUNT                                       -->
+  <!-- EXPRESS FUNDED ACCOUNT                                          -->
   <!-- ═══════════════════════════════════════════════════════════════ -->
   <div class="mb-10">
     <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
@@ -177,67 +145,39 @@ const { section, fallbackBody } = Astro.props;
     </h3>
 
     <p class="mb-3">
-      After passing the Trading Combine, traders move on to the Express Funded Account. There is no monthly subscription fee, but an activation fee of <strong>$149</strong> is required.
-    </p>
-    <p class="mb-4">
-      This phase allows traders to earn real profits, but the account remains simulated.
+      After passing the Trading Combine, traders move to the Express Funded Account where <strong>payouts begin</strong>. On the Standard path, a one-time <strong>$149 activation fee</strong> applies. On the No Activation Fee path, there is <strong>no activation fee</strong>.
     </p>
 
-    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
-      <table class="w-full text-sm whitespace-nowrap">
-        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
-          <tr>
-            <th class="px-4 py-3 text-left">Account Size</th>
-            <th class="px-4 py-3 text-right">Activation Fee</th>
-            <th class="px-4 py-3 text-right">Profit Target</th>
-            <th class="px-4 py-3 text-right">Max Loss Limit</th>
-            <th class="px-4 py-3 text-right">Daily Loss Limit</th>
-          </tr>
-        </thead>
-        <tbody class="divide-y divide-slate-100">
-          <tr class="bg-white">
-            <td class="px-4 py-3 font-semibold text-slate-900">$50K</td>
-            <td class="px-4 py-3 text-right text-slate-900">$149 (one-time)</td>
-            <td class="px-4 py-3 text-right text-emerald-600 font-semibold">No target</td>
-            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
-            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
-          </tr>
-          <tr class="bg-slate-50">
-            <td class="px-4 py-3 font-semibold text-slate-900">$100K</td>
-            <td class="px-4 py-3 text-right text-slate-900">$149 (one-time)</td>
-            <td class="px-4 py-3 text-right text-emerald-600 font-semibold">No target</td>
-            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
-            <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
-          </tr>
-          <tr class="bg-white">
-            <td class="px-4 py-3 font-semibold text-slate-900">$150K</td>
-            <td class="px-4 py-3 text-right text-slate-900">$149 (one-time)</td>
-            <td class="px-4 py-3 text-right text-emerald-600 font-semibold">No target</td>
-            <td class="px-4 py-3 text-right text-slate-700">$4,500</td>
-            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
-          </tr>
-        </tbody>
-      </table>
+    <p class="mb-4">
+      Traders can choose between two payout paths: <strong>Standard</strong> and <strong>Consistency</strong>.
+    </p>
+
+    <div class="space-y-3 mb-6">
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">Standard Payout Path</p>
+        <p>Requires <strong>5 winning days</strong> (each at $150+ Net P&L on the new dashboard). Payout requests capped at up to <strong>$5,000</strong>, limited to up to 50% of account balance.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">Consistency Payout Path</p>
+        <p>Can qualify with <strong>3 days</strong> and a <strong>40% consistency target</strong>. Payout requests capped at up to <strong>$6,000</strong>, limited to up to 50% of account balance.</p>
+      </div>
     </div>
 
-    <!-- Winning Days -->
-    <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-5">
-      <p class="text-sm font-bold text-amber-900 mb-1">Winning Days Objective</p>
-      <p class="text-sm text-amber-800">
-        With the Express Funded Account you need to make a profit of <strong>$200 or more on 5 separate trading days</strong>, which will demonstrate to Topstep that you can be consistently profitable as a funded trader.
+    <!-- Post-Payout Warning -->
+    <div class="rounded-xl border border-red-200 bg-red-50 p-4 mb-5">
+      <p class="text-sm font-bold text-red-900 mb-1">After First Payout</p>
+      <p class="text-sm text-red-800">
+        After the first payout in Express Funded, the <strong>Maximum Loss Limit is set to $0</strong>. This means any loss below your starting balance after payout will result in account closure.
       </p>
     </div>
 
     <!-- Scaling Plan -->
     <h4 class="text-base font-bold text-slate-900 mb-3">Topstep Scaling Plan</h4>
     <p class="mb-3">
-      Another objective you need to follow is Topstep's scaling plan, which is essentially a risk management plan. If trading with a $50K account you can't exceed <strong>5 lots</strong> of exposure. If you're trading with a $100K account the max is <strong>10 lots</strong>, and with a $150K it's <strong>15 lots</strong>.
-    </p>
-    <p class="mb-3">
-      As your account increases or decreases in value, so will the number of lots you can open. Your new balance is only calculated at the beginning of the next trading day at 5:00pm CST.
+      Topstep's scaling plan manages position sizes by account. A $50K account is limited to <strong>5 lots</strong>, $100K to <strong>10 lots</strong>, and $150K to <strong>15 lots</strong>.
     </p>
     <p class="mb-5">
-      If you make an error by opening too many lots, it can result in your account being suspended, although if you correct the mistake within <strong>10 seconds</strong>, Topstep won't take any action.
+      Your balance is recalculated at the beginning of each trading day at 5:00pm CST. Opening too many lots can result in suspension, though Topstep allows a <strong>10-second window</strong> to correct errors.
     </p>
 
     <div class="grid grid-cols-3 gap-2 mb-5">
@@ -257,76 +197,28 @@ const { section, fallbackBody } = Astro.props;
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- 3. LIVE FUNDED ACCOUNT                                          -->
+  <!-- LIVE FUNDED ACCOUNT                                             -->
   <!-- ═══════════════════════════════════════════════════════════════ -->
   <div class="mb-10">
     <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
-      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-emerald-500 text-white text-xs font-black flex items-center justify-center">3</span>
-      Live Funded Account
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-slate-400 text-white text-xs font-black flex items-center justify-center">3</span>
+      Live Funded Account <span class="text-xs font-normal text-slate-500">(Later Upgrade)</span>
     </h3>
 
     <p class="mb-3">
-      In the Live Funded Account, traders use real capital to trade in live markets. There are no subscription or activation fees, but the stakes are higher.
+      The Live Funded Account is a <strong>later upgrade</strong> from Express Funded &mdash; it is not part of the challenge steps. Traders access real capital with stricter rules.
     </p>
-    <p class="mb-4">
-      The primary rule here is to avoid breaching the <strong>Maximum Loss Limit</strong>, as this will result in the permanent closure of the account.
-    </p>
-
-    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
-      <table class="w-full text-sm whitespace-nowrap">
-        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
-          <tr>
-            <th class="px-4 py-3 text-left">Account Size</th>
-            <th class="px-4 py-3 text-right">Fees</th>
-            <th class="px-4 py-3 text-right">Profit Target</th>
-            <th class="px-4 py-3 text-right">Max Loss Limit</th>
-            <th class="px-4 py-3 text-right">Daily Loss Limit</th>
-          </tr>
-        </thead>
-        <tbody class="divide-y divide-slate-100">
-          <tr class="bg-white">
-            <td class="px-4 py-3 font-semibold text-slate-900">$50K</td>
-            <td class="px-4 py-3 text-right text-emerald-600 font-semibold">No additional fee</td>
-            <td class="px-4 py-3 text-right text-emerald-600 font-semibold">No target</td>
-            <td class="px-4 py-3 text-right text-red-500">Account closure</td>
-            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
-          </tr>
-          <tr class="bg-slate-50">
-            <td class="px-4 py-3 font-semibold text-slate-900">$100K</td>
-            <td class="px-4 py-3 text-right text-emerald-600 font-semibold">No additional fee</td>
-            <td class="px-4 py-3 text-right text-emerald-600 font-semibold">No target</td>
-            <td class="px-4 py-3 text-right text-red-500">Account closure</td>
-            <td class="px-4 py-3 text-right text-slate-700">$1,500</td>
-          </tr>
-          <tr class="bg-white">
-            <td class="px-4 py-3 font-semibold text-slate-900">$150K</td>
-            <td class="px-4 py-3 text-right text-emerald-600 font-semibold">No additional fee</td>
-            <td class="px-4 py-3 text-right text-emerald-600 font-semibold">No target</td>
-            <td class="px-4 py-3 text-right text-red-500">Account closure</td>
-            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
 
     <div class="space-y-3 mb-5">
       <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-        <p class="font-bold text-slate-900 mb-1">Five Winning Days</p>
-        <p>Same as in the Express Funded Account, traders must achieve at least five days with profits of $200 or more.</p>
-      </div>
-      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-        <p class="font-bold text-slate-900 mb-1">Payout Structure</p>
-        <p>Traders receive <strong>100% of profits up to the first $10,000</strong>. After that, the profit split moves to <strong>90/10</strong> in favour of the trader.</p>
+        <p class="font-bold text-slate-900 mb-1">Daily Payouts</p>
+        <p>After <strong>30 winning trading days</strong> in the Live Funded Account, traders can request daily payouts up to <strong>100% of account balance</strong>.</p>
       </div>
     </div>
   </div>
 
   <!-- ─── Trading Rules ───────────────────────────────────────────── -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules</h3>
-  <p class="mb-4">
-    Topstep provides clear guidelines on trading rules to ensure fair and consistent evaluation across all account phases.
-  </p>
-
   <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
     <table class="w-full text-sm">
       <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
@@ -336,14 +228,6 @@ const { section, fallbackBody } = Astro.props;
         </tr>
       </thead>
       <tbody class="divide-y divide-slate-100">
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-900">Automated Strategies (EAs)</td>
-          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span> <span class="text-slate-600">Allowed (unsupported by Topstep)</span></td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-medium text-slate-900">Copy Trading</td>
-          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span> <span class="text-slate-600">Allowed via trade copiers</span></td>
-        </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-900">News Trading</td>
           <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span> <span class="text-slate-600">Permitted (caution advised)</span></td>
@@ -368,7 +252,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Topstep Funded Accounts</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      Topstep offers a structured two-step process to earn funding, starting with the Trading Combine, where traders face realistic costs and recurring fees. The Express Funded Account requires a one-time activation fee, while the Live Funded Account offers real profits but has strict loss limits. The consistency target and scaling plan promote disciplined trading, and the unlimited time limit on the Combine gives traders the flexibility to progress at their own pace.
+      Topstep's evaluation is a single step &mdash; the Trading Combine &mdash; with no time limits and two paths to choose from (Standard and No Activation Fee). The Express Funded Account is where payouts begin, with Standard and Consistency payout paths offering flexibility. Traders should note that after the first payout, the Maximum Loss Limit is set to $0, and the Live Funded Account is a later upgrade rather than a required step.
     </p>
   </div>
 
@@ -382,137 +266,72 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-3">
-    Unlike many other prop firms, Topstep exclusively operates within the <strong>futures markets</strong>, meaning there are no spreads when trading the available products.
+    Topstep operates exclusively within <strong>futures markets</strong>, so there are no spreads. However, multiple layers of fees apply depending on the platform, exchange, and stage of the programme.
   </p>
   <p class="mb-6">
-    However, multiple layers of commissions and fees apply, and these vary based on the platform, exchange, and stage of the challenge you are at.
+    <strong>TopstepX</strong> is the lowest-cost platform option, though exchange and regulatory fees still apply on all platforms.
   </p>
 
   <div class="space-y-3 mb-8">
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Step 1 Fees: Trading Combine</p>
+      <p class="font-bold text-slate-900 mb-1">Trading Combine Fees</p>
       <p>Monthly challenge fee + per-trade fees (commission, clearing, and exchange fees) + potential platform subscription costs.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Step 2 Fees: Express Funded</p>
-      <p>One-time activation fee + per-trade fees + potential platform subscription costs.</p>
+      <p class="font-bold text-slate-900 mb-1">Express Funded Fees</p>
+      <p>Activation fee (Standard path: $149; No Activation Fee path: $0) + per-trade fees + potential platform subscription costs.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Step 3 Fees: Live Funded</p>
-      <p>Monthly exchange data fees, platform subscription costs (if applicable), and additional fees for advanced data (like Level 2 Depth of Market).</p>
+      <p class="font-bold text-slate-900 mb-1">Live Funded Fees</p>
+      <p>Topstep pays for one market data feed. Traders pay monthly data fees only for <strong>additional feeds</strong>. Platform subscription costs may also apply.</p>
     </div>
   </div>
 
-  <p class="mb-6">
-    Additionally, if you violate any of the rules during the challenge phases, you will need to reset your account. The reset fees are <strong>$49</strong> for a $50K account, <strong>$99</strong> for a $100K account, and <strong>$149</strong> for a $150K account.
-  </p>
-
-  <!-- ─── Stage 1: Trading Combine Fees ────────────────────────────── -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Stage 1 &mdash; Trading Combine Fees</h3>
-  <p class="mb-3">
-    At this stage, traders pay a monthly challenge fee: <strong>$49/month</strong> ($50K), <strong>$99/month</strong> ($100K), or <strong>$149/month</strong> ($150K). This is different from many other prop firms, where you typically pay a one-time audition fee rather than a recurring monthly fee.
-  </p>
-  <p class="mb-4">
-    In the challenge phases, Topstep replicates live market conditions by charging a flat fee per trade which covers commission, clearing, and exchange fees. The total fee depends on the platform you select:
-  </p>
-
-  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+  <!-- ─── Trading Combine Fees ────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Combine Fees by Path</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
     <table class="w-full text-sm whitespace-nowrap">
       <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
         <tr>
-          <th class="px-3 py-3 text-left">Fee Type</th>
-          <th class="px-3 py-3 text-center">TopstepX</th>
-          <th class="px-3 py-3 text-center">Tradovate / TradingView</th>
-          <th class="px-3 py-3 text-center">NinjaTrader / ATAS / Rithmic</th>
-          <th class="px-3 py-3 text-center">T4</th>
+          <th class="px-4 py-3 text-left">Account Size</th>
+          <th class="px-4 py-3 text-right">Standard Path</th>
+          <th class="px-4 py-3 text-right">No Activation Fee Path</th>
         </tr>
       </thead>
       <tbody class="divide-y divide-slate-100">
         <tr class="bg-white">
-          <td class="px-3 py-3 font-medium text-slate-900">Commissions</td>
-          <td class="px-3 py-3 text-center text-emerald-600 font-semibold">&mdash;</td>
-          <td class="px-3 py-3 text-center text-slate-900">$1.18</td>
-          <td class="px-3 py-3 text-center text-slate-900">$1.06</td>
-          <td class="px-3 py-3 text-center text-slate-900">$1.00</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">$50K</td>
+          <td class="px-4 py-3 text-right text-slate-900">$49/month</td>
+          <td class="px-4 py-3 text-right text-slate-900">$109/month</td>
         </tr>
         <tr class="bg-slate-50">
-          <td class="px-3 py-3 font-medium text-slate-900">Regulatory Fee</td>
-          <td class="px-3 py-3 text-center text-slate-900">$0.04</td>
-          <td class="px-3 py-3 text-center text-slate-900">$0.04</td>
-          <td class="px-3 py-3 text-center text-slate-900">$0.04</td>
-          <td class="px-3 py-3 text-center text-slate-900">$0.04</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">$100K</td>
+          <td class="px-4 py-3 text-right text-slate-900">$99/month</td>
+          <td class="px-4 py-3 text-right text-slate-900">$159/month</td>
         </tr>
         <tr class="bg-white">
-          <td class="px-3 py-3 font-medium text-slate-900">Platform Fee</td>
-          <td class="px-3 py-3 text-center text-emerald-600 font-semibold">&mdash;</td>
-          <td class="px-3 py-3 text-center text-emerald-600 font-semibold">&mdash;</td>
-          <td class="px-3 py-3 text-center text-emerald-600 font-semibold">&mdash;</td>
-          <td class="px-3 py-3 text-center text-slate-900">$1.00</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-3 py-3 font-medium text-slate-900">Data Fee</td>
-          <td class="px-3 py-3 text-center text-emerald-600 font-semibold">&mdash;</td>
-          <td class="px-3 py-3 text-center text-emerald-600 font-semibold">&mdash;</td>
-          <td class="px-3 py-3 text-center text-slate-900">$0.50</td>
-          <td class="px-3 py-3 text-center text-emerald-600 font-semibold">&mdash;</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-3 py-3 font-medium text-slate-900">Clearing Fee</td>
-          <td class="px-3 py-3 text-center text-emerald-600 font-semibold">&mdash;</td>
-          <td class="px-3 py-3 text-center text-slate-900">$0.30</td>
-          <td class="px-3 py-3 text-center text-emerald-600 font-semibold">&mdash;</td>
-          <td class="px-3 py-3 text-center text-emerald-600 font-semibold">&mdash;</td>
-        </tr>
-        <tr class="bg-slate-50 font-bold">
-          <td class="px-3 py-3 text-slate-900">Total</td>
-          <td class="px-3 py-3 text-center text-emerald-600">$0.04 + Exchange</td>
-          <td class="px-3 py-3 text-center text-slate-900">$1.52 + Exchange</td>
-          <td class="px-3 py-3 text-center text-slate-900">$1.60 + Exchange</td>
-          <td class="px-3 py-3 text-center text-slate-900">$2.04 + Exchange</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">$150K</td>
+          <td class="px-4 py-3 text-right text-slate-900">$149/month</td>
+          <td class="px-4 py-3 text-right text-slate-900">$209/month</td>
         </tr>
       </tbody>
     </table>
   </div>
 
   <p class="mb-6">
-    The proprietary platform <strong>TopstepX charges no commission fees</strong> making it the most cost-effective option. In contrast, T4 has the highest per-round-turn cost due to additional platform fees. Switching platforms during the Trading Combine is limited &mdash; you can only switch between platforms that use the same data feed (e.g., Rithmic to Rithmic).
+    Per-trade fees vary by platform. TopstepX has the lowest cost ($0.04 + exchange fees per round turn). Other platforms range from $1.52 to $2.04+ per round turn depending on commission, clearing, and data fees.
   </p>
 
-  <!-- ─── Stage 2: Express Funded Fees ─────────────────────────────── -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Stage 2 &mdash; Express Funded Fees</h3>
+  <!-- ─── Live Funded Data Fees ──────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Live Funded Account &mdash; Additional Fees</h3>
   <div class="space-y-3 mb-8">
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Activation Fee</p>
-      <p>One-time <strong>$149</strong> activation fee each time you pass a new Trading Combine and earn an Express Funded Account.</p>
+      <p class="font-bold text-slate-900 mb-1">Market Data Feeds</p>
+      <p>Topstep pays for <strong>one market data feed</strong>. Traders pay monthly data fees only for <strong>additional feeds</strong> beyond the first.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Trading Fees</p>
-      <p>The standard trade-by-trade fees (commission, clearing, and exchange fees) remain the same as during the Trading Combine.</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">No Monthly Subscription</p>
-      <p>You are no longer paying a monthly subscription fee. However, you are still responsible for any ongoing platform fees if you opted for a paid platform during the Combine stage.</p>
-    </div>
-  </div>
-
-  <!-- ─── Stage 3: Live Funded Fees ────────────────────────────────── -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Stage 3 &mdash; Live Funded Fees</h3>
-  <p class="mb-4">
-    Once you reach the Live Funded Account, additional monthly costs apply which can significantly impact your overall trading costs:
-  </p>
-
-  <div class="space-y-3 mb-8">
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Futures Exchange Data Fees <span class="text-xs font-normal text-slate-500">$135/month per exchange</span></p>
-      <p>As a live funded trader, you'll be charged $135 per month per exchange (CME, NYMEX, COMEX, CBOT). This can accumulate to <strong>$540/month</strong> if you need access to multiple exchanges. We recommend focusing on one exchange to start.</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Platform Subscription Fees</p>
-      <p>Some platforms, like NinjaTrader, require an additional <strong>$99/month</strong> subscription. You can reduce costs by choosing free platforms such as Tradovate or TradingView.</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Depth of Market (Level 2) Data <span class="text-xs font-normal text-slate-500">$39/month</span></p>
-      <p>For traders who require more detailed market data, Topstep offers Level 2 Depth of Market data for an additional $39 per month.</p>
+      <p class="font-bold text-slate-900 mb-1">Depth of Market (Level 2) Data <span class="text-xs font-normal text-slate-500">$34.25/month</span></p>
+      <p>For traders who require more detailed market data, Level 2 Depth of Market data is available for <strong>$34.25 per month</strong>.</p>
     </div>
   </div>
 
@@ -520,7 +339,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
     <p class="text-sm font-bold text-amber-900 mb-1">Important: Platform Selection</p>
     <p class="text-sm text-amber-800">
-      Once you begin the Trading Combine, switching platforms may be limited. <strong>Rithmic</strong> platforms (NinjaTrader, ATAS) can switch between each other. <strong>CQG</strong> platforms (Tradovate, TradingView) can switch within CQG. <strong>TopstepX</strong> is isolated &mdash; switching to any other platform requires starting a new Trading Combine. Choose wisely at the start to avoid extra costs.
+      Once you begin the Trading Combine, switching platforms may be limited. <strong>Rithmic</strong> platforms (NinjaTrader, ATAS) can switch between each other. <strong>CQG</strong> platforms (Tradovate, TradingView) can switch within CQG. <strong>TopstepX</strong> is isolated &mdash; switching to any other platform requires starting a new Trading Combine.
     </p>
   </div>
 
@@ -528,7 +347,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Commissions &amp; Pricing</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      Topstep's fee structure can seem more complex compared to prop firms that charge a single upfront fee. However, the realistic trading environment &mdash; mirroring real-market conditions with commission, clearing, and exchange fees &mdash; justifies these costs. The option to use free platforms, like Tradovate and TradingView, also helps manage expenses, making it more affordable if chosen strategically.
+      Topstep's fee structure varies by platform and stage. TopstepX offers the lowest per-trade costs, though exchange and regulatory fees still apply. The two Trading Combine paths (Standard and No Activation Fee) give traders flexibility in how they manage upfront costs. In the Live Funded Account, Topstep covers one data feed, with traders paying only for additional feeds &mdash; a change from the older blanket per-exchange pricing.
     </p>
   </div>
 
@@ -542,15 +361,15 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-3">
-    Topstep provides access to <strong>32 different futures markets</strong> across forex, equity indices, oil and gas, metals, and agricultural commodities. The trading fees vary depending on the platform you use, making platform selection an important part of managing your trading costs.
+    Topstep provides access to <strong>32 different futures markets</strong> across forex, equity indices, oil and gas, metals, and agricultural commodities &mdash; all CME Group products.
   </p>
   <p class="mb-6">
-    During the Trading Combine, you have access to a subset of CME futures markets. As you advance to the Live Funded Account, a broader range of markets from all major exchanges &mdash; <strong>CME, NYMEX, COMEX, and CBOT</strong> &mdash; becomes available. However, access comes with a monthly data fee of <strong>$135 per exchange</strong>, which can accumulate to $540/month for multiple exchanges.
+    Trading fees vary depending on the platform used. Maximum position sizes are defined by the scaling plan: <strong>5 lots</strong> ($50K), <strong>10 lots</strong> ($100K), and <strong>15 lots</strong> ($150K).
   </p>
 
   <!-- Forex Futures -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Forex Futures</h3>
-  <p class="mb-4">Topstep offers 8 forex futures markets, including major currencies and their micro counterparts. Fees range from $0.52 per round turn for micro contracts to $5.24 for full-size contracts on T4.</p>
+  <p class="mb-4">8 forex futures markets including major currencies and micro counterparts.</p>
   <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
     <table class="w-full text-sm whitespace-nowrap">
       <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
@@ -571,7 +390,7 @@ const { section, fallbackBody } = Astro.props;
 
   <!-- Equity Futures -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Equity Futures</h3>
-  <p class="mb-4">Popular indices like E-mini S&amp;P 500, Micro E-mini NASDAQ, and Micro Bitcoin/Ether. Fees range from $0.24 to $6.34.</p>
+  <p class="mb-4">Popular indices like E-mini S&amp;P 500, Micro E-mini NASDAQ, and Micro Bitcoin/Ether.</p>
   <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
     <table class="w-full text-sm whitespace-nowrap">
       <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
@@ -593,7 +412,7 @@ const { section, fallbackBody } = Astro.props;
 
   <!-- Oil and Gas -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Oil &amp; Gas Futures</h3>
-  <p class="mb-4">8 energy sector markets including Crude Oil, Natural Gas, and Heating Oil. Fees range from $1.04 for micro contracts to $5.24.</p>
+  <p class="mb-4">8 energy sector markets including Crude Oil, Natural Gas, and Heating Oil.</p>
   <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
     <table class="w-full text-sm whitespace-nowrap">
       <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
@@ -614,7 +433,7 @@ const { section, fallbackBody } = Astro.props;
 
   <!-- Precious Metals -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Precious Metal Futures</h3>
-  <p class="mb-4">Gold, Silver, and Copper futures with micro variants. Fees range from $1.04 for micro gold to $5.24 for full-size contracts.</p>
+  <p class="mb-4">Gold, Silver, and Copper futures with micro variants.</p>
   <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
     <table class="w-full text-sm whitespace-nowrap">
       <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
@@ -632,7 +451,7 @@ const { section, fallbackBody } = Astro.props;
 
   <!-- Agricultural -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Agricultural Futures</h3>
-  <p class="mb-4">Corn, Wheat, Soybeans, and Livestock &mdash; key markets for supply/demand speculation. Fees range from $4.24 to $6.24.</p>
+  <p class="mb-4">Corn, Wheat, Soybeans, and Livestock.</p>
   <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
     <table class="w-full text-sm whitespace-nowrap">
       <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
@@ -672,7 +491,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Futures Markets</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      Topstep offers a solid selection of futures markets across foreign exchange, indices, and commodities, giving prop traders the flexibility to diversify their strategies. However, traders must be aware of exchange and platform-specific fees, which can add up quickly. Access to the full range of markets comes at a cost through exchange data fees.
+      Topstep offers a solid selection of 32 futures markets across forex, equity indices, energy, metals, and agriculture. The scaling plan defines position limits by account size. Trading fees vary by platform, with TopstepX offering the lowest per-trade costs.
     </p>
   </div>
 
@@ -686,15 +505,26 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-3">
-    Topstep offers one of the <strong>largest platform selections</strong> in the prop firm industry, with over 15 trading platforms to choose from. This includes both <strong>free and paid options</strong>, catering to all types of futures traders &mdash; from beginners who want simplicity to advanced traders who need deep order-flow analysis.
+    Topstep's current account setup is centred on <strong>TopstepX</strong> as the main platform. Additional platforms are available, but new Trading Combines are no longer presented with the same broad platform choice as in the past.
   </p>
   <p class="mb-6">
-    The platform you choose also determines your <strong>data feed</strong> (Rithmic, CQG, CTS, or Sim2Funded) and the <strong>brokerage</strong> your Live Funded Account will be held with. This is an important decision, as switching platforms between data feeds requires starting a new Trading Combine.
+    The platform you choose determines your <strong>data feed</strong> (Rithmic, CQG, CTS, or Sim2Funded) and affects ongoing costs. Switching between data feeds requires starting a new Trading Combine.
   </p>
 
-  <!-- ─── Free Platforms Table ──────────────────────────────────────── -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Free Platforms</h3>
-  <p class="mb-4">These platforms are available at no extra cost during all stages of the Topstep program:</p>
+  <!-- TopstepX Highlight -->
+  <div class="rounded-xl border-2 border-emerald-300 bg-emerald-50 p-5 mb-8">
+    <p class="font-bold text-emerald-900 text-base mb-2">TopstepX &mdash; Main Platform</p>
+    <p class="text-sm text-emerald-800 mb-3">
+      TopstepX is Topstep's proprietary platform and the primary platform for current account setup. It offers the <strong>lowest trading costs</strong> with no commission fees (only $0.04 regulatory + exchange fees per round turn). Available on desktop, mobile, and Mac.
+    </p>
+    <p class="text-sm text-emerald-800">
+      TopstepX uses the Sim2Funded data feed. Once in a Live Funded Account via TopstepX, you are locked into this platform. Note that while TopstepX has the lowest per-trade cost, exchange and regulatory fees still apply.
+    </p>
+  </div>
+
+  <!-- ─── Other Platforms ─────────────────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Other Available Platforms</h3>
+  <p class="mb-4">Additional platforms remain available for traders who need specific features:</p>
 
   <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
     <table class="w-full text-sm whitespace-nowrap">
@@ -704,8 +534,7 @@ const { section, fallbackBody } = Astro.props;
           <th class="px-3 py-3 text-center">Data Feed</th>
           <th class="px-3 py-3 text-center">Mobile</th>
           <th class="px-3 py-3 text-center">Mac</th>
-          <th class="px-3 py-3 text-center">Free in Live</th>
-          <th class="px-3 py-3 text-center">Brokerage</th>
+          <th class="px-3 py-3 text-center">Cost in Live</th>
         </tr>
       </thead>
       <tbody class="divide-y divide-slate-100">
@@ -714,246 +543,69 @@ const { section, fallbackBody } = Astro.props;
           <td class="px-3 py-3 text-center text-slate-700">Sim2Funded</td>
           <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
           <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
-          <td class="px-3 py-3 text-center text-slate-700">Plus500</td>
+          <td class="px-3 py-3 text-center text-emerald-600 font-semibold">Free</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-3 py-3 font-semibold text-slate-900">Quantower</td>
           <td class="px-3 py-3 text-center text-slate-700">Rithmic</td>
           <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
           <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
-          <td class="px-3 py-3 text-center text-slate-700">NinjaTrader</td>
+          <td class="px-3 py-3 text-center text-emerald-600 font-semibold">Free</td>
         </tr>
         <tr class="bg-white">
           <td class="px-3 py-3 font-semibold text-slate-900">Tradovate</td>
           <td class="px-3 py-3 text-center text-slate-700">CQG</td>
           <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
           <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
-          <td class="px-3 py-3 text-center text-slate-700">Dorman</td>
+          <td class="px-3 py-3 text-center text-emerald-600 font-semibold">Free</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-3 py-3 font-semibold text-slate-900">TradingView</td>
           <td class="px-3 py-3 text-center text-slate-700">CQG</td>
           <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
           <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
-          <td class="px-3 py-3 text-center text-slate-700">CQG</td>
+          <td class="px-3 py-3 text-center text-emerald-600 font-semibold">Free</td>
         </tr>
         <tr class="bg-white">
           <td class="px-3 py-3 font-semibold text-slate-900">T4</td>
           <td class="px-3 py-3 text-center text-slate-700">CTS</td>
           <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
           <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
-          <td class="px-3 py-3 text-center text-slate-700">Plus500</td>
+          <td class="px-3 py-3 text-center text-emerald-600 font-semibold">Free</td>
         </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- Free Platform Detail Cards -->
-  <div class="space-y-3 mb-8">
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">TopstepX <span class="text-xs font-normal text-emerald-600">&mdash; Commission-Free</span></p>
-      <p>Topstep&rsquo;s proprietary platform offers <strong>commission-free trading</strong> with the Sim2Funded data feed. Available on desktop, mobile, and Mac. Once you reach a Live Funded Account, you are <strong>locked into TopstepX</strong> and cannot switch to another platform. Best suited for traders who want the lowest possible trading costs and don&rsquo;t need advanced charting or third-party tools.</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Quantower <span class="text-xs font-normal text-slate-500">&mdash; Rithmic Data Feed</span></p>
-      <p>A professional-grade platform known for its <strong>low-latency Rithmic data feed</strong> and advanced analytics. Quantower is free to use and supports multi-monitor setups, custom indicators, and DOM (Depth of Market) trading. It does not support mobile or Mac natively. Great for experienced futures traders who need fast execution and detailed market data.</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Tradovate <span class="text-xs font-normal text-slate-500">&mdash; CQG Data Feed</span></p>
-      <p>A modern, cloud-based platform that works across <strong>desktop, mobile, and Mac</strong>. Tradovate uses the CQG data feed and is one of the most popular free platforms at Topstep. It supports multi-device trading, making it ideal for traders who want flexibility. Your Live Funded Account will be held with <strong>Dorman</strong> brokerage.</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">TradingView <span class="text-xs font-normal text-slate-500">&mdash; CQG Data Feed</span></p>
-      <p>The world&rsquo;s most popular charting platform, integrated with Topstep via the <strong>CQG data feed</strong>. TradingView is known for its powerful <strong>technical analysis tools</strong>, social features, and intuitive interface. It supports Mac but does not have a dedicated mobile trading app for futures execution. Ideal for chart-focused traders.</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">T4 <span class="text-xs font-normal text-slate-500">&mdash; CTS Data Feed</span></p>
-      <p>T4 uses the <strong>CTS data feed</strong> and supports mobile trading, making it a solid choice for traders on the go. However, it does <strong>not support Mac</strong> and does <strong>not offer micro contracts</strong>, which may be a limitation for traders who prefer smaller position sizes. Your Live Funded Account will be held with <strong>Plus500</strong>.</p>
-    </div>
-  </div>
-
-  <!-- ─── Paid Platforms Table ──────────────────────────────────────── -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Paid Platforms</h3>
-  <p class="mb-4">These platforms are free during the Trading Combine but may require a monthly subscription once you reach the Live Funded Account stage:</p>
-
-  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
-    <table class="w-full text-sm whitespace-nowrap">
-      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
-        <tr>
-          <th class="px-3 py-3 text-left">Platform</th>
-          <th class="px-3 py-3 text-center">Data Feed</th>
-          <th class="px-3 py-3 text-center">Mobile</th>
-          <th class="px-3 py-3 text-center">Mac</th>
-          <th class="px-3 py-3 text-center">Free in Challenge</th>
-          <th class="px-3 py-3 text-center">Free in Live</th>
-          <th class="px-3 py-3 text-center">Brokerage</th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-slate-100">
-        <tr class="bg-white">
+        <tr class="bg-slate-50">
           <td class="px-3 py-3 font-semibold text-slate-900">NinjaTrader</td>
           <td class="px-3 py-3 text-center text-slate-700">Rithmic</td>
           <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
           <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center text-slate-700">NinjaTrader</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-3 py-3 font-semibold text-slate-900">R|Trader Pro</td>
-          <td class="px-3 py-3 text-center text-slate-700">Rithmic</td>
-          <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center text-slate-400">&mdash;</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-3 py-3 font-semibold text-slate-900">ATAS OrderFlow</td>
-          <td class="px-3 py-3 text-center text-slate-700">Rithmic</td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center text-slate-700">NinjaTrader</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-3 py-3 font-semibold text-slate-900">MotiveWave</td>
-          <td class="px-3 py-3 text-center text-slate-700">Rithmic</td>
-          <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center text-slate-700">NinjaTrader</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-3 py-3 font-semibold text-slate-900">VolFix</td>
-          <td class="px-3 py-3 text-center text-slate-700">Rithmic</td>
-          <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center text-slate-700">NinjaTrader</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-3 py-3 font-semibold text-slate-900">Bookmap</td>
-          <td class="px-3 py-3 text-center text-slate-700">Rithmic</td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center text-slate-700">NinjaTrader</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-3 py-3 font-semibold text-slate-900">Investor/RT</td>
-          <td class="px-3 py-3 text-center text-slate-700">Rithmic</td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-emerald-600 font-bold">&#10003;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center text-slate-700">NinjaTrader</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-3 py-3 font-semibold text-slate-900">Jigsaw Daytradr</td>
-          <td class="px-3 py-3 text-center text-slate-700">Rithmic</td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center text-slate-700">NinjaTrader</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-3 py-3 font-semibold text-slate-900">MultiCharts</td>
-          <td class="px-3 py-3 text-center text-slate-700">Rithmic</td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center text-slate-700">NinjaTrader</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-3 py-3 font-semibold text-slate-900">Sierra Chart</td>
-          <td class="px-3 py-3 text-center text-slate-700">Rithmic</td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center text-slate-700">NinjaTrader</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-3 py-3 font-semibold text-slate-900">Trade Navigator</td>
-          <td class="px-3 py-3 text-center text-slate-700">Rithmic</td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-3 py-3 text-center text-slate-700">NinjaTrader</td>
+          <td class="px-3 py-3 text-center text-amber-600">Paid subscription</td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <!-- NinjaTrader Detail -->
-  <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 mb-5">
-    <p class="font-bold text-slate-900 mb-1">NinjaTrader <span class="text-xs font-normal text-amber-600">&mdash; $99/month in Live Funded</span></p>
-    <p>NinjaTrader is one of the most popular futures platforms globally, known for its <strong>advanced charting, automated strategy development</strong>, and deep DOM (Depth of Market) trading capabilities. It uses the <strong>Rithmic data feed</strong> for fast, reliable execution. NinjaTrader is <strong>free during the Trading Combine</strong>, but once you reach the Live Funded Account, a <strong>$99/month subscription fee</strong> applies. It does not support mobile or Mac natively. Your Live Funded Account will be held with <strong>NinjaTrader Brokerage</strong>.</p>
-  </div>
-
-  <!-- Other Paid Platform Summaries -->
-  <h4 class="text-base font-bold text-slate-900 mb-3">Other Paid Platforms</h4>
-  <div class="space-y-3 mb-8">
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">R|Trader Pro</p>
-      <p>Rithmic&rsquo;s own trading platform with mobile and Mac support. Free during the Combine but requires a subscription for Live Funded Accounts. Known for its ultra-low latency and direct market access.</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">ATAS OrderFlow</p>
-      <p>A specialised order-flow analysis platform using Rithmic. Excellent for volume profile, footprint charts, and cluster analysis. Free in the Combine, paid in Live. No mobile or Mac support.</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">MotiveWave</p>
-      <p>A feature-rich platform with Elliott Wave tools, advanced charting, and Rithmic integration. Supports mobile and Mac. Requires a paid subscription in both the Combine and Live stages.</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">VolFix</p>
-      <p>A volume analysis and order-flow platform with Rithmic data. Offers mobile and Mac apps. Paid subscription required in both the Combine and Live Funded stages.</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Bookmap</p>
-      <p>A unique heatmap-based order-flow visualisation platform. Excellent for seeing liquidity and large orders in real-time. Supports Mac but not mobile. Paid subscription required in both stages.</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Investor/RT, Jigsaw Daytradr, MultiCharts, Sierra Chart &amp; Trade Navigator</p>
-      <p>Additional Rithmic-based platforms catering to niche trading styles. These platforms require their own paid subscriptions and are best suited for experienced traders with specific workflow needs. All Live Funded Accounts through these platforms are held with <strong>NinjaTrader Brokerage</strong>.</p>
-    </div>
-  </div>
+  <p class="mb-4">
+    Additional Rithmic-based platforms (R|Trader Pro, ATAS OrderFlow, MotiveWave, VolFix, Bookmap, Sierra Chart, MultiCharts, and others) are also available for traders with specific workflow requirements. These may require their own paid subscriptions.
+  </p>
 
   <!-- ─── Data Feeds ────────────────────────────────────────────────── -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Data Feeds</h3>
-  <p class="mb-4">
-    The data feed determines the speed, reliability, and cost of your market data. Topstep supports four data feeds, each tied to specific platforms:
-  </p>
   <div class="space-y-3 mb-8">
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Sim2Funded</p>
+      <p>Topstep's proprietary data feed, used exclusively by <strong>TopstepX</strong>. Powers the lowest-cost trading experience.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Rithmic</p>
-      <p>The most popular professional-grade data feed, known for <strong>ultra-low latency</strong> and direct exchange connections. Used by NinjaTrader, Quantower, ATAS, MotiveWave, VolFix, Bookmap, and other advanced platforms. Rithmic-based platforms can switch between each other without restarting the Combine.</p>
+      <p>Professional-grade data feed used by NinjaTrader, Quantower, ATAS, and other advanced platforms. Known for low latency.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">CQG</p>
-      <p>A reliable institutional-grade data feed used by <strong>Tradovate and TradingView</strong>. CQG is known for its stability and broad market coverage. CQG-based platforms can switch between each other.</p>
+      <p>Institutional-grade data feed used by <strong>Tradovate and TradingView</strong>. Known for stability and broad market coverage.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">CTS</p>
-      <p>Used exclusively by the <strong>T4 platform</strong>. CTS provides reliable data but is more limited in platform options. Switching from CTS to another data feed requires starting a new Trading Combine.</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Sim2Funded</p>
-      <p>Topstep&rsquo;s proprietary data feed, used exclusively by <strong>TopstepX</strong>. It powers the commission-free trading experience. Switching from Sim2Funded to any other data feed requires starting a new Trading Combine.</p>
+      <p>Used exclusively by the <strong>T4 platform</strong>.</p>
     </div>
   </div>
 
@@ -961,7 +613,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Platforms</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      Topstep&rsquo;s platform variety is a significant advantage, offering something for every type of futures trader. The five free platforms &mdash; especially TopstepX (commission-free) and Tradovate (multi-device) &mdash; make it accessible for beginners and cost-conscious traders. Advanced traders benefit from Rithmic-powered platforms like NinjaTrader and ATAS for deep order-flow analysis. However, the inability to switch between data feeds mid-Combine means traders should choose their platform carefully from the start.
+      TopstepX is the main current platform, offering the lowest trading costs with mobile and Mac support. Additional platforms remain available for traders who need specific features like advanced charting (TradingView) or order-flow analysis (NinjaTrader, ATAS). The inability to switch between data feeds mid-Combine means traders should choose carefully from the start.
     </p>
   </div>
 
@@ -975,40 +627,89 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-3">
-    Topstep offers multiple payment methods for both account funding and profit withdrawals. Traders can pay for their Trading Combine and Express Funded Account activation using <strong>Visa, Mastercard, American Express, Discover,</strong> and <strong>PayPal</strong>.
+    Topstep offers multiple payment methods for both account funding and profit withdrawals. Traders can pay for their Trading Combine using <strong>Visa, Mastercard, American Express, Discover,</strong> and <strong>PayPal</strong>.
   </p>
   <p class="mb-6">
-    Once funded, Topstep provides one of the most competitive payout structures in the prop firm industry, with traders keeping <strong>100% of their first $10,000</strong> in profits.
+    For traders who joined on or after <strong>12 January 2026</strong>, payouts are subject to a <strong>90/10 split</strong> (trader keeps 90%). The older 100% of first $10,000 rule only applies to traders who signed up before that date.
   </p>
 
   <!-- Profit Split -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Profit Split</h3>
-  <div class="grid grid-cols-2 gap-2 mb-6">
-    <div class="rounded-lg bg-emerald-50 border border-emerald-200 px-3 py-3 text-center">
-      <p class="text-[10px] text-emerald-700 uppercase tracking-wide font-semibold">First $10,000</p>
-      <p class="text-lg font-black text-emerald-700">100%</p>
-      <p class="text-xs text-emerald-600">You keep everything</p>
+  <div class="space-y-3 mb-6">
+    <div class="rounded-lg bg-emerald-50 border border-emerald-200 px-4 py-3">
+      <p class="text-sm font-bold text-emerald-900 mb-1">New Traders (joined on/after 12 Jan 2026)</p>
+      <p class="text-sm text-emerald-800">Keep up to <strong>90%</strong> of payouts (90/10 split).</p>
     </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 px-3 py-3 text-center">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">After $10,000</p>
-      <p class="text-lg font-black text-slate-800">90 / 10</p>
-      <p class="text-xs text-slate-600">90% trader &bull; 10% Topstep</p>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 px-4 py-3">
+      <p class="text-sm font-bold text-slate-900 mb-1">Older Traders (joined before 12 Jan 2026)</p>
+      <p class="text-sm text-slate-700">100% of first $10,000, then 90/10 split &mdash; applies only under the prior policy.</p>
     </div>
   </div>
 
-  <!-- Payout Requesting -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Payout Requesting</h3>
+  <!-- Payout Paths -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Express Funded Payout Paths</h3>
   <p class="mb-3">
-    To request a payout, traders must meet the <strong>5 Winning Days</strong> objective &mdash; achieving a profit of <strong>$200 or more on 5 separate trading days</strong>. Once this requirement is met, traders can withdraw profits according to the following rules:
+    Traders in the Express Funded Account can choose between two payout paths. Payout requests can be made in as <strong>little as 3 days</strong>.
   </p>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Detail</th>
+          <th class="px-4 py-3 text-center">Standard Path</th>
+          <th class="px-4 py-3 text-center">Consistency Path</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">Winning Days Required</td>
+          <td class="px-4 py-3 text-center text-slate-700">5 days</td>
+          <td class="px-4 py-3 text-center text-slate-700">3 days</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">Winning Day Threshold</td>
+          <td class="px-4 py-3 text-center text-slate-700">$150+ Net P&L</td>
+          <td class="px-4 py-3 text-center text-slate-700">$150+ Net P&L</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">Consistency Target</td>
+          <td class="px-4 py-3 text-center text-slate-400">&mdash;</td>
+          <td class="px-4 py-3 text-center text-slate-700">40%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-900">Max Per Request</td>
+          <td class="px-4 py-3 text-center text-slate-700">Up to $5,000</td>
+          <td class="px-4 py-3 text-center text-slate-700">Up to $6,000</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-900">Balance Limit</td>
+          <td class="px-4 py-3 text-center text-slate-700">Up to 50%</td>
+          <td class="px-4 py-3 text-center text-slate-700">Up to 50%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Live Funded Payouts -->
+  <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 mb-6">
+    <p class="font-bold text-slate-900 mb-1">Live Funded Account Payouts</p>
+    <p>After <strong>30 winning trading days</strong> in the Live Funded Account, traders can request daily payouts up to <strong>100% of account balance</strong>.</p>
+  </div>
+
+  <!-- Key Payout Details -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Key Payout Details</h3>
   <div class="space-y-3 mb-6">
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Before 30 Winning Days</p>
-      <p>Traders can withdraw up to <strong>50% of their account balance</strong> per payout request, after meeting the 5 winning day requirement.</p>
+      <p class="font-bold text-slate-900 mb-1">Minimum Payout</p>
+      <p>The minimum payout request is <strong>$125</strong>.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">After 30 Winning Days</p>
-      <p>Traders can withdraw up to <strong>100% of their account balance</strong> per payout request, providing maximum flexibility for consistent performers.</p>
+      <p class="font-bold text-slate-900 mb-1">Payout Approval</p>
+      <p>Payout requests can be approved in <strong>1&ndash;3 business days</strong>, with arrival depending on payout method.</p>
+    </div>
+    <div class="rounded-lg bg-amber-50 border border-amber-200 p-4">
+      <p class="font-bold text-amber-900 mb-1">ACH &amp; Wire Processing Fee</p>
+      <p class="text-amber-800">On the new dashboard, ACH and Wire payout requests include a <strong>$30 processing fee</strong>.</p>
     </div>
   </div>
 
@@ -1019,35 +720,43 @@ const { section, fallbackBody } = Astro.props;
       <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
         <tr>
           <th class="px-4 py-3 text-left">Method</th>
-          <th class="px-4 py-3 text-center">Processing Time</th>
+          <th class="px-4 py-3 text-center">Details</th>
         </tr>
       </thead>
       <tbody class="divide-y divide-slate-100">
         <tr class="bg-white">
           <td class="px-4 py-3 font-semibold text-slate-900">Wise</td>
-          <td class="px-4 py-3 text-center text-slate-700">1&ndash;3 business days</td>
+          <td class="px-4 py-3 text-center text-slate-700">Available</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-semibold text-slate-900">ACH</td>
-          <td class="px-4 py-3 text-center text-slate-700">1&ndash;3 business days</td>
+          <td class="px-4 py-3 text-center text-slate-700">$30 processing fee</td>
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-semibold text-slate-900">Wire Transfer</td>
-          <td class="px-4 py-3 text-center text-slate-700">3&ndash;5 business days</td>
+          <td class="px-4 py-3 text-center text-slate-700">$30 processing fee</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-semibold text-slate-900">International SWIFT</td>
-          <td class="px-4 py-3 text-center text-slate-700">5&ndash;10 business days</td>
+          <td class="px-4 py-3 text-center text-slate-700">Available</td>
         </tr>
       </tbody>
     </table>
   </div>
 
+  <!-- Post-Payout Warning -->
+  <div class="rounded-xl border border-red-200 bg-red-50 p-4 mb-6">
+    <p class="text-sm font-bold text-red-900 mb-1">After First Payout: Maximum Loss Limit Set to $0</p>
+    <p class="text-sm text-red-800">
+      After the first payout in Express Funded, the <strong>Maximum Loss Limit is set to $0</strong>. Any loss below your starting balance after payout will result in account closure. Plan your payouts accordingly.
+    </p>
+  </div>
+
   <!-- Auto-Closure Warning -->
   <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
-    <p class="text-sm font-bold text-amber-900 mb-1">Important: Account Inactivity</p>
+    <p class="text-sm font-bold text-amber-900 mb-1">Funded Account Inactivity</p>
     <p class="text-sm text-amber-800">
-      If your funded account is inactive for <strong>30 consecutive days</strong>, Topstep will automatically close the account. Any unrealised profits will be <strong>forfeited</strong> unless you have already met the 5 winning day requirement and submitted a payout request. Make sure to trade regularly and withdraw profits promptly.
+      If your funded account is inactive for <strong>30 consecutive days</strong>, Topstep will automatically close the account. Make sure to trade regularly and withdraw profits promptly.
     </p>
   </div>
 
@@ -1055,7 +764,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Payouts</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      Topstep&rsquo;s payout structure is among the best in the industry. Keeping 100% of the first $10,000 in profits is a standout feature that few competitors can match. The 90/10 split after that is also highly competitive. Multiple withdrawal methods with reasonable processing times add convenience, though the 30-day inactivity auto-closure rule is something traders need to stay aware of. The 5 winning day requirement before withdrawals is reasonable and encourages consistent trading.
+      Topstep's payout structure offers up to 90% for new traders (post-12 January 2026), with two Express Funded payout paths providing flexibility &mdash; Standard (5 winning days, up to $5,000) and Consistency (3 days, up to $6,000). Payouts can be requested in as little as 3 days, with approval in 1&ndash;3 business days. The $125 minimum payout and $30 ACH/Wire fee are important to note, as is the Maximum Loss Limit being set to $0 after first payout.
     </p>
   </div>
 
@@ -1069,10 +778,10 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-3">
-    Topstep provides <strong>24/7 customer support</strong> through multiple channels, making it one of the most accessible prop firms for trader assistance. Whether you have questions about account rules, platform setup, or payouts, help is always available.
+    Topstep provides <strong>24/7 customer support</strong> through multiple channels. Current official support messaging highlights AI chatbot, text support, and contact support options.
   </p>
   <p class="mb-6">
-    Beyond standard support, Topstep invests heavily in <strong>trader education and community building</strong>, offering live coaching, daily market analysis, and a thriving Discord community.
+    Beyond standard support, Topstep invests in <strong>trader education and community building</strong>, offering live coaching, daily market analysis, and a thriving Discord community.
   </p>
 
   <!-- Support Channels -->
@@ -1087,20 +796,20 @@ const { section, fallbackBody } = Astro.props;
       </thead>
       <tbody class="divide-y divide-slate-100">
         <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-900">Live Chat</td>
+          <td class="px-4 py-3 font-medium text-slate-900">AI Chatbot</td>
           <td class="px-4 py-3 text-slate-700">24/7 via website</td>
         </tr>
         <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-medium text-slate-900">Email</td>
-          <td class="px-4 py-3 text-slate-700">24/7 &mdash; responses within a few hours</td>
+          <td class="px-4 py-3 font-medium text-slate-900">Text Support</td>
+          <td class="px-4 py-3 text-slate-700">Available</td>
         </tr>
         <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-900">WhatsApp</td>
-          <td class="px-4 py-3 text-slate-700">24/7 messaging support</td>
+          <td class="px-4 py-3 font-medium text-slate-900">Contact Support</td>
+          <td class="px-4 py-3 text-slate-700">Available via website</td>
         </tr>
         <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-medium text-slate-900">Phone Helpline</td>
-          <td class="px-4 py-3 text-slate-700">Available during business hours</td>
+          <td class="px-4 py-3 font-medium text-slate-900">Email</td>
+          <td class="px-4 py-3 text-slate-700">Available</td>
         </tr>
       </tbody>
     </table>
@@ -1110,21 +819,21 @@ const { section, fallbackBody } = Astro.props;
   <h3 class="text-lg font-bold text-slate-900 mb-3">TopstepTV &amp; Education</h3>
   <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 mb-5">
     <p class="font-bold text-slate-900 mb-1">TopstepTV on YouTube <span class="text-xs font-normal text-slate-500">&mdash; 120K+ subscribers</span></p>
-    <p>Topstep runs a popular YouTube channel called <strong>TopstepTV</strong>, featuring <strong>daily live trading sessions</strong>, market analysis, and coaching from experienced traders. The channel has amassed over <strong>120,000 subscribers</strong>, making it one of the largest educational resources in the prop trading space.</p>
+    <p>Topstep runs a popular YouTube channel featuring <strong>daily live trading sessions</strong>, market analysis, and coaching from experienced traders.</p>
   </div>
 
   <div class="space-y-3 mb-8">
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Blogs &amp; Newsletters</p>
-      <p>Regular blog posts and email newsletters covering market insights, trading tips, rule updates, and trader success stories.</p>
+      <p>Regular blog posts and email newsletters covering market insights, trading tips, and trader success stories.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Podcasts</p>
-      <p>Audio content featuring interviews with funded traders, market commentary, and educational deep-dives into trading psychology and strategy.</p>
+      <p>Audio content featuring interviews with funded traders, market commentary, and educational deep-dives.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Webinars &amp; Group Coaching</p>
-      <p>Live webinars and group coaching sessions designed to help traders improve their skills, understand Topstep&rsquo;s rules, and develop profitable strategies.</p>
+      <p>Live webinars and group coaching sessions for skill development and strategy building.</p>
     </div>
   </div>
 
@@ -1132,7 +841,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Support</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      Topstep&rsquo;s 24/7 multi-channel support is a major strength, particularly the addition of WhatsApp and live chat for immediate assistance. The TopstepTV YouTube channel with over 120K subscribers is an exceptional free resource, and the combination of blogs, podcasts, webinars, and group coaching provides ongoing education. Few prop firms invest this heavily in trader support and community development.
+      Topstep offers 24/7 support via AI chatbot, text, and contact channels. The TopstepTV YouTube channel with 120K+ subscribers is a strong free resource, and the combination of blogs, podcasts, webinars, and group coaching provides ongoing education. The 155K+ member Discord community adds peer support and strategy sharing.
     </p>
   </div>
 
@@ -1146,7 +855,7 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-6">
-    As one of the <strong>longest-running prop firms</strong> in the industry (founded in 2012), Topstep has built a significant reputation among futures traders. Here is an overview of their trust indicators, community presence, and regulatory standing.
+    Founded in <strong>2012</strong>, Topstep is one of the longest-running prop firms in the industry. Here is an overview of their trust indicators and community presence.
   </p>
 
   <!-- Trustpilot Score -->
@@ -1157,7 +866,7 @@ const { section, fallbackBody } = Astro.props;
     <div class="flex items-center justify-center gap-1 mb-2">
       <span class="text-amber-400 text-lg">&#9733;&#9733;&#9733;</span><span class="text-slate-300 text-lg">&#9733;&#9733;</span>
     </div>
-    <p class="text-xs text-slate-500">The high volume of reviews provides a broad picture of trader experiences, though individual results vary significantly.</p>
+    <p class="text-xs text-slate-500">The high volume of reviews provides a broad picture of trader experiences, though individual results vary.</p>
   </div>
 
   <!-- Social Media -->
@@ -1179,29 +888,17 @@ const { section, fallbackBody } = Astro.props;
 
   <!-- Discord -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Discord Community</h3>
-  <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 mb-5">
+  <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 mb-8">
     <p class="font-bold text-slate-900 mb-1">155,000+ Members</p>
     <p class="mb-3">Topstep operates one of the <strong>largest Discord communities</strong> in the prop trading space, with over 155,000 members. The server provides real-time discussion, strategy sharing, and direct interaction with Topstep staff.</p>
-    <p class="text-xs text-slate-600">Key channels include: general discussion, market analysis, platform support, payout proof sharing, and strategy-specific rooms for scalping, swing trading, and more.</p>
-  </div>
-
-  <!-- Regulation -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Regulation &amp; Partnerships</h3>
-  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
-    <p class="text-sm font-bold text-amber-900 mb-1">Not a Regulated Broker</p>
-    <p class="text-sm text-amber-800 mb-3">
-      Like most prop firms, Topstep is <strong>not a regulated broker or financial institution</strong>. It operates as a talent evaluation company that identifies and funds skilled traders. This means trader funds are not protected by regulatory bodies like the SEC, CFTC, or FCA.
-    </p>
-    <p class="text-sm text-amber-800">
-      However, Topstep partners with <strong>regulated brokerages</strong> for its Live Funded Accounts. Depending on your platform choice, your live account will be held with either <strong>Plus500</strong> (for TopstepX and T4) or <strong>NinjaTrader Brokerage</strong> (for Rithmic-based platforms). These brokerages are regulated entities, providing a layer of institutional oversight for live trading activity.
-    </p>
+    <p class="text-xs text-slate-600">Key channels include: general discussion, market analysis, platform support, payout proof sharing, and strategy-specific rooms.</p>
   </div>
 
   <!-- Verdict -->
   <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Trust</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      Topstep&rsquo;s longevity since 2012, massive community presence (155K+ Discord members, 81K+ on Twitter/X), and partnerships with regulated brokerages like Plus500 and NinjaTrader provide a reasonable level of trust. The 3.6/5 Trustpilot rating from over 13,000 reviews is mixed but reflects the high volume of traders who have used the service. While not being a regulated entity is a concern common to all prop firms, Topstep&rsquo;s established track record and transparent brokerage partnerships are positive indicators.
+      Topstep's longevity since 2012, massive community presence (155K+ Discord members, 81K+ on Twitter/X), and 13,000+ Trustpilot reviews provide a broad trust profile. The 3.6/5 rating is mixed but reflects the high volume of traders who have used the service. Topstep's established track record and long operating history are positive indicators for futures traders evaluating their options.
     </p>
   </div>
 

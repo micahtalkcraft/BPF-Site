@@ -6,38 +6,39 @@
   "foundedYear": 2015,
   "hqCountry": "CZ",
   "evaluation": {
-    "types": ["2-step"],
+    "types": ["1-step", "2-step"],
     "profitTargets": { "phase1": 10, "phase2": 5 },
     "dailyDrawdown": 5,
     "maxDrawdown": 10,
     "minTradingDays": 4,
-    "scalingPlan": true
+    "scalingPlan": true,
+    "notes": "Two products: FTMO Challenge 2-Step and FTMO Challenge 1-Step. 2-Step: 10% Phase 1 target, 5% Phase 2 target, 5% max daily loss (of initial balance), 10% max loss (of initial balance), 4 minimum trading days per phase, unlimited trading period. 1-Step: 10% profit target, 3% max daily loss, 10% max loss (trailing, based on highest end-of-day balance or initial balance whichever is higher), 4 minimum trading days. 1-Step includes Best Day Rule: most profitable day cannot exceed 50% of Positive Days' Profit when passing or qualifying for a reward. Account types: Standard (overnight/weekend/news restrictions on FTMO Account only, not during evaluation) and Swing (no overnight/weekend/news restrictions). Account sizes from $10,000 to $200,000. Max allocation $400,000 during evaluation; Scaling Plan can grow up to $2,000,000. All FTMO Challenge accounts are simulated accounts with fictitious funds."
   },
   "pricing": {
     "challengeFees": [
-      { "accountSize": 10000, "fee": 155, "model": "2-step", "label": "Standard" },
-      { "accountSize": 25000, "fee": 250, "model": "2-step", "label": "Standard" },
-      { "accountSize": 50000, "fee": 345, "model": "2-step", "label": "Standard" },
-      { "accountSize": 100000, "fee": 540, "model": "2-step", "label": "Standard" },
-      { "accountSize": 200000, "fee": 1080, "model": "2-step", "label": "Standard" }
+      { "accountSize": 10000, "fee": 89, "model": "2-step", "label": "2-Step" },
+      { "accountSize": 25000, "fee": 250, "model": "2-step", "label": "2-Step" },
+      { "accountSize": 50000, "fee": 345, "model": "2-step", "label": "2-Step" },
+      { "accountSize": 100000, "fee": 439, "model": "2-step", "label": "2-Step" },
+      { "accountSize": 200000, "fee": 1080, "model": "2-step", "label": "2-Step" }
     ],
     "resetFee": null,
-    "refundPolicy": "Challenge fee refunded with first payout"
+    "refundPolicy": "One-time refundable fee; 100% refund with first reward withdrawal"
   },
   "payouts": {
     "splitMax": 90,
-    "schedule": "Monthly, on-demand after 14 days",
-    "processingTime": "1-2 business days",
+    "schedule": "Bi-weekly",
+    "processingTime": "Average 8 hours",
     "firstPayoutDays": 14,
     "methods": ["bank transfer", "crypto", "Skrill"]
   },
   "rules": {
-    "newsTrading": false,
-    "weekendHolding": false,
+    "newsTrading": true,
+    "weekendHolding": true,
     "copyTrading": false,
     "expertAdvisors": true,
-    "consistencyRule": null,
-    "notes": "Three account types: Standard (1:100 leverage), Aggressive (1:100, doubled targets/drawdowns), Swing (1:30, weekend/news holding allowed). Standard/Aggressive: no weekend holding, no trading within 2 minutes of high-impact news on targeted assets. Swing account exempt from these restrictions. No mandatory stop loss. No lot size limits. Scaling: 25% account increase every 4 months for consistent 10% profit."
+    "consistencyRule": "1-Step Best Day Rule: most profitable day cannot exceed 50% of Positive Days' Profit when passing the challenge or qualifying for a reward.",
+    "notes": "Account types: Standard and Swing. Standard account type: overnight, weekend, and news restrictions apply only on the FTMO Account (not during evaluation). News restriction on Standard FTMO Account: cannot open or close trades within 2 minutes before or after high-impact news on targeted instruments. These restrictions apply only once on the FTMO Account. Swing accounts have no overnight, weekend, or news restrictions. 1-Step evaluation: news trading allowed freely during macroeconomic releases. Only the client may access and perform simulated trades; third parties cannot trade for you or manage your account. EAs and automation tools supported on applicable platforms, subject to FTMO forbidden trading practices and risk management rules. All positions and pending orders must be closed before a phase can be evaluated. Total initial simulated capital across accounts held by you or affiliated parties cannot exceed $400,000 during evaluation. 2-Step reward: starts at 80%, scaling upgrades to 90%. 1-Step reward: 90% of simulated profits on the FTMO Account. Scaling Plan: minimum 4-month cycle, at least 10% total net simulated profit in the 4-month trading window, at least 2 rewards processed, positive balance at time of scale-up; 25% account increase per scale-up, up to $2,000,000. All FTMO Challenge accounts are simulated accounts; trading is not in real financial instruments. FTMO is an educational and technology-driven company offering simulated trading environments, not a broker."
   },
   "markets": {
     "platforms": ["MT4", "MT5", "cTrader", "DXtrade"],
@@ -45,8 +46,8 @@
   },
   "trust": {
     "trustpilotRating": 4.8,
-    "trustpilotCount": 37000,
-    "communitySize": "87,700+ Discord",
+    "trustpilotCount": 39703,
+    "communitySize": "100K+ Discord",
     "notableFlags": []
   },
   "links": { "website": "https://trader.ftmo.com/?affiliates=oMPqzmmKTKnnWsrmRgXc" },
@@ -59,10 +60,10 @@
     "discord": true
   },
   "custom": {
-    "tags": ["Scaling to $2M", "Up to 90% Split", "18+ Languages Support"]
+    "tags": ["Scaling to $2M", "Up to 90% Split", "20 Languages Support"]
   },
   "notes": null,
-  "lastVerifiedAt": "2026-02-24",
-  "lastUpdatedAt": "2026-02-24",
-  "dataSources": ["https://ftmo.com/en/trading-objectives/", "https://ftmo.com/en/faq/"]
+  "lastVerifiedAt": "2026-03-10",
+  "lastUpdatedAt": "2026-03-10",
+  "dataSources": ["https://ftmo.com/en/trading-objectives/", "https://ftmo.com/en/faq/", "https://ftmo.com/en/symbols/", "https://ftmo.com/en/scaling-plan/"]
 }

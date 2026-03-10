@@ -16,15 +16,26 @@ const { section, fallbackBody } = Astro.props;
 
   <!-- Overview -->
   <p class="mb-4">
-    FundedNext Futures runs a single-phase evaluation designed for CME futures traders, with no monthly fees, no activation charges, and challenge fees starting from <strong>$129</strong>. You can use our exclusive FundedNext promo code <strong>PF</strong> at checkout for discounted fees.
+    FundedNext Futures offers three challenge models &mdash; <strong>Rapid</strong>, <strong>Legacy</strong>, and <strong>Bolt</strong> &mdash; each designed for CME futures traders with different risk profiles and trading styles. There are no monthly fees or activation charges, and challenge fees start from <strong>$129</strong>. You can use our exclusive FundedNext promo code <strong>PF</strong> at checkout for discounted fees.
   </p>
 
   <p class="mb-4">
-    Unlike FundedNext's CFD branch, the futures challenge uses exchange-traded products with real CME tick sizes, contract limits, and market volatility. The model is simple: prove you can trade profitably within clear risk rules, and you earn a funded account. There's no time limit &mdash; you can trade at your own pace without pressure.
+    All accounts operate in a <strong>simulated trading environment</strong> using demo accounts with real CME pricing. The models differ in profit targets, loss limits, and risk structure, giving traders the flexibility to choose a program that matches their approach.
   </p>
 
-  <!-- ─── Challenge Overview Table ──────────────────────────────── -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Overview</h3>
+  <!-- Simulated Environment Callout -->
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-8">
+    <p class="text-sm font-bold text-amber-900 mb-1">Simulated Trading Environment</p>
+    <p class="text-sm text-amber-800">
+      FundedNext Futures provides simulated trading challenges using demo accounts. While the environment uses real CME pricing and market conditions, all execution occurs on simulated accounts rather than live exchange accounts.
+    </p>
+  </div>
+
+  <!-- ─── Rapid Challenge Table ──────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Rapid Challenge</h3>
+  <p class="mb-3">
+    The Rapid model uses trailing loss limits and offers account sizes of $25K, $50K, and $100K.
+  </p>
   <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
     <table class="w-full text-sm whitespace-nowrap">
       <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
@@ -37,76 +48,86 @@ const { section, fallbackBody } = Astro.props;
       </thead>
       <tbody class="divide-y divide-slate-100">
         <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-600">Price</td>
-          <td class="px-4 py-3 text-center font-semibold text-slate-900">$129</td>
-          <td class="px-4 py-3 text-center font-semibold text-slate-900">$249</td>
-          <td class="px-4 py-3 text-center font-semibold text-slate-900">$449</td>
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Target</td>
+          <td class="px-4 py-3 text-center text-slate-900">$1,500</td>
+          <td class="px-4 py-3 text-center text-slate-900">$3,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5,000</td>
         </tr>
         <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Trailing Loss Limit</td>
+          <td class="px-4 py-3 text-center text-slate-900">$1,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$2,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$2,500</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Loss Limit Type</td>
+          <td class="px-4 py-3 text-center text-slate-900" colspan="3">Trailing</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ─── Legacy Challenge Table ──────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Legacy Challenge</h3>
+  <p class="mb-3">
+    The Legacy model also uses trailing loss limits and is available in $25K, $50K, and $100K account sizes.
+  </p>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Attribute</th>
+          <th class="px-4 py-3 text-center">$25,000</th>
+          <th class="px-4 py-3 text-center">$50,000</th>
+          <th class="px-4 py-3 text-center">$100,000</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-600">Profit Target</td>
           <td class="px-4 py-3 text-center text-slate-900">$1,250</td>
           <td class="px-4 py-3 text-center text-slate-900">$2,500</td>
           <td class="px-4 py-3 text-center text-slate-900">$6,000</td>
         </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-600">Daily Loss Limit</td>
-          <td class="px-4 py-3 text-center text-slate-900">$600</td>
-          <td class="px-4 py-3 text-center text-slate-900">$1,200</td>
-          <td class="px-4 py-3 text-center text-slate-900">$2,400</td>
-        </tr>
         <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-medium text-slate-600">Max Drawdown</td>
-          <td class="px-4 py-3 text-center text-slate-900">$1,250</td>
-          <td class="px-4 py-3 text-center text-slate-900">$2,500</td>
+          <td class="px-4 py-3 font-medium text-slate-600">Trailing Loss Limit</td>
+          <td class="px-4 py-3 text-center text-slate-900">$1,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$2,000</td>
           <td class="px-4 py-3 text-center text-slate-900">$3,000</td>
         </tr>
         <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-600">Drawdown Type</td>
-          <td class="px-4 py-3 text-center text-slate-900">Trailing (EOD)</td>
-          <td class="px-4 py-3 text-center text-slate-900">Trailing (EOD)</td>
-          <td class="px-4 py-3 text-center text-slate-900">Trailing (EOD)</td>
+          <td class="px-4 py-3 font-medium text-slate-600">Loss Limit Type</td>
+          <td class="px-4 py-3 text-center text-slate-900" colspan="3">Trailing</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ─── Bolt Challenge Table ──────────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Bolt Challenge</h3>
+  <p class="mb-3">
+    The Bolt model is available as a $50K account and uses a fixed daily aggregate loss limit combined with a trailing loss limit.
+  </p>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Attribute</th>
+          <th class="px-4 py-3 text-center">$50,000</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Target</td>
+          <td class="px-4 py-3 text-center text-slate-900">$3,000</td>
         </tr>
         <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-medium text-slate-600">Max Mini Contracts</td>
-          <td class="px-4 py-3 text-center text-slate-900">2</td>
-          <td class="px-4 py-3 text-center text-slate-900">3</td>
-          <td class="px-4 py-3 text-center text-slate-900">5</td>
+          <td class="px-4 py-3 font-medium text-slate-600">Daily Aggregate Loss Limit</td>
+          <td class="px-4 py-3 text-center text-slate-900">$1,000</td>
         </tr>
         <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-600">Profit Share &mdash; Funded</td>
-          <td class="px-4 py-3 text-center font-semibold text-teal-600">100%</td>
-          <td class="px-4 py-3 text-center font-semibold text-teal-600">100%</td>
-          <td class="px-4 py-3 text-center font-semibold text-teal-600">100%</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-medium text-slate-600">Profit Share &mdash; Challenge</td>
-          <td class="px-4 py-3 text-center font-semibold text-teal-600">15%</td>
-          <td class="px-4 py-3 text-center font-semibold text-teal-600">15%</td>
-          <td class="px-4 py-3 text-center font-semibold text-teal-600">15%</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-600">Monthly/Activation Fees</td>
-          <td class="px-4 py-3 text-center font-semibold text-teal-600">None</td>
-          <td class="px-4 py-3 text-center font-semibold text-teal-600">None</td>
-          <td class="px-4 py-3 text-center font-semibold text-teal-600">None</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-medium text-slate-600">Withdrawal Eligibility</td>
-          <td class="px-4 py-3 text-center text-slate-900">5 Days ($100 each)</td>
-          <td class="px-4 py-3 text-center text-slate-900">5 Days ($200 each)</td>
-          <td class="px-4 py-3 text-center text-slate-900">5 Days ($200 each)</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-600">Consistency Rule</td>
-          <td class="px-4 py-3 text-center text-slate-900">40%</td>
-          <td class="px-4 py-3 text-center text-slate-900">40%</td>
-          <td class="px-4 py-3 text-center text-slate-900">40%</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-medium text-slate-600">Reset Fee</td>
-          <td class="px-4 py-3 text-center text-slate-900">10% Discount</td>
-          <td class="px-4 py-3 text-center text-slate-900">10% Discount</td>
-          <td class="px-4 py-3 text-center text-slate-900">10% Discount</td>
+          <td class="px-4 py-3 font-medium text-slate-600">Trailing Loss Limit</td>
+          <td class="px-4 py-3 text-center text-slate-900">$2,000</td>
         </tr>
       </tbody>
     </table>
@@ -115,28 +136,12 @@ const { section, fallbackBody } = Astro.props;
   <!-- Key Specs -->
   <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-6">
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Challenge Type</p>
-      <p class="text-sm font-bold text-slate-800">One Phase</p>
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Challenge Models</p>
+      <p class="text-sm font-bold text-slate-800">Rapid, Legacy, Bolt</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Time Limit</p>
-      <p class="text-sm font-bold text-teal-600">None</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Drawdown Type</p>
-      <p class="text-sm font-bold text-slate-800">Trailing (EOD)</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Consistency Rule</p>
-      <p class="text-sm font-bold text-slate-800">40%</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Funded Profit Split</p>
-      <p class="text-sm font-bold text-teal-600">100%</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Challenge Profit Share</p>
-      <p class="text-sm font-bold text-teal-600">15%</p>
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Account Type</p>
+      <p class="text-sm font-bold text-slate-800">Simulated (Demo)</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
       <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Activation Fee</p>
@@ -151,111 +156,25 @@ const { section, fallbackBody } = Astro.props;
   <!-- Best Suited For -->
   <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-8">
     <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
-    <p class="text-sm text-teal-700">Futures traders who want a straightforward, single-phase challenge with no time pressure, no monthly fees, and a 100% profit split once funded. Ideal for disciplined traders focused on CME markets.</p>
+    <p class="text-sm text-teal-700">Futures traders who want a choice between multiple challenge models with different risk profiles. Rapid and Legacy suit traders who prefer trailing loss limits, while Bolt offers a tighter daily aggregate loss structure.</p>
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════════ -->
   <!-- CHALLENGE DETAILS                                               -->
   <!-- ═══════════════════════════════════════════════════════════════ -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Phase Details</h3>
+  <h3 class="text-lg font-bold text-slate-900 mb-3">How the Challenges Work</h3>
 
   <p class="mb-3">
-    To pass the FundedNext Futures Challenge, you need to reach a profit target while staying inside the daily and overall drawdown limits. You also need to trade consistently &mdash; if more than 40% of your profit comes from one big day, your target will be adjusted higher.
+    To pass a FundedNext Futures challenge, you need to reach the profit target for your chosen model while staying within the loss limits. Rapid and Legacy both use trailing loss limits that adjust based on your account performance. Bolt adds a fixed daily aggregate loss limit on top of the trailing loss limit.
   </p>
 
   <p class="mb-3">
     You can trade both mini and micro contracts. Micros count as one-tenth of a mini, so if your cap is 3 mini contracts, you could instead trade up to 30 micros. This gives more flexibility over position sizing, especially for smaller accounts.
   </p>
 
-  <p class="mb-3">
-    The drawdown is trailing based on your end-of-day balance. Unrealized profits don't move the drawdown buffer &mdash; you need to close trades to lock in gains and raise the buffer.
-  </p>
-
   <p class="mb-6">
-    News trading is allowed during the challenge, and there's no restriction on how long you take. Once you hit the profit target and pass all rule checks, your challenge account is paused at the end of the trading day. After KYC, your funded account is issued.
+    All positions must be closed by end of session &mdash; no overnight holding is permitted. Automated trading (bots, EAs, HFT) is prohibited. Hedging across accounts and latency arbitrage are also not allowed.
   </p>
-
-  <!-- To Pass -->
-  <div class="space-y-3 mb-8">
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Profit Target</p>
-      <p>Reach the required profit level based on your account size ($1,250 / $2,500 / $6,000).</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Drawdown Rules</p>
-      <p>Stay within both daily and max trailing drawdown limits. Drawdown trails based on end-of-day balance.</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Consistency Rule</p>
-      <p>No more than 40% of your profit target can come from a single day. If you exceed that, your target increases.</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Strategy Limits</p>
-      <p>You must trade manually and avoid any prohibited tactics (automated trading, hedging across accounts, latency arbitrage).</p>
-    </div>
-  </div>
-
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- SCALING PLAN                                                    -->
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Futures Account Scaling</h3>
-
-  <p class="mb-3">
-    When you pass the FundedNext Futures Challenge and receive a funded account, you unlock contract scaling. This feature lets you trade more contracts as you grow your account balance.
-  </p>
-
-  <p class="mb-4">
-    Scaling happens automatically based on your end-of-day (EOD) balance. As your profits increase, FundedNext Futures raises the number of contracts you're allowed to trade.
-  </p>
-
-  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
-    <table class="w-full text-sm whitespace-nowrap">
-      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
-        <tr>
-          <th class="px-4 py-3 text-left">Account Size</th>
-          <th class="px-4 py-3 text-left">EOD Balance Range</th>
-          <th class="px-4 py-3 text-center">Max Contracts Allowed</th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-slate-100">
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-semibold text-slate-900" rowspan="2">$25,000</td>
-          <td class="px-4 py-3 text-slate-700">Below $1,500</td>
-          <td class="px-4 py-3 text-center text-slate-900">2 mini / 20 micro</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 text-slate-700">$2,500 and above</td>
-          <td class="px-4 py-3 text-center font-semibold text-teal-600">3 mini / 30 micro</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-semibold text-slate-900" rowspan="3">$50,000</td>
-          <td class="px-4 py-3 text-slate-700">Below $2,000</td>
-          <td class="px-4 py-3 text-center text-slate-900">3 mini / 30 micro</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 text-slate-700">$2,000 &ndash; $3,000</td>
-          <td class="px-4 py-3 text-center text-slate-900">4 mini / 40 micro</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 text-slate-700">$3,000 and above</td>
-          <td class="px-4 py-3 text-center font-semibold text-teal-600">5 mini / 50 micro</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-semibold text-slate-900" rowspan="3">$100,000</td>
-          <td class="px-4 py-3 text-slate-700">Below $2,000</td>
-          <td class="px-4 py-3 text-center text-slate-900">5 mini / 50 micro</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 text-slate-700">$3,000 &ndash; $5,000</td>
-          <td class="px-4 py-3 text-center text-slate-900">7 mini / 70 micro</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 text-slate-700">$5,000 and above</td>
-          <td class="px-4 py-3 text-center font-semibold text-teal-600">10 mini / 100 micro</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
 
   <!-- ═══════════════════════════════════════════════════════════════ -->
   <!-- TRADING RULES                                                   -->
@@ -307,47 +226,28 @@ const { section, fallbackBody } = Astro.props;
           <td class="px-4 py-3 font-semibold text-slate-900">Order Manipulation</td>
           <td class="px-4 py-3 text-slate-700">Spoofing, layering, DOM manipulation, and wash trading are banned</td>
         </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-semibold text-slate-900">News Trading</td>
-          <td class="px-4 py-3 text-slate-700"><span class="text-emerald-600 font-semibold">Unrestricted</span> &mdash; no limitations on trading around news events</td>
-        </tr>
       </tbody>
     </table>
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- FUNDED ACCOUNT RULES                                            -->
+  <!-- SCALING PLAN                                                    -->
   <!-- ═══════════════════════════════════════════════════════════════ -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Funded Account Rules</h3>
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Futures Account Scaling</h3>
 
   <p class="mb-3">
-    Once funded, the rules from the challenge phase carry over. In addition, traders need to complete <strong>Benchmark Days</strong> before requesting payouts.
+    When you pass a FundedNext Futures challenge and receive a funded account, you unlock contract scaling. This feature lets you trade more contracts as you grow your account balance.
   </p>
 
-  <p class="mb-4">
-    A Benchmark Day is a day where you earn a minimum amount in closed profit:
-  </p>
-
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">$25K Account</p>
-      <p>Benchmark Day = <strong>$100</strong> minimum closed profit</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">$50K &amp; $100K Accounts</p>
-      <p>Benchmark Day = <strong>$200</strong> minimum closed profit</p>
-    </div>
-  </div>
-
-  <p class="mb-4">
-    You need at least <strong>5 Benchmark Days</strong> to qualify for withdrawals, which are available every 5 days. Profits from non-benchmark days still count toward your payout, but won't unlock it on their own. Funded traders keep <strong>100%</strong> of their Performance Reward, and there are no fees tied to maintaining the account.
+  <p class="mb-6">
+    Scaling happens automatically based on your end-of-day (EOD) balance. As your profits increase, FundedNext Futures raises the number of contracts you're allowed to trade.
   </p>
 
   <!-- Verdict -->
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Challenges and Rules</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      FundedNext Futures offers a clear, no-frills challenge designed for traders who can manage risk and execute with discipline. There's flexibility in pacing and position sizing, but strict limits on behavior that doesn't reflect real, sustainable trading. The rules are transparent, and the profit targets are reachable &mdash; if you stay consistent.
+      FundedNext Futures stands out by offering three distinct challenge models rather than a one-size-fits-all approach. Rapid and Legacy give traders trailing loss limits with different profit targets, while Bolt adds a tighter daily aggregate structure. The rules are clearly defined, and the simulated trading environment uses real CME pricing. All positions must be closed by end of session, and automated trading is prohibited.
     </p>
   </div>
 
@@ -361,100 +261,38 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-4">
-    FundedNext Futures has a simple, upfront cost structure. You pay a one-time fee to enter the challenge, and after that, your only costs are trading commissions and exchange fees. There are <strong>no activation fees, no monthly charges, and no hidden platform costs</strong> after you start.
+    FundedNext Futures has a simple, upfront cost structure. You pay a one-time fee to enter the challenge, and there are <strong>no activation fees or monthly charges</strong> applied after the initial purchase.
   </p>
 
   <!-- Fee structure overview -->
-  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-8">
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Commission (Per Side)</p>
-      <p class="text-sm font-bold text-slate-800">$3 / contract</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Round-Turn Total</p>
-      <p class="text-sm font-bold text-slate-800">$6 / contract</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Exchange Fee</p>
-      <p class="text-sm font-bold text-slate-800">$1 / contract (close)</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Activation / Monthly</p>
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Activation Fee</p>
       <p class="text-sm font-bold text-teal-600">$0</p>
     </div>
-  </div>
-
-  <!-- Commission Fees -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Commission Fees</h3>
-
-  <p class="mb-3">
-    FundedNext Futures charges a commission of <strong>$3 per contract per side</strong>. This means you pay $3 when you open a trade and another $3 when you close it.
-  </p>
-
-  <p class="mb-6">
-    In total, each completed trade costs <strong>$6 per contract</strong> in commission fees round-turn. Whether you're trading mini or micro futures, the commission is the same. These fees are standard across all markets offered through FundedNext Futures.
-  </p>
-
-  <!-- Exchange & Regulatory Fees -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Exchange &amp; Regulatory Fees</h3>
-
-  <p class="mb-3">
-    On top of commissions, there is a <strong>$1 exchange and regulatory fee</strong> that only applies when you close a trade. You do not pay this fee when you open a position &mdash; only when you exit.
-  </p>
-
-  <p class="mb-6">
-    These fees are set by futures exchanges like the CME Group and regulatory bodies like the CFTC, so they are consistent across all reputable futures firms. They are not controlled by FundedNext Futures, but they are clearly shown in your account.
-  </p>
-
-  <!-- Example Calculation -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Example: Trading 5 Contracts</h3>
-
-  <p class="mb-4">
-    If you trade five contracts, your commission cost would be $30 ($3 to open each contract and $3 to close each one). When you close the trades, you would also pay $5 in exchange and regulatory fees ($1 per contract).
-  </p>
-
-  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
-    <table class="w-full text-sm">
-      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
-        <tr>
-          <th class="px-4 py-3 text-left">Fee Type</th>
-          <th class="px-4 py-3 text-center">Cost Per Contract</th>
-          <th class="px-4 py-3 text-center">Applied When?</th>
-          <th class="px-4 py-3 text-right">Total for 5 Contracts</th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-slate-100">
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-semibold text-slate-900">Commission Fees</td>
-          <td class="px-4 py-3 text-center text-slate-900">$3 per side</td>
-          <td class="px-4 py-3 text-center text-slate-700">Opening + Closing</td>
-          <td class="px-4 py-3 text-right font-semibold text-slate-900">$30</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-semibold text-slate-900">Exchange &amp; Regulatory</td>
-          <td class="px-4 py-3 text-center text-slate-900">$1 per contract</td>
-          <td class="px-4 py-3 text-center text-slate-700">Closing Only</td>
-          <td class="px-4 py-3 text-right font-semibold text-slate-900">$5</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-bold text-slate-900">Total Round-Turn Cost</td>
-          <td class="px-4 py-3 text-center text-slate-400"></td>
-          <td class="px-4 py-3 text-center text-slate-400"></td>
-          <td class="px-4 py-3 text-right font-black text-teal-600">$35</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Monthly Fee</p>
+      <p class="text-sm font-bold text-teal-600">$0</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Reset Fee</p>
+      <p class="text-sm font-bold text-slate-800">10% Discount</p>
+    </div>
   </div>
 
   <!-- Challenge Fee Table -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Entry Fees</h3>
+
+  <p class="mb-4">
+    Challenge fees vary by account size. The fees below are for the Legacy model. Fees for Rapid and Bolt should be confirmed on the FundedNext Futures website.
+  </p>
 
   <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
     <table class="w-full text-sm">
       <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
         <tr>
           <th class="px-4 py-3 text-left">Account Size</th>
-          <th class="px-4 py-3 text-right">One-Time Fee</th>
+          <th class="px-4 py-3 text-right">Legacy Fee</th>
           <th class="px-4 py-3 text-right">Activation Fee</th>
           <th class="px-4 py-3 text-right">Monthly Fee</th>
         </tr>
@@ -482,11 +320,22 @@ const { section, fallbackBody } = Astro.props;
     </table>
   </div>
 
+  <p class="mb-4">
+    If you fail a challenge, you can reset at a <strong>10% discount</strong> on the original challenge fee. All payments are final &mdash; no refunds are offered.
+  </p>
+
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
+    <p class="text-sm font-bold text-amber-900 mb-1">No Refunds</p>
+    <p class="text-sm text-amber-800">
+      All payments are final &mdash; refunds aren't offered. This applies to all challenge models.
+    </p>
+  </div>
+
   <!-- Verdict -->
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Futures Pricing</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      The pricing at FundedNext Futures is straightforward and easy to plan around. You know exactly what you're paying every time you place a trade, with $6 in commissions per contract and a $1 closing fee. There are no extra charges for activation, monthly access, or platform use.
+      The pricing at FundedNext Futures is straightforward. You pay a one-time challenge fee with no activation or monthly charges. Reset fees are discounted at 10% off the original price. Trading commissions and exchange fees should be confirmed on the FundedNext Futures website for current rates.
     </p>
   </div>
 
@@ -504,7 +353,7 @@ const { section, fallbackBody } = Astro.props;
   </p>
 
   <p class="mb-6">
-    While it's not the widest product list out there, it hits all the essential categories with both mini and micro contract sizing available.
+    Both mini and micro contract sizing are available, with micros counting as one-tenth of a mini.
   </p>
 
   <!-- Market Categories -->
@@ -522,7 +371,7 @@ const { section, fallbackBody } = Astro.props;
     <div>
       <h3 class="text-lg font-bold text-slate-900 mb-2">Indices</h3>
       <p class="mb-3">
-        FundedNext covers the big four US indices &mdash; <strong>S&amp;P 500, Nasdaq, Dow Jones, and Russell 2000</strong> &mdash; each with both mini and micro versions. These are among the most actively traded futures contracts globally and are ideal for intraday and swing trading.
+        FundedNext covers the big four US indices &mdash; <strong>S&amp;P 500, Nasdaq, Dow Jones, and Russell 2000</strong> &mdash; each with both mini and micro versions. These are among the most actively traded futures contracts globally and are ideal for intraday trading.
       </p>
     </div>
 
@@ -538,7 +387,7 @@ const { section, fallbackBody } = Astro.props;
     <div>
       <h3 class="text-lg font-bold text-slate-900 mb-2">Energy</h3>
       <p class="mb-3">
-        Crude oil, natural gas, heating oil, and gasoline futures are included, with micro and mini crude contract options. Crude oil in particular is popular among funded traders due to its volatility and clean technical structure.
+        Crude oil, natural gas, heating oil, and gasoline futures are included, with micro and mini crude contract options. Crude oil in particular is popular among futures traders due to its volatility and clean technical structure.
       </p>
     </div>
 
@@ -553,50 +402,17 @@ const { section, fallbackBody } = Astro.props;
   </div>
 
   <!-- Contract Sizing -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Contract Sizing and Limits</h3>
-
-  <p class="mb-4">
-    All traders on FundedNext Futures are subject to contract limits based on account size. Micro contracts are 1/10th the size of mini contracts, and FundedNext treats them interchangeably using that ratio.
-  </p>
-
-  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
-    <table class="w-full text-sm">
-      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
-        <tr>
-          <th class="px-4 py-3 text-left">Account Size</th>
-          <th class="px-4 py-3 text-center">Max Mini Contracts</th>
-          <th class="px-4 py-3 text-center">Max Micro Contracts</th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-slate-100">
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
-          <td class="px-4 py-3 text-center text-slate-900">2</td>
-          <td class="px-4 py-3 text-center text-slate-900">20</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
-          <td class="px-4 py-3 text-center text-slate-900">3</td>
-          <td class="px-4 py-3 text-center text-slate-900">30</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
-          <td class="px-4 py-3 text-center text-slate-900">5</td>
-          <td class="px-4 py-3 text-center text-slate-900">50</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Contract Sizing</h3>
 
   <p class="mb-6">
-    The full range of markets is available in both the evaluation phase and funded accounts. You're not restricted to just one asset class, and the ability to scale your position using micros makes it easier to stay within drawdown rules and adjust your sizing without overexposing the account.
+    All traders on FundedNext Futures are subject to contract limits based on account size. Micro contracts are 1/10th the size of mini contracts, and FundedNext treats them interchangeably using that ratio. Contract limits scale with account size and can increase further through the scaling plan as your balance grows.
   </p>
 
   <!-- Verdict -->
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Markets</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      FundedNext Futures offers a streamlined but well-structured product lineup. It focuses on high-liquidity contracts that suit most trading styles, and includes both mini and micro options for flexible sizing. The contract limits are clear, and the mix of markets is strong enough to support everything from index scalping to energy trend trading. While it's not the widest selection in the prop industry, everything you realistically need is here.
+      FundedNext Futures offers a streamlined but well-structured product lineup. It focuses on high-liquidity contracts that suit most trading styles, and includes both mini and micro options for flexible sizing. The mix of markets is strong enough to support everything from index scalping to energy trend trading. While it's not the widest selection in the prop industry, all the essential categories are covered.
     </p>
   </div>
 
@@ -610,120 +426,39 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-6">
-    FundedNext Futures gives traders access to two professional-grade platforms: <strong>Tradovate</strong> and <strong>NinjaTrader</strong>. Both are widely used in the futures space and offer full CME market access, but they serve different types of traders. The choice of platform doesn't affect your rules or account &mdash; it simply comes down to how you prefer to interact with the market.
+    The specific trading platforms available on FundedNext Futures should be confirmed on their website, as the official futures rules documentation does not detail platform options. The FundedNext Futures website may list available platforms and their features.
   </p>
 
-  <!-- Platform Comparison -->
-  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
-    <table class="w-full text-sm whitespace-nowrap">
-      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
-        <tr>
-          <th class="px-4 py-3 text-left">Feature</th>
-          <th class="px-4 py-3 text-center">Tradovate</th>
-          <th class="px-4 py-3 text-center">NinjaTrader</th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-slate-100">
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-600">Type</td>
-          <td class="px-4 py-3 text-center text-slate-900">Cloud-based (browser)</td>
-          <td class="px-4 py-3 text-center text-slate-900">Desktop (download)</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-medium text-slate-600">Best For</td>
-          <td class="px-4 py-3 text-center text-slate-900">Execution-focused traders</td>
-          <td class="px-4 py-3 text-center text-slate-900">Technical / strategy builders</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-600">DOM Trading</td>
-          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
-          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-medium text-slate-600">Charting</td>
-          <td class="px-4 py-3 text-center text-slate-900">Clean &amp; simple</td>
-          <td class="px-4 py-3 text-center text-slate-900">Advanced, customizable</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-600">Backtesting</td>
-          <td class="px-4 py-3 text-center"><span class="text-red-400 font-semibold">No</span></td>
-          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-medium text-slate-600">Strategy Builder</td>
-          <td class="px-4 py-3 text-center"><span class="text-red-400 font-semibold">No</span></td>
-          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-600">Mobile Support</td>
-          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
-          <td class="px-4 py-3 text-center"><span class="text-red-400 font-semibold">No</span></td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-medium text-slate-600">Learning Curve</td>
-          <td class="px-4 py-3 text-center text-slate-900">Low</td>
-          <td class="px-4 py-3 text-center text-slate-900">Medium &ndash; High</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-600">Platform Fee</td>
-          <td class="px-4 py-3 text-center font-semibold text-teal-600">Free</td>
-          <td class="px-4 py-3 text-center font-semibold text-teal-600">Free</td>
-        </tr>
-      </tbody>
-    </table>
+  <!-- Platform Note -->
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-8">
+    <p class="text-sm font-bold text-amber-900 mb-1">Platform Availability</p>
+    <p class="text-sm text-amber-800">
+      Platform options should be verified directly with FundedNext Futures before purchasing a challenge. Available platforms may vary and are subject to change.
+    </p>
   </div>
 
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- TRADOVATE                                                       -->
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <div class="mb-8">
-    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
-      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">1</span>
-      Tradovate
-    </h3>
+  <h3 class="text-lg font-bold text-slate-900 mb-3">What to Look For</h3>
 
-    <p class="mb-3">
-      Tradovate is a cloud-based platform that runs in your browser, with no downloads or installation needed. It's designed for speed and ease of use, and is a good option if you want a straightforward way to enter and manage trades without dealing with a complex setup.
-    </p>
+  <p class="mb-3">
+    When evaluating the platform offering, key features to consider include:
+  </p>
 
-    <p class="mb-3">
-      It supports full DOM (Depth of Market) trading, clean charting, and a simple layout that makes it easy to monitor price action in real time. You can manage orders directly on the chart or use the ladder interface, which is fast and responsive. Tradovate also works well on mobile, making it useful if you need to check or close trades on the go.
-    </p>
-
-    <p class="mb-4">
-      That said, Tradovate is more execution-focused than analytics-heavy. The charting tools are solid, but not as deep or customizable as other platforms. There's no serious backtesting engine or custom scripting, so if you're looking to build or refine a strategy, it's not the ideal environment. But if your style is more discretionary &mdash; focused on DOM flow, levels, or short-term price action &mdash; it does the job well and gets out of the way.
-    </p>
-
-    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4">
-      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
-      <p class="text-sm text-teal-700">Discretionary, execution-focused traders who want a clean, browser-based setup with mobile access. Ideal for DOM-based trading and short-term price action strategies.</p>
+  <div class="space-y-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">DOM (Depth of Market)</p>
+      <p>Essential for futures traders who want to see order flow and execute from the ladder.</p>
     </div>
-  </div>
-
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- NINJATRADER                                                     -->
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <div class="mb-8">
-    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
-      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">2</span>
-      NinjaTrader
-    </h3>
-
-    <p class="mb-3">
-      NinjaTrader is a downloadable desktop platform that caters to traders who want more control and customizability. It comes with a full charting suite, advanced order management, and the ability to build and test strategies using its own scripting language.
-    </p>
-
-    <p class="mb-3">
-      The platform supports detailed market replay, strategy optimization, and a variety of indicator packages. You can customize everything from chart layouts to bracket orders and run your own logic through the built-in strategy builder. The platform can be resource-intensive, and the interface has a steeper learning curve than Tradovate, but it rewards that time investment with a lot more flexibility.
-    </p>
-
-    <p class="mb-4">
-      NinjaTrader is a better fit if you want to build your edge around repeatable patterns, or if you're already using specific tools or scripts. For traders coming from a technical or engineering background, or anyone who wants to treat their trading like a system to refine over time, this platform is a clear step up.
-    </p>
-
-    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4">
-      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
-      <p class="text-sm text-teal-700">Technically-driven traders who want advanced charting, backtesting, strategy building, and full customizability. Ideal for systematic, analytical approaches to futures trading.</p>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Charting</p>
+      <p>Advanced charting with multiple timeframes and indicator support for technical analysis.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Mobile Access</p>
+      <p>Whether the platform supports mobile trading for monitoring and closing positions on the go.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Platform Fees</p>
+      <p>Whether there are additional platform subscription costs beyond the challenge fee.</p>
     </div>
   </div>
 
@@ -731,7 +466,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Platforms</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      FundedNext Futures offering both Tradovate and NinjaTrader is a strong point. Tradovate is simple, quick, and ideal for execution-focused traders who want to keep things clean and fast. NinjaTrader offers a more in-depth toolset and suits traders who want to build or analyze strategies with more precision. Having the choice lets you work the way you trade, whether that's fast, reactive entries or slower, more structured setups.
+      Platform details for FundedNext Futures should be confirmed directly on their website. We recommend verifying available platforms, any associated fees, and supported features before purchasing a challenge.
     </p>
   </div>
 
@@ -745,28 +480,8 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-6">
-    FundedNext Futures supports a wide range of payment and withdrawal options, including credit cards, e-wallets, and cryptocurrencies. Once funded, traders can withdraw their profit split regularly, provided key rules are met.
+    FundedNext Futures supports a range of payment and withdrawal options for both challenge purchases and profit payouts.
   </p>
-
-  <!-- Payout overview grid -->
-  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
-    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
-      <p class="text-sm font-bold text-teal-600">100%</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Payout Frequency</p>
-      <p class="text-sm font-bold text-slate-800">Every 5 Days</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Payout Guarantee</p>
-      <p class="text-sm font-bold text-teal-600">24 Hours</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Late Penalty</p>
-      <p class="text-sm font-bold text-teal-600">+$1,000</p>
-    </div>
-  </div>
 
   <!-- Challenge Fee Payments -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Fee Payments</h3>
@@ -801,44 +516,15 @@ const { section, fallbackBody } = Astro.props;
   <h3 class="text-lg font-bold text-slate-900 mb-3">Profit Payouts and Withdrawals</h3>
 
   <p class="mb-4">
-    Once you pass the challenge and secure a funded account, you can start withdrawing your profit split under a simple set of rules.
-  </p>
-
-  <div class="space-y-3 mb-6">
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Benchmark Days Required</p>
-      <p>Complete at least <strong>5 Benchmark Days</strong> ($100/day for $25K accounts, $200/day for $50K and $100K accounts)</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Consistency Rule</p>
-      <p>No single day can account for more than <strong>40%</strong> of total profit</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Minimum Withdrawal</p>
-      <p>Accumulate at least <strong>$500</strong> in profits to withdraw the minimum <strong>$250</strong></p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Before 30 Benchmark Days</p>
-      <p>Can withdraw up to <strong>50%</strong> of your profit. After 30 days, full withdrawals are unlocked.</p>
-    </div>
-  </div>
-
-  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
-    <p class="text-sm font-bold text-amber-900 mb-1">Drawdown Reset Warning</p>
-    <p class="text-sm text-amber-800">
-      Withdrawing 100% of your profit will reset your drawdown buffer to your starting balance, leaving no margin for further losses. Plan withdrawals carefully to maintain a safety buffer.
-    </p>
-  </div>
-
-  <!-- 24-Hour Payout Guarantee -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">24-Hour Payout Guarantee</h3>
-
-  <p class="mb-4">
-    Payouts are where FundedNext Futures really sets itself apart. They guarantee to process every withdrawal within <strong>24 hours</strong> of your request. If they miss that window and the delay isn't caused by incorrect information, you'll receive an additional <strong>$1,000 compensation</strong> on top of your payout.
+    Once you pass the challenge and secure a funded account, profit payout details &mdash; including the profit split percentage, payout frequency, and processing times &mdash; should be confirmed on the FundedNext Futures website. The official futures rules documentation provided does not specify these details.
   </p>
 
   <!-- Withdrawal Methods -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Withdrawal Methods</h3>
+
+  <p class="mb-4">
+    Withdrawal options include cryptocurrency-based methods:
+  </p>
 
   <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
     <table class="w-full text-sm">
@@ -877,7 +563,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Payments and Payouts</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      FundedNext Futures offers broad payment flexibility and a profit split structure that rewards consistent trading. Payout timing is fast, and the requirements are clear. The 24-hour payout guarantee with $1,000 penalty for delays is unique in the industry. As long as you plan your withdrawals around the drawdown rules, the system works well for active traders.
+      FundedNext Futures offers broad payment flexibility for challenge purchases with cards, digital wallets, and crypto all accepted. Withdrawal options include multiple crypto-based methods. Specific payout split percentages, frequencies, and processing times should be confirmed directly with FundedNext Futures.
     </p>
   </div>
 
@@ -902,7 +588,7 @@ const { section, fallbackBody } = Astro.props;
   </p>
 
   <p class="mb-4">
-    Response times are fast, and support staff are familiar with both the challenge structure and futures-specific questions. That's important for prop traders working across different time zones or facing time-sensitive issues during trading hours.
+    Response times are fast, and support staff are familiar with both the challenge structure and futures-specific questions. That's important for traders working across different time zones or facing time-sensitive issues during trading hours.
   </p>
 
   <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
@@ -949,8 +635,16 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-6">
-    FundedNext Futures is a new division of the established FundedNext brand, now operating under its own brokerage, <strong>FNmarkets</strong>. This shift to a broker-backed model improves transparency and control over execution, payments, and platform stability. While the futures arm is still growing its own identity, it benefits from the systems, support, and reputation already built by FundedNext's core operation.
+    FundedNext Futures is a division of the established FundedNext brand. It provides <strong>simulated trading challenges using demo accounts</strong> with real CME pricing. While the futures arm is still growing its own identity, it benefits from the systems, support, and reputation already built by FundedNext's core operation.
   </p>
+
+  <!-- Simulated Environment Callout -->
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
+    <p class="text-sm font-bold text-amber-900 mb-1">Simulated Trading Environment</p>
+    <p class="text-sm text-amber-800">
+      FundedNext Futures is an evaluation platform, not a broker. All trading occurs in a simulated environment using demo accounts. The platform should not be confused with a regulated brokerage entity.
+    </p>
+  </div>
 
   <!-- Trustpilot -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">FundedNext Futures TrustPilot Score</h3>
@@ -976,25 +670,6 @@ const { section, fallbackBody } = Astro.props;
     The larger FundedNext community covers a mix of futures and CFD content, but it's primarily geared around the company as a whole rather than the futures program specifically. While the futures division is new, the infrastructure is already in place for education, announcements, and community support as the trader base grows.
   </p>
 
-  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
-      <p class="text-2xl font-black text-slate-900">226K+</p>
-      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Discord (FN Main)</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
-      <p class="text-2xl font-black text-slate-900">254K</p>
-      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Instagram</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
-      <p class="text-2xl font-black text-slate-900">167K</p>
-      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Twitter/X</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
-      <p class="text-2xl font-black text-slate-900">135K</p>
-      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Facebook</p>
-    </div>
-  </div>
-
   <!-- Restricted Countries -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Restricted Countries</h3>
 
@@ -1009,18 +684,11 @@ const { section, fallbackBody } = Astro.props;
     </p>
   </div>
 
-  <!-- Broker-Backed -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Broker-Backed Model</h3>
-
-  <p class="mb-6">
-    With FNmarkets now live, traders can expect more control, better execution, and consistent support &mdash; key factors in building long-term confidence. The broker-backed setup means FundedNext Futures handles its own execution and trading infrastructure instead of relying on external brokers.
-  </p>
-
   <!-- Verdict -->
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trust and Community</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      FundedNext Futures is backed by an established, broker-operated brand with a solid track record. While the futures program is still developing its own community and review footprint, it benefits from FundedNext's infrastructure and trust signals. With FNmarkets now live, traders can expect more control, better execution, and consistent support &mdash; key factors in building long-term confidence.
+      FundedNext Futures is a simulated trading evaluation platform backed by the established FundedNext brand. While the futures program is still developing its own community and review footprint, it benefits from FundedNext's infrastructure and reputation. The platform should not be confused with a regulated brokerage &mdash; all trading occurs in a simulated environment using demo accounts.
     </p>
   </div>
 

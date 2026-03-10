@@ -11,7 +11,8 @@
     "dailyDrawdown": 3,
     "maxDrawdown": 6,
     "minTradingDays": 0,
-    "scalingPlan": true
+    "scalingPlan": true,
+    "notes": "Dual Step uses 9% Phase 1 / 5% Phase 2 (14% total). Dual Step max loss is 7% during Challenge and 8% during Funded phase."
   },
   "pricing": {
     "challengeFees": [
@@ -42,15 +43,15 @@
     "schedule": "Bi-weekly (weekly with add-on)",
     "processingTime": "3 business days",
     "firstPayoutDays": 14,
-    "methods": ["crypto"]
+    "methods": ["crypto", "Rise", "broker account transfer"]
   },
   "rules": {
-    "newsTrading": true,
-    "weekendHolding": null,
-    "copyTrading": true,
+    "newsTrading": false,
+    "weekendHolding": true,
+    "copyTrading": false,
     "expertAdvisors": true,
     "consistencyRule": null,
-    "notes": "Three challenge types: Lightning (1-step, 1:30 leverage), Dual Step (2-step, 1:100 leverage), Nexus (3-step, 1:100 leverage). News trading allowed in challenges, restricted on funded accounts without add-on. EAs allowed with add-on on MT5 only. Copy trading between ThinkCapital accounts only (EA add-on required). HFT prohibited. Minimum one trade every 30 days to avoid inactivity termination."
+    "notes": "Three challenge types: Lightning (1-step, 1:30 leverage), Dual Step (2-step, dynamic up to 1:100 leverage), Nexus (3-step, 1:100 leverage). News trading is prohibited on Lightning, Dual Step Intraday, and Nexus unless a specific add-on applies. Dual Step Swing allows news trading by default. The restriction window is 2 minutes before to 2 minutes after high-impact news. Copy trading is not permitted — accounts participating in or benefiting from copy trading are terminated. EAs are allowed on Lightning, Dual Step, and Nexus. Weekend holding varies by programme: Lightning allowed, Dual Step Intraday not allowed, Dual Step Swing allowed, Nexus allowed. HFT prohibited. Minimum one trade every 30 days to avoid inactivity termination."
   },
   "markets": {
     "platforms": ["MT5", "ThinkTrader"],
@@ -70,7 +71,7 @@
     "email": true
   },
   "custom": {
-    "tags": ["Broker Backed", "Up to 90% Split", "Accepts US Traders", "Fees from $39"]
+    "tags": ["Broker Backed", "Up to 90% Split", "Accepts US Traders", "Fees from $39", "EAs Allowed"]
   },
   "notes": null,
   "lastVerifiedAt": "2026-02-27",

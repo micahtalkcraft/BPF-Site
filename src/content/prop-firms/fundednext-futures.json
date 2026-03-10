@@ -6,39 +6,40 @@
   "foundedYear": 2023,
   "hqCountry": "AE",
   "evaluation": {
-    "types": ["1-step", "other"],
-    "profitTargets": { "phase1": 5 },
-    "dailyDrawdown": 2.4,
-    "maxDrawdown": 5,
+    "types": ["other"],
+    "profitTargets": {},
+    "dailyDrawdown": null,
+    "maxDrawdown": null,
     "minTradingDays": null,
-    "scalingPlan": true
+    "scalingPlan": true,
+    "notes": "Three challenge models: Rapid, Legacy, and Bolt. Rapid profit targets: $1,500 ($25K), $3,000 ($50K), $5,000 ($100K). Legacy profit targets: $1,250 ($25K), $2,500 ($50K), $6,000 ($100K). Bolt profit target: $3,000 ($50K). Rapid trailing loss limits: $1,000 ($25K), $2,000 ($50K), $2,500 ($100K). Legacy trailing loss limits: $1,000 ($25K), $2,000 ($50K), $3,000 ($100K). Bolt: fixed daily aggregate loss limit of $1,000 and trailing loss limit of $2,000 on the $50K account. All accounts operate in a simulated trading environment using demo accounts. Contract limits scale with account size. Reset fee: 10% discount on original challenge fee. All payments are final — no refunds."
   },
   "pricing": {
     "challengeFees": [
-      { "accountSize": 25000, "fee": 129, "model": "1-step" },
-      { "accountSize": 50000, "fee": 249, "model": "1-step" },
-      { "accountSize": 100000, "fee": 449, "model": "1-step" }
+      { "accountSize": 25000, "fee": 129, "model": "other", "label": "Legacy" },
+      { "accountSize": 50000, "fee": 249, "model": "other", "label": "Legacy" },
+      { "accountSize": 100000, "fee": 449, "model": "other", "label": "Legacy" }
     ],
     "resetFee": null,
-    "refundPolicy": null
+    "refundPolicy": "All payments are final — no refunds"
   },
   "payouts": {
-    "splitMax": 100,
-    "schedule": "Every 5 days (after 5 Benchmark Days)",
-    "processingTime": "24 hours (guaranteed)",
-    "firstPayoutDays": 5,
+    "splitMax": null,
+    "schedule": null,
+    "processingTime": null,
+    "firstPayoutDays": null,
     "methods": ["USDT (ERC20)", "USDT (TRC20)", "USDC", "RiseWorks", "TC Pay"]
   },
   "rules": {
-    "newsTrading": true,
+    "newsTrading": null,
     "weekendHolding": false,
     "copyTrading": false,
     "expertAdvisors": false,
-    "consistencyRule": "No single day can exceed 40% of total profit target",
-    "notes": "One-phase futures challenge with no time limit. All positions must be closed by end of session — no overnight holding. Automated trading (bots, EAs, HFT) prohibited. DCA/overleveraging not allowed. Hedging across accounts prohibited. If a contract moves within 2% of CME price limit, trading that instrument must stop for the day. Simulated accounts with real CME pricing. Reset fee: 10% discount on original challenge fee. All payments are final — no refunds."
+    "consistencyRule": null,
+    "notes": "FundedNext Futures provides simulated trading challenges using demo accounts. Three challenge models: Rapid, Legacy, and Bolt — each with different targets, loss limits, and rules. All positions must be closed by end of session — no overnight holding. Automated trading (bots, EAs, HFT) prohibited. DCA/overleveraging not allowed. Hedging across accounts prohibited. If a contract moves within 2% of CME price limit, trading that instrument must stop for the day. Reset fee: 10% discount on original challenge fee. All payments are final — no refunds."
   },
   "markets": {
-    "platforms": ["Tradovate", "NinjaTrader"],
+    "platforms": [],
     "instruments": "Futures — Currencies, Equity Indices, Metals, Energy, Agriculture (CME Group)"
   },
   "trust": {
@@ -57,12 +58,12 @@
     "discord": false
   },
   "custom": {
-    "tags": ["Futures Trading Only", "100% Profit Split", "24h Payout Guarantee", "Broker Backed"],
+    "tags": ["Futures Trading Only", "Three Challenge Models", "Simulated Trading"],
     "discountCode": "PF",
     "discountPercent": 5
   },
   "notes": null,
-  "lastVerifiedAt": "2026-02-24",
-  "lastUpdatedAt": "2026-02-24",
+  "lastVerifiedAt": "2026-03-10",
+  "lastUpdatedAt": "2026-03-10",
   "dataSources": ["https://fundednext.com/futures"]
 }

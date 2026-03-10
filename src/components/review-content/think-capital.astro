@@ -53,7 +53,7 @@ const { section, fallbackBody } = Astro.props;
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-medium text-slate-600">Total Profit Target</td>
           <td class="px-4 py-3 text-center text-slate-900">10%</td>
-          <td class="px-4 py-3 text-center text-slate-900">13%</td>
+          <td class="px-4 py-3 text-center text-slate-900">14%</td>
           <td class="px-4 py-3 text-center text-slate-900">18%</td>
         </tr>
         <tr class="bg-white">
@@ -65,7 +65,7 @@ const { section, fallbackBody } = Astro.props;
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-medium text-slate-600">Max Loss Limit</td>
           <td class="px-4 py-3 text-center text-slate-900">6%</td>
-          <td class="px-4 py-3 text-center text-slate-900">8%</td>
+          <td class="px-4 py-3 text-center text-slate-900">7% (8% funded)</td>
           <td class="px-4 py-3 text-center text-slate-900">8%</td>
         </tr>
         <tr class="bg-white">
@@ -162,7 +162,7 @@ const { section, fallbackBody } = Astro.props;
     Dual Step Challenge
   </h3>
   <p class="mb-4">
-    The Dual Step Challenge is ideal for traders seeking a balance between structure and flexibility. This two-phase evaluation requires an <strong>8% profit target in Phase 1</strong> and a <strong>5% target in Phase 2</strong>, for a total of 13%. Leverage of <strong>1:100</strong> allows for more significant positions.
+    The Dual Step Challenge is ideal for traders seeking a balance between structure and flexibility. This two-phase evaluation requires a <strong>9% profit target in Phase 1</strong> and a <strong>5% target in Phase 2</strong>, for a total of 14%. Leverage is <strong>dynamic up to 1:100</strong>. The max loss limit is <strong>7% during the Challenge phase</strong> and increases to <strong>8% once funded</strong>.
   </p>
   <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
     <table class="w-full text-sm">
@@ -170,60 +170,60 @@ const { section, fallbackBody } = Astro.props;
         <tr>
           <th class="px-4 py-3 text-left">Account Size</th>
           <th class="px-4 py-3 text-right">Fee</th>
-          <th class="px-4 py-3 text-right">Phase 1</th>
-          <th class="px-4 py-3 text-right">Phase 2</th>
-          <th class="px-4 py-3 text-right">Daily Loss</th>
-          <th class="px-4 py-3 text-right">Max Loss</th>
+          <th class="px-4 py-3 text-right">Phase 1 (9%)</th>
+          <th class="px-4 py-3 text-right">Phase 2 (5%)</th>
+          <th class="px-4 py-3 text-right">Daily Loss (4%)</th>
+          <th class="px-4 py-3 text-right">Max Loss (7%)</th>
         </tr>
       </thead>
       <tbody class="divide-y divide-slate-100">
         <tr class="bg-white">
           <td class="px-4 py-3 font-semibold text-slate-900">$5,000</td>
           <td class="px-4 py-3 text-right text-slate-900">$59</td>
-          <td class="px-4 py-3 text-right text-slate-900">$400</td>
+          <td class="px-4 py-3 text-right text-slate-900">$450</td>
           <td class="px-4 py-3 text-right text-slate-900">$250</td>
           <td class="px-4 py-3 text-right text-slate-900">$200</td>
-          <td class="px-4 py-3 text-right text-slate-900">$400</td>
+          <td class="px-4 py-3 text-right text-slate-900">$350</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
           <td class="px-4 py-3 text-right text-slate-900">$99</td>
-          <td class="px-4 py-3 text-right text-slate-900">$800</td>
+          <td class="px-4 py-3 text-right text-slate-900">$900</td>
           <td class="px-4 py-3 text-right text-slate-900">$500</td>
           <td class="px-4 py-3 text-right text-slate-900">$400</td>
-          <td class="px-4 py-3 text-right text-slate-900">$800</td>
+          <td class="px-4 py-3 text-right text-slate-900">$700</td>
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
           <td class="px-4 py-3 text-right text-slate-900">$199</td>
-          <td class="px-4 py-3 text-right text-slate-900">$2,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$2,250</td>
           <td class="px-4 py-3 text-right text-slate-900">$1,250</td>
           <td class="px-4 py-3 text-right text-slate-900">$1,000</td>
-          <td class="px-4 py-3 text-right text-slate-900">$2,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$1,750</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
           <td class="px-4 py-3 text-right text-slate-900">$299</td>
-          <td class="px-4 py-3 text-right text-slate-900">$4,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$4,500</td>
           <td class="px-4 py-3 text-right text-slate-900">$2,500</td>
           <td class="px-4 py-3 text-right text-slate-900">$2,000</td>
-          <td class="px-4 py-3 text-right text-slate-900">$4,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$3,500</td>
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
           <td class="px-4 py-3 text-right text-slate-900">$499</td>
-          <td class="px-4 py-3 text-right text-slate-900">$8,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$9,000</td>
           <td class="px-4 py-3 text-right text-slate-900">$5,000</td>
           <td class="px-4 py-3 text-right text-slate-900">$4,000</td>
-          <td class="px-4 py-3 text-right text-slate-900">$8,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$7,000</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-semibold text-slate-900">$200,000</td>
           <td class="px-4 py-3 text-right text-slate-900">$949</td>
-          <td class="px-4 py-3 text-right text-slate-900">$16,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$18,000</td>
           <td class="px-4 py-3 text-right text-slate-900">$10,000</td>
           <td class="px-4 py-3 text-right text-slate-900">$8,000</td>
-          <td class="px-4 py-3 text-right text-slate-900">$16,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">$14,000</td>
         </tr>
       </tbody>
     </table>
@@ -327,39 +327,25 @@ const { section, fallbackBody } = Astro.props;
       </thead>
       <tbody class="divide-y divide-slate-100">
         <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-900">Expert Advisors (EAs)</td>
-          <td class="px-4 py-3 text-center text-emerald-600 font-bold">&#10004;</td>
-          <td class="px-4 py-3 text-center text-emerald-600 font-bold">&#10004; <span class="text-xs text-slate-400">(MT5)</span></td>
-          <td class="px-4 py-3 text-center text-emerald-600 font-bold">&#10004; <span class="text-xs text-slate-400">(MT5)</span></td>
-          <td class="px-4 py-3 text-right text-slate-900">+25%</td>
-        </tr>
-        <tr class="bg-slate-50">
           <td class="px-4 py-3 font-medium text-slate-900">90% Profit Split</td>
-          <td class="px-4 py-3 text-center text-red-400 font-bold">&#10008;</td>
           <td class="px-4 py-3 text-center text-emerald-600 font-bold">&#10004;</td>
-          <td class="px-4 py-3 text-center text-emerald-600 font-bold">&#10004;</td>
-          <td class="px-4 py-3 text-right text-slate-900">+25%</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-900">News Trading</td>
-          <td class="px-4 py-3 text-center text-red-400 font-bold">&#10008;</td>
           <td class="px-4 py-3 text-center text-emerald-600 font-bold">&#10004;</td>
           <td class="px-4 py-3 text-center text-emerald-600 font-bold">&#10004;</td>
           <td class="px-4 py-3 text-right text-slate-900">+25%</td>
         </tr>
         <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-medium text-slate-900">Weekly Payouts</td>
-          <td class="px-4 py-3 text-center text-red-400 font-bold">&#10008;</td>
+          <td class="px-4 py-3 font-medium text-slate-900">News Trading</td>
           <td class="px-4 py-3 text-center text-emerald-600 font-bold">&#10004;</td>
+          <td class="px-4 py-3 text-center text-slate-700 text-xs">Intraday: &#10008; / Swing: default</td>
           <td class="px-4 py-3 text-center text-emerald-600 font-bold">&#10004;</td>
           <td class="px-4 py-3 text-right text-slate-900">+25%</td>
         </tr>
         <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-900">Classic 10% / 5%</td>
-          <td class="px-4 py-3 text-center text-red-400 font-bold">&#10008;</td>
+          <td class="px-4 py-3 font-medium text-slate-900">Weekly Payouts</td>
           <td class="px-4 py-3 text-center text-emerald-600 font-bold">&#10004;</td>
-          <td class="px-4 py-3 text-center text-red-400 font-bold">&#10008;</td>
-          <td class="px-4 py-3 text-right text-slate-900">+10%</td>
+          <td class="px-4 py-3 text-center text-emerald-600 font-bold">&#10004;</td>
+          <td class="px-4 py-3 text-center text-emerald-600 font-bold">&#10004;</td>
+          <td class="px-4 py-3 text-right text-slate-900">+25%</td>
         </tr>
       </tbody>
     </table>
@@ -409,39 +395,15 @@ const { section, fallbackBody } = Astro.props;
 
   <!-- Commission -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Commission Fees</h3>
-  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
-    <table class="w-full text-sm">
-      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
-        <tr>
-          <th class="px-4 py-3 text-left">Platform</th>
-          <th class="px-4 py-3 text-left">Forex &amp; Metals</th>
-          <th class="px-4 py-3 text-left">Other Assets</th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-slate-100">
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-semibold text-slate-900">MT5</td>
-          <td class="px-4 py-3 text-slate-900">$4 per lot per side ($8 round-trip)</td>
-          <td class="px-4 py-3 text-emerald-600 font-semibold">Commission-free</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-semibold text-slate-900">ThinkTrader</td>
-          <td class="px-4 py-3 text-emerald-600 font-semibold">Commission-free</td>
-          <td class="px-4 py-3 text-emerald-600 font-semibold">Commission-free</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
   <p class="mb-4">
-    While MT5's commission of $4 per side is slightly above the industry average of $3.00–$3.50, the flexibility to choose between raw spreads (MT5) and commission-free trading (ThinkTrader) gives traders options to suit their strategy.
+    Specific commission figures have not been confirmed from official ThinkCapital pricing documentation. ThinkTrader offers commission-free trading across all asset classes, while MT5 provides raw spreads with a commission structure.
   </p>
 
   <!-- Verdict -->
   <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mt-6">
     <p class="text-sm font-bold text-teal-800 mb-1">Verdict on Spreads &amp; Commission</p>
     <p class="text-sm text-teal-700">
-      ThinkCapital gives you flexibility to choose between MT5's raw spreads with a $4 per side commission on forex and metals or ThinkTrader's zero-commission model with wider spreads. MT5 suits forex-heavy strategies, while ThinkTrader is ideal for those seeking simple, cost-free trading across all markets.
+      ThinkCapital gives you flexibility to choose between MT5's raw spreads with commission or ThinkTrader's commission-free model with wider spreads. Each platform suits a different trading strategy.
     </p>
   </div>
 </div>
@@ -457,85 +419,50 @@ const { section, fallbackBody } = Astro.props;
     ThinkCapital provides access to a wide range of financial instruments across multiple asset classes, including forex, indices, commodities, and cryptocurrencies.
   </p>
 
-  <!-- Leverage Table -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Leverage by Market &amp; Challenge</h3>
-  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
-    <table class="w-full text-sm">
-      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
-        <tr>
-          <th class="px-4 py-3 text-left">Market</th>
-          <th class="px-4 py-3 text-center">MT5 Lightning</th>
-          <th class="px-4 py-3 text-center">MT5 Dual/Nexus</th>
-          <th class="px-4 py-3 text-center">ThinkTrader Lightning</th>
-          <th class="px-4 py-3 text-center">ThinkTrader Dual/Nexus</th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-slate-100">
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-semibold text-slate-900">Forex</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:30</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:100</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:30</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:100</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-semibold text-slate-900">Indices</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:5</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:15</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:5</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:15</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-semibold text-slate-900">Gold &amp; Silver</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:10</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:15</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:20</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:30</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-semibold text-slate-900">Oil</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:10</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:15</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:10</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:15</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-semibold text-slate-900">Crypto</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:1</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:1</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:2</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:2</td>
-        </tr>
-      </tbody>
-    </table>
+  <!-- Leverage by Challenge -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Leverage by Challenge</h3>
+  <div class="grid sm:grid-cols-3 gap-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-4 py-3 text-center">
+      <p class="text-xs font-bold text-slate-500 uppercase tracking-wide mb-1">Lightning</p>
+      <p class="text-lg font-black text-slate-800">1:30</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-4 py-3 text-center">
+      <p class="text-xs font-bold text-slate-500 uppercase tracking-wide mb-1">Dual Step</p>
+      <p class="text-lg font-black text-slate-800">Up to 1:100</p>
+      <p class="text-xs text-slate-400">dynamic</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-4 py-3 text-center">
+      <p class="text-xs font-bold text-slate-500 uppercase tracking-wide mb-1">Nexus</p>
+      <p class="text-lg font-black text-slate-800">1:100</p>
+    </div>
   </div>
 
   <!-- Market Descriptions -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Forex</h3>
-  <p class="mb-6">
-    Forex trading is at the core of ThinkCapital's offerings, with major, minor, and exotic currency pairs available on both platforms. Leverage ranges from <strong>1:30</strong> for Lightning to <strong>1:100</strong> for Dual Step and Nexus challenges.
-  </p>
-
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Indices</h3>
-  <p class="mb-6">
-    Popular indices like NAS100, SPX500, and GER40 are available with leverage of <strong>1:5</strong> for Lightning and <strong>1:15</strong> for Dual Step and Nexus accounts.
-  </p>
-
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Commodities</h3>
-  <p class="mb-6">
-    Gold, silver, and oil trading is supported across both platforms. ThinkTrader offers higher leverage for precious metals — up to <strong>1:30</strong> compared to MT5's <strong>1:15</strong> for Dual Step and Nexus accounts, making it more appealing for commodities traders.
-  </p>
-
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Cryptocurrencies</h3>
-  <p class="mb-4">
-    Major cryptocurrencies including BTC, ETH, and BCH are available. ThinkTrader offers slightly higher leverage at <strong>1:2</strong> compared to MT5's <strong>1:1</strong>.
-  </p>
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Available Markets</h3>
+  <div class="space-y-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Forex</p>
+      <p>Major, minor, and exotic currency pairs available on both MT5 and ThinkTrader.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Indices</p>
+      <p>Popular indices including NAS100, SPX500, and GER40.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Commodities</p>
+      <p>Gold, silver, and oil trading supported across both platforms.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Cryptocurrencies</p>
+      <p>Major cryptocurrencies including BTC, ETH, and BCH.</p>
+    </div>
+  </div>
 
   <!-- Verdict -->
   <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mt-6">
     <p class="text-sm font-bold text-teal-800 mb-1">Verdict on Markets &amp; Leverage</p>
     <p class="text-sm text-teal-700">
-      ThinkCapital offers diverse trading instruments across forex, indices, commodities, and cryptocurrencies, with leverage tailored to challenge types and platforms. MT5 provides advanced features for forex and commodities, while ThinkTrader offers higher leverage for metals and a more user-friendly setup.
+      ThinkCapital offers diverse trading instruments across forex, indices, commodities, and cryptocurrencies, with leverage tailored to challenge types. Lightning uses conservative 1:30 leverage, while Dual Step offers dynamic leverage up to 1:100 and Nexus provides 1:100.
     </p>
   </div>
 </div>
@@ -550,12 +477,6 @@ const { section, fallbackBody } = Astro.props;
   <p class="mb-4">
     ThinkCapital offers two trading platforms — <strong>MetaTrader 5 (MT5)</strong> and <strong>ThinkTrader</strong> with TradingView integration. Both platforms provide advanced tools for technical analysis, trade execution, and strategy development.
   </p>
-
-  <div class="rounded-xl bg-amber-50 border border-amber-200 p-4 mb-6">
-    <p class="text-sm text-amber-800">
-      <strong>Note:</strong> US-based traders and those from US territories cannot use MT5 and will be restricted to ThinkTrader due to regulatory restrictions.
-    </p>
-  </div>
 
   <!-- Platform Cards -->
   <div class="grid sm:grid-cols-2 gap-4 mb-6">
@@ -572,7 +493,7 @@ const { section, fallbackBody } = Astro.props;
         </li>
         <li class="flex items-start gap-2">
           <span class="text-emerald-500 mt-0.5">&#10004;</span>
-          Expert Advisors support (add-on)
+          Expert Advisors support
         </li>
         <li class="flex items-start gap-2">
           <span class="text-emerald-500 mt-0.5">&#10004;</span>
@@ -605,7 +526,7 @@ const { section, fallbackBody } = Astro.props;
         </li>
         <li class="flex items-start gap-2">
           <span class="text-emerald-500 mt-0.5">&#10004;</span>
-          Available to US traders
+          Desktop, web, and mobile
         </li>
       </ul>
     </div>
@@ -624,21 +545,25 @@ const { section, fallbackBody } = Astro.props;
       <tbody class="divide-y divide-slate-100">
         <tr class="bg-white">
           <td class="px-4 py-3 font-semibold text-slate-900">News Trading</td>
-          <td class="px-4 py-3 text-slate-700">Allowed during challenge; restricted on funded accounts without add-on (no trades 10 min before/after high-impact news)</td>
+          <td class="px-4 py-3 text-slate-700">Prohibited on Lightning, Dual Step Intraday, and Nexus unless a specific add-on applies. Dual Step Swing allows news trading by default. Restriction window: 2 minutes before to 2 minutes after high-impact news.</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-semibold text-slate-900">Expert Advisors</td>
-          <td class="px-4 py-3 text-slate-700">Permitted with EA add-on on MT5 only</td>
+          <td class="px-4 py-3 text-slate-700">Allowed on Lightning, Dual Step, and Nexus</td>
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-semibold text-slate-900">Copy Trading</td>
-          <td class="px-4 py-3 text-slate-700">Between ThinkCapital accounts only (EA add-on required); external copying prohibited</td>
+          <td class="px-4 py-3 text-slate-700">Not permitted. Accounts participating in or benefiting from copy trading are terminated.</td>
         </tr>
         <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Weekend Holding</td>
+          <td class="px-4 py-3 text-slate-700">Lightning: allowed. Dual Step Intraday: not allowed. Dual Step Swing: allowed. Nexus: allowed.</td>
+        </tr>
+        <tr class="bg-white">
           <td class="px-4 py-3 font-semibold text-slate-900">HFT</td>
           <td class="px-4 py-3 text-slate-700">Prohibited</td>
         </tr>
-        <tr class="bg-white">
+        <tr class="bg-slate-50">
           <td class="px-4 py-3 font-semibold text-slate-900">Inactivity</td>
           <td class="px-4 py-3 text-slate-700">Minimum one trade every 30 days to avoid account termination</td>
         </tr>
@@ -650,7 +575,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mt-6">
     <p class="text-sm font-bold text-teal-800 mb-1">Verdict on Trading Platforms</p>
     <p class="text-sm text-teal-700">
-      ThinkCapital provides strong platform options with MT5 for advanced traders and ThinkTrader integrated with TradingView for user-friendly charting and collaboration. However, US-based traders are restricted to ThinkTrader, as MT5 is unavailable in the region.
+      ThinkCapital provides strong platform options with MT5 for advanced traders and ThinkTrader integrated with TradingView for user-friendly charting and collaboration. EAs are allowed on all challenge types across both platforms.
     </p>
   </div>
 </div>
@@ -687,24 +612,24 @@ const { section, fallbackBody } = Astro.props;
   </div>
 
   <p class="mb-4">
-    For those who prefer more frequent access to funds, a <strong>weekly payout option</strong> is available as an add-on for Dual Step and Nexus accounts. All payouts are processed within <strong>three business days</strong>. Crypto withdrawals typically appear within 24 to 48 hours after processing.
+    For those who prefer more frequent access to funds, a <strong>weekly payout option</strong> is available as an add-on. Lightning also supports 90% profit split and weekly payouts through add-ons or scaling. All payouts are processed within <strong>three business days</strong>.
   </p>
 
   <p class="mb-4">
-    Although there is no minimum payout limit, profits must exceed <strong>$100</strong> to cover transaction fees. ThinkCapital exclusively processes payouts in <strong>cryptocurrency</strong> for now, with bank transfers expected to become available in the near future.
+    Although there is no minimum payout limit, profits must exceed <strong>$100</strong> to cover transaction fees. ThinkCapital supports payouts via <strong>crypto</strong> (including USDT and USDC), <strong>Rise</strong>, and <strong>broker account transfers</strong>.
   </p>
 
   <!-- Payment Methods -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Fee Payments</h3>
   <p class="mb-4">
-    Fees range from <strong>$39</strong> for smaller Nexus accounts to <strong>$949</strong> for larger $200,000 Lightning/Dual Step accounts. Payment methods include <strong>cryptocurrency</strong> (such as USDT) and <strong>credit/debit cards</strong>. Bank transfer options are expected to become available soon.
+    Fees range from <strong>$39</strong> for smaller Nexus accounts to <strong>$949</strong> for larger $200,000 Lightning/Dual Step accounts. Payment methods include <strong>cryptocurrency</strong> (such as USDT and USDC) and <strong>credit/debit cards</strong>.
   </p>
 
   <!-- Verdict -->
   <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mt-6">
     <p class="text-sm font-bold text-teal-800 mb-1">Verdict on Payments &amp; Payouts</p>
     <p class="text-sm text-teal-700">
-      ThinkCapital combines affordable fees and flexible payout options, making it accessible for a wide range of traders. The bi-weekly and weekly payout schedules cater to different needs, while cryptocurrency ensures quick withdrawals.
+      ThinkCapital combines affordable fees and flexible payout options, making it accessible for a wide range of traders. The bi-weekly and weekly payout schedules cater to different needs, with payouts supported via crypto, Rise, and broker account transfers.
     </p>
   </div>
 </div>

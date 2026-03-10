@@ -1,28 +1,43 @@
 {
   "id": "rev-fundednext-futures",
   "propFirmId": "d0000007-0000-0000-0000-000000000007",
-  "summary": "FundedNext Futures scored 84/100 in our 2026 testing, ranking as the second best futures prop firm after FXIFY Futures. This new branch of the popular FundedNext brand uses a simple one-phase challenge with no time limit, real CME futures pricing, and no activation fees. Traders keep 100% of their profit split after passing, with withdrawals processed every five days. FundedNext Futures also offers a brand guarantee — if they don't process your withdrawal within 24 hours, they add $1,000 to your payout. Now backed by FundedNext's own regulated broker, FNmarkets, the firm has greater control over execution and payouts.",
-  "pros": ["100% profit split after funding", "24-hour payout guarantee ($1,000 penalty if missed)", "One-phase challenge with no time limit", "Unrestricted news trading", "Tradovate or NinjaTrader platforms", "Real CME pricing with no activation fees"],
-  "cons": ["Simulated trading only", "Limited futures-specific education", "Not available in Canada", "First withdrawal resets loss limit", "No separate futures community yet"],
-  "bestFor": "Futures traders who want a clean, rule-based setup with no hidden fees, a simple one-phase challenge, and a 24-hour payout guarantee backed by a broker-operated firm",
+  "summary": "With an overall rating of 84/100, FundedNext Futures is a futures-focused evaluation platform offering three challenge models — Rapid, Legacy, and Bolt — each with different profit targets and loss limits. FundedNext Futures offers $25K, $50K, and $100K accounts across Rapid and Legacy, and a $50K account on Bolt. All accounts operate in a simulated trading environment using demo accounts. Challenge fees start from $129 for Legacy. The platform covers CME Group futures including currencies, equity indices, metals, energy, and agriculture. FundedNext Futures is a division of the FundedNext brand.",
+  "pros": [
+    "Three challenge models with different risk profiles",
+    "No activation fees or monthly charges",
+    "Scaling plan increases contract limits as balance grows",
+    "No overnight holding requirement keeps risk defined",
+    "Wide range of CME Group futures markets"
+  ],
+  "cons": [
+    "Simulated trading only — not live exchange execution",
+    "Limited futures-specific education resources",
+    "Not available in Canada",
+    "Automated trading (EAs, bots) prohibited",
+    "No separate futures community yet"
+  ],
+  "bestFor": "Futures traders who want a choice between multiple challenge models with different risk profiles, and prefer a structured, rules-based simulated trading environment",
   "notIdealFor": "Forex or CFD traders — FundedNext Futures is futures-only. Also not ideal for traders who rely on automated trading (EAs prohibited) or want overnight holding",
   "overallScore": 84,
-  "categoryScores": { "challenges": 80, "spreads": 80, "markets": 80, "payouts": 100, "platforms": 80, "trust": 80 },
+  "categoryScores": { "challenges": 80, "spreads": 80, "markets": 80, "payouts": 80, "platforms": 70, "trust": 80 },
   "categorySections": {
-    "challenges": "FundedNext Futures runs a single-phase evaluation designed for CME futures traders, with no monthly fees, no activation charges, and challenge fees starting from $129. Account sizes are $25K, $50K, and $100K with profit targets of $1,250, $2,500, and $6,000 respectively. The drawdown is trailing based on end-of-day balance. A 40% consistency rule prevents excessive profit concentration in one day. After passing, traders earn a funded account with 100% profit split. The scaling plan automatically increases contract limits as balance grows. FundedNext Futures scored 8/10 for challenges.",
-    "spreads": "FundedNext Futures charges $3 per contract per side ($6 round-turn commission) plus a $1 exchange and regulatory fee applied only on closing. There are no activation fees, no monthly charges, and no hidden platform costs. The fee structure is straightforward and consistent across all markets. For five contracts, the total round-turn cost would be $35. FundedNext Futures scored 8/10 for pricing.",
-    "markets": "FundedNext Futures gives traders access to a focused range of CME Group products covering currencies, equity indices, metals, energy, and agriculture. Both mini and micro contracts are available, with micros counting as one-tenth of a mini. Contract limits scale with account size: 2 minis ($25K), 3 minis ($50K), 5 minis ($100K). The selection covers all essential categories for most futures trading strategies. FundedNext Futures scored 8/10 for markets.",
-    "platforms": "FundedNext Futures offers two professional-grade platforms: Tradovate (cloud-based, browser-friendly, DOM trading) and NinjaTrader (desktop, advanced charting, strategy building). Both provide full CME market access. Tradovate is ideal for execution-focused traders, while NinjaTrader suits technically-driven traders who want customizability and backtesting. FundedNext Futures scored 8/10 for platforms.",
-    "payouts": "Funded traders keep 100% of their profits with no split. The 24-hour payout guarantee with $1,000 penalty for delays sets FundedNext Futures apart. Withdrawals are available every 5 days after completing 5 Benchmark Days. Payment methods include USDT, USDC, RiseWorks, and TC Pay. Challenge fees can be paid via Visa, Mastercard, PayPal, Skrill, Apple Pay, Google Pay, AstroPay, and various cryptocurrencies. FundedNext Futures scored 10/10 for payouts.",
-    "support": "FundedNext Futures provides 24/7 live support via live chat and email. Response times are fast and support staff are familiar with futures-specific questions. At this stage, educational resources are minimal with no dedicated learning portal for futures traders. The parent FundedNext brand has a history of building community content through Discord and YouTube. FundedNext Futures scored 8/10 for support.",
-    "trust": "FundedNext Futures is a new division of the established FundedNext brand, operating under its own brokerage FNmarkets. This broker-backed model improves transparency over execution and payments. The futures arm doesn't have a standalone Trustpilot rating yet but benefits from FundedNext's established reputation. The firm is available in most regions but restricted in Canada, Malta, Cyprus (North), Slovenia, and Romania. FundedNext Futures scored 8/10 for trust."
+    "challenges": "custom",
+    "spreads": "custom",
+    "markets": "custom",
+    "platforms": "custom",
+    "payouts": "custom",
+    "support": "custom",
+    "trust": "custom"
   },
-  "verdictBlocks": [{ "heading": "Our Final Verdict On FundedNext Futures", "body": "FundedNext Futures is one of the best futures prop firms if you want a clean, rule-based setup with no hidden fees or complicated rules. The one-phase challenge is simple to follow, the scaling model is practical, and the 24-hour payout guarantee, with a $1,000 penalty if missed, shows they're serious about supporting funded traders.\n\nWhile the futures division is still developing its own education tools and community features, the core offer is strong. Now backed by FundedNext's own regulated broker, FNmarkets, the firm has greater control over execution and payouts, something few futures prop firms offer. If you're looking for a reliable prop firm that prioritizes consistency and fast access to profits, FundedNext Futures is a standout choice." }],
+  "verdictBlocks": [{ "heading": "Our Final Verdict On FundedNext Futures", "body": "FundedNext Futures is a simulated futures trading evaluation platform that offers three distinct challenge models — Rapid, Legacy, and Bolt — each with different profit targets and loss limits. This gives traders the ability to choose a program that suits their risk tolerance and trading style.\n\nThe platform covers a solid range of CME Group futures including currencies, equity indices, metals, energy, and agriculture. Scaling plans are available for funded accounts, and no activation fees or monthly charges are applied beyond the initial challenge fee.\n\nWhile the futures division is still developing its own education tools and community features, the core evaluation structure is clear and well-defined. All accounts operate in a simulated trading environment using demo accounts. If you're looking for a futures evaluation platform with multiple challenge options and defined risk rules, FundedNext Futures is worth considering." }],
   "faq": [
-    { "q": "How are FundedNext and FundedNext Futures different?", "a": "FundedNext focuses on CFDs for prop trading, while FundedNext Futures is built specifically for futures traders and markets. FundedNext offers simulated CFD environments and is known for being the best forex prop firm, whereas FundedNext Futures uses real CME exchange pricing on mini and micro futures, and ranks as the second best futures prop firm. Each branch has its own rules, challenges, and payout structures, but both operate using simulated accounts with real market conditions, and are now powered by FundedNext's own brokerage, FNmarkets." },
-    { "q": "Does FundedNext Futures accept US clients?", "a": "Yes, FundedNext Futures accepts traders from the United States. Unlike many prop firms that restrict US applicants due to regulatory issues, FundedNext Futures is open to US residents who meet their basic eligibility requirements. Traders in the US can join, complete the futures challenge, and request payouts under the same rules as international participants, with full access to platforms like Tradovate and NinjaTrader." },
-    { "q": "What is the best prop firm for futures?", "a": "The best futures prop firms are FXIFY Futures, scoring 85/100, and FundedNext Futures, scoring 84/100. FXIFY Futures offers up to 100% profit splits, no evaluation time limits, and built-in TradingView charts. FundedNext Futures stands out with its 24-hour payout guarantee and one-step challenge." }
+    { "q": "How are FundedNext and FundedNext Futures different?", "a": "FundedNext focuses on CFDs, while FundedNext Futures is built specifically for futures traders. FundedNext Futures offers three challenge models (Rapid, Legacy, and Bolt) with CME Group futures covering currencies, equity indices, metals, energy, and agriculture. Both branches operate using simulated accounts with real market pricing. Each has its own rules, challenges, and payout structures." },
+    { "q": "Does FundedNext Futures accept US clients?", "a": "Yes, FundedNext Futures accepts traders from the United States. Traders in the US can join, complete a futures challenge, and request payouts under the same rules as international participants." },
+    { "q": "What challenge models does FundedNext Futures offer?", "a": "FundedNext Futures offers three models: Rapid (profit targets of $1,500/$3,000/$5,000 for $25K/$50K/$100K accounts), Legacy (profit targets of $1,250/$2,500/$6,000), and Bolt ($3,000 target on a $50K account). Each model has different trailing loss limits and rules." },
+    { "q": "Is FundedNext Futures simulated or live trading?", "a": "FundedNext Futures provides simulated trading challenges using demo accounts. The trading environment uses real CME pricing and market conditions, but execution occurs on simulated accounts rather than live exchange accounts." }
   ],
+  "verified": true,
+  "flagged": false,
   "methodologyVersion": "1.0",
-  "lastReviewedAt": "2026-02-24"
+  "lastReviewedAt": "2026-03-10"
 }

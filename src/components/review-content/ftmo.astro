@@ -16,65 +16,68 @@ const { section, fallbackBody } = Astro.props;
 
   <!-- Overview -->
   <p class="mb-4">
-    FTMO's audition fees vary depending on the account size and type you select, ranging from <strong>&euro;155</strong> for a 10K account up to <strong>&euro;1,080</strong> for a 200K account. These fees cover the entire evaluation process, including both the Challenge and Verification phases. Fees are refundable upon successful completion.
+    FTMO now offers two evaluation products &mdash; <strong>FTMO Challenge: 2-Step</strong> and <strong>FTMO Challenge: 1-Step</strong>. All FTMO Challenge accounts are simulated accounts with fictitious funds, and trading is not in real financial instruments. FTMO is an educational and technology-driven company offering simulated trading environments, not a broker.
+  </p>
+  <p class="mb-4">
+    Current entry pricing starts at <strong>&euro;89</strong> for the $10,000 2-Step challenge. The FTMO Challenge fee is a one-time refundable fee &mdash; you receive a 100% refund of your initial fee with your first reward withdrawal.
   </p>
 
   <!-- Fee Table -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Audition Fees</h3>
+  <h3 class="text-lg font-bold text-slate-900 mb-3">2-Step Challenge Fees</h3>
   <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
     <table class="w-full text-sm">
       <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
         <tr>
           <th class="px-4 py-3 text-left">Account Size</th>
-          <th class="px-4 py-3 text-right">Audition Fee</th>
+          <th class="px-4 py-3 text-right">Challenge Fee</th>
         </tr>
       </thead>
       <tbody class="divide-y divide-slate-100">
         <tr class="bg-white">
-          <td class="px-4 py-3 font-semibold text-slate-900">&euro;10,000</td>
-          <td class="px-4 py-3 text-right text-slate-900">&euro;155</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">$10,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">&euro;89</td>
         </tr>
         <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-semibold text-slate-900">&euro;25,000</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
           <td class="px-4 py-3 text-right text-slate-900">&euro;250</td>
         </tr>
         <tr class="bg-white">
-          <td class="px-4 py-3 font-semibold text-slate-900">&euro;50,000</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
           <td class="px-4 py-3 text-right text-slate-900">&euro;345</td>
         </tr>
         <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-semibold text-slate-900">&euro;100,000</td>
-          <td class="px-4 py-3 text-right text-slate-900">&euro;540</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+          <td class="px-4 py-3 text-right text-slate-900">&euro;439</td>
         </tr>
         <tr class="bg-white">
-          <td class="px-4 py-3 font-semibold text-slate-900">&euro;200,000</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">$200,000</td>
           <td class="px-4 py-3 text-right text-slate-900">&euro;1,080</td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <!-- Account Types -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Account Types</h3>
+  <!-- Evaluation Products -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Evaluation Products</h3>
 
   <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- STANDARD ACCOUNT                                                -->
+  <!-- 2-STEP                                                          -->
   <!-- ═══════════════════════════════════════════════════════════════ -->
   <div class="mb-8">
     <h4 class="text-base font-bold text-slate-900 mb-3 flex items-center gap-2">
       <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">1</span>
-      Standard Account
+      FTMO Challenge: 2-Step
     </h4>
     <p class="mb-4">
-      The Standard Account is FTMO's default option, designed with typical profit targets and risk limits. Traders need to achieve a <strong>10% profit target</strong> during the Challenge, dropping to <strong>5%</strong> during Verification. Daily loss limit is <strong>5%</strong>, maximum overall loss is <strong>10%</strong>. Ideal for traders who prefer a balanced approach with moderate risk.
+      The 2-Step evaluation consists of the <strong>FTMO Challenge</strong> (Phase 1) and <strong>Verification</strong> (Phase 2). The trading period is <strong>unlimited</strong>, with a minimum of <strong>4 trading days</strong> per phase. Max Daily Loss is <strong>5% of initial balance</strong> and resets daily from midnight CE(S)T account balance context. Max Loss is <strong>10% of initial balance</strong>.
     </p>
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-3">
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Challenge Target</p>
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 1 Target</p>
         <p class="text-sm font-bold text-slate-800">10%</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Verification Target</p>
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 2 Target</p>
         <p class="text-sm font-bold text-slate-800">5%</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
@@ -82,78 +85,106 @@ const { section, fallbackBody } = Astro.props;
         <p class="text-sm font-bold text-slate-800">5%</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Overall Loss</p>
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Loss</p>
         <p class="text-sm font-bold text-slate-800">10%</p>
       </div>
     </div>
+    <p class="text-xs text-slate-500 mb-4">
+      On the FTMO Account, 2-Step rewards start at <strong>80%</strong> and can increase to <strong>90%</strong> through the Scaling Plan.
+    </p>
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- AGGRESSIVE ACCOUNT                                              -->
+  <!-- 1-STEP                                                          -->
   <!-- ═══════════════════════════════════════════════════════════════ -->
   <div class="mb-8">
     <h4 class="text-base font-bold text-slate-900 mb-3 flex items-center gap-2">
       <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">2</span>
-      Aggressive Account
+      FTMO Challenge: 1-Step
     </h4>
     <p class="mb-4">
-      The Aggressive Account is structured for strategies that aim for larger profits but carry higher risks. The profit target is increased to <strong>20%</strong> during the Challenge and <strong>10%</strong> during Verification, with a <strong>10% daily loss limit</strong> and <strong>20% maximum overall loss</strong>. Suitable for traders comfortable with higher drawdowns.
+      The 1-Step evaluation is a single-phase challenge. The Maximum Daily Loss is <strong>3%</strong> and the Maximum Loss is <strong>10%</strong>, calculated as a trailing-style drawdown based on the highest end-of-day balance or initial balance, whichever is higher. Minimum <strong>4 trading days</strong> required.
+    </p>
+    <p class="mb-4">
+      The 1-Step includes a <strong>Best Day Rule</strong>: the most profitable day cannot exceed <strong>50% of Positive Days' Profit</strong> when passing the challenge or qualifying for a reward.
     </p>
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-3">
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Challenge Target</p>
-        <p class="text-sm font-bold text-slate-800">20%</p>
-      </div>
-      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Verification Target</p>
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
         <p class="text-sm font-bold text-slate-800">10%</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Daily Loss</p>
+        <p class="text-sm font-bold text-slate-800">3%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Loss (Trailing)</p>
         <p class="text-sm font-bold text-slate-800">10%</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Overall Loss</p>
-        <p class="text-sm font-bold text-slate-800">20%</p>
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Best Day Rule</p>
+        <p class="text-sm font-bold text-amber-600">50% cap</p>
       </div>
     </div>
+    <p class="text-xs text-slate-500 mb-4">
+      On the FTMO Account for 1-Step, the reward is <strong>90%</strong> of simulated profits.
+    </p>
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- SWING ACCOUNT                                                    -->
+  <!-- ACCOUNT TYPES                                                    -->
   <!-- ═══════════════════════════════════════════════════════════════ -->
-  <div class="mb-8">
-    <h4 class="text-base font-bold text-slate-900 mb-3 flex items-center gap-2">
-      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">3</span>
-      Swing Account
-    </h4>
-    <p class="mb-4">
-      The Swing Account is specifically designed for traders who hold positions over longer periods, including weekends and during significant news events. It follows the same profit targets and loss limits as the Standard account, but operates with reduced leverage &mdash; up to <strong>1:30</strong> for forex pairs, compared to 1:100 on Standard and Aggressive accounts.
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Account Types: Standard vs Swing</h3>
+  <p class="mb-4">
+    Both 1-Step and 2-Step challenges offer <strong>Standard</strong> and <strong>Swing</strong> account types. These determine the trading conditions on the FTMO Account, not during the evaluation phase.
+  </p>
+
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Condition</th>
+          <th class="px-4 py-3 text-center">Standard</th>
+          <th class="px-4 py-3 text-center">Swing</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Overnight Holding (FTMO Account)</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-teal-600 font-bold">&#10003;</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Weekend Holding (FTMO Account)</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-teal-600 font-bold">&#10003;</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">News Trading (FTMO Account)</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span> <span class="text-xs text-slate-500">2-min rule</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-teal-600 font-bold">&#10003;</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">During Evaluation</td>
+          <td class="px-4 py-3 text-center" colspan="2"><span class="text-xs text-slate-600">These restrictions do not apply during evaluation</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="rounded-xl border-l-4 border-amber-400 bg-amber-50/60 px-5 py-4 mb-8">
+    <p class="text-sm text-slate-700 leading-relaxed">
+      <strong>Important:</strong> Overnight, weekend, and news restrictions apply only to the <strong>Standard account type</strong> and only once on the <strong>FTMO Account</strong>, not during the evaluation phase. The 1-Step evaluation allows news trading freely during macroeconomic releases. Swing accounts have no overnight, weekend, or news restrictions at any stage.
     </p>
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-3">
-      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Weekend Holding</p>
-        <p class="text-sm font-bold text-teal-600">Allowed</p>
-      </div>
-      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">News Trading</p>
-        <p class="text-sm font-bold text-teal-600">Allowed</p>
-      </div>
-      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Forex Leverage</p>
-        <p class="text-sm font-bold text-slate-800">1:30</p>
-      </div>
-      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Same Targets As</p>
-        <p class="text-sm font-bold text-slate-800">Standard</p>
-      </div>
-    </div>
   </div>
 
   <!-- ─── Scaling Plan ────────────────────────────────────────────── -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Scaling &amp; Increased Profit Splits</h3>
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Scaling Plan</h3>
   <p class="mb-4">
-    FTMO's automatic scaling system increases account balance by <strong>25% every four months</strong> for consistent performers. To qualify, traders must achieve a 10% profit over four consecutive months (or 2.5% per month average for Standard accounts). As your account scales up, the profit split can increase from the standard 80% to <strong>90%</strong>.
+    FTMO's Scaling Plan increases account balance by <strong>25% per scale-up</strong>. To qualify, traders must complete a minimum <strong>4-month cycle</strong>, achieve at least <strong>10% total net simulated profit</strong> in the 4-month trading window, have at least <strong>2 rewards processed</strong>, and maintain a <strong>positive balance</strong> at time of scale-up.
+  </p>
+  <p class="mb-4">
+    Traders can reach a maximum FTMO Account allocation of <strong>$400,000</strong> before scaling. The Scaling Plan can grow accounts up to <strong>$2,000,000</strong>. 2-Step rewards start at 80% and the Scaling Plan upgrades to <strong>90%</strong>.
   </p>
 
   <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
@@ -162,108 +193,56 @@ const { section, fallbackBody } = Astro.props;
       <p class="text-sm font-bold text-teal-600">25%</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Scaling Interval</p>
-      <p class="text-sm font-bold text-slate-800">Every 4 months</p>
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Cycle</p>
+      <p class="text-sm font-bold text-slate-800">4 months</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
       <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Allocation</p>
       <p class="text-sm font-bold text-teal-600">$2,000,000</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Profit Split</p>
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Reward Split</p>
       <p class="text-sm font-bold text-teal-600">90%</p>
     </div>
   </div>
 
-  <!-- ─── How to Pass ────────────────────────────────────────────── -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">How to Pass the FTMO Challenge</h3>
-  <p class="mb-4">
-    FTMO's evaluation consists of two key steps: the <strong>FTMO Challenge</strong> and <strong>FTMO Verification</strong>. Minimum 4 trading days required in each phase. Loss limits are dynamic and adjust proportionally to your account balance.
-  </p>
-
-  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-4">
-    <table class="w-full text-sm whitespace-nowrap">
-      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
-        <tr>
-          <th class="px-4 py-3 text-left">Rule</th>
-          <th class="px-4 py-3 text-center">Standard</th>
-          <th class="px-4 py-3 text-center">Aggressive</th>
-          <th class="px-4 py-3 text-center">Swing</th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-slate-100">
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-600">Challenge Profit Target</td>
-          <td class="px-4 py-3 text-center text-slate-900">10%</td>
-          <td class="px-4 py-3 text-center text-slate-900">20%</td>
-          <td class="px-4 py-3 text-center text-slate-900">10%</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-medium text-slate-600">Verification Target</td>
-          <td class="px-4 py-3 text-center text-slate-900">5%</td>
-          <td class="px-4 py-3 text-center text-slate-900">10%</td>
-          <td class="px-4 py-3 text-center text-slate-900">5%</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-600">Max Daily Loss</td>
-          <td class="px-4 py-3 text-center text-slate-900">5%</td>
-          <td class="px-4 py-3 text-center text-slate-900">10%</td>
-          <td class="px-4 py-3 text-center text-slate-900">5%</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-medium text-slate-600">Max Overall Loss</td>
-          <td class="px-4 py-3 text-center text-slate-900">10%</td>
-          <td class="px-4 py-3 text-center text-slate-900">20%</td>
-          <td class="px-4 py-3 text-center text-slate-900">10%</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-600">Leverage (Forex)</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:100</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:100</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:30</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-medium text-slate-600">Weekend Holding</td>
-          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span></td>
-          <td class="px-4 py-3 text-center"><span class="text-teal-600 font-bold">&#10003;</span></td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-600">News Trading</td>
-          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span> <span class="text-xs text-slate-500">2-min rule</span></td>
-          <td class="px-4 py-3 text-center"><span class="text-red-400 font-bold">&#10007;</span> <span class="text-xs text-slate-500">2-min rule</span></td>
-          <td class="px-4 py-3 text-center"><span class="text-teal-600 font-bold">&#10003;</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- Other Rules -->
+  <!-- ─── Other Rules ───────────────────────────────────────────── -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Other Rules</h3>
   <div class="space-y-3 mb-6">
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">No Mandatory Stop Loss</p>
-      <p>You are not required to use a stop loss during the Challenge, Verification, or as a funded trader.</p>
+      <p class="font-bold text-slate-900 mb-1">News Trading Restriction (Standard FTMO Account only)</p>
+      <p>Cannot open or close trades on targeted instruments within <strong>2 minutes</strong> before or after high-impact news releases. This applies only to the Standard account type on the FTMO Account, not during evaluation. Swing accounts are exempt.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">No Lot Size Limits</p>
-      <p>There is no limit on the number of lots you can trade.</p>
+      <p class="font-bold text-slate-900 mb-1">Trade Access</p>
+      <p>Only the client may access and perform simulated trades. Third parties cannot trade for you or manage your account.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">News Trading Restriction (Standard &amp; Aggressive)</p>
-      <p>Cannot open or close trades on targeted assets within <strong>2 minutes</strong> before or after significant news releases. Non-targeted assets are exempt. FTMO provides an economic calendar listing restricted events.</p>
+      <p class="font-bold text-slate-900 mb-1">Phase Evaluation</p>
+      <p>FTMO will not evaluate a phase until all simulated trades and pending orders are closed.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Multiple Accounts</p>
-      <p>Traders can manage multiple accounts with a total combined limit of <strong>$400,000</strong> before scaling adjustments.</p>
+      <p>The total Initial Simulated Capital across accounts held by you or affiliated parties cannot exceed <strong>$400,000</strong> during the evaluation process.</p>
     </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Automation</p>
+      <p>FTMO platforms support automation tools such as EAs on supported platforms, but trading remains subject to FTMO's forbidden trading practices and risk management rules.</p>
+    </div>
+  </div>
+
+  <!-- Simulated environment callout -->
+  <div class="rounded-xl border-l-4 border-amber-400 bg-amber-50/60 px-5 py-4 mb-6">
+    <p class="text-sm text-slate-700 leading-relaxed">
+      <strong>Simulated environment:</strong> All FTMO Challenge accounts are simulated accounts with fictitious funds. Trading is not in real financial instruments. FTMO is an educational and technology-driven company, not a broker.
+    </p>
   </div>
 
   <!-- Verdict -->
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
-    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on FTMO Challenges &amp; Accounts</p>
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on FTMO Challenges</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      FTMO offers account sizes from &euro;10,000 to &euro;200,000, with fees ranging from &euro;155 to &euro;1,080. The evaluation process includes two phases &mdash; Challenge and Verification. The Standard account suits balanced trading, the Aggressive account allows for higher risk, and the Swing account offers flexibility for longer-term trades with reduced leverage. FTMO's scaling feature increases account sizes and profit splits for consistent traders, making it a solid option for those looking for long-term growth.
+      FTMO offers two evaluation products &mdash; 1-Step and 2-Step &mdash; with fees starting from &euro;89 for the $10,000 2-Step challenge. The 2-Step provides an unlimited trading period with standard drawdown rules, while the 1-Step uses a tighter 3% daily loss limit, trailing max loss, and the Best Day Rule. Account flexibility comes from Standard vs Swing conditions, and the Scaling Plan can grow accounts up to $2,000,000.
     </p>
   </div>
 
@@ -277,72 +256,26 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-6">
-    FTMO operates differently from many other prop trading firms by not using a third-party forex broker. Instead, they partner with various liquidity providers to offer an <strong>institutional data feed</strong>, ensuring direct market access (DMA) and RAW spreads. The funds on funded accounts are virtual &mdash; FTMO mirrors your trades on their own live accounts.
+    FTMO offers RAW spreads across its trading platforms. All FTMO Challenge accounts are simulated accounts with fictitious funds, and the trading environment is designed to provide competitive execution conditions.
   </p>
 
-  <!-- Forex Spreads -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Forex Spreads</h3>
-  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
-    <table class="w-full text-sm">
-      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
-        <tr>
-          <th class="px-4 py-3 text-left">Currency Pair</th>
-          <th class="px-4 py-3 text-right">Typical Spread</th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-slate-100">
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-semibold text-slate-900">EUR/USD</td>
-          <td class="px-4 py-3 text-right font-semibold text-teal-600">0.22 pips</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-semibold text-slate-900">GBP/USD</td>
-          <td class="px-4 py-3 text-right text-slate-900">0.65 pips</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-semibold text-slate-900">USD/JPY</td>
-          <td class="px-4 py-3 text-right text-slate-900">0.27 pips</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- Commission Fees -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Commission Fees</h3>
+  <!-- Commission Info -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Commission Structure</h3>
   <p class="mb-4">
-    FTMO charges commissions on trades, unlike some other prop firms that absorb these costs.
+    The official FTMO Symbols page shows a commission of <strong>$5.000</strong> on listed forex pairs. Commission rates may vary by instrument and should be verified against the current official symbol specifications on the FTMO Symbols page before trading.
   </p>
 
-  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
-    <table class="w-full text-sm">
-      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
-        <tr>
-          <th class="px-4 py-3 text-left">Asset Class</th>
-          <th class="px-4 py-3 text-right">Commission</th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-slate-100">
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-semibold text-slate-900">Forex</td>
-          <td class="px-4 py-3 text-right text-slate-900">$3 per standard lot (round trip)</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-semibold text-slate-900">Equities</td>
-          <td class="px-4 py-3 text-right text-slate-900">0.0040% of volume</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-semibold text-slate-900">Metals</td>
-          <td class="px-4 py-3 text-right text-slate-900">0.0010% of volume</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="rounded-xl border-l-4 border-amber-400 bg-amber-50/60 px-5 py-4 mb-6">
+    <p class="text-sm text-slate-700 leading-relaxed">
+      <strong>Note:</strong> Specific spread and commission figures should be verified against the current official FTMO Symbols page, as these may change over time.
+    </p>
   </div>
 
   <!-- Verdict -->
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Spreads &amp; Commissions</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      FTMO scores well for its tight spreads with DMA execution, but the fact that they do not cover commission costs, unlike some other prop firms, has a slight impact on their overall ranking.
+      FTMO provides RAW spreads with commission-based pricing. Traders should check the official FTMO Symbols page for the latest spread and commission details on specific instruments. FTMO scored 8/10 for spreads.
     </p>
   </div>
 
@@ -356,83 +289,44 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-6">
-    With FTMO you can trade various asset classes including <strong>forex, commodities, indices, crypto, stocks and bonds</strong>. This diverse selection caters to traders with various strategies and preferences.
+    FTMO provides access to multiple asset classes. The official FTMO Symbols page lists <strong>Forex, Indices, Crypto, and Commodities</strong>, with platform descriptions also referring to multi-asset access including stocks and bonds.
   </p>
 
   <!-- Market Categories -->
   <div class="space-y-3 mb-8">
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Forex</p>
-      <p>28 major currency pairs (EUR/USD, GBP/USD), 14 minor pairs (AUD/NZD, GBP/JPY), plus exotic pairs (USD/ZAR, USD/SEK).</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Commodities</p>
-      <p>Gold (XAUUSD), Silver (XAGUSD), West Texas Intermediate (USOIL.cash), Brent Crude Oil (UKOIL.cash).</p>
+      <p>Major, minor, and exotic currency pairs available for trading.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Indices</p>
-      <p>14 global indices including US30 (Dow Jones), GER40 (DAX), and UK100 (FTSE 100).</p>
+      <p>Global indices including major benchmarks like US30, GER40, and UK100.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Commodities</p>
+      <p>Precious metals and energy products including gold, silver, and crude oil.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Cryptocurrencies</p>
-      <p>10 pairs including BTC/USD, ETH/USD, and LTC/USD.</p>
+      <p>Crypto pairs including BTC/USD and ETH/USD.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Stocks</p>
-      <p>Major global stocks including Apple (AAPL), Amazon (AMZN), and Tesla (TSLA).</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Bonds</p>
-      <p>Government bonds for additional diversification.</p>
+      <p class="font-bold text-slate-900 mb-1">Stocks &amp; Bonds</p>
+      <p>Additional asset classes available on supported platforms. Check the official FTMO Symbols page for the current list of available instruments.</p>
     </div>
   </div>
 
-  <!-- Leverage Table -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Leverage by Account Type</h3>
-  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
-    <table class="w-full text-sm whitespace-nowrap">
-      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
-        <tr>
-          <th class="px-4 py-3 text-left">Asset Class</th>
-          <th class="px-4 py-3 text-center">Standard / Aggressive</th>
-          <th class="px-4 py-3 text-center">Swing</th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-slate-100">
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-semibold text-slate-900">Forex</td>
-          <td class="px-4 py-3 text-center font-semibold text-teal-600">1:100</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:30</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-semibold text-slate-900">Commodities</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:50</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:15</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-semibold text-slate-900">Indices</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:50</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:15</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-semibold text-slate-900">Crypto</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:1</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:3.3</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-semibold text-slate-900">Stocks</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:3</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:10</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="rounded-xl border-l-4 border-amber-400 bg-amber-50/60 px-5 py-4 mb-6">
+    <p class="text-sm text-slate-700 leading-relaxed">
+      <strong>Note:</strong> Specific instrument counts and leverage figures should be verified against the current official FTMO challenge setup page, as these may change between products and account types.
+    </p>
   </div>
 
   <!-- Verdict -->
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
-    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Markets &amp; Leverage</p>
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Markets</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      FTMO excels in providing robust market options, particularly in forex and indices. The platform offers high leverage for those seeking to maximize positions and lower leverage for swing traders. While the selection of stocks and bonds is narrower, FTMO still offers a diverse range of opportunities across various asset classes.
+      FTMO provides access to a diverse range of asset classes including forex, indices, commodities, crypto, stocks, and bonds across four trading platforms. FTMO scored 8/10 for markets.
     </p>
   </div>
 
@@ -457,11 +351,11 @@ const { section, fallbackBody } = Astro.props;
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">MetaTrader 5 (MT5)</p>
-      <p>Enhanced version with 38 built-in indicators, 21 timeframes, 44 analytical objects, an economic calendar, and real-time market news. Suitable for trading a wider range of asset classes including equities. Available on desktop, web, and mobile.</p>
+      <p>Enhanced version with 38 built-in indicators, 21 timeframes, 44 analytical objects, an economic calendar, and real-time market news. Suitable for trading a wider range of asset classes. Available on desktop, web, and mobile.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">cTrader</p>
-      <p>Multi-asset platform known for advanced trading features and intuitive interface. Offers Depth of Market (DOM) with ECN/STP execution, algorithmic trading through cBots, comprehensive backtesting, and one-click trading. Available on desktop, web, and mobile.</p>
+      <p>Multi-asset platform known for advanced trading features and intuitive interface. Offers Depth of Market (DOM), algorithmic trading through cBots, comprehensive backtesting, and one-click trading. Available on desktop, web, and mobile.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">DXtrade</p>
@@ -473,7 +367,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trading Platforms</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      FTMO's platform offering of MT4, MT5, cTrader, and DXtrade ensures that traders have access to a wide range of tools and features, regardless of their trading style or experience level.
+      FTMO's platform offering of MT4, MT5, cTrader, and DXtrade ensures that traders have access to a wide range of tools and features, regardless of their trading style or experience level. FTMO scored 9/10 for platforms.
     </p>
   </div>
 
@@ -487,28 +381,43 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-6">
-    FTMO provides a variety of payment options and flexible payout structures, making it accessible for traders globally.
+    FTMO provides a variety of payment options and flexible reward structures. FTMO calls its payouts "rewards" &mdash; all rewards are based on simulated profits from fictitious funds.
   </p>
 
   <!-- Payout overview -->
   <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Starting Profit Split</p>
-      <p class="text-sm font-bold text-teal-600">80%</p>
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">2-Step Reward</p>
+      <p class="text-sm font-bold text-slate-800">80% &rarr; 90%</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Profit Split</p>
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">1-Step Reward</p>
       <p class="text-sm font-bold text-teal-600">90%</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">On-Demand After</p>
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">First Reward After</p>
       <p class="text-sm font-bold text-slate-800">14 days</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Withdrawal Fees</p>
-      <p class="text-sm font-bold text-teal-600">None</p>
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Processing Time</p>
+      <p class="text-sm font-bold text-teal-600">Avg 8 hours</p>
     </div>
   </div>
+
+  <!-- Reward Structure -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Reward Structure</h3>
+  <p class="mb-4">
+    Rewards are processed on a <strong>bi-weekly basis</strong>. Traders can request a reward after <strong>14 days</strong> from the first trade. The average processing time is stated as <strong>8 hours</strong> on the Scaling Plan page.
+  </p>
+  <p class="mb-4">
+    <strong>2-Step rewards</strong> start at <strong>80%</strong> of simulated profits. Through the Scaling Plan, this increases to <strong>90%</strong>.
+  </p>
+  <p class="mb-4">
+    <strong>1-Step rewards</strong> are <strong>90%</strong> of simulated profits on the FTMO Account.
+  </p>
+  <p class="mb-6">
+    The FTMO Challenge fee is a one-time refundable fee &mdash; you receive a <strong>100% refund</strong> of your initial fee with your first reward withdrawal.
+  </p>
 
   <!-- Payment Methods -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Payment Methods</h3>
@@ -530,23 +439,11 @@ const { section, fallbackBody } = Astro.props;
     </div>
   </div>
 
-  <!-- Payout Policy -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Profit Splits &amp; Payouts</h3>
-  <p class="mb-4">
-    Traders typically receive their profit splits on a <strong>monthly basis</strong>. FTMO also offers the option to request a payout after just <strong>14 days</strong> from your first trade, provided your account is in profit. You can choose the specific day for your payout after the 14-day period. Payments are processed within <strong>1&ndash;2 business days</strong>.
-  </p>
-  <p class="mb-4">
-    FTMO does not impose any profit targets on funded traders for withdrawing earnings &mdash; as long as your account is in profit, you can request a payout at any time. FTMO does not charge any withdrawal fees.
-  </p>
-  <p class="mb-6">
-    Accounts can be denominated in <strong>USD, GBP, EUR, and AUD</strong>.
-  </p>
-
   <!-- Verdict -->
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
-    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Payments &amp; Payouts</p>
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Rewards &amp; Payouts</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      FTMO excels in providing a wide range of payment options and flexible, fee-free payout structures. The ability to request payouts on demand and choose the payout date gives traders additional control over their earnings, making FTMO a strong contender in this area.
+      FTMO provides flexible reward structures with bi-weekly processing and an average 8-hour turnaround. The 1-Step product offers 90% from the start, while 2-Step traders can scale from 80% to 90%. Multiple payment methods including crypto are supported. FTMO scored 8/10 for payouts.
     </p>
   </div>
 
@@ -560,13 +457,13 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-6">
-    FTMO offers strong support and educational resources to assist traders at every stage of their journey. One of the major perks is their customer service team and support for <strong>18+ languages</strong>.
+    FTMO offers strong support and educational resources to assist traders at every stage of their journey. FTMO states support in <strong>20 languages</strong>.
   </p>
 
   <!-- Customer Support -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Customer Support</h3>
   <p class="mb-4">
-    FTMO provides <strong>24/7 customer support</strong> through live chat, WhatsApp, phone, and email. The live chat connects users directly with a support representative, and the team is fluent in over 18 languages including Arabic, Czech, Spanish, French, German, Hebrew, Italian, Japanese, Polish, Portuguese, Russian, Serbian, Swahili, Tagalog, Turkish, Ukrainian, English, and Vietnamese.
+    FTMO provides <strong>24/7 customer support</strong> through Live Chat, WhatsApp, and Email. Phone support is also listed separately. The team covers <strong>20 languages</strong> including Arabic, Czech, Spanish, French, German, Hebrew, Italian, Japanese, Polish, Portuguese, Russian, Serbian, Swahili, Tagalog, Turkish, Ukrainian, English, Vietnamese, and more.
   </p>
 
   <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
@@ -577,17 +474,17 @@ const { section, fallbackBody } = Astro.props;
       <p class="text-sm font-bold text-slate-800">WhatsApp</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
-      <p class="text-sm font-bold text-slate-800">Phone</p>
+      <p class="text-sm font-bold text-slate-800">Email</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
-      <p class="text-sm font-bold text-slate-800">Email</p>
+      <p class="text-sm font-bold text-slate-800">Phone</p>
     </div>
   </div>
 
   <!-- Educational Resources -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Educational Resources</h3>
   <p class="mb-4">
-    FTMO's educational material is top-notch, covering a wide range of topics from trading strategy and psychology to market analysis.
+    FTMO's educational material covers a wide range of topics from trading strategy and psychology to market analysis.
   </p>
 
   <div class="space-y-3 mb-6">
@@ -601,7 +498,7 @@ const { section, fallbackBody } = Astro.props;
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Performance Coaches</p>
-      <p>Psychology-major performance coaches who assist with trading discipline and self-confidence. Available to <strong>funded FTMO traders only</strong>.</p>
+      <p>Psychology-major performance coaches who assist with trading discipline and self-confidence. Available to FTMO Account holders.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Blog &amp; Written Content</p>
@@ -613,7 +510,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Customer Service &amp; Education</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      FTMO provides excellent educational resources and solid customer support. Their comprehensive materials, combined with 24/7 customer service in 18+ languages and performance coaching, make FTMO a standout choice for traders seeking both support and continuous learning.
+      FTMO provides excellent educational resources and solid customer support. Their comprehensive materials, combined with 24/7 customer service in 20 languages and performance coaching, make FTMO a standout choice for traders seeking both support and continuous learning.
     </p>
   </div>
 
@@ -627,7 +524,7 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-6">
-    FTMO has an <strong>'Excellent' ranking</strong> on Trustpilot, scoring 4.8 stars with over 37,000 reviews. They also have a 70% "recommended" Facebook Reviews based on more than 1,200 responses, with the vast majority of reviews across both platforms overwhelmingly positive.
+    FTMO has an <strong>'Excellent' ranking</strong> on Trustpilot, scoring 4.8 stars with approximately <strong>39,700 reviews</strong>. Established in 2015 in Prague, Czech Republic, FTMO is one of the most established prop firms in the industry with over <strong>3.5 million customers worldwide</strong>.
   </p>
 
   <!-- Trustpilot -->
@@ -639,7 +536,7 @@ const { section, fallbackBody } = Astro.props;
       <p class="text-xs text-slate-500 font-semibold">Excellent</p>
     </div>
     <div>
-      <p class="text-sm text-slate-700">FTMO has an <strong>Excellent</strong> Trustpilot rating with over <strong>37,000 reviews</strong>. The overwhelmingly positive sentiment and established track record since 2015 make FTMO one of the most trusted prop firms in the industry.</p>
+      <p class="text-sm text-slate-700">FTMO has an <strong>Excellent</strong> Trustpilot rating with approximately <strong>39,700 reviews</strong>. The overwhelmingly positive sentiment and established track record since 2015 make FTMO one of the most trusted prop firms in the industry.</p>
     </div>
   </div>
 
@@ -655,7 +552,7 @@ const { section, fallbackBody } = Astro.props;
       <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Instagram</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
-      <p class="text-2xl font-black text-slate-900">415K</p>
+      <p class="text-2xl font-black text-slate-900">400K</p>
       <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">YouTube</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
@@ -671,14 +568,21 @@ const { section, fallbackBody } = Astro.props;
   <!-- Community -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Community</h3>
   <p class="mb-4">
-    FTMO has a Discord community of over <strong>87,700 members</strong> alongside various unofficial Facebook groups full of activity and engaged traders sharing insights. FTMO also offers a 'Chat with Charts' section on their portal for sharing trade ideas and analysis.
+    FTMO has a Discord community of over <strong>100,000 members</strong> alongside various unofficial Facebook groups full of activity and engaged traders sharing insights. FTMO also offers a 'Chat with Charts' section on their portal for sharing trade ideas and analysis.
   </p>
+
+  <!-- About FTMO -->
+  <div class="rounded-xl border-l-4 border-amber-400 bg-amber-50/60 px-5 py-4 mb-6">
+    <p class="text-sm text-slate-700 leading-relaxed">
+      <strong>About FTMO:</strong> FTMO is an educational and technology-driven company offering simulated trading environments, not a broker. All FTMO Challenge accounts are simulated accounts with fictitious funds. FTMO's 2025 company history mentions a strategic partnership with OANDA for US expansion.
+    </p>
+  </div>
 
   <!-- Verdict -->
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trust &amp; Community</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      FTMO scores full marks for trust thanks to its Excellent Trustpilot rating with over 37,000 reviews, transparent operations since 2015, and easy contactability via phone, email, and live chat. The large Discord community and strong social media presence further reinforce FTMO's position as one of the most trusted prop firms in the industry.
+      FTMO scores full marks for trust thanks to its Excellent Trustpilot rating with approximately 39,700 reviews, transparent operations since 2015, 3.5M+ customers worldwide, and easy contactability via phone, email, WhatsApp, and live chat. The 100K+ Discord community and strong social media presence further reinforce FTMO's position as one of the most trusted prop firms in the industry. FTMO scored 9/10 for trust.
     </p>
   </div>
 
