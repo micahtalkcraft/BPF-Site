@@ -127,60 +127,11 @@ const jsonLdArray = jsonLd
             >
               Offers
             </a>
-            <div class="relative" id="guides-dropdown">
-              <a
-                href={`${base}/guides`}
-                class="rounded-md px-3 py-2 text-slate-300 hover:bg-white/10 hover:text-white transition-colors inline-flex items-center gap-1"
-              >
-                Guides
-                <svg class="h-3.5 w-3.5 opacity-60 transition-transform duration-200" id="guides-chevron" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
-              </a>
-              <div id="guides-panel" class="invisible opacity-0 absolute left-1/2 -translate-x-1/2 top-full pt-2 transition-all duration-200 z-50">
-                <div class="w-72 rounded-xl bg-[#162a3e] border border-white/10 shadow-xl shadow-black/30 overflow-hidden">
-                  <div class="px-3 pt-3 pb-1.5">
-                    <a href={`${base}/guides`} class="text-[10px] font-bold uppercase tracking-widest text-teal-400 hover:text-teal-300 transition-colors">
-                      All Guides &rarr;
-                    </a>
-                  </div>
-                  <div class="px-1.5 pb-2 space-y-0.5">
-                    <a href={`${base}/guides/what-is-a-prop-firm`} class="block rounded-lg px-3 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
-                      What is a Prop Trading Firm?
-                    </a>
-                    <a href={`${base}/guides/risk-management-prop-trading`} class="block rounded-lg px-3 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
-                      Risk Management in Prop Trading
-                    </a>
-                    <a href={`${base}/guides/pros-and-cons-of-prop-trading`} class="block rounded-lg px-3 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
-                      Pros and Cons of Prop Trading
-                    </a>
-                    <a href={`${base}/guides/prop-trading-account-types`} class="block rounded-lg px-3 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
-                      Prop Trading Account Types
-                    </a>
-                    <a href={`${base}/guides/prop-trading-for-beginners`} class="block rounded-lg px-3 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
-                      Prop Trading for Beginners
-                    </a>
-                    <a href={`${base}/guides/prop-trading-strategies`} class="block rounded-lg px-3 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
-                      Prop Trading Strategies
-                    </a>
-                    <a href={`${base}/guides/how-do-prop-firms-pay-you`} class="block rounded-lg px-3 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
-                      How Do Prop Firms Pay You?
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
             <a
-              href={`${base}/blog`}
+              href={`${base}/guides`}
               class="rounded-md px-3 py-2 text-slate-300 hover:bg-white/10 hover:text-white transition-colors"
             >
-              Blog
-            </a>
-            <a
-              href={`${base}/awards`}
-              class="rounded-md px-3 py-2 text-slate-300 hover:bg-white/10 hover:text-white transition-colors"
-            >
-              Awards
+              Guides
             </a>
             <a
               href={`${base}/reviews`}
@@ -218,43 +169,8 @@ const jsonLdArray = jsonLd
           <a href={`${base}/offers`} class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
             Offers
           </a>
-          <button id="mobile-guides-toggle" type="button" class="w-full flex items-center justify-between rounded-lg px-3 py-2.5 text-sm font-medium text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
+          <a href={`${base}/guides`} class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
             Guides
-            <svg id="mobile-guides-chevron" class="h-4 w-4 opacity-60 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div id="mobile-guides-panel" class="hidden pl-3 space-y-0.5">
-            <a href={`${base}/guides`} class="block rounded-lg px-3 py-2 text-xs font-bold uppercase tracking-widest text-teal-400 hover:text-teal-300 transition-colors">
-              All Guides &rarr;
-            </a>
-            <a href={`${base}/guides/what-is-a-prop-firm`} class="block rounded-lg px-3 py-2 text-sm text-slate-400 hover:bg-white/10 hover:text-white transition-colors">
-              What is a Prop Trading Firm?
-            </a>
-            <a href={`${base}/guides/risk-management-prop-trading`} class="block rounded-lg px-3 py-2 text-sm text-slate-400 hover:bg-white/10 hover:text-white transition-colors">
-              Risk Management in Prop Trading
-            </a>
-            <a href={`${base}/guides/pros-and-cons-of-prop-trading`} class="block rounded-lg px-3 py-2 text-sm text-slate-400 hover:bg-white/10 hover:text-white transition-colors">
-              Pros and Cons of Prop Trading
-            </a>
-            <a href={`${base}/guides/prop-trading-account-types`} class="block rounded-lg px-3 py-2 text-sm text-slate-400 hover:bg-white/10 hover:text-white transition-colors">
-              Prop Trading Account Types
-            </a>
-            <a href={`${base}/guides/prop-trading-for-beginners`} class="block rounded-lg px-3 py-2 text-sm text-slate-400 hover:bg-white/10 hover:text-white transition-colors">
-              Prop Trading for Beginners
-            </a>
-            <a href={`${base}/guides/prop-trading-strategies`} class="block rounded-lg px-3 py-2 text-sm text-slate-400 hover:bg-white/10 hover:text-white transition-colors">
-              Prop Trading Strategies
-            </a>
-            <a href={`${base}/guides/how-do-prop-firms-pay-you`} class="block rounded-lg px-3 py-2 text-sm text-slate-400 hover:bg-white/10 hover:text-white transition-colors">
-              How Do Prop Firms Pay You?
-            </a>
-          </div>
-          <a href={`${base}/blog`} class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
-            Blog
-          </a>
-          <a href={`${base}/awards`} class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
-            Awards
           </a>
           <div class="pt-2">
             <a href={`${base}/reviews`} class="block rounded-lg bg-teal-500 px-3 py-2.5 text-sm font-semibold text-white text-center hover:bg-teal-400 transition-colors">
@@ -279,42 +195,6 @@ const jsonLdArray = jsonLd
         menuBtn.setAttribute("aria-expanded", String(!isOpen));
       });
 
-      // Desktop guides dropdown (hover)
-      const guidesDropdown = document.getElementById("guides-dropdown");
-      const guidesPanel = document.getElementById("guides-panel");
-      const guidesChevron = document.getElementById("guides-chevron");
-      let hideTimeout: ReturnType<typeof setTimeout>;
-
-      function showDropdown() {
-        clearTimeout(hideTimeout);
-        guidesPanel?.classList.remove("invisible", "opacity-0");
-        guidesPanel?.classList.add("visible", "opacity-100");
-        guidesChevron?.classList.add("rotate-180");
-      }
-
-      function hideDropdown() {
-        hideTimeout = setTimeout(() => {
-          guidesPanel?.classList.add("invisible", "opacity-0");
-          guidesPanel?.classList.remove("visible", "opacity-100");
-          guidesChevron?.classList.remove("rotate-180");
-        }, 150);
-      }
-
-      guidesDropdown?.addEventListener("mouseenter", showDropdown);
-      guidesDropdown?.addEventListener("mouseleave", hideDropdown);
-      // No click toggle needed — "Guides" is now a link that navigates to /guides
-      // Dropdown opens/closes on hover only
-
-      // Mobile guides accordion
-      const mobileGuidesToggle = document.getElementById("mobile-guides-toggle");
-      const mobileGuidesPanel = document.getElementById("mobile-guides-panel");
-      const mobileGuidesChevron = document.getElementById("mobile-guides-chevron");
-
-      mobileGuidesToggle?.addEventListener("click", () => {
-        const isOpen = !mobileGuidesPanel?.classList.contains("hidden");
-        mobileGuidesPanel?.classList.toggle("hidden", isOpen);
-        mobileGuidesChevron?.classList.toggle("rotate-180", !isOpen);
-      });
     </script>
 
     <!-- Main content -->
@@ -355,7 +235,6 @@ const jsonLdArray = jsonLd
             <ul class="space-y-2 text-slate-400">
               <li><a href={`${base}/offers`} class="hover:text-teal-400 transition-colors">All Discount Codes</a></li>
               <li><a href={`${base}/guides`} class="hover:text-teal-400 transition-colors">Guides</a></li>
-              <li><a href={`${base}/blog`} class="hover:text-teal-400 transition-colors">Blog</a></li>
               <li><a href={`${base}/methodology`} class="hover:text-teal-400 transition-colors">Our Methodology</a></li>
               <li><a href={`${base}/about`} class="hover:text-teal-400 transition-colors">About Us</a></li>
               <li><a href={`${base}/contact`} class="hover:text-teal-400 transition-colors">Contact Us</a></li>

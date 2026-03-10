@@ -39,6 +39,36 @@ const featuredDescriptions: Record<string, string> = {
 };
 const offerMap = Object.fromEntries(allOffers.map((x) => [x.firm.slug, x]));
 const featuredGrid = featuredSlugs.map((s) => offerMap[s]).filter(Boolean);
+
+// Challenge fee data for the "Challenges" tab — $100K fees with discount applied
+const challengeRows = allOffers
+  .map(({ firm, code, percent, hasReview, verified, flagged, isAwardWinner }) => {
+    const fees = (firm.pricing?.challengeFees ?? []) as Array<{ accountSize: number; fee: number; model?: string; label?: string }>;
+    const oneStep100K = fees.find((f) => f.accountSize === 100000 && (f.model === "1-step" || f.model === "one-step"));
+    const any100K = fees.find((f) => f.accountSize === 100000);
+    const fee100K = oneStep100K ?? any100K;
+    if (!fee100K) return null;
+    const normalPrice = fee100K.fee;
+    const pct = percent ?? 0;
+    const discountedPrice = pct ? Math.round(normalPrice * (1 - pct / 100)) : normalPrice;
+    const saving = normalPrice - discountedPrice;
+    return {
+      firm,
+      code,
+      percent: pct,
+      normalPrice,
+      discountedPrice,
+      saving,
+      model: (fee100K.model === "one-step" ? "1-step" : fee100K.model) ?? "challenge",
+      label: fee100K.label,
+      hasReview,
+      verified,
+      flagged,
+      isAwardWinner,
+    };
+  })
+  .filter((x): x is NonNullable<typeof x> => x !== null)
+  .sort((a, b) => a.discountedPrice - b.discountedPrice);
 ---
 
 <Base
@@ -129,6 +159,19 @@ const featuredGrid = featuredSlugs.map((s) => offerMap[s]).filter(Boolean);
         <p class="text-sm text-slate-500 mt-1">Click any code to copy it instantly</p>
       </div>
 
+      <!-- Tab switcher -->
+      <div class="flex gap-1 mb-6 rounded-xl p-1 w-fit border border-slate-200 bg-white shadow-sm">
+        <button id="tab-savings" class="offer-tab px-6 py-2.5 rounded-lg text-sm font-bold transition-all bg-teal-500 text-white shadow-md shadow-teal-500/20 cursor-pointer">
+          Coupons
+        </button>
+        <button id="tab-challenges" class="offer-tab px-6 py-2.5 rounded-lg text-sm font-bold transition-all text-slate-500 hover:text-slate-700 hover:bg-slate-50 cursor-pointer">
+          Savings
+        </button>
+      </div>
+
+      <!-- ── SAVINGS PANEL ── -->
+      <div id="panel-savings">
+
       <!-- Filter bar -->
       <div class="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center mb-6">
         <div class="relative flex-1 max-w-sm">
@@ -218,18 +261,19 @@ const featuredGrid = featuredSlugs.map((s) => offerMap[s]).filter(Boolean);
                 )}
               </div>
 
-              <!-- Code button (desktop) -->
-              <div class="flex-shrink-0 flex items-center px-6 border-l border-slate-100">
-                <div>
-                  <p class="text-[10px] text-slate-400 uppercase tracking-wide font-semibold mb-2 text-center">Coupon Code</p>
+              <!-- Coupon block (desktop) — homepage style -->
+              <div class="flex-shrink-0 flex items-center px-5 border-l border-slate-100">
+                <div class="w-40 flex flex-col items-center justify-center rounded-xl border-2 border-dashed border-emerald-300 bg-emerald-50 px-3.5 py-3 text-center gap-1.5">
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-600 leading-none">
+                    {percent ? `${percent}% OFF` : "Offer"}
+                  </span>
                   <button
-                    class="group/btn flex items-center gap-2 rounded-xl border-2 border-dashed border-amber-300 bg-amber-50 hover:bg-amber-100 hover:border-amber-400 px-5 py-2.5 transition-all cursor-pointer shadow-sm hover:shadow-md"
+                    class="w-full inline-flex items-center justify-center gap-1.5 rounded-lg bg-white border border-emerald-300 px-3 py-2 text-xs font-black text-emerald-700 tracking-wide hover:bg-emerald-100 transition-colors cursor-pointer"
+                    title="Click to copy code"
                     onclick={`navigator.clipboard.writeText('${code}').then(()=>{const el=this.querySelector('.copy-label');el.textContent='Copied!';setTimeout(()=>{el.textContent='${code}'},1500)})`}
                   >
-                    <span class="copy-label font-black text-amber-700 tracking-widest text-base">{code}</span>
-                    <svg class="h-4 w-4 text-amber-500 group-hover/btn:text-amber-600 transition-colors flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                    </svg>
+                    <svg class="h-3 w-3 flex-shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+                    <span class="copy-label">{code}</span>
                   </button>
                 </div>
               </div>
@@ -312,13 +356,19 @@ const featuredGrid = featuredSlugs.map((s) => offerMap[s]).filter(Boolean);
 
               <!-- Code + CTA row -->
               <div class="flex gap-2">
-                <button
-                  class="group/btn flex-1 flex items-center justify-center gap-2 rounded-xl border-2 border-dashed border-amber-300 bg-amber-50 hover:bg-amber-100 px-3 py-3 cursor-pointer transition-all"
-                  onclick={`navigator.clipboard.writeText('${code}').then(()=>{const el=this.querySelector('.copy-label-m');el.textContent='Copied!';setTimeout(()=>{el.textContent='${code}'},1500)})`}
-                >
-                  <svg class="h-4 w-4 text-amber-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
-                  <span class="copy-label-m font-black text-amber-700 tracking-widest text-sm">{code}</span>
-                </button>
+                <div class="flex-1 flex flex-col items-center justify-center rounded-xl border-2 border-dashed border-emerald-300 bg-emerald-50 px-3 py-2.5 text-center gap-1">
+                  <span class="text-[9px] font-bold uppercase tracking-widest text-emerald-600 leading-none">
+                    {percent ? `${percent}% OFF` : "Offer"}
+                  </span>
+                  <button
+                    class="w-full inline-flex items-center justify-center gap-1.5 rounded-lg bg-white border border-emerald-300 px-3 py-2 text-xs font-black text-emerald-700 tracking-wide hover:bg-emerald-100 transition-colors cursor-pointer"
+                    title="Click to copy code"
+                    onclick={`navigator.clipboard.writeText('${code}').then(()=>{const el=this.querySelector('.copy-label-m');el.textContent='Copied!';setTimeout(()=>{el.textContent='${code}'},1500)})`}
+                  >
+                    <svg class="h-3 w-3 flex-shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+                    <span class="copy-label-m">{code}</span>
+                  </button>
+                </div>
                 <a
                   href={firm.links?.website ?? '#'}
                   target="_blank"
@@ -343,10 +393,271 @@ const featuredGrid = featuredSlugs.map((s) => offerMap[s]).filter(Boolean);
           </div>
         ))}
       </div>
+      </div><!-- end panel-savings -->
+
+      <!-- ── SAVINGS PANEL (Challenges) ── -->
+      <div id="panel-challenges" class="hidden">
+        <!-- Filter bar -->
+        <div class="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center mb-6">
+          <div class="relative flex-1 max-w-sm">
+            <svg class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z" />
+            </svg>
+            <input
+              id="challenge-search"
+              type="text"
+              placeholder="Search firms…"
+              class="w-full rounded-lg border border-slate-200 bg-white pl-9 pr-3 py-2 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-teal-400 focus:ring-2 focus:ring-teal-100 transition"
+            />
+          </div>
+          <div class="flex items-center gap-2 flex-wrap">
+            <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wide whitespace-nowrap">Sort:</span>
+            <button data-csort="price" class="challenge-sort-chip rounded-full border px-3 py-1 text-xs font-semibold transition-colors bg-teal-500 text-white border-teal-500">Lowest Price</button>
+            <button data-csort="percent" class="challenge-sort-chip rounded-full border px-3 py-1 text-xs font-semibold transition-colors bg-white text-slate-600 border-slate-200 hover:border-teal-300 hover:text-teal-600">Highest %</button>
+            <button data-csort="name" class="challenge-sort-chip rounded-full border px-3 py-1 text-xs font-semibold transition-colors bg-white text-slate-600 border-slate-200 hover:border-teal-300 hover:text-teal-600">A–Z</button>
+          </div>
+          <p id="challenge-results-count" class="text-xs text-slate-400 whitespace-nowrap sm:ml-auto"></p>
+        </div>
+
+        <!-- Discount toggle + description -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
+          <p class="text-sm text-slate-500">Comparing <strong class="text-slate-700">$100K challenge fees</strong> across prop firms with active discount codes</p>
+          <label class="inline-flex items-center gap-2.5 cursor-pointer select-none flex-shrink-0">
+            <span id="toggle-label" class="text-sm font-semibold text-teal-700">Discounts Applied</span>
+            <button
+              type="button"
+              role="switch"
+              aria-checked="true"
+              id="discount-toggle"
+              class="relative inline-flex h-6 w-11 flex-shrink-0 rounded-full bg-teal-500 transition-colors duration-200 ease-in-out cursor-pointer"
+            >
+              <span class="sr-only">Apply discounts</span>
+              <span id="toggle-dot" class="pointer-events-none inline-block h-5 w-5 translate-x-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out mt-0.5 ml-0.5"></span>
+            </button>
+          </label>
+        </div>
+
+        <!-- Challenge cards -->
+        <div class="space-y-4">
+          {challengeRows.map((row, idx) => (
+            <div
+              class="group relative bg-white border border-slate-200 rounded-2xl overflow-hidden hover:border-teal-300 hover:shadow-lg hover:shadow-teal-500/10 transition-all duration-200"
+              data-challenge-card
+              data-challenge-name={row.firm.name.toLowerCase()}
+              data-normal={row.normalPrice}
+              data-discounted={row.discountedPrice}
+              data-saving={row.saving}
+              data-percent={row.percent}
+            >
+              <span class="absolute left-0 top-6 bottom-6 w-1 rounded-r-full bg-gradient-to-b from-teal-400 to-teal-600 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+
+              {/* ── DESKTOP layout (sm+) ── */}
+              <div class="hidden sm:flex items-stretch">
+
+                <!-- Left: % OFF panel -->
+                <div class="flex-shrink-0 w-28 bg-gradient-to-br from-slate-50 to-white border-r border-slate-100 flex flex-col items-center justify-center p-3">
+                  <div class="w-full rounded-2xl border-2 border-teal-200 bg-teal-50 flex flex-col items-center justify-center py-3 px-1">
+                    {row.percent > 0 ? (
+                      <Fragment>
+                        <span class="text-2xl font-black text-teal-600 leading-none">{row.percent}%</span>
+                        <span class="text-[9px] font-bold uppercase tracking-widest text-teal-400 mt-0.5">OFF</span>
+                      </Fragment>
+                    ) : (
+                      <Fragment>
+                        <svg class="h-6 w-6 text-teal-500 mb-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <span class="text-[9px] font-bold uppercase tracking-widest text-teal-500">DEAL</span>
+                      </Fragment>
+                    )}
+                  </div>
+                </div>
+
+                <!-- Middle: firm info -->
+                <div class="flex-1 min-w-0 px-6 py-5 flex items-center gap-3">
+                  <FirmAvatar name={row.firm.name} logoUrl={row.firm.media?.logo ? `${base}${row.firm.media.logo}` : undefined} />
+                  <div class="min-w-0">
+                    <div class="flex items-center gap-1.5">
+                      <p class="font-extrabold text-slate-900 text-lg leading-tight truncate">{row.firm.name}</p>
+                      {row.hasReview && !row.flagged && row.verified && (
+                        <svg class="h-[18px] w-[18px] text-[#1d9bf0] flex-shrink-0" viewBox="0 0 22 22" fill="currentColor" aria-label="Verified">
+                          <path d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.855-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.69-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.607-.274 1.264-.144 1.897.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681.132-.637.075-1.299-.165-1.903.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"/>
+                        </svg>
+                      )}
+                      {row.isAwardWinner && (
+                        <span class="inline-flex items-center justify-center h-[18px] w-[18px] rounded-full bg-gradient-to-br from-amber-400 via-yellow-300 to-amber-500 shadow-sm shadow-amber-400/40 flex-shrink-0">
+                          <svg class="h-2.5 w-2.5 text-amber-900" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/>
+                          </svg>
+                        </span>
+                      )}
+                    </div>
+                    {row.firm.trust.trustpilotRating && (
+                      <div class="flex items-center gap-1 mt-0.5">
+                        <span class="text-amber-400 text-xs">{'★'.repeat(Math.round(row.firm.trust.trustpilotRating))}</span>
+                        <span class="text-[11px] text-slate-400">{row.firm.trust.trustpilotRating} · {row.firm.trust.trustpilotCount?.toLocaleString()} reviews</span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                <!-- Price column -->
+                <div class="flex-shrink-0 flex flex-col items-center justify-center px-5 py-4 border-l border-slate-100 text-center">
+                  <p class="text-[10px] text-slate-400 uppercase tracking-wide font-semibold mb-1">$100K Challenge</p>
+                  <div class="challenge-price-normal hidden">
+                    <span class="font-bold text-slate-900 text-xl">${row.normalPrice}</span>
+                  </div>
+                  <div class="challenge-price-discounted">
+                    <span class="text-slate-400 line-through text-sm">${row.normalPrice}</span>
+                    <span class="font-bold text-teal-600 text-xl ml-1">${row.discountedPrice}</span>
+                  </div>
+                  {row.saving > 0 && (
+                    <span class="challenge-saving text-[11px] font-semibold text-emerald-600 mt-0.5">You save ${row.saving}</span>
+                  )}
+                </div>
+
+                <!-- Coupon block (desktop) — homepage style -->
+                <div class="flex-shrink-0 flex items-center px-5 border-l border-slate-100">
+                  <div class="w-40 flex flex-col items-center justify-center rounded-xl border-2 border-dashed border-emerald-300 bg-emerald-50 px-3.5 py-3 text-center gap-1.5">
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-600 leading-none">
+                      {row.percent > 0 ? `${row.percent}% OFF` : "Offer"}
+                    </span>
+                    <button
+                      class="w-full inline-flex items-center justify-center gap-1.5 rounded-lg bg-white border border-emerald-300 px-3 py-2 text-xs font-black text-emerald-700 tracking-wide hover:bg-emerald-100 transition-colors cursor-pointer"
+                      title="Click to copy code"
+                      onclick={`navigator.clipboard.writeText('${row.code}').then(()=>{const el=this.querySelector('.c-copy');el.textContent='Copied!';setTimeout(()=>{el.textContent='${row.code}'},1500)})`}
+                    >
+                      <svg class="h-3 w-3 flex-shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+                      <span class="c-copy">{row.code}</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- CTA column -->
+                <div class="flex-shrink-0 flex flex-col items-center justify-center gap-2.5 px-6 border-l border-slate-100">
+                  <a
+                    href={row.firm.links?.website ?? '#'}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow sponsored"
+                    class="inline-flex items-center justify-center gap-1.5 rounded-xl bg-teal-500 hover:bg-teal-600 px-5 py-3 text-sm font-bold text-white transition-colors whitespace-nowrap shadow-md shadow-teal-500/20 hover:shadow-lg hover:shadow-teal-500/30 w-full"
+                  >
+                    Claim Offer
+                    <svg class="h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                  {row.hasReview && (
+                    <a
+                      href={`${base}/reviews/${row.firm.slug}`}
+                      class="text-[11px] font-medium text-slate-400 hover:text-teal-600 transition-colors whitespace-nowrap"
+                    >
+                      Read Review →
+                    </a>
+                  )}
+                </div>
+
+              </div>
+
+              {/* ── MOBILE layout (below sm) ── */}
+              <div class="sm:hidden p-4">
+                <!-- Top row: discount + firm name -->
+                <div class="flex items-center gap-3 mb-3">
+                  <div class="flex-shrink-0 rounded-xl border-2 border-teal-200 bg-teal-50 flex flex-col items-center justify-center w-16 h-16">
+                    {row.percent > 0 ? (
+                      <Fragment>
+                        <span class="text-xl font-black text-teal-600 leading-none">{row.percent}%</span>
+                        <span class="text-[7px] font-bold uppercase tracking-widest text-teal-400 mt-0.5">OFF</span>
+                      </Fragment>
+                    ) : (
+                      <Fragment>
+                        <svg class="h-5 w-5 text-teal-500 mb-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <span class="text-[7px] font-bold uppercase tracking-widest text-teal-500">DEAL</span>
+                      </Fragment>
+                    )}
+                  </div>
+                  <div class="min-w-0 flex-1">
+                    <div class="flex items-center gap-2.5">
+                      <FirmAvatar name={row.firm.name} logoUrl={row.firm.media?.logo ? `${base}${row.firm.media.logo}` : undefined} />
+                      <div class="min-w-0">
+                        <div class="flex items-center gap-1.5">
+                          <p class="font-extrabold text-slate-900 text-lg leading-tight truncate">{row.firm.name}</p>
+                          {row.hasReview && !row.flagged && row.verified && (
+                            <svg class="h-[16px] w-[16px] text-[#1d9bf0] flex-shrink-0" viewBox="0 0 22 22" fill="currentColor" aria-label="Verified">
+                              <path d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.855-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.69-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.607-.274 1.264-.144 1.897.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681.132-.637.075-1.299-.165-1.903.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"/>
+                            </svg>
+                          )}
+                          {row.isAwardWinner && (
+                            <span class="inline-flex items-center justify-center h-[16px] w-[16px] rounded-full bg-gradient-to-br from-amber-400 via-yellow-300 to-amber-500 shadow-sm shadow-amber-400/40 flex-shrink-0">
+                              <svg class="h-2 w-2 text-amber-900" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/>
+                              </svg>
+                            </span>
+                          )}
+                        </div>
+                        {row.firm.trust.trustpilotRating && (
+                          <div class="flex items-center gap-1 mt-0.5">
+                            <span class="text-amber-400 text-xs">{'★'.repeat(Math.round(row.firm.trust.trustpilotRating))}</span>
+                            <span class="text-[11px] text-slate-400">{row.firm.trust.trustpilotRating}</span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="border-t border-slate-100 pt-2 mb-3">
+                  <p class="text-xs text-slate-500">
+                    <span class="challenge-price-normal hidden">$100K Challenge — <strong class="text-slate-700">${row.normalPrice}</strong></span>
+                    <span class="challenge-price-discounted">$100K Challenge — <span class="text-slate-400 line-through">${row.normalPrice}</span> <strong class="text-teal-600">${row.discountedPrice}</strong></span>
+                    {row.saving > 0 && (
+                      <span class="challenge-saving text-emerald-600 font-semibold ml-1">· Save ${row.saving}</span>
+                    )}
+                  </p>
+                </div>
+
+                <!-- Code + CTA row -->
+                <div class="flex gap-2">
+                  <div class="flex-1 flex flex-col items-center justify-center rounded-xl border-2 border-dashed border-emerald-300 bg-emerald-50 px-3 py-2.5 text-center gap-1">
+                    <span class="text-[9px] font-bold uppercase tracking-widest text-emerald-600 leading-none">
+                      {row.percent > 0 ? `${row.percent}% OFF` : "Offer"}
+                    </span>
+                    <button
+                      class="w-full inline-flex items-center justify-center gap-1.5 rounded-lg bg-white border border-emerald-300 px-3 py-2 text-xs font-black text-emerald-700 tracking-wide hover:bg-emerald-100 transition-colors cursor-pointer"
+                      title="Click to copy code"
+                      onclick={`navigator.clipboard.writeText('${row.code}').then(()=>{const el=this.querySelector('.mc-copy');el.textContent='Copied!';setTimeout(()=>{el.textContent='${row.code}'},1500)})`}
+                    >
+                      <svg class="h-3 w-3 flex-shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+                      <span class="mc-copy">{row.code}</span>
+                    </button>
+                  </div>
+                  <a
+                    href={row.firm.links?.website ?? '#'}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow sponsored"
+                    class="flex-shrink-0 inline-flex items-center justify-center gap-1.5 rounded-xl bg-teal-500 hover:bg-teal-600 px-5 py-3 text-sm font-bold text-white transition-colors shadow-md shadow-teal-500/20"
+                  >
+                    Claim
+                    <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
+
+                <a
+                  href={`${base}/reviews/${row.firm.slug}`}
+                  class="block text-center text-[11px] font-medium text-slate-400 hover:text-teal-600 transition-colors mt-2.5"
+                >
+                  Read Full Review →
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div><!-- end panel-challenges -->
+
     </section>
   </div>
 
   <script>
+    // ── Savings tab: search + sort ──
     const searchInput = document.getElementById("offer-search") as HTMLInputElement | null;
     const sortBtns = document.querySelectorAll<HTMLButtonElement>(".offer-sort-chip");
     const cards = Array.from(document.querySelectorAll<HTMLElement>("[data-offer-card]"));
@@ -378,7 +689,6 @@ const featuredGrid = featuredSlugs.map((s) => offerMap[s]).filter(Boolean);
 
       cards.forEach((c) => (c.style.display = hiddenSet.has(c) ? "none" : ""));
 
-      // Re-order in DOM
       if (listEl) {
         sorted.forEach((c) => listEl.appendChild(c));
       }
@@ -411,6 +721,135 @@ const featuredGrid = featuredSlugs.map((s) => offerMap[s]).filter(Boolean);
         activeSort = btn.dataset.sort ?? "percent";
         updateSortStyles();
         applyFilters();
+      });
+    });
+
+    // ── Tab switching ──
+    const tabSavings = document.getElementById("tab-savings");
+    const tabChallenges = document.getElementById("tab-challenges");
+    const panelSavings = document.getElementById("panel-savings");
+    const panelChallenges = document.getElementById("panel-challenges");
+
+    function setActiveTab(tab: "savings" | "challenges") {
+      const isSavings = tab === "savings";
+      panelSavings?.classList.toggle("hidden", !isSavings);
+      panelChallenges?.classList.toggle("hidden", isSavings);
+      [tabSavings, tabChallenges].forEach((btn, i) => {
+        const isActive = (i === 0 && isSavings) || (i === 1 && !isSavings);
+        btn?.classList.toggle("bg-teal-500", isActive);
+        btn?.classList.toggle("text-white", isActive);
+        btn?.classList.toggle("shadow-md", isActive);
+        btn?.classList.toggle("shadow-teal-500/20", isActive);
+        btn?.classList.toggle("text-slate-500", !isActive);
+        btn?.classList.toggle("bg-teal-500", isActive);
+      });
+    }
+
+    tabSavings?.addEventListener("click", () => setActiveTab("savings"));
+    tabChallenges?.addEventListener("click", () => setActiveTab("challenges"));
+
+    // ── Discount toggle ──
+    const toggle = document.getElementById("discount-toggle");
+    const toggleDot = document.getElementById("toggle-dot");
+    const toggleLabel = document.getElementById("toggle-label");
+    let discountsOn = true;
+
+    function applyDiscountToggle() {
+      document.querySelectorAll<HTMLElement>("[data-challenge-card]").forEach((card) => {
+        card.querySelectorAll<HTMLElement>(".challenge-price-normal").forEach((el) => el.classList.toggle("hidden", discountsOn));
+        card.querySelectorAll<HTMLElement>(".challenge-price-discounted").forEach((el) => el.classList.toggle("hidden", !discountsOn));
+        card.querySelectorAll<HTMLElement>(".challenge-saving").forEach((el) => el.style.visibility = discountsOn ? "visible" : "hidden");
+      });
+      // Toggle button appearance
+      if (toggle) {
+        toggle.classList.toggle("bg-teal-500", discountsOn);
+        toggle.classList.toggle("bg-slate-200", !discountsOn);
+        toggle.setAttribute("aria-checked", String(discountsOn));
+      }
+      if (toggleDot) {
+        toggleDot.classList.toggle("translate-x-5", discountsOn);
+        toggleDot.classList.toggle("translate-x-0", !discountsOn);
+      }
+      if (toggleLabel) {
+        toggleLabel.classList.toggle("text-teal-700", discountsOn);
+        toggleLabel.classList.toggle("text-slate-500", !discountsOn);
+      }
+    }
+
+    toggle?.addEventListener("click", () => {
+      discountsOn = !discountsOn;
+      applyDiscountToggle();
+    });
+
+    // ── Challenge tab: search + sort ──
+    const cSearchInput = document.getElementById("challenge-search") as HTMLInputElement | null;
+    const cSortBtns = document.querySelectorAll<HTMLButtonElement>(".challenge-sort-chip");
+    const cCards = Array.from(document.querySelectorAll<HTMLElement>("[data-challenge-card]"));
+    const cCountEl = document.getElementById("challenge-results-count");
+    const cListEl = cCards[0]?.parentElement;
+
+    let cSearchQuery = "";
+    let cActiveSort = "price";
+
+    function getCVisible(): HTMLElement[] {
+      return cCards.filter((c) => (c.dataset.challengeName ?? "").includes(cSearchQuery));
+    }
+
+    function sortCCards(visible: HTMLElement[]) {
+      if (cActiveSort === "name") {
+        visible.sort((a, b) => (a.dataset.challengeName ?? "").localeCompare(b.dataset.challengeName ?? ""));
+      } else if (cActiveSort === "percent") {
+        visible.sort((a, b) => parseFloat(b.dataset.percent ?? "0") - parseFloat(a.dataset.percent ?? "0"));
+      } else {
+        // price — sort by discounted price if discounts on, normal otherwise
+        visible.sort((a, b) => {
+          const aPrice = discountsOn ? parseFloat(a.dataset.discounted ?? "0") : parseFloat(a.dataset.normal ?? "0");
+          const bPrice = discountsOn ? parseFloat(b.dataset.discounted ?? "0") : parseFloat(b.dataset.normal ?? "0");
+          return aPrice - bPrice;
+        });
+      }
+      return visible;
+    }
+
+    function applyCFilters() {
+      const visible = getCVisible();
+      const sorted = sortCCards(visible);
+      const hiddenSet = new Set(cCards.filter((c) => !visible.includes(c)));
+
+      cCards.forEach((c) => (c.style.display = hiddenSet.has(c) ? "none" : ""));
+
+      if (cListEl) {
+        sorted.forEach((c) => cListEl.appendChild(c));
+      }
+
+      if (cCountEl) {
+        cCountEl.textContent = visible.length === cCards.length ? "" : `${visible.length} of ${cCards.length} firms`;
+      }
+    }
+
+    function updateCSortStyles() {
+      cSortBtns.forEach((btn) => {
+        const s = btn.dataset.csort ?? "";
+        const isActive = s === cActiveSort;
+        btn.classList.toggle("bg-teal-500", isActive);
+        btn.classList.toggle("text-white", isActive);
+        btn.classList.toggle("border-teal-500", isActive);
+        btn.classList.toggle("bg-white", !isActive);
+        btn.classList.toggle("text-slate-600", !isActive);
+        btn.classList.toggle("border-slate-200", !isActive);
+      });
+    }
+
+    cSearchInput?.addEventListener("input", () => {
+      cSearchQuery = (cSearchInput.value ?? "").trim().toLowerCase();
+      applyCFilters();
+    });
+
+    cSortBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        cActiveSort = btn.dataset.csort ?? "price";
+        updateCSortStyles();
+        applyCFilters();
       });
     });
   </script>

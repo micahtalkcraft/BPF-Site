@@ -98,7 +98,12 @@
       "Bash(then echo \"$f\")",
       "Bash(fi)",
       "Bash(npx tsc --noEmit)",
-      "Bash(node -e \":*)"
+      "Bash(node -e \":*)",
+      "Bash(tasklist)",
+      "Bash(rm -rf src/content/guides)",
+      "Bash(rm -rf src/pages/guides)",
+      "Bash(taskkill //F //IM node.exe)",
+      "Bash(rm -rf .astro/data-store.json .astro/collections)"
     ]
   }
 }

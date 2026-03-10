@@ -43,14 +43,13 @@ We reviewed the best funded accounts offered by top prop firms:
 4. **Blueberry Funded** — Broker Backed Funded Accounts
 5. **City Traders Imperium** — Prop Firm Paying Trader Salaries
 6. **FTMO** — Best Funded Account for Stocks
-7. **Seacrest Funded** — Flexible Challenge Options
-8. **ThinkCapital** — High Leverage Funded Accounts
-9. **IC Funded** — Funded Accounts with Low Spreads
-10. **The 5%ers** — Up to 100% Profit Split
+7. **ThinkCapital** — High Leverage Funded Accounts
+8. **IC Funded** — Funded Accounts with Low Spreads
+9. **The 5%ers** — Up to 100% Profit Split
 
 ---
 
-## The 10 Best Funded Trading Accounts We Tested in 2026
+## The 9 Best Funded Trading Accounts We Tested in 2026
 
 ---
 
@@ -750,61 +749,7 @@ FTMO runs a 2-step evaluation with 10% and 5% profit targets, 5% daily and 10% o
 
 ---
 
-## 7. Seacrest Funded — Flexible Challenge Options
-
-Seacrest Funded offers a flexible approach to funded accounts with multiple evaluation models designed to suit different trading styles. Their challenge options cater to traders who want customisation in how they prove their skills before accessing live capital.
-
-<div class="not-prose my-6 rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
-  <div class="flex flex-col sm:flex-row items-stretch">
-    <div class="flex items-center gap-4 p-5 flex-1 min-w-0">
-      <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-teal-500 flex items-center justify-center border border-slate-200">
-        <span class="text-sm font-black text-white">SF</span>
-      </div>
-      <div class="min-w-0">
-        <p class="text-lg font-extrabold text-slate-900 leading-tight">Seacrest Funded</p>
-        <p class="text-xs text-slate-500 mt-0.5">Flexible Challenge Options</p>
-      </div>
-    </div>
-    <div class="flex items-center gap-6 px-5 py-3 sm:py-5 border-t sm:border-t-0 sm:border-l border-slate-100 bg-slate-50/50 text-center">
-      <div>
-        <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Type</p>
-        <p class="text-sm font-bold text-slate-800">Multi</p>
-      </div>
-      <div>
-        <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Focus</p>
-        <p class="text-sm font-bold text-slate-800">Flexible</p>
-      </div>
-      <a href="https://seacrestfunded.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
-        Visit Site →
-      </a>
-    </div>
-  </div>
-</div>
-
-<div class="not-prose my-6 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-  <p class="text-sm font-bold text-slate-900 mb-3">Pros & Cons</p>
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-    <div>
-      <p class="text-xs font-bold text-emerald-600 uppercase tracking-wide mb-2">Pros</p>
-      <ul class="space-y-1.5 text-sm text-slate-700">
-        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Multiple challenge types for different trading styles</li>
-        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Flexible evaluation rules</li>
-        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Customisable challenge parameters</li>
-      </ul>
-    </div>
-    <div>
-      <p class="text-xs font-bold text-red-500 uppercase tracking-wide mb-2">Cons</p>
-      <ul class="space-y-1.5 text-sm text-slate-700">
-        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>Newer firm with limited track record</li>
-        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>Smaller community compared to established firms</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
----
-
-## 8. ThinkCapital — High Leverage Funded Accounts
+## 7. ThinkCapital — High Leverage Funded Accounts
 
 ThinkCapital offers high leverage funded accounts that appeal to aggressive traders looking for maximum exposure. With competitive leverage ratios and a streamlined evaluation process, ThinkCapital caters to traders who want to maximise their trading potential.
 
@@ -856,9 +801,9 @@ ThinkCapital offers high leverage funded accounts that appeal to aggressive trad
 
 ---
 
-## 9. IC Funded — Funded Accounts with Low Spreads
+## 8. IC Funded — Funded Accounts with Low Spreads
 
-IC Funded scores 90/100 and is backed by IC Markets, one of the world's largest forex brokers. With spreads from 0 pips, commissions of $3.50 per lot, and challenge fees starting at just $29.75, IC Funded offers some of the lowest trading costs in the funded account space.
+IC Funded scores 79/100 and is backed by IC Markets, one of the world's largest forex brokers. With spreads from 0 pips, commissions of $3.50 per lot, and challenge fees starting at just $29.75, IC Funded offers some of the lowest trading costs in the funded account space.
 
 <div class="not-prose my-6 rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
   <div class="flex flex-col sm:flex-row items-stretch">
@@ -938,7 +883,7 @@ IC Funded offers 1-step, 2-step, and three-phase challenges with account sizes f
 
 ---
 
-## 10. The 5%ers — Up to 100% Profit Split
+## 9. The 5%ers — Up to 100% Profit Split
 
 The 5%ers score 78/100 and have been operating since 2016, making them one of the most established prop firms. With profit splits up to 100%, scaling to $4 million, and a monthly salary for top performers, The 5%ers offer a comprehensive funded trading experience with a Trustpilot rating of 4.9.
 

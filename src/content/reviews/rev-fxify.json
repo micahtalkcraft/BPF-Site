@@ -1,12 +1,12 @@
 {
   "id": "rev-fxify",
   "propFirmId": "d0000005-0000-0000-0000-000000000005",
-  "summary": "FXIFY scored 83/100 with flexible account options across MT4, MT5, and DXTrade. You can choose from instant funding, lightning challenge, or one, two, and three step evaluation processes, with raw spreads from 0 pips or commission-free trading. While the prop firm partners with forex broker FXPIG and offers great flexibility in its account options, the lack of transparency around actual trading costs and the minimal educational resources available might be off-putting to some.",
+  "summary": "FXIFY scored 90/100 with flexible account options across MT4, MT5, and DXTrade. You can choose from instant funding, lightning challenge, or one, two, and three step evaluation processes, with raw spreads from 0 pips or commission-free trading. While the prop firm partners with forex broker FXPIG and offers great flexibility in its account options, the lack of transparency around actual trading costs and the minimal educational resources available might be off-putting to some.",
   "pros": ["Multiple evaluation options", "90% profit splits with add-on", "Active community on Discord"],
   "cons": ["Users report slow payouts", "Limited educational resources", "Spread transparency could improve"],
   "bestFor": "Traders who want flexibility in evaluation types and the option to choose between raw spreads or commission-free trading",
   "notIdealFor": "Traders who prioritise detailed cost information and comprehensive educational resources",
-  "overallScore": 83,
+  "overallScore": 90,
   "categoryScores": { "challenges": 90, "spreads": 80, "markets": 70, "payouts": 90, "platforms": 80, "trust": 90 },
   "categorySections": {
     "challenges": "FXIFY offers five challenge types — **Instant Funding**, **Lightning**, **One Phase**, **Two Phase**, and **Three Phase** — with account sizes from $1K to $400K and fees starting at $39.\n\nInstant Funding provides immediate access with no evaluation, an 8% trailing drawdown, and up to 90% profit split. Lightning is a 7-day evaluation with a 5% profit target, 3% daily loss, and 4% trailing drawdown. One Phase requires 10% profit with 3% daily loss and 6% trailing drawdown. Two Phase targets 10% then 5% with 4% daily loss and 10% trailing drawdown. Three Phase requires 5% per phase with 5% daily loss and 10% static drawdown.\n\nOptional add-ons include higher profit split (+20% fee), bi-weekly payouts (+5%), performance protect (+15%), and increased leverage to 50:1 (+25%). The scaling plan allows 25% account growth every 3 months for a 10% return, with accounts scaling up to $4M. FXIFY scored 9/10 for challenges.",

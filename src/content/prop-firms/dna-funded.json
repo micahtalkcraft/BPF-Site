@@ -15,6 +15,12 @@
   },
   "pricing": {
     "challengeFees": [
+      { "accountSize": 5000, "fee": 59, "model": "1-step", "label": "Single Helix" },
+      { "accountSize": 10000, "fee": 89, "model": "1-step", "label": "Single Helix" },
+      { "accountSize": 25000, "fee": 179, "model": "1-step", "label": "Single Helix" },
+      { "accountSize": 50000, "fee": 319, "model": "1-step", "label": "Single Helix" },
+      { "accountSize": 100000, "fee": 619, "model": "1-step", "label": "Single Helix" },
+      { "accountSize": 200000, "fee": 1209, "model": "1-step", "label": "Single Helix" },
       { "accountSize": 5000, "fee": 49, "model": "2-step", "label": "Double Helix" },
       { "accountSize": 10000, "fee": 79, "model": "2-step", "label": "Double Helix" },
       { "accountSize": 25000, "fee": 149, "model": "2-step", "label": "Double Helix" },

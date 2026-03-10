@@ -19,7 +19,7 @@ featuredFirms:
     descriptor: "Flexible Prop Challenges"
   - slug: "eightcap"
     descriptor: "Broker Prop Challenge"
-  - slug: "thinkcapital"
+  - slug: "think-capital"
     descriptor: "Low Fee Prop Firm"
   - slug: "blueberry-funded"
     descriptor: "Scaling to $2 Million"
@@ -579,6 +579,143 @@ Unlike many prop firms, the trading environment is transparent and predictable b
 Eightcap Challenges is one of the strongest prop options for Canadian forex traders who value consistent pricing, MT4/MT5 automation, and regulated-broker stability. The fees are higher and there's no traditional scaling plan, but the execution quality and platform environment are noticeably better than most independent firms.
 
 It's best suited to traders who want a funded-account experience that behaves like a real brokerage account, not a proprietary simulation.
+
+---
+
+## 5. Think Capital -- Low Fee Prop Firm
+
+Think Capital is a broker-backed prop firm that offers some of the lowest challenge fees in the industry, starting from just $39 for a $5,000 Nexus account. Canadian traders get a choice of three evaluation types, account sizes up to $200,000, and profit splits up to 90%. With MT5 and ThinkTrader (which includes TradingView integration) both available, Think Capital gives you solid platform flexibility at a price point that undercuts most competitors.
+
+<div class="not-prose my-6 rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+  <div class="flex flex-col sm:flex-row items-stretch">
+    <div class="flex items-center gap-4 p-5 flex-1 min-w-0">
+      <img src="/images/logos/thinkcapital-icon.png" alt="Think Capital logo" class="w-12 h-12 rounded-lg border border-slate-200 object-contain bg-white p-1 flex-shrink-0" />
+      <div class="min-w-0">
+        <p class="text-lg font-extrabold text-slate-900 leading-tight">Think Capital</p>
+        <p class="text-xs text-slate-500 mt-0.5">Low Fee Prop Firm</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-6 px-5 py-3 sm:py-5 border-t sm:border-t-0 sm:border-l border-slate-100 bg-slate-50/50 text-center">
+      <div>
+        <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Split</p>
+        <p class="text-sm font-bold text-teal-600">90%</p>
+      </div>
+      <div>
+        <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Max DD</p>
+        <p class="text-sm font-bold text-slate-800">6%</p>
+      </div>
+      <div>
+        <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
+        <p class="text-sm font-bold text-slate-800">4.3 <span class="text-amber-500">★</span></p>
+      </div>
+      <a href="/reviews/think-capital" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+        Full Review →
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="not-prose -mt-3 mb-6 rounded-xl border border-emerald-200 bg-emerald-50/80 px-5 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
+  <a href="https://www.thinkcapital.com/?sp_rid=677d98c8fcd21d60b8730003" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 transition-colors whitespace-nowrap">
+    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+    Visit Think Capital
+  </a>
+</div>
+
+<div class="not-prose my-6 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+  <p class="text-sm font-bold text-slate-900 mb-3">Pros & Cons</p>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div>
+      <p class="text-xs font-bold text-emerald-600 uppercase tracking-wide mb-2">Pros</p>
+      <ul class="space-y-1.5 text-sm text-slate-700">
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Broker-backed prop firm</li>
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Fees starting from just $39</li>
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Three challenge types to suit different styles</li>
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>TradingView integration via ThinkTrader</li>
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Scaling plan up to $1.5M</li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-xs font-bold text-red-500 uppercase tracking-wide mb-2">Cons</p>
+      <ul class="space-y-1.5 text-sm text-slate-700">
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>Crypto is the only payout method</li>
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>Smaller trading community</li>
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>EA support requires paid add-on</li>
+        <li class="flex items-start gap-2"><svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>No MT4 support</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+### Challenges and Fees
+
+Think Capital offers three challenge types, each designed for different experience levels and trading styles.
+
+**Lightning (1-Step):** The fastest path to funding with a single 10% profit target, a 3% daily loss limit, and a 6% max drawdown. Leverage is capped at 1:30, making it suited to disciplined traders who prefer tighter risk management. No minimum trading days required.
+
+**Dual Step (2-Step):** A two-phase evaluation with an 8% profit target in Phase 1 and 5% in Phase 2. You get 1:100 leverage with a 5% daily loss limit and 10% max drawdown, which gives you more room to trade than the Lightning challenge. No minimum trading days required.
+
+**Nexus (3-Step):** The most affordable option starting at just $39 for a $5,000 account. It requires 18% total profit across three phases at 1:100 leverage. This challenge has the lowest fees but the highest total target.
+
+| Account Size | Nexus Fee | Lightning Fee | Dual Step Fee |
+|-------------|-----------|---------------|---------------|
+| $5,000 | $39 | $59 | $59 |
+| $10,000 | $79 | $99 | $99 |
+| $25,000 | $139 | $199 | $199 |
+| $50,000 | $199 | $299 | $299 |
+| $100,000 | $349 | $499 | $499 |
+| $200,000 | $649 | $949 | $949 |
+
+Optional paid add-ons are available to customise your challenge:
+
+- **90% Profit Split:** Increase your split from the default to 90% for a 25% fee.
+- **News Trading:** Unlock news trading on funded accounts for a 25% fee.
+- **Expert Advisors:** Enable EA trading on MT5 for a 25% fee.
+- **Weekly Payouts:** Reduce payout intervals from bi-weekly to weekly for a 25% fee.
+- **Reduced Targets:** Lower your profit targets by 10% for a 10% fee.
+
+### Spreads and Trading Costs
+
+Think Capital does not publish average spreads, but during testing ThinkTrader EUR/USD spreads started around 0.8 pips, widening to 2.5+ pips on minor pairs. MT5 offers tighter raw spreads with a $4 per lot per side commission ($8 round-trip) on forex and precious metals. ThinkTrader charges no commission on any asset class, using wider spreads instead.
+
+MT5 commissions are slightly above the $3 to $3.50 per side industry average, but the option to choose between raw spreads on MT5 or commission-free trading on ThinkTrader gives Canadian traders flexibility depending on their strategy.
+
+### Funded Accounts and Payouts
+
+Once you pass your chosen challenge, you receive a funded account and can start earning from your trades.
+
+- **Profit Splits:** Up to 90% with the paid add-on, or the default rate without it.
+- **Scaling Plan:** Account balances increase by 20% every 3 months for traders who achieve 10% total profit, scaling up to a maximum of $1.5 million.
+- **Payout Schedule:** Bi-weekly by default (every 14 days from your first trade), with a weekly option available as an add-on.
+- **Processing Time:** Payouts are processed within 3 business days, with crypto withdrawals typically arriving within 24 to 48 hours.
+- **Payout Methods:** Cryptocurrency only at this time, though bank transfers are expected in the future.
+
+### Trading Platforms and Markets
+
+Think Capital supports two platforms for Canadian traders:
+
+**MT5** provides advanced charting, multi-asset capabilities, and full EA support (with the add-on). It offers raw spreads and is the better choice for algorithmic or experienced manual traders. Note that US-based traders cannot access MT5 due to regulatory restrictions, but this does not affect Canadian traders.
+
+**ThinkTrader** integrates TradingView charting tools directly into the platform, making it a strong option for traders who want professional-grade analysis tools in a user-friendly interface. It works on desktop, web, and mobile.
+
+Markets available across both platforms include:
+
+- **Forex:** Major, minor, and exotic currency pairs with leverage up to 1:100 on Dual Step and Nexus challenges (1:30 on Lightning).
+- **Indices:** Global indices with leverage up to 1:15.
+- **Commodities:** Gold, silver, and oil with leverage up to 1:30.
+- **Cryptocurrencies:** Including Bitcoin and Ethereum with leverage up to 1:2.
+
+### Trust and Support
+
+Think Capital has a Trustpilot rating of 4.3 out of 5 from over 500 reviews, with the majority of users giving five stars. Positive reviews commonly mention transparent rules, fast payouts, and responsive customer support. The firm actively responds to critical feedback within 24 hours.
+
+- **Community:** Over 11,700 members on Discord with channels for trading ideas, psychology, and general support.
+- **Support Channels:** Live chat for instant help, plus email and a contact form for non-urgent queries.
+- **Educational Content:** Over 100 YouTube videos covering risk management, platform tutorials, and interviews with funded traders.
+
+### Final Verdict
+
+Think Capital stands out for Canadian traders looking for the most affordable entry point into prop trading. The Nexus challenge at $39 is one of the cheapest challenge fees available from any reputable firm, and the broker-backed infrastructure means your trading conditions are built on real market data rather than a proprietary simulation. The main drawback is that payouts are crypto-only for now, which may not suit every Canadian trader. If you want low fees, flexible challenge options, and solid platform choice, Think Capital is a strong pick.
 
 ---
 

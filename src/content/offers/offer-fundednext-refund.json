@@ -1,9 +1,9 @@
 {
   "id": "offer-fundednext-refund",
-  "name": "FundedNext — 120% Challenge Fee Refund",
+  "name": "FundedNext — 120% Discount (Fee Refund + 20% Cash)",
   "propFirmIds": ["d0000004-0000-0000-0000-000000000004"],
   "trackingUrl": "https://fundednext.com/?fpr=noam82",
-  "terms": "Get a 120% challenge fee refund with exclusive promo code PROPFIRMS at checkout.",
+  "terms": "Use exclusive promo code PROPFIRMS for a unique 120% discount — your full challenge fee is refunded plus you receive an extra 20% back in cash once funded.",
   "startAt": "2026-02-01",
   "endAt": "2026-12-31"
 }

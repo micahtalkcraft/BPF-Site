@@ -248,7 +248,7 @@ You can also save 5% on your challenge fee by using the promo code PF at checkou
 
 ### Prop Firm Details
 
-FundedNext Futures scored 83/100 in our review, making it the second-best futures prop firm overall. You get a 15% profit split during the evaluation, and it offers mini and micro CME contracts across indices, currencies, metals, energy, and agriculture.
+FundedNext Futures scored 84/100 in our review, making it the second-best futures prop firm overall. You get a 15% profit split during the evaluation, and it offers mini and micro CME contracts across indices, currencies, metals, energy, and agriculture.
 
 Your trading platform options are Tradovate or NinjaTrader. The evaluation process is simple, meet the profit target, respect the drawdowns, and you're funded with 100% of your profits.
 
@@ -727,7 +727,7 @@ By following these steps, you can transition from evaluation phase to full-time 
 
 ### Which is the best prop firm for futures?
 
-The best prop firm for futures trading in 2026 is FXIFY Futures, scoring 88/100 in our full review. FXIFY Futures offers a one-step evaluation, profit splits up to 100%, no time limits, and real-time CME data access. Its top of the list thanks to low challenge costs and fast scaling options. FundedNext Futures came second with a score of 83/100 and is another popular option, offering a 24-hour payout guarantee and flexible platform access through Tradovate and NinjaTrader.
+The best prop firm for futures trading in 2026 is FXIFY Futures, scoring 88/100 in our full review. FXIFY Futures offers a one-step evaluation, profit splits up to 100%, no time limits, and real-time CME data access. Its top of the list thanks to low challenge costs and fast scaling options. FundedNext Futures came second with a score of 84/100 and is another popular option, offering a 24-hour payout guarantee and flexible platform access through Tradovate and NinjaTrader.
 
 ### Does FTMO trade futures?
 

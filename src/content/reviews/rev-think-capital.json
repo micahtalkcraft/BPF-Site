@@ -1,7 +1,7 @@
 {
   "id": "rev-think-capital",
   "propFirmId": "d0000037-0000-0000-0000-000000000037",
-  "summary": "ThinkCapital scores 91/100 as a broker-backed prop firm offering account sizes up to $200K and fees from $39. With three evaluation challenges, up to 90% profit splits, and platforms like MT5 and ThinkTrader, it balances competitive trading conditions with reliable bi-weekly payouts.\n\nThinkCapital is a solid choice among broker-backed prop trading firms, offering competitive evaluation challenges and the flexibility of account sizes up to $200,000. Its three challenge types cater to traders of varying skill levels, from one-step evaluations for simplicity to multi-step processes for more advanced traders. With up to 90% profit splits, affordable fees starting at $39, and reliable bi-weekly payouts, it's well-suited for those seeking a straightforward path to funded trading.",
+  "summary": "ThinkCapital scores 76/100 as a broker-backed prop firm offering account sizes up to $200K and fees from $39. With three evaluation challenges, up to 90% profit splits, and platforms like MT5 and ThinkTrader, it balances competitive trading conditions with reliable bi-weekly payouts.\n\nThinkCapital is a solid choice among broker-backed prop trading firms, offering competitive evaluation challenges and the flexibility of account sizes up to $200,000. Its three challenge types cater to traders of varying skill levels, from one-step evaluations for simplicity to multi-step processes for more advanced traders. With up to 90% profit splits, affordable fees starting at $39, and reliable bi-weekly payouts, it's well-suited for those seeking a straightforward path to funded trading.",
   "pros": [
     "Broker-backed prop firm",
     "Bi-weekly and weekly payout options",
@@ -18,7 +18,7 @@
   ],
   "bestFor": "Traders seeking a broker-backed prop firm with flexible challenge types and competitive pricing from $39",
   "notIdealFor": "Traders who need bank transfer payouts or those requiring MT5 access from the US",
-  "overallScore": 91,
+  "overallScore": 76,
   "categoryScores": {
     "challenges": 90,
     "spreads": 90,

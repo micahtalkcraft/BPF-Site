@@ -7,7 +7,7 @@ author: "Noam Korbl"
 authorImage: "https://www.bestpropfirms.com/wp-content/uploads/2023/08/noam-korbl-300x280-1.png"
 publishedAt: "2026-02-26"
 featured: false
-coverImage: "/images/blog/Australia brokers.png"
+coverImage: "/images/guides/Australia brokers.png"
 readingTimeMinutes: 14
 youtubeVideoId: "dZ7gorgnMvU"
 featuredFirms:
@@ -487,7 +487,7 @@ Backed by FXPIG, FXIFY combines tight pricing, fast execution, and an active Dis
 
 ### More About FXIFY
 
-FXIFY scored 83/100 and is the 4th best prop firm we tested thanks to its instant funding accounts and flexible evaluation challenges. You can start with up to $50,000 in capital immediately, making it one of the best prop firms if you want to skip the entire evaluation process and trade straight away.
+FXIFY scored 90/100 and is the 4th best prop firm we tested thanks to its instant funding accounts and flexible evaluation challenges. You can start with up to $50,000 in capital immediately, making it one of the best prop firms if you want to skip the entire evaluation process and trade straight away.
 
 For those who prefer an evaluation, FXIFY also offers Lightning, One Step, Two Step, and Three Step challenges, with scalable account sizes and profit splits up to 90%. You can also trade futures through their FXIFY Futures branch, which came in 8th place on our list after establishing a reputation as the best futures prop firm worldwide.
 
@@ -769,10 +769,10 @@ To choose the best prop trading firm, you need to compare features that directly
 To become a prop trader, you need to sign up with a proprietary trading firm, complete their evaluation process, and meet specific trading requirements. Most firms require traders to pass a challenge or evaluation phase before providing access to a funded account. Here's a step-by-step guide on how to get started:
 
 1. **Choose the right prop firm:** Research prop trading firms based on factors such as evaluation fees, profit splits, trading platforms, and the types of financial instruments they offer (forex, equities, futures, etc.). Select the firm that aligns with your trading style and objectives. We have specific pages for:
-   - [UK Prop Traders](/blog/uk)
-   - [Canadian Prop Traders](/blog/canada)
-   - [Indian Prop Traders](/blog/india)
-   - [Australian Prop Traders](/blog/australia)
+   - [UK Prop Traders](/guides/uk)
+   - [Canadian Prop Traders](/guides/canada)
+   - [Indian Prop Traders](/guides/india)
+   - [Australian Prop Traders](/guides/australia)
 2. **Sign up and pay the evaluation fee:** Register with the firm and pay the fee to start the evaluation process or challenge. Fees will vary depending on the account size and the specific challenge you choose.
 3. **Complete the evaluation or challenge:** Follow the firm's guidelines during the challenge. You'll need to meet profit targets and avoid exceeding drawdown limits (maximum allowable losses). Challenges can vary in structure, with some requiring a single evaluation phase and others requiring two.
 4. **Pass the challenge to get funded:** Once you successfully complete the evaluation, the firm will provide a funded account. This account allows you to trade using the firm's capital.

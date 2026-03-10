@@ -19,10 +19,10 @@ const { section, fallbackBody } = Astro.props;
     To get a BrightFunded trading account you need to work through a traditional two step evaluation process. They keep things simple with just one model with a default 80% profit share, but you can choose an account size between $5K and $200K, with fees ranging from <strong>&euro;55 to &euro;975</strong> without addons.
   </p>
   <p class="mb-4">
-    The rules are easy to follow — in Step 1 you need to reach an <strong>8% profit target</strong>, then Step 2 it drops to <strong>5%</strong>. At both steps risk requirements are the same, with a <strong>5% daily drawdown</strong> and <strong>10% overall</strong>. At step 1 and 2 you'll need to trade for a minimum of 5 days unless you buy the add-on, but there's no maximum days or time limit.
+    The rules are easy to follow — in Step 1 you need to reach an <strong>8% profit target</strong>, then Step 2 it drops to <strong>5%</strong>. At both steps risk requirements are the same, with a <strong>5% daily drawdown</strong> and <strong>10% overall</strong>. The daily permitted loss (5%) is calculated from the highest balance or equity recorded at <strong>end of day (EOD high-watermark)</strong> for new accounts. At step 1 and 2 you'll need to trade for a minimum of 5 days unless you buy the add-on, and each trade must stay open for at least <strong>1 minute</strong> to count as a trading day. There's no maximum days or time limit.
   </p>
   <p class="mb-8">
-    BrightFunded does let you trade news during the evaluation, with no restrictions, which is a massive perk not offered by many prop firms. But it is worth noting once you become a funded trader, there is a 10 minute window for major news events.
+    BrightFunded does let you trade news during the evaluation, with no restrictions, which is a massive perk not offered by many prop firms. But it is worth noting once you become a funded trader (Funded Star Account), there is a <strong>10-minute window</strong> (5 minutes before and 5 minutes after) around significant news events where trading is prohibited.
   </p>
 
   <!-- ─── Challenge Fee Table ─────────────────────────────────────── -->
@@ -126,6 +126,22 @@ const { section, fallbackBody } = Astro.props;
       <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
       <p class="text-sm font-bold text-teal-600">80% → 100%</p>
     </div>
+  </div>
+
+  <!-- ─── Evaluation Profit Bonus ─────────────────────────────────── -->
+  <div class="rounded-xl border border-teal-200 bg-teal-50 p-4 mb-8">
+    <p class="text-sm font-bold text-teal-900 mb-1">15% Evaluation Profit Bonus</p>
+    <p class="text-sm text-teal-800">
+      A <strong>15% bonus</strong> of your combined Phase 1 and Phase 2 profits is added to the starting balance of your Funded Star Account once you reach 10% growth. This rewards strong evaluation performance with additional funded capital.
+    </p>
+  </div>
+
+  <!-- ─── Inactivity Rule ─────────────────────────────────────────── -->
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-8">
+    <p class="text-sm font-bold text-amber-900 mb-1">Inactivity Rule</p>
+    <p class="text-sm text-amber-800">
+      Accounts are deactivated after <strong>30 calendar days</strong> of inactivity. To reset the inactivity timer, a trade must stay open for at least <strong>1 minute (60 seconds)</strong>.
+    </p>
   </div>
 
   <!-- ─── Paid Add-Ons ───────────────────────────────────────────── -->
@@ -431,11 +447,11 @@ const { section, fallbackBody } = Astro.props;
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">News Trading</p>
-      <p><span class="text-emerald-600 font-semibold">Unrestricted in evaluation</span> — funded accounts have a 10-minute window around major news events.</p>
+      <p><span class="text-emerald-600 font-semibold">Unrestricted in evaluation</span> — on Funded Star Accounts, trading is prohibited within a <strong>10-minute window</strong> (5 minutes before and 5 minutes after) significant news events.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Copy Trading</p>
-      <p><span class="text-red-500 font-semibold">Not allowed</span> — you cannot mirror trades from other traders or social platforms.</p>
+      <p><span class="text-amber-600 font-semibold">Own accounts only</span> — copy trading is only permitted between accounts held by the same person. Copying others (friends, family, or signals) is strictly prohibited.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Weekend Holding</p>
@@ -485,6 +501,14 @@ const { section, fallbackBody } = Astro.props;
     </div>
   </div>
 
+  <!-- Evaluation Profit Bonus -->
+  <div class="rounded-xl border border-teal-200 bg-teal-50 p-4 mb-8">
+    <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Evaluation Profit Bonus</p>
+    <p class="text-sm text-teal-700">
+      A <strong>15% bonus</strong> of your combined Phase 1 + Phase 2 profits is added to the starting balance of your Funded Star Account after reaching 10% growth, giving you extra capital to trade with.
+    </p>
+  </div>
+
   <!-- Profit Split progression -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Profit Split Progression</h3>
 
@@ -505,6 +529,9 @@ const { section, fallbackBody } = Astro.props;
 
   <!-- Payout Frequency -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Payout Frequency</h3>
+  <p class="mb-4">
+    The first payout can be requested <strong>30 days after the first trade</strong> on your funded account. After that, subsequent payouts follow a <strong>bi-weekly (14 days)</strong> schedule by default, with add-on options for more frequent payouts.
+  </p>
   <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
     <table class="w-full text-sm">
       <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
@@ -515,12 +542,12 @@ const { section, fallbackBody } = Astro.props;
       </thead>
       <tbody class="divide-y divide-slate-100">
         <tr class="bg-white">
-          <td class="px-5 py-3 font-semibold text-slate-900">Monthly</td>
-          <td class="px-5 py-3 text-right text-slate-700">Default — no add-on required</td>
+          <td class="px-5 py-3 font-semibold text-slate-900">First Payout</td>
+          <td class="px-5 py-3 text-right text-slate-700">30 days after first trade</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-5 py-3 font-semibold text-slate-900">Bi-Weekly (14 days)</td>
-          <td class="px-5 py-3 text-right text-slate-700">15% fee add-on</td>
+          <td class="px-5 py-3 text-right text-slate-700">Default — no add-on required</td>
         </tr>
         <tr class="bg-white">
           <td class="px-5 py-3 font-semibold text-slate-900">Weekly (7 days)</td>
@@ -531,7 +558,7 @@ const { section, fallbackBody } = Astro.props;
   </div>
 
   <p class="mb-6">
-    There's <strong>no minimum withdrawal</strong> and payouts go out in US Dollar via bank transfer or in crypto (USDC ERC-20). Processing is quick, and outside processor fees are minimal.
+    There's <strong>no minimum withdrawal</strong>. Bank transfers are processed exclusively in <strong>Euros (&euro;)</strong>, while crypto payments are processed in <strong>USDC (ERC-20)</strong>. Processing is quick, and outside processor fees are minimal.
   </p>
 
   <!-- Verdict -->

@@ -944,7 +944,7 @@ More experienced CFD traders may also be interested in the best instant funding 
 
 ### What are the best crypto prop trading firms for beginner traders?
 
-Crypto prop trading isn't ideal for beginners due to the complexity, high-risk, and volatility of cryptocurrency markets. If you are new to online trading, you should approach it cautiously and develop your trading experience first through demo accounts. For those determined to start, Seacrest Funded provides small account sizes starting at $5,000 and a 3-step challenge with manageable profit targets.
+Crypto prop trading isn't ideal for beginners due to the complexity, high-risk, and volatility of cryptocurrency markets. If you are new to online trading, you should approach it cautiously and develop your trading experience first through demo accounts. For those determined to start, BrightFunded offers account sizes starting at $10,000 with a straightforward 2-step challenge and manageable profit targets.
 
 ### Which prop firm is the most trusted?
 

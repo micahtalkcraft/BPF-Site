@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 
 export interface FirmItem {
   id: string;
@@ -44,6 +44,61 @@ const EVAL_FILTERS = [
   { value: "broker-backed", label: "Broker Backed" },
   { value: "offers", label: "Offers" },
 ];
+
+const COUNTRY_FILTERS = [
+  { code: "AU", label: "Australia" },
+  { code: "GB", label: "United Kingdom" },
+  { code: "IN", label: "India" },
+  { code: "CA", label: "Canada" },
+];
+
+const COUNTRY_FIRM_LISTS: Record<string, { slug: string; descriptor: string }[]> = {
+  AU: [
+    { slug: "dna-funded", descriptor: "Best Prop Firm For Australian Traders" },
+    { slug: "brightfunded", descriptor: "Profit Share Scales to 100%" },
+    { slug: "blueberry-funded", descriptor: "1,100+ Financial Markets" },
+    { slug: "fxify", descriptor: "Instant Funding Prop Firm" },
+    { slug: "fundednext", descriptor: "Good TradingView Prop Firm" },
+    { slug: "think-capital", descriptor: "Low Challenge Fees" },
+    { slug: "ic-funded", descriptor: "Top Forex Prop Firm" },
+    { slug: "fxify-futures", descriptor: "Best Futures Prop Firm" },
+    { slug: "ftmo", descriptor: "Good Scaling Plan" },
+  ],
+  GB: [
+    { slug: "fundednext", descriptor: "Best Prop Firm for UK Traders" },
+    { slug: "brightfunded", descriptor: "Loyalty Program & Unlimited Scaling" },
+    { slug: "dna-funded", descriptor: "Top Broker Backed Prop Firm" },
+    { slug: "blueberry-funded", descriptor: "Top Scaling Plan for Funded Accounts" },
+    { slug: "fxify", descriptor: "Low Fee Forex Prop Trading Firm" },
+    { slug: "eightcap", descriptor: "FCA Regulated Broker" },
+    { slug: "funded-trading-plus", descriptor: "Best Prop Firm for Instant Funding" },
+    { slug: "topstep", descriptor: "Best Prop Firm for Futures Trading in UK" },
+    { slug: "ftmo", descriptor: "Top Prop Firm for Stock Trading" },
+    { slug: "the5ers", descriptor: "Fast Pathway to Funded Accounts" },
+  ],
+  IN: [
+    { slug: "fundednext", descriptor: "Best Prop Firm in India" },
+    { slug: "fxify", descriptor: "Best Instant Funding Prop Firm" },
+    { slug: "dna-funded", descriptor: "Top Broker Backed Prop Firm" },
+    { slug: "brightfunded", descriptor: "Best Prop Trader Rewards Program" },
+    { slug: "blueberry-funded", descriptor: "Good Stock and Crypto Prop Firm" },
+    { slug: "funded-prime", descriptor: "Meme Coin Prop Trading" },
+    { slug: "think-capital", descriptor: "Low Fee Prop Challenges" },
+    { slug: "ftmo", descriptor: "Best Stock Prop Firm" },
+    { slug: "the-funded-trader", descriptor: "Large Prop Trading Community" },
+  ],
+  CA: [
+    { slug: "brightfunded", descriptor: "Best Prop Firm in Canada Overall" },
+    { slug: "dna-funded", descriptor: "Broker Backed Prop Firm" },
+    { slug: "fundednext", descriptor: "Flexible Prop Challenges" },
+    { slug: "eightcap", descriptor: "Broker Prop Challenge" },
+    { slug: "think-capital", descriptor: "Low Fee Prop Firm" },
+    { slug: "blueberry-funded", descriptor: "Scaling to $2 million" },
+    { slug: "ftmo", descriptor: "Prop Firm for Share Trading" },
+    { slug: "funded-trading-plus", descriptor: "Instant Funding Accounts" },
+    { slug: "topstep", descriptor: "Top Futures Prop Firm" },
+  ],
+};
 
 function scoreColor(score: number): string {
   if (score >= 88) return "bg-green-500";
@@ -219,19 +274,25 @@ function CouponBlock({ code, percent }: { code: string; percent?: number }) {
     });
   };
   return (
-    <div className="w-24 flex-shrink-0 flex flex-col items-center justify-center rounded-xl border border-dashed border-orange-300 bg-orange-50 px-3 py-2 text-center gap-1">
-      {percent !== undefined && (
-        <span className="text-sm font-black text-orange-600 leading-none">{percent}% OFF</span>
-      )}
+    <div className="w-40 flex-shrink-0 flex flex-col items-center justify-center rounded-xl border-2 border-dashed border-emerald-300 bg-emerald-50 px-3.5 py-3 text-center gap-1.5">
+      <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-600 leading-none">
+        {percent !== undefined ? `${percent}% OFF` : "Offer"}
+      </span>
       <button
         onClick={handleCopy}
-        className="inline-flex items-center gap-1 text-[10px] font-bold text-orange-700 hover:text-orange-900 transition-colors"
+        className="w-full inline-flex items-center justify-center gap-1.5 rounded-lg bg-white border border-emerald-300 px-3 py-2 text-xs font-black text-emerald-700 tracking-wide hover:bg-emerald-100 transition-colors cursor-pointer"
         title="Click to copy code"
       >
-        <svg className="h-2.5 w-2.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-          <path strokeLinecap="round" strokeLinejoin="round"
-            d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-        </svg>
+        {copied ? (
+          <svg className="h-3 w-3 flex-shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+        ) : (
+          <svg className="h-3 w-3 flex-shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round"
+              d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+          </svg>
+        )}
         {copied ? "Copied!" : code}
       </button>
     </div>
@@ -245,6 +306,20 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
   const [evalFilter, setEvalFilter] = useState("all");
   const [sort, setSort] = useState("score-desc");
   const [page, setPage] = useState(1);
+  const [countryFilter, setCountryFilter] = useState<string | null>(null);
+  const [countryOpen, setCountryOpen] = useState(false);
+  const countryRef = useRef<HTMLDivElement>(null);
+
+  // Close country dropdown on outside click
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (countryRef.current && !countryRef.current.contains(e.target as Node)) {
+        setCountryOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
 
   const filtered = useMemo(() => {
     let list = [...firms];
@@ -264,15 +339,24 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
       list = list.filter((f) => f.evaluationTypes.includes(evalFilter));
     }
 
-    list.sort((a, b) => {
-      if (sort === "score-desc") return (b.overallScore ?? 0) - (a.overallScore ?? 0);
-      if (sort === "score-asc") return (a.overallScore ?? 0) - (b.overallScore ?? 0);
-      if (sort === "name-asc") return a.name.localeCompare(b.name);
-      return 0;
-    });
+    if (countryFilter && COUNTRY_FIRM_LISTS[countryFilter]) {
+      const curated = COUNTRY_FIRM_LISTS[countryFilter];
+      const slugSet = new Set(curated.map((c) => c.slug));
+      list = list.filter((f) => slugSet.has(f.slug));
+      // Sort by curated order
+      const slugOrder = new Map(curated.map((c, i) => [c.slug, i]));
+      list.sort((a, b) => (slugOrder.get(a.slug) ?? 99) - (slugOrder.get(b.slug) ?? 99));
+    } else {
+      list.sort((a, b) => {
+        if (sort === "score-desc") return (b.overallScore ?? 0) - (a.overallScore ?? 0);
+        if (sort === "score-asc") return (a.overallScore ?? 0) - (b.overallScore ?? 0);
+        if (sort === "name-asc") return a.name.localeCompare(b.name);
+        return 0;
+      });
+    }
 
     return list;
-  }, [firms, search, evalFilter, sort]);
+  }, [firms, search, evalFilter, sort, countryFilter]);
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / ITEMS_PER_PAGE));
   const safePage = Math.min(page, totalPages);
@@ -282,6 +366,13 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
   const handleFilterChange = (val: string) => { setEvalFilter(val); setPage(1); };
   const handleSearch = (val: string) => { setSearch(val); setPage(1); };
   const handleSort = (val: string) => { setSort(val); setPage(1); };
+  const handleCountry = (code: string | null) => { setCountryFilter(code); setCountryOpen(false); setPage(1); };
+
+  // Build descriptor lookup for active country filter
+  const countryDescriptors = useMemo(() => {
+    if (!countryFilter || !COUNTRY_FIRM_LISTS[countryFilter]) return new Map<string, string>();
+    return new Map(COUNTRY_FIRM_LISTS[countryFilter].map((c) => [c.slug, c.descriptor]));
+  }, [countryFilter]);
 
   return (
     <div>
@@ -319,6 +410,50 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
           </div>
+          {/* Country filter dropdown */}
+          <div className="relative" ref={countryRef}>
+            <button
+              onClick={() => setCountryOpen(!countryOpen)}
+              className={`h-full inline-flex items-center gap-1.5 px-3 py-2.5 text-sm border rounded-lg transition-colors cursor-pointer font-medium whitespace-nowrap ${
+                countryFilter
+                  ? "border-teal-500 bg-teal-50 text-teal-700"
+                  : "border-slate-200 bg-white text-slate-700 hover:border-teal-300"
+              }`}
+              title="Filter by country"
+            >
+              <svg className="h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5a17.92 17.92 0 01-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+              </svg>
+              {countryFilter ? COUNTRY_FILTERS.find((c) => c.code === countryFilter)?.label ?? countryFilter : "Country"}
+              <svg className={`h-3 w-3 text-slate-400 transition-transform flex-shrink-0 ${countryOpen ? "rotate-180" : ""}`}
+                fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            {countryOpen && (
+              <div className="absolute right-0 top-full mt-1.5 w-48 bg-white border border-slate-200 rounded-lg shadow-lg z-20 py-1">
+                <button
+                  onClick={() => handleCountry(null)}
+                  className={`w-full text-left px-3 py-2 text-sm transition-colors ${
+                    !countryFilter ? "bg-teal-50 text-teal-700 font-semibold" : "text-slate-700 hover:bg-slate-50"
+                  }`}
+                >
+                  All Countries
+                </button>
+                {COUNTRY_FILTERS.map((c) => (
+                  <button
+                    key={c.code}
+                    onClick={() => handleCountry(c.code)}
+                    className={`w-full text-left px-3 py-2 text-sm transition-colors ${
+                      countryFilter === c.code ? "bg-teal-50 text-teal-700 font-semibold" : "text-slate-700 hover:bg-slate-50"
+                    }`}
+                  >
+                    {c.label}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Eval type filter chips */}
@@ -355,7 +490,10 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
             <p className="font-medium">No firms match your filters</p>
           </div>
         ) : (
-          paginatedFirms.map((firm) => (
+          paginatedFirms.map((firm, idx) => {
+            const displayRank = countryFilter ? idx + 1 + (safePage - 1) * ITEMS_PER_PAGE : firm.rank;
+            const descriptor = countryDescriptors.get(firm.slug);
+            return (
             <div
               key={firm.id}
               className="relative group bg-white border border-slate-200 rounded-xl px-6 py-5 shadow-sm hover:shadow-md hover:border-teal-200 transition-all duration-200 overflow-hidden"
@@ -366,7 +504,7 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
               <div className="flex items-center gap-4">
                 {/* Rank */}
                 <span className="hidden sm:block flex-shrink-0 text-2xl font-black text-slate-200 w-8 text-center select-none">
-                  {String(firm.rank).padStart(2, "0")}
+                  {String(displayRank).padStart(2, "0")}
                 </span>
 
                 {/* Avatar / Logo */}
@@ -383,7 +521,7 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
                     </a>
                     {firm.flagged ? <CautionBadge /> : firm.verified === false ? <UnverifiedBadge /> : firm.hasReview && <VerifiedBadge />}
                     {firm.isAwardWinner && <AwardBadge />}
-                    <RankBadge rank={firm.rank} />
+                    <RankBadge rank={displayRank} />
                     {firm.status !== "active" && (
                       <span className="text-[10px] font-bold uppercase tracking-wide bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded">
                         {firm.status}
@@ -405,6 +543,11 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
                   )}
                   {/* Tags row */}
                   <div className="flex items-center gap-1.5 mt-1.5 overflow-hidden">
+                    {descriptor && (
+                      <span className="text-[10px] bg-teal-50 text-teal-700 border border-teal-200 px-2 py-0.5 rounded-full font-semibold whitespace-nowrap flex-shrink-0">
+                        {descriptor}
+                      </span>
+                    )}
                     {firm.evaluationTypes
                       .filter((t) => t !== "other")
                       .filter((t) => !(firm.tags ?? []).some((tag) => tag.toLowerCase().includes(t.toLowerCase())))
@@ -421,24 +564,14 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
                   </div>
                 </div>
 
-                {/* Stats */}
-                <div className="hidden md:flex items-center gap-5 text-sm">
-                  {firm.lowestFee !== null && (
-                    <div className="text-center">
-                      <p className="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Fees From</p>
-                      <p className="font-bold text-sm text-slate-700">${firm.lowestFee}</p>
-                    </div>
-                  )}
-                </div>
-
                 {/* Coupon block — always rendered so columns stay aligned */}
                 <div className="hidden sm:flex flex-shrink-0">
                   {firm.discountCode ? (
                     <CouponBlock code={firm.discountCode} percent={firm.discountPercent} />
                   ) : (
-                    <div className="w-24 flex flex-col items-center justify-center rounded-xl border border-dashed border-slate-200 bg-slate-50 px-3 py-2.5 text-center gap-1">
-                      <span className="text-sm font-black text-slate-300 leading-none">—</span>
-                      <span className="text-[10px] font-medium text-slate-300">No Coupon</span>
+                    <div className="w-40 flex flex-col items-center justify-center rounded-xl border-2 border-dashed border-slate-200 bg-slate-50 px-3.5 py-3 text-center gap-1.5">
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-slate-300 leading-none">No Offer</span>
+                      <div className="w-full inline-flex items-center justify-center rounded-lg bg-white border border-slate-200 px-3 py-2 text-xs font-black text-slate-300 tracking-wide">—</div>
                     </div>
                   )}
                 </div>
@@ -479,7 +612,7 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
                 </div>
               </div>
             </div>
-          ))
+          );})
         )}
       </div>
 

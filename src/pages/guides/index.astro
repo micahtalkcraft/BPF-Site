@@ -1,693 +1,255 @@
 ---
 import Base from "../../layouts/Base.astro";
 import { getCollection } from "astro:content";
-const base = import.meta.env.BASE_URL.replace(/\/$/, "");
-const siteUrl = "https://www.bestpropfirms.com";
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+/** Prefix local asset paths with the site base URL */
 function assetUrl(path: string | undefined): string | undefined {
   if (!path) return undefined;
   if (path.startsWith("http")) return path;
   return `${base}${path}`;
 }
 
+const posts = await getCollection("blog");
+
+// Sort by date descending
+const sorted = posts.sort(
+  (a, b) => new Date(b.data.publishedAt).getTime() - new Date(a.data.publishedAt).getTime()
+);
+
+// Featured post: first post with featured=true, or latest
+const featured = sorted.find((p) => p.data.featured) ?? sorted[0];
+const rest = sorted.filter((p) => p.id !== featured.id);
+
+// Unique categories for filter chips
+const categories = [...new Set(sorted.map((p) => p.data.category))].sort();
+
 function formatDate(dateStr: string) {
   return new Date(dateStr).toLocaleDateString("en-GB", {
     day: "numeric",
-    month: "long",
+    month: "short",
     year: "numeric",
   });
 }
-
-const guideLinks = [
-  { label: "What is a Prop Trading Firm?", slug: "what-is-a-prop-firm" },
-  { label: "Risk Management in Prop Trading", slug: "risk-management-prop-trading" },
-  { label: "Pros and Cons of Prop Trading", slug: "pros-and-cons-of-prop-trading" },
-  { label: "Prop Trading Account Types", slug: "prop-trading-account-types" },
-  { label: "Prop Trading for Beginners", slug: "prop-trading-for-beginners" },
-  { label: "Prop Trading Strategies", slug: "prop-trading-strategies" },
-  { label: "How Do Prop Firms Pay You?", slug: "how-do-prop-firms-pay-you" },
-];
-
-const tocItems = [
-  { slug: "how-does-proprietary-trading-work", text: "How Does Proprietary Trading Work?" },
-  { slug: "traditional-vs-online-prop-trading", text: "Traditional vs Online Prop Trading" },
-  { slug: "who-is-prop-trading-for", text: "Who Is Prop Trading For?" },
-  { slug: "pros-and-cons-of-prop-trading", text: "Pros and Cons of Prop Trading" },
-  { slug: "understanding-the-risks", text: "Understanding the Risks" },
-  { slug: "common-proprietary-trading-strategies", text: "Common Strategies" },
-  { slug: "are-prop-firms-regulated", text: "Are Prop Firms Regulated?" },
-  { slug: "quick-history-of-prop-trading", text: "Quick History" },
-  { slug: "faqs", text: "FAQs" },
-];
-
-// Load all guides for footer section
-const allGuides = await getCollection("guides");
-const sortedGuides = allGuides
-  .sort((a, b) => new Date(b.data.publishedAt).getTime() - new Date(a.data.publishedAt).getTime())
-  .slice(0, 6);
-
-const articleJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  headline: "What Is Prop Trading? A Complete Guide",
-  description: "A comprehensive guide to proprietary trading — how it works, who it's for, the pros and cons, strategies, regulation, and history.",
-  datePublished: "2026-03-04",
-  author: {
-    "@type": "Person",
-    name: "Noam Korbl",
-  },
-  publisher: {
-    "@type": "Organization",
-    name: "BestPropFirms.com",
-    url: siteUrl,
-  },
-  mainEntityOfPage: `${siteUrl}/guides`,
-};
 ---
 
 <Base
-  title="What Is Prop Trading? A Complete Guide | BestPropFirms.com"
-  description="A comprehensive guide to proprietary trading — how it works, who it's for, the pros and cons, common strategies, regulation, and how to get started with a funded account."
-  ogType="article"
-  jsonLd={articleJsonLd}
+  title="Guides — Prop Trading Insights & Guides | BestPropFirms.com"
+  description="Expert articles on prop trading: firm reviews, strategy guides, industry news, and tips to help you get funded."
 >
-  <!-- Hero -->
+  <!-- Page header -->
   <section class="bg-[#0d1b2a] text-white py-14 px-4">
     <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
       <p class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-2">Guides</p>
-      <h1 class="text-3xl sm:text-4xl font-black leading-tight mb-4">What Is Prop Trading?</h1>
-      <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-4xl mb-6">
-        Proprietary trading, often called prop trading, is where you trade financial markets using a firm's capital instead of your own, in exchange for a share of the profits, as long as you operate within strict risk limits and trading rules.
+      <h1 class="text-4xl font-black mb-3">Insights & Guides</h1>
+      <p class="text-slate-300 text-lg max-w-2xl">
+        Expert articles on prop trading — from beginner guides to in-depth firm comparisons and industry analysis.
       </p>
-      <div class="flex items-center gap-3">
-        <img src={`${base}/images/team/noam-korbl-300x280-1.png`} alt="Noam Korbl" class="w-9 h-9 rounded-full object-cover border-2 border-white/20" />
-        <div class="flex flex-col">
-          <span class="text-sm font-semibold text-white">Noam Korbl</span>
-          <div class="flex items-center gap-3 text-xs text-slate-400">
-            <span>4 March 2026</span>
-            <span class="flex items-center gap-1">
-              <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              ~20 min read
-            </span>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
-  <!-- Two-column: Guide sidebar + Video -->
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
-    <div class="flex flex-col lg:flex-row gap-6">
-
-      <!-- Left: Guide links card -->
-      <div class="lg:w-[380px] flex-shrink-0">
-        <div class="bg-white border border-slate-200 rounded-2xl shadow-lg overflow-hidden h-full flex flex-col">
-          <div class="bg-[#0d1b2a] px-5 py-4">
-            <p class="text-sm font-black text-white uppercase tracking-wide">Prop Trading Guides</p>
-            <p class="text-[11px] text-slate-400 mt-1">7 in-depth guides for traders</p>
-          </div>
-          <div class="flex items-center px-5 py-2 bg-teal-500 text-[10px] font-bold text-white uppercase tracking-widest">
-            <span class="w-8 flex-shrink-0">#</span>
-            <span class="flex-1">Guide</span>
-          </div>
-          <div class="flex-1 divide-y divide-slate-100">
-            {guideLinks.map((g, i) => (
-              <a href={`${base}/guides/${g.slug}`}
-                 class="flex items-center px-5 py-3 hover:bg-teal-50/50 transition-colors group">
-                <span class={`w-8 flex-shrink-0 text-xs font-black ${i === 0 ? "text-teal-500" : "text-slate-300"}`}>
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <span class="text-sm font-semibold text-slate-800 group-hover:text-teal-600 transition-colors leading-snug">
-                  {g.label}
-                </span>
-              </a>
-            ))}
-          </div>
-          <div class="px-5 py-3 border-t border-slate-100 bg-slate-50/50">
-            <p class="text-[10px] text-slate-400 leading-relaxed">
-              Comprehensive guides covering everything from beginner basics to advanced strategies.
+  <!-- Featured article -->
+  {featured && (
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10 mb-12">
+      <a
+        href={`${base}/guides/${featured.id.replace(/\.md$/, "")}`}
+        class="group block bg-white border border-slate-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden"
+      >
+        <div class="flex flex-col md:flex-row">
+          {/* Thumbnail */}
+          {featured.data.coverImage ? (
+            <div class="md:w-1/2 flex-shrink-0">
+              <img
+                src={assetUrl(featured.data.coverImage)}
+                alt={featured.data.title}
+                class="w-full h-56 md:h-full object-cover"
+              />
+            </div>
+          ) : (
+            <div class="md:w-1/2 flex-shrink-0 bg-gradient-to-br from-teal-500 to-blue-600 flex items-center justify-center min-h-[14rem]">
+              <svg class="h-16 w-16 text-white/30" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+              </svg>
+            </div>
+          )}
+          {/* Content */}
+          <div class="flex-1 p-6 md:p-8 flex flex-col justify-center">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="inline-flex items-center rounded-full bg-teal-50 border border-teal-200 px-2.5 py-0.5 text-[10px] font-bold text-teal-700 uppercase tracking-wide">
+                Featured
+              </span>
+              <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] font-semibold text-slate-600">
+                {featured.data.category}
+              </span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-black text-slate-900 group-hover:text-teal-600 transition-colors mb-3 leading-tight">
+              {featured.data.title}
+            </h2>
+            <p class="text-slate-600 leading-relaxed mb-4 line-clamp-3">
+              {featured.data.excerpt}
             </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right: YouTube video -->
-      <div class="flex-1 min-w-0 flex flex-col gap-6">
-        <div class="rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-black">
-          <div class="relative w-full" style="padding-bottom:56.25%">
-            <iframe
-              src="https://www.youtube.com/embed/dZ7gorgnMvU"
-              title="What Is Prop Trading?"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              class="absolute inset-0 w-full h-full"
-              loading="lazy"
-            ></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Intro blurb container -->
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 -mt-2 mb-6">
-    <div class="bg-white border border-slate-200 rounded-2xl shadow-sm p-5 sm:p-6">
-      <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
-        This page aims to explain what proprietary or 'prop trading' is, the advantages and risks of prop trading, and how to get started as a prop trader with a funded account. We also listed the <a href={`${base}/reviews`} class="text-teal-600 font-semibold hover:text-teal-700 hover:underline">best proprietary trading firms in 2026</a> if you're looking to get started.
-      </p>
-    </div>
-  </div>
-
-  <!-- Article body with TOC sidebar -->
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-6 pb-16">
-    <div class="flex gap-10">
-
-      <!-- TOC sidebar (desktop only) -->
-      <aside class="hidden xl:block w-56 flex-shrink-0">
-        <nav id="toc-nav" class="sticky top-24">
-          <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3">On this page</p>
-          <ul class="space-y-0.5 border-l-2 border-slate-100">
-            {tocItems.map((item) => (
-              <li>
-                <a
-                  href={`#${item.slug}`}
-                  data-toc-link={item.slug}
-                  class="toc-link block pl-3.5 py-1.5 text-[13px] leading-snug text-slate-400 hover:text-teal-600 transition-colors border-l-2 -ml-[2px] border-transparent hover:border-teal-400"
-                >
-                  {item.text}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </aside>
-
-      <!-- Main article content -->
-      <article class="min-w-0 max-w-3xl flex-1">
-        <div class="prose prose-slate prose-lg max-w-none
-          prose-headings:font-extrabold prose-headings:text-slate-900
-          prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:border-b prose-h2:border-slate-100 prose-h2:pb-3
-          prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
-          prose-p:leading-relaxed prose-p:text-slate-700
-          prose-a:text-teal-600 prose-a:font-semibold prose-a:no-underline hover:prose-a:text-teal-700 hover:prose-a:underline
-          prose-strong:text-slate-900
-          prose-li:text-slate-700
-          prose-h2:scroll-mt-24
-          prose-h3:scroll-mt-24
-        ">
-
-          <!-- ═══════════════════════════════════════════════════════════════ -->
-          <!-- SECTION 1: How Does Proprietary Trading Work? -->
-          <!-- ═══════════════════════════════════════════════════════════════ -->
-          <h2 id="how-does-proprietary-trading-work">How Does Proprietary Trading Work?</h2>
-
-          <p>Prop trading works by letting you access firm capital after you prove you can trade profitably within strict risk limits.</p>
-
-          <p>In practice, this usually starts with an evaluation account. You're given virtual funds, real market prices, and a set of rules that decide whether you qualify. Typical targets sit around 8–10%, while maximum drawdown might be 5–10%.</p>
-
-          <div class="not-prose rounded-xl border-l-4 border-amber-400 bg-amber-50/60 px-5 py-4 my-6">
-            <p class="text-sm font-semibold text-amber-800 mb-1">From Experience</p>
-            <p class="text-sm text-slate-700 leading-relaxed">One of the first lessons you learn is that prop drawdown isn't the same as being "down on the week." I've seen accounts fail while still net profitable because one session exceeded the daily loss limit. Two normal-sized losing trades on a slow day can be enough if you're not tracking intraday risk properly.</p>
-          </div>
-
-          <p>Once you pass, the funded account looks similar, but the pressure changes. Now the goal isn't passing. It's staying funded long enough to get consistent payouts.</p>
-
-
-          <!-- ═══════════════════════════════════════════════════════════════ -->
-          <!-- SECTION 2: Traditional vs Online Prop Trading -->
-          <!-- ═══════════════════════════════════════════════════════════════ -->
-          <h2 id="traditional-vs-online-prop-trading">Traditional vs Online Prop Trading</h2>
-
-          <p>Prop trading generally falls into two models: traditional in-house desks and online prop firms. Both use firm capital, but how you're assessed and managed is very different.</p>
-
-          <div class="not-prose grid grid-cols-1 sm:grid-cols-2 gap-4 my-8">
-            <div class="rounded-2xl border border-slate-200 bg-slate-50/50 p-5">
-              <p class="text-xs font-black uppercase tracking-widest text-slate-500 mb-4">Traditional Desks</p>
-              <ul class="space-y-2.5">
-                <li class="flex items-start gap-2 text-sm text-slate-700">
-                  <svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
-                  Work directly in an office
-                </li>
-                <li class="flex items-start gap-2 text-sm text-slate-700">
-                  <svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                  Monitored over time, not one window
-                </li>
-                <li class="flex items-start gap-2 text-sm text-slate-700">
-                  <svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
-                  Requires interviews &amp; finance background
-                </li>
-                <li class="flex items-start gap-2 text-sm text-slate-700">
-                  <svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
-                  Internal risk management &amp; mentorship
-                </li>
-              </ul>
-            </div>
-            <div class="rounded-2xl border border-teal-200 bg-teal-50/30 p-5">
-              <p class="text-xs font-black uppercase tracking-widest text-teal-600 mb-4">Online Prop Firms</p>
-              <ul class="space-y-2.5">
-                <li class="flex items-start gap-2 text-sm text-slate-700">
-                  <svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064" /></svg>
-                  Trade remotely from anywhere
-                </li>
-                <li class="flex items-start gap-2 text-sm text-slate-700">
-                  <svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg>
-                  Pass an evaluation to get funded
-                </li>
-                <li class="flex items-start gap-2 text-sm text-slate-700">
-                  <svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                  Accessible to anyone with a strategy
-                </li>
-                <li class="flex items-start gap-2 text-sm text-slate-700">
-                  <svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" /></svg>
-                  Self-managed, rules-based
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <h3>Traditional Prop Trading Desks</h3>
-
-          <p>Traditional prop desks involve working directly for a firm, usually in an office trading environment.</p>
-
-          <p>Risk is often managed internally, and capital is scaled slowly. You're monitored over time, not over a single evaluation window. Mistakes are corrected through feedback, not instant account closure.</p>
-
-          <p>For most retail traders, this model isn't accessible. It requires location, interviews, and often a finance background.</p>
-
-          <h3>Online Prop Trading Firms</h3>
-
-          <p>Online prop trading firms replace interviews and mentorship with rules and automation.</p>
-
-          <p>This is where most proprietary traders enter the space today. You trade remotely, pass an evaluation, and manage your account independently. You get access to a range of financial instruments (which is obviously firm dependent), but that freedom comes with trade-offs.</p>
-
-          <div class="not-prose rounded-xl border-l-4 border-amber-400 bg-amber-50/60 px-5 py-4 my-6">
-            <p class="text-sm font-semibold text-amber-800 mb-1">From Experience</p>
-            <p class="text-sm text-slate-700 leading-relaxed">One mistake I made early on was moving straight from my first passed challenge into an instant funding account without adjusting my risk. The rules were tighter, the drawdown was trailing, and I hadn't changed how I sized trades. A small pullback wiped out weeks of progress.</p>
-          </div>
-
-          <p>Another thing you only learn by experience is how rules are enforced. Some limits are automatic while others are manual. I've had trades that looked fine on the chart, only to be flagged days later because they breached a news rule that wasn't clearly surfaced on the platform.</p>
-
-          <p>That's why reading the rules once isn't enough — you really need to understand how they're applied, not just how they're written. Online prop trading rewards traders who adapt their execution to the rule set. It punishes traders who assume profitability alone is enough.</p>
-
-          <h3>Proprietary Trading at Banks and Financial Institutions</h3>
-
-          <p>Proprietary trading originally developed inside large financial institutions, where investment banks and commercial banks used their own capital to trade financial markets for profit rather than executing trades for clients. These firms ran dedicated proprietary trading desks, staffed by professional traders taking positions across equities, bonds, currencies, commodities, and derivatives.</p>
-
-          <p>In this model, traders were employees trading the firm's own funds, not client funds. Unlike brokerage firms that process trades for customers, proprietary trading desks existed purely to generate profits for the institution, with risk management, position sizing, and losses handled internally.</p>
-
-          <p>While some institutional prop trading still exists today, most retail traders now encounter proprietary trading through independent prop trading firms rather than bank-run trading desks.</p>
-
-          <h3>What's the Difference Between Prop Trading and Hedge Funds?</h3>
-
-          <p>Prop trading and hedge funds are often confused, but the core difference is whose money is being traded. Proprietary trading firms use their own capital, while hedge funds invest client funds raised from outside investors.</p>
-
-          <p>In prop trading, the firm takes the financial risk and shares profits with traders through a split. In hedge funds, profits and losses directly affect investors, with managers paid via management and performance fees. As a result, prop trading focuses more on execution and risk control, while hedge funds operate under investor mandates and longer-term portfolio strategies.</p>
-
-
-          <!-- ═══════════════════════════════════════════════════════════════ -->
-          <!-- SECTION 3: Who Is Prop Trading For? -->
-          <!-- ═══════════════════════════════════════════════════════════════ -->
-          <h2 id="who-is-prop-trading-for">Who Is Prop Trading For?</h2>
-
-          <p>Prop trading is best suited to traders who already have a repeatable strategy and can follow risk rules even when emotions kick in.</p>
-
-          <p>If you're still changing systems every few weeks or relying on instinct more than rules, prop trading will feel frustrating fast. When I first moved into prop trading, my strategy was profitable, but my execution wasn't built for fixed drawdown limits. A setup that worked fine on my own account suddenly became a problem when a small losing streak counted against a daily loss cap.</p>
-
-          <p>You tend to do better in prop trading if you already know your numbers. That means knowing how much you risk per trade, how many losses in a row your strategy can handle, and when it makes sense to stop trading for the day.</p>
-
-          <p>Most retail traders enter prop trading through online prop firms rather than traditional desks. That accessibility is a big reason prop trading has grown so quickly, but it also means you're managing everything yourself. There's no risk manager stepping in before you breach a rule. Once you cross the line, the account is usually gone.</p>
-
-          <h3>What I Found Works Well in Prop Trading</h3>
-
-          <p>Before looking at the upsides, it helps to understand the type of trader prop firms are built for. From experience, the following traits matter more than raw win rate.</p>
-
-          <div class="not-prose space-y-2 my-6">
-            <div class="flex items-start gap-2.5">
-              <span class="flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-teal-500 flex items-center justify-center">
-                <svg class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              </span>
-              <span class="text-sm text-slate-700">You're comfortable trading smaller size relative to account balance</span>
-            </div>
-            <div class="flex items-start gap-2.5">
-              <span class="flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-teal-500 flex items-center justify-center">
-                <svg class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              </span>
-              <span class="text-sm text-slate-700">You're willing to stop trading after hitting a daily loss or profit limit</span>
-            </div>
-            <div class="flex items-start gap-2.5">
-              <span class="flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-teal-500 flex items-center justify-center">
-                <svg class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              </span>
-              <span class="text-sm text-slate-700">You already track performance — not just PnL but drawdown and expectancy</span>
-            </div>
-            <div class="flex items-start gap-2.5">
-              <span class="flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-teal-500 flex items-center justify-center">
-                <svg class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              </span>
-              <span class="text-sm text-slate-700">You can trade the same setup repeatedly without forcing trades</span>
-            </div>
-          </div>
-
-          <p>This is why many profitable retail traders still struggle with prop accounts at first. The environment rewards consistency more than aggression.</p>
-
-          <h3>Where Online Prop Trading Makes Sense</h3>
-
-          <p>Online prop trading is often a better fit if you're under-capitalised but already disciplined.</p>
-
-          <div class="not-prose rounded-xl border-l-4 border-amber-400 bg-amber-50/60 px-5 py-4 my-6">
-            <p class="text-sm font-semibold text-amber-800 mb-1">From Experience</p>
-            <p class="text-sm text-slate-700 leading-relaxed">When I passed my first evaluation, the temptation was to immediately scale up to a larger or instant funding account. That's where I ran into trouble. The rules were tighter, the drawdown was trailing, and I hadn't adjusted my position sizing. The strategy didn't fail, but the risk model did.</p>
-          </div>
-
-          <p>Online prop trading works best when you treat it like a risk framework first and a profit opportunity second.</p>
-
-
-          <!-- ═══════════════════════════════════════════════════════════════ -->
-          <!-- SECTION 4: Pros and Cons of Prop Trading -->
-          <!-- ═══════════════════════════════════════════════════════════════ -->
-          <h2 id="pros-and-cons-of-prop-trading">Pros and Cons of Prop Trading</h2>
-
-          <p>Online prop trading comes with clear trade-offs, and it's worth understanding how they show up in real trading before committing.</p>
-
-          <!-- Summary pros/cons grid -->
-          <div class="not-prose grid grid-cols-1 sm:grid-cols-2 gap-4 my-8">
-            <div class="rounded-2xl border border-teal-200 bg-teal-50/30 p-5">
-              <p class="text-xs font-black uppercase tracking-widest text-teal-600 mb-4">Pros</p>
-              <ul class="space-y-2.5">
-                <li class="flex items-start gap-2 text-sm text-slate-700">
-                  <svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  Access to larger amounts of capital
-                </li>
-                <li class="flex items-start gap-2 text-sm text-slate-700">
-                  <svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  Main upfront cost is the challenge fee
-                </li>
-                <li class="flex items-start gap-2 text-sm text-slate-700">
-                  <svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  Scaling can let you grow your account sizes
-                </li>
-                <li class="flex items-start gap-2 text-sm text-slate-700">
-                  <svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  Profit splits can be as high as 90%, even 100%
-                </li>
-              </ul>
-            </div>
-            <div class="rounded-2xl border border-red-200 bg-red-50/30 p-5">
-              <p class="text-xs font-black uppercase tracking-widest text-red-500 mb-4">Cons</p>
-              <ul class="space-y-2.5">
-                <li class="flex items-start gap-2 text-sm text-slate-700">
-                  <svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
-                  Evaluation process can be hard to pass
-                </li>
-                <li class="flex items-start gap-2 text-sm text-slate-700">
-                  <svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
-                  Trading rules can be complex
-                </li>
-                <li class="flex items-start gap-2 text-sm text-slate-700">
-                  <svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
-                  Discipline is required to pass challenges
-                </li>
-                <li class="flex items-start gap-2 text-sm text-slate-700">
-                  <svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
-                  Not regulated like CFD and forex brokers
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <p>Before I explain each point in detail, it's worth understanding that these pros and cons don't exist in isolation. Most traders experience several of them at the same time, often within their first few challenges. How these factors play out depends less on the firm's marketing and more on how you trade, manage risk, and adapt to structure.</p>
-
-          <!-- Pro 1 -->
-          <h3>
-            <span class="not-prose inline-flex items-center justify-center w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black mr-2 align-middle">1</span>
-            Pro — Access to Larger Amounts of Capital
-          </h3>
-
-          <p>Access to larger capital is the obvious attraction, but it changes how you trade more than most people expect.</p>
-
-          <p>When you first move from a small personal account to a prop account, the temptation is to trade bigger because the balance looks bigger. What actually worked better was doing the opposite. I ended up risking less per trade than I ever had before, sometimes 0.25% or less. The edge wasn't size — it was being able to trade clean setups without feeling rushed to make money quickly. The capital gives you room to breathe, but only if you respect it.</p>
-
-          <!-- Pro 2 -->
-          <h3>
-            <span class="not-prose inline-flex items-center justify-center w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black mr-2 align-middle">2</span>
-            Pro — Main Upfront Cost Is the Challenge Fee
-          </h3>
-
-          <p>The challenge fee feels small compared to the account size you're trading, and although this is a major perk, it can create bad habits early.</p>
-
-          <p>When I first started, I treated challenge fees like disposable attempts. If a day went badly, I'd push harder instead of stepping away because "it's only the fee." That mindset led to more failed challenges than bad trading ever did. Once you treat the evaluation like a real account, your decision making changes. The fee stops feeling cheap once you've paid it a few times.</p>
-
-          <!-- Pro 3 -->
-          <h3>
-            <span class="not-prose inline-flex items-center justify-center w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black mr-2 align-middle">3</span>
-            Pro — Scaling Can Let You Grow Your Account Sizes
-          </h3>
-
-          <p>Scaling is one of the most underrated benefits of prop trading when it works well.</p>
-
-          <p>Once you've proven consistency, scaling lets you increase account size without starting from scratch. When this clicked for me, the biggest advantage wasn't earning more per trade — it was being able to keep the same risk model while letting the account do more of the work. The strategy didn't change. The execution didn't change. The capital did.</p>
-
-          <p>If your entries are clean and your risk is already controlled, scaling feels natural. You're not forced to trade more often or take lower-quality setups. You're simply applying the same process to a larger base, which is exactly what most traders are trying to do long term.</p>
-
-          <!-- Pro 4 -->
-          <h3>
-            <span class="not-prose inline-flex items-center justify-center w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black mr-2 align-middle">4</span>
-            Pro — Profit Splits Can Be as High as 90%, Even 100%
-          </h3>
-
-          <p>High profit splits are one of the clearest advantages of trading with a prop firm.</p>
-
-          <p>Once you're funded and taking regular payouts, the split becomes very real very quickly. When I started receiving consistent payouts, the difference between an 80% and 90% split wasn't theoretical anymore. Over a few months, it materially changed what I took home, even though the trading stayed the same.</p>
-
-          <p>What makes this powerful is that you're earning that percentage on capital you didn't have to build yourself. When things are running smoothly, it lets you think in terms of monthly performance and withdrawals rather than individual wins and losses — which is where prop trading starts to feel like a proper trading framework rather than a challenge grind.</p>
-
-          <!-- Con 5 -->
-          <h3>
-            <span class="not-prose inline-flex items-center justify-center w-7 h-7 rounded-full bg-red-400 text-white text-xs font-black mr-2 align-middle">5</span>
-            Con — Prop Challenges Can Be Hard to Pass
-          </h3>
-
-          <p>Most traders underestimate how demanding prop challenges actually are. I did when I started. My early failures weren't about bad strategies — instead they came from the structure of the challenge itself. You're usually trying to make 8–10% while working inside a relatively tight drawdown, and that imbalance changes how every trade feels. A couple of normal losses or too wide a stop can suddenly put you on the back foot, even if your edge is sound.</p>
-
-          <p>What makes this harder is the time pressure. You're trading knowing there's a target to hit, which pushes many traders to overtrade, size up, or take setups they'd normally skip. Passing challenges ended up being less about finding great trades and more about managing yourself when nothing clean was setting up. That's where most accounts are lost.</p>
-
-          <!-- Con 6 -->
-          <h3>
-            <span class="not-prose inline-flex items-center justify-center w-7 h-7 rounded-full bg-red-400 text-white text-xs font-black mr-2 align-middle">6</span>
-            Con — Trading Rules Can Be Complex
-          </h3>
-
-          <p>Prop firm rules often seem clear and easy to understand, until you trade under them. Some firms enforce almost everything automatically, so you'll see violations instantly. Others use a mix of automatic and manual checks, and a few rely heavily on post-trade reviews. I've traded with firms where nothing flagged in real time, only to be notified days later that a rule had been breached. By then, the trade was long closed and the damage was already done.</p>
-
-          <p>Another thing that catches people up is that rules often change between the challenge and the funded account. A strategy that's allowed during evaluation may have tighter limits once you're funded, especially around news trading, automation, or holding positions. Some firms also charge add-on fees for things like trading during news or using automated strategies, which isn't always obvious upfront.</p>
-
-          <p>If you don't understand how rules are enforced — whether they're automatic or manual, and whether they differ between challenge and funded accounts — you're trading with gaps in your information. That's usually where unexpected violations come from, not bad trades.</p>
-
-          <!-- Con 7 -->
-          <h3>
-            <span class="not-prose inline-flex items-center justify-center w-7 h-7 rounded-full bg-red-400 text-white text-xs font-black mr-2 align-middle">7</span>
-            Con — Discipline Is Required to Pass Challenges
-          </h3>
-
-          <p>Prop trading punishes emotional trading far more than retail trading. Any habit you already have gets magnified. Overtrading after a win, revenge trading after a loss, or forcing trades on slow days — all lead to the same outcome. I passed more challenges by trading less, not more. Flat days became acceptable. Missing trades became normal. Discipline wasn't about being perfect — it was about not doing damage.</p>
-
-          <!-- Con 8 -->
-          <h3>
-            <span class="not-prose inline-flex items-center justify-center w-7 h-7 rounded-full bg-red-400 text-white text-xs font-black mr-2 align-middle">8</span>
-            Con — Not Regulated Like CFD and Forex Brokers
-          </h3>
-
-          <p>Prop firms aren't regulated in the same way as brokers, and that matters. You're trading in a simulated environment, and the protections you're used to with brokers don't always apply. Two firms can advertise similar rules but handle disputes, payouts, and violations very differently. I learned quickly that reputation and transparency matter more than headline offers. This isn't something to gloss over, especially once real payouts are involved.</p>
-
-
-          <!-- ═══════════════════════════════════════════════════════════════ -->
-          <!-- SECTION 5: Understanding the Risks -->
-          <!-- ═══════════════════════════════════════════════════════════════ -->
-          <h2 id="understanding-the-risks">Understanding the Risks of Prop Trading Before You Start</h2>
-
-          <p>Prop trading still carries real risk, even though you're not trading your own capital.</p>
-
-          <div class="not-prose rounded-xl border-l-4 border-red-400 bg-red-50/60 px-5 py-4 my-6">
-            <p class="text-sm font-semibold text-red-700 mb-1">Risk Warning</p>
-            <p class="text-sm text-slate-700 leading-relaxed">Most evaluations require you to make around 8–10% while staying within a 5% or similar drawdown. That imbalance means risk management has to be tighter than most retail traders are used to. One poorly managed session can undo weeks of steady gains.</p>
-          </div>
-
-          <p>Digital prop firms also vary widely in how they operate. Two firms can advertise almost identical rules and produce very different outcomes once you're trading. That's why research matters, especially around enforcement, payouts, and account management.</p>
-
-          <p>If you go into prop trading expecting flexibility, you'll struggle. If you go in expecting structure, constraints, and repetition, you're approaching it with the right mindset.</p>
-
-
-          <!-- ═══════════════════════════════════════════════════════════════ -->
-          <!-- SECTION 6: Common Proprietary Trading Strategies -->
-          <!-- ═══════════════════════════════════════════════════════════════ -->
-          <h2 id="common-proprietary-trading-strategies">Common Proprietary Trading Strategies</h2>
-
-          <p>In prop trading, your strategy is whatever survives the firm's rules. When I first moved into funded accounts, I didn't change my edge, but I had to acknowledge that daily loss limits, trailing drawdown, and holding rules decide what's actually tradable.</p>
-
-          <p>Most of what works is execution-based. I ended up leaning on short-term price action, tight intraday momentum, and simple swing setups around clear levels — because I could control risk precisely. Anything that needed wide stops or patience over multiple days kept running into drawdown limits.</p>
-
-          <p>The biggest adjustment was realising strategies aren't universal. A setup that worked fine at one prop firm failed at another because the drawdown model was different. That's when it clicked that prop trading isn't about finding the best strategy. It's about adapting a simple one to the specific rules of the firm you're trading with and executing it the same way every day.</p>
-
-
-          <!-- ═══════════════════════════════════════════════════════════════ -->
-          <!-- SECTION 7: Are Prop Firms Regulated? -->
-          <!-- ═══════════════════════════════════════════════════════════════ -->
-          <h2 id="are-prop-firms-regulated">Are Prop Firms Regulated?</h2>
-
-          <p>No, prop firms aren't regulated like forex and CFD brokers. Recently the industry has faced more scrutiny, but because most prop traders operate in a simulated trading environment, it's a grey area for financial regulators.</p>
-
-          <p>There are some regions trying to manage things, with countries like Australia setting limitations on funded trader programs and introducing augmented reporting obligations for forex brokers pivoting into the prop trading space.</p>
-
-          <p>Regardless of these constraints, there's only so much financial authorities like ASIC in Australia or the FCA in the UK can enforce, as unlike brokerage operations, prop firms aren't deposit-taking companies, and evaluations operate in a simulated environment that mirrors real market conditions.</p>
-
-
-          <!-- ═══════════════════════════════════════════════════════════════ -->
-          <!-- SECTION 8: Quick History of Prop Trading -->
-          <!-- ═══════════════════════════════════════════════════════════════ -->
-          <h2 id="quick-history-of-prop-trading">Quick History of Prop Trading</h2>
-
-          <p>Proprietary trading has roots going back decades. It originally existed inside investment banks and large financial institutions where dedicated desks traded the firm's own capital across equities, bonds, currencies, and derivatives. Traders were employees, and risk was managed internally.</p>
-
-          <p>The landscape changed significantly after the 2008 financial crisis. Regulations like the Volcker Rule in the United States restricted banks from engaging in proprietary trading, pushing the practice outside traditional financial institutions.</p>
-
-          <p>This created space for independent prop trading firms to emerge — first as in-person operations, then increasingly as online platforms accessible to retail traders worldwide. Today, online prop firms dominate the space, offering remote evaluations and funded accounts to traders in virtually every country.</p>
-
-
-          <!-- ═══════════════════════════════════════════════════════════════ -->
-          <!-- SECTION 9: FAQs -->
-          <!-- ═══════════════════════════════════════════════════════════════ -->
-          <h2 id="faqs">FAQs</h2>
-        </div>
-
-        <!-- FAQ cards (outside prose for custom styling) -->
-        <div class="space-y-4 mt-6">
-          <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-            <p class="font-bold text-sm text-slate-900 mb-2">Is prop trading illegal?</p>
-            <p class="text-sm text-slate-600 leading-relaxed">Prop trading is not illegal, but it operates differently from traditional regulated trading and forex brokers. When you trade with a prop firm, you're trading the firm's capital, usually in a simulated environment, rather than trading client funds like a broker does. That's why prop firms aren't regulated in the same way as CFD or forex brokers — because they aren't deposit-taking entities and you aren't trading in live markets. Legality can also depend on your country and how the firm structures its challenges, so it's important to understand the rules and requirements before signing up.</p>
-          </div>
-
-          <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-            <p class="font-bold text-sm text-slate-900 mb-2">How do prop traders get paid?</p>
-            <p class="text-sm text-slate-600 leading-relaxed">Prop traders get paid through profit splits on funded accounts after meeting the firm's payout conditions. Once you're funded, profits are split between you and the firm, usually on a weekly or monthly schedule depending on the provider. Typical splits range from 70% to 90%, with some firms offering higher under specific conditions. Staying funded is just as important as being profitable.</p>
-          </div>
-
-          <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-            <p class="font-bold text-sm text-slate-900 mb-2">Do prop traders make good money?</p>
-            <p class="text-sm text-slate-600 leading-relaxed">Some prop traders make good money, but income varies widely and depends on consistency, not just strategy. Earnings depend on how long you keep your funded account, the size of your account and whether scaling plans are available, the profit split, and how often you withdraw funds. Many traders fail before reaching regular profit payouts, while others build steady monthly income over time. Prop trading rewards disciplined traders who manage risk well, rather than those chasing big wins or fast results.</p>
-          </div>
-
-          <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-            <p class="font-bold text-sm text-slate-900 mb-2">How do I become a prop trader?</p>
-            <p class="text-sm text-slate-600 leading-relaxed">You become a prop trader by passing a firm's evaluation and qualifying for a funded account. You start by choosing an online prop firm, paying a challenge fee, and trading a simulated account under set rules. If you hit the profit target without breaching drawdown or risk limits, you're offered a funded account. From there, the focus shifts from passing challenges to staying funded and managing payouts consistently.</p>
-          </div>
-        </div>
-
-      </article>
-    </div>
-  </div>
-
-  <!-- TOC scroll-spy script -->
-  <script>
-    const tocLinks = document.querySelectorAll<HTMLAnchorElement>("[data-toc-link]");
-    if (tocLinks.length > 0) {
-      const slugs = Array.from(tocLinks).map((a) => a.dataset.tocLink!);
-      const headingEls = slugs
-        .map((s) => document.getElementById(s))
-        .filter(Boolean) as HTMLElement[];
-
-      function setActive(slug: string) {
-        tocLinks.forEach((a) => {
-          const isActive = a.dataset.tocLink === slug;
-          a.classList.toggle("text-teal-600", isActive);
-          a.classList.toggle("font-semibold", isActive);
-          a.classList.toggle("border-teal-500", isActive);
-          a.classList.toggle("text-slate-400", !isActive);
-          a.classList.toggle("border-transparent", !isActive);
-        });
-      }
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          for (const entry of entries) {
-            if (entry.isIntersecting) {
-              setActive(entry.target.id);
-              break;
-            }
-          }
-        },
-        { rootMargin: "-80px 0px -75% 0px", threshold: 0 }
-      );
-
-      headingEls.forEach((el) => observer.observe(el));
-
-      let ticking = false;
-      window.addEventListener("scroll", () => {
-        if (!ticking) {
-          requestAnimationFrame(() => {
-            const scrollY = window.scrollY + 120;
-            let current = slugs[0];
-            for (let i = 0; i < headingEls.length; i++) {
-              if (headingEls[i].offsetTop <= scrollY) {
-                current = slugs[i];
-              }
-            }
-            setActive(current);
-            ticking = false;
-          });
-          ticking = true;
-        }
-      });
-
-      tocLinks.forEach((a) => {
-        a.addEventListener("click", (e) => {
-          e.preventDefault();
-          const target = document.getElementById(a.dataset.tocLink!);
-          if (target) {
-            target.scrollIntoView({ behavior: "smooth", block: "start" });
-            history.replaceState(null, "", `#${a.dataset.tocLink}`);
-          }
-        });
-      });
-    }
-  </script>
-
-  <!-- Explore Our Guides -->
-  {sortedGuides.length > 0 && (
-    <section class="bg-slate-100 border-t border-slate-200 py-12 px-4">
-      <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <h2 class="text-2xl font-black text-slate-900 mb-6">Explore Our Guides</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {sortedGuides.map((p) => (
-            <a
-              href={`${base}/guides/${p.slug}`}
-              class="group bg-white border border-slate-200 rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col"
-            >
-              {p.data.coverImage ? (
-                <img src={assetUrl(p.data.coverImage)} alt={p.data.title} class="w-full h-40 object-cover" loading="lazy" />
-              ) : (
-                <div class="w-full h-40 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
-                  <svg class="h-8 w-8 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+            <div class="flex items-center gap-4 text-xs text-slate-400 mb-5">
+              <span>{formatDate(featured.data.publishedAt)}</span>
+              {featured.data.readingTimeMinutes && (
+                <span class="flex items-center gap-1">
+                  <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                </div>
-              )}
-              <div class="p-4 flex-1 flex flex-col">
-                <span class="rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-semibold text-slate-500 w-fit mb-2">
-                  {p.data.category}
+                  {featured.data.readingTimeMinutes} min read
                 </span>
-                <h3 class="text-sm font-bold text-slate-900 group-hover:text-teal-600 transition-colors leading-snug mb-2">
-                  {p.data.title}
-                </h3>
-                <div class="flex items-center gap-3 text-[11px] text-slate-400 mt-auto">
-                  <span>{formatDate(p.data.publishedAt)}</span>
-                  {p.data.readingTimeMinutes && <span>{p.data.readingTimeMinutes} min read</span>}
-                </div>
-              </div>
-            </a>
-          ))}
+              )}
+            </div>
+            <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-teal-600 group-hover:text-teal-700 transition-colors">
+              Read article
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </span>
+          </div>
         </div>
-      </div>
+      </a>
     </section>
   )}
+
+  <!-- Search & Filter bar -->
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-8">
+    <div class="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
+      <div class="relative flex-1 max-w-sm">
+        <svg class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z" />
+        </svg>
+        <input
+          id="blog-search"
+          type="text"
+          placeholder="Search articles…"
+          class="w-full rounded-lg border border-slate-200 bg-white pl-9 pr-3 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-teal-400 focus:ring-2 focus:ring-teal-100 transition"
+        />
+      </div>
+      <div class="flex items-center gap-2 flex-wrap">
+        <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wide whitespace-nowrap">Category:</span>
+        <button data-cat="all" class="cat-chip rounded-full border px-3 py-1 text-xs font-semibold transition-colors bg-teal-500 text-white border-teal-500">All</button>
+        {categories.map((cat) => (
+          <button data-cat={cat} class="cat-chip rounded-full border px-3 py-1 text-xs font-semibold transition-colors bg-white text-slate-600 border-slate-200 hover:border-teal-300 hover:text-teal-600">
+            {cat}
+          </button>
+        ))}
+      </div>
+      <p id="blog-count" class="text-xs text-slate-400 whitespace-nowrap sm:ml-auto"></p>
+    </div>
+  </div>
+
+  <!-- Article grid -->
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-16">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="blog-grid">
+      {rest.map((post) => (
+        <article
+          class="group bg-white border border-slate-200 rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col"
+          data-blog-card
+          data-title={post.data.title.toLowerCase()}
+          data-category={post.data.category}
+        >
+          {/* Thumbnail */}
+          <a href={`${base}/guides/${post.id.replace(/\.md$/, "")}`} class="block">
+            {post.data.coverImage ? (
+              <img
+                src={assetUrl(post.data.coverImage)}
+                alt={post.data.title}
+                class="w-full h-44 object-cover"
+                loading="lazy"
+              />
+            ) : (
+              <div class="w-full h-44 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
+                <svg class="h-10 w-10 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                </svg>
+              </div>
+            )}
+          </a>
+          {/* Content */}
+          <div class="flex-1 flex flex-col p-5">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] font-semibold text-slate-600">
+                {post.data.category}
+              </span>
+            </div>
+            <h3 class="text-base font-extrabold text-slate-900 group-hover:text-teal-600 transition-colors mb-2 leading-snug">
+              <a href={`${base}/guides/${post.id.replace(/\.md$/, "")}`}>{post.data.title}</a>
+            </h3>
+            <p class="text-sm text-slate-500 leading-relaxed line-clamp-2 mb-4 flex-1">
+              {post.data.excerpt}
+            </p>
+            <div class="flex items-center justify-between text-xs text-slate-400 mt-auto pt-3 border-t border-slate-100">
+              <span>{formatDate(post.data.publishedAt)}</span>
+              {post.data.readingTimeMinutes && (
+                <span class="flex items-center gap-1">
+                  <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  {post.data.readingTimeMinutes} min
+                </span>
+              )}
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <script>
+    const searchInput = document.getElementById("blog-search") as HTMLInputElement | null;
+    const catBtns = document.querySelectorAll<HTMLButtonElement>(".cat-chip");
+    const cards = document.querySelectorAll<HTMLElement>("[data-blog-card]");
+    const countEl = document.getElementById("blog-count");
+
+    let activeCat = "all";
+    let searchQuery = "";
+
+    function applyFilters() {
+      let visible = 0;
+      cards.forEach((card) => {
+        const title = card.dataset.title ?? "";
+        const cat = card.dataset.category ?? "";
+        const matchesSearch = title.includes(searchQuery);
+        const matchesCat = activeCat === "all" || cat === activeCat;
+        const show = matchesSearch && matchesCat;
+        card.style.display = show ? "" : "none";
+        if (show) visible++;
+      });
+      if (countEl) {
+        countEl.textContent =
+          visible === cards.length
+            ? `${cards.length} articles`
+            : `${visible} of ${cards.length} articles`;
+      }
+    }
+
+    function updateChipStyles() {
+      catBtns.forEach((btn) => {
+        const c = btn.dataset.cat ?? "";
+        const isActive = c === activeCat || (c === "all" && activeCat === "all");
+        btn.classList.toggle("bg-teal-500", isActive);
+        btn.classList.toggle("text-white", isActive);
+        btn.classList.toggle("border-teal-500", isActive);
+        btn.classList.toggle("bg-white", !isActive);
+        btn.classList.toggle("text-slate-600", !isActive);
+        btn.classList.toggle("border-slate-200", !isActive);
+      });
+    }
+
+    searchInput?.addEventListener("input", () => {
+      searchQuery = (searchInput.value ?? "").trim().toLowerCase();
+      applyFilters();
+    });
+
+    catBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        activeCat = btn.dataset.cat ?? "all";
+        updateChipStyles();
+        applyFilters();
+      });
+    });
+
+    applyFilters();
+  </script>
 </Base>

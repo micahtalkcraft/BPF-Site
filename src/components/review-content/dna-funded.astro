@@ -39,7 +39,7 @@ const { section, fallbackBody } = Astro.props;
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Instant Funding – No Evaluation</p>
       <p>Account sizes range from $5,000 to $50,000, with fees starting at $199 for a $5K account and going up to $979 for a $50K account.</p>
-      <p class="text-xs text-teal-600 font-semibold mt-1">Starts with an 80% profit split, upgradeable to 90%, and payout every 14 days or 7 days with the add-on</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Starts with an 80% profit split, upgradeable to 90%, with weekly payouts</p>
     </div>
   </div>
 
@@ -131,7 +131,7 @@ const { section, fallbackBody } = Astro.props;
           <td class="px-4 py-3 font-medium text-slate-600">Crypto Trading Allowed</td>
           <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
           <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
-          <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">No</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
           <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
         </tr>
       </tbody>
@@ -436,7 +436,7 @@ const { section, fallbackBody } = Astro.props;
       Unlike their other challenges, account sizes range from $10K to $100K and must be completed within 10 calendar days. It also has stricter drawdown rules, with a 4% daily drawdown and a 5% total loss limit.
     </p>
     <p class="mb-4">
-      Crypto trading is not allowed in this challenge, and the presence of a trailing drawdown makes it more suited if you are an advanced trader who can manage risk carefully.
+      Cryptocurrency trading is permitted in this challenge with 1:2 leverage. The lifetime drawdown is static (not trailing), and the tighter rules make it more suited if you are an advanced trader who can manage risk carefully.
     </p>
 
     <!-- Key specs -->
@@ -447,7 +447,7 @@ const { section, fallbackBody } = Astro.props;
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Drawdown Type</p>
-        <p class="text-sm font-bold text-slate-800">Trailing</p>
+        <p class="text-sm font-bold text-slate-800">Static</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Daily Loss</p>
@@ -464,13 +464,9 @@ const { section, fallbackBody } = Astro.props;
     </div>
 
     <!-- Suited For -->
-    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-4">
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
       <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
       <p class="text-sm text-teal-700">Experienced traders who are confident in their ability to achieve results in a short period, making it ideal for high-frequency traders and scalpers.</p>
-    </div>
-    <div class="rounded-xl bg-red-50 border border-red-200 p-4 mb-5">
-      <p class="text-xs font-bold text-red-800 uppercase tracking-wide mb-1">Restriction</p>
-      <p class="text-sm text-red-700">No crypto trading available.</p>
     </div>
 
     <!-- Fee table -->
@@ -545,7 +541,7 @@ const { section, fallbackBody } = Astro.props;
       The Instant Funding account lets you skip the evaluation phase and start trading with live capital from day one. Account sizes range from $5,000 to $50,000, with one-off fees starting at $199 for a $5K account and going up to $979 for a $50K account.
     </p>
     <p class="mb-4">
-      The instant funding program includes a 4% trailing drawdown that moves with equity highs, ensuring steady risk control without a set profit target or trading time limit. Crypto trading is allowed, and leverage is capped at 1:30 for forex, 1:10 for indices and commodities, 1:5 for stocks, and 1:2 for crypto.
+      The instant funding program includes a 4% trailing drawdown that moves with equity highs, ensuring steady risk control without a set profit target or trading time limit. Crypto trading is allowed, and leverage is capped at 1:50 for forex, 1:10 for indices and commodities, 1:5 for stocks, and 1:2 for crypto.
     </p>
 
     <!-- Key specs -->
@@ -568,7 +564,7 @@ const { section, fallbackBody } = Astro.props;
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Payout Frequency</p>
-        <p class="text-sm font-bold text-slate-800">14 days (or 7)</p>
+        <p class="text-sm font-bold text-slate-800">Weekly</p>
       </div>
     </div>
 
@@ -680,7 +676,19 @@ const { section, fallbackBody } = Astro.props;
     <h3 class="text-lg font-bold text-slate-900 mb-3">Daily Profit Cap Rule</h3>
     <div class="rounded-xl border border-amber-200 bg-amber-50 p-4">
       <p class="text-sm text-amber-800">
-        DNA Funded applies a <strong>40% daily profit cap</strong>, meaning no more than 40% of the total profit target can be credited in a single trading day. Profits above this threshold are not lost but do not count toward completing the challenge until subsequent days.
+        For new purchases after February 3, DNA Funded applies a <strong>30% daily profit distribution limit</strong>, meaning no more than 30% of the requested payout can be credited in a single trading day. Profits above this threshold are not lost but do not count toward the payout until subsequent days.
+      </p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- FUNDED PROFIT CAP                                               -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3">Funded Stage Profit Cap</h3>
+    <div class="rounded-xl border border-amber-200 bg-amber-50 p-4">
+      <p class="text-sm text-amber-800">
+        During the funded stage, a <strong>5% profit cap</strong> applies to the first three approved payouts. This means profits above 5% of the account balance will not count toward your first three payout requests. After three successful payouts, this cap is removed.
       </p>
     </div>
   </div>
@@ -705,7 +713,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on DNA Challenges</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      DNA Funded's lineup suits all types of traders — the Single Helix is flexible, Double Helix adds structure, Rapid Challenge is for fast-paced traders, and Instant Funding gives direct access to capital. The 40% profit cap promotes steady, consistent trading, making DNA Funded one of the more balanced prop firms available.
+      DNA Funded's lineup suits all types of traders — the Single Helix is flexible, Double Helix adds structure, Rapid Challenge is for fast-paced traders, and Instant Funding gives direct access to capital. The 30% daily profit distribution limit promotes steady, consistent trading, making DNA Funded one of the more balanced prop firms available.
     </p>
   </div>
 
@@ -803,7 +811,7 @@ const { section, fallbackBody } = Astro.props;
       <tbody class="divide-y divide-slate-100">
         <tr class="bg-white">
           <td class="px-4 py-3 font-semibold text-slate-900">Single Helix</td>
-          <td class="px-4 py-3 text-center font-semibold text-slate-900">1:30</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">1:50</td>
           <td class="px-4 py-3 text-center text-slate-700">1:10</td>
           <td class="px-4 py-3 text-center text-slate-700">1:10</td>
           <td class="px-4 py-3 text-center text-slate-700">1:5</td>
@@ -819,11 +827,11 @@ const { section, fallbackBody } = Astro.props;
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-semibold text-slate-900">Rapid Challenge</td>
-          <td class="px-4 py-3 text-center font-semibold text-slate-900">1:30</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">1:50</td>
           <td class="px-4 py-3 text-center text-slate-700">1:10</td>
           <td class="px-4 py-3 text-center text-slate-700">1:10</td>
           <td class="px-4 py-3 text-center text-slate-700">1:5</td>
-          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:2</td>
         </tr>
       </tbody>
     </table>
@@ -833,7 +841,7 @@ const { section, fallbackBody } = Astro.props;
     These leverage levels provide a balance between allowing flexibility in position sizing while maintaining a level of risk control.
   </p>
   <p class="mb-3">
-    The higher leverage of <strong>1:50 for the Double Helix challenge</strong> will appeal to traders looking for more aggressive short-term strategies, while the Single Helix and Rapid Challenge are more conservative with a 1:30 leverage limit. Maximum leverage for commodities and indices is 1:10 across all challenges, while stock leverage is 1:5 and cryptocurrency trading 1:2.
+    For new purchases after February 3, forex leverage across all challenge types — Single Helix, Double Helix, and Rapid Challenge — is <strong>1:50</strong>. Maximum leverage for commodities and indices is 1:10 across all challenges, while stock leverage is 1:5 and cryptocurrency leverage is 1:2.
   </p>
   <p class="mb-4">
     While leverage for shares used to be 10:1, DNA Funded has since reduced this in line with updates from its liquidity provider, DNA Markets. As a broker-backed prop firm, DNA Funded is actively aligning its trading conditions with regulatory standards from major jurisdictions like the <strong>FCA</strong> (UK) and <strong>ASIC</strong> (Australia). This change shows DNA Funded is focused on risk management and keeping things fair for long-term traders, not just chasing high-risk growth.
@@ -876,13 +884,13 @@ const { section, fallbackBody } = Astro.props;
     Its consistent performance across desktop and mobile devices ensures that you can stay connected and act quickly on market opportunities from anywhere.
   </p>
   <p class="mb-4">
-    However, it does <strong>not currently support Expert Advisors (EAs)</strong>, which may limit you if you prefer automated strategies.
+    Expert Advisors (EAs) and algorithmic trading are allowed on Single Helix, Double Helix, and Rapid Challenge accounts, though certain restricted strategies apply. EAs are <strong>not permitted on Instant Funding accounts</strong>.
   </p>
 
   <!-- Platform recommendation -->
   <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-8">
     <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Recommended For</p>
-    <p class="text-sm text-teal-700">Given its intuitive interface, strong charting capabilities, and smooth mobile experience, TradeLocker is the recommended platform for DNA Funded traders. It is best suited for manual traders looking for an efficient and reliable platform.</p>
+    <p class="text-sm text-teal-700">Given its intuitive interface, strong charting capabilities, and smooth mobile experience, TradeLocker is the recommended platform for DNA Funded traders. It suits both manual traders and those using EAs on eligible challenge types.</p>
   </div>
 
   <!-- Trading Rules -->
@@ -894,7 +902,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="space-y-3 mb-6">
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Automated Trading</p>
-      <p>TradeLocker does not support Expert Advisors (EAs), so automated strategies cannot be used.</p>
+      <p>EAs and algorithmic trading are allowed on Single Helix, Double Helix, and Rapid Challenge accounts (with restricted strategies). EAs are prohibited on Instant Funding accounts.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Restricted Copy Trading</p>
@@ -902,16 +910,16 @@ const { section, fallbackBody } = Astro.props;
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">News Trading Allowed</p>
-      <p>You must avoid opening or closing positions <strong>10 minutes before or after</strong> high-impact news events to manage volatility risks.</p>
+      <p>For new purchases after February 3, you must avoid opening or closing positions <strong>5 minutes before or after</strong> high-impact news events to manage volatility risks.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Weekend Trading</p>
-      <p>You are only allowed to hold <strong>cryptocurrency positions</strong> over the weekend.</p>
+      <p>Trades for all markets can be held over the weekend but cannot be executed. Weekend trading is strictly prohibited for the Rapid and Instant Funding challenges.</p>
     </div>
   </div>
 
   <p class="mb-6">
-    These rules offer a balanced level of flexibility while encouraging responsible trading practices, making the challenges accessible to both manual and automated trading styles.
+    These rules offer a balanced level of flexibility while encouraging responsible trading practices, making the challenges accessible to both manual traders and those using EAs on eligible account types.
   </p>
 
   <!-- Verdict -->

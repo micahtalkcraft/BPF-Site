@@ -1,12 +1,12 @@
 {
   "id": "rev-ic-funded",
   "propFirmId": "d0000022-0000-0000-0000-000000000022",
-  "summary": "IC Funded scored 90/100 during testing, placing it among the top-rated prop firms. You can choose between a one or two step challenge, but both come with profit splits starting at 75% and increasing to 80% after one month of trading (and after the first payout is processed).\n\nYou'll trade with IC Markets' pricing, including spreads from 0 pips, and use platforms like MT4, MT5, or cTrader. While scaling is capped at $500K and copy and weekend trading aren't allowed, the low costs, strong trading conditions, and structured challenges make it a solid choice.",
+  "summary": "IC Funded scored 79/100 during testing, placing it among the top-rated prop firms. You can choose between a one or two step challenge, but both come with profit splits starting at 75% and increasing to 80% after one month of trading (and after the first payout is processed).\n\nYou'll trade with IC Markets' pricing, including spreads from 0 pips, and use platforms like MT4, MT5, or cTrader. While scaling is capped at $500K and copy and weekend trading aren't allowed, the low costs, strong trading conditions, and structured challenges make it a solid choice.",
   "pros": ["Fees from $29.75", "Backed by IC Markets", "MT4, MT5, and cTrader"],
   "cons": ["Profit split 75% - 80%", "Limited scaling to 500K", "No crypto trading"],
   "bestFor": "Traders who prioritise low trading costs, tight spreads, and broker-backed execution from IC Markets",
   "notIdealFor": "Traders who need high profit splits, crypto trading, or scaling beyond $500K",
-  "overallScore": 90,
+  "overallScore": 79,
   "categoryScores": { "challenges": 80, "spreads": 100, "markets": 90, "payouts": 90, "platforms": 90, "trust": 90 },
   "categorySections": {
     "challenges": "IC Funded offers both **one step** and **two step** challenges. The one step has a single 10% profit target with 6% max drawdown, while the two step splits across 10% and 5% targets with a more generous 10% max drawdown.\n\nAccount sizes range from **$5,000 to $500,000** with fees starting at just **$29.75**. Both models require a minimum of 5 trading days with no maximum time limit. Profit splits start at **75%** and increase to **80%** after the first month.\n\nScaling is performance-based up to $500K total allocation. IC Funded scored 8/10 for challenges thanks to clear structure, competitive pricing, and flexibility across both options.",
