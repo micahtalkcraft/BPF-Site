@@ -15,10 +15,10 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-4">
-    Funding Pips scored 6/10 for challenges. On paper, the variety is solid — you can choose from four evaluation models: Instant Funding (Zero), One Step, and two versions of the Two Step (Standard and Pro).
+    Funding Pips scored 6/10 for challenges. The firm offers four challenge models — Zero, 1-Step, 2-Step, and 2-Step Pro — each with different drawdown limits, profit targets, and funded-stage rules. Reward splits depend on the payout cycle you select at checkout: Weekly 60%, Bi-weekly 80%, On-Demand 90%, or Monthly 100%.
   </p>
   <p class="mb-4">
-    But real-world testing and feedback highlight one recurring issue: the rules change once you're funded. There's a mismatch between what you agree to during the evaluation and what gets enforced later. Key rules like the 1% floating loss limit and 15% consistency rule only apply after you pass, which has caught many users off guard.
+    But real-world testing and feedback highlight one recurring issue: the rules change once you're funded. There's a mismatch between what you agree to during the evaluation and what gets enforced later. Key rules like the 1% floating loss limit and the consistency rule only apply after you pass, which has caught many users off guard.
   </p>
 
   <!-- ─── Upfront Challenge Fees Table ─────────────────────────── -->
@@ -28,10 +28,10 @@ const { section, fallbackBody } = Astro.props;
       <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
         <tr>
           <th class="px-4 py-3 text-left">Account Size</th>
-          <th class="px-4 py-3 text-center">Instant Funding</th>
-          <th class="px-4 py-3 text-center">One Step</th>
-          <th class="px-4 py-3 text-center">Two Step (Standard)</th>
-          <th class="px-4 py-3 text-center">Two Step (Pro)</th>
+          <th class="px-4 py-3 text-center">Zero</th>
+          <th class="px-4 py-3 text-center">1-Step</th>
+          <th class="px-4 py-3 text-center">2-Step</th>
+          <th class="px-4 py-3 text-center">2-Step Pro</th>
         </tr>
       </thead>
       <tbody class="divide-y divide-slate-100">
@@ -75,16 +75,16 @@ const { section, fallbackBody } = Astro.props;
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- 1. ZERO – INSTANT FUNDING                                      -->
+  <!-- 1. ZERO                                                        -->
   <!-- ═══════════════════════════════════════════════════════════════ -->
   <div class="mb-10">
     <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
       <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">1</span>
-      FundingPips Zero – Instant Funding
+      Zero (Instant Funding)
     </h3>
 
     <p class="mb-3">
-      This is marketed as "no evaluation," but there's still a catch. To unlock your first payout, you need to hit a 3% profit buffer, then earn another 1% — meaning the real target is 4%. And once you're funded, you're bound by some of the firm's strictest rules.
+      This is marketed as "no evaluation," but there's still a catch. To unlock your first payout, you need to hit a 3% profit buffer, then earn another 1% — meaning the real target is 4%. Once funded, you're bound by some of the firm's strictest rules, including a 15% consistency rule, restricted news trading, and no weekend holding.
     </p>
 
     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
@@ -106,25 +106,25 @@ const { section, fallbackBody } = Astro.props;
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">News Trading</p>
-        <p class="text-sm font-bold text-red-600">Not Allowed</p>
+        <p class="text-sm font-bold text-red-600">Restricted</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Weekend Holding</p>
         <p class="text-sm font-bold text-red-600">Not Allowed</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
-        <p class="text-sm font-bold text-teal-600">95% → 100%</p>
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Reward Split</p>
+        <p class="text-sm font-bold text-teal-600">60% – 100% (cycle-based)</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Payout Frequency</p>
-        <p class="text-sm font-bold text-slate-800">Bi-weekly</p>
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Payout Cycles</p>
+        <p class="text-sm font-bold text-slate-800">Weekly / Bi-weekly / On-Demand / Monthly</p>
       </div>
     </div>
 
     <div class="rounded-xl bg-amber-50 border border-amber-200 p-4 mb-5">
       <p class="text-xs font-bold text-amber-800 uppercase tracking-wide mb-1">Important Note</p>
-      <p class="text-sm text-amber-800">The appeal of getting funded fast is real, but the low margin for error and hidden criteria mean this model suits only the most precise, disciplined traders.</p>
+      <p class="text-sm text-amber-800">The appeal of getting funded fast is real, but the low margin for error and strict funded-stage rules — including news trading restrictions and no weekend holding — mean this model suits only the most precise, disciplined traders.</p>
     </div>
   </div>
 
@@ -134,11 +134,11 @@ const { section, fallbackBody } = Astro.props;
   <div class="mb-10">
     <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
       <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">2</span>
-      1 Step Challenge
+      1-Step Challenge
     </h3>
 
     <p class="mb-3">
-      This model keeps things simple with a one-phase evaluation and now offers a 3% daily loss limit (down from 4%) on new accounts. There's no lot cap anymore either, giving you more flexibility if you trade size.
+      This model keeps things simple with a one-phase evaluation. It uses a 3% daily loss limit and 6% max loss. News trading is allowed during evaluation but restricted on funded (Master) accounts.
     </p>
 
     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
@@ -148,7 +148,7 @@ const { section, fallbackBody } = Astro.props;
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Loss Limit</p>
-        <p class="text-sm font-bold text-slate-800">3% (new purchases)</p>
+        <p class="text-sm font-bold text-slate-800">3%</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Loss</p>
@@ -159,14 +159,18 @@ const { section, fallbackBody } = Astro.props;
         <p class="text-sm font-bold text-slate-800">3</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
-        <p class="text-sm font-bold text-teal-600">80% → 100%</p>
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Reward Split</p>
+        <p class="text-sm font-bold text-teal-600">60% – 100% (cycle-based)</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">News Trading</p>
+        <p class="text-sm font-bold text-amber-600">Eval only</p>
       </div>
     </div>
 
     <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
       <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
-      <p class="text-sm text-teal-700">Traders who want a faster path to funding with fewer restrictions upfront. Just keep in mind that funded account rules are still stricter than what you see during evaluation.</p>
+      <p class="text-sm text-teal-700">Traders who want a faster path to funding with fewer restrictions upfront. Just keep in mind that funded account rules are still stricter than what you see during evaluation — including news trading restrictions and a max risk per trade idea rule.</p>
     </div>
   </div>
 
@@ -176,11 +180,11 @@ const { section, fallbackBody } = Astro.props;
   <div class="mb-10">
     <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
       <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">3</span>
-      2 Step Challenge – Standard
+      2-Step Challenge – Standard
     </h3>
 
     <p class="mb-3">
-      A more relaxed setup for those who want structure without added pressure. You now have the option to customise the Phase 1 profit target when you sign up.
+      A more relaxed setup with wider drawdown limits (5% daily / 10% max). You can customise the Phase 1 profit target at signup. Weekend holding is allowed on this model, including on funded accounts. No consistency rule applies.
     </p>
 
     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
@@ -209,14 +213,18 @@ const { section, fallbackBody } = Astro.props;
         <p class="text-sm font-bold text-emerald-600">None</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
-        <p class="text-sm font-bold text-teal-600">80% → 100%</p>
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Weekend Holding</p>
+        <p class="text-sm font-bold text-emerald-600">Allowed</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Reward Split</p>
+        <p class="text-sm font-bold text-teal-600">60% – 100% (cycle-based)</p>
       </div>
     </div>
 
     <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
       <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
-      <p class="text-sm text-teal-700">This is the safest choice if you're looking for a balance of rules and flexibility. No consistency rule applies, making it ideal for swing and position traders.</p>
+      <p class="text-sm text-teal-700">This is the most flexible model with no consistency rule, weekend holding allowed, and wider drawdown limits. Ideal for swing and position traders who want room to breathe.</p>
     </div>
   </div>
 
@@ -226,11 +234,11 @@ const { section, fallbackBody } = Astro.props;
   <div class="mb-10">
     <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
       <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">4</span>
-      2 Step Challenge – Pro
+      2-Step Challenge – Pro
     </h3>
 
     <p class="mb-3">
-      This model is for experienced traders who want to complete their evaluation quickly but can handle tight risk parameters. You only need one trading day per phase, and a strict 45% consistency rule applies both during evaluation and after funding.
+      This model is for experienced traders who want to complete their evaluation quickly but can handle tight risk parameters: 3% daily loss and 6% max loss. You only need one trading day per phase, but a strict 45% consistency rule applies both during evaluation and after funding.
     </p>
 
     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
@@ -259,14 +267,56 @@ const { section, fallbackBody } = Astro.props;
         <p class="text-sm font-bold text-red-600">45% (both phases + funded)</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
-        <p class="text-sm font-bold text-teal-600">80% → 100%</p>
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Reward Split</p>
+        <p class="text-sm font-bold text-teal-600">60% – 100% (cycle-based)</p>
       </div>
     </div>
 
     <div class="rounded-xl bg-amber-50 border border-amber-200 p-4 mb-5">
       <p class="text-xs font-bold text-amber-800 uppercase tracking-wide mb-1">Important Note</p>
       <p class="text-sm text-amber-800">The 45% consistency rule is one of the strictest in the industry and applies during both evaluation and funded phases. Make sure you understand this before committing.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- REWARD SPLIT BY PAYOUT CYCLE                                    -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3">Reward Split by Payout Cycle</h3>
+    <p class="mb-4">Rather than a flat profit split, Funding Pips ties the reward percentage to the payout cycle you choose at checkout. This applies to all four challenge models:</p>
+
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+      <table class="w-full text-sm whitespace-nowrap">
+        <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Payout Cycle</th>
+            <th class="px-4 py-3 text-center">Reward Split</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">Weekly</td>
+            <td class="px-4 py-3 text-center text-slate-900">60%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">Bi-weekly</td>
+            <td class="px-4 py-3 text-center text-slate-900">80%</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">On-Demand</td>
+            <td class="px-4 py-3 text-center text-slate-900">90%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">Monthly</td>
+            <td class="px-4 py-3 text-center font-semibold text-teal-600">100%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="rounded-xl bg-amber-50 border border-amber-200 p-4 mb-5">
+      <p class="text-xs font-bold text-amber-800 uppercase tracking-wide mb-1">On-Demand Note</p>
+      <p class="text-sm text-amber-800">On-Demand payouts require meeting a minimum reward threshold and consistency rules before withdrawal is permitted. Check the firm's current terms for exact thresholds.</p>
     </div>
   </div>
 
@@ -301,7 +351,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Challenges</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      Funding Pips gives you plenty of challenge options and a high ceiling if you scale successfully. But the rule shifts between evaluation and funded phases — and the lack of clarity in time-limited promos — mean you need to read the fine print. The structure is decent, but the surprises can be costly, earning Funding Pips a score of 6/10 for challenges.
+      Funding Pips gives you four challenge models and a high ceiling if you scale successfully. But the rule shifts between evaluation and funded phases — and the lack of clarity in time-limited promos — mean you need to read the fine print. Drawdown limits, news trading rules, and weekend holding rules all vary by model, so make sure you know which restrictions apply to the one you choose. The structure is decent, but the surprises can be costly, earning Funding Pips a score of 6/10 for challenges.
     </p>
   </div>
 
@@ -325,62 +375,50 @@ const { section, fallbackBody } = Astro.props;
   </p>
 
   <!-- Commission Table -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Commission Fees by Model</h3>
-  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Commission Fees</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-4">
     <table class="w-full text-sm whitespace-nowrap">
       <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
         <tr>
-          <th class="px-4 py-3 text-left">Model</th>
-          <th class="px-4 py-3 text-center">Forex</th>
-          <th class="px-4 py-3 text-center">Crypto</th>
-          <th class="px-4 py-3 text-center">Indices</th>
-          <th class="px-4 py-3 text-center">Commodities</th>
-          <th class="px-4 py-3 text-center">Oil</th>
+          <th class="px-4 py-3 text-left">Asset Class</th>
+          <th class="px-4 py-3 text-center">Standard Commission</th>
         </tr>
       </thead>
       <tbody class="divide-y divide-slate-100">
         <tr class="bg-white">
-          <td class="px-4 py-3 font-semibold text-slate-900">One Step</td>
-          <td class="px-4 py-3 text-center text-slate-900">$5 per lot (RT)</td>
-          <td class="px-4 py-3 text-center text-slate-900">0.04% per trade</td>
-          <td class="px-4 py-3 text-center text-emerald-600 font-semibold">Free</td>
-          <td class="px-4 py-3 text-center text-emerald-600 font-semibold">Free</td>
-          <td class="px-4 py-3 text-center text-emerald-600 font-semibold">Free</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">Forex</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5 per lot (round turn)</td>
         </tr>
         <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-semibold text-slate-900">Two Step (Standard)</td>
-          <td class="px-4 py-3 text-center text-slate-900">$5 per lot (RT)</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">Metals (Gold, Silver)</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5 per lot (round turn)</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Crypto</td>
           <td class="px-4 py-3 text-center text-slate-900">0.04% per trade</td>
-          <td class="px-4 py-3 text-center text-emerald-600 font-semibold">Free</td>
-          <td class="px-4 py-3 text-center text-emerald-600 font-semibold">Free</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Indices</td>
           <td class="px-4 py-3 text-center text-emerald-600 font-semibold">Free</td>
         </tr>
         <tr class="bg-white">
-          <td class="px-4 py-3 font-semibold text-slate-900">Two Step (Pro)</td>
-          <td class="px-4 py-3 text-center text-slate-900">$5 per lot (RT)</td>
-          <td class="px-4 py-3 text-center text-slate-900">0.04% per trade</td>
-          <td class="px-4 py-3 text-center text-emerald-600 font-semibold">Free</td>
-          <td class="px-4 py-3 text-center text-emerald-600 font-semibold">Free</td>
-          <td class="px-4 py-3 text-center text-emerald-600 font-semibold">Free</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-semibold text-slate-900">Zero (Instant)</td>
-          <td class="px-4 py-3 text-center text-slate-900">$7 per lot (RT)</td>
-          <td class="px-4 py-3 text-center text-slate-900">0.04% per trade</td>
-          <td class="px-4 py-3 text-center text-emerald-600 font-semibold">Free</td>
-          <td class="px-4 py-3 text-center text-emerald-600 font-semibold">Free</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">Energies (Oil)</td>
           <td class="px-4 py-3 text-center text-emerald-600 font-semibold">Free</td>
         </tr>
       </tbody>
     </table>
   </div>
-  <p class="text-xs text-slate-500 mb-6">RT = round turn</p>
+
+  <div class="rounded-xl bg-amber-50 border border-amber-200 p-4 mb-8">
+    <p class="text-xs font-bold text-amber-800 uppercase tracking-wide mb-1">Swap-Free Accounts</p>
+    <p class="text-sm text-amber-800">Swap-free accounts carry higher commissions on forex and metals. Check the firm's current fee schedule for exact swap-free rates before purchasing.</p>
+  </div>
 
   <!-- Verdict -->
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Spreads and Commission</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      The commission model is now clearer, and the lower $5 rate on most plans is competitive. But without published spreads, you still don't get the full picture. That's why this area remains a 6/10 — it's improved, but not fully transparent.
+      The commission model is now clearer — $5 per lot on forex and metals, 0.04% on crypto, and free on indices and energies. But without published spreads, you still don't get the full picture. Swap-free accounts also come with higher commissions. That's why this area remains a 6/10 — it's improved, but not fully transparent.
     </p>
   </div>
 
@@ -409,7 +447,7 @@ const { section, fallbackBody } = Astro.props;
     </div>
     <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 text-center">
       <p class="text-2xl font-black text-slate-900 mb-1">Commodities</p>
-      <p class="text-xs text-slate-500">Up to 1:20 leverage</p>
+      <p class="text-xs text-slate-500">Metals 1:30 / Energies 1:10</p>
     </div>
     <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 text-center">
       <p class="text-2xl font-black text-slate-900 mb-1">Crypto</p>
@@ -418,40 +456,34 @@ const { section, fallbackBody } = Astro.props;
   </div>
 
   <!-- Leverage table -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Leverage by Account Type</h3>
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Leverage by Asset Class</h3>
   <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
     <table class="w-full text-sm whitespace-nowrap">
       <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
         <tr>
           <th class="px-4 py-3 text-left">Asset Class</th>
-          <th class="px-4 py-3 text-center">Standard Accounts</th>
-          <th class="px-4 py-3 text-center">Pro Account</th>
+          <th class="px-4 py-3 text-center">Leverage</th>
         </tr>
       </thead>
       <tbody class="divide-y divide-slate-100">
         <tr class="bg-white">
           <td class="px-4 py-3 font-semibold text-slate-900">Forex</td>
           <td class="px-4 py-3 text-center text-slate-900">1:100</td>
-          <td class="px-4 py-3 text-center font-semibold text-teal-600">1:50</td>
         </tr>
         <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-semibold text-slate-900">Commodities (Metals)</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:20</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:20</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">Metals (Gold, Silver)</td>
+          <td class="px-4 py-3 text-center text-slate-900">1:30</td>
         </tr>
         <tr class="bg-white">
-          <td class="px-4 py-3 font-semibold text-slate-900">Energy (Oil)</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:10</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">Energies (Oil)</td>
           <td class="px-4 py-3 text-center text-slate-900">1:10</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-semibold text-slate-900">Indices</td>
           <td class="px-4 py-3 text-center text-slate-900">1:20</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:20</td>
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-semibold text-slate-900">Crypto</td>
-          <td class="px-4 py-3 text-center text-slate-900">1:2</td>
           <td class="px-4 py-3 text-center text-slate-900">1:2</td>
         </tr>
       </tbody>
@@ -462,7 +494,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Markets and Leverage</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      Funding Pips offers a solid range of instruments, covering all major asset classes except individual stocks. Leverage on the Pro account is competitive for forex, providing enough flexibility for skilled traders. However, leverage on metals, crypto, and indices is relatively conservative, which may not suit high-risk or short-term trading strategies.
+      Funding Pips offers a solid range of instruments covering forex, indices, metals, energies, and crypto. Forex leverage at 1:100 is competitive, and metals at 1:30 provides reasonable headroom. However, crypto leverage at 1:2 and energies at 1:10 are conservative, which may not suit high-risk or short-term strategies.
     </p>
   </div>
 
@@ -497,7 +529,7 @@ const { section, fallbackBody } = Astro.props;
 
   <!-- Trading Rules -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules</h3>
-  <p class="mb-4">All accounts follow strict trading rules, no matter which platform you use:</p>
+  <p class="mb-4">Rules vary by challenge model and account stage. Here's how key rules differ:</p>
 
   <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
     <table class="w-full text-sm">
@@ -510,34 +542,44 @@ const { section, fallbackBody } = Astro.props;
       </thead>
       <tbody class="divide-y divide-slate-100">
         <tr class="bg-white">
-          <td class="px-4 py-3 font-semibold text-slate-900">Weekend Holding</td>
-          <td class="px-4 py-3 text-center"><span class="text-red-500 font-bold">Banned</span></td>
-          <td class="px-4 py-3 text-slate-700">Not allowed once funded</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">News Trading</td>
+          <td class="px-4 py-3 text-center"><span class="text-amber-600 font-bold">Varies</span></td>
+          <td class="px-4 py-3 text-slate-700">Allowed during evaluation on most models; restricted on funded (Master) accounts and on Zero accounts</td>
         </tr>
         <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-semibold text-slate-900">News Trading</td>
-          <td class="px-4 py-3 text-center"><span class="text-red-500 font-bold">Banned</span></td>
-          <td class="px-4 py-3 text-slate-700">Not allowed once funded</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">Weekend Holding</td>
+          <td class="px-4 py-3 text-center"><span class="text-amber-600 font-bold">Varies</span></td>
+          <td class="px-4 py-3 text-slate-700">Allowed on 2-Step challenges (including funded); restricted on Zero</td>
         </tr>
         <tr class="bg-white">
-          <td class="px-4 py-3 font-semibold text-slate-900">Consistency Rule (Pro)</td>
-          <td class="px-4 py-3 text-center"><span class="text-amber-600 font-bold">45%</span></td>
-          <td class="px-4 py-3 text-slate-700">Applies during evaluation and funded phases</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">Copy Trading</td>
+          <td class="px-4 py-3 text-center"><span class="text-amber-600 font-bold">Own Only</span></td>
+          <td class="px-4 py-3 text-slate-700">Allowed between your own accounts only; copying between different traders is not permitted</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Expert Advisors (EAs)</td>
+          <td class="px-4 py-3 text-center"><span class="text-amber-600 font-bold">Conditional</span></td>
+          <td class="px-4 py-3 text-slate-700">Third-party EAs allowed only as trade/risk management tools; fully automated third-party trading EAs are not permitted</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Consistency Rule</td>
+          <td class="px-4 py-3 text-center"><span class="text-amber-600 font-bold">Varies</span></td>
+          <td class="px-4 py-3 text-slate-700">15% on Zero; 45% on 2-Step Pro (eval + funded); none on 1-Step or 2-Step Standard</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Max Risk per Trade (Funded)</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-500 font-bold">Applies</span></td>
+          <td class="px-4 py-3 text-slate-700">Maximum risk per trade idea rule on funded (Master) accounts; limit depends on account size</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Inactivity Rule</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-500 font-bold">30 days</span></td>
+          <td class="px-4 py-3 text-slate-700">Accounts become inactive if no trades are closed for 30 consecutive days</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-semibold text-slate-900">HFT / Latency Arbitrage</td>
           <td class="px-4 py-3 text-center"><span class="text-red-500 font-bold">Banned</span></td>
           <td class="px-4 py-3 text-slate-700">Not allowed on any account</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-semibold text-slate-900">Copy Trading (Own Accounts)</td>
-          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">Allowed</span></td>
-          <td class="px-4 py-3 text-slate-700">Between your own accounts only</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-semibold text-slate-900">Daily Lot Limit</td>
-          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-bold">Removed</span></td>
-          <td class="px-4 py-3 text-slate-700">No longer applies to new One Step accounts</td>
         </tr>
       </tbody>
     </table>
@@ -547,7 +589,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trading Platforms</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      You get access to three capable platforms, which is a solid offering. MT5 is reliable, Match-Trader is easy to use, and cTrader has technical depth. But the $20 cTrader fee and US restrictions make access less consistent. Combined with strict post-funding rules, the firm scores 6/10 for platforms and rules.
+      You get access to three capable platforms, which is a solid offering. MT5 is reliable, Match-Trader is easy to use, and cTrader has technical depth. But the $20 cTrader fee and US restrictions make access less consistent. Trading rules also vary significantly by model — news trading and weekend holding are allowed on some challenges but restricted on others, and funded accounts face stricter rules including a max risk per trade idea limit and a 30-day inactivity rule. Combined with the strict funded-stage rules, the firm scores 6/10 for platforms and rules.
     </p>
   </div>
 
@@ -561,14 +603,14 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-4">
-    Funding Pips scored 7/10 for Payments and Payouts. You can earn up to a 100% profit split, and the prop trading firm now gives you instant payouts to Visa and MasterCard.
+    Funding Pips scored 7/10 for Payments and Payouts. The firm offers multiple payout cycles — Weekly, Bi-weekly, On-Demand, and Monthly — with your reward split tied to the cycle you select at checkout. Instant payouts to Visa and MasterCard are now also available.
   </p>
 
   <!-- Payout overview -->
   <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
-      <p class="text-sm font-bold text-teal-600">80% – 100%</p>
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Reward Split</p>
+      <p class="text-sm font-bold text-teal-600">60% – 100% (cycle-based)</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
       <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Payout</p>
@@ -582,6 +624,47 @@ const { section, fallbackBody } = Astro.props;
       <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Processing Time</p>
       <p class="text-sm font-bold text-slate-800">1–3 business days</p>
     </div>
+  </div>
+
+  <!-- Reward Split by Cycle -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Reward Split by Payout Cycle</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-4">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Payout Cycle</th>
+          <th class="px-4 py-3 text-center">Reward Split</th>
+          <th class="px-4 py-3 text-left">Notes</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Weekly</td>
+          <td class="px-4 py-3 text-center text-slate-900">60%</td>
+          <td class="px-4 py-3 text-slate-700">Most frequent payouts, lowest split</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Bi-weekly</td>
+          <td class="px-4 py-3 text-center text-slate-900">80%</td>
+          <td class="px-4 py-3 text-slate-700">Balance of frequency and split</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">On-Demand</td>
+          <td class="px-4 py-3 text-center text-slate-900">90%</td>
+          <td class="px-4 py-3 text-slate-700">Requires minimum reward threshold + consistency</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Monthly</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">100%</td>
+          <td class="px-4 py-3 text-slate-700">Longest wait, maximum split</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="rounded-xl bg-amber-50 border border-amber-200 p-4 mb-8">
+    <p class="text-xs font-bold text-amber-800 uppercase tracking-wide mb-1">On-Demand Requirements</p>
+    <p class="text-sm text-amber-800">On-Demand payouts are not available immediately. You must meet a minimum reward threshold and satisfy consistency rules before you can request a withdrawal. Check Funding Pips' current terms for the exact requirements.</p>
   </div>
 
   <!-- Challenge Fee Payment Methods -->
@@ -642,7 +725,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Payments and Payouts</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      Funding Pips scores 7/10 for Payments and Payouts, with their score recently improving thanks to the introduction of instant credit card payouts. The ability to withdraw profits quickly to Visa or Mastercard adds real convenience. But payout timing still depends on the model you're using, and the lack of clear fee breakdowns makes it harder to plan ahead.
+      Funding Pips scores 7/10 for Payments and Payouts. The cycle-based reward split system (Weekly 60%, Bi-weekly 80%, On-Demand 90%, Monthly 100%) gives traders flexibility to choose their preferred trade-off between payout frequency and split percentage. The introduction of instant credit card payouts adds real convenience. However, On-Demand payouts come with additional requirements, and the lack of clear fee breakdowns makes it harder to plan ahead.
     </p>
   </div>
 
@@ -727,7 +810,7 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-4">
-    Funding Pips scored 6/10 for Trust in our review. While the firm has a good TrustPilot score and a massive Discord following, the rating dropped after we assessed recent trader complaints and past disruptions.
+    Funding Pips scored 6/10 for Trust in our review. While the firm has a good TrustPilot score and a massive Discord following, the rating dropped after we assessed recent trader complaints and past disruptions. The firm was founded in November 2022 and is based in Dubai.
   </p>
 
   <!-- Trustpilot -->

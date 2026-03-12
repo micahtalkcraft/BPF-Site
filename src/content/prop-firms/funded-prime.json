@@ -4,54 +4,79 @@
   "name": "Funded Prime",
   "status": "active",
   "foundedYear": 2023,
-  "hqCountry": "AU",
+  "hqCountry": "AE",
   "evaluation": {
     "types": ["1-step", "2-step", "other"],
     "profitTargets": { "phase1": 10, "phase2": 5 },
-    "dailyDrawdown": 5,
-    "maxDrawdown": 10,
-    "minTradingDays": 0,
-    "scalingPlan": null
+    "dailyDrawdown": null,
+    "maxDrawdown": null,
+    "minTradingDays": 3,
+    "scalingPlan": false
   },
   "pricing": {
-    "challengeFees": [{ "accountSize": 5000, "fee": 35 }],
+    "challengeFees": [
+      { "accountSize": 5000, "fee": 55, "model": "1-step", "label": "One Phase $5K" },
+      { "accountSize": 25000, "fee": 205, "model": "1-step", "label": "One Phase $25K" },
+      { "accountSize": 50000, "fee": 365, "model": "1-step", "label": "One Phase $50K" },
+      { "accountSize": 100000, "fee": 645, "model": "1-step", "label": "One Phase $100K" },
+      { "accountSize": 200000, "fee": 1235, "model": "1-step", "label": "One Phase $200K" },
+      { "accountSize": 5000, "fee": 45, "model": "2-step", "label": "Two Phase $5K" },
+      { "accountSize": 25000, "fee": 175, "model": "2-step", "label": "Two Phase $25K" },
+      { "accountSize": 50000, "fee": 315, "model": "2-step", "label": "Two Phase $50K" },
+      { "accountSize": 100000, "fee": 555, "model": "2-step", "label": "Two Phase $100K" },
+      { "accountSize": 200000, "fee": 1055, "model": "2-step", "label": "Two Phase $200K" },
+      { "accountSize": 5000, "fee": 35, "model": "other", "label": "Stock Traders $5K" },
+      { "accountSize": 25000, "fee": 145, "model": "other", "label": "Stock Traders $25K" },
+      { "accountSize": 100000, "fee": 485, "model": "other", "label": "Stock Traders $100K" },
+      { "accountSize": 5000, "fee": 67, "model": "other", "label": "Meme Coin $5K" },
+      { "accountSize": 25000, "fee": 247, "model": "other", "label": "Meme Coin $25K" },
+      { "accountSize": 50000, "fee": 447, "model": "other", "label": "Meme Coin $50K" },
+      { "accountSize": 100000, "fee": 747, "model": "other", "label": "Meme Coin $100K" }
+    ],
     "resetFee": null,
-    "refundPolicy": null
+    "refundPolicy": "Challenge fees are non-refundable once the challenge begins."
   },
   "payouts": {
     "splitMax": 90,
-    "schedule": "7 days (with add-on)",
-    "processingTime": null,
-    "firstPayoutDays": 7,
+    "schedule": "Default profit share 80%, with Prime Split add-on to increase to 90%. First payout: One Phase 14 days, Two Phase 7 days, Stock Traders/Meme Coin/Bitcoin Maxi 14 days. Prime Payout add-on shortens timing for One Phase, Stock Traders, Meme Coin, and Bitcoin Maxi. Minimum payout $100 after profit split. First 3 approved payouts capped at 5% of nominated bankroll — profit above cap removed at reset. Funded min trading days: 7 then 5 (One Phase/Two Phase), 5 then 3 (Stock Traders), 5 every payout (Meme Coin/Bitcoin Maxi). Processing time 1–2 days.",
+    "processingTime": "1–2 days",
+    "firstPayoutDays": null,
     "methods": ["crypto"]
   },
   "rules": {
-    "newsTrading": null,
-    "weekendHolding": null,
-    "copyTrading": null,
-    "expertAdvisors": true,
-    "consistencyRule": null,
-    "notes": "Broker-backed via Eightcap Challenges. Weekend trading allowed for meme coins only. Crypto leverage capped at 1:1, meme coins at 10:1. Commission of 0.1% on crypto trades."
+    "newsTrading": false,
+    "weekendHolding": false,
+    "copyTrading": false,
+    "expertAdvisors": null,
+    "consistencyRule": "Daily profit distribution cap: 30% for One Phase, Two Phase, Stock Traders; 40% for Meme Coin and Bitcoin Maxi. First 3 approved payouts capped at 5% of nominated bankroll.",
+    "notes": "Five challenge types: One Phase, Two Phase, Stock Traders, Meme Coin, and Bitcoin Maxi. All evaluations require minimum 3 trading days. Trading platform: TradeLocker. Daily drawdown: 5% (One Phase, Two Phase, Stock Traders), 3% (Bitcoin Maxi), none (Meme Coin — trailing drawdown only). Max drawdown: 10% (One Phase, Two Phase, Stock Traders), 5% (Bitcoin Maxi), 6.5% trailing (Meme Coin). News trading: not allowed within 10 minutes before and after major high-impact events on One Phase, Stock Traders, Meme Coin, and Bitcoin Maxi; allowed on Two Phase. Weekend/out-of-hours trading: not allowed on One Phase, Two Phase, Stock Traders; allowed on Meme Coin and Bitcoin Maxi. Swing trading allowed. Copy trading not allowed. EAs allowed on One Phase, Two Phase, Meme Coin, and Bitcoin Maxi; not allowed on Stock Traders. Prohibited strategies: martingale, hedging, HFT, scalping under 30 seconds, grid trading, tick scalping, copy trading, gap trading, arbitrage/market abuse. 30-day inactivity limit in both evaluation and funded stages. Maximum allocation up to $800,000 across active accounts. Multiple accounts on same or related IP not allowed. VPN/VPS allowed only if Risk team provided with VPN login history. Trade sizing must stay within +100% or -75% of previous positions. Default funded profit share 80%, Prime Split add-on increases to 90%. Prime Payout add-on shortens payout timing for One Phase, Stock Traders, Meme Coin, and Bitcoin Maxi funded accounts. First 3 approved payouts capped at 5% of nominated bankroll — profit above cap removed at reset. Simulated trading administered by Eightcap Services FZ-LLC in the UAE. Broker-backed via Eightcap."
   },
   "markets": {
-    "platforms": ["DXTrade", "TradeLocker"],
-    "instruments": "Forex, Crypto, Meme Coins, Stocks (250+ crypto pairs)"
+    "platforms": ["TradeLocker"],
+    "instruments": "Forex, Indices, Commodities, Crypto, Stocks, Meme Coins. Leverage: Forex 1:50, Indices 1:10, Commodities 1:10, Crypto 1:1, Stocks 1:5, Meme Coins 10:1. All trading simulated with Eightcap pricing feed."
   },
   "trust": {
-    "trustpilotRating": null,
+    "trustpilotRating": 4.0,
     "trustpilotCount": null,
     "communitySize": null,
-    "notableFlags": []
+    "notableFlags": ["Broker-backed via Eightcap", "Administered by Eightcap Services FZ-LLC (UAE)", "Founded 2023", "Simulated trading environment", "Meme Coin Challenge pioneer", "Bitcoin Maxi challenge"]
   },
   "links": { "website": "http://fundedprime.com/?linkId=lp_213737&sourceId=bestpropfirms&tenantId=fundedprime" },
   "media": { "logo": "/images/logos/fundedprime-logo.png" },
   "availability": { "restrictedCountries": [] },
+  "support": {
+    "hours": "FAQ hub, support tickets via contact form",
+    "liveChat": false,
+    "email": false,
+    "discord": true
+  },
   "custom": {
-    "tags": ["250+ Crypto Pairs", "Meme Coin Trading", "Meme Coin Challenge", "Up to 90% Split"],
+    "tags": ["Broker Backed", "Meme Coin Challenge", "Bitcoin Maxi Challenge", "80% Profit Split"],
     "discountCode": "PROPFIRMS25",
     "discountPercent": 25
   },
-  "lastVerifiedAt": "2026-02-26",
-  "lastUpdatedAt": "2026-02-26",
+  "notes": null,
+  "lastVerifiedAt": "2026-03-12",
+  "lastUpdatedAt": "2026-03-12",
   "dataSources": ["https://fundedprime.com"]
 }

@@ -1,7 +1,7 @@
 {
   "id": "rev-one-up-trader",
   "propFirmId": "d0000039-0000-0000-0000-000000000039",
-  "summary": "OneUp Trader scored 57/100 overall and is a popular prop firm for futures trading. You can qualify for funding in as little as 10 days—or just 5 with the Express Funding option—while keeping 100% of your first $10,000 in profits and 90% after that.\n\nHowever, the futures prop firm has clear limitations. Monthly fees during the evaluation phase can add up, especially if you don't pass on the first try. Some traders have also flagged issues with strict rule enforcement and platform stability. While the evaluation is simple, the tight trailing drawdown can be a hurdle for more aggressive strategies.\n\nOneUp Trader is best suited for disciplined futures traders who value simplicity and platform variety but may not be ideal if you're looking for more asset class flexibility or a lower-cost path to funding.",
+  "summary": "OneUp Trader scored 57/100 overall and is a popular prop firm for futures trading. You can qualify for funding in as little as 10 days — or just 5 with the Express Funding option (available only to previously funded traders with an FTA termination in the past 30 days) — while keeping 100% of your first $10,000 in profits and 90% after that.\n\nHowever, the futures prop firm has clear limitations. Monthly fees during the evaluation phase can add up, especially if you don't pass on the first try. Some traders have also flagged issues with strict rule enforcement and platform stability. While the evaluation is simple, the tight trailing drawdown can be a hurdle for more aggressive strategies.\n\nOneUp Trader is best suited for disciplined futures traders who value simplicity and platform variety but may not be ideal if you're looking for more asset class flexibility or a lower-cost path to funding.",
   "pros": [
     "100% of first $10K profit kept by trader",
     "Simple one-step evaluation process",
@@ -14,9 +14,9 @@
     "Monthly subscription fees add up during evaluation",
     "Futures-only — no forex, crypto, or equities",
     "Tight trailing drawdown can be challenging",
-    "$1,000 minimum withdrawal threshold",
-    "Card-only payments for challenge fees",
-    "No free educational resources"
+    "$1,000 minimum on trader's profit share per withdrawal",
+    "Challenge fees limited to credit/debit cards (payouts via bank wire or crypto)",
+    "5% fee on crypto withdrawals; bank wire processing can take 1–3 business days"
   ],
   "bestFor": "Disciplined futures traders who value a simple one-step evaluation, platform variety with 20+ options, and a generous 90% profit split with 100% of the first $10K",
   "notIdealFor": "Traders who want forex, crypto, or equities access, prefer lower-cost evaluations, or need automation-friendly rules without strict consistency requirements",
@@ -42,7 +42,7 @@
   "verdictBlocks": [
     {
       "heading": "Our Final Verdict On OneUp Trader",
-      "body": "OneUp Trader is worth considering if you're focused on futures trading and want a simple, fast-track way to get funded, yet some traders have raised valid concerns.\n\nA major benefit is the one-step evaluation is beginner-friendly, with no daily loss limits and a strong 90% profit split (plus 100% of the first $10K). Platform flexibility is also a major plus, with NinjaTrader access included and over 20 options available, and the Express Funding for returning traders is a helpful feature.\n\nThat said, there are clear limitations. You're restricted to futures only—no forex, crypto, or equities—and the trailing drawdown can make the evaluation tough. The $1,000 minimum payout threshold and card-only payments may also be a downside for smaller accounts. Some experienced traders have flagged concerns about inconsistent rule enforcement and platform reliability.\n\nOverall, OneUp Trader suits disciplined futures traders who prefer a quick and straightforward path to funding, but it may not be the best fit for everyone."
+      "body": "OneUp Trader is worth considering if you're focused on futures trading and want a simple, fast-track way to get funded, yet some traders have raised valid concerns.\n\nA major benefit is the one-step evaluation is beginner-friendly, with no daily loss limits and a generous profit split — 100% of the first $10K, then 90% after that. Platform flexibility is also a major plus, with NinjaTrader access included and over 20 options available. Express Funding is available for previously funded traders who had an FTA termination in the past 30 days, letting them requalify in just 5 days.\n\nThat said, there are clear limitations. You're restricted to futures only — no forex, crypto, or equities — and the trailing drawdown can make the evaluation tough. Withdrawals require meeting account-specific profit thresholds ($1,500–$5,500 depending on account size) and a $1,000 minimum on the trader's profit share. Challenge fee payments are card-only, while profit withdrawals go via bank wire (1–3 business days) or crypto (up to 14 business days, 5% fee). Some experienced traders have flagged concerns about inconsistent rule enforcement and platform reliability.\n\nOverall, OneUp Trader suits disciplined futures traders who prefer a quick and straightforward path to funding, but it may not be the best fit for everyone."
     }
   ],
   "faq": [
@@ -60,11 +60,11 @@
     },
     {
       "q": "Are EAs and copy trading allowed with OneUp Trader?",
-      "a": "Yes, OneUp Trader allows EAs (Expert Advisors) and automated trading. Copy trading is also allowed, but only between accounts registered under the same name. Group trading, high-frequency trading, and trades lasting under 10 seconds are not permitted."
+      "a": "OneUp Trader supports over 20 platforms that are compatible with EAs, but broad firm-level permission for all automated trading strategies is not explicitly confirmed — check with support before relying on full automation. Copy trading is allowed only between accounts registered under the same name. Group trading, high-frequency trading, and trades lasting under 10 seconds are not permitted."
     }
   ],
   "verified": true,
   "flagged": false,
   "methodologyVersion": "1.0",
-  "lastReviewedAt": "2026-02-27"
+  "lastReviewedAt": "2026-03-11"
 }

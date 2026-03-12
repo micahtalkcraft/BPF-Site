@@ -8,10 +8,11 @@
   "evaluation": {
     "types": ["1-step", "2-step"],
     "profitTargets": { "phase1": 10, "phase2": 5 },
-    "dailyDrawdown": 5,
-    "maxDrawdown": 10,
+    "dailyDrawdown": null,
+    "maxDrawdown": null,
     "minTradingDays": 3,
-    "scalingPlan": true
+    "scalingPlan": true,
+    "notes": "Four product lines: CFD (Prime 1-Phase and 2-Phase), Futures (Prime), and Stocks. Classic challenges are legacy and should not be presented as a current main option. CFD 1-Phase uses 4% daily drawdown and 7% max drawdown. CFD 2-Phase uses 5% daily drawdown and 10% max drawdown. Futures uses fixed dollar daily pause and max drawdown that trails on highest end-of-day balance until it reaches starting balance, then stays fixed. Futures Prime daily pause is OFF for accounts created after March 6. Stocks uses 2% daily pause and 5% max drawdown. 40% consistency rule applies during challenge phase. Stocks challenge has unlimited duration with 14-day inactivity limit. Futures Prime has a 30-day challenge duration. Traders can scale up to €5M. All accounts are demo accounts with virtual funds — all trading activity takes place in a simulated environment."
   },
   "pricing": {
     "challengeFees": [
@@ -35,27 +36,27 @@
   },
   "payouts": {
     "splitMax": 80,
-    "schedule": "Bi-weekly (14 days)",
+    "schedule": "Varies by product: Prime CFD every 14 days, Futures Prime every 14 days for first two payouts then every 7 days after second payout if profit over $200, Stocks first payout after 3 profitable days with $100+ each",
     "processingTime": "1 business day",
-    "firstPayoutDays": 14,
+    "firstPayoutDays": null,
     "methods": ["credit/debit cards", "crypto", "Binance Pay", "Apple Pay", "Google Pay", "bank transfer"]
   },
   "rules": {
-    "newsTrading": false,
-    "weekendHolding": true,
+    "newsTrading": null,
+    "weekendHolding": null,
     "copyTrading": false,
-    "expertAdvisors": true,
-    "consistencyRule": "40% rule — no single trading day can account for more than 40% of the total profit target",
-    "notes": "News trading restricted within 2 minutes of major events. Copy trading prohibited on CFD challenges; limited to 5 linked accounts on Futures only. HFT and tick-scalping not permitted. Inactivity limit: 21 days for CFD/Futures, 14 days for Stocks."
+    "expertAdvisors": null,
+    "consistencyRule": "40% rule applies during the challenge phase — no single trading day can account for more than 40% of the total profit target. Stocks specifically state this is challenge phase only.",
+    "notes": "News trading restricted within a 2-minute window before and after high-impact news events. Trade coordination and copy trading with other traders or accounts are prohibited. Certain EA behaviour is banned, and using third-party EAs can stop an account from passing or progressing. CFDs and Stocks can hold on weekdays, but Stocks are forcibly liquidated 10 minutes before market close. Inactivity limit: 21 days for CFD/Futures, 14 days for Stocks. All accounts are demo accounts with virtual funds — all trading activity takes place in a simulated environment."
   },
   "markets": {
-    "platforms": ["MT4", "MT5", "cTrader", "ATAS", "Quantower", "Rithmic", "Tradovate", "NinjaTrader", "TradingView"],
+    "platforms": ["MT4", "MT5", "cTrader", "ATAS", "Quantower", "Rithmic", "Tradovate", "NinjaTrader", "TradingView", "Volumetrica"],
     "instruments": "Forex (46 pairs), Commodities, Indices, Stocks, Crypto"
   },
   "trust": {
     "trustpilotRating": 4.2,
     "trustpilotCount": 700,
-    "communitySize": "15,700+ Discord, 19,300+ Instagram",
+    "communitySize": "10,000+ active monthly accounts, $14M+ in rewards, 450K+ monthly trades, 180+ supported countries",
     "notableFlags": ["Independent firm (not broker-backed)", "Partners with Tickmill for cTrader liquidity"]
   },
   "links": { "website": "https://affiliate.thetradingpit.com/visit/?bta=8522&brand=thetradingpit" },
@@ -66,9 +67,9 @@
     "email": true
   },
   "custom": {
-    "tags": ["CFDs & Futures", "Low Spreads", "Stock Trading Challenge", "Weekly Payouts"]
+    "tags": ["CFDs & Futures", "Low Spreads", "Stock Trading Challenge", "Scale to €5M"]
   },
-  "lastVerifiedAt": "2026-02-27",
-  "lastUpdatedAt": "2026-02-27",
+  "lastVerifiedAt": "2026-03-11",
+  "lastUpdatedAt": "2026-03-11",
   "dataSources": ["https://thetradingpit.com"]
 }

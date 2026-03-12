@@ -16,7 +16,7 @@ const { section, fallbackBody } = Astro.props;
 
   <!-- Overview -->
   <p class="mb-4">
-    City Traders Imperium offers four routes to funding: a One Step challenge, a Two Step challenge, and two Instant Funding models. All challenges and funded accounts operate on simulated accounts, use balance-based drawdown, and have no maximum time limits.
+    City Traders Imperium offers four routes to funding: a One Step challenge, a Two Step challenge, and two Instant Funding models. All accounts operate in a simulated environment with no maximum time limits. Evaluation challenges (One Step, Two Step) use balance-based (static) drawdown, while Instant Funding accounts use trailing drawdown tied to the account balance.
   </p>
 
   <!-- Per-challenge summaries -->
@@ -33,13 +33,13 @@ const { section, fallbackBody } = Astro.props;
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Instant Funding</p>
-      <p>Skip the evaluation entirely and start trading immediately. Account sizes from $2,500 to $80,000 with fees starting at $89. Balance doubles at every 10% milestone.</p>
-      <p class="text-xs text-teal-600 font-semibold mt-1">Up to 100% profit split (scales) · Trailing drawdown · Scaling to $2M per account</p>
+      <p>Skip the evaluation entirely. Traders start with half the advertised balance and unlock the full amount after hitting the first 10% profit milestone. Account sizes from $2,500 to $80,000 with fees starting at $89.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Starts ~50% profit split (scales to 100%) · Trailing drawdown · Scaling to $2M per account</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Instant Funding Pro</p>
-      <p>Higher-cost version starting at a higher funding level. Account sizes from $5,000 to $80,000 with fees starting at $329. Same 10% scaling milestones.</p>
-      <p class="text-xs text-teal-600 font-semibold mt-1">Up to 100% profit split (scales) · Trailing drawdown · Accelerated path to larger capital</p>
+      <p>Higher-cost version starting at a higher funding level. Account sizes from $5,000 to $80,000 with fees starting at $329. Same 10% scaling milestones. Profit split starts around 50% and increases through milestones.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Starts ~50% profit split (scales to 100%) · Trailing drawdown · Accelerated path to larger capital</p>
     </div>
   </div>
 
@@ -89,15 +89,15 @@ const { section, fallbackBody } = Astro.props;
           <td class="px-4 py-3 font-medium text-slate-600">Drawdown Model</td>
           <td class="px-4 py-3 text-center text-slate-900">Balance-based (static)</td>
           <td class="px-4 py-3 text-center text-slate-900">Balance-based (static)</td>
-          <td class="px-4 py-3 text-center text-slate-900">Balance-based (static)</td>
-          <td class="px-4 py-3 text-center text-slate-900">Balance-based (static)</td>
+          <td class="px-4 py-3 text-center text-slate-900">Trailing</td>
+          <td class="px-4 py-3 text-center text-slate-900">Trailing</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-medium text-slate-600">Profit Split</td>
           <td class="px-4 py-3 text-center font-semibold text-teal-600">80%–100%</td>
           <td class="px-4 py-3 text-center font-semibold text-teal-600">80%–100%</td>
-          <td class="px-4 py-3 text-center font-semibold text-teal-600">Up to 100% (scales)</td>
-          <td class="px-4 py-3 text-center font-semibold text-teal-600">Up to 100% (scales)</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">~50% → 100% (scales)</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">~50% → 100% (scales)</td>
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-600">Scaling Potential</td>
@@ -341,13 +341,13 @@ const { section, fallbackBody } = Astro.props;
     </h3>
 
     <p class="mb-3">
-      Instant Funding allows you to skip the evaluation process and start trading on a simulated funded account immediately.
+      Instant Funding allows you to skip the evaluation process and start trading on a simulated funded account immediately. Unlike evaluation challenges, Instant Funding uses <strong>trailing drawdown</strong> tied to the account balance, not static drawdown.
     </p>
     <p class="mb-3">
-      Each time you reach a <strong>10% profit milestone</strong>, the account balance doubles, allowing you to scale progressively up to <strong>$2 million per account</strong> and <strong>$4 million across multiple accounts</strong>.
+      Traders start with <strong>half the advertised balance</strong> and unlock the full amount after hitting the first 10% profit milestone. Each subsequent <strong>10% milestone</strong> doubles the account balance, allowing you to scale progressively up to <strong>$2 million per account</strong> and <strong>$4 million across multiple Instant Funding accounts</strong>.
     </p>
     <p class="mb-4">
-      Profit share starts lower than evaluation-based programs and increases as you scale, reaching up to 100% at higher funding levels. While Instant Funding offers more freedom, including news trading and weekend holding, the early-stage profit split is notably lower than most competing instant funding firms.
+      Profit share starts at around <strong>50%</strong> — significantly lower than evaluation-based programs — and increases through scaling milestones, reaching up to 100% at higher funding levels. The early-stage profit split is notably lower than most competing instant funding firms.
     </p>
 
     <!-- Key specs -->
@@ -358,11 +358,15 @@ const { section, fallbackBody } = Astro.props;
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Drawdown Type</p>
-        <p class="text-sm font-bold text-slate-800">Balance-based (Static)</p>
+        <p class="text-sm font-bold text-slate-800">Trailing</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Scaling to Scale ($)</p>
-        <p class="text-sm font-bold text-slate-800">10% milestone</p>
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Starting Balance</p>
+        <p class="text-sm font-bold text-slate-800">Half of advertised</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Scale Milestone</p>
+        <p class="text-sm font-bold text-slate-800">Every 10% profit</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Per Account</p>
@@ -538,7 +542,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="mb-10">
     <h3 class="text-lg font-bold text-slate-900 mb-3">Scaling Plans</h3>
     <p class="mb-3">
-      Scaling depends heavily on the account type you choose. One Step and Two Step Challenges scale incrementally but are effectively capped at <strong>$200,000 per account</strong>. Instant Funding and Instant Funding Pro allow balance doubling at every 10% profit milestone, with a maximum of <strong>$2 million per account</strong> and <strong>$4 million in total funding</strong>.
+      Scaling depends heavily on the account type you choose. One Step and Two Step Challenges scale incrementally but are effectively capped at <strong>$200,000 per account</strong> — they do not participate in the $4 million scaling headline. Instant Funding and Instant Funding Pro allow balance doubling at every 10% profit milestone, with a maximum of <strong>$2 million per account</strong> and <strong>$4 million across multiple Instant Funding accounts</strong>.
     </p>
     <p class="mb-4">
       Profit splits improve as you scale, particularly on Instant Funding accounts, but meaningful increases require sustained performance over multiple levels.
@@ -551,7 +555,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Challenges</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      CTI offers flexibility through multiple funding routes, but each comes with clear trade-offs. Evaluation challenges limit long-term scaling, while Instant Funding provides higher capital potential at the cost of lower early profit splits. Balance-based drawdown and unlimited time limits improve flexibility, but leverage and earning potential remain conservative compared to top-tier competitors. This mix explains why CTI scores 8/10 for challenges — varied and structured, but constrained in ways that matter once you look beyond the surface.
+      CTI offers flexibility through multiple funding routes, but each comes with clear trade-offs. Evaluation challenges use static drawdown and limit long-term scaling to $200K/account, while Instant Funding uses trailing drawdown and provides higher capital potential (up to $4M across accounts) at the cost of lower early profit splits starting around 50%. Instant Funding traders also start with half the advertised balance. Unlimited time limits improve flexibility, but leverage and earning potential remain conservative compared to top-tier competitors. This mix explains why CTI scores 8/10 for challenges — varied and structured, but constrained in ways that matter once you look beyond the surface.
     </p>
   </div>
 
@@ -574,7 +578,7 @@ const { section, fallbackBody } = Astro.props;
     Execution is handled through <strong>Broctagon</strong>, a CySEC regulated liquidity provider. That setup gives you access to institutional-grade liquidity rather than a forex broker feed.
   </p>
   <p class="mb-6">
-    Commission fees are straightforward and competitive, especially for commodities and forex trading where roundturn commission is <strong>$5 per lot</strong>, well below the industry average of $7. Indices are cheaper at <strong>$0.50 per lot</strong>, and crypto is <strong>commission-free</strong>.
+    Commission fees are straightforward and competitive. Forex and commodities are <strong>$5 round-turn per lot</strong>, well below the industry average of $7. Indices are <strong>$0.50 round-turn per lot</strong>, and crypto is <strong>commission-free</strong>.
   </p>
 
   <!-- Commission fee table -->
@@ -631,7 +635,7 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-3">
-    CTI gives access to <strong>50 instruments</strong> in total, split between 28 forex pairs, 13 indices, 3 commodities, and 6 cryptocurrencies. The coverage is okay but the real issue is <strong>leverage</strong>, which is far lower than you'll find at the majority of prop firms.
+    CTI gives access to around <strong>50 instruments</strong> across forex, indices, commodities, and cryptocurrencies — though exact counts can change. The coverage is okay but the real issue is <strong>leverage</strong>, which is far lower than you'll find at the majority of prop firms.
   </p>
   <p class="mb-4">
     On CTI's One Step and Two Step challenge accounts, forex leverage is capped at <strong>1:30</strong>, which is similar to what you'd see with regulated retail brokers. Indices and commodities are more restricted at <strong>1:10</strong>, while crypto leverage remains fixed at <strong>1:2</strong>.
@@ -656,28 +660,28 @@ const { section, fallbackBody } = Astro.props;
       <tbody class="divide-y divide-slate-100">
         <tr class="bg-white">
           <td class="px-4 py-3 font-semibold text-slate-900">Forex Pairs</td>
-          <td class="px-4 py-3 text-center font-semibold text-slate-900">28</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">~28</td>
           <td class="px-4 py-3 text-center font-semibold text-slate-900">1:30</td>
           <td class="px-4 py-3 text-center text-slate-700">1:10</td>
           <td class="px-4 py-3 text-slate-600">EUR/USD, GBP/JPY, USD/CAD</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-semibold text-slate-900">Commodities</td>
-          <td class="px-4 py-3 text-center font-semibold text-slate-900">3</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">~3</td>
           <td class="px-4 py-3 text-center text-slate-700">1:10</td>
           <td class="px-4 py-3 text-center text-slate-700">1:10</td>
           <td class="px-4 py-3 text-slate-600">XAU/USD, XAG/USD, XTI/USD</td>
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-semibold text-slate-900">Indices</td>
-          <td class="px-4 py-3 text-center font-semibold text-slate-900">13</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">~13</td>
           <td class="px-4 py-3 text-center text-slate-700">1:10</td>
           <td class="px-4 py-3 text-center text-slate-700">1:10</td>
           <td class="px-4 py-3 text-slate-600">US30, UK100, DE40</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-semibold text-slate-900">Cryptocurrencies</td>
-          <td class="px-4 py-3 text-center font-semibold text-slate-900">6</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">~6</td>
           <td class="px-4 py-3 text-center text-slate-700">1:2</td>
           <td class="px-4 py-3 text-center text-slate-700">1:2</td>
           <td class="px-4 py-3 text-slate-600">BTC/USD, ETH/USD, ADA/USD</td>
@@ -694,7 +698,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Markets</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      CTI offers an average product range with forex, indices, commodities, and a few cryptos, but no stocks or broader coverage. The biggest issue is leverage, capped at 1:30 on challenges and only 1:10 on instant funding, which is well below most firms. Minimal markets and low leverage means they only earned a 7/10 score for markets.
+      CTI offers around 50 instruments across forex, indices, commodities, and crypto — but no stocks or broader coverage. Exact instrument counts may vary. The biggest issue is leverage, capped at 1:30 on challenges and only 1:10 on instant funding, which is well below most firms. Limited markets and low leverage means they only earned a 7/10 score for markets.
     </p>
   </div>
 
@@ -818,7 +822,7 @@ const { section, fallbackBody } = Astro.props;
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Payout Qualification</p>
-      <p>Must have been trading for 10 days or have a minimum profit of $100 (or 2% net eligible profit, whichever is greater).</p>
+      <p>Traders must trade at least 10 days or reach the minimum withdrawal threshold ($100), whichever requirement applies first. Payouts are processed bi-weekly (14 days) after eligibility is met.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Processing Times</p>
@@ -832,8 +836,11 @@ const { section, fallbackBody } = Astro.props;
 
   <!-- Funded Trader Salary -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Funded Trader Salary Payments</h3>
+  <p class="mb-4">
+    CTI offers funded trader salary payments, but these are only available to traders who meet <strong>specific long-term consistency criteria</strong> — they are not a standard benefit for all funded accounts. Qualifying requires sustained profitability and rule compliance over an extended period.
+  </p>
   <p class="mb-6">
-    Fully funded traders who meet CTI's salary criteria receive monthly payments based on their account size. These salary payments are separate from profit payouts and are available only to traders who have completed the evaluation phase. Salary payments are deposited directly into the trader's bank or crypto wallet.
+    Salary payments are separate from profit payouts and are deposited directly into the trader's bank or crypto wallet. Most traders will not immediately qualify for salary payments upon becoming funded.
   </p>
 
   <!-- Verdict -->

@@ -6,10 +6,10 @@
   "foundedYear": 2022,
   "hqCountry": "US",
   "evaluation": {
-    "types": ["1-step"],
+    "types": ["other"],
     "profitTargets": { "phase1": 6 },
-    "dailyDrawdown": 2.4,
-    "maxDrawdown": 5,
+    "dailyDrawdown": null,
+    "maxDrawdown": null,
     "minTradingDays": 1,
     "scalingPlan": true
   },
@@ -31,22 +31,22 @@
   },
   "payouts": {
     "splitMax": 100,
-    "schedule": "Every 5 winning days (Starter) / Bi-weekly (Expert)",
+    "schedule": "Starter: every 5 winning days (min $250); Expert: every 14 days (min $1,000)",
     "processingTime": "1–3 business days",
     "firstPayoutDays": 5,
     "methods": ["credit card", "ACH", "crypto"]
   },
   "rules": {
-    "newsTrading": false,
-    "weekendHolding": false,
+    "newsTrading": null,
+    "weekendHolding": null,
     "copyTrading": false,
-    "expertAdvisors": false,
-    "consistencyRule": "40% consistency rule (Starter plan); buffer zone policy (Expert plan)",
-    "notes": "Automated scalping (200+ trades/day) restricted. AI/bots/fully automated systems prohibited. News trading during tier 1 economic data restricted."
+    "expertAdvisors": null,
+    "consistencyRule": "Starter accounts: 40% consistency rule. Milestone accounts: 20% consistency rule.",
+    "notes": "News trading restricted only around major Tier-1 economic data releases, not fully banned. No universal weekend holding ban stated in the rules. Fully automated trading (AI/bots) prohibited, but semi-automated trading allowed if manually monitored. Copy trading and coordinated strategies across accounts prohibited. Expert accounts use a buffer zone rule that must be met before withdrawals — buffer resets after each payout. Contract limits vary by account size: Starter 3–9, Milestone 1–9, Expert 5–15. Automated scalping (200+ trades/day) restricted. Order manipulation and bracket exploits prohibited."
   },
   "markets": {
-    "platforms": ["NinjaTrader", "Tradovate", "TradingView", "Quantower"],
-    "instruments": "Futures (CME Equity, CBOT Commodity, CBOT Financial, COMEX Metals, NYMEX Energy, CME FX, CME Agriculture)"
+    "platforms": ["NinjaTrader", "Tradovate", "TradingView", "Quantower", "ATAS", "Volumetrica", "Volsys/Volbook"],
+    "instruments": "Futures across equity indices (ES, NQ, RTY), commodities (ZC, ZS), metals (GC, SI, HG), FX (6E, 6J, 6B), interest rates (ZN, ZB, ZT, ZF), energy (CL, NG, HO, RB), and agriculture (HE, LE)"
   },
   "trust": {
     "trustpilotRating": 4.9,
@@ -61,7 +61,7 @@
   "custom": {
     "tags": ["40% Consistency Rule", "Monthly Fees", "Futures Trading Only", "100% First $10K"]
   },
-  "lastVerifiedAt": "2026-02-24",
-  "lastUpdatedAt": "2026-02-24",
+  "lastVerifiedAt": "2026-03-11",
+  "lastUpdatedAt": "2026-03-11",
   "dataSources": ["https://myfundedfutures.com"]
 }

@@ -3,13 +3,13 @@
   "slug": "funding-pips",
   "name": "Funding Pips",
   "status": "active",
-  "foundedYear": 2020,
+  "foundedYear": 2022,
   "hqCountry": "AE",
   "evaluation": {
-    "types": ["1-step", "2-step", "instant"],
+    "types": ["zero", "1-step", "2-step", "2-step-pro"],
     "profitTargets": { "phase1": 10, "phase2": 5 },
-    "dailyDrawdown": 5,
-    "maxDrawdown": 10,
+    "dailyDrawdown": null,
+    "maxDrawdown": null,
     "minTradingDays": 3,
     "scalingPlan": true
   },
@@ -18,41 +18,41 @@
       { "accountSize": 5000, "fee": 29, "model": "2-step-pro", "label": "Two Step Pro $5K" },
       { "accountSize": 5000, "fee": 36, "model": "2-step", "label": "Two Step Standard $5K" },
       { "accountSize": 5000, "fee": 59, "model": "1-step", "label": "One Step $5K" },
-      { "accountSize": 5000, "fee": 69, "model": "instant", "label": "Instant Funding $5K" },
+      { "accountSize": 5000, "fee": 69, "model": "zero", "label": "Zero $5K" },
       { "accountSize": 10000, "fee": 55, "model": "2-step-pro", "label": "Two Step Pro $10K" },
       { "accountSize": 10000, "fee": 66, "model": "2-step", "label": "Two Step Standard $10K" },
       { "accountSize": 10000, "fee": 99, "model": "1-step", "label": "One Step $10K" },
-      { "accountSize": 10000, "fee": 99, "model": "instant", "label": "Instant Funding $10K" },
+      { "accountSize": 10000, "fee": 99, "model": "zero", "label": "Zero $10K" },
       { "accountSize": 25000, "fee": 109, "model": "2-step-pro", "label": "Two Step Pro $25K" },
       { "accountSize": 25000, "fee": 156, "model": "2-step", "label": "Two Step Standard $25K" },
       { "accountSize": 25000, "fee": 199, "model": "1-step", "label": "One Step $25K" },
-      { "accountSize": 25000, "fee": 199, "model": "instant", "label": "Instant Funding $25K" },
+      { "accountSize": 25000, "fee": 199, "model": "zero", "label": "Zero $25K" },
       { "accountSize": 50000, "fee": 219, "model": "2-step-pro", "label": "Two Step Pro $50K" },
       { "accountSize": 50000, "fee": 289, "model": "2-step", "label": "Two Step Standard $50K" },
       { "accountSize": 50000, "fee": 319, "model": "1-step", "label": "One Step $50K" },
-      { "accountSize": 50000, "fee": 299, "model": "instant", "label": "Instant Funding $50K" },
+      { "accountSize": 50000, "fee": 299, "model": "zero", "label": "Zero $50K" },
       { "accountSize": 100000, "fee": 399, "model": "2-step-pro", "label": "Two Step Pro $100K" },
       { "accountSize": 100000, "fee": 529, "model": "2-step", "label": "Two Step Standard $100K" },
       { "accountSize": 100000, "fee": 555, "model": "1-step", "label": "One Step $100K" },
-      { "accountSize": 100000, "fee": 499, "model": "instant", "label": "Instant Funding $100K" }
+      { "accountSize": 100000, "fee": 499, "model": "zero", "label": "Zero $100K" }
     ],
     "resetFee": null,
     "refundPolicy": "No refund policy disclosed"
   },
   "payouts": {
     "splitMax": 100,
-    "schedule": "Bi-weekly",
+    "schedule": "Weekly, Bi-weekly, On-Demand, or Monthly (selectable at checkout)",
     "processingTime": "1–3 business days",
-    "firstPayoutDays": 14,
+    "firstPayoutDays": null,
     "methods": ["Visa/Mastercard (instant)", "Crypto", "Rise Platform", "Bank Transfer"]
   },
   "rules": {
-    "newsTrading": false,
-    "weekendHolding": false,
+    "newsTrading": null,
+    "weekendHolding": null,
     "copyTrading": true,
-    "expertAdvisors": false,
-    "consistencyRule": "15% on Zero (Instant) accounts, 45% on Pro accounts",
-    "notes": "HFT and latency arbitrage prohibited. Post-funding rules are stricter than evaluation rules."
+    "expertAdvisors": null,
+    "consistencyRule": "15% on Zero accounts, 45% on 2-Step Pro accounts. No consistency rule on 1-Step or 2-Step Standard.",
+    "notes": "News trading allowed during evaluation on most models but restricted on funded (Master) accounts and Zero accounts. Weekend holding allowed on 2-Step challenges but restricted on Zero. Copy trading allowed between own accounts only. Third-party EAs allowed only as trade/risk management tools — fully automated third-party trading EAs are not permitted. HFT and latency arbitrage prohibited. Max risk per trade idea rule applies on funded accounts depending on account size. Accounts become inactive if no trades are closed for 30 days."
   },
   "markets": {
     "platforms": ["MetaTrader 5", "cTrader", "Match-Trader"],
@@ -76,7 +76,7 @@
     "tags": ["Multiple Platforms", "Scaling Plan", "Dubai Based"],
     "discountCode": null
   },
-  "lastVerifiedAt": "2026-02-24",
-  "lastUpdatedAt": "2026-02-24",
+  "lastVerifiedAt": "2026-03-11",
+  "lastUpdatedAt": "2026-03-11",
   "dataSources": ["https://fundingpips.com"]
 }

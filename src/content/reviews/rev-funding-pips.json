@@ -1,12 +1,12 @@
 {
   "id": "rev-funding-pips",
   "propFirmId": "d0000021-0000-0000-0000-000000000021",
-  "summary": "Funding Pips scored 62/100 in our review, offering strong platform variety, multiple challenge types, and up to 100% profit splits. While rule clarity and support could improve, it's a decent option for traders who understand the prop firm's trading rules.",
+  "summary": "Funding Pips scored 62/100 in our review, offering four challenge models (Zero, 1-Step, 2-Step, and 2-Step Pro) across MT5, Match-Trader, and cTrader. Reward splits depend on the payout cycle selected: Weekly 60%, Bi-weekly 80%, On-Demand 90%, or Monthly 100%. While rule clarity and support could improve, it's a decent option for traders who understand the prop firm's trading rules.",
   "pros": [
     "MT5, Match-Trader, and cTrader available",
-    "Profit splits scale up to 100%",
+    "Reward splits up to 100% on Monthly cycle; 60–90% on shorter cycles",
     "Competitive leverage for Pro Account",
-    "Multiple challenge types including instant funding"
+    "Four challenge models: Zero, 1-Step, 2-Step, and 2-Step Pro"
   ],
   "cons": [
     "$20 fee required to access cTrader",
@@ -37,13 +37,13 @@
   "verdictBlocks": [
     {
       "heading": "Our Verdict: 62/100",
-      "body": "Funding Pips scored 62/100 overall in our review, with average or below-average ratings across every key category. The prop trading firm's challenge structure is a relative strength, offering variety and scaling potential. However, this is offset by ever-changing limited time models and stricter risk rules introduced only after traders are funded.\n\nThe firm also earned 6/10 for Trust due to a history of rule enforcement issues, negative trader reviews, and the temporary suspension of its Trustpilot account. Other categories like Platforms, Payouts, and Markets sit between 6/10 and 7/10, reflecting inconsistent experiences and lack of clear disclosures.\n\nOverall, while Funding Pips has scale and visibility, its operational inconsistencies, hidden conditions, and support issues make it difficult to recommend over more transparent, broker-backed alternatives like DNA Funded or BrightFunded."
+      "body": "Funding Pips scored 62/100 overall in our review, with average or below-average ratings across every key category. The prop trading firm offers four challenge models — Zero, 1-Step, 2-Step, and 2-Step Pro — each with different drawdown limits and rules. Reward splits depend on the payout cycle selected: Weekly 60%, Bi-weekly 80%, On-Demand 90%, or Monthly 100%. However, this variety is offset by ever-changing limited time models and stricter risk rules introduced only after traders are funded.\n\nThe firm also earned 6/10 for Trust due to a history of rule enforcement issues, negative trader reviews, and the temporary suspension of its Trustpilot account. Other categories like Platforms, Payouts, and Markets sit between 6/10 and 7/10, reflecting inconsistent experiences and lack of clear disclosures.\n\nOverall, while Funding Pips has scale and visibility, its operational inconsistencies, hidden conditions, and support issues make it difficult to recommend over more transparent, broker-backed alternatives like DNA Funded or BrightFunded."
     }
   ],
   "faq": [
     {
       "q": "Is Funding Pips a good prop firm?",
-      "a": "Funding Pips received a 62/100 score in our review, making it an average-rated prop firm with both strengths and significant drawbacks. It offers multiple challenge types, scaling potential, and access to MT5, Match-Trader, and cTrader. However, inconsistent rule enforcement, payout clarity issues, and support concerns still affect overall trust."
+      "a": "Funding Pips received a 62/100 score in our review, making it an average-rated prop firm with both strengths and significant drawbacks. It offers four challenge models (Zero, 1-Step, 2-Step, and 2-Step Pro), scaling potential, and access to MT5, Match-Trader, and cTrader. Reward splits depend on the payout cycle selected (Weekly 60%, Bi-weekly 80%, On-Demand 90%, Monthly 100%). However, inconsistent rule enforcement, payout clarity issues, and support concerns still affect overall trust."
     },
     {
       "q": "Who is the owner of Funding Pips?",
@@ -55,7 +55,7 @@
     },
     {
       "q": "How long has Funding Pips been around?",
-      "a": "Funding Pips launched in 2020 but temporarily shut down in 2024 due to MetaQuotes-related issues. It later resumed operations with alternative platforms."
+      "a": "Funding Pips was founded in November 2022 and is based in Dubai. In 2024, the firm faced major disruptions after MetaQuotes cut services due to regulatory issues but later resumed operations with alternative platforms."
     },
     {
       "q": "What is the 10 lot rule for Funding Pips?",
@@ -65,5 +65,5 @@
   "verified": true,
   "flagged": false,
   "methodologyVersion": "1.0",
-  "lastReviewedAt": "2026-02-24"
+  "lastReviewedAt": "2026-03-11"
 }

@@ -16,26 +16,26 @@ const { section, fallbackBody } = Astro.props;
 
   <!-- Overview -->
   <p class="mb-4">
-    Alpha Capital offers traders evaluations to access funded accounts through its 1-Step, 2-Step, and 3-Step challenges, with all options offering an 80% profit split once you reach a funded account. The 2-Step evaluations are further divided into Alpha Pro and Swing trading accounts.
+    Alpha Capital offers four evaluation models — <strong>Alpha One</strong> (1-step), <strong>Alpha Pro</strong> (2-step with 10%, 8%, and 6% variants), <strong>Swing</strong> (2-step), and <strong>Alpha Three</strong> (3-step) — with all options offering an 80% profit split once you reach a qualified account. Drawdown rules, news trading restrictions, weekend holding, minimum trading days, and payout schedules all vary by plan.
   </p>
 
   <!-- Per-challenge summaries -->
   <div class="space-y-3 mb-8">
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Alpha One – 1 Step</p>
-      <p>The fastest route to funding with a single-phase evaluation. No profit caps, and traders can request payouts on demand.</p>
+      <p>The fastest route to funding with a single-phase evaluation. 10% profit target, 4% daily drawdown, 6% trailing max drawdown. Minimum 1 trading day. On-demand payouts.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Alpha Pro – 2 Step</p>
-      <p>A balance between a quick challenge and a verification step to prove your skills over two phases.</p>
+      <p class="font-bold text-slate-900 mb-1">Alpha Pro – 2 Step (3 Variants)</p>
+      <p>Available in Pro 10% (10%/5% targets, 5% daily DD, 10% static max DD), Pro 8% (8%/5% targets, 4% daily DD, 8% static max DD), and Pro 6% (6%/6% targets, 3% daily DD, 6% static max DD). Minimum 3 trading days per phase. Bi-weekly payouts.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Swing – 2 Step</p>
-      <p>Ideal for swing traders who do not want to be restricted by daily market closures. Allows overnight and weekend holding.</p>
+      <p>Designed for swing traders. 10%/5% targets, 5% daily drawdown, 10% static max drawdown. Allows overnight and weekend holding on qualified accounts. Minimum 3 trading days per phase. On-demand payouts.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Alpha Three – 3 Step</p>
-      <p>Suited for traders wanting to prove long-term consistency and risk management before qualifying for a funded account.</p>
+      <p>A three-phase evaluation with 8%/4%/4% targets, 4% daily drawdown, and 6% static max drawdown. Minimum 3 trading days per phase. Bi-weekly payouts.</p>
     </div>
   </div>
 
@@ -47,7 +47,9 @@ const { section, fallbackBody } = Astro.props;
         <tr>
           <th class="px-4 py-3 text-left">Attribute</th>
           <th class="px-4 py-3 text-center">Alpha One</th>
-          <th class="px-4 py-3 text-center">Alpha Pro</th>
+          <th class="px-4 py-3 text-center">Pro 10%</th>
+          <th class="px-4 py-3 text-center">Pro 8%</th>
+          <th class="px-4 py-3 text-center">Pro 6%</th>
           <th class="px-4 py-3 text-center">Swing</th>
           <th class="px-4 py-3 text-center">Alpha Three</th>
         </tr>
@@ -58,6 +60,8 @@ const { section, fallbackBody } = Astro.props;
           <td class="px-4 py-3 text-center font-semibold text-slate-900">1 Step</td>
           <td class="px-4 py-3 text-center font-semibold text-slate-900">2 Step</td>
           <td class="px-4 py-3 text-center font-semibold text-slate-900">2 Step</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">2 Step</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">2 Step</td>
           <td class="px-4 py-3 text-center font-semibold text-slate-900">3 Step</td>
         </tr>
         <tr class="bg-slate-50">
@@ -65,35 +69,45 @@ const { section, fallbackBody } = Astro.props;
           <td class="px-4 py-3 text-center text-slate-900">$5K – $200K</td>
           <td class="px-4 py-3 text-center text-slate-900">$5K – $200K</td>
           <td class="px-4 py-3 text-center text-slate-900">$5K – $200K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5K – $200K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5K – $200K</td>
           <td class="px-4 py-3 text-center text-slate-900">$10K – $200K</td>
         </tr>
         <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-600">Fees</td>
-          <td class="px-4 py-3 text-center text-slate-900">$50 – $997</td>
-          <td class="px-4 py-3 text-center text-slate-900">$50 – $997</td>
-          <td class="px-4 py-3 text-center text-slate-900">$70 – $1,097</td>
-          <td class="px-4 py-3 text-center text-slate-900">$67 – $697</td>
-        </tr>
-        <tr class="bg-slate-50">
           <td class="px-4 py-3 font-medium text-slate-600">Profit Target</td>
           <td class="px-4 py-3 text-center text-slate-900">10%</td>
           <td class="px-4 py-3 text-center text-slate-900">10% / 5%</td>
+          <td class="px-4 py-3 text-center text-slate-900">8% / 5%</td>
+          <td class="px-4 py-3 text-center text-slate-900">6% / 6%</td>
           <td class="px-4 py-3 text-center text-slate-900">10% / 5%</td>
           <td class="px-4 py-3 text-center text-slate-900">8% / 4% / 4%</td>
         </tr>
-        <tr class="bg-white">
+        <tr class="bg-slate-50">
           <td class="px-4 py-3 font-medium text-slate-600">Max Drawdown</td>
-          <td class="px-4 py-3 text-center text-slate-900">6%</td>
-          <td class="px-4 py-3 text-center text-slate-900">10%</td>
-          <td class="px-4 py-3 text-center text-slate-900">10%</td>
-          <td class="px-4 py-3 text-center text-slate-900">6%</td>
+          <td class="px-4 py-3 text-center text-slate-900">6% trailing</td>
+          <td class="px-4 py-3 text-center text-slate-900">10% static</td>
+          <td class="px-4 py-3 text-center text-slate-900">8% static</td>
+          <td class="px-4 py-3 text-center text-slate-900">6% static</td>
+          <td class="px-4 py-3 text-center text-slate-900">10% static</td>
+          <td class="px-4 py-3 text-center text-slate-900">6% static</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Max Daily DD</td>
+          <td class="px-4 py-3 text-center text-slate-900">4%</td>
+          <td class="px-4 py-3 text-center text-slate-900">5%</td>
+          <td class="px-4 py-3 text-center text-slate-900">4%</td>
+          <td class="px-4 py-3 text-center text-slate-900">3%</td>
+          <td class="px-4 py-3 text-center text-slate-900">5%</td>
+          <td class="px-4 py-3 text-center text-slate-900">4%</td>
         </tr>
         <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-medium text-slate-600">Max Daily Drawdown</td>
-          <td class="px-4 py-3 text-center text-slate-900">4%</td>
-          <td class="px-4 py-3 text-center text-slate-900">5%</td>
-          <td class="px-4 py-3 text-center text-slate-900">5%</td>
-          <td class="px-4 py-3 text-center text-slate-900">4%</td>
+          <td class="px-4 py-3 font-medium text-slate-600">Min Trading Days</td>
+          <td class="px-4 py-3 text-center text-slate-900">1</td>
+          <td class="px-4 py-3 text-center text-slate-900">3 / phase</td>
+          <td class="px-4 py-3 text-center text-slate-900">3 / phase</td>
+          <td class="px-4 py-3 text-center text-slate-900">3 / phase</td>
+          <td class="px-4 py-3 text-center text-slate-900">3 / phase</td>
+          <td class="px-4 py-3 text-center text-slate-900">3 / phase</td>
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-600">Profit Split</td>
@@ -101,13 +115,26 @@ const { section, fallbackBody } = Astro.props;
           <td class="px-4 py-3 text-center font-semibold text-teal-600">80%</td>
           <td class="px-4 py-3 text-center font-semibold text-teal-600">80%</td>
           <td class="px-4 py-3 text-center font-semibold text-teal-600">80%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">80%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">80%</td>
         </tr>
         <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-medium text-slate-600">Weekend Holding</td>
+          <td class="px-4 py-3 font-medium text-slate-600">Weekend Holding (Qualified)</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">No</span></td>
           <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">No</span></td>
           <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">No</span></td>
           <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
-          <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">No</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Payout Type</td>
+          <td class="px-4 py-3 text-center text-slate-900">On-demand</td>
+          <td class="px-4 py-3 text-center text-slate-900">Bi-weekly</td>
+          <td class="px-4 py-3 text-center text-slate-900">Bi-weekly</td>
+          <td class="px-4 py-3 text-center text-slate-900">Bi-weekly</td>
+          <td class="px-4 py-3 text-center text-slate-900">On-demand</td>
+          <td class="px-4 py-3 text-center text-slate-900">Bi-weekly</td>
         </tr>
       </tbody>
     </table>
@@ -123,22 +150,26 @@ const { section, fallbackBody } = Astro.props;
     </h3>
 
     <p class="mb-3">
-      The Alpha One challenge is the quickest way to become a funded Alpha Trader. It requires traders to pass a single evaluation phase to qualify for a funded account. There are no profit caps, and traders can request payouts on demand.
+      The Alpha One challenge is the quickest way to become a funded Alpha Trader. It requires traders to pass a single evaluation phase with a minimum of <strong>1 trading day</strong>. On-demand payouts available. Weekend holding allowed on qualified accounts.
     </p>
 
     <!-- Key specs -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 mb-4">
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
         <p class="text-sm font-bold text-slate-800">10%</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Drawdown</p>
-        <p class="text-sm font-bold text-slate-800">6%</p>
+        <p class="text-sm font-bold text-slate-800">6% trailing</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Daily Drawdown</p>
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Daily DD</p>
         <p class="text-sm font-bold text-slate-800">4%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Trading Days</p>
+        <p class="text-sm font-bold text-slate-800">1</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
@@ -212,94 +243,87 @@ const { section, fallbackBody } = Astro.props;
   <div class="mb-10">
     <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
       <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">2</span>
-      Alpha Pro – 2 Step
+      Alpha Pro – 2 Step (3 Variants)
     </h3>
 
     <p class="mb-3">
-      The Alpha Pro challenge consists of two evaluation phases before you qualify for a funded trading account. This challenge allows you to prove your consistency over multiple phases with a structured path and gradual qualification criteria.
+      Alpha Pro is a two-phase evaluation available in three variants: <strong>Pro 10%</strong>, <strong>Pro 8%</strong>, and <strong>Pro 6%</strong>. Each variant has different profit targets and drawdown limits. Minimum 3 trading days per phase. No weekend holding on qualified accounts. Bi-weekly payouts.
     </p>
 
-    <!-- Key specs -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
-      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 1 Target</p>
-        <p class="text-sm font-bold text-slate-800">10%</p>
-      </div>
-      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 2 Target</p>
-        <p class="text-sm font-bold text-slate-800">5%</p>
-      </div>
-      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Drawdown</p>
-        <p class="text-sm font-bold text-slate-800">10%</p>
-      </div>
-      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Daily DD</p>
-        <p class="text-sm font-bold text-slate-800">5%</p>
-      </div>
+    <!-- Pro variant comparison -->
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm whitespace-nowrap">
+        <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+          <tr>
+            <th class="px-3 py-3 text-left">Attribute</th>
+            <th class="px-3 py-3 text-center">Pro 10%</th>
+            <th class="px-3 py-3 text-center">Pro 8%</th>
+            <th class="px-3 py-3 text-center">Pro 6%</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-medium text-slate-600">Phase 1 Target</td>
+            <td class="px-3 py-3 text-center font-semibold text-slate-900">10%</td>
+            <td class="px-3 py-3 text-center font-semibold text-slate-900">8%</td>
+            <td class="px-3 py-3 text-center font-semibold text-slate-900">6%</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-medium text-slate-600">Phase 2 Target</td>
+            <td class="px-3 py-3 text-center text-slate-900">5%</td>
+            <td class="px-3 py-3 text-center text-slate-900">5%</td>
+            <td class="px-3 py-3 text-center text-slate-900">6%</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-3 py-3 font-medium text-slate-600">Max Drawdown</td>
+            <td class="px-3 py-3 text-center text-slate-900">10% static</td>
+            <td class="px-3 py-3 text-center text-slate-900">8% static</td>
+            <td class="px-3 py-3 text-center text-slate-900">6% static</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-3 py-3 font-medium text-slate-600">Max Daily DD</td>
+            <td class="px-3 py-3 text-center text-slate-900">5%</td>
+            <td class="px-3 py-3 text-center text-slate-900">4%</td>
+            <td class="px-3 py-3 text-center text-slate-900">3%</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     <!-- Fee table -->
+    <h4 class="text-base font-bold text-slate-900 mb-2">Alpha Pro Fee Table</h4>
     <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
       <table class="w-full text-sm">
         <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
           <tr>
             <th class="px-3 py-3 text-left">Account Size</th>
             <th class="px-3 py-3 text-right">Fee</th>
-            <th class="px-3 py-3 text-right">Target P1</th>
-            <th class="px-3 py-3 text-right">Target P2</th>
-            <th class="px-3 py-3 text-right">Max Drawdown</th>
-            <th class="px-3 py-3 text-right">Max Daily DD</th>
           </tr>
         </thead>
         <tbody class="divide-y divide-slate-100">
           <tr class="bg-white">
             <td class="px-3 py-3 font-semibold text-slate-900">$5,000</td>
             <td class="px-3 py-3 text-right text-slate-900">$50</td>
-            <td class="px-3 py-3 text-right text-slate-700">$500</td>
-            <td class="px-3 py-3 text-right text-slate-700">$250</td>
-            <td class="px-3 py-3 text-right text-slate-700">$500</td>
-            <td class="px-3 py-3 text-right text-slate-700">$250</td>
           </tr>
           <tr class="bg-slate-50">
             <td class="px-3 py-3 font-semibold text-slate-900">$10,000</td>
             <td class="px-3 py-3 text-right text-slate-900">$97</td>
-            <td class="px-3 py-3 text-right text-slate-700">$1,000</td>
-            <td class="px-3 py-3 text-right text-slate-700">$500</td>
-            <td class="px-3 py-3 text-right text-slate-700">$1,000</td>
-            <td class="px-3 py-3 text-right text-slate-700">$500</td>
           </tr>
           <tr class="bg-white">
             <td class="px-3 py-3 font-semibold text-slate-900">$25,000</td>
             <td class="px-3 py-3 text-right text-slate-900">$197</td>
-            <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
-            <td class="px-3 py-3 text-right text-slate-700">$1,250</td>
-            <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
-            <td class="px-3 py-3 text-right text-slate-700">$1,250</td>
           </tr>
           <tr class="bg-slate-50">
             <td class="px-3 py-3 font-semibold text-slate-900">$50,000</td>
             <td class="px-3 py-3 text-right text-slate-900">$297</td>
-            <td class="px-3 py-3 text-right text-slate-700">$5,000</td>
-            <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
-            <td class="px-3 py-3 text-right text-slate-700">$5,000</td>
-            <td class="px-3 py-3 text-right text-slate-700">$2,500</td>
           </tr>
           <tr class="bg-white">
             <td class="px-3 py-3 font-semibold text-slate-900">$100,000</td>
             <td class="px-3 py-3 text-right text-slate-900">$497</td>
-            <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
-            <td class="px-3 py-3 text-right text-slate-700">$5,000</td>
-            <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
-            <td class="px-3 py-3 text-right text-slate-700">$5,000</td>
           </tr>
           <tr class="bg-slate-50">
             <td class="px-3 py-3 font-semibold text-slate-900">$200,000</td>
             <td class="px-3 py-3 text-right text-slate-900">$997</td>
-            <td class="px-3 py-3 text-right text-slate-700">$20,000</td>
-            <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
-            <td class="px-3 py-3 text-right text-slate-700">$20,000</td>
-            <td class="px-3 py-3 text-right text-slate-700">$10,000</td>
           </tr>
         </tbody>
       </table>
@@ -316,11 +340,11 @@ const { section, fallbackBody } = Astro.props;
     </h3>
 
     <p class="mb-3">
-      The Swing challenge follows the same two-step evaluation process as Alpha Pro, but it is designed for those who want more flexibility in their trading strategy. It allows you to hold positions overnight and through weekends.
+      The Swing challenge follows a two-step evaluation designed for those who want more flexibility. Weekend and overnight holding allowed on both assessment and qualified accounts. Minimum 3 trading days per phase. On-demand payouts.
     </p>
 
     <!-- Key specs -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 mb-4">
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Phase 1 Target</p>
         <p class="text-sm font-bold text-slate-800">10%</p>
@@ -331,7 +355,11 @@ const { section, fallbackBody } = Astro.props;
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Drawdown</p>
-        <p class="text-sm font-bold text-slate-800">10%</p>
+        <p class="text-sm font-bold text-slate-800">10% static</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Daily DD</p>
+        <p class="text-sm font-bold text-slate-800">5%</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Weekend Holding</p>
@@ -416,11 +444,11 @@ const { section, fallbackBody } = Astro.props;
     </h3>
 
     <p class="mb-3">
-      The Alpha Three challenge is a structured three-phase evaluation, requiring you to meet profit targets over an extended period. This plan is ideal if you are looking for a gradual, disciplined approach to becoming a funded trader.
+      The Alpha Three challenge is a structured three-phase evaluation with 8%/4%/4% targets. Minimum 3 trading days per phase. Weekend holding allowed on qualified accounts. Bi-weekly payouts.
     </p>
 
     <!-- Key specs -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 mb-4">
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Step 1 Target</p>
         <p class="text-sm font-bold text-slate-800">8%</p>
@@ -435,11 +463,15 @@ const { section, fallbackBody } = Astro.props;
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Drawdown</p>
-        <p class="text-sm font-bold text-slate-800">6%</p>
+        <p class="text-sm font-bold text-slate-800">6% static</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Daily DD</p>
         <p class="text-sm font-bold text-slate-800">4%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Trading Days</p>
+        <p class="text-sm font-bold text-slate-800">3 / phase</p>
       </div>
     </div>
 
@@ -531,11 +563,45 @@ const { section, fallbackBody } = Astro.props;
     </div>
   </div>
 
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- ACCOUNT LIMITS & MERGING                                        -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3">Account Limits &amp; Merging</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">Maximum Allocation</p>
+        <p class="text-sm text-slate-700"><strong>$400,000</strong> per household, with <strong>$300,000</strong> maximum per strategy on qualified accounts.</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+        <p class="font-bold text-slate-900 mb-1">Merge Rules</p>
+        <p class="text-sm text-slate-700">Only qualified accounts can be merged. Must be same type and same platform, up to $300K. Merged accounts cannot be scaled.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- ALPHA PRIME                                                     -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3">Alpha Prime — Live Progression</h3>
+    <p class="mb-3">
+      Alpha Capital has a stated live progression route called <strong>Alpha Prime</strong>, where traders trade with real capital. Traders can qualify through one of three paths:
+    </p>
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-4">
+      <ul class="list-disc list-inside space-y-1 text-sm text-slate-700">
+        <li><strong>$40,000</strong> profit on one simulated payout</li>
+        <li><strong>Five payouts</strong> from one qualified account</li>
+        <li><strong>$100,000</strong> in lifetime payouts</li>
+      </ul>
+    </div>
+  </div>
+
   <!-- Verdict -->
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Challenges</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      Alpha Capital offers flexible challenges and competitive challenge fees from $50. Alpha One is the fastest evaluation, Alpha Pro is structured, Swing allows overnight holds, and Alpha Three rewards consistency. The scaling plan supports growth up to $2 million, catering to those who want to continually build their funded accounts.
+      Alpha Capital offers four evaluation models with competitive fees from $50 and plan-specific rules. Alpha One is the fastest (1 day minimum), Alpha Pro comes in three variants for different risk profiles, Swing allows weekend holding, and Alpha Three rewards consistency. The scaling plan supports growth up to $2 million, and Alpha Prime provides a stated path to live capital. Maximum allocation is $400K per household.
     </p>
   </div>
 
@@ -552,25 +618,42 @@ const { section, fallbackBody } = Astro.props;
     Alpha Capital is broker-backed through its partnership with <strong>ACG Markets</strong>, an FSA-regulated brokerage that provides liquidity, pricing, and trade execution.
   </p>
   <p class="mb-3">
-    It advertises raw spreads and commission-free trading, but these terms are somewhat contradictory. Typically, raw spreads come directly from liquidity providers with commissions added, while commission-free trading often involves spread markups.
+    Alpha Capital now offers two assessment types: <strong>Standard</strong> and <strong>Raw</strong>. Standard assessments have no commission, while Raw assessments charge <strong>$2.5 per lot each direction</strong>. Indices are commission-free on both Standard and Raw accounts.
   </p>
   <p class="mb-4">
-    Despite its brokerage backing, Alpha Capital does not disclose minimum or average spreads per instrument, only stating that spreads start from <strong>0.1 pips</strong>. Without transparency on true trading costs, traders cannot verify whether they are receiving consistently competitive pricing.
+    Despite its brokerage backing, Alpha Capital does not disclose minimum or average spreads per instrument. Without transparency on true trading costs per instrument, traders cannot fully verify whether they are receiving consistently competitive pricing across all asset classes.
   </p>
 
-  <!-- Warning -->
-  <div class="rounded-xl border border-red-200 bg-red-50 p-4 mb-6">
-    <p class="text-sm font-bold text-red-900 mb-1">Transparency Concern</p>
-    <p class="text-sm text-red-800">
-      Alpha Capital claims both "raw spreads" and "commission-free trading" simultaneously. These two claims are typically contradictory — raw spreads usually come with commission, while commission-free usually means wider spreads. No detailed spread data is published.
-    </p>
+  <!-- Commission structure -->
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Type</th>
+          <th class="px-4 py-3 text-center">Commission</th>
+          <th class="px-4 py-3 text-center">Indices</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Standard</td>
+          <td class="px-4 py-3 text-center text-slate-700">No commission</td>
+          <td class="px-4 py-3 text-center text-slate-700">Commission-free</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Raw</td>
+          <td class="px-4 py-3 text-center text-slate-700">$2.5/lot each direction</td>
+          <td class="px-4 py-3 text-center text-slate-700">Commission-free</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
   <!-- Verdict -->
   <div class="rounded-xl border-l-4 border-red-500 bg-red-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-red-800 mb-1">Verdict on Fees and Pricing</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      Alpha Capital operates in a simulated environment, with no real-money trading at the funded stage. Their claim of raw spreads and commission-free trading is confusing, as these typically don't go together. Without published spread data, traders cannot assess the true cost of trading.
+      Alpha Capital now separates Standard (no commission) and Raw ($2.5/lot per direction) assessment types, with indices commission-free on both. This is a clearer structure than before. However, without published spread data per instrument, traders still cannot fully assess the true cost of trading.
     </p>
   </div>
 
@@ -613,8 +696,10 @@ const { section, fallbackBody } = Astro.props;
       <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
         <tr>
           <th class="px-4 py-3 text-left">Asset Class</th>
-          <th class="px-4 py-3 text-center">Pro Accounts</th>
-          <th class="px-4 py-3 text-center">Swing Accounts</th>
+          <th class="px-4 py-3 text-center">Pro</th>
+          <th class="px-4 py-3 text-center">Swing</th>
+          <th class="px-4 py-3 text-center">One</th>
+          <th class="px-4 py-3 text-center">Three</th>
         </tr>
       </thead>
       <tbody class="divide-y divide-slate-100">
@@ -622,20 +707,28 @@ const { section, fallbackBody } = Astro.props;
           <td class="px-4 py-3 font-semibold text-slate-900">Forex</td>
           <td class="px-4 py-3 text-center font-semibold text-teal-600">1:100</td>
           <td class="px-4 py-3 text-center text-slate-700">1:30</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:30</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:50</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-semibold text-slate-900">Metals</td>
           <td class="px-4 py-3 text-center text-slate-700">1:30</td>
           <td class="px-4 py-3 text-center text-slate-700">1:9</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:9</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:15</td>
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-semibold text-slate-900">Oil</td>
           <td class="px-4 py-3 text-center text-slate-700">1:20</td>
           <td class="px-4 py-3 text-center text-slate-700">1:10</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:10</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:10</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-semibold text-slate-900">Indices</td>
           <td class="px-4 py-3 text-center text-slate-700">1:20</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:10</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:10</td>
           <td class="px-4 py-3 text-center text-slate-700">1:10</td>
         </tr>
       </tbody>
@@ -646,7 +739,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-red-500 bg-red-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-red-800 mb-1">Verdict on Markets</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      While Alpha Capital provides access to multiple asset classes, its total number of available instruments is lower than many competitors. Forex traders benefit from high leverage on Pro accounts, but commodity, index, and metal traders have limited financial markets to choose from.
+      While Alpha Capital provides access to multiple asset classes, its total number of available instruments is lower than many competitors. Leverage varies by plan — Pro offers the highest at 1:100 for Forex, while Swing and One use 1:30 and Three uses 1:50. Commodity, index, and metal traders have limited financial markets to choose from.
     </p>
   </div>
 
@@ -660,7 +753,7 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-4">
-    Alpha Capital provides access to <strong>MetaTrader 5 (MT5)</strong>, <strong>cTrader</strong>, and <strong>DXTrade</strong> as its trading platforms. However, U.S. residents are restricted to using DXTrade only, and Expert Advisors and automated trading are only available on MT5.
+    Alpha Capital provides access to <strong>MetaTrader 5 (MT5)</strong>, <strong>cTrader</strong>, <strong>DXTrade</strong>, and <strong>TradeLocker</strong> as its trading platforms. US residents can use cTrader, DXTrade, and TradeLocker — they cannot use MT5 while in the US. Expert Advisors are only available on MT5 and must be pre-approved.
   </p>
 
   <!-- Platform cards -->
@@ -668,6 +761,7 @@ const { section, fallbackBody } = Astro.props;
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">MetaTrader 5 (MT5)</p>
       <p>A widely used trading platform with advanced charting tools, algorithmic trading support, and multiple timeframes. Best suited for traders who rely on expert advisors (EAs) and automated strategies.</p>
+      <p class="text-xs text-amber-600 font-semibold mt-1">Not available to US residents</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">cTrader</p>
@@ -675,8 +769,11 @@ const { section, fallbackBody } = Astro.props;
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">DXTrade</p>
-      <p>A less common platform providing basic charting and order execution. Since it is the only available platform for U.S. residents, traders from the U.S. must adapt to its more limited functionalities.</p>
-      <p class="text-xs text-red-600 font-semibold mt-1">US residents restricted to DXTrade only</p>
+      <p>A web-based platform providing charting and order execution. Available to all traders including US residents.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">TradeLocker</p>
+      <p>A newer trading platform with modern interface and charting capabilities. Available to all traders including US residents.</p>
     </div>
   </div>
 
@@ -690,7 +787,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border border-red-200 bg-red-50 p-4 mb-6">
     <p class="text-sm font-bold text-red-900 mb-1">Simulated Environment</p>
     <p class="text-sm text-red-800">
-      While Alpha Capital offers multiple platforms and trading tools, it does not provide direct broker-backed accounts or real-money execution at the funded stage. All trading takes place in a simulated environment.
+      All trading takes place in a simulated environment until traders qualify for Alpha Prime (live progression). Alpha Capital is broker-backed through ACG Markets, but funded accounts remain simulated.
     </p>
   </div>
 
@@ -707,33 +804,60 @@ const { section, fallbackBody } = Astro.props;
       <tbody class="divide-y divide-slate-100">
         <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-600">Expert Advisors (EAs)</td>
-          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Allowed (MT5 only)</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-amber-600 font-semibold">MT5 only, pre-approved, enabled at checkout</span></td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-medium text-slate-600">Copy Trading</td>
-          <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">Not Allowed</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-amber-600 font-semibold">Allowed with approval (own master account only)</span></td>
         </tr>
         <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-600">Weekend Holding</td>
-          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Swing accounts only</span></td>
+          <td class="px-4 py-3 font-medium text-slate-600">News Trading (Qualified)</td>
+          <td class="px-4 py-3 text-center"><span class="text-amber-600 font-semibold">Restricted — plan-specific windows</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Weekend Holding (Qualified)</td>
+          <td class="px-4 py-3 text-center"><span class="text-amber-600 font-semibold">Swing, One, Three only — not Pro</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Hedging</td>
+          <td class="px-4 py-3 text-center"><span class="text-amber-600 font-semibold">Same account only — not across accounts</span></td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-medium text-slate-600">HFT / Latency Arbitrage</td>
           <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">Prohibited</span></td>
         </tr>
         <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Avg Trade Duration</td>
+          <td class="px-4 py-3 text-center"><span class="text-amber-600 font-semibold">Must exceed 2 minutes</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Inactivity Rule</td>
+          <td class="px-4 py-3 text-center"><span class="text-amber-600 font-semibold">30-day limit on all accounts</span></td>
+        </tr>
+        <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-600">40% Best Day Rule</td>
-          <td class="px-4 py-3 text-center"><span class="text-amber-600 font-semibold">Required</span></td>
+          <td class="px-4 py-3 text-center"><span class="text-amber-600 font-semibold">Required (on-demand payouts)</span></td>
         </tr>
       </tbody>
     </table>
+  </div>
+
+  <!-- News trading detail -->
+  <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 mb-6">
+    <p class="text-xs font-bold text-slate-800 uppercase tracking-wide mb-2">News Trading on Qualified Accounts</p>
+    <ul class="list-disc list-inside space-y-1 text-sm text-slate-700">
+      <li><strong>Pro 8% / Pro 10%:</strong> 2-minute no-trade window around high-impact news</li>
+      <li><strong>Pro 6%, One, Three:</strong> 5-minute no-trade window</li>
+      <li><strong>Swing:</strong> News trading allowed, but trades opened in the 4-minute window must last more than 2 minutes</li>
+      <li><strong>Assessment stage:</strong> News trading allowed on all plans</li>
+    </ul>
   </div>
 
   <!-- Verdict -->
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trading Platforms</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      Alpha Capital offers a solid selection of trading platforms, but the DXTrade restriction for US residents may be limiting. The addition of Autochartist and market analysis tools is a plus, though traders should consider that all executions occur in a simulated trading environment, not live markets.
+      Alpha Capital offers four platforms (MT5, cTrader, DXTrade, TradeLocker), with US residents able to use all except MT5. The addition of Autochartist and market analysis tools is a plus. Trading rules are plan-specific — news trading windows, weekend holding, and hedging all depend on your chosen model. The 2-minute average trade duration rule and 30-day inactivity limit apply across all accounts.
     </p>
   </div>
 
@@ -747,7 +871,7 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-4">
-    Alpha Capital allows traders to withdraw their profits, referred to as performance fees. Traders can choose between <strong>on-demand payouts</strong> or <strong>bi-weekly scheduled withdrawals</strong>, but must meet specific conditions.
+    Alpha Capital allows traders to withdraw their profits, referred to as performance fees. The payout type depends on the plan: <strong>Swing</strong> and <strong>Alpha One</strong> support on-demand payouts, while <strong>Alpha Pro</strong> and <strong>Alpha Three</strong> use bi-weekly payouts. KYC is required after passing the assessment and before receiving qualified credentials or payouts.
   </p>
 
   <!-- Payout overview grid -->
@@ -758,7 +882,7 @@ const { section, fallbackBody } = Astro.props;
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
       <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Payout Options</p>
-      <p class="text-sm font-bold text-slate-800">On-Demand / Bi-weekly</p>
+      <p class="text-sm font-bold text-slate-800">Plan-specific</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
       <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Processing</p>
@@ -771,18 +895,30 @@ const { section, fallbackBody } = Astro.props;
   </div>
 
   <!-- On-Demand payouts -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">On-Demand Profit Payouts</h3>
-  <p class="mb-3">Traders can request a profit withdrawal at any time, provided they meet these conditions:</p>
+  <h3 class="text-lg font-bold text-slate-900 mb-3">On-Demand Payouts (Swing &amp; Alpha One)</h3>
+  <p class="mb-3">Traders on Swing and Alpha One can request a profit withdrawal at any time, provided they meet these conditions:</p>
   <ul class="list-disc list-inside space-y-1 mb-6 text-slate-700">
     <li>Must follow the <strong>40% Best Day Rule</strong> — no single trading day can contribute more than 40% of total profits</li>
-    <li>A minimum of <strong>2% of gross profits</strong> must be in the account balance before withdrawal</li>
+    <li>At least <strong>2% gross profit</strong> must be in the account balance before withdrawal</li>
   </ul>
 
   <!-- Bi-Weekly payouts -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Bi-Weekly Profit Payouts</h3>
-  <p class="mb-6">
-    Scheduled withdrawals every <strong>14 days</strong>, with a minimum withdrawal of <strong>$100</strong> in virtual profit. The first withdrawal requires at least <strong>5 active trading days</strong>.
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Bi-Weekly Payouts (Alpha Pro &amp; Alpha Three)</h3>
+  <p class="mb-3">
+    Scheduled withdrawals every <strong>14 days</strong> after the initial trade. The first withdrawal requires:
   </p>
+  <ul class="list-disc list-inside space-y-1 mb-6 text-slate-700">
+    <li>Minimum <strong>$100</strong> in virtual profit</li>
+    <li>At least <strong>5 active trading days</strong></li>
+  </ul>
+
+  <!-- Performance fee bonus -->
+  <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-6">
+    <p class="text-sm font-bold text-teal-900 mb-1">Performance Fee Bonus</p>
+    <p class="text-sm text-teal-800">
+      On the <strong>fourth successful payout</strong>, Alpha Capital adds a <strong>0.25% bonus</strong> of the initial account size as an additional reward.
+    </p>
+  </div>
 
   <!-- Payment methods -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Payment Methods</h3>
@@ -797,29 +933,29 @@ const { section, fallbackBody } = Astro.props;
       <tbody class="divide-y divide-slate-100">
         <tr class="bg-white">
           <td class="px-5 py-3 font-semibold text-slate-900">Rise (Riseworks)</td>
-          <td class="px-5 py-3 text-slate-700">Primary payout method; supports crypto via platform</td>
+          <td class="px-5 py-3 text-slate-700">Primary payout method; crypto available through Rise only</td>
         </tr>
         <tr class="bg-slate-50">
-          <td class="px-5 py-3 font-semibold text-slate-900">Wise (TransferWise)</td>
+          <td class="px-5 py-3 font-semibold text-slate-900">Wise</td>
           <td class="px-5 py-3 text-slate-700">International bank transfers at competitive rates</td>
         </tr>
         <tr class="bg-white">
-          <td class="px-5 py-3 font-semibold text-slate-900">Bank Wire</td>
-          <td class="px-5 py-3 text-slate-700">Standard bank wire transfer</td>
+          <td class="px-5 py-3 font-semibold text-slate-900">Bank Transfer</td>
+          <td class="px-5 py-3 text-slate-700">Standard bank transfer</td>
         </tr>
       </tbody>
     </table>
   </div>
 
   <p class="mb-6 text-xs text-slate-500">
-    Direct cryptocurrency withdrawals are not supported, but traders can use Riseworks to facilitate crypto payouts.
+    Crypto is only available through Rise — not as a direct crypto withdrawal option.
   </p>
 
   <!-- Verdict -->
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Payments and Payouts</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      Alpha Capital offers flexible withdrawal options and quick processing times, but traders must meet strict eligibility conditions such as the 40% Best Day Rule and minimum trading days. The lack of direct crypto withdrawals may be a downside, though multiple fiat payment options are available.
+      Payout schedules depend on the plan — Swing and Alpha One support on-demand, while Pro and Three use bi-weekly. The 0.25% performance fee bonus on the fourth payout is a nice touch. Traders must meet strict eligibility conditions including the 40% Best Day Rule (on-demand) or minimum trading days and $100 profit (bi-weekly). KYC is required after passing the assessment, not before. Crypto withdrawals are only available through Rise.
     </p>
   </div>
 
@@ -853,16 +989,30 @@ const { section, fallbackBody } = Astro.props;
   </div>
 
   <!-- Education -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Educational Resources</h3>
-  <p class="mb-4">
-    The firm does not offer structured educational programs, but traders have access to market analysis tools like <strong>Autochartist</strong>, a trading journal, and an economic calendar to aid their decision-making.
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Educational &amp; Analysis Resources</h3>
+  <p class="mb-3">
+    Alpha Capital offers an <strong>academy section</strong>, <strong>blog content</strong>, <strong>market pulse</strong> updates, and <strong>analyst interviews</strong> alongside market analysis tools like <strong>Autochartist</strong>, a trading journal, and an economic calendar.
   </p>
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2 text-center">
+      <p class="text-sm font-bold text-slate-800">Academy</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2 text-center">
+      <p class="text-sm font-bold text-slate-800">Blog</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2 text-center">
+      <p class="text-sm font-bold text-slate-800">Market Pulse</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2 text-center">
+      <p class="text-sm font-bold text-slate-800">Analyst Interviews</p>
+    </div>
+  </div>
 
   <!-- Verdict -->
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Support</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      Alpha Capital offers multiple support channels, but weekend response times may be slow. While traders have access to analysis tools, there is no formal educational content for skill development.
+      Alpha Capital offers multiple support channels with an active Discord community. The academy section, blog content, market pulse updates, and analyst interviews provide educational value alongside tools like Autochartist. Weekend response times may still be slow.
     </p>
   </div>
 
@@ -876,7 +1026,7 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-4">
-    Alpha Capital promotes a strong trader community with an active Discord group and a 4.7 TrustPilot rating. However, a significant number of negative reviews raise concerns about payout denials, unexpected account closures, and strict KYC enforcement only after traders pass the challenge.
+    Alpha Capital promotes a strong trader community with an active Discord group and a 4.7 TrustPilot rating. However, a significant number of negative reviews raise concerns about payout denials, unexpected account closures, and strict KYC enforcement only after traders pass the challenge. The firm does have a stated live progression route through Alpha Prime.
   </p>
 
   <!-- Trustpilot -->
@@ -887,7 +1037,7 @@ const { section, fallbackBody } = Astro.props;
       <p class="text-xs text-slate-500 font-semibold">TrustScore</p>
     </div>
     <div>
-      <p class="text-sm text-slate-700">While Alpha Capital holds a 4.7 rating on TrustPilot, <strong>7% of reviews are 1-star</strong>, with many traders reporting sudden account terminations and denied withdrawals.</p>
+      <p class="text-sm text-slate-700">Alpha Capital holds a 4.7 rating on TrustPilot. However, a number of <strong>1-star reviews</strong> report sudden account terminations and denied withdrawals.</p>
     </div>
   </div>
 

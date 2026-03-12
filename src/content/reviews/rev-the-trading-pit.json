@@ -1,25 +1,26 @@
 {
   "id": "rev-the-trading-pit",
   "propFirmId": "d0000016-0000-0000-0000-000000000016",
-  "summary": "The Trading Pit scores 78/100, reflecting a mixed offering that includes both CFD and Futures challenges. While having both markets is uncommon, the prop firm has drawbacks that limit its appeal. Lower-tier profit splits start at 50%, which is lower than many competitors, and some traders report platform stability issues during volatility.\n\nAlthough it offers weekly payouts and multiple trading platforms, including MT4, MT5, cTrader, TradingView, and advanced futures platforms, higher trading costs and inconsistent platform performance make it less competitive for some traders. The 40% consistency rule and set minimum trading days add further constraints, though the structured challenge types across CFDs, Futures, and Stocks provide flexibility for traders who want access to multiple asset classes under one roof.",
+  "summary": "The Trading Pit scores 78/100, offering CFD, Futures, and Stocks challenges under one roof. Prime is the current active CFD model, with separate Futures Prime and Stocks products. All accounts are demo accounts with virtual funds, and all trading activity takes place in a simulated environment.\n\nPayout schedules vary by product: Prime CFD pays every 14 days, Futures Prime pays every 14 days for the first two payouts then every 7 days after the second payout if profit is over $200, and Stocks requires 3 profitable trading days with at least $100 profit per day for the first payout. The 40% consistency rule applies during the challenge phase. Platform availability depends on challenge type, with Stocks using Volumetrica Web & Desktop. Traders can scale up to €5M.",
   "pros": [
     "CFDs, Stocks, and Futures challenges available",
-    "Weekly payouts with fast 1 business day processing",
+    "Traders can scale up to €5M",
     "Wide range of markets including 46 forex pairs",
-    "Multiple platform choices including MT4, MT5, cTrader, and TradingView",
+    "Multiple platform choices tailored by challenge type",
     "4.2/5 Trustpilot rating from 700+ reviews",
-    "Structured challenge types for different trading styles"
+    "10,000+ active monthly accounts and $14M+ in rewards",
+    "Blog, ebooks, webinars, podcasts, videos, and infographics for education"
   ],
   "cons": [
     "Small range of crypto markets",
     "Set minimum trading days across all challenges",
     "High commission fees ($5 per lot forex, 0.20% crypto)",
-    "Profit splits start at 50% for Classic accounts",
-    "40% consistency rule limits single-day profits",
-    "$129 activation fee on Futures challenges"
+    "40% consistency rule limits single-day profits during challenge phase",
+    "$129 activation fee on Futures challenges",
+    "Stocks profit share is 70%, lower than CFD and Futures"
   ],
-  "bestFor": "Traders who want access to both CFD and Futures markets, structured challenges with transparent rules, and multiple platform choices including advanced futures platforms",
-  "notIdealFor": "Traders looking for higher starting profit splits, low crypto trading costs, or firms without consistency rules and minimum trading day requirements",
+  "bestFor": "Traders who want access to CFD, Futures, and Stocks markets under one firm, with structured challenges, multiple platform choices, and the ability to scale up to €5M",
+  "notIdealFor": "Traders looking for a single simple payout structure across all products, or those who rely on third-party EAs or copy trading strategies",
   "overallScore": 78,
   "categoryScores": {
     "challenges": 90,
@@ -41,33 +42,33 @@
   "verdictBlocks": [
     {
       "heading": "Our Final Verdict On The Trading Pit",
-      "body": "The Trading Pit stands out with its CFD and Futures challenges, offering a unique alternative to many forex-focused prop firms. With funding up to $250,000, weekly payouts, and a choice between one-phase and two-phase evaluations, it provides flexibility for different trading styles. The platform selection is also strong, with access to MT4, MT5, cTrader, TradingView, and advanced futures trading platforms.\n\nHowever, there are some drawbacks. Profit splits for lower-tier accounts start at 50-60%, which is lower than some competitors. Some traders have also reported platform stability issues during high volatility. Additionally, trading costs are mixed — while forex spreads are competitive, crypto commissions and futures market data upgrades may be a concern for cost-conscious traders.\n\nOverall, The Trading Pit is a solid choice for traders who want access to both CFDs and Futures, transparent funding models, and a growing community. If you prioritize weekly payouts and structured challenges, it could be a great fit."
+      "body": "The Trading Pit stands out with its CFD, Futures, and Stocks challenges, offering a unique multi-asset alternative to many prop firms. Traders can scale up to €5M, and payout schedules are tailored by product type. All accounts are demo accounts with virtual funds, and all trading takes place in a simulated environment.\n\nPrime is the current active CFD model, offering an 80% profit split. Futures Prime requires 5 profitable trading days with at least $200 profit per day for the first two payouts, then allows payout requests every 7 days. Stocks first payout requires 3 profitable trading days with at least $100 per day. Platform availability depends on challenge type, with Stocks using Volumetrica Web & Desktop.\n\nThe 40% consistency rule applies during the challenge phase, and the news trading restriction is a 2-minute window around high-impact events. Trade coordination and copy trading are prohibited, and certain EA behaviour is banned. Overall, The Trading Pit is a solid choice for traders who want structured multi-asset challenges with transparent rules and strong educational resources."
     }
   ],
   "faq": [
     {
       "q": "What broker does The Trading Pit use?",
-      "a": "The Trading Pit is not a broker-backed prop firm, but partners with different online brokers for liquidity and execution. For cTrader CFD trading, Tickmill is used as the liquidity provider. Other platforms may have different broker arrangements, but The Trading Pit does not operate under a single brokerage. Instead, it integrates with multiple providers to facilitate trading across CFDs and Futures."
+      "a": "The Trading Pit is not a broker-backed prop firm, but partners with different providers for liquidity and execution. For cTrader CFD trading, Tickmill is used as the liquidity provider. All accounts are demo accounts with virtual funds — all trading activity takes place in a simulated environment."
     },
     {
       "q": "Does The Trading Pit accept US clients?",
-      "a": "The Trading Pit accepts clients from the United States for Futures Challenges only. CFD, Crypto, and Stock Challenges are not currently offered to US traders, but the firm has stated plans to expand these options in the future. Canadian residents face the same restrictions, with only Futures Challenges available at this time."
+      "a": "US and Canadian residents can access Futures Challenges only. CFD, Crypto, and Stock Challenges are not currently offered to US or Canadian traders."
     },
     {
       "q": "Is The Trading Pit legit or a scam?",
-      "a": "The Trading Pit is a legitimate prop firm and not a scam, but has some drawbacks, earning a 78/100 score from Best Prop Firms. While it offers CFD and Futures challenges, weekly payouts, and funding up to $250K, some traders have raised concerns about platform stability during volatility and lower-tier profit splits starting at 50%."
+      "a": "The Trading Pit is a legitimate prop firm, earning a 78/100 score from Best Prop Firms. It offers CFD, Futures, and Stocks challenges with the ability to scale up to €5M. The official site highlights 10,000+ active monthly accounts, $14M+ in rewards, 450K+ monthly trades, and coverage across 180+ countries."
     },
     {
       "q": "What is The Trading Pit's profit split?",
-      "a": "The Trading Pit's profit split ranges from 50% to 80%, depending on the challenge type and account tier. Prime challenges offer a fixed 80% split, while Classic challenges start at 50% and scale up to 80% as traders progress. Lower-tier accounts have smaller splits, which some traders find less competitive compared to the top prop firms."
+      "a": "The Trading Pit's Prime challenges offer a fixed 80% profit split for CFD and Futures. Stocks challenges have a 70% profit share. Classic challenges are legacy and not the current main offering."
     },
     {
       "q": "Does The Trading Pit allow EAs and copy trading?",
-      "a": "The Trading Pit allows EAs (Expert Advisors) on all challenges but only permits copy trading on Futures accounts. CFD challenges do not support copy trading, while Futures traders can use it on both Prime and Classic models, with a limit of up to five linked accounts."
+      "a": "Trade coordination and copy trading with other traders or accounts are prohibited. Certain EA behaviour is banned, and using third-party EAs can stop an account from passing or progressing. The rules restrict specific automated strategies rather than allowing EAs without limitation."
     }
   ],
   "verified": true,
   "flagged": false,
   "methodologyVersion": "1.0",
-  "lastReviewedAt": "2026-02-27"
+  "lastReviewedAt": "2026-03-11"
 }

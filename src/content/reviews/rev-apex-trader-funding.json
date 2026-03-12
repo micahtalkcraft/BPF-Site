@@ -1,47 +1,57 @@
 {
   "id": "rev-apex-trader-funding",
   "propFirmId": "d0000020-0000-0000-0000-000000000020",
-  "summary": "In our testing of Apex Trader Funding, we scored the firm at 37/100 due to high monthly fees, limited platform flexibility, and minimal educational resources compared to competing futures prop firms.\n\nWhile Apex offers a solid profit-sharing structure, allowing you to retain 100% of your first $25K in profits, the prop firm fell short in areas like monthly fees and support resources. Apex's evaluation process is competitive, but lacks the extensive community engagement found in top-scoring firms like Topstep.",
-  "pros": ["Account sizes up to $300K", "High profit split (100% first $25K)", "46 futures markets", "Multiple platform options", "No maximum trading days", "100% first split on $25K"],
-  "cons": ["High monthly fees ($147–$597)", "Limited education resources", "Fees for Level 2 pricing", "Activation fees for funded accounts", "No fully automated trading", "Credit card payment only"],
-  "bestFor": "Futures traders who want high profit splits, multiple account sizes, and access to diverse futures markets",
-  "notIdealFor": "Traders seeking extensive education, low-cost evaluations, or comprehensive support and mentorship",
-  "overallScore": 37,
-  "categoryScores": {
-    "challenges": 40,
-    "spreads": 40,
-    "markets": 40,
-    "payouts": 10,
-    "platforms": 50,
-    "trust": 40
-  },
+  "summary": "Apex Trader Funding scored 74/100 in our 2026 review. The firm has transitioned from legacy monthly subscription evaluations to one-time fee products with 30-day access and no recurring billing. Current products are split by drawdown model — EOD (trailing End-of-Day drawdown with Daily Loss Limit) and Intraday (trailing real-time drawdown with no DLL) — with vendor options including Rithmic, Tradovate, and WealthCharts.\n\nAccount sizes available for new purchases are 25K, 50K, 100K, and 150K. Evaluations have no minimum trading days and can be passed in as little as 1 day. Funded Performance Accounts (PAs) use tier-based contract scaling. Payout eligibility requires 5 qualifying trading days with minimum daily profit thresholds. Approved payouts are paid at a 100% split. Safety net is required for the life of the PA, with only profit above the safety net eligible for withdrawal. Maximum 6 payout requests per PA with a $500 minimum and 50% payout consistency rule.\n\nApex accepts traders from over 100 countries with international payouts supported through Plane (ACH for US traders). The firm offers futures across equity, currency, agricultural, energy, crypto (micro only), and EUREX, though COMEX and all metals are temporarily unavailable. Trading platforms include Rithmic, Tradovate, WealthCharts, NinjaTrader (for Rithmic setup), and RTrader Pro.",
+  "pros": [
+    "One-time evaluation fees with no recurring billing",
+    "100% approved payout split on funded accounts",
+    "No minimum trading days to pass evaluation",
+    "Accepts traders from 100+ countries",
+    "Multiple vendor options: Rithmic, Tradovate, WealthCharts",
+    "Two drawdown models (EOD and Intraday) for different trading styles",
+    "Tier-based scaling on funded accounts",
+    "Strong TrustPilot rating (4.4/5 from 16,900+ reviews)"
+  ],
+  "cons": [
+    "Maximum 6 payout requests per PA",
+    "Safety net required for life of PA — limits withdrawable profit",
+    "50% payout consistency rule restricts payout eligibility",
+    "COMEX and all metals temporarily unavailable",
+    "No resets on current evaluation products",
+    "PA activation must be completed within 7 calendar days",
+    "Automated systems, copy trading, and news trading rules not clearly confirmed"
+  ],
+  "bestFor": "Experienced futures traders who want one-time evaluation fees, 100% payout split, flexible drawdown models (EOD vs Intraday), and access to multiple vendor platforms",
+  "notIdealFor": "Traders who need metals/COMEX access, those who want more than 6 payouts per account, beginners seeking structured education, or traders who require confirmed rules on automation and copy trading",
+  "overallScore": 74,
+  "categoryScores": { "challenges": 80, "spreads": 80, "markets": 70, "payouts": 60, "platforms": 70, "support": 70, "trust": 70 },
   "categorySections": {
-    "challenges": "Apex Trader Funding offers Tradovate and Rithmic account types with sizes from $25K to $300K. One-step evaluation with minimum 7 trading days and no maximum. Profit targets from $1,500 to $20,000 (fixed dollar amounts, not percentages). Trailing drawdown for most accounts, static option for 100K. Monthly subscription fees from $147–$597. Scored 4/10.",
-    "spreads": "Commission fees vary by platform. Tradovate: $1.55/side ($3.10 round turn) for E-mini S&P 500. Rithmic: $1.99/side ($3.98 round turn). Micro contracts have lower commissions. Level 1 data included, Level 2 costs $41+/month extra. Activation fees $85–$360 for funded accounts. Scored 4/10.",
-    "markets": "46 futures markets across currency, equity, agriculture, energy, metal, and cryptocurrency. Exchanges: CME, CBOT, COMEX, NYMEX. Only micro contracts for crypto futures. Diverse but limited to futures only. Scored 4/10.",
-    "platforms": "Supports NinjaTrader 8, Tradovate, TradingView, RTrader Pro, and 10+ additional platforms for Rithmic accounts. Tradovate offers multi-device access with TradingView integration. Rithmic for high-speed execution. No fully automated systems or copy trading on funded accounts. Scored 5/10.",
-    "payouts": "100% profit split on first $25K, then 90%. Payouts every 8 trading days. Processing in 3–4 business days. Credit card payments only. Activation fees required for funded accounts ($85–$360). Safety net requirements for first 3 payouts. Scored 1/10.",
-    "support": "24/7 support via online help desk. Platform-specific guides and FAQs available. Limited educational resources — introductory videos only covering trading fundamentals. No mentorship programs or in-depth courses. Scored 4/10.",
-    "trust": "TrustPilot 4.4/5 from 16,900+ reviews. Active Discord with ~59,000 members. Facebook group with 29.4K members. YouTube channel with 26.8K subscribers. Some concerns about platform limitations and support response times. Scored 4/10."
+    "challenges": "custom",
+    "spreads": "custom",
+    "markets": "custom",
+    "platforms": "custom",
+    "payouts": "custom",
+    "support": "custom",
+    "trust": "custom"
   },
   "verdictBlocks": [
     {
-      "heading": "Apex Trader Funding Warning",
-      "body": "We do not recommend Apex Trader Funding due to high monthly fees, limited platform flexibility, and frequent complaints about payout delays and account terminations.\n\nIf you're looking for a futures funded account with better support, clear pricing, and fairer trading conditions, we recommend broker-backed futures prop firms like FXIFY Futures or FundedNext Futures, which performed significantly better in our evaluations."
+      "heading": "Our Final Verdict On Apex Trader Funding",
+      "body": "Apex Trader Funding scored 74/100 in our 2026 review. The firm has overhauled its product offering — current evaluations use one-time fees with 30-day access and no recurring billing, replacing the legacy monthly subscription model. Two drawdown models are available: EOD (trailing End-of-Day with Daily Loss Limit) and Intraday (trailing real-time with no DLL), with vendor options of Rithmic, Tradovate, and WealthCharts.\n\nCurrent account sizes are 25K, 50K, 100K, and 150K. Evaluations have no minimum trading days and can be passed in a single day. Funded Performance Accounts use tier-based contract scaling. Approved payouts are paid at 100% split, with eligibility based on 5 qualifying trading days, minimum daily profit thresholds, a $500 minimum payout, and a 50% consistency rule. The safety net is required for the life of the PA, and there is a hard cap of 6 payout requests per PA.\n\nApex accepts traders from over 100 countries, with US payouts via ACH and international payouts through Plane. The platform stack centres on Rithmic, Tradovate, and WealthCharts, with NinjaTrader available for Rithmic setup. Futures markets cover equity, currency, agricultural, energy, crypto (micro only), and EUREX — though COMEX and all metals are temporarily unavailable. Support includes a Help Center, FAQs, guides, support tickets, master training courses, platform guides, and webinars. Legacy products (250K, 300K, Static accounts, monthly subscriptions) are no longer available for new purchases."
     }
   ],
   "faq": [
-    { "q": "What is Apex Trading?", "a": "Apex Trading refers to the evaluation and funded account programs offered by Apex Trader Funding, a futures prop firm. Apex allows you to qualify for funded accounts by meeting profit targets on demo evaluations, using platforms like NinjaTrader or Tradovate. If you pass you'll receive a Performance Account with up to $300K in funding and can earn 100% of the first $25K in profits, followed by a 90% split." },
-    { "q": "Does Apex Trader Funding payout?", "a": "Yes, Apex Trader Funding does offer payouts to funded traders. Traders can retain 100% of their profits up to $25,000 and 90% of profits beyond this amount. Payouts are processed every eight trading days, and funds typically arrive within 3–4 business days post-approval." },
-    { "q": "Is Apex Trader Funding a scam or legit?", "a": "No, Apex Trader Funding is not a scam and is considered a legit prop trading firm, with thousands of positive user reviews and a TrustPilot rating of 4.4/5 based on over 16,900 reviews." },
-    { "q": "What are the profit targets for Apex Trader Funding's evaluation program?", "a": "Profit targets at Apex Trader Funding start at $1,500 for the smallest $25,000 account and increase with account size. Targets are fixed amounts rather than percentages. For example, a $100,000 full account has a $6,000 target, while the $100,000 static account has a lower $2,000 target." },
-    { "q": "What are the Apex Trader Funding account sizes?", "a": "Apex Trader Funding offers account sizes from $25,000 up to $300,000 for funded accounts. Each size has specific profit targets, drawdown structures, and contract limits." },
-    { "q": "Is Apex Trader Funding good for day trading?", "a": "Yes, Apex Trader Funding is suitable for day trading, as it offers low-latency platforms like Rithmic and NinjaTrader, which are well-suited for rapid executions and market depth." },
-    { "q": "Is Apex Trader Funding better than Topstep?", "a": "Topstep generally outperforms Apex Trader Funding, with a higher overall score of 89/100 compared to Apex's 37/100, based on various criteria including platform options, profit splits, and user support." }
+    { "q": "What is Apex Trading?", "a": "Apex Trading refers to the evaluation and funded account programs offered by Apex Trader Funding, a futures prop firm. Traders qualify for funded Performance Accounts by meeting profit targets on one-time fee evaluations using platforms like Rithmic, Tradovate, or WealthCharts. Current account sizes are 25K, 50K, 100K, and 150K, with approved payouts paid at a 100% split." },
+    { "q": "Does Apex Trader Funding payout?", "a": "Yes. Approved payouts are paid at a 100% split. Payout eligibility requires 5 qualifying trading days with minimum daily profit thresholds. The safety net is required for the life of the PA, and only profit above the safety net is eligible. Maximum 6 payout requests per PA with a $500 minimum and 50% payout consistency rule. US payouts via ACH, international payouts through Plane." },
+    { "q": "Is Apex Trader Funding a scam or legit?", "a": "No, Apex Trader Funding is not a scam and is considered a legit prop trading firm, with a TrustPilot rating of 4.4/5 based on over 16,900 reviews. The firm accepts traders from 100+ countries and has an active Discord community of 59,000+ members." },
+    { "q": "What are the current Apex Trader Funding products?", "a": "Current products use one-time evaluation fees with 30-day access and no recurring billing. Two drawdown models are available: EOD (trailing End-of-Day drawdown with Daily Loss Limit) and Intraday (trailing real-time drawdown with no DLL). Vendor options include Rithmic, Tradovate, and WealthCharts. Account sizes are 25K, 50K, 100K, and 150K. Legacy products (250K, 300K, Static accounts, monthly subscriptions) are no longer available." },
+    { "q": "What are the Apex Trader Funding account sizes?", "a": "Current account sizes available for new purchases are 25K, 50K, 100K, and 150K. Legacy sizes of 250K and 300K are no longer available. Each size has specific profit targets, drawdown structures, and contract limits that vary by drawdown model (EOD vs Intraday)." },
+    { "q": "How many trading days to pass the Apex evaluation?", "a": "Current evaluations have no minimum trading days to pass. Traders can pass in as little as 1 day. Evaluations last 30 days with no recurring billing. For funded payouts, 5 qualifying trading days are required between payout requests." },
+    { "q": "Is Apex Trader Funding better than Topstep?", "a": "Both firms are competitive futures prop firms. Apex scored 74/100 in our 2026 review, with strengths in one-time evaluation fees, 100% payout split, and international availability. The best choice depends on your specific needs — compare drawdown models, payout rules, and platform preferences." }
   ],
   "verified": true,
-  "flagged": true,
-  "flaggedWarning": "We do not recommend Apex Trader Funding due to high monthly fees, limited platform flexibility, and frequent complaints about payout delays and account terminations.\n\nIf you're looking for a futures funded account with better support, clear pricing, and fairer trading conditions, we recommend broker-backed futures prop firms like [FXIFY Futures](/reviews/fxify-futures) or [FundedNext Futures](/reviews/fundednext-futures), which performed significantly better in our evaluations.",
+  "flagged": false,
+  "flaggedWarning": "",
   "methodologyVersion": "1.0",
-  "lastReviewedAt": "2026-02-24"
+  "lastReviewedAt": "2026-03-12"
 }

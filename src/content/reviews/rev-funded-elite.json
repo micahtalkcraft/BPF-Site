@@ -1,25 +1,25 @@
 {
   "id": "rev-funded-elite",
   "propFirmId": "d0000042-0000-0000-0000-000000000042",
-  "summary": "Funded Elite scores 62/100 in our review, thanks to its highly customisable challenge options and wide CFD market access, offset by strict risk rules and mixed payout feedback. The prop firm offers flexible one-step, two-step, and instant funding accounts with adjustable leverage, profit splits, and payout frequency through paid add-ons.\n\nMajor strengths include dynamic scaling, free second chance resets on selected models, realistic profit targets, and a clear rule structure. The wide set of add-ons lets you tailor everything from drawdown limits to payout speed. However, strict risk rules, consistency requirements, and a concerning number of negative payout experiences from traders on forums and social media reduce overall confidence.\n\nFunded Elite is best suited to experienced traders who want maximum flexibility in challenge configuration and are comfortable managing tight drawdown and consistency limits. Beginners or traders who need reliable, friction-free payouts may want to consider higher-rated alternatives.",
+  "summary": "Funded Elite scores 62/100 in our 2026 review. The firm offers six challenge models — 2-Step + Free Retry, 1-Step + Free Retry, LITE 2-Step, LITE 1-Step, Instant, and Flash Activation — each with different daily drawdown limits, max drawdown options, profit targets, and payout rules. Daily drawdown varies from 3% to 5% depending on the model, and max drawdown is selectable on most accounts (ranging from 5% to 10%).\n\nProfit split is not a standard 95%. Traders choose between 60%, 70%, 80%, or 95% at checkout. The Instant model starts with 70% on the first payout and then switches to the chosen split from the second payout onward. If second chance is used on eligible models, the profit split permanently drops to 50%.\n\nAll capital in challenge and funded accounts is virtual, not real money — profits earned from successful trading are real and paid out. Weekend holding is allowed by default, but weekend trading (opening/closing positions on weekends) requires a paid add-on. News trading is allowed without restrictions. EAs are allowed as support tools only — they must not trade independently with hidden or fully automated strategies, and hidden EA use can lead to termination.\n\nThe first payout is always after 21 days regardless of the payout interval selected at checkout (3, 7, 14, or 21 days). Crypto payouts are capped at $500 gross per cycle. Transition to a live account is not automatic — it is by private invitation after review. Accounts are terminated after 29 days without a trade. Traders can have up to 50 active challenges but total live funded allocation is capped at $400,000. All $300K accounts have a 60% consistency rule and 5 minimum trading days.\n\nThe firm is based in Latina, Italy. Platforms include MT5, TradeLocker, and Match-Trader, with restricted country lists that differ by platform.",
   "pros": [
-    "Multiple challenge models with fully customisable settings",
-    "Transparent and well-documented trading rules",
-    "Accessible withdrawal methods via Rise payment system",
-    "Free second chance reset on Standard Challenge",
-    "Wide market access with 300+ CFD products",
-    "Adjustable leverage, profit split, and payout frequency via add-ons"
+    "Six challenge models with fully customisable settings including profit split, leverage, drawdown, and payout interval",
+    "Free retry available on both 2-Step + Free Retry and 1-Step + Free Retry models",
+    "Weekend holding allowed by default on all accounts",
+    "News trading allowed without restrictions",
+    "Transparent and well-documented trading rules with soft-breach handling on some funded-stage violations",
+    "Fee refund with third payout if passed without using second chance or resets"
   ],
   "cons": [
-    "Strict rules and consistency checks that can trigger fast breaches",
-    "Expensive activation fee models on Flash Activation Challenge",
-    "Platform restrictions for US, Canada, and several other countries",
+    "Funded-stage risk rules and consistency checks can be strict, though some violations are soft breaches rather than instant closures",
+    "Using second chance permanently cuts profit split to 50% for all future payouts",
+    "Instant model starts at only 70% split on first payout before switching to chosen split",
     "Concerning number of payout complaints on forums and social media",
-    "No automation support on TradeLocker",
-    "Copy trading limited to own accounts only"
+    "Platform restrictions differ by platform and exclude US traders entirely",
+    "All capital is virtual — live account transition is by private invitation only"
   ],
-  "bestFor": "Experienced traders who want maximum flexibility in challenge configuration with adjustable profit targets, leverage, drawdown limits, and payout settings, and are comfortable managing strict risk and consistency rules",
-  "notIdealFor": "Beginners, traders in restricted countries (US, Canada), those who need reliable and fast payouts without friction, or traders who rely heavily on automated strategies via TradeLocker",
+  "bestFor": "Experienced traders who want maximum flexibility in challenge configuration with adjustable profit targets, leverage, drawdown limits, and payout settings, and are comfortable managing funded-stage risk and consistency rules",
+  "notIdealFor": "Beginners, traders in restricted countries (US and others), those who need reliable and fast payouts without friction, or traders who rely on fully automated EAs trading independently",
   "overallScore": 62,
   "categoryScores": {
     "challenges": 80,
@@ -42,29 +42,29 @@
   "verdictBlocks": [
     {
       "heading": "Our Final Verdict On Funded Elite",
-      "body": "Funded Elite earns a 62/100 because the proprietary trading firm delivers strong customisation and challenge diversity, but loses significant ground on payout reliability and trust concerns. The ability to fully configure your challenge account — adjusting leverage, profit targets, drawdown limits, profit split, and payout frequency — is genuinely rare in the prop firm space, and the clear documentation of every rule is a positive.\n\nFrom a product perspective, Funded Elite covers a lot of ground: four distinct challenge models, 300+ CFD products, broker connectivity through Purple Trading (CySEC-regulated), and raw spreads from 0 pips with a simple $3/lot/side commission. The Standard Challenge's free second chance reset and the Flash Activation's $5 pay-later entry are both notable features.\n\nHowever, the firm's reputation is mixed. While Trustpilot shows a 4.5/5 rating with 562 reviews, a concerning number of negative experiences on forums and social channels describe delayed or missing payouts. The strict risk enforcement — including the rule that you cannot risk more than half your daily loss limit on a single asset — means fast breaches are possible for traders who aren't careful. Combined with country restrictions and TradeLocker's lack of EA support, Funded Elite is a firm that rewards careful, experienced traders but may frustrate those who expect simpler, more forgiving conditions."
+      "body": "Funded Elite earns a 62/100 because the firm delivers strong customisation and challenge diversity across six named models, but loses significant ground on payout reliability, trust concerns, and funded-stage rules that require careful attention.\n\nThe six models — 2-Step + Free Retry, 1-Step + Free Retry, LITE 2-Step, LITE 1-Step, Instant, and Flash Activation — cover a wide range of trading styles and budgets. Daily drawdown varies from 3% to 5% depending on the model, and max drawdown is selectable on most accounts. Profit split is not a standard 95% — traders choose between 60%, 70%, 80%, or 95% at checkout, and the Instant model starts at 70% on the first payout before switching to the chosen split. Using the free retry on eligible models permanently reduces the profit split to 50%.\n\nAll trading capital is virtual, not real money — profits earned are real and paid out. Weekend holding is allowed by default, but weekend trading requires a paid add-on. News trading is allowed without restrictions. EAs are permitted as support tools only and must not trade independently. The risk limit restricting exposure to half the daily loss limit on a single asset applies in the funded stage only. Some funded-stage rule violations are treated as soft breaches, leading to reduced payout splits or resets rather than instant closure.\n\nThe first payout is always after 21 days regardless of the interval chosen. The fee refund is tied to payouts — if traders pass without using second chance or resets, the initial fee is refunded with the third payout. Crypto payouts are capped at $500 gross per cycle. Live account transition is by private invitation only after review. Accounts are terminated after 29 days of inactivity, and total live funded allocation is capped at $400,000.\n\nThe firm is based in Latina, Italy and offers MT5, TradeLocker, and Match-Trader, with restricted country lists that differ by platform. While Trustpilot shows a 4.5/5 rating, a concerning number of negative experiences on forums describe delayed or missing payouts."
     }
   ],
   "faq": [
     {
       "q": "Does Funded Elite payout?",
-      "a": "Yes, Funded Elite processes payouts for funded trading accounts via Rise, and you can request withdrawals once you meet the required trading days. The firm follows a structured schedule beginning with a 21-day first cycle and then shifting to 14-day cycles. However, there is a concerning number of negative experiences on forums where traders report delayed or missing payments, so payout reliability remains a factor to consider."
+      "a": "Yes, Funded Elite processes payouts for funded trading accounts via Rise. The first payout is always after 21 days, and subsequent payouts follow the interval selected at checkout (3, 7, 14, or 21 days). The Instant model starts at 70% split on the first payout, then switches to the chosen split from the second payout onward. Crypto payouts are capped at $500 gross per cycle. However, there is a concerning number of negative experiences on forums where traders report delayed or missing payments, so payout reliability remains a factor to consider."
     },
     {
       "q": "What are the benefits of Funded Elite?",
-      "a": "Funded Elite has a very customisable challenge model with multiple options including Standard, Lite, Flash (Instant Funding), and Flash Activation (pay later) models. Key benefits include adjustable leverage up to 1:100, profit split upgrades to 95%, payout frequency from 3 to 21 days, free second chance resets on Standard accounts, raw spreads from 0 pips, and access to 300+ CFD products across forex, indices, commodities, crypto, stocks, and futures."
+      "a": "Funded Elite offers six challenge models (2-Step + Free Retry, 1-Step + Free Retry, LITE 2-Step, LITE 1-Step, Instant, and Flash Activation) with fully customisable settings. Key benefits include adjustable leverage for FX up to 1:100, selectable profit split (60%, 70%, 80%, or 95%), payout intervals from 3 to 21 days, free retry on two models, raw spreads from 0 pips, weekend holding allowed by default, and news trading with no restrictions. The fee refund is available with the third payout if passed without using second chance or resets."
     },
     {
       "q": "Do funded accounts actually work?",
-      "a": "Yes, funded accounts work as long as you follow the firm's rules, conditions, and payout requirements. You receive real payouts when you generate profits within the firm's defined parameters. Funded accounts rely on strict rules for risk management, and payouts are issued when you meet the quota. They are a viable trading method for accessing scale and structure without risking personal capital."
+      "a": "Yes, funded accounts work as long as you follow the firm's rules and payout requirements. All capital is virtual — not real money — but the profits you earn from successful trading are real and paid out. Transition to a live account is not automatic; it is by private invitation only after review. Some funded-stage rule violations are treated as soft breaches, which can lead to a reduced payout split or reset rather than instant account closure."
     },
     {
       "q": "What is the best forex prop firm?",
-      "a": "The best forex prop firms in our rankings score 90/100 or higher, with FundedNext, DNA Funded, and BrightFunded leading the list due to flexible challenge structures, clearer payout rules, and stronger long-term scaling. While Funded Elite offers impressive challenge customisation, it does not make our top 10 due to payout reliability concerns and strict risk enforcement that reduce overall flexibility compared to higher-rated competitors."
+      "a": "The best forex prop firms in our rankings score 90/100 or higher, with FundedNext, DNA Funded, and BrightFunded leading the list due to flexible challenge structures, clearer payout rules, and stronger long-term scaling. While Funded Elite offers impressive challenge customisation across six models, it does not make our top 10 due to payout reliability concerns, the 50% permanent split penalty when using second chance, and virtual capital with live accounts available by invitation only."
     }
   ],
   "verified": true,
   "flagged": false,
   "methodologyVersion": "1.0",
-  "lastReviewedAt": "2026-02-28"
+  "lastReviewedAt": "2026-03-11"
 }

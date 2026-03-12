@@ -16,25 +16,32 @@ const { section, fallbackBody } = Astro.props;
 
   <!-- Overview -->
   <p class="mb-4">
-    Tradeify runs three futures funding models — an instant futures account, or two different one-step evaluation processes. All models come with trailing drawdowns, but the type of drawdown, risk parameters, and fee structures vary significantly.
+    Tradeify currently offers three futures funding models: <strong>Growth</strong> (1-step evaluation), <strong>Lightning Funded</strong> (instant funding), and the <strong>Select Challenge</strong> (1-step evaluation with a choice of funded payout policy). The <strong>Advanced Challenge</strong> is no longer available for new purchases as of December 2025 — existing holders continue under legacy terms.
+  </p>
+  <p class="mb-4">
+    All funded accounts — Growth, Lightning, Select Flex, and Select Daily — are <strong>simulated funded accounts</strong>. <strong>Tradeify Elite Live</strong> is the real-capital live stage, issued through NinjaTrader brokerage.
   </p>
 
   <!-- Per-challenge summaries -->
   <div class="space-y-3 mb-8">
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Advanced Challenge – 1 Step Evaluation</p>
-      <p>Account sizes from $50K to $150K with monthly fees starting at $69, plus a $125 activation fee after passing. Intraday trailing drawdown follows real-time equity.</p>
-      <p class="text-xs text-teal-600 font-semibold mt-1">Best for active intraday traders who manage risk tightly</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Growth Challenge – 1 Step Evaluation</p>
       <p>Account sizes from $50K to $150K with monthly fees starting at $139, no activation fee. End-of-day trailing drawdown based on balance, not equity.</p>
-      <p class="text-xs text-teal-600 font-semibold mt-1">Best for swing and position traders who hold overnight</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">EOD trailing drawdown gives more room during live sessions</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Lightning Challenge – Instant Funding</p>
-      <p>Account sizes from $25K to $150K with one-time fees from $349. Skip the evaluation and trade live capital immediately.</p>
+      <p class="font-bold text-slate-900 mb-1">Lightning Funded – Instant Funding</p>
+      <p>Account sizes from $25K to $150K with one-time fees from $349. Skip the evaluation and start trading immediately in a simulated funded environment.</p>
       <p class="text-xs text-teal-600 font-semibold mt-1">Best for experienced traders who want immediate access without evaluation</p>
+    </div>
+    <div class="rounded-lg bg-emerald-50 border-2 border-emerald-300 p-4">
+      <p class="font-bold text-slate-900 mb-1">Select Challenge – 1 Step Evaluation <span class="text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full ml-1">New</span></p>
+      <p>After passing, traders must choose between <strong>Select Flex</strong> or <strong>Select Daily</strong> funded payout policy. This choice is permanent and irrevocable for that account.</p>
+      <p class="text-xs text-teal-600 font-semibold mt-1">Unique payout flexibility — no consistency rule on Select funded accounts</p>
+    </div>
+    <div class="rounded-lg bg-slate-100 border border-slate-300 p-4 opacity-70">
+      <p class="font-bold text-slate-600 mb-1">Advanced Challenge – Legacy Only <span class="text-xs bg-slate-200 text-slate-500 px-2 py-0.5 rounded-full ml-1">No Longer Available</span></p>
+      <p class="text-slate-500">No longer available for new purchases as of December 2025. Existing holders continue under legacy terms.</p>
     </div>
   </div>
 
@@ -45,225 +52,99 @@ const { section, fallbackBody } = Astro.props;
       <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
         <tr>
           <th class="px-4 py-3 text-left">Attribute</th>
-          <th class="px-4 py-3 text-center">Advanced</th>
           <th class="px-4 py-3 text-center">Growth</th>
-          <th class="px-4 py-3 text-center">Lightning</th>
+          <th class="px-4 py-3 text-center">Lightning Funded</th>
+          <th class="px-4 py-3 text-center">Select</th>
         </tr>
       </thead>
       <tbody class="divide-y divide-slate-100">
         <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-600">Evaluation Process</td>
           <td class="px-4 py-3 text-center font-semibold text-slate-900">1 Step</td>
-          <td class="px-4 py-3 text-center font-semibold text-slate-900">1 Step</td>
           <td class="px-4 py-3 text-center font-semibold text-slate-900">Instant Funding</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">1 Step</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-medium text-slate-600">Account Sizes</td>
           <td class="px-4 py-3 text-center text-slate-900">$50K – $150K</td>
-          <td class="px-4 py-3 text-center text-slate-900">$50K – $150K</td>
           <td class="px-4 py-3 text-center text-slate-900">$25K – $150K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$50K – $150K</td>
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-600">Monthly Fee</td>
-          <td class="px-4 py-3 text-center text-slate-900">$69 – $129</td>
           <td class="px-4 py-3 text-center text-slate-900">$139 – $339</td>
           <td class="px-4 py-3 text-center text-slate-400">N/A (one-time)</td>
+          <td class="px-4 py-3 text-center text-slate-900">Varies</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-medium text-slate-600">One-Time Fee</td>
           <td class="px-4 py-3 text-center text-slate-400">N/A</td>
-          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
           <td class="px-4 py-3 text-center text-slate-900">$349 – $729</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-600">Activation Fee</td>
-          <td class="px-4 py-3 text-center text-slate-900">$125</td>
           <td class="px-4 py-3 text-center text-slate-400">None</td>
           <td class="px-4 py-3 text-center text-slate-400">None</td>
+          <td class="px-4 py-3 text-center text-slate-900">Varies</td>
         </tr>
         <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-medium text-slate-600">Reset Fee</td>
-          <td class="px-4 py-3 text-center text-slate-900">$45</td>
-          <td class="px-4 py-3 text-center text-slate-900">$85</td>
-          <td class="px-4 py-3 text-center text-slate-400">No resets</td>
-        </tr>
-        <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-600">Profit Target</td>
           <td class="px-4 py-3 text-center text-slate-900">6%</td>
-          <td class="px-4 py-3 text-center text-slate-900">6%</td>
           <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+          <td class="px-4 py-3 text-center text-slate-900">Varies</td>
         </tr>
-        <tr class="bg-slate-50">
+        <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-600">Daily Drawdown</td>
-          <td class="px-4 py-3 text-center text-slate-900">None</td>
           <td class="px-4 py-3 text-center text-slate-900">2.5% (soft)</td>
           <td class="px-4 py-3 text-center text-slate-900">None or 2.5% (soft)</td>
+          <td class="px-4 py-3 text-center text-slate-900">Varies</td>
         </tr>
-        <tr class="bg-white">
+        <tr class="bg-slate-50">
           <td class="px-4 py-3 font-medium text-slate-600">Max Drawdown</td>
-          <td class="px-4 py-3 text-center text-slate-900">3% – 4%</td>
           <td class="px-4 py-3 text-center text-slate-900">3.3% – 4%</td>
           <td class="px-4 py-3 text-center text-slate-900">4%</td>
+          <td class="px-4 py-3 text-center text-slate-900">Varies</td>
         </tr>
-        <tr class="bg-slate-50">
+        <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-600">Drawdown Type</td>
-          <td class="px-4 py-3 text-center text-slate-900">Intraday Trailing (Equity)</td>
           <td class="px-4 py-3 text-center text-slate-900">EOD Trailing (Balance)</td>
           <td class="px-4 py-3 text-center text-slate-900">EOD Trailing</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-600">Min Trading Days</td>
-          <td class="px-4 py-3 text-center text-slate-900">1</td>
-          <td class="px-4 py-3 text-center text-slate-900">1</td>
-          <td class="px-4 py-3 text-center text-slate-900">10</td>
+          <td class="px-4 py-3 text-center text-slate-900">Varies</td>
         </tr>
         <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-medium text-slate-600">Max Trading Days</td>
-          <td class="px-4 py-3 text-center text-slate-900">Unlimited</td>
-          <td class="px-4 py-3 text-center text-slate-900">Unlimited</td>
-          <td class="px-4 py-3 text-center text-slate-400">None</td>
-        </tr>
-        <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-600">Weekend Trading</td>
           <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">No</span></td>
           <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">No</span></td>
           <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">No</span></td>
         </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-medium text-slate-600">Reset Available</td>
-          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
-          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
-          <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">No</span></td>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Funded Type</td>
+          <td class="px-4 py-3 text-center text-slate-900">Sim Funded</td>
+          <td class="px-4 py-3 text-center text-slate-900">Sim Funded</td>
+          <td class="px-4 py-3 text-center text-slate-900">Select Flex or Select Daily (Sim)</td>
         </tr>
       </tbody>
     </table>
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- 1. ADVANCED CHALLENGE                                          -->
+  <!-- 1. GROWTH CHALLENGE                                            -->
   <!-- ═══════════════════════════════════════════════════════════════ -->
   <div class="mb-10">
     <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
       <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">1</span>
-      Advanced Challenge
-    </h3>
-
-    <p class="mb-3">
-      The Advanced Challenge is built for active intraday traders. It's a one-step evaluation with no time limits, but you pay ongoing monthly fees starting at $69, as well as a <strong>$125 activation fee</strong> to get your live funded account after you pass.
-    </p>
-    <p class="mb-3">
-      The key pressure point here is the <strong>intraday trailing drawdown</strong>, which follows your real-time equity, not balance. That means even open trades count — if your floating equity dips below the max drawdown, you fail the account instantly.
-    </p>
-    <p class="mb-4">
-      There's no daily loss limit during the challenge, and you only need one trading day to hit the profit target. Once you get to the funded stage, it switches to <strong>EOD drawdown with a 35% daily profit cap</strong>, and a lock level that freezes once your gains exceed the limit by $100.
-    </p>
-
-    <!-- Key specs -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
-      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Target</p>
-        <p class="text-sm font-bold text-slate-800">6%</p>
-      </div>
-      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Drawdown Type</p>
-        <p class="text-sm font-bold text-slate-800">Intraday Trailing</p>
-      </div>
-      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Drawdown</p>
-        <p class="text-sm font-bold text-slate-800">None</p>
-      </div>
-      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Drawdown</p>
-        <p class="text-sm font-bold text-slate-800">3% – 4%</p>
-      </div>
-      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Trading Days</p>
-        <p class="text-sm font-bold text-slate-800">1</p>
-      </div>
-      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Activation Fee</p>
-        <p class="text-sm font-bold text-slate-800">$125</p>
-      </div>
-      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Reset Fee</p>
-        <p class="text-sm font-bold text-slate-800">$45</p>
-      </div>
-    </div>
-
-    <!-- Suited For -->
-    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
-      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
-      <p class="text-sm text-teal-700">Active intraday traders who manage risk tightly and are confident in their ability to avoid equity drawdowns during live sessions. Ideal for scalpers and short-term momentum traders.</p>
-    </div>
-
-    <!-- Fee table -->
-    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
-      <table class="w-full text-sm">
-        <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
-          <tr>
-            <th class="px-4 py-3 text-left">Account Size</th>
-            <th class="px-4 py-3 text-right">Monthly Fee</th>
-            <th class="px-4 py-3 text-right">Activation Fee</th>
-            <th class="px-4 py-3 text-right">Profit Target</th>
-            <th class="px-4 py-3 text-right">Max Drawdown</th>
-            <th class="px-4 py-3 text-right">Reset Fee</th>
-          </tr>
-        </thead>
-        <tbody class="divide-y divide-slate-100">
-          <tr class="bg-white">
-            <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
-            <td class="px-4 py-3 text-right text-slate-900">$69</td>
-            <td class="px-4 py-3 text-right text-slate-900">$125</td>
-            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
-            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
-            <td class="px-4 py-3 text-right text-slate-700">$45</td>
-          </tr>
-          <tr class="bg-slate-50">
-            <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
-            <td class="px-4 py-3 text-right text-slate-900">$109</td>
-            <td class="px-4 py-3 text-right text-slate-900">$125</td>
-            <td class="px-4 py-3 text-right text-slate-700">$6,000</td>
-            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
-            <td class="px-4 py-3 text-right text-slate-700">$45</td>
-          </tr>
-          <tr class="bg-white">
-            <td class="px-4 py-3 font-semibold text-slate-900">$150,000</td>
-            <td class="px-4 py-3 text-right text-slate-900">$129</td>
-            <td class="px-4 py-3 text-right text-slate-900">$125</td>
-            <td class="px-4 py-3 text-right text-slate-700">$9,000</td>
-            <td class="px-4 py-3 text-right text-slate-700">$4,500</td>
-            <td class="px-4 py-3 text-right text-slate-700">$45</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- Warning -->
-    <div class="rounded-xl border border-amber-200 bg-amber-50 p-4">
-      <p class="text-sm font-bold text-amber-900 mb-1">Important: Intraday Trailing Drawdown</p>
-      <p class="text-sm text-amber-800">
-        The Advanced Challenge uses an <strong>intraday trailing drawdown on equity</strong>. This means even unrealized losses on open trades count toward your drawdown limit. If your floating equity dips below the threshold at any point during the session, the account fails instantly. After passing and reaching funded status, the drawdown switches to EOD with a 35% daily profit cap.
-      </p>
-    </div>
-  </div>
-
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- 2. GROWTH CHALLENGE                                            -->
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <div class="mb-10">
-    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
-      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">2</span>
       Growth Challenge
     </h3>
 
     <p class="mb-3">
-      The Growth Challenge is Tradeify's other one-step evaluation, and better suited for swing or position traders. It has softer risk constraints than the Advanced Challenge and <strong>no activation fee</strong>, but you'll be paying higher monthly fees between $139 to $339 depending on account size.
+      The Growth Challenge is Tradeify's 1-step evaluation with <strong>no activation fee</strong> and monthly fees from $139 to $339 depending on account size.
     </p>
     <p class="mb-3">
       This model uses <strong>end-of-day trailing drawdown</strong>, calculated only after markets close and only if your balance increases. That means you can ride through intraday drawdowns without triggering a loss, as long as your closed trades stay clean.
     </p>
     <p class="mb-4">
-      The minimum trading period is just one day, but the reset fee is higher at $85. Consistency rules kick in once you are funded — you can't make more than 35% of your total profits in a single day before a payout.
+      The minimum trading period is just one day to pass the evaluation. The reset fee is $85. For funded payouts, traders need <strong>5 profitable trading days</strong> meeting the per-account profit threshold.
     </p>
 
     <!-- Key specs -->
@@ -296,12 +177,6 @@ const { section, fallbackBody } = Astro.props;
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Reset Fee</p>
         <p class="text-sm font-bold text-slate-800">$85</p>
       </div>
-    </div>
-
-    <!-- Suited For -->
-    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
-      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
-      <p class="text-sm text-teal-700">Swing and position traders who hold overnight and need end-of-day drawdown calculations. The softer risk constraints make it a more forgiving evaluation than the Advanced Challenge.</p>
     </div>
 
     <!-- Fee table -->
@@ -348,22 +223,22 @@ const { section, fallbackBody } = Astro.props;
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- 3. LIGHTNING CHALLENGE                                         -->
+  <!-- 2. LIGHTNING FUNDED                                             -->
   <!-- ═══════════════════════════════════════════════════════════════ -->
   <div class="mb-10">
     <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
-      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">3</span>
-      Lightning Challenge – Instant Funding
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">2</span>
+      Lightning Funded – Instant Funding
     </h3>
 
     <p class="mb-3">
-      This is Tradeify's instant funding option where you skip the challenge altogether. You pay a <strong>one-off fee from $349 to $729</strong> and there's no pass or fail evaluation stage.
+      Lightning Funded is Tradeify's instant funding option where you skip the challenge altogether. You pay a <strong>one-off fee from $349 to $729</strong> and go straight to a simulated funded account.
     </p>
     <p class="mb-3">
-      The minimum trading days requirement is longer, with at least <strong>10 active trading days</strong>. You'll also need to hit your payout target and show <strong>5 profitable days with over $200 gains</strong> before withdrawals open up.
+      Lightning payout requirements depend on account size and purchase date — it is not a flat rule for all Lightning accounts. Consistency also scales by payout number: <strong>20% for the first payout, 25% for the second, and 30% for the third and later payouts</strong>.
     </p>
     <p class="mb-4">
-      The rules for instant funding accounts are stricter on consistency. Your biggest profit day can't exceed <strong>20% of your total profit</strong> before a payout. There's no reset option — if you break a rule, you'll have to buy a new plan. The EOD trailing drawdown applies and locks once you're $100 above the drawdown level.
+      Lightning payout caps depend on account size and payout number. There's no reset option — if you break a rule, you'll have to buy a new plan. The EOD trailing drawdown applies and locks once you're $100 above the drawdown level.
     </p>
 
     <!-- Key specs -->
@@ -381,23 +256,17 @@ const { section, fallbackBody } = Astro.props;
         <p class="text-sm font-bold text-slate-800">4%</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Trading Days</p>
-        <p class="text-sm font-bold text-slate-800">10</p>
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Consistency (1st Payout)</p>
+        <p class="text-sm font-bold text-slate-800">20%</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Consistency Cap</p>
-        <p class="text-sm font-bold text-slate-800">20% per day</p>
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Consistency (2nd)</p>
+        <p class="text-sm font-bold text-slate-800">25%</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Withdrawal</p>
-        <p class="text-sm font-bold text-slate-800">$1,000</p>
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Consistency (3rd+)</p>
+        <p class="text-sm font-bold text-slate-800">30%</p>
       </div>
-    </div>
-
-    <!-- Suited For -->
-    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
-      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Best Suited For</p>
-      <p class="text-sm text-teal-700">Methodical, low-volatility traders who want faster access to profit splits without going through an evaluation phase. Designed for experienced traders confident in managing live risk consistently.</p>
     </div>
 
     <!-- Fee table -->
@@ -448,6 +317,122 @@ const { section, fallbackBody } = Astro.props;
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 3. SELECT CHALLENGE                                             -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-emerald-500 text-white text-xs font-black flex items-center justify-center">3</span>
+      Select Challenge
+    </h3>
+
+    <p class="mb-3">
+      The Select Challenge is Tradeify's newest 1-step evaluation. After passing, traders must choose between two funded payout policies: <strong>Select Flex</strong> or <strong>Select Daily</strong>. This choice is <strong>permanent and irrevocable</strong> for that account.
+    </p>
+    <p class="mb-4">
+      Both Select funded account types have <strong>no consistency rule</strong>, setting them apart from Growth and Lightning.
+    </p>
+
+    <!-- Select Flex vs Select Daily comparison -->
+    <h4 class="text-base font-bold text-slate-900 mb-3">Select Flex vs Select Daily</h4>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+      <div class="rounded-xl border-2 border-teal-300 bg-teal-50/40 p-4">
+        <p class="font-bold text-teal-800 mb-2">Select Flex</p>
+        <ul class="space-y-1.5 text-sm text-slate-700">
+          <li class="flex items-start gap-2">
+            <span class="text-teal-500 mt-0.5">&#10003;</span>
+            <span>No daily loss limit</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-teal-500 mt-0.5">&#10003;</span>
+            <span>5 winning days per payout</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-teal-500 mt-0.5">&#10003;</span>
+            <span>90% profit split</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-teal-500 mt-0.5">&#10003;</span>
+            <span>Payout caps: $3,000 / $4,000 / $5,000 by account size</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-teal-500 mt-0.5">&#10003;</span>
+            <span>No consistency rule</span>
+          </li>
+        </ul>
+      </div>
+      <div class="rounded-xl border-2 border-blue-300 bg-blue-50/40 p-4">
+        <p class="font-bold text-blue-800 mb-2">Select Daily</p>
+        <ul class="space-y-1.5 text-sm text-slate-700">
+          <li class="flex items-start gap-2">
+            <span class="text-blue-500 mt-0.5">&#10003;</span>
+            <span>Buffer system for risk management</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-blue-500 mt-0.5">&#10003;</span>
+            <span>$250 minimum payout</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-blue-500 mt-0.5">&#10003;</span>
+            <span>Payouts on any trading day if Daily Continuity Rule is met</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-blue-500 mt-0.5">&#10003;</span>
+            <span>90% profit split</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-blue-500 mt-0.5">&#10003;</span>
+            <span>No consistency rule</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Warning -->
+    <div class="rounded-xl border border-amber-200 bg-amber-50 p-4">
+      <p class="text-sm font-bold text-amber-900 mb-1">Permanent Choice</p>
+      <p class="text-sm text-amber-800">
+        After passing the Select Challenge, you must choose between Select Flex or Select Daily. This decision is <strong>permanent and irrevocable</strong> for that account — choose carefully based on your trading style.
+      </p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- TRADEIFY ELITE LIVE                                             -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-amber-500 text-white text-xs font-black flex items-center justify-center">&#9733;</span>
+      Tradeify Elite Live — Real-Capital Stage
+    </h3>
+
+    <p class="mb-3">
+      Tradeify Elite Live is the real-capital live trading stage, separate from all simulated funded accounts. Elite Live accounts are <strong>issued through NinjaTrader brokerage</strong>.
+    </p>
+    <p class="mb-4">
+      Tradeify may assess traders for Elite Live after <strong>5 payouts</strong>. Automatic transition happens at <strong>$80,000 combined user payouts</strong> across sim funded accounts.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Starting Balance Split</p>
+        <p class="text-sm font-bold text-teal-600">90%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Above Starting Balance</p>
+        <p class="text-sm font-bold text-slate-800">80%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Assessment Trigger</p>
+        <p class="text-sm font-bold text-slate-800">After 5 payouts</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Auto Transition</p>
+        <p class="text-sm font-bold text-slate-800">$80,000 combined payouts</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
   <!-- TRADING RULES                                                   -->
   <!-- ═══════════════════════════════════════════════════════════════ -->
   <div class="mb-10">
@@ -457,7 +442,7 @@ const { section, fallbackBody } = Astro.props;
         <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
           <tr>
             <th class="px-4 py-3 text-left">Rule</th>
-            <th class="px-4 py-3 text-center">All Models</th>
+            <th class="px-4 py-3 text-center">Details</th>
           </tr>
         </thead>
         <tbody class="divide-y divide-slate-100">
@@ -470,24 +455,20 @@ const { section, fallbackBody } = Astro.props;
             <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">Not Allowed</span></td>
           </tr>
           <tr class="bg-white">
-            <td class="px-4 py-3 font-medium text-slate-600">EAs / Automated Trading</td>
-            <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">Not Allowed</span> (in funded phase)</td>
-          </tr>
-          <tr class="bg-slate-50">
-            <td class="px-4 py-3 font-medium text-slate-600">Copy Trading</td>
-            <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">Not Allowed</span> (in funded phase)</td>
-          </tr>
-          <tr class="bg-white">
             <td class="px-4 py-3 font-medium text-slate-600">Multiple Accounts</td>
-            <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">One account per person</span></td>
+            <td class="px-4 py-3 text-center">Up to <strong>5 Simulated Funded Accounts</strong> total across all types</td>
           </tr>
           <tr class="bg-slate-50">
-            <td class="px-4 py-3 font-medium text-slate-600">Consistency Rule (Advanced/Growth)</td>
-            <td class="px-4 py-3 text-center">35% daily profit cap</td>
+            <td class="px-4 py-3 font-medium text-slate-600">Consistency (Growth)</td>
+            <td class="px-4 py-3 text-center">Applies (varies by funded type)</td>
           </tr>
           <tr class="bg-white">
-            <td class="px-4 py-3 font-medium text-slate-600">Consistency Rule (Lightning)</td>
-            <td class="px-4 py-3 text-center">20% daily profit cap</td>
+            <td class="px-4 py-3 font-medium text-slate-600">Consistency (Lightning)</td>
+            <td class="px-4 py-3 text-center">20% (1st payout), 25% (2nd), 30% (3rd+)</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-medium text-slate-600">Consistency (Select Flex / Daily)</td>
+            <td class="px-4 py-3 text-center"><span class="text-teal-600 font-semibold">No consistency rule</span></td>
           </tr>
         </tbody>
       </table>
@@ -508,7 +489,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Futures Challenges</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      Tradeify's three funding paths all offer something slightly different depending on how you trade. The Advanced Challenge is built for short-term risk managers, but the intraday drawdown makes it unforgiving. The Growth Challenge is more flexible and better for holding positions overnight. The Lightning Challenge skips the wait, but enforces stricter payout consistency. You get transparency, choice, and fair entry costs, but the lack of weekend trading, the intraday risk on the Advanced model, and no resets on instant funding drop the score slightly.
+      Tradeify's three current models each serve different trading styles. Growth offers a forgiving EOD trailing drawdown evaluation. Lightning Funded skips the wait for experienced traders, with consistency scaling by payout number. The Select Challenge adds genuine flexibility by letting traders choose their funded payout policy — Flex or Daily — with no consistency rule on either. The Advanced Challenge is legacy-only, which simplifies the current lineup. All funded accounts are simulated, with Tradeify Elite Live as the real-capital stage via NinjaTrader brokerage.
     </p>
   </div>
 
@@ -522,7 +503,7 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-3">
-    While your monthly challenge fee gets you through the door, Tradeify's real trading costs start once you're active in the markets. All positions run through <strong>Tradovate</strong>, a futures broker tied into the CME, CBOT, COMEX, NYMEX, and other major exchanges.
+    While your challenge fee gets you through the door, Tradeify's real trading costs start once you're active in the markets. All positions run through <strong>Tradovate</strong>, a futures broker tied into the CME, CBOT, COMEX, NYMEX, and other major exchanges.
   </p>
   <p class="mb-4">
     That means you're dealing with genuine market prices — but there are still platform fees, commissions, and optional add-ons you need to factor in.
@@ -730,7 +711,7 @@ const { section, fallbackBody } = Astro.props;
   </div>
 
   <p class="mb-4">
-    These limits apply to <strong>total open contracts across all instruments</strong>, not per position. You can scale into a trade with multiple micros or mix instruments, but you can't exceed the cap. Hedging across correlated contracts also counts toward the total. Contract limits are the same across the Advanced, Growth, and Lightning models.
+    These limits apply to <strong>total open contracts across all instruments</strong>, not per position. You can scale into a trade with multiple micros or mix instruments, but you can't exceed the cap. Hedging across correlated contracts also counts toward the total.
   </p>
 
   <!-- Verdict -->
@@ -804,12 +785,6 @@ const { section, fallbackBody } = Astro.props;
           <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
         </tr>
         <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-600">Auto-Trading (EAs)</td>
-          <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">No</span></td>
-          <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">No</span></td>
-          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
-        </tr>
-        <tr class="bg-slate-50">
           <td class="px-4 py-3 font-medium text-slate-600">Included in Base Access</td>
           <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
           <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Yes</span></td>
@@ -833,7 +808,7 @@ const { section, fallbackBody } = Astro.props;
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-2">NinjaTrader</p>
-      <p class="mb-2">Fully supported but requires self-setup. Desktop only with a licensed install. If you want custom indicators, ATM strategies, or automated execution, NinjaTrader provides that — but there's a learning curve and extra cost involved.</p>
+      <p class="mb-2">Fully supported but requires self-setup. Desktop only with a licensed install. If you want custom indicators, ATM strategies, or automated execution, NinjaTrader provides that — but there's a learning curve and extra cost involved. NinjaTrader brokerage also issues Tradeify Elite Live accounts.</p>
       <p class="text-xs text-slate-500">Execution still routes through Tradovate — you're using a different interface, not bypassing the broker.</p>
     </div>
   </div>
@@ -856,26 +831,91 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-3">
-    Tradeify keeps things simple when it comes to payments and withdrawals, but there are a few rules to know upfront. You'll need a card to pay for your challenge, and there's no crypto, PayPal, or bank transfer support for fee payments.
+    Payout rules at Tradeify depend on the funded account type. Each type — Growth, Lightning, Select Flex, and Select Daily — has its own payout structure, requirements, and caps. All sim funded accounts pay a <strong>90% profit split</strong>. Tradeify Elite Live pays 90% on starting balance withdrawals and 80% on profits above starting balance.
   </p>
 
   <!-- Payout overview -->
   <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Sim Funded Split</p>
       <p class="text-sm font-bold text-teal-600">90%</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Processing Time</p>
-      <p class="text-sm font-bold text-slate-800">24–72 hours</p>
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Elite Live (Starting Balance)</p>
+      <p class="text-sm font-bold text-teal-600">90%</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Trading Days</p>
-      <p class="text-sm font-bold text-slate-800">10</p>
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Elite Live (Above Starting)</p>
+      <p class="text-sm font-bold text-slate-800">80%</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
       <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Payout Methods</p>
       <p class="text-sm font-bold text-slate-800">Rise Pay, Plane</p>
+    </div>
+  </div>
+
+  <!-- Payout rules by funded type -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payout Rules by Funded Type</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Payout Rule</th>
+          <th class="px-4 py-3 text-center">Growth</th>
+          <th class="px-4 py-3 text-center">Lightning</th>
+          <th class="px-4 py-3 text-center">Select Flex</th>
+          <th class="px-4 py-3 text-center">Select Daily</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Payout Timing</td>
+          <td class="px-4 py-3 text-center text-slate-900">5 profitable days</td>
+          <td class="px-4 py-3 text-center text-slate-900">Varies by account/date</td>
+          <td class="px-4 py-3 text-center text-slate-900">Every 5 winning days</td>
+          <td class="px-4 py-3 text-center text-slate-900">Any trading day</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Profit Split</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">90%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">90%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">90%</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">90%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Consistency Rule</td>
+          <td class="px-4 py-3 text-center text-slate-900">Yes</td>
+          <td class="px-4 py-3 text-center text-slate-900">20%/25%/30% scaling</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">None</td>
+          <td class="px-4 py-3 text-center font-semibold text-teal-600">None</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Payout Caps</td>
+          <td class="px-4 py-3 text-center text-slate-900">Varies</td>
+          <td class="px-4 py-3 text-center text-slate-900">Varies by size/payout #</td>
+          <td class="px-4 py-3 text-center text-slate-900">$3K / $4K / $5K</td>
+          <td class="px-4 py-3 text-center text-slate-900">$250 minimum</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Daily Continuity Rule</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+          <td class="px-4 py-3 text-center text-slate-400">N/A</td>
+          <td class="px-4 py-3 text-center text-slate-900">Required</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Select Flex details -->
+  <div class="space-y-4 mb-8">
+    <div class="rounded-lg bg-teal-50 border border-teal-200 p-4">
+      <p class="font-bold text-teal-900 mb-1">Select Flex Payouts</p>
+      <p class="text-sm text-teal-800">No daily loss limit. Payouts every 5 winning days. Payout caps of <strong>$3,000 / $4,000 / $5,000</strong> by account size. No consistency rule.</p>
+    </div>
+    <div class="rounded-lg bg-blue-50 border border-blue-200 p-4">
+      <p class="font-bold text-blue-900 mb-1">Select Daily Payouts</p>
+      <p class="text-sm text-blue-800">Buffer system for risk management. <strong>$250 minimum payout</strong>. Payouts on any trading day if the Daily Continuity Rule is met. No consistency rule.</p>
     </div>
   </div>
 
@@ -885,62 +925,17 @@ const { section, fallbackBody } = Astro.props;
     You can only pay using a <strong>debit or credit card</strong> — Visa, Mastercard, and Discover are all accepted. No crypto, no PayPal, and no bank transfer options available at the moment. If you fail a challenge but forget to cancel, your monthly billing continues.
   </p>
 
-  <!-- Payout rules -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Profit Payouts and Withdrawals</h3>
+  <!-- Payout processing -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payout Processing</h3>
   <p class="mb-4">
     Payouts are processed through third-party services like <strong>Rise Pay</strong> and <strong>Plane Payouts</strong>. Before your first withdrawal, you'll need full verification including ID checks, proof of address, and sometimes a selfie or video confirmation. Once verified, payouts usually land within <strong>24 hours on business days</strong>. Weekend submissions can take up to 72 hours.
   </p>
 
-  <!-- Payout rules by model -->
-  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
-    <table class="w-full text-sm whitespace-nowrap">
-      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
-        <tr>
-          <th class="px-4 py-3 text-left">Payout Rule</th>
-          <th class="px-4 py-3 text-center">Lightning</th>
-          <th class="px-4 py-3 text-center">Advanced / Growth</th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-slate-100">
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-600">Min Trading Days</td>
-          <td class="px-4 py-3 text-center text-slate-900">10</td>
-          <td class="px-4 py-3 text-center text-slate-900">10</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-medium text-slate-600">Profitable Days Required</td>
-          <td class="px-4 py-3 text-center text-slate-900">5 days over $200</td>
-          <td class="px-4 py-3 text-center text-slate-900">—</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-600">Profit Split</td>
-          <td class="px-4 py-3 text-center font-semibold text-teal-600">90%</td>
-          <td class="px-4 py-3 text-center font-semibold text-teal-600">90%</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-medium text-slate-600">Minimum Withdrawal</td>
-          <td class="px-4 py-3 text-center text-slate-900">$1,000</td>
-          <td class="px-4 py-3 text-center text-slate-900">$1,500 (first payout)</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-medium text-slate-600">Daily Profit Cap</td>
-          <td class="px-4 py-3 text-center text-slate-900">20% of total profit</td>
-          <td class="px-4 py-3 text-center text-slate-900">35% of total profit</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-medium text-slate-600">Max Withdrawal (large accounts)</td>
-          <td class="px-4 py-3 text-center text-slate-900">$3,000 early</td>
-          <td class="px-4 py-3 text-center text-slate-900">Up to $25,000</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- Warning -->
+  <!-- Elite Live transition -->
   <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
-    <p class="text-sm font-bold text-amber-900 mb-1">No Resets After Funding</p>
+    <p class="text-sm font-bold text-amber-900 mb-1">Tradeify Elite Live Transition</p>
     <p class="text-sm text-amber-800">
-      Once you're funded, there's <strong>no reset option</strong>. If you break a rule, the account is terminated and you'll need to start over with a new plan. Follow the rules closely or you'll be starting over.
+      Tradeify may assess traders for Elite Live after <strong>5 payouts</strong>. Automatic transition happens at <strong>$80,000 combined user payouts</strong> across sim funded accounts. Elite Live pays 90% on starting balance withdrawals and 80% on profits above starting balance.
     </p>
   </div>
 
@@ -948,7 +943,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Payments and Payouts</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      To pay for fees you are limited to cards, and billing won't stop unless you cancel. Payouts are fast and clean once you're verified, but the rules are strict and final. The 90% profit split is competitive, and processing within 24–72 hours is solid for the futures prop firm space.
+      Tradeify's payout structure is more nuanced than most prop firms, with each funded type having its own rules. The 90% profit split is competitive across the board. Select Flex and Select Daily add genuine flexibility — especially Select Daily's ability to request payouts on any trading day. Processing within 24–72 hours is solid for the futures prop firm space.
     </p>
   </div>
 
@@ -962,13 +957,13 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-4">
-    Tradeify offers basic customer support and limited educational material. You can reach their team through a chat widget on the website or by email. There's no live phone support or direct Discord access to staff, but most queries are answered within a few hours on business days.
+    Tradeify offers customer support through email, Help Center, and Discord. The firm has also expanded its educational resources with Tradeify TV, a free ebook, a built-in journal, and blog content.
   </p>
 
   <!-- Customer Support -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Customer Support</h3>
   <p class="mb-6">
-    Tradeify's customer service team is available <strong>Monday to Friday</strong> and mostly handled via email. There's a chatbot on the website, but it's mostly a redirect to manual support rather than live help. Response times are generally same-day, though more technical queries (like account reviews or payout delays) can take longer. There's no ticket dashboard or live update system, and users don't get priority support at any account tier.
+    Tradeify's customer service team is available <strong>Monday to Friday</strong>. Response times are generally same-day, though more technical queries (like account reviews or payout delays) can take longer.
   </p>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
@@ -977,30 +972,48 @@ const { section, fallbackBody } = Astro.props;
       <p>Primary channel — Mon to Fri, same-day response</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Website Chatbot</p>
-      <p>Available but redirects to manual support</p>
+      <p class="font-bold text-slate-900 mb-1">Help Center</p>
+      <p>Knowledge base with articles covering account setup, rules, and troubleshooting</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Discord Community</p>
+      <p>Active community with support access and trader discussions</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Phone Support</p>
       <p class="text-slate-400">Not available</p>
     </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Discord Community</p>
-      <p>~30,000 members — community-driven, not official support</p>
-    </div>
   </div>
 
   <!-- Educational Resources -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Educational Resources</h3>
-  <p class="mb-6">
-    Tradeify doesn't offer formal education or structured training. There's no blog, no tutorials, and no funded trader walkthroughs available. The dashboard provides access to platform resources from Tradovate, NinjaTrader, or TradingView, but that's about it. If you're brand new to futures or trading in general, this isn't a hand-holding environment.
+  <p class="mb-4">
+    Tradeify has expanded its educational offerings. Resources now include:
   </p>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Tradeify TV</p>
+      <p>Video content covering trading concepts and platform walkthroughs</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Free Ebook</p>
+      <p>Downloadable trading resource for new and existing traders</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Built-in Journal</p>
+      <p>Integrated journaling tool within the trader dashboard</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Blog & Help Center</p>
+      <p>Written content covering rules, strategies, and platform guides</p>
+    </div>
+  </div>
 
   <!-- Verdict -->
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Customer Service and Education</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      Tradeify's customer support is functional but slow, and there's no real education or onboarding content. It's fine if you already know what you're doing, but beginner traders won't find much help getting up to speed.
+      Tradeify has improved its support and education since launch. The Help Center and Discord provide accessible support channels, and the addition of Tradeify TV, a free ebook, and a built-in journal gives traders more resources than before. Phone support is still absent, but the overall support infrastructure is functional for a firm of this size.
     </p>
   </div>
 
@@ -1014,7 +1027,7 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-3">
-    When it comes to reputation, payouts, and transparency, Tradeify stacks up well. They've got strong verified reviews, a massive trader community on Discord, and public responses to both praise and complaints.
+    Tradeify is a futures prop firm with a sim funded structure — all funded accounts (Growth, Lightning, Select Flex, Select Daily) are simulated, with <strong>Tradeify Elite Live</strong> as the real-capital stage issued through NinjaTrader brokerage. The firm now highlights <strong>80,000+ traders</strong> and <strong>$110M+ verified payouts</strong>.
   </p>
 
   <!-- Trustpilot -->
@@ -1037,26 +1050,26 @@ const { section, fallbackBody } = Astro.props;
   <!-- Trust stats grid -->
   <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">80,000+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Traders</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900">$110M+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Verified Payouts</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
       <p class="text-2xl font-black text-slate-900">4.7/5</p>
       <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Trustpilot Score</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
-      <p class="text-2xl font-black text-slate-900">1,800+</p>
-      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Verified Reviews</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
-      <p class="text-2xl font-black text-slate-900">~30,000</p>
-      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Discord Members</p>
     </div>
   </div>
 
   <!-- Community -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Futures Trading Community</h3>
   <p class="mb-3">
-    Tradeify's Discord has close to <strong>30,000 members</strong>, and it's not just a dead server. You've got live payout feeds, trader result threads, and active question channels. The team does interact inside the server, making it a useful space to track platform updates, payout timelines, and general trader sentiment in real time.
+    Tradeify's community has grown to <strong>80,000+ traders</strong> with <strong>$110M+ in verified payouts</strong>. The Discord server is active with live payout feeds, trader result threads, and active question channels. The team does interact inside the server, making it a useful space to track platform updates, payout timelines, and general trader sentiment in real time.
   </p>
   <p class="mb-6">
-    You won't get direct DM access to staff, but the community is one of the more active futures prop firm Discord servers in the space.
+    You won't get direct DM access to staff, but the community is one of the more active futures prop firm communities in the space.
   </p>
 
   <!-- Restricted Countries -->
@@ -1087,7 +1100,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trust and Community</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      Tradeify has earned high marks on Trustpilot and their Discord is one of the more active futures prop firm communities. Support response times can lag during peak periods, and their long list of restricted countries shuts out a decent chunk of traders. But overall, they're showing up where it counts — transparent rules, real exchange access, and a strong verified review profile.
+      Tradeify has built a strong reputation with 80,000+ traders and $110M+ in verified payouts. The 4.7/5 Trustpilot score from 1,800+ reviews is solid, and Elite Live accounts through NinjaTrader brokerage add credibility. The long list of restricted countries shuts out a decent chunk of traders, but overall Tradeify is showing up where it counts — transparent rules, real exchange access, and a strong verified track record.
     </p>
   </div>
 

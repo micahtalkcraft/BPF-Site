@@ -1,14 +1,14 @@
 {
   "id": "rev-funded-trading-plus",
   "propFirmId": "d0000028-0000-0000-0000-000000000028",
-  "summary": "Funded Trading Plus (FTP) scores 77/100 overall after testing, driven by its wide range of challenge formats, including one step, two step, and instant funding models. Account sizes run from $5,000 to $200,000, with profit splits starting at 80% across standard programs but can be upgraded to 90%.\n\nFTP also is known for its aggressive scaling potential where you can grow accounts up to $5 million if performance criteria are met. Flexible payout cycles (every 3, 5, or 7 days) and optional profit split upgrades add further customisation, but the score is held back mainly by limited transparency around spreads, which makes it harder to fully assess trading costs in advance, but overall FTP remains a strong option if you want variety, scaling upside, and flexible evaluation structures.",
+  "summary": "Funded Trading Plus (FTP) scores 77/100 in our 2026 review. The firm currently offers three core programmes — Instant Funding, 1-Step Express, and 2-Step Classic — replacing their earlier lineup of six legacy models. All trading takes place in a simulated environment, with payouts based on simulated profits.\n\nThe standard profit split is 80%, upgradable to 90% or even 100% depending on account type or add-ons. Payout schedules vary by programme: Instant Funding and 1-Step Express allow withdrawals from day 1 then every 7 days, while 2-Step Classic uses a 10-day payout cycle. Drawdown rules also differ — Instant Funding uses 6% daily/max (relative), while 1-Step Express uses 4% daily and 6% max (relative), and 2-Step Classic uses 4% daily and 8% max (static). Scaling is available up to $2.5 million. FTP remains a strong option for traders who want variety and flexible evaluation structures, though limited spread transparency holds the score back.",
   "pros": [
-    "Profit split from 80% to 90% with upgrades",
-    "Instant funding challenge available (Master program)",
-    "Aggressive scaling plan up to $5 million",
-    "Six distinct challenge types for different trading styles",
-    "Flexible payout cycles (3, 5, or 7 days)",
-    "Five trading platforms including MT4, MT5, cTrader, Match-Trader, DXTrade"
+    "Profit split from 80% up to 100% with upgrades",
+    "Instant funding option available — skip the evaluation entirely",
+    "Scaling plan up to $2.5 million",
+    "Three programme types for different trading styles",
+    "Instant Funding and 1-Step Express allow withdrawals from day 1",
+    "Four trading platforms: DXTrade, Match-Trader, cTrader, MT5"
   ],
   "cons": [
     "Minimal transparency on spreads and trading costs",
@@ -16,10 +16,12 @@
     "$25 fee for cTrader platform usage",
     "DXTrade has reported lag and connectivity issues",
     "Educational resources are basic",
-    "Customer support only available in English"
+    "Copy trading across accounts is prohibited",
+    "2-Step Classic has a consistency rule",
+    "30-day inactivity rule can breach accounts"
   ],
-  "bestFor": "Experienced traders who want diverse challenge formats, aggressive scaling potential up to $5 million, and flexible payout cycles with optional profit split upgrades",
-  "notIdealFor": "Traders who need clear spread data upfront, beginners seeking comprehensive educational resources, or those who prefer a single streamlined evaluation path",
+  "bestFor": "Experienced traders who want flexible evaluation structures with instant funding, one-step, and two-step options, scaling potential up to $2.5 million, and profit splits upgradable to 100%",
+  "notIdealFor": "Traders who need clear spread data upfront, beginners seeking comprehensive educational resources, those who rely on copy trading across accounts, or traders who want uniform rules across all programmes",
   "overallScore": 77,
   "categoryScores": {
     "challenges": 90,
@@ -41,37 +43,37 @@
   "verdictBlocks": [
     {
       "heading": "Our Final Verdict On Funded Trading Plus",
-      "body": "Funded Trading Plus provides a solid option for traders seeking access to capital through a clear evaluation process. With a strong community, a competitive 80% profit split, and flexible account types, the firm offers a viable path for traders looking to scale their operations.\n\nHowever, the lack of transparency on trading costs and issues with the DXTrade platform may be concerns for some traders. Overall, Funded Trading Plus is a strong contender in the prop trading space, particularly for those who value community support and straightforward challenges."
+      "body": "Funded Trading Plus provides a solid option for traders seeking access to simulated capital through a streamlined evaluation process. All trading takes place in a simulated environment, with payouts based on simulated profits.\n\nWith three core programmes — Instant Funding, 1-Step Express, and 2-Step Classic — FTP offers flexibility without the complexity of its earlier six-model lineup. The standard 80% profit split can be upgraded to 90% or 100%, and the scaling plan allows accounts to grow up to $2.5 million.\n\nDrawdown and payout rules vary by programme, so traders should review the specific terms for their chosen model. Copy trading across accounts is prohibited, and a 30-day inactivity rule can breach accounts. The 2-Step Classic includes a consistency rule. The lack of transparency on trading costs and reported issues with the DXTrade platform remain the main drawbacks.\n\nOverall, Funded Trading Plus is a strong contender for experienced traders who value programme flexibility and scaling potential, and who can navigate programme-specific rules."
     }
   ],
   "faq": [
     {
       "q": "Is Funded Trading Plus trustworthy?",
-      "a": "Funded Trading Plus is generally considered a legitimate prop firm with a large and active trading community and a long operating history compared to many newer firms. It offers clearly defined challenge structures, documented rules, and a transparent account dashboard, which helps traders understand how evaluations and funded accounts operate. That said, FTP is not a broker-backed prop firm and some traders raise concerns around spread transparency and platform consistency."
+      "a": "Funded Trading Plus is generally considered a legitimate prop firm with a large and active trading community and a long operating history compared to many newer firms. It offers clearly defined challenge structures, documented rules, and a transparent account dashboard. All trading takes place in a simulated environment — traders do not manage real capital. FTP is not a broker-backed prop firm and some traders raise concerns around spread transparency and platform consistency."
     },
     {
       "q": "Does Funded Trading Plus offer a scaling plan?",
-      "a": "Yes. Funded Trading Plus offers an aggressive performance-based scaling plan, allowing you to grow your account up to $5 million if profit milestones are met. Scaling is optional and based on hitting predefined profit targets on your funded account. There are no time-based requirements, but higher account sizes and payout conditions depend on the specific program you choose and continued rule compliance."
+      "a": "Yes. Funded Trading Plus offers a performance-based scaling plan, allowing accounts to grow up to $2.5 million based on profit milestones. Scaling is optional and based on hitting predefined profit targets on your funded account. There are no time-based requirements, but higher account sizes and payout conditions depend on the specific programme you choose and continued rule compliance."
     },
     {
       "q": "Does Funded Trading Plus payout?",
-      "a": "Yes. Funded Trading Plus does pay out profits, provided you follow the trading rules. Payouts are not fixed weekly. Instead, you can choose payout cycles of 3 days, 5 days, or 7 days, depending on the account type and payout option selected. Withdrawals are available via bank transfer or cryptocurrency, with a minimum payout amount of $50."
+      "a": "Yes. Funded Trading Plus does pay out profits based on simulated trading performance, provided you follow the trading rules. Payout schedules vary by programme: Instant Funding and 1-Step Express allow withdrawals from day 1 then every 7 days; 2-Step Classic uses a 10-day payout cycle. Withdrawals are available via bank transfer or cryptocurrency, with a minimum payout amount of $50."
     },
     {
       "q": "What are the profit split and fees for Funded Trading Plus?",
-      "a": "Profit splits start at 80% by default but depending on the program you select and any optional upgrades at checkout, you can increase your profit split to 85% or 90%. Higher payout percentages are not automatic and are tied to specific models or add-ons. Challenge fees vary by program, your one step challenges start from $119, while instant funding accounts cost more depending on account size. All FTP challenges and instant accounts offer sizes ranging from $5,000 to $200,000."
+      "a": "The standard profit split is 80%, but depending on the programme and any optional upgrades at checkout, you can increase it to 90% or even 100%. Challenge fees vary by programme and account size. Instant Funding accounts include sizes from $5,000 to $100,000, while 1-Step Express and 2-Step Classic start at $10,000 and go up to $200,000."
     },
     {
       "q": "Which trading platforms does Funded Trading Plus offer?",
-      "a": "Funded Trading Plus offers Match-Trader, DXTrade, MetaTrader 4 (MT4), MetaTrader 5 (MT5), and cTrader. MT4 and MT5 are well suited if you use Expert Advisors or custom indicators. Match-Trader offers TradingView integration and works well for discretionary trading. cTrader provides advanced tools but carries a $25 platform fee. DXTrade is available, though it is generally less popular due to performance limitations."
+      "a": "Funded Trading Plus currently offers four platforms: DXTrade, Match-Trader, MetaTrader 5 (MT5), and cTrader. MT5 is well suited if you use Expert Advisors or custom indicators. Match-Trader offers TradingView integration and works well for discretionary trading. cTrader provides advanced tools but carries a $25 platform fee. DXTrade is available, though it is generally less popular due to performance limitations."
     },
     {
-      "q": "Is Funded Trading Plus a scam?",
-      "a": "No. Funded Trading Plus is not a scam. It is a legitimate prop firm that provides funded trading opportunities through structured evaluation and instant funding models. That said, you should fully understand the rules, drawdown calculations, and payout conditions before signing up. FTP is best suited if you are comfortable trading within strict risk frameworks and prop firm rules."
+      "q": "Is copy trading allowed at Funded Trading Plus?",
+      "a": "No. Copy trading across accounts is prohibited at Funded Trading Plus, including copying between FTP accounts or mirroring trades across multiple accounts."
     }
   ],
   "verified": true,
   "flagged": false,
   "methodologyVersion": "1.0",
-  "lastReviewedAt": "2026-02-24"
+  "lastReviewedAt": "2026-03-11"
 }

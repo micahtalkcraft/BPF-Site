@@ -6,10 +6,10 @@
   "foundedYear": 2023,
   "hqCountry": "AE",
   "evaluation": {
-    "types": ["1-step"],
+    "types": ["other", "instant"],
     "profitTargets": { "phase1": 9 },
-    "dailyDrawdown": 3,
-    "maxDrawdown": 5,
+    "dailyDrawdown": null,
+    "maxDrawdown": null,
     "minTradingDays": 0,
     "scalingPlan": true
   },
@@ -29,18 +29,18 @@
   },
   "payouts": {
     "splitMax": 100,
-    "schedule": "14 days (EOD/Static), 10 days (Instant)",
+    "schedule": "Fixed windows (5th–8th and 20th–23rd each month). EOD/Static: 14-day cycles, Instant: 10-day cycles.",
     "processingTime": "2–3 business days",
-    "firstPayoutDays": 10,
+    "firstPayoutDays": null,
     "methods": ["Crypto", "Credit Card", "PayPal", "Paytiko", "Riseworks"]
   },
   "rules": {
     "newsTrading": true,
     "weekendHolding": false,
-    "copyTrading": false,
-    "expertAdvisors": false,
+    "copyTrading": null,
+    "expertAdvisors": null,
     "consistencyRule": "EOD/Static: 50% eval, 30% funded. Instant: 20% of total profit per day.",
-    "notes": "Three models: EOD (trailing EOD drawdown, monthly subscription, scaling during eval), Static (fixed drawdown, monthly subscription, no daily loss limit), Instant (trailing real-time drawdown, one-time fee, 3% daily loss, 10 min trading days for first payout). Copy trading only between own accounts — no signal services. EAs/algorithmic trading not confirmed. No resets for Instant. Fixed payout windows: 5th–8th and 20th–23rd of each month. Min withdrawal $500 (EOD/Static), $250 (Instant). Max withdrawal $3K–$5K per cycle depending on account size. 100% of first $10K profit kept, then 90% split scaling to 95% at GOAT Trader level. KYC required before first withdrawal."
+    "notes": "Three models: EOD Evaluation (trailing EOD drawdown, monthly subscription $99–$249, scaling during eval, 2.5% daily loss limit once funded only, max drawdown 3.67%–5%), Static Evaluation (fixed/static drawdown, monthly subscription $199–$349, no daily loss limit, max drawdown 3.33%–4.17%), and Instant Funding (trailing real-time drawdown, one-time fee $349–$699, 3% daily loss cap, 5% max drawdown, requires 7% profit target and at least 10 trading days with minimum 6 trades before first payout). Copy trading allowed between own accounts only — not allowed between different traders or via signal services. Algorithmic trading / EAs not clearly confirmed by the firm. No resets for Instant Funding; EOD resets $99, Static resets $349. Fixed payout windows: 5th–8th and 20th–23rd of each month. Min withdrawal $500 (EOD/Static), $250 (Instant). Max withdrawal $3K–$5K per cycle depending on account size. Traders keep 100% of the first $10K in profit; after that, profit split starts at 90% and scales to 92%–95% at GOAT Trader level. Consistency rules vary: EOD/Static use 50% during evaluation and 30% when funded; Instant limits profit concentration to 20% per day. Contract limits depend on account tier and scaling — funded accounts can scale toward up to approximately 9 mini contracts depending on performance and stage. KYC required before first withdrawal."
   },
   "markets": {
     "platforms": ["Project X", "NinjaTrader", "Quantower", "Volumetrica", "Volsys", "ATAS", "TradingView", "VolBook", "Tradovate"],
@@ -67,7 +67,7 @@
     "discountPercent": null
   },
   "notes": null,
-  "lastVerifiedAt": "2026-02-24",
-  "lastUpdatedAt": "2026-02-24",
+  "lastVerifiedAt": "2026-03-11",
+  "lastUpdatedAt": "2026-03-11",
   "dataSources": ["https://goatfundedtrader.com/futures"]
 }

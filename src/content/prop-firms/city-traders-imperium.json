@@ -55,11 +55,11 @@
     "copyTrading": null,
     "expertAdvisors": true,
     "consistencyRule": null,
-    "notes": "All challenges and funded accounts operate on simulated accounts with balance-based (static) drawdown. Instant Funding uses trailing drawdown. US clients limited to MatchTrader platform only. Minimum $100 profit withdrawal. No third-party withdrawals."
+    "notes": "All challenges and funded accounts operate on simulated accounts. Evaluation challenges (One Step, Two Step) use balance-based (static) drawdown. Instant Funding and Instant Funding Pro use trailing drawdown tied to the account balance. Instant Funding traders start with half the advertised balance and unlock the full amount after hitting the first 10% profit milestone. Profit split on evaluation challenges starts at 80% and can scale to 100%. Instant Funding profit split starts around 50% and increases through scaling milestones up to 100%. The $4M scaling potential applies only to Instant Funding accounts across multiple accounts — evaluation challenges are effectively capped at $200K per account. Funded trader salary payments are available only to traders who meet specific long-term consistency criteria. Payout eligibility requires trading at least 10 days or reaching the minimum withdrawal threshold ($100). US clients limited to MatchTrader platform only — MT5 is available outside the US only. No third-party withdrawals."
   },
   "markets": {
     "platforms": ["MT5", "MatchTrader"],
-    "instruments": "Forex (28 pairs), Indices (13), Commodities (3), Crypto (6)"
+    "instruments": "Forex, Indices, Commodities, Crypto (~50 instruments total, exact counts may vary)"
   },
   "trust": {
     "trustpilotRating": 4.4,
@@ -75,9 +75,9 @@
     "email": true
   },
   "custom": {
-    "tags": ["Instant Funding", "Up to 100% Split", "Scaling to $4M", "Funded Trader Salary"]
+    "tags": ["Instant Funding", "Up to 100% Split", "Scaling to $4M (IF Only)", "Funded Trader Salary"]
   },
-  "lastVerifiedAt": "2026-02-27",
-  "lastUpdatedAt": "2026-02-27",
+  "lastVerifiedAt": "2026-03-11",
+  "lastUpdatedAt": "2026-03-11",
   "dataSources": ["https://citytradersimperium.com"]
 }

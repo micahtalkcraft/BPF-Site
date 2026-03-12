@@ -118,6 +118,12 @@ const FirmDetailContent = contentModules[firmContentPath]
   ? (await contentModules[firmContentPath]()).default
   : null;
 
+const platformList = firm.markets.platforms;
+const platformOverflow = platformList.length > 3;
+const platformShort = platformList.slice(0, 3).join(", ");
+const platformFull = platformList.join(", ");
+const platformExtra = platformList.length - 3;
+
 const discountCode = (firm.custom as Record<string, unknown>)?.discountCode as string | undefined;
 const discountPercent = (firm.custom as Record<string, unknown>)?.discountPercent as number | undefined;
 const discountDesc = (firm.custom as Record<string, unknown>)?.discountDesc as string | undefined;
@@ -369,9 +375,20 @@ const youtubeId = review.youtubeUrl?.match(/(?:embed\/|v=|youtu\.be\/)([a-zA-Z0-
           </div>
           <div class="rounded-xl bg-slate-50 border border-slate-100 px-4 py-3 text-center">
             <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-1">Trading Platforms</p>
-            <p class="text-sm font-bold text-slate-800">
-              {firm.markets.platforms.length > 0 ? firm.markets.platforms.join(", ") : "—"}
-            </p>
+            {platformList.length === 0 && <p class="text-sm font-bold text-slate-800">—</p>}
+            {platformList.length > 0 && !platformOverflow && <p class="text-sm font-bold text-slate-800">{platformFull}</p>}
+            {platformOverflow && (
+              <div class="platform-toggle">
+                <p class="platform-short-wrap text-sm font-bold text-slate-800">
+                  {platformShort}
+                  <button type="button" class="platform-more-btn ml-1 text-xs font-bold text-teal-600 hover:text-teal-800 transition-colors cursor-pointer">+{platformExtra} more</button>
+                </p>
+                <p class="platform-full-wrap text-sm font-bold text-slate-800 hidden">
+                  {platformFull}
+                  <button type="button" class="platform-less-btn ml-1 text-xs font-bold text-teal-600 hover:text-teal-800 transition-colors cursor-pointer">Show less</button>
+                </p>
+              </div>
+            )}
           </div>
         </div>
 
@@ -987,6 +1004,20 @@ const youtubeId = review.youtubeUrl?.match(/(?:embed\/|v=|youtu\.be\/)([a-zA-Z0-
       );
       observer.observe(section);
     }
+
+    // Platform toggle (show more / show less)
+    document.querySelectorAll<HTMLElement>(".platform-toggle").forEach((toggle) => {
+      const shortWrap = toggle.querySelector<HTMLElement>(".platform-short-wrap")!;
+      const fullWrap = toggle.querySelector<HTMLElement>(".platform-full-wrap")!;
+      toggle.querySelector(".platform-more-btn")?.addEventListener("click", () => {
+        shortWrap.classList.add("hidden");
+        fullWrap.classList.remove("hidden");
+      });
+      toggle.querySelector(".platform-less-btn")?.addEventListener("click", () => {
+        fullWrap.classList.add("hidden");
+        shortWrap.classList.remove("hidden");
+      });
+    });
 
     // FAQ accordion
     document.querySelectorAll<HTMLButtonElement>(".faq-trigger").forEach((btn) => {

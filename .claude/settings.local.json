@@ -103,7 +103,11 @@
       "Bash(rm -rf src/content/guides)",
       "Bash(rm -rf src/pages/guides)",
       "Bash(taskkill //F //IM node.exe)",
-      "Bash(rm -rf .astro/data-store.json .astro/collections)"
+      "Bash(rm -rf .astro/data-store.json .astro/collections)",
+      "Bash(grep -A5 '\"\"custom\"\"' src/content/prop-firms/fundednext.json)",
+      "Bash(grep -A5 '\"\"custom\"\"' src/content/prop-firms/fundednext-futures.json)",
+      "Bash(grep '\"\"trustpilotRating\"\"' src/content/prop-firms/fundednext-futures.json)",
+      "Bash(grep '\"\"overallScore\"\"' src/content/reviews/rev-fundednext-futures.json)"
     ]
   }
 }

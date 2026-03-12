@@ -1,12 +1,56 @@
 {
   "id": "rev-tradeday",
   "propFirmId": "d0000032-0000-0000-0000-000000000032",
-  "summary": "TradeDay is a futures prop firm offering funded accounts up to $250K with competitive evaluation requirements and multiple platform options.",
-  "pros": ["Up to $250K funded accounts", "100% profit split potential", "Multiple platform options"],
-  "cons": ["Limited track record", "Monthly subscription fees"],
-  "bestFor": "Futures traders wanting large account sizes",
-  "notIdealFor": "Traders seeking forex or CFD markets",
+  "summary": "TradeDay scored 63/100 in our 2026 review. The firm offers three one-step futures evaluations — Intraday, End of Day (EOD), and Static — with account sizes of $50K, $100K, and $150K. Evaluations require a minimum of 5 trading days, and no single day's profit may exceed 30% of total profit.\n\nTradeDay is day-trading only — all positions must be closed before the market closes and at least 10 minutes prior to the end of any session. No holding positions over tier 1 market data releases. Three drawdown models are available: Intraday trailing max drawdown, EOD trailing max drawdown, and Static fixed drawdown. Drawdowns vary by product and size (e.g. $50K Intraday has $2,000 trailing max drawdown, $100K Intraday has $3,000, $150K Intraday has $4,000, while Static accounts use fixed drawdowns from $500 to $1,000).\n\nProfit share starts at 80% from day one, with the potential to reach 95%. Day one payouts are marketed with no restrictions on withdrawal frequency. Monthly membership stops once funded, and funded traders do not pay additional commission on trading. No activation fee applies.\n\nThe firm operates on futures only across CME, CBOT, NYMEX, and COMEX. Stocks, options, forex, cryptocurrency, and CFDs are not permitted. Platforms include NinjaTrader and Tradovate. Third-party trading bots and automated trading systems are banned, as is software or AI used to manipulate or gain an unfair advantage. TradeDay has operated since 2020 and published a pass rate of 28.2% (October 2023 – March 2024).",
+  "pros": [
+    "Day one payouts with no restrictions on withdrawal frequency",
+    "No activation fee for funded accounts",
+    "Funded traders do not pay additional commission",
+    "Monthly membership stops once funded",
+    "Three drawdown models: Intraday, EOD, and Static",
+    "Up to 95% profit share",
+    "Published pass rate of 28.2%",
+    "Strong educational package: webinars, research, live squawk, mentoring, courses, e-books, coaching"
+  ],
+  "cons": [
+    "Day-trading only — all positions closed before market close",
+    "No holding positions over tier 1 market data releases",
+    "30% consistency rule limits single-day profit contribution",
+    "Third-party bots and automated trading systems banned",
+    "Monthly subscription billing (non-refundable)",
+    "Younger firm (operating since 2020)",
+    "Copy trading rule not confirmed in source data",
+    "TradingView not verified as available platform"
+  ],
+  "bestFor": "Futures traders who want day one payouts, no activation fee, commission-free funded trading, three drawdown models, and a clear path to Funded Sim or Funded Live accounts with up to 95% profit share",
+  "notIdealFor": "Traders who need overnight or swing trading, those who rely on automated systems or bots, traders wanting forex, crypto, stocks, or CFD access, or those uncomfortable with strict day-trading-only rules and tier 1 news restrictions",
+  "overallScore": 63,
+  "categoryScores": { "challenges": 60, "spreads": 60, "markets": 50, "payouts": 70, "platforms": 70, "support": 80, "trust": 60 },
+  "categorySections": {
+    "challenges": "custom",
+    "spreads": "custom",
+    "markets": "custom",
+    "platforms": "custom",
+    "payouts": "custom",
+    "support": "custom",
+    "trust": "custom"
+  },
+  "verdictBlocks": [
+    {
+      "heading": "Our Final Verdict On TradeDay",
+      "body": "TradeDay scored 63/100 in our 2026 review. The firm offers three one-step futures evaluations — Intraday, EOD, and Static — with account sizes of $50K, $100K, and $150K. The evaluation requires a minimum of 5 trading days and a 30% consistency rule (no single day exceeding 30% of total profit).\n\nThe payout structure is one of TradeDay's stronger points. Profit share starts at 80% from day one with the potential to reach 95%. Day one payouts are marketed with no restrictions on withdrawal frequency. No activation fee applies, monthly membership stops once funded, and funded traders do not pay additional commission on trading. After passing, traders may receive either a Funded Sim or Funded Live account.\n\nThe firm is strictly day-trading only — all positions must be closed before market close and at least 10 minutes prior to end of any session. No holding over tier 1 market data releases. Third-party bots and automated trading systems are banned, as is software or AI used to manipulate or gain an unfair advantage. VPN/VPS use to mask location is also banned. Copy trading rules are not confirmed.\n\nTradeDay operates on futures only across CME, CBOT, NYMEX, and COMEX — no stocks, options, forex, crypto, or CFDs. Platforms include NinjaTrader and Tradovate. The educational package is strong, including webinars, research, live squawk, daily market commentary, Discord, mentoring, courses, e-books, and coaching. TradeDay has operated since 2020, publishes named leadership and office details, and reported a 28.2% pass rate between October 2023 and March 2024."
+    }
+  ],
+  "faq": [
+    { "q": "What evaluations does TradeDay offer?", "a": "TradeDay offers three one-step futures evaluations: Intraday (trailing max drawdown), End of Day (trailing max drawdown), and Static (fixed drawdown). Account sizes are $50K, $100K, and $150K. All require a minimum of 5 trading days and a 30% consistency rule." },
+    { "q": "What is TradeDay's profit split?", "a": "TradeDay pays 80% from day one, with the potential to reach 95%. Day one payouts are available with no restrictions on withdrawal frequency. Funded traders do not pay additional commission on trading, and no activation fee applies." },
+    { "q": "Is TradeDay legit?", "a": "TradeDay has operated since 2020 with named leadership and office details. The firm published a pass rate of 28.2% between October 2023 and March 2024. It is a younger firm compared to established competitors but shows transparency through published metrics." },
+    { "q": "What are TradeDay's trading rules?", "a": "TradeDay is day-trading only. All positions must be closed before market close and at least 10 minutes prior to end of any session. No holding over tier 1 market data releases. Third-party bots and automated trading systems are banned. No single day's profit may exceed 30% of total profit. Maximum contract limits apply per evaluation tier." },
+    { "q": "What markets does TradeDay support?", "a": "Futures only on CME, CBOT, NYMEX, and COMEX. Stocks, options, forex, cryptocurrency, and CFDs are not permitted. Platforms include NinjaTrader and Tradovate." }
+  ],
+  "verified": true,
+  "flagged": false,
+  "flaggedWarning": "",
   "methodologyVersion": "1.0",
-  "lastReviewedAt": "2026-02-26",
-  "verified": false
+  "lastReviewedAt": "2026-03-12"
 }

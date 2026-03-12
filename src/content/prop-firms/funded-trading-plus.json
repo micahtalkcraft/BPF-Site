@@ -8,30 +8,31 @@
   "evaluation": {
     "types": ["1-step", "2-step", "instant"],
     "profitTargets": { "phase1": 10, "phase2": 5 },
-    "dailyDrawdown": 6,
-    "maxDrawdown": 10,
+    "dailyDrawdown": null,
+    "maxDrawdown": null,
     "minTradingDays": 0,
-    "scalingPlan": true
+    "scalingPlan": true,
+    "notes": "Three core programmes: Instant Funding (no evaluation, 6% daily drawdown relative, 6% max drawdown relative, accounts $5K–$100K, withdraw from day 1 then every 7 days, must close positions before the weekend), 1-Step Express (10% profit target, 4% daily drawdown, 6% max drawdown relative, accounts $10K–$200K, withdraw from day 1 then every 7 days, overnight and weekend holding allowed), and 2-Step Classic (Phase 1: 10%, Phase 2: 5%, 4% daily drawdown, 8% max drawdown static, accounts $10K–$200K, 10-day payout cycle, consistency rule applies, overnight and weekend holding allowed). Legacy models (Master, Experienced, Advanced, Premium, Prestige Lite, Prestige Pro) are no longer the main offerings. Standard profit split is 80%, upgradable to 90% or 100% depending on account type or add-ons. Scaling plan increases accounts up to $2.5 million. Copy trading across accounts is prohibited. 30-day inactivity rule — accounts can be breached after 30 days with no trading activity. All trading takes place in a simulated environment with payouts based on simulated profits."
   },
   "pricing": {
     "challengeFees": [
-      { "accountSize": 12500, "fee": 119, "model": "experienced", "label": "Experienced (1-Step)" },
-      { "accountSize": 25000, "fee": 199, "model": "experienced", "label": "Experienced (1-Step)" },
-      { "accountSize": 50000, "fee": 349, "model": "experienced", "label": "Experienced (1-Step)" },
-      { "accountSize": 100000, "fee": 499, "model": "experienced", "label": "Experienced (1-Step)" },
-      { "accountSize": 200000, "fee": 949, "model": "experienced", "label": "Experienced (1-Step)" },
-      { "accountSize": 5000, "fee": 225, "model": "master", "label": "Master (Instant)" },
-      { "accountSize": 10000, "fee": 450, "model": "master", "label": "Master (Instant)" },
-      { "accountSize": 25000, "fee": 1125, "model": "master", "label": "Master (Instant)" },
-      { "accountSize": 50000, "fee": 2250, "model": "master", "label": "Master (Instant)" },
-      { "accountSize": 100000, "fee": 4500, "model": "master", "label": "Master (Instant)" }
+      { "accountSize": 10000, "fee": 119, "model": "1-step", "label": "1-Step Express" },
+      { "accountSize": 25000, "fee": 199, "model": "1-step", "label": "1-Step Express" },
+      { "accountSize": 50000, "fee": 349, "model": "1-step", "label": "1-Step Express" },
+      { "accountSize": 100000, "fee": 499, "model": "1-step", "label": "1-Step Express" },
+      { "accountSize": 200000, "fee": 949, "model": "1-step", "label": "1-Step Express" },
+      { "accountSize": 5000, "fee": 225, "model": "instant", "label": "Instant Funding" },
+      { "accountSize": 10000, "fee": 450, "model": "instant", "label": "Instant Funding" },
+      { "accountSize": 25000, "fee": 1125, "model": "instant", "label": "Instant Funding" },
+      { "accountSize": 50000, "fee": 2250, "model": "instant", "label": "Instant Funding" },
+      { "accountSize": 100000, "fee": 4500, "model": "instant", "label": "Instant Funding" }
     ],
     "resetFee": null,
     "refundPolicy": null
   },
   "payouts": {
-    "splitMax": 90,
-    "schedule": "3, 5, or 7-day cycles",
+    "splitMax": 100,
+    "schedule": "Programme-specific",
     "processingTime": null,
     "firstPayoutDays": null,
     "methods": ["Bank Transfer", "Crypto"]
@@ -39,13 +40,13 @@
   "rules": {
     "newsTrading": true,
     "weekendHolding": null,
-    "copyTrading": true,
+    "copyTrading": false,
     "expertAdvisors": true,
     "consistencyRule": null,
-    "notes": "Stop losses not mandatory but recommended. News trading allowed with caution per Risk Review Policy. EAs supported on MT4, MT5, and cTrader only (not DXTrade or Match-Trader). Copy trading allowed from personal accounts only, not between FTP accounts. Weekend holding varies: Experienced and Premium allow it; Advanced and Master require closing before Friday market close. No maximum trading day limits. Minimum trading days: none for Master, Experienced, and Advanced; 3 profitable days (0.5% min profit each) for Premium, Prestige Lite, and Prestige Pro. No consistency rules enforced. Scaling available up to $5 million on all funded programs."
+    "notes": "Three core programmes: Instant Funding, 1-Step Express, and 2-Step Classic. Copy trading across accounts is prohibited, including copying between FTP accounts or mirroring trades across multiple accounts. EAs supported on MT5 and cTrader only (not DXTrade or Match-Trader). Weekend holding: 1-Step Express and 2-Step Classic allow overnight and weekend holding; Instant Funding requires positions closed before the weekend. 2-Step Classic has a consistency rule limiting how much profit can come from a single day or trade. News trading allowed with caution per Risk Review Policy. 30-day inactivity rule — accounts can be breached after 30 days with no trading activity. Scaling available up to $2.5 million. All trading takes place in a simulated environment — payouts are based on simulated profits."
   },
   "markets": {
-    "platforms": ["DXTrade", "Match-Trader", "cTrader", "MT4", "MT5"],
+    "platforms": ["DXTrade", "Match-Trader", "cTrader", "MT5"],
     "instruments": "Forex, Commodities, Indices, Crypto"
   },
   "trust": {
@@ -64,9 +65,9 @@
     "email": true
   },
   "custom": {
-    "tags": ["Instant Funding", "Six Challenge Types", "Scaling to $5M", "Flexible Payouts"]
+    "tags": ["Instant Funding", "Three Programme Types", "Scaling to $2.5M", "Up to 100% Profit Split"]
   },
-  "lastVerifiedAt": "2026-02-24",
-  "lastUpdatedAt": "2026-02-24",
+  "lastVerifiedAt": "2026-03-11",
+  "lastUpdatedAt": "2026-03-11",
   "dataSources": ["https://www.fundedtradingplus.com/"]
 }

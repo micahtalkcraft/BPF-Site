@@ -1,25 +1,25 @@
 {
   "id": "rev-aquafunded",
   "propFirmId": "d0000040-0000-0000-0000-000000000040",
-  "summary": "AquaFunded scored 55/100 overall. It offers a wide range of challenge types, from 1-step to instant funding, with no time limits and solid platform access. But post-funding rules are stricter than most competitors, and key details like average spreads and rule enforcement clarity are missing.\n\nThe trading platform selection is solid — MT5, TradeLocker, and Match Trader — and pricing is transparent at the commission level. Optional add-ons unlock fast payouts and 100% profit splits. However, with no average spreads published, no resets, and a Trustpilot profile flagged for fake reviews, AquaFunded is best suited to experienced traders who can manage its limitations.",
+  "summary": "AquaFunded scored 55/100 overall. It offers a wide range of challenge types, from 1-step to instant funding, with no time limits and solid platform access. But post-funding rules are stricter than most competitors, and key details like average spreads and rule enforcement clarity are missing.\n\nThe platform selection now includes four options — MT5, TradeLocker, Match Trader, and cTrader (with added fee) — and pricing is transparent at the commission level. The standard profit split is 90%, with 100% available via add-on. AquaFunded has also expanded beyond CFDs with AquaFutures for futures trading and AquaFunded Crypto as a dedicated crypto product. However, with no average spreads published, no resets, and a Trustpilot profile flagged for fake reviews, AquaFunded is best suited to experienced traders who can manage its limitations.",
   "pros": [
     "Instant funding accounts up to $200K",
-    "Scaling plan up to $2 million",
+    "Scaling plan up to $4 million",
     "EAs and automated trading allowed",
-    "Three platform choices: MT5, TradeLocker, Match Trader",
+    "Four platform choices: MT5, TradeLocker, Match Trader, cTrader",
     "No time limits on evaluations",
-    "100% profit split available with add-on"
+    "Separate AquaFutures and AquaFunded Crypto product lines"
   ],
   "cons": [
     "No average spreads published",
-    "Stocks and futures not available",
+    "Standard profit split is 90% — 100% only available via paid add-on",
     "Strict post-funding consistency rules (15-40%)",
     "Trustpilot profile flagged for fake reviews",
     "No reset option available",
-    "News trading restricted once funded"
+    "News trading restricted on funded accounts (5-minute window around high-impact events)"
   ],
-  "bestFor": "Experienced traders who want flexible evaluation choices including instant funding, scaling potential to $2M, and are comfortable managing strict post-funding consistency rules",
-  "notIdealFor": "Beginners needing guidance, traders who want published spread data, stock/futures access, reset options, or those who prefer transparent trust signals without Trustpilot issues",
+  "bestFor": "Experienced traders who want flexible evaluation choices including instant funding, scaling potential to $4M, and are comfortable managing strict post-funding consistency rules across CFD, futures, and crypto products",
+  "notIdealFor": "Beginners needing guidance, traders who want published spread data, reset options, or those who prefer transparent trust signals without Trustpilot issues",
   "overallScore": 55,
   "categoryScores": {
     "challenges": 50,
@@ -42,13 +42,13 @@
   "verdictBlocks": [
     {
       "heading": "Our Final Verdict On AquaFunded",
-      "body": "AquaFunded offers a wide range of models with unlimited evaluation time and competitive pricing, which gives you flexibility — especially if you're looking to ease into prop trading with lower pressure. The variety of funding types, from 1-step to instant accounts, is a strength. But rule enforcement, strict post-funding consistency filters, and no reset options create friction. These issues are especially risky for beginner traders who may miss fine-print rules on trailing drawdowns or profit distribution.\n\nThe trading platform selection is solid, spreads are raw, and the $5/lot commission is reasonable, but transparency falls short due to missing average spread data and undisclosed liquidity providers. Customer support is fast, and the Discord community is active, but a flagged Trustpilot profile and low response rate to negative reviews raise concerns. With a total score of 55/100, AquaFunded sits in the middle of the pack. It's a decent option if you're confident managing strict rules, but there are more trader-friendly prop firms out there."
+      "body": "AquaFunded offers a wide range of models with unlimited evaluation time and competitive pricing, which gives you flexibility — especially if you're looking to ease into prop trading with lower pressure. The variety of funding types, from 1-step to instant accounts, is a strength, and the brand has expanded with AquaFutures for futures trading and AquaFunded Crypto as a dedicated crypto product.\n\nThe platform selection is solid with four options — MT5, TradeLocker, Match Trader, and cTrader — spreads are raw, and the $5/lot commission is reasonable. The standard profit split is 90%, with 100% available via add-on. Scaling now goes up to $4 million. However, transparency falls short due to missing average spread data and undisclosed liquidity providers. Customer support is fast, and the Discord community is active, but a flagged Trustpilot profile and low response rate to negative reviews raise concerns.\n\nOn the rules side, news trading is allowed during evaluation but restricted on funded accounts — you cannot open or close trades within 5 minutes before or after high-impact news, including FOMC statements and speeches. Hedging is allowed within the same account only, and cross-user copy trading is prohibited. Accounts breach after 30 days of inactivity. With a total score of 55/100, AquaFunded sits in the middle of the pack. It's a decent option if you're confident managing strict rules, but there are more trader-friendly prop firms out there."
     }
   ],
   "faq": [
     {
       "q": "How long does it take for AquaFunded to payout?",
-      "a": "AquaFunded processes payouts every 14 days, or in 7 days if you purchase the fast-payout add-on. The first payout is available 14 days after your first funded trade, and all payments are handled via Riseworks through crypto or bank transfer."
+      "a": "AquaFunded processes payouts every 14 days as standard, with a first reward on demand upgrade available. The first payout is available 14 days after your first funded trade under the standard schedule, and all payments are handled via Riseworks through crypto or bank transfer."
     },
     {
       "q": "Which broker does AquaFunded use?",
@@ -56,7 +56,7 @@
     },
     {
       "q": "What is the maximum loss on AquaFunded?",
-      "a": "The maximum loss on AquaFunded depends on the account type, but ranges from 5% to 10% of your account balance. Instant accounts use a trailing drawdown model, while some evaluation models use fixed limits based on your starting balance."
+      "a": "The maximum loss on AquaFunded depends on the account type and challenge model. For the standard forex challenge framework, the daily drawdown is 4% and the max drawdown is 8%. Other models vary — for example, the 1-Step Standard uses 3% daily / 6% trailing, while the 2-Step Pro uses 5% daily / 10% trailing. Instant accounts use a trailing drawdown model."
     },
     {
       "q": "What is the minimum withdrawal from AquaFunded?",
@@ -66,5 +66,5 @@
   "verified": true,
   "flagged": false,
   "methodologyVersion": "1.0",
-  "lastReviewedAt": "2026-02-27"
+  "lastReviewedAt": "2026-03-11"
 }

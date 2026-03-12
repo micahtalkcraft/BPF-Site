@@ -7,53 +7,53 @@
   "evaluation": {
     "types": ["1-step"],
     "profitTargets": { "phase1": 6 },
-    "dailyDrawdown": 3,
-    "maxDrawdown": 7,
+    "dailyDrawdown": null,
+    "maxDrawdown": null,
     "minTradingDays": 0,
     "scalingPlan": true
   },
   "pricing": {
     "challengeFees": [
-      { "accountSize": 5000, "fee": 59, "model": "day-beginner" },
-      { "accountSize": 25000, "fee": 120, "model": "day-beginner" },
-      { "accountSize": 50000, "fee": 285, "model": "day-beginner" },
-      { "accountSize": 100000, "fee": 545, "model": "day-beginner" },
-      { "accountSize": 200000, "fee": 1475, "model": "day-beginner" },
-      { "accountSize": 5000, "fee": 47, "model": "day-advanced" },
-      { "accountSize": 25000, "fee": 97, "model": "day-advanced" },
-      { "accountSize": 50000, "fee": 230, "model": "day-advanced" },
-      { "accountSize": 100000, "fee": 435, "model": "day-advanced" },
-      { "accountSize": 200000, "fee": 1100, "model": "day-advanced" },
-      { "accountSize": 2000, "fee": 87, "model": "swing-beginner" },
-      { "accountSize": 10000, "fee": 420, "model": "swing-beginner" },
-      { "accountSize": 20000, "fee": 670, "model": "swing-beginner" },
-      { "accountSize": 40000, "fee": 1240, "model": "swing-beginner" },
-      { "accountSize": 2000, "fee": 69, "model": "swing-advanced" },
-      { "accountSize": 10000, "fee": 297, "model": "swing-advanced" },
-      { "accountSize": 20000, "fee": 447, "model": "swing-advanced" },
-      { "accountSize": 40000, "fee": 800, "model": "swing-advanced" }
+      { "accountSize": 5000, "fee": 59, "model": "day-flex" },
+      { "accountSize": 25000, "fee": 120, "model": "day-flex" },
+      { "accountSize": 50000, "fee": 285, "model": "day-flex" },
+      { "accountSize": 100000, "fee": 545, "model": "day-flex" },
+      { "accountSize": 200000, "fee": 1475, "model": "day-flex" },
+      { "accountSize": 5000, "fee": 47, "model": "day-max" },
+      { "accountSize": 25000, "fee": 97, "model": "day-max" },
+      { "accountSize": 50000, "fee": 230, "model": "day-max" },
+      { "accountSize": 100000, "fee": 435, "model": "day-max" },
+      { "accountSize": 200000, "fee": 1100, "model": "day-max" },
+      { "accountSize": 2000, "fee": 87, "model": "swing-flex" },
+      { "accountSize": 10000, "fee": 420, "model": "swing-flex" },
+      { "accountSize": 20000, "fee": 670, "model": "swing-flex" },
+      { "accountSize": 40000, "fee": 1240, "model": "swing-flex" },
+      { "accountSize": 2000, "fee": 69, "model": "swing-max" },
+      { "accountSize": 10000, "fee": 297, "model": "swing-max" },
+      { "accountSize": 20000, "fee": 447, "model": "swing-max" },
+      { "accountSize": 40000, "fee": 800, "model": "swing-max" }
     ],
     "resetFee": null,
-    "refundPolicy": "No fee refund on challenges. Some payout methods may include processing fees."
+    "refundPolicy": "No fee refund on challenge fees."
   },
   "payouts": {
     "splitMax": 70,
-    "schedule": "Bi-weekly (14 days)",
+    "schedule": "Bi-weekly (14 days after account inception or 14 days after previous withdrawal). Flex accounts require 3 separate trading days with at least 0.5% profit each within 14-day period to be eligible.",
     "processingTime": "1-2 business days",
     "firstPayoutDays": 14,
-    "methods": ["credit card", "PayPal", "SEPA", "iDeal"]
+    "methods": ["wire transfer", "crypto", "Hub credits", "credit card"]
   },
   "rules": {
-    "newsTrading": null,
-    "weekendHolding": true,
-    "copyTrading": false,
-    "expertAdvisors": false,
+    "newsTrading": true,
+    "weekendHolding": null,
+    "copyTrading": null,
+    "expertAdvisors": null,
     "consistencyRule": "30-50% rule (best trade cannot exceed 30-50% of total profit, varies by program)",
-    "notes": "Stock and ETF prop firm only. All trading is simulated. Minimum 30-second hold per trade. Minimum 10-cent movement for profitable trades. Volume capped at 5% of previous one-minute volume. Day accounts must be flat before close. Swing accounts allow overnight and weekend holding. Operated by Five Percent Online Ltd (The 5%ers)."
+    "notes": "Stock and ETF prop firm only — no futures, options, forex, crypto, or CFDs. Spot-style stock trading. Four one-step programmes: Day Flex (2% daily pause, 4% max loss, unlimited days, 50% consistency), Day Max (1% daily pause, 3% max loss, 60 days, 30% consistency), Swing Flex (3% daily pause, 7% max loss, unlimited days, 50% consistency), Swing Max (3% daily pause, 7% max loss, 100 days, 30% consistency). Evaluation accounts are simulated. Funded accounts may be live and/or simulated depending on risk management decisions. 12,000+ stocks and ETFs in regular trading; 24/5 overnight session via Blue Ocean covers ~3,500 symbols. Day accounts: at 15:50 ET active and pending orders are liquidated, but after 16:00 ET traders can open new overnight positions subject to reduced overnight buying power. Swing accounts allow full overnight and weekend holding. News trading is allowed; the restriction is on scheduled earnings reports for overnight positions, where trades can be liquidated or tickers disabled. Copy trading allowed under strict limits: maximum 2 of your own accounts, TraderEvolution copy feature on evaluation accounts only, manual copy trading on both evaluation and funded accounts. Not allowed between different traders. Automated trading restricted in evaluation; SignalStack being trialled in beta for funded accounts. Minimum 30-second hold per trade. Minimum 10-cent movement for profitable trades — dashboard rounding can make borderline trades look valid when they are not. Volume cap: opening trades cannot exceed 5% of the previous one-minute candle volume for that instrument, or the most recent one-minute candle with volume if the prior minute had none. Minimum withdrawal $300 (general) or $150 ($5K funded accounts). Flex funded accounts need 3 separate trading days with at least 0.5% profit each within a 14-day period to be eligible for withdrawal; Max accounts do not have this rule. Payouts via wire transfer, crypto, Hub credits, or credit card. Funded scaling: after reaching 10% validated profit based on buying power, buying power increases by 5% and daily pause increases by 10% at each scale step. TraderEvolution desktop does not support Mac; web terminal and iOS app are available. Operated by Five Percent Online Ltd (The 5%ers)."
   },
   "markets": {
     "platforms": ["TraderEvolution"],
-    "instruments": "US Stocks and ETFs (12,000+ symbols via NASDAQ, NYSE, CBOE)"
+    "instruments": "US Stocks and ETFs (12,000+ symbols via NASDAQ, NYSE, CBOE in regular trading; ~3,500 symbols via Blue Ocean for 24/5 overnight session). No futures, options, forex, crypto, or CFDs."
   },
   "trust": {
     "trustpilotRating": 4.5,
@@ -71,7 +71,7 @@
   "custom": {
     "tags": ["US Stocks & ETFs", "12,000+ Symbols", "Real Exchange Data", "One-Step Evaluation"]
   },
-  "lastVerifiedAt": "2026-02-27",
-  "lastUpdatedAt": "2026-02-27",
+  "lastVerifiedAt": "2026-03-11",
+  "lastUpdatedAt": "2026-03-11",
   "dataSources": ["https://tradethepool.com"]
 }

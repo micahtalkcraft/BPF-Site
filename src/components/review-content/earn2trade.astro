@@ -1,0 +1,630 @@
+---
+// Static editorial content for Earn2Trade
+// Supports multiple sections via the `section` prop
+interface Props {
+  section: string;
+  fallbackBody?: string;
+}
+const { section, fallbackBody } = Astro.props;
+---
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* CHALLENGES SECTION                                                  */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "challenges" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    Earn2Trade offers two one-step futures evaluations: <strong>Trader Career Path (TCP)</strong> and <strong>Gauntlet Mini</strong>. Both are monthly subscription products that continue until the trader passes, cancels, or changes plan — there is no fixed evaluation end date.
+  </p>
+
+  <p class="mb-4">
+    Both products require a <strong>minimum of 10 trading days</strong> to pass. All trading must occur during <strong>approved times only</strong>, and all positions must be closed by <strong>15:50 CT</strong> — no overnight positions are allowed. The <strong>8.89% pass rate in 2025</strong> underscores the difficulty, and Earn2Trade itself states the evaluations are <strong>not suggested for people with little trading experience</strong>.
+  </p>
+
+  <!-- Product cards -->
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Trader Career Path (TCP)</p>
+      <p class="mb-2">Account sizes: <strong>TCP25, TCP50, TCP100</strong>. The $400K figure is part of the TCP growth plan (progression ladder), not the starting evaluation size. Includes <strong>one free reset at each renewal</strong>. Monthly subscription from <strong>$150/month</strong>.</p>
+      <p class="text-xs text-slate-500">Funded path leads to LiveSim or Live accounts with progression ladder and payout caps.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Gauntlet Mini</p>
+      <p class="mb-2">Account sizes: <strong>GAU50, GAU100, GAU150, GAU200</strong>. Monthly subscription from <strong>$170/month</strong>. <strong>No free resets</strong> — monthly rebilling does not reset the account.</p>
+      <p class="text-xs text-slate-500">Funded path leads to LiveSim or Live accounts with different payout caps than TCP.</p>
+    </div>
+  </div>
+
+  <!-- Key specs -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Evaluation Structure</h3>
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 mb-4">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Fee Type</p>
+      <p class="text-sm font-bold text-amber-600">Monthly Sub</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Duration</p>
+      <p class="text-sm font-bold text-slate-800">Until pass/cancel</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Trading Days</p>
+      <p class="text-sm font-bold text-amber-600">10 days</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Pass Rate (2025)</p>
+      <p class="text-sm font-bold text-red-600">8.89%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Overnight</p>
+      <p class="text-sm font-bold text-red-600">Not Allowed</p>
+    </div>
+  </div>
+
+  <!-- Daily loss limits -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Daily Loss Limits (Dollar-Based)</h3>
+  <p class="mb-3">
+    Earn2Trade uses <strong>dollar-based daily loss limits</strong>, not a single universal percentage. Limits vary by account size and product:
+  </p>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account</th>
+          <th class="px-4 py-3 text-center">Daily Loss Limit</th>
+          <th class="px-4 py-3 text-center">EOD Drawdown</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">TCP25</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$550</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$1,500</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">TCP50</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$1,100</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$2,000</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">TCP100</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$2,200</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$3,500</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Funded account details -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Funded Account Structure</h3>
+  <p class="mb-3">
+    After passing, traders are funded on either a <strong>Live</strong> or <strong>LiveSim</strong> account. In 2025, <strong>94.77% of passers traded LiveSim accounts</strong> and only 5.23% traded Live accounts. LiveSim uses EOD drawdown, while Live accounts use trailing drawdown.
+  </p>
+
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-4">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
+      <p class="text-sm font-bold text-amber-600">80/20</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">LiveSim %</p>
+      <p class="text-sm font-bold text-slate-800">94.77% of passers</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Activation Fee</p>
+      <p class="text-sm font-bold text-slate-800">$139 from 1st withdrawal</p>
+    </div>
+  </div>
+
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
+    <p class="text-sm font-bold text-amber-900 mb-1">Funded Rules Are Restrictive</p>
+    <p class="text-sm text-amber-800">
+      Verified funded rules include 80/20 split, ongoing approved-times and daily-loss rules, progression ladder, LiveSim EOD drawdown (or Live trailing drawdown), monthly data fees unless the trader already has their own feed, and <strong>termination after five consecutive unscheduled trading-day absences</strong>. Progression-ladder violations block the evaluation for the day but do not automatically require a reset.
+    </p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-amber-500 bg-amber-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-amber-800 mb-1">Verdict on Challenges — 4/10</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Two distinct evaluation products offer some variety, but the structure is demanding. Minimum 10 trading days, approved times only, no overnight positions, and an 8.89% pass rate make these evaluations challenging even for experienced traders. The firm itself warns they are not suitable for beginners. TCP's free reset at renewal is a plus, but Gauntlet Mini offers no resets. The funded-stage rules — 80/20 split, LiveSim payout caps, data fees, and the 5-day inactivity termination rule — make the overall path less trader-friendly than stronger competitors.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SPREADS / PRICING SECTION                                          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "spreads" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-3">
+    Both Earn2Trade products use <strong>monthly subscription billing</strong> that continues until the trader passes, cancels, or changes plan. Trader Career Path starts from <strong>$150/month</strong> and Gauntlet Mini from <strong>$170/month</strong>.
+  </p>
+
+  <p class="mb-4">
+    <strong>Non-professional traders</strong> do not pay out-of-pocket data fees during the evaluation. Professional traders pay monthly exchange fees. Live funded accounts have ongoing data costs unless the trader uses their own data feed. There is no upfront activation fee for non-professional LiveSim users — instead, a <strong>one-time $139 fee is deducted from the first withdrawal</strong> if profits are made.
+  </p>
+
+  <!-- Fee structure overview -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">TCP From</p>
+      <p class="text-sm font-bold text-slate-800">$150/month</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Gauntlet From</p>
+      <p class="text-sm font-bold text-slate-800">$170/month</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Billing</p>
+      <p class="text-sm font-bold text-amber-600">Monthly Recurring</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Activation</p>
+      <p class="text-sm font-bold text-slate-800">$139 from 1st payout</p>
+    </div>
+  </div>
+
+  <!-- Withdrawal fees -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Withdrawal Fees</h3>
+  <p class="mb-3">
+    The minimum net withdrawal is <strong>$100</strong>. Withdrawal fees depend on the payment method and are not optional — methods are assigned by the firm:
+  </p>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Method</th>
+          <th class="px-4 py-3 text-right">Fee</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Rise (Non-US)</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$50</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Rise (US)</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">1.5%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Deel</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$50</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Bayzat</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">$5–$40</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Direct Crypto</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">0.735%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-red-500 bg-red-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-red-800 mb-1">Verdict on Pricing — 3/10</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Monthly subscription billing with no fixed end date means costs accumulate the longer it takes to pass. TCP from $150/month and Gauntlet Mini from $170/month are steep compared to one-time fee competitors. While non-professional traders don't pay data fees during evaluation, funded accounts incur ongoing data costs. The $139 activation fee deducted from the first withdrawal and per-withdrawal fees (up to $50) add further cost layers. TCP's free reset at renewal is a helpful inclusion, but Gauntlet Mini offers no resets.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* MARKETS SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "markets" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Earn2Trade is <strong>futures only</strong>. Allowed instruments are traded on <strong>CME, COMEX, NYMEX, and CBOT</strong>. Stocks, options, forex, crypto, and CFDs are not permitted or available.
+  </p>
+
+  <!-- Market coverage -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+    <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900 mb-1">CME</p>
+      <p class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Equity & Currency</p>
+      <p class="text-xs text-slate-400 mt-1">ES, NQ, 6E, 6B + more</p>
+    </div>
+    <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900 mb-1">CBOT</p>
+      <p class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Agricultural & Bonds</p>
+      <p class="text-xs text-slate-400 mt-1">ZC, ZW, ZS, ZB + more</p>
+    </div>
+    <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900 mb-1">NYMEX</p>
+      <p class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Energy</p>
+      <p class="text-xs text-slate-400 mt-1">CL, NG, HO, RB</p>
+    </div>
+    <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900 mb-1">COMEX</p>
+      <p class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Metals</p>
+      <p class="text-xs text-slate-400 mt-1">GC, SI, HG + more</p>
+    </div>
+  </div>
+
+  <!-- Exchange limitations -->
+  <div class="rounded-xl border border-red-200 bg-red-50 p-4 mb-6">
+    <p class="text-sm font-bold text-red-900 mb-1">No ICE or EUREX</p>
+    <p class="text-sm text-red-800">
+      Earn2Trade does <strong>not offer ICE or EUREX</strong> exchanges. Traders requiring access to European exchange futures or ICE products will need to look elsewhere.
+    </p>
+  </div>
+
+  <div class="rounded-xl border border-slate-200 bg-white p-4 mb-6">
+    <p class="text-sm font-bold text-slate-900 mb-1">Futures Only</p>
+    <p class="text-sm text-slate-700">
+      Stocks, options, forex, crypto, and CFDs are <strong>not permitted or available</strong>. All trading is limited to CME Group futures contracts.
+    </p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-amber-500 bg-amber-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-amber-800 mb-1">Verdict on Markets — 5/10</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Coverage of the core CME Group exchanges (CME, CBOT, NYMEX, COMEX) provides access to the major US futures markets. However, the absence of ICE and EUREX limits options for traders wanting European or broader commodity futures. The futures-only restriction means this firm serves a narrower market segment than multi-asset competitors.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PLATFORMS SECTION                                                   */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "platforms" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Earn2Trade's verified platform stack includes <strong>NinjaTrader</strong>, <strong>Finamark</strong>, and <strong>Rithmic</strong>. R Trader is tied to the Rithmic feed rather than being presented as a main retail platform on the product pages.
+  </p>
+
+  <!-- Platform cards -->
+  <div class="space-y-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">NinjaTrader</p>
+      <p>Advanced charting, strategy automation, and custom indicators. The primary platform for most Earn2Trade users with full feature support including Market Replay and backtesting capabilities.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Finamark</p>
+      <p>Alternative charting and trading platform. Provides a different interface option for traders who prefer it over NinjaTrader.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Rithmic</p>
+      <p>High-speed execution and low-latency data feeds. Provides the underlying data infrastructure for the platform stack.</p>
+    </div>
+  </div>
+
+  <!-- Trading rules -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Rule</th>
+          <th class="px-4 py-3 text-center">Status</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Min Trading Days</td>
+          <td class="px-4 py-3 text-center"><span class="text-amber-600 font-semibold">10 days minimum</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Trading Hours</td>
+          <td class="px-4 py-3 text-center"><span class="text-amber-600 font-semibold">Approved times only</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Overnight Positions</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">Not allowed — close by 15:50 CT</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Copy Trading</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">Not allowed (TCP & Gauntlet Mini)</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Expert Advisors / Automation</td>
+          <td class="px-4 py-3 text-center"><span class="text-amber-600 font-semibold">Not clearly allowed — see warning</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">News Trading</td>
+          <td class="px-4 py-3 text-center"><span class="text-amber-600 font-semibold">Not confirmed in source data</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Progression Ladder</td>
+          <td class="px-4 py-3 text-center"><span class="text-slate-900 font-semibold">Violations block for day, no auto-reset</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Daily Loss Limits</td>
+          <td class="px-4 py-3 text-center"><span class="text-slate-900 font-semibold">Dollar-based, varies by account</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
+    <p class="text-sm font-bold text-amber-900 mb-1">Automation Warning</p>
+    <p class="text-sm text-amber-800">
+      EAs are not clearly allowed. The prohibited-conduct wording warns against <strong>software, AI, or ultra-fast data entry techniques</strong> that could manipulate the trading environment or give an unfair advantage. News trading is also not explicitly confirmed. Traders who rely on automation should confirm rules directly with support before purchasing.
+    </p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Platforms — 7/10</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      NinjaTrader, Finamark, and Rithmic provide a solid platform stack for futures trading with advanced charting, automation capabilities (where allowed), and reliable data feeds. The platform offering itself is competitive. However, the restrictive trading rules — approved times only, no overnight positions, no copy trading, and unclear EA rules — significantly constrain how traders can use these platforms.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PAYOUTS SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "payouts" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    The profit split is <strong>80/20 in the trader's favour</strong>. Withdrawals are processed <strong>once a week on Wednesdays</strong>, with the request due by 2pm on the prior Friday. Minimum net withdrawal is <strong>$100</strong>. Withdrawal methods are <strong>assigned by the firm</strong> and are not optional.
+  </p>
+
+  <!-- Payout overview grid -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
+      <p class="text-sm font-bold text-amber-600">80/20</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Processing</p>
+      <p class="text-sm font-bold text-slate-800">Weekly (Wed)</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Withdrawal</p>
+      <p class="text-sm font-bold text-slate-800">$100 net</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Method Choice</p>
+      <p class="text-sm font-bold text-red-600">Assigned by firm</p>
+    </div>
+  </div>
+
+  <!-- LiveSim payout caps -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">LiveSim Payout Caps</h3>
+  <p class="mb-3">
+    The bigger issue beyond the 80% split is the LiveSim payout cap structure. In 2025, <strong>94.77% of passers traded LiveSim accounts</strong>:
+  </p>
+  <div class="space-y-3 mb-6">
+    <div class="rounded-lg bg-amber-50 border border-amber-200 p-4">
+      <p class="font-bold text-amber-900 mb-1">Gauntlet Mini LiveSim</p>
+      <p class="text-sm text-amber-800">Can withdraw up to <strong>$4,000</strong> after reaching $5,000 profit. LiveSim status ends after the first $5,000 minus the 20% split.</p>
+    </div>
+    <div class="rounded-lg bg-amber-50 border border-amber-200 p-4">
+      <p class="font-bold text-amber-900 mb-1">Trader Career Path LiveSim</p>
+      <p class="text-sm text-amber-800">Withdrawals are capped at the <strong>corresponding profit target minus 20%</strong>.</p>
+    </div>
+  </div>
+
+  <!-- Payment methods -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payment Methods</h3>
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="font-bold text-slate-900 mb-1">Rise</p>
+      <p class="text-xs text-slate-500">$50 (non-US) / 1.5% (US)</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="font-bold text-slate-900 mb-1">Deel</p>
+      <p class="text-xs text-slate-500">$50 fee</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="font-bold text-slate-900 mb-1">Bayzat</p>
+      <p class="text-xs text-slate-500">$5–$40 fee</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="font-bold text-slate-900 mb-1">Direct Crypto</p>
+      <p class="text-xs text-slate-500">0.735% fee</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-amber-500 bg-amber-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-amber-800 mb-1">Verdict on Payouts — 4/10</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      The 80/20 split is below the industry average, and the real drag comes from the LiveSim payout caps that affect nearly 95% of funded traders. Gauntlet Mini caps withdrawals at $4,000 until $5,000 profit, and TCP caps at profit target minus 20%. Weekly processing is decent, but withdrawal methods are assigned (not chosen), and fees range from $5 to $50 per withdrawal. The overall payout structure is significantly less trader-friendly than firms offering 80–100% splits with fewer restrictions.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SUPPORT SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "support" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Earn2Trade provides support through a <strong>Help Centre</strong>, support contact pages, and customer support commitments. The specific support channels (live chat, email as a defined pair) are not confirmed in the source data.
+  </p>
+
+  <!-- Support channels -->
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Channel</th>
+          <th class="px-4 py-3 text-center">Status</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Help Centre</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Available</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Support Contact Pages</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Available</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Customer Support Commitment</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Published</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Live Chat / Email (specific pair)</td>
+          <td class="px-4 py-3 text-center"><span class="text-amber-600 font-semibold">Not confirmed in source data</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Education -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Educational Resources</h3>
+  <p class="mb-3">
+    Education is Earn2Trade's clearest strength. The firm provides comprehensive learning resources well beyond basic introductory content:
+  </p>
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-6">
+    <div class="rounded-lg bg-teal-50 border border-teal-100 px-3 py-2 text-center">
+      <p class="text-sm font-bold text-teal-800">Full Eval Material</p>
+      <p class="text-xs text-teal-600">Included during evaluation</p>
+    </div>
+    <div class="rounded-lg bg-teal-50 border border-teal-100 px-3 py-2 text-center">
+      <p class="text-sm font-bold text-teal-800">Journalytix</p>
+      <p class="text-xs text-teal-600">Trading journal access</p>
+    </div>
+    <div class="rounded-lg bg-teal-50 border border-teal-100 px-3 py-2 text-center">
+      <p class="text-sm font-bold text-teal-800">Webinars</p>
+      <p class="text-xs text-teal-600">Live learning sessions</p>
+    </div>
+    <div class="rounded-lg bg-teal-50 border border-teal-100 px-3 py-2 text-center">
+      <p class="text-sm font-bold text-teal-800">Articles & Videos</p>
+      <p class="text-xs text-teal-600">Written + video content</p>
+    </div>
+    <div class="rounded-lg bg-teal-50 border border-teal-100 px-3 py-2 text-center">
+      <p class="text-sm font-bold text-teal-800">Crash Course</p>
+      <p class="text-xs text-teal-600">60 short lessons for beginners</p>
+    </div>
+    <div class="rounded-lg bg-teal-50 border border-teal-100 px-3 py-2 text-center">
+      <p class="text-sm font-bold text-teal-800">Help Centre</p>
+      <p class="text-xs text-teal-600">Guides + FAQs</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Support — 7/10</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Earn2Trade's educational offering is genuinely strong — full evaluation material, Journalytix, webinars, articles, videos, and a 60-lesson Beginner Crash Course set it apart from firms that offer minimal learning resources. Support infrastructure includes a Help Centre, contact pages, and published commitments, though the exact support channel mix (live chat, email) is not confirmed. The education alone makes this a 7/10 — without it, the support score would be lower.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* TRUST SECTION                                                       */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "trust" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    Earn2Trade has operated since <strong>2016</strong>, making it one of the longer-running futures prop firms. The firm holds a <strong>4.7/5 TrustPilot rating</strong> from over 4,500 reviews. Current operating metrics show <strong>6,400+ traders funded in 2025</strong> and <strong>4,500+ live trading accounts</strong>.
+  </p>
+
+  <!-- Trust stats grid -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+    <div class="rounded-xl bg-slate-50 border border-slate-100 px-4 py-3 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-1">TrustPilot</p>
+      <p class="text-lg font-black text-slate-900">4.7<span class="text-sm text-slate-400">/5</span></p>
+      <p class="text-[10px] text-slate-400">4,500+ reviews</p>
+    </div>
+    <div class="rounded-xl bg-slate-50 border border-slate-100 px-4 py-3 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-1">Funded (2025)</p>
+      <p class="text-lg font-black text-slate-900">6,400+</p>
+      <p class="text-[10px] text-slate-400">traders</p>
+    </div>
+    <div class="rounded-xl bg-slate-50 border border-slate-100 px-4 py-3 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-1">Live Accounts</p>
+      <p class="text-lg font-black text-slate-900">4,500+</p>
+      <p class="text-[10px] text-slate-400">active</p>
+    </div>
+    <div class="rounded-xl bg-slate-50 border border-slate-100 px-4 py-3 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-1">Operating Since</p>
+      <p class="text-lg font-black text-slate-900">2016</p>
+      <p class="text-[10px] text-slate-400">10 years</p>
+    </div>
+  </div>
+
+  <!-- Trust signals -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trust Signals</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Signal</th>
+          <th class="px-4 py-3 text-center">Status</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">TrustPilot Rating</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">4.7/5 (4,500+ reviews)</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Operating History</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Since 2016 (10 years)</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Named Partners</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Proprietary + brokerage partners named</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Pass Rate Disclosure</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">8.89% in 2025 (published)</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Published Pledge</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Available</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Office Details</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">US + Dubai (MENA)</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">International Availability</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">US and Non-US (MENA via Bahia Education Services)</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trust — 7/10</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Earn2Trade has a stronger trust profile than its overall score suggests. A 10-year operating history, named proprietary and brokerage partners, public pass-rate disclosures (8.89% in 2025), a published pledge, and a 4.7/5 TrustPilot rating from 4,500+ reviews all point to a firm with established credibility. The US + Dubai office presence and Non-US availability through Bahia Education Services add further transparency. Trust is not the issue — the product competitiveness is.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* FALLBACK                                                            */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section !== "challenges" && section !== "spreads" && section !== "markets" && section !== "platforms" && section !== "payouts" && section !== "support" && section !== "trust" && fallbackBody && (
+  <div class="text-sm leading-relaxed text-slate-700 space-y-4">
+    {fallbackBody.split("\n\n").map((para) => (
+      <p set:html={para.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")} />
+    ))}
+  </div>
+)}

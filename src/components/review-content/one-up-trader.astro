@@ -19,7 +19,7 @@ const { section, fallbackBody } = Astro.props;
     OneUp Trader uses a simple <strong>one-step evaluation</strong> process, making it one of the simplest prop trading programs available. All you need to do is reach the profit target while staying within the trailing drawdown limits across five account sizes ranging from <strong>$25,000 to $250,000</strong>. Monthly fees start from <strong>$65</strong>, and you keep <strong>100% of the first $10,000</strong> in profits plus <strong>90%</strong> of everything after.
   </p>
   <p class="mb-6">
-    If you previously had a funded account, an <strong>Express Funding</strong> option is available that allows you to requalify in just 5 trading days instead of 10.
+    An <strong>Express Funding</strong> option is available for traders who previously had a funded account and received an FTA termination within the past 30 days, allowing them to requalify in just 5 trading days instead of 10. This is not a standard shortcut open to all traders.
   </p>
 
   <!-- Per-challenge summaries -->
@@ -37,7 +37,7 @@ const { section, fallbackBody } = Astro.props;
         <span class="flex items-center justify-center w-6 h-6 rounded-full bg-teal-500 text-white text-xs font-bold">2</span>
         <p class="font-bold text-slate-900">Express Funding Account (Fast-Track)</p>
       </div>
-      <p>For previously funded traders who lost their account. Same account sizes with monthly fees from $115 to $425. Same rules and conditions as the standard challenge, but requalify in just 5 trading days instead of 10.</p>
+      <p>Exclusively for traders who had a funded account and received an FTA termination in the past 30 days. Same account sizes with monthly fees from $115 to $425. Same rules and conditions as the standard challenge, but requalify in just 5 trading days instead of 10.</p>
       <p class="text-xs text-teal-600 font-semibold mt-1">Fast-track for returning traders · Same profit targets and drawdown rules</p>
     </div>
   </div>
@@ -173,11 +173,11 @@ const { section, fallbackBody } = Astro.props;
   <ul class="space-y-2 mb-8">
     <li class="flex items-start gap-2">
       <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0"></span>
-      <span><strong>News Trading:</strong> Allowed during evaluation. Funded traders must avoid trading 1 minute before and after major economic releases (FOMC, employment, inflation, GDP).</span>
+      <span><strong>News Trading:</strong> Allowed during evaluation. Funded traders must avoid trading 1 minute before and after major (Tier-1) economic releases (FOMC, employment, inflation, GDP). Not a blanket allowance across all account stages.</span>
     </li>
     <li class="flex items-start gap-2">
       <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0"></span>
-      <span><strong>EAs / Automated Trading:</strong> Allowed.</span>
+      <span><strong>EAs / Automated Trading:</strong> Supported by the 20+ platforms available, but broad firm-level permission for all automated strategies is not explicitly confirmed — check with support before relying on full automation.</span>
     </li>
     <li class="flex items-start gap-2">
       <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-red-500 shrink-0"></span>
@@ -213,7 +213,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl bg-teal-50 border border-teal-200 p-5">
     <p class="font-bold text-teal-800 mb-1 text-base">Verdict on Challenges</p>
     <p class="text-teal-700 text-sm leading-relaxed">
-      OneUp Trader's 1-step challenge is a simple evaluation process, where you can hit the profit target in just 10 days, with no daily loss limits and get a funded account. However, the tight trailing drawdown can be a significant hurdle. If you are a previously funded trader and want to regain your account, Express Funding can allow you to recover your account in 5 trading days. The monthly subscription model means fees can add up if you don't pass quickly.
+      OneUp Trader's 1-step challenge is a simple evaluation process, where you can hit the profit target in a minimum of 10 days, with no daily loss limits and get a funded account. However, the tight trailing drawdown can be a significant hurdle. Express Funding is available only to traders who had a funded account and received an FTA termination in the past 30 days, allowing requalification in 5 trading days. The monthly subscription model means fees can add up if you don't pass quickly.
     </p>
   </div>
 
@@ -578,26 +578,26 @@ const { section, fallbackBody } = Astro.props;
 
   <!-- Overview -->
   <p class="mb-6">
-    OneUp Trader keeps their payments and payout structure simple. You can sign up for challenges using credit or debit cards, and once funded, enjoy payouts with no set schedule — request a withdrawal anytime you meet the minimum threshold.
+    OneUp Trader keeps their payments and payout structure simple. You can sign up for challenges using credit or debit cards, and once funded, request withdrawals on demand — provided you meet the account-specific withdrawal profit threshold and the $1,000 minimum on the trader's profit share.
   </p>
 
   <!-- Stats grid -->
   <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
     <div class="rounded-lg bg-slate-50 border border-slate-200 px-3 py-2.5 text-center">
-      <p class="text-xs text-slate-500 mb-0.5">Profit Split</p>
-      <p class="text-lg font-bold text-emerald-600">90%</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 px-3 py-2.5 text-center">
       <p class="text-xs text-slate-500 mb-0.5">First $10K Profits</p>
       <p class="text-lg font-bold text-emerald-600">100%</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 px-3 py-2.5 text-center">
-      <p class="text-xs text-slate-500 mb-0.5">Min. Withdrawal</p>
+      <p class="text-xs text-slate-500 mb-0.5">After $10K</p>
+      <p class="text-lg font-bold text-emerald-600">90%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 px-3 py-2.5 text-center">
+      <p class="text-xs text-slate-500 mb-0.5">Min. Profit Share</p>
       <p class="text-lg font-bold text-slate-900">$1,000</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 px-3 py-2.5 text-center">
-      <p class="text-xs text-slate-500 mb-0.5">Processing Time</p>
-      <p class="text-lg font-bold text-slate-900">1–2 days</p>
+      <p class="text-xs text-slate-500 mb-0.5">Bank Wire</p>
+      <p class="text-lg font-bold text-slate-900">1–3 days</p>
     </div>
   </div>
 
@@ -614,12 +614,50 @@ const { section, fallbackBody } = Astro.props;
     </div>
     <div class="flex items-start gap-2">
       <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0"></span>
-      <span>Withdrawals available <strong>anytime</strong> — no fixed payout schedule</span>
+      <span>Withdrawals available <strong>on demand</strong> — no fixed payout schedule, but account-specific profit thresholds must be met first</span>
     </div>
     <div class="flex items-start gap-2">
       <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-amber-500 shrink-0"></span>
-      <span><strong>$1,000 minimum withdrawal</strong> threshold must be met before requesting a payout</span>
+      <span><strong>$1,000 minimum on trader's profit share</strong> per withdrawal request (this is the trader's portion, not the gross account withdrawal)</span>
     </div>
+  </div>
+
+  <!-- Withdrawal Profit Thresholds -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Withdrawal Profit Thresholds</h3>
+  <p class="mb-3">
+    Before requesting a withdrawal, your account must reach the withdrawal profit threshold for your account size. The trader's profit share must also meet the <strong>$1,000 minimum transfer amount</strong>.
+  </p>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Size</th>
+          <th class="px-4 py-3 text-center">Withdrawal Threshold</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$25,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$1,500</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$50,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$2,500</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$100,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$3,500</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">$150,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5,000</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">$250,000</td>
+          <td class="px-4 py-3 text-center text-slate-900">$5,500</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
   <!-- Challenge Fee Payments -->
@@ -627,15 +665,15 @@ const { section, fallbackBody } = Astro.props;
   <div class="space-y-2 mb-8">
     <div class="flex items-start gap-2">
       <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-teal-500 shrink-0"></span>
-      <span>Payment options limited to <strong>credit and debit cards</strong> only (Visa, MasterCard, AmEx, Discover)</span>
+      <span>Challenge fees are paid via <strong>credit and debit cards</strong> only (Visa, MasterCard, AmEx, Discover) — profit withdrawals use bank wire or crypto</span>
     </div>
     <div class="flex items-start gap-2">
       <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0"></span>
-      <span><strong>Pay 50% upfront</strong>, remaining 50% only once you get funded — a unique benefit</span>
+      <span><strong>Pay 50% upfront</strong>, remaining 50% as an activation fee once approved for funding</span>
     </div>
     <div class="flex items-start gap-2">
       <span class="mt-1 block h-1.5 w-1.5 rounded-full bg-amber-500 shrink-0"></span>
-      <span>Crypto payments are <strong>not currently supported</strong> for challenge fees</span>
+      <span>Crypto and bank wire are <strong>not supported for challenge fees</strong> — only for profit withdrawals</span>
     </div>
   </div>
 
@@ -644,13 +682,13 @@ const { section, fallbackBody } = Astro.props;
   <div class="grid sm:grid-cols-2 gap-4 mb-8">
     <div class="rounded-lg border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Bank Wire</p>
-      <p class="text-xs text-slate-600">No withdrawal fees for bank wire transfers. Funds typically arrive within a few days after processing.</p>
-      <span class="inline-block rounded bg-emerald-50 px-2 py-0.5 text-xs font-medium text-emerald-700 mt-2">No Fee</span>
+      <p class="text-xs text-slate-600">No withdrawal fees for bank wire transfers. Processing typically takes <strong>1–3 business days</strong>.</p>
+      <span class="inline-block rounded bg-emerald-50 px-2 py-0.5 text-xs font-medium text-emerald-700 mt-2">No Fee · 1–3 Days</span>
     </div>
     <div class="rounded-lg border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Cryptocurrency</p>
-      <p class="text-xs text-slate-600">5% fee applies on all crypto withdrawals. Crypto-wallet payout errors cannot be reversed.</p>
-      <span class="inline-block rounded bg-amber-50 px-2 py-0.5 text-xs font-medium text-amber-700 mt-2">5% Fee</span>
+      <p class="text-xs text-slate-600"><strong>5% payment processor fee</strong> applies on all crypto withdrawals. Processing can take <strong>up to 14 business days</strong> depending on processor and network conditions. Crypto-wallet payout errors cannot be reversed.</p>
+      <span class="inline-block rounded bg-amber-50 px-2 py-0.5 text-xs font-medium text-amber-700 mt-2">5% Fee · Up to 14 Days</span>
     </div>
   </div>
 
@@ -658,7 +696,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl bg-teal-50 border border-teal-200 p-5">
     <p class="font-bold text-teal-800 mb-1 text-base">Verdict on Payments and Payouts</p>
     <p class="text-teal-700 text-sm leading-relaxed">
-      While OneUp Trader's payment options are limited to card-only, their 90% profit split with 100% of the first $10K is very generous. Paying only half the challenge fee upfront and the remainder once funded is a unique benefit. However, the $1,000 minimum withdrawal and card-only payment method limit flexibility, and the 5% crypto withdrawal fee is on the higher side.
+      OneUp Trader's profit split is generous — 100% of the first $10K, then 90% after that — and paying only half the challenge fee upfront is a unique benefit. However, withdrawals require meeting account-specific profit thresholds ($1,500–$5,500) plus a $1,000 minimum on the trader's profit share. Challenge fees are card-only, while payouts go via bank wire (1–3 days, no fee) or crypto (up to 14 days, 5% fee). The crypto withdrawal fee and processing time are on the higher side.
     </p>
   </div>
 
@@ -673,7 +711,7 @@ const { section, fallbackBody } = Astro.props;
 
   <!-- Overview -->
   <p class="mb-6">
-    OneUp Trader's customer support team is available <strong>24/7</strong> and is known for quick responses. While no free educational resources are available, they provide paid educational programs including mentorship and value-added services.
+    OneUp Trader offers <strong>24/7 support via phone, live chat, and email</strong> and is known for quick responses. The official site also includes free resources such as blog content, beginner strategy articles, analytics tools, industry news, economic calendars, and community features. In addition, paid educational programs offer mentorship and structured learning.
   </p>
 
   <!-- Support Channels -->
@@ -708,10 +746,23 @@ const { section, fallbackBody } = Astro.props;
     </p>
   </div>
 
-  <!-- Educational Programs -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Educational Programs</h3>
+  <!-- Free Resources -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Free Resources</h3>
+  <div class="grid sm:grid-cols-2 gap-3 mb-8">
+    <div class="rounded-lg border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Blog & Strategy Content</p>
+      <p class="text-xs text-slate-600">Articles covering beginner strategies, trading insights, and platform guides.</p>
+    </div>
+    <div class="rounded-lg border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Analytics & Tools</p>
+      <p class="text-xs text-slate-600">Streaming quotes, news feeds, economic calendars, and a social dashboard for community interaction.</p>
+    </div>
+  </div>
+
+  <!-- Paid Educational Programs -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Paid Educational Programs</h3>
   <p class="mb-4">
-    OneUp Trader lacks free educational materials but offers two paid programs that can be useful for traders looking to improve.
+    In addition to the free resources, OneUp Trader offers two paid programs for traders looking for structured learning and mentorship.
   </p>
   <div class="space-y-3 mb-8">
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
@@ -760,7 +811,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl bg-teal-50 border border-teal-200 p-5">
     <p class="font-bold text-teal-800 mb-1 text-base">Verdict on Customer Support & Education</p>
     <p class="text-teal-700 text-sm leading-relaxed">
-      OneUp Trader offers fast 24/7 support, but some traders report issues with resolving complex problems. Educational resources are only available through paid programs — the OneUp Academy at $50 and the Beginner Trading Course at $720 — which offer solid value but no free alternatives exist. The course includes a free first-month evaluation fee and balance resets, adding tangible value.
+      OneUp Trader offers 24/7 support via phone, live chat, and email, though some traders report issues with resolving complex problems. Free resources include blog content, strategy articles, analytics tools, streaming quotes, and economic calendars. The paid programs — OneUp Academy at $50 and the Beginner Trading Course at $720 — offer structured learning with tangible extras like free evaluation months and balance resets.
     </p>
   </div>
 
@@ -814,7 +865,7 @@ const { section, fallbackBody } = Astro.props;
     </div>
   </div>
   <p class="mb-8">
-    Unlike many competitors, OneUp Trader does not have a public Discord channel. The firm maintains a <strong>private Discord</strong> channel exclusive to subscribers of the Beginner Trading Course, offering exclusive trading updates and insights. On social media, Twitter has over a thousand followers engaging with traders, while Instagram has a more active presence showcasing successful traders with their payouts and promotional content.
+    OneUp Trader promotes a <strong>private trader community</strong> with live chat, analytics tools, streaming quotes and news, economic calendars, and a social dashboard. The private Discord channel is exclusive to subscribers of the Beginner Trading Course, offering exclusive trading updates and insights. On social media, Twitter has over a thousand followers engaging with traders, while Instagram has a more active presence showcasing successful traders with their payouts and promotional content.
   </p>
 
   <!-- Popularity -->

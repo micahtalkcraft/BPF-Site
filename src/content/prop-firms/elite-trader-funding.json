@@ -5,49 +5,49 @@
   "status": "active",
   "hqCountry": "US",
   "evaluation": {
-    "types": ["1-step", "instant"],
+    "types": ["1-step", "direct-to-funded", "static", "diamond-hands", "eod", "fast-track"],
     "profitTargets": { "phase1": 6 },
     "dailyDrawdown": null,
-    "maxDrawdown": 10,
+    "maxDrawdown": null,
     "minTradingDays": 5,
     "scalingPlan": true
   },
   "pricing": {
     "challengeFees": [
-      { "accountSize": 25000, "fee": 299.50, "model": "instant", "label": "Direct to Funded (DTF)" },
-      { "accountSize": 50000, "fee": 349.50, "model": "instant", "label": "Direct to Funded (DTF)" },
+      { "accountSize": 25000, "fee": 299.50, "model": "direct-to-funded", "label": "Direct to Funded (DTF)" },
+      { "accountSize": 50000, "fee": 349.50, "model": "direct-to-funded", "label": "Direct to Funded (DTF)" },
       { "accountSize": 50000, "fee": 16.50, "model": "1-step", "label": "1 Step Evaluation" },
       { "accountSize": 100000, "fee": 20.50, "model": "1-step", "label": "1 Step Evaluation" },
       { "accountSize": 150000, "fee": 29.50, "model": "1-step", "label": "1 Step Evaluation" },
       { "accountSize": 250000, "fee": 51.50, "model": "1-step", "label": "1 Step Evaluation" },
       { "accountSize": 300000, "fee": 65.50, "model": "1-step", "label": "1 Step Evaluation" },
-      { "accountSize": 50000, "fee": 29.50, "model": "1-step", "label": "EOD Evaluation" },
-      { "accountSize": 100000, "fee": 43, "model": "1-step", "label": "EOD Evaluation" },
-      { "accountSize": 150000, "fee": 60.50, "model": "1-step", "label": "EOD Evaluation" },
-      { "accountSize": 10000, "fee": 99, "model": "1-step", "label": "Static Drawdown" },
-      { "accountSize": 25000, "fee": 229, "model": "1-step", "label": "Static Drawdown" },
-      { "accountSize": 50000, "fee": 449, "model": "1-step", "label": "Static Drawdown" },
-      { "accountSize": 100000, "fee": 75, "model": "1-step", "label": "Fast Track" },
-      { "accountSize": 250000, "fee": 175, "model": "1-step", "label": "Fast Track" },
-      { "accountSize": 100000, "fee": 36.50, "model": "1-step", "label": "Diamond Hands" }
+      { "accountSize": 50000, "fee": 29.50, "model": "eod", "label": "EOD Evaluation" },
+      { "accountSize": 100000, "fee": 43, "model": "eod", "label": "EOD Evaluation" },
+      { "accountSize": 150000, "fee": 60.50, "model": "eod", "label": "EOD Evaluation" },
+      { "accountSize": 10000, "fee": 99, "model": "static", "label": "Static Drawdown" },
+      { "accountSize": 25000, "fee": 229, "model": "static", "label": "Static Drawdown" },
+      { "accountSize": 50000, "fee": 449, "model": "static", "label": "Static Drawdown" },
+      { "accountSize": 100000, "fee": 75, "model": "fast-track", "label": "Fast Track" },
+      { "accountSize": 250000, "fee": 175, "model": "fast-track", "label": "Fast Track" },
+      { "accountSize": 100000, "fee": 36.50, "model": "diamond-hands", "label": "Diamond Hands" }
     ],
     "resetFee": 75,
-    "refundPolicy": "No refunds after evaluation access is granted. Resets available at $75 for most models. Fast Track accounts cannot be reset."
+    "refundPolicy": "7-day first-purchase satisfaction guarantee: first-time buyers can request one swap, refund, or in-house credit within 7 days, subject to conditions. No refunds after evaluation access is granted beyond this window. Resets available at $75 for most models. Fast Track and Direct to Funded accounts cannot be reset."
   },
   "payouts": {
     "splitMax": 100,
-    "schedule": "Weekly",
+    "schedule": "Same day payout approval available. Minimum qualified days to first payout: 8 for most plans, as low as 10 for Direct to Funded. Up to $150,000 in lifetime sim-funded profit before further criteria apply.",
     "processingTime": "Via Rise payment provider",
-    "firstPayoutDays": 10,
+    "firstPayoutDays": 8,
     "methods": ["bank-transfer"]
   },
   "rules": {
-    "newsTrading": true,
-    "weekendHolding": false,
-    "copyTrading": true,
-    "expertAdvisors": true,
+    "newsTrading": null,
+    "weekendHolding": null,
+    "copyTrading": null,
+    "expertAdvisors": null,
     "consistencyRule": "Sim-Funded accounts require 10 Active Trading Days where each day earns at least 23% of your best day's profit, with a minimum floor of $100–$200 depending on account size. No consistency rule during evaluations.",
-    "notes": "News trading allowed across all models. Weekend holding only permitted on Diamond Hands and LIVE Elite accounts. Copy trading and multi-account mirroring allowed post-LIVE Elite with approval. Algo trading permitted with compatible Rithmic platforms — no martingale, HFT, or scratch trades. 10-second rule prohibits entering and exiting a trade within 10 seconds. VPNs and masked connections banned — stable IP and verified location required. Position caps enforced per model (e.g. 2 minis/20 micros on 25K DTF, up to 24 minis/240 micros on 250K Fast Track). Breaching position limits results in instant disqualification and forfeited profits. Up to 20 active Sim-Funded accounts allowed, maximum 3 Fast Tracks. Fast Track has a 14-day hard calendar limit. OFAC-sanctioned countries blocked at all stages. All trades routed via Rithmic to regulated US exchanges."
+    "notes": "News trading rules are plan-specific — allowed on most models, but traders should check individual plan terms for restrictions around high-impact events. Weekend holding allowed on Diamond Hands and LIVE Elite accounts only; all other models require positions closed before weekend. Copy trading: multi-account mirroring only allowed post-LIVE Elite with approval. Algo/EA trading allowed with compatible Rithmic platforms — no martingale, HFT, or scratch trades. 10-second rule: traders cannot enter and exit a trade within 10 seconds (applies to all models, all stages). VPNs and masked connections banned — stable IP and verified location required. Position caps enforced per model (e.g. 2 minis/20 micros on 25K DTF, up to 24 minis/240 micros on 250K Fast Track). Breaching position limits results in instant disqualification and forfeited profits. Max drawdown varies by plan and account size (not a flat percentage). Activation fees: monthly ($80/mo) or one-time ($150–$300) for most models; Direct to Funded has no activation fee. Fast Track: 5 minimum trade days, 14-day hard calendar limit, no reset. Diamond Hands: daily loss limit (1.5%), 5 minimum trade days, 8 minimum qualified days to first payout, up to $2,500 max withdrawal per payout. End of Day: uses EOD realised profit drawdown with daily loss limit. Static: uses a static minimum balance that never trails. Direct to Funded: up to $5,000 max withdrawal per payout, no activation fee, as low as 10 qualified days to first payout. Up to 20 active Sim-Funded accounts allowed, maximum 3 Fast Tracks. OFAC-sanctioned countries blocked at all stages. All trades routed via Rithmic to regulated US exchanges. Top performers are invited to LIVE Elite, where they trade real capital, can withdraw daily, and may receive performance bonuses."
   },
   "markets": {
     "platforms": ["TradingView", "NinjaTrader", "Tradovate", "R | Trader Pro", "EdgeProX", "Sierra Chart"],
@@ -56,13 +56,14 @@
   "trust": {
     "trustpilotRating": 3.8,
     "trustpilotCount": 900,
-    "communitySize": "16,000+ Discord members",
+    "communitySize": "17,000+ Elite users",
     "notableFlags": [
       "3.8/5 Trustpilot with 900+ reviews (62% five-star, 24% one-star)",
+      "53,000+ happy customers (firm-reported), $12M+ total payouts, 4+ years in business",
       "Not regulated or broker-backed during evaluation and Sim-Funded stages",
       "LIVE Elite accounts funded through EdgeClear broker partnership",
-      "No published criteria for LIVE Elite account approval",
-      "Sim-Funded accounts are demo-based with payout eligibility",
+      "Top performers invited to LIVE Elite for real capital trading with daily withdrawals and performance bonuses",
+      "13,000+ elite sim-funded traders (firm-reported)",
       "Mixed reviews — payout disputes and rule interpretation concerns on forums"
     ]
   },
@@ -70,15 +71,15 @@
   "media": { "logo": "/images/logos/elite-trader-logo.png" },
   "availability": { "restrictedCountries": ["CU", "IR", "KP", "SY", "SO", "SD"] },
   "support": {
-    "hours": "Business hours (email ticket system)",
+    "hours": "Monday to Friday, 9 AM to 5 PM Eastern",
     "liveChat": false,
     "email": true,
     "discord": true
   },
   "custom": {
-    "tags": ["No Clear Path to Live Funding", "Sim-Funded Accounts", "High Ongoing Fees", "Futures Trading Only"]
+    "tags": ["Six Evaluation Models", "Sim-Funded Accounts", "Futures Trading Only", "LIVE Elite for Top Performers"]
   },
-  "lastVerifiedAt": "2026-02-28",
-  "lastUpdatedAt": "2026-02-28",
+  "lastVerifiedAt": "2026-03-11",
+  "lastUpdatedAt": "2026-03-11",
   "dataSources": ["https://elitetraderfunding.com"]
 }

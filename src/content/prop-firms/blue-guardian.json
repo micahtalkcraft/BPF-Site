@@ -4,10 +4,10 @@
   "name": "Blue Guardian",
   "status": "active",
   "evaluation": {
-    "types": ["1-step", "2-step", "3-step", "instant"],
-    "profitTargets": { "phase1": 10, "phase2": 5 },
-    "dailyDrawdown": 3,
-    "maxDrawdown": 5,
+    "types": ["1-step", "2-step", "2-step-pro", "3-step", "instant", "guardian-x", "crypto"],
+    "profitTargets": { "phase1": 10 },
+    "dailyDrawdown": null,
+    "maxDrawdown": null,
     "minTradingDays": null,
     "scalingPlan": true
   },
@@ -32,13 +32,13 @@
       { "accountSize": 100000, "fee": 498, "model": "2-step", "label": "Two Step Standard" },
       { "accountSize": 150000, "fee": 748, "model": "2-step", "label": "Two Step Standard" },
       { "accountSize": 200000, "fee": 948, "model": "2-step", "label": "Two Step Standard" },
-      { "accountSize": 5000, "fee": 148, "model": "2-step", "label": "Two Step Pro" },
-      { "accountSize": 10000, "fee": 208, "model": "2-step", "label": "Two Step Pro" },
-      { "accountSize": 25000, "fee": 308, "model": "2-step", "label": "Two Step Pro" },
-      { "accountSize": 50000, "fee": 408, "model": "2-step", "label": "Two Step Pro" },
-      { "accountSize": 100000, "fee": 598, "model": "2-step", "label": "Two Step Pro" },
-      { "accountSize": 150000, "fee": 898, "model": "2-step", "label": "Two Step Pro" },
-      { "accountSize": 200000, "fee": 1098, "model": "2-step", "label": "Two Step Pro" },
+      { "accountSize": 5000, "fee": 148, "model": "2-step-pro", "label": "Two Step Pro" },
+      { "accountSize": 10000, "fee": 208, "model": "2-step-pro", "label": "Two Step Pro" },
+      { "accountSize": 25000, "fee": 308, "model": "2-step-pro", "label": "Two Step Pro" },
+      { "accountSize": 50000, "fee": 408, "model": "2-step-pro", "label": "Two Step Pro" },
+      { "accountSize": 100000, "fee": 598, "model": "2-step-pro", "label": "Two Step Pro" },
+      { "accountSize": 150000, "fee": 898, "model": "2-step-pro", "label": "Two Step Pro" },
+      { "accountSize": 200000, "fee": 1098, "model": "2-step-pro", "label": "Two Step Pro" },
       { "accountSize": 10000, "fee": 29, "model": "3-step", "label": "Three Step" },
       { "accountSize": 25000, "fee": 88, "model": "3-step", "label": "Three Step" },
       { "accountSize": 50000, "fee": 122, "model": "3-step", "label": "Three Step" },
@@ -47,36 +47,36 @@
       { "accountSize": 200000, "fee": 510, "model": "3-step", "label": "Three Step" }
     ],
     "resetFee": null,
-    "refundPolicy": "Challenge fees are non-refundable unless you reach your fourth payout. Instant funding accounts are excluded from the refund offer. No time limits on evaluations, so no resets needed."
+    "refundPolicy": "Evaluation fees are refundable on your fourth payout. Refunds do not apply if the account is hard-breached before reaching the fourth payout. Instant Funded Starter accounts are excluded from the refund offer. No time limits on evaluations, so no resets needed."
   },
   "payouts": {
     "splitMax": 90,
-    "schedule": "Bi-weekly",
-    "processingTime": "1–2 business days via Riseworks.io",
-    "firstPayoutDays": 14,
+    "schedule": "Varies by model. Instant accounts use instant payouts. 1 Step and some funded models can pay up to weekly. 2 Step Standard is bi-weekly. 2 Step Pro offers first payout on demand, then bi-weekly after.",
+    "processingTime": "1–2 business days via Rise",
+    "firstPayoutDays": null,
     "methods": ["bank-transfer", "crypto"]
   },
   "rules": {
     "newsTrading": null,
-    "weekendHolding": null,
-    "copyTrading": true,
-    "expertAdvisors": true,
-    "consistencyRule": "Instant Starter accounts have a 15% consistency rule. Instant Standard accounts have a 20% consistency rule: if one trading day accounts for more than the threshold of your total profits, you must keep trading until that day falls under the limit before you can withdraw. No consistency rule on evaluation-based accounts.",
-    "notes": "Max daily loss resets at 5 PM EST. 100% stop-out level means open trades close when margin level drops below full coverage. Guardian Shield may auto-close trades if floating loss hits 1%. Platform switching allowed only after passing a phase with no open trades. Copy trading and EAs allowed — no latency arbitrage, tick scalping, or banned practices. Raw spreads with $5/lot commission on Forex and commodities, zero on indices and crypto. Crypto withdrawals capped at $2,000 per request. Minimum withdrawal $100. All trades must be closed before requesting a payout."
+    "weekendHolding": true,
+    "copyTrading": null,
+    "expertAdvisors": null,
+    "consistencyRule": "Instant Starter accounts have a 15% consistency rule. Instant Standard accounts have a 20% consistency rule: if one trading day accounts for more than the threshold of your total profits, you must keep trading until that day falls under the limit before you can withdraw. Two Step Pro funded accounts have a 25% consistency rule. No consistency rule on evaluation-based accounts during challenge phases.",
+    "notes": "News trading allowed during evaluation; on funded accounts, opening or closing trades is not allowed within 5 minutes before or after high-impact news including FOMC statements and speeches. Profits from news trades on funded accounts can be removed. Guardian X is the exception — news trading is allowed on both challenge and funded stages. Overnight and weekend holding allowed across main models. Copy trading: trade copiers are permitted, but not for bypassing rules around group trading, copy trading abuse, or signal trading. EAs allowed — banned strategies include tick scalping, HFT, arbitrage, reverse arbitrage, latency arbitrage, hedge arbitrage, emulators, and demo exploitation. Guardian Shield auto-closes open trades when floating PnL reaches 1% or 2% loss of initial balance on many funded accounts — repeated breaches can reduce profit split or close the account. Minimum holding time is 2 minutes — trades closed faster may be flagged as tick scalping. Accounts breach after 30 days with no trade placed (inactivity rule). Gambling-style trading banned — defined as margin usage above 80%. Max daily loss resets at 5 PM EST. 100% stop-out level means open trades close when margin level drops below full coverage. Platform switching allowed only after passing a phase with no open trades. Raw spreads with $5/lot commission on Forex and commodities, zero on indices and crypto. All trades must be closed before requesting a payout. Minimum withdrawal $100. Crypto withdrawals capped at $2,000 per request. Up to $400K in funded accounts allowed — same challenge types can be merged up to that level. Minimum profitable trading day rules vary by model: Instant models generally require 5 days with at least 0.5% profit, 1 Step/2 Step Pro often use 3 days, 2 Step Standard uses 5 days, and some models have 4 days. All funded accounts are demo accounts with virtual funds in a simulated environment. Withdrawals are processed through Rise, with support for bank and crypto."
   },
   "markets": {
     "platforms": ["MT5", "Match-Trader", "TradeLocker"],
-    "instruments": "Forex (Major & Minor pairs, 1:50 leverage), Indices (1:20 eval / 1:10 funded), Commodities including Gold (1:20 eval / 1:10 funded), Crypto (1:2 leverage). No stocks or bonds."
+    "instruments": "Forex (Major & Minor pairs, 1:50 leverage), Indices (1:20 eval / 1:10 funded), Commodities including Gold (1:20 eval / 1:10 funded), Crypto (1:2 standard leverage, 1:4 on Crypto challenge line). Blue Guardian Crypto: separate challenge line with accounts from $5K to $100K, 3% daily loss, 6% max loss, 10% challenge target, up to weekly payouts, up to 90% split. Guardian X: limited-time model, 3% daily drawdown, 5% trailing max drawdown, capped at $100K max capital, news trading allowed on challenge and funded. No stocks or bonds."
   },
   "trust": {
     "trustpilotRating": null,
     "trustpilotCount": 1400,
-    "communitySize": "80,000+ Discord members",
+    "communitySize": "160,000+ community members",
     "notableFlags": [
       "TrustPilot rating unavailable — profile flagged for guideline violation",
-      "Not broker-backed during evaluation or funded phases",
-      "Over $16 million in total payouts claimed",
-      "5,600+ evaluations completed, 1,199 funded traders reported",
+      "83,000+ traders, 160,000+ community members, 160+ countries (firm-reported)",
+      "$20M+ total rewards claimed (firm-reported)",
+      "All funded accounts are demo accounts with virtual funds in a simulated environment",
       "Some users report spread manipulation and laggy price feeds",
       "Guardian Shield auto-close feature draws criticism from traders"
     ]
@@ -85,15 +85,15 @@
   "media": { "logo": "/images/logos/blueguardian_logo.png" },
   "availability": { "restrictedCountries": [] },
   "support": {
-    "hours": "Monday–Friday 9:00 AM – 5:00 PM UTC",
-    "liveChat": false,
+    "hours": "24/7 expert support promoted, FAQ email replies aim for within 24 hours",
+    "liveChat": true,
     "email": true,
     "discord": true
   },
   "custom": {
-    "tags": ["TrustPilot Delisted", "Rules Vary by Model", "No Spread Data", "No Time Limits"]
+    "tags": ["TrustPilot Flagged", "Rules Vary by Model", "No Spread Data", "No Time Limits", "Guardian X", "Crypto Challenge", "Up to $400K Funded"]
   },
-  "lastVerifiedAt": "2026-02-28",
-  "lastUpdatedAt": "2026-02-28",
+  "lastVerifiedAt": "2026-03-11",
+  "lastUpdatedAt": "2026-03-11",
   "dataSources": ["https://blueguardian.com"]
 }

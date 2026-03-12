@@ -1,21 +1,26 @@
 {
   "id": "rev-blue-guardian",
   "propFirmId": "d0000043-0000-0000-0000-000000000043",
-  "summary": "Blue Guardian scored 45/100 in our full review because while the prop firm offers a wide mix of challenge types, including instant funding and multi-step evaluations, the way these models are structured can be confusing. Key rules like payout caps, drawdown types, and consistency requirements differ significantly between plans, and not all terms are explained clearly up front.\n\nThat lack of clarity makes it harder to assess whether you're getting long-term value for the fee. Some accounts offer fast payouts and flexible trading conditions, while others include strict limits that may not suit experienced traders. Combined with a delisted TrustPilot rating and limited transparency around scaling, it's a setup that raises questions. Traders considering this firm should review each model carefully before committing.",
+  "summary": "Blue Guardian scored 45/100 in our full review. The firm offers a broad range of challenge types — Instant Starter, Instant Standard, One Step, Two Step Standard, Two Step Pro, Three Step, Guardian X, and a dedicated Crypto line — with no time limits on evaluations and flexible platform access via MT5, Match-Trader, and TradeLocker.\n\nProfit splits depend on the model: Instant Funding Standard is 80% by default (90% with add-on), Instant Starter is 90%, and evaluation-based funded accounts are up to 90%, though some large funded accounts are 85%. Payout timing also varies — instant accounts use instant payouts, 1 Step and some funded models can pay up to weekly, 2 Step Standard is bi-weekly, and 2 Step Pro offers first payout on demand then bi-weekly after.\n\nDrawdown and daily loss rules are model-specific rather than a flat firm-wide rule. News trading is allowed during evaluations but restricted on funded accounts (5-minute window around high-impact events), with Guardian X as the exception where news trading is allowed at all stages. The firm highlights 83,000+ traders, 160,000+ community members across 160+ countries, and $20M+ in total rewards. However, the TrustPilot profile remains flagged for guideline violations, and all funded accounts are demo accounts with virtual funds in a simulated environment. Traders should review each model's specific terms before committing.",
   "pros": [
-    "Instant funding accounts available with no evaluation phase",
-    "No time limits on any challenge or evaluation",
+    "Eight challenge types including Instant, One Step, Two Step, Three Step, Guardian X, and dedicated Crypto line",
+    "No time limits on any evaluation",
     "MT5, Match-Trader, and TradeLocker platform options",
-    "Active Discord community with 80,000+ members"
+    "Scaling plan to $4,000,000 — 12% profit in 3-month period triggers 25% account size increase",
+    "Active community with 160,000+ members across 160+ countries",
+    "Separate Crypto challenge line with accounts up to $100K and 1:4 leverage",
+    "24/7 support promoted with Guardian TV live streams and YouTube content"
   ],
   "cons": [
-    "TrustPilot profile removed due to guideline violations",
-    "Rules vary widely between challenge types with inconsistent terms",
+    "TrustPilot profile flagged for guideline violations — rating unavailable",
+    "All funded accounts are demo accounts with virtual funds in a simulated environment",
+    "Rules vary significantly between challenge types — drawdown, split, payout schedule, and consistency all model-specific",
     "No published data on spreads or execution quality",
-    "Instant Starter payouts limited to a single $250 withdrawal"
+    "Guardian Shield auto-closes trades at 1–2% floating loss — repeated breaches can reduce split or close account",
+    "Instant Starter limited to one payout only, capped at 5% of initial balance"
   ],
-  "bestFor": "Traders who want instant funding options with no time limits and prefer flexible platform choices across MT5, Match-Trader, and TradeLocker",
-  "notIdealFor": "Traders seeking transparent scaling plans, strong trust signals, consistent rules across all account types, or those uncomfortable with a firm whose TrustPilot rating has been removed",
+  "bestFor": "Traders who want flexible evaluation options with no time limits, dedicated crypto and Guardian X challenge lines, and are comfortable navigating model-specific rules across instant and evaluation-based models",
+  "notIdealFor": "Traders seeking consistent rules across all account types, published spread data, strong trust signals, or those uncomfortable with a firm whose TrustPilot rating has been removed and all funded accounts are demo-based",
   "overallScore": 45,
   "categoryScores": {
     "challenges": 60,
@@ -37,26 +42,30 @@
   "verdictBlocks": [
     {
       "heading": "Our Final Verdict On Blue Guardian",
-      "body": "Blue Guardian ended up with a low score of 45/100 due to issues around transparency, inconsistent rule sets, and strict limitations on certain account types. While the firm does offer a wide selection of evaluations, including instant funding and three-step models, not all challenges provide long-term value — particularly the Instant Starter, which caps total payout at just $250 and closes the account after a single withdrawal.\n\nThe lack of clarity across risk parameters, payout rules, and scaling progression makes it difficult to evaluate your upside before committing a fee. TrustPilot delisting and feedback around spread execution and Guardian Shield usage further affect the trust score. On the positive side, the no-expiry challenges, platform flexibility, and fast Discord support will appeal to some traders. But overall, Blue Guardian is better suited to cautious testing than serious capital scaling."
+      "body": "Blue Guardian scored 45/100 overall. The firm offers genuine variety across its challenge types — Instant Starter, Instant Standard, One Step, Two Step Standard, Two Step Pro, Three Step, Guardian X, and a dedicated Crypto line — and the no-time-limit evaluations give traders flexibility to pass without deadline pressure.\n\nProfit splits depend on the model: Instant Funding Standard is 80% by default (90% with add-on), Instant Starter is 90%, Two Step Standard funded accounts are 90%, and Two Step Pro is also 90%. Payout schedules vary too — instant accounts pay instantly, 1 Step and Three Step can pay weekly, 2 Step Standard is bi-weekly, and 2 Step Pro offers first payout on demand then bi-weekly. The scaling plan is published: traders can scale to $4,000,000 by making 12% in a 3-month period, after which account size increases by 25% of the initial balance. Up to $400K in funded accounts is allowed.\n\nThe main structural concern is that rules vary significantly by model. Daily drawdown, max drawdown, consistency rules, minimum trading days, payout caps, and news trading restrictions all depend on which model you're on. Guardian Shield auto-closes trades when floating loss hits 1–2% of initial balance on many funded accounts, and repeated breaches can reduce your split or close the account. The 2-minute minimum holding time, 30-day inactivity rule, and gambling rule (margin above 80%) apply across models.\n\nThe firm highlights 83,000+ traders, 160,000+ community members, 160+ countries, and $20M+ in total rewards. But the TrustPilot profile remains flagged, and all funded accounts are demo accounts with virtual funds in a simulated environment. For traders who can navigate model-specific rules, Blue Guardian offers competitive pricing and genuine flexibility. But traders should closely review the specific terms of their chosen model before committing."
     }
   ],
   "faq": [
     {
       "q": "Does Blue Guardian pay out?",
-      "a": "Yes, Blue Guardian does pay out, but only if you follow their rules exactly. Payouts are available every 14 days once funded, or every 7 days if you add the performance upgrade. Profit splits range from 80% to 90% depending on the account type. However, breaking any trading rule, including daily loss or consistency limits, voids eligibility. Payouts are handled through Riseworks.io, and crypto withdrawals are capped at $2,000 per request."
+      "a": "Yes, Blue Guardian does pay out, but payout terms vary by model. Instant accounts use instant payouts. 1 Step and some funded models can pay up to weekly. 2 Step Standard is bi-weekly. 2 Step Pro offers first payout on demand, then bi-weekly after. Profit splits range from 80% to 90% depending on the account type — Instant Standard is 80% by default (90% with add-on). Payouts are processed through Rise via bank transfer or crypto, with crypto withdrawals capped at $2,000 per request. Minimum withdrawal is $100. All trades must be closed before requesting a payout."
     },
     {
       "q": "What is the most legit prop firm?",
-      "a": "The most legit prop firm in our rankings is DNA Funded, which scored 97/100 based on live testing. It's ranked number one on our best prop firms list for offering low-cost challenges, strong broker backing, and up to 90% profit splits. By comparison, Blue Guardian scored just 45/100 in our review, largely due to payout caps, inconsistent rules, and a removed TrustPilot rating. If legitimacy and structure matter, start with a firm that's tested and verified."
+      "a": "The most legit prop firm in our rankings is DNA Funded, which scored 97/100 based on live testing. It's ranked number one on our best prop firms list for offering low-cost challenges, strong broker backing, and up to 90% profit splits. By comparison, Blue Guardian scored 45/100 in our review, largely due to model-specific rule complexity, a flagged TrustPilot profile, and the fact that all funded accounts are demo-based. If legitimacy and structure matter, start with a firm that's tested and verified."
     },
     {
       "q": "Which broker does Blue Guardian use?",
-      "a": "Blue Guardian is not a broker-backed prop firm. That doesn't automatically make it untrustworthy, but it does mean less transparency compared to the best broker-backed prop firms available. Broker-backed firms often offer better execution quality and clearer trading conditions, which can be a key factor for serious traders evaluating cost and slippage. If that matters to you, a broker-backed option may offer more peace of mind."
+      "a": "Blue Guardian is not a broker-backed prop firm. All funded accounts are demo accounts with virtual funds in a simulated environment. This doesn't automatically make it untrustworthy, but it does mean less transparency compared to broker-backed prop firms. Broker-backed firms often offer better execution quality and clearer trading conditions, which can be a key factor for serious traders evaluating cost and slippage."
+    },
+    {
+      "q": "What is Guardian Shield?",
+      "a": "Guardian Shield is a funded-stage risk management feature. On many funded accounts it auto-closes open trades when floating PnL reaches 1% or 2% loss of initial balance. Repeated breaches of Guardian Shield can lead to a reduced profit split or account closure. This is one of the most discussed rules among Blue Guardian traders and can impact strategies that require holding through drawdowns."
     }
   ],
   "verified": true,
   "flagged": true,
-  "flaggedWarning": "Blue Guardian's TrustPilot profile has been **flagged for guideline violations**, making their public rating unavailable. Despite having 1,400+ reviews, this lack of transparency is concerning. The firm is **not broker-backed**, meaning there's limited external oversight during evaluation and funded phases. Key rules — including payout caps, consistency requirements, and drawdown types — **vary significantly between challenge models**, and some accounts carry strict limitations that aren't always clear upfront.",
+  "flaggedWarning": "Blue Guardian's TrustPilot profile has been **flagged for guideline violations**, making their public rating unavailable. All funded accounts are **demo accounts with virtual funds in a simulated environment**. Key rules — including payout caps, consistency requirements, drawdown types, minimum trading days, and news trading restrictions — **vary significantly between challenge models**. Guardian Shield auto-closes trades at 1–2% floating loss on many funded accounts, and repeated breaches can reduce your split or close the account. Traders should review each model's specific terms before committing.",
   "methodologyVersion": "1.0",
-  "lastReviewedAt": "2026-02-28"
+  "lastReviewedAt": "2026-03-11"
 }

@@ -25,8 +25,8 @@ const { section, fallbackBody } = Astro.props;
       <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.168 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
     </svg>
     <div>
-      <p class="font-bold text-red-900 text-sm mb-1">No Guaranteed Path to Real Funding</p>
-      <p class="text-xs text-red-800 leading-relaxed">Passing an evaluation only unlocks a Sim-Funded account (demo-based). LIVE Elite access with real capital is entirely at ETF's discretion — there are no published criteria for promotion, and some traders report being denied with no clear explanation.</p>
+      <p class="font-bold text-red-900 text-sm mb-1">LIVE Elite Progression Is Not Automatic</p>
+      <p class="text-xs text-red-800 leading-relaxed">Passing an evaluation places you into a Sim-Funded account (demo-based with real payout eligibility). ETF states that top performers are invited to LIVE Elite, where they trade real capital, can withdraw daily, and may receive performance bonuses. However, this progression is based on Sim-Funded performance, payout history, and risk profile — it is not automatic and remains at ETF's discretion.</p>
     </div>
   </div>
 
@@ -46,7 +46,7 @@ const { section, fallbackBody } = Astro.props;
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
       <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Eval Fees From</p>
-      <p class="text-base font-bold text-slate-800">$16.50</p>
+      <p class="text-base font-bold text-slate-800">$16.50*</p>
     </div>
   </div>
 
@@ -57,7 +57,7 @@ const { section, fallbackBody } = Astro.props;
         <span class="flex-shrink-0 w-6 h-6 rounded-full bg-red-500 text-white text-xs font-black flex items-center justify-center">1</span>
         Direct to Funded (DTF)
       </p>
-      <p>Instant funding option — skips evaluation entirely. Placed straight into a Sim-Funded account with a $10,000 payout cap. 10% drawdown, no daily loss limit. $25K and $50K sizes only.</p>
+      <p>Direct to Funded — skips evaluation entirely and places you straight into a Sim-Funded account. No minimum trade days to pass eval, as low as 10 qualified days to first payout. Up to $5,000 max withdrawal per payout. No activation fee. $25K and $50K sizes only.</p>
       <p class="text-xs text-red-600 font-semibold mt-1">No resets allowed. One DTF account at a time. 30-day cooldown after hitting cap.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
@@ -73,7 +73,7 @@ const { section, fallbackBody } = Astro.props;
         <span class="flex-shrink-0 w-6 h-6 rounded-full bg-red-500 text-white text-xs font-black flex items-center justify-center">3</span>
         EOD Evaluation
       </p>
-      <p>End-of-Day model with trailing drawdown based on EOD balance, not live equity. Includes a daily loss limit (2.2%). Less prone to mid-trade blowouts than 1 Step. Accounts from $50K to $150K.</p>
+      <p>End-of-Day model using EOD realised profit drawdown, not live equity. Includes a daily loss limit (2.2%). Less prone to mid-trade blowouts than 1 Step. Accounts from $50K to $150K.</p>
       <p class="text-xs text-amber-600 font-semibold mt-1">Suits swing traders wanting more breathing room during trades.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
@@ -81,7 +81,7 @@ const { section, fallbackBody } = Astro.props;
         <span class="flex-shrink-0 w-6 h-6 rounded-full bg-red-500 text-white text-xs font-black flex items-center justify-center">4</span>
         Fast Track
       </p>
-      <p>Tightest timeline — just 14 calendar days to hit a 6% profit target. Trailing intraday drawdown. Only $100K and $250K sizes. No weekend holding.</p>
+      <p>Tightest timeline — 14-day hard calendar limit to hit a 6% profit target. 5 minimum trade days required. Trailing intraday drawdown. Only $100K and $250K sizes. No weekend holding. Has its own fee and eligibility structure.</p>
       <p class="text-xs text-red-600 font-semibold mt-1">No reset option. Fail = buy a new one. Max 3 active Fast Track accounts.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
@@ -89,16 +89,16 @@ const { section, fallbackBody } = Astro.props;
         <span class="flex-shrink-0 w-6 h-6 rounded-full bg-red-500 text-white text-xs font-black flex items-center justify-center">5</span>
         Static Drawdown
       </p>
-      <p>Fixed drawdowns that don't move as your account grows. Simple to manage. Accounts from $10K to $50K with profit targets of 8–10%.</p>
-      <p class="text-xs text-amber-600 font-semibold mt-1">Suits conservative or newer traders who prefer predictability.</p>
+      <p>Uses a static minimum balance that never trails — your drawdown floor stays fixed regardless of profit growth. No daily loss limit. Accounts from $10K to $50K with profit targets of 8–10%.</p>
+      <p class="text-xs text-amber-600 font-semibold mt-1">Suits conservative or newer traders who prefer predictability. No daily loss limit.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1 flex items-center gap-2">
         <span class="flex-shrink-0 w-6 h-6 rounded-full bg-red-500 text-white text-xs font-black flex items-center justify-center">6</span>
         Diamond Hands
       </p>
-      <p>Special EOD model with weekend holding, daily loss limit (1.5%), and EOD trailing drawdown (3.5%). $100K only. 5% profit target.</p>
-      <p class="text-xs text-amber-600 font-semibold mt-1">Ideal for swing traders and overnight carry positions.</p>
+      <p>Special EOD model with weekend holding allowed, daily loss limit (1.5%), and EOD trailing drawdown (3.5%). $100K only. 5% profit target. 5 minimum trade days, 8 minimum qualified days to first payout. Up to $2,500 max withdrawal per payout.</p>
+      <p class="text-xs text-amber-600 font-semibold mt-1">Ideal for swing traders and overnight carry positions. One of the few plans allowing weekend holding.</p>
     </div>
   </div>
 
@@ -252,19 +252,24 @@ const { section, fallbackBody } = Astro.props;
   <!-- ─── Funded Accounts Explained ────────────────────────────────── -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">What Happens After Passing</h3>
   <p class="mb-3">
-    Passing an evaluation at ETF doesn't unlock real capital. Instead, you're offered a <strong>Sim-Funded account</strong> — still a demo account with payout eligibility. To activate it, you must pay an additional fee:
+    Passing an evaluation at ETF places you into a <strong>Sim-Funded account</strong> — a demo account with real payout eligibility. Activation fees vary by plan — monthly, one-time, or none for Direct to Funded:
   </p>
 
   <div class="grid sm:grid-cols-2 gap-3 mb-4">
     <div class="rounded-lg bg-amber-50 border border-amber-200 p-4">
       <p class="font-bold text-amber-900 text-sm">Monthly Plan</p>
       <p class="text-2xl font-black text-amber-800 mt-1">$80<span class="text-sm font-semibold">/month</span></p>
-      <p class="text-xs text-amber-700 mt-1">Recurring subscription fee</p>
+      <p class="text-xs text-amber-700 mt-1">Recurring subscription fee (most models)</p>
     </div>
     <div class="rounded-lg bg-amber-50 border border-amber-200 p-4">
       <p class="font-bold text-amber-900 text-sm">One-Time Activation</p>
       <p class="text-2xl font-black text-amber-800 mt-1">$150 – $300</p>
       <p class="text-xs text-amber-700 mt-1">Single upfront payment (varies by model/size)</p>
+    </div>
+    <div class="rounded-lg bg-emerald-50 border border-emerald-200 p-4 sm:col-span-2">
+      <p class="font-bold text-emerald-900 text-sm">Direct to Funded</p>
+      <p class="text-2xl font-black text-emerald-800 mt-1">No Activation Fee</p>
+      <p class="text-xs text-emerald-700 mt-1">DTF accounts have no additional activation cost</p>
     </div>
   </div>
 
@@ -303,12 +308,16 @@ const { section, fallbackBody } = Astro.props;
     </table>
   </div>
 
+  <div class="rounded-lg bg-emerald-50 border border-emerald-200 p-3 mb-4">
+    <p class="text-xs text-emerald-800"><strong>7-Day Satisfaction Guarantee:</strong> First-time buyers can request one swap, refund, or in-house credit within 7 days of purchase, subject to conditions. This applies to first purchases only.</p>
+  </div>
+
   <p class="mb-4">
     Once active, you must complete <strong>10 Active Trading Days</strong> where each day earns at least 23% of your best day's profit (minimum $100–$200). You must surpass your drawdown by $100 to request a payout and stay within position limits.
   </p>
 
   <p class="mb-4">
-    To move beyond Sim-Funded to a <strong>LIVE Elite account</strong> with real capital, ETF must invite you based on internal review. There are no published requirements — eligibility is based on Sim-Funded performance, payout history, and risk profile. If approved, your LIVE account is funded via EdgeClear with daily payouts and monthly exchange data fees of $128 per venue.
+    To move beyond Sim-Funded to a <strong>LIVE Elite account</strong> with real capital, ETF states that top performers are invited to LIVE Elite, where they trade real capital, can withdraw daily, and may receive performance bonuses. Eligibility is based on Sim-Funded performance, payout history, and risk profile. This is not an automatic progression — it remains at ETF's discretion. If approved, your LIVE account is funded via EdgeClear with daily payouts and monthly exchange data fees of $128 per venue. Diamond Hands and LIVE Elite accounts allow weekend holding.
   </p>
 
   <!-- Scaling -->
@@ -321,9 +330,11 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-red-500 bg-red-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-red-800 mb-1">Verdict on Challenges</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      Elite Trader Funding scores 3/10 for challenges because while the variety of evaluation models gives traders options, the real issue lies in what happens after you pass. There's no clear path to real funding, just a paid Sim-Funded account and a vague, discretionary review process for LIVE Elite access. The lack of transparency around who actually gets funded makes this a risky proposition for traders expecting a guaranteed outcome.
+      Elite Trader Funding scores 3/10 for challenges. The variety of six evaluation models — 1 Step, Direct to Funded, Static, Diamond Hands, End of Day, and Fast Track — gives traders genuine flexibility. However, passing leads to a Sim-Funded account (demo-based with payout eligibility), and LIVE Elite progression is performance-based rather than automatic. Max drawdown varies significantly by plan and account size, and each model has its own distinct rules. First-time buyers get a 7-day satisfaction guarantee. Evaluation fees start from $16.50 on promotional pricing.*
     </p>
   </div>
+
+  <p class="text-xs text-slate-500 italic mt-3">* ETF uses discount-led promotional pricing. The $16.50 starting fee reflects discounted evaluations and may not represent permanent base rates.</p>
 
 </div>
 )}
@@ -671,27 +682,27 @@ const { section, fallbackBody } = Astro.props;
       <tbody class="divide-y divide-slate-100">
         <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-600">Min Trading Days</td>
-          <td class="px-4 py-3 text-slate-900">5 days (all models). Fast Track has 14-day hard limit.</td>
+          <td class="px-4 py-3 text-slate-900">5 days (most models). Fast Track: 5 trade days within 14-day hard limit. DTF: no minimum to pass eval.</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-medium text-slate-600">News Trading</td>
-          <td class="px-4 py-3"><span class="text-emerald-600 font-semibold">Allowed</span></td>
+          <td class="px-4 py-3 text-slate-900"><span class="text-amber-600 font-semibold">Plan-specific</span> — allowed on most models, but traders should check individual plan terms for restrictions around high-impact events.</td>
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-600">Weekend Holding</td>
-          <td class="px-4 py-3"><span class="text-red-500 font-semibold">Diamond Hands + LIVE Elite only</span></td>
+          <td class="px-4 py-3 text-slate-900"><span class="text-amber-600 font-semibold">Diamond Hands + LIVE Elite only</span> — all other models require positions closed before weekend.</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-medium text-slate-600">Algo / EA Trading</td>
-          <td class="px-4 py-3 text-slate-900">Allowed with compatible platforms. No martingale, HFT, or scratch trades.</td>
+          <td class="px-4 py-3 text-slate-900">Allowed with compatible Rithmic platforms. <span class="text-red-500 font-semibold">No martingale, HFT, or scratch trades.</span></td>
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-600">Copy Trading</td>
-          <td class="px-4 py-3 text-slate-900">Multi-account mirroring post-LIVE Elite with approval only.</td>
+          <td class="px-4 py-3 text-slate-900">Multi-account mirroring <span class="text-red-500 font-semibold">only allowed post-LIVE Elite with approval</span>. Not available during evaluation or Sim-Funded stages.</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-medium text-slate-600">10 Second Rule</td>
-          <td class="px-4 py-3"><span class="text-red-500 font-semibold">No entering and exiting within 10 seconds</span></td>
+          <td class="px-4 py-3"><span class="text-red-500 font-semibold">No entering and exiting within 10 seconds — applies to all models, all stages</span></td>
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-600">VPN / Masking</td>
@@ -724,7 +735,7 @@ const { section, fallbackBody } = Astro.props;
 
   <!-- Overview -->
   <p class="mb-4">
-    Elite Trader Funding supports a mix of upfront and recurring payments depending on your evaluation model and payout tier. While challenge fees are paid at sign-up, additional payments kick in if you pass and want to access Sim-Funded or LIVE Elite accounts. Payouts are handled through Rise, with structured rules around timing, minimums, and profit splits.
+    Elite Trader Funding supports a mix of upfront and recurring payments depending on your evaluation model and payout tier. ETF highlights same day payout approval and shows minimum qualified days to first payout (8 for most plans, as low as 10 for Direct to Funded). Traders can keep up to 100% of the first $12,500 in profit, then 90% after, with up to $150,000 in lifetime sim-funded profit before further criteria apply. Payouts are handled through Rise.
   </p>
 
   <!-- Stats grid -->
@@ -738,12 +749,12 @@ const { section, fallbackBody } = Astro.props;
       <p class="text-base font-bold text-slate-800">90% Split</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Frequency</p>
-      <p class="text-base font-bold text-slate-800">Weekly</p>
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Payout Approval</p>
+      <p class="text-base font-bold text-emerald-600">Same Day</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2.5 text-center">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Payout Provider</p>
-      <p class="text-base font-bold text-slate-800">Rise</p>
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Min Qualified Days</p>
+      <p class="text-base font-bold text-slate-800">8 (most plans)</p>
     </div>
   </div>
 
@@ -763,38 +774,38 @@ const { section, fallbackBody } = Astro.props;
       <tbody class="divide-y divide-slate-100">
         <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-900">1 Step</td>
-          <td class="px-4 py-3 text-center text-slate-900">Drawdown + $100</td>
+          <td class="px-4 py-3 text-center text-slate-900">8 min qualified days</td>
           <td class="px-4 py-3 text-center text-slate-900">$100–$2,500</td>
-          <td class="px-4 py-3 text-center text-slate-900">Weekly</td>
-          <td class="px-4 py-3 text-center text-slate-600">Then 90%</td>
+          <td class="px-4 py-3 text-center text-slate-900">Same day approval</td>
+          <td class="px-4 py-3 text-center text-slate-600">100% first $12.5K, then 90%</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-medium text-slate-900">Static</td>
-          <td class="px-4 py-3 text-center text-slate-900">Fixed threshold</td>
+          <td class="px-4 py-3 text-center text-slate-900">8 min qualified days</td>
           <td class="px-4 py-3 text-center text-slate-900">$100–$2,500</td>
-          <td class="px-4 py-3 text-center text-slate-900">Weekly</td>
+          <td class="px-4 py-3 text-center text-slate-900">Same day approval</td>
           <td class="px-4 py-3 text-center text-slate-600">Must maintain static buffer</td>
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-900">Diamond Hands</td>
-          <td class="px-4 py-3 text-center text-slate-900">EOD + drawdown + $100</td>
+          <td class="px-4 py-3 text-center text-slate-900">8 min qualified days</td>
           <td class="px-4 py-3 text-center text-slate-900">$100–$2,500</td>
-          <td class="px-4 py-3 text-center text-slate-900">Weekly</td>
-          <td class="px-4 py-3 text-center text-slate-600">Weekend allowed</td>
+          <td class="px-4 py-3 text-center text-slate-900">Same day approval</td>
+          <td class="px-4 py-3 text-center text-slate-600">Max $2,500/payout, weekend holding</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-medium text-slate-900">Fast Track</td>
-          <td class="px-4 py-3 text-center text-slate-900">Safety Net + ATDs in &lt;14 days</td>
+          <td class="px-4 py-3 text-center text-slate-900">8 min qualified days within 14-day limit</td>
           <td class="px-4 py-3 text-center text-slate-900">$100–$2,500</td>
-          <td class="px-4 py-3 text-center text-slate-900">Weekly</td>
-          <td class="px-4 py-3 text-center text-red-500 font-semibold">No resets, time-limited</td>
+          <td class="px-4 py-3 text-center text-slate-900">Same day approval</td>
+          <td class="px-4 py-3 text-center text-red-500 font-semibold">No resets, 14-day hard limit</td>
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-900">DTF</td>
-          <td class="px-4 py-3 text-center text-slate-900">Hit $2,600 or $5,100 buffer</td>
+          <td class="px-4 py-3 text-center text-slate-900">As low as 10 qualified days</td>
           <td class="px-4 py-3 text-center text-slate-900">$1,000</td>
-          <td class="px-4 py-3 text-center text-slate-900">Weekly</td>
-          <td class="px-4 py-3 text-center text-red-500 font-semibold">Max $10K, 30-day cooldown</td>
+          <td class="px-4 py-3 text-center text-slate-900">Same day approval</td>
+          <td class="px-4 py-3 text-center text-red-500 font-semibold">Max $5K/payout, no activation fee</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-medium text-slate-900">LIVE Elite</td>
@@ -808,7 +819,7 @@ const { section, fallbackBody } = Astro.props;
   </div>
 
   <p class="mb-4">
-    Each payout model applies a specific "Safety Net" or buffer requirement. Most accounts also require at least <strong>10 active trading days</strong> before you can request a withdrawal. Full KYC verification is required before any funds are released.
+    Each payout model applies a specific buffer requirement. Most plans require a minimum of <strong>8 qualified trading days</strong> before first payout, while Direct to Funded can be as low as 10 qualified days. ETF highlights same day payout approval once requirements are met. Full KYC verification is required before any funds are released. Lifetime sim-funded profit is framed around up to $150,000 before further criteria apply.
   </p>
 
   <!-- Sim-Funded warning -->
@@ -818,7 +829,7 @@ const { section, fallbackBody } = Astro.props;
     </svg>
     <div>
       <p class="font-bold text-red-900 text-sm mb-1">Sim-Funded ≠ Real Capital</p>
-      <p class="text-xs text-red-800 leading-relaxed">Sim-Funded accounts are still demo-based. You're trading simulated capital but eligible for real payouts if you stay within the rules. The structure raises questions — you're paying to maintain access ($80/month or one-time activation), and while ETF does deliver payouts, the model benefits the firm whether or not you ever trade real capital.</p>
+      <p class="text-xs text-red-800 leading-relaxed">Sim-Funded accounts are demo-based with real payout eligibility. Activation fees vary by plan: monthly ($80/mo), one-time ($150–$300), or no activation fee for Direct to Funded. ETF states that top performers are invited to LIVE Elite for real capital trading. The firm reports $12M+ in total payouts and 13,000+ elite sim-funded traders.</p>
     </div>
   </div>
 
@@ -826,7 +837,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-amber-500 bg-amber-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-amber-800 mb-1">Verdict on Payments and Payouts</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      Elite Trader Funding scores 5/10 here. Payment options are broad, activation plans are flexible, and the Rise payout system works smoothly once verified. But costs stack up post-evaluation, and high buffer rules mean many traders may hit targets but still miss payout eligibility. It's a fair system if you understand the rules — just don't underestimate how long it can take to actually withdraw.
+      Elite Trader Funding scores 5/10 here. Same day payout approval is a strong feature, and minimum qualified days to first payout of 8 for most plans makes the timeline clear. Activation fees vary by plan, with Direct to Funded having no activation fee. The 100% split on the first $12,500 is competitive, and up to $150,000 in lifetime sim-funded profit provides meaningful earning potential. However, plan-specific buffer requirements and payout limits (e.g. $5,000 max per payout on DTF, $2,500 on Diamond Hands) mean traders should closely review their chosen model's terms.
     </p>
   </div>
 
@@ -841,7 +852,7 @@ const { section, fallbackBody } = Astro.props;
 
   <!-- Overview -->
   <p class="mb-4">
-    Elite Trader Funding gives traders basic but reliable options when it comes to support and learning. There's no live chat or phone line, but you can get help via tickets or ask questions through their active Discord community.
+    Elite Trader Funding provides ticket-based support, a Help Center, and an active Discord community. The support team is available Monday to Friday, 9 AM to 5 PM Eastern.
   </p>
 
   <!-- Support channels -->
@@ -855,8 +866,8 @@ const { section, fallbackBody } = Astro.props;
           </svg>
         </span>
         <div>
-          <p class="font-bold text-slate-900">Email Ticket System</p>
-          <p class="text-slate-600 text-xs">Primary support method. Responses typically within 24 hours on business days.</p>
+          <p class="font-bold text-slate-900">Ticket-Based Support</p>
+          <p class="text-slate-600 text-xs">Primary support method. Available Monday to Friday, 9 AM to 5 PM Eastern. Responses typically within 24 hours on business days.</p>
         </div>
       </div>
     </div>
@@ -869,14 +880,14 @@ const { section, fallbackBody } = Astro.props;
         </span>
         <div>
           <p class="font-bold text-slate-900">Discord Community</p>
-          <p class="text-slate-600 text-xs">Nearly 16,000 members. Channels for support, announcements, and trader discussions. Not a replacement for formal ticket support.</p>
+          <p class="text-slate-600 text-xs">17,000+ Elite users. Channels for support, announcements, and trader discussions. Not a replacement for formal ticket support.</p>
         </div>
       </div>
     </div>
   </div>
 
   <div class="rounded-lg bg-amber-50 border border-amber-200 p-3 mb-6">
-    <p class="text-xs text-amber-800"><strong>Limitation:</strong> No phone support or live chat available. For urgent issues, you must submit a ticket and wait for a response. Discord moderators may help informally, but official actions require a formal ticket.</p>
+    <p class="text-xs text-amber-800"><strong>Note:</strong> Support is ticket-based with a Help Center for self-service. No phone support or live chat available. For urgent issues, submit a ticket during business hours (M-F, 9 AM – 5 PM Eastern). Discord moderators may help informally, but official actions require a formal ticket.</p>
   </div>
 
   <!-- Education -->
@@ -900,7 +911,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-amber-500 bg-amber-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-amber-800 mb-1">Verdict on Support and Education</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      Elite Trader Funding scores 5/10 for support. The support system is responsive but limited to tickets, and there's no direct live help. Discord is active but unofficial. On the education side, ETF provides solid coverage of key topics, but the materials are mostly surface-level and spread across multiple platforms. It's enough to get you going, but if you need deeper trading education, you'll need to look elsewhere.
+      Elite Trader Funding scores 5/10 for support. The ticket-based support system is available Monday to Friday, 9 AM to 5 PM Eastern, with a searchable Help Center for common questions. The 17,000+ member Discord community is active but unofficial. On the education side, ETF provides solid coverage of key topics through their Help Center, YouTube channel (250+ videos), and blog, but the materials are mostly surface-level. It's enough to get you going, but deeper trading education requires external resources.
     </p>
   </div>
 
@@ -915,7 +926,7 @@ const { section, fallbackBody } = Astro.props;
 
   <!-- Overview -->
   <p class="mb-4">
-    Elite Trader Funding is one of the more visible futures prop firms online, with a large user base and consistent public activity. However, some trust concerns remain — especially around communication clarity, shifting rules, and the firm's lack of external audits or verified metrics.
+    Elite Trader Funding is one of the more visible futures prop firms online, with a large user base and consistent public activity. The firm highlights 53,000+ happy customers, $12M+ in total payouts, 4+ years in business, $5M+ invested in live traders, and 13,000+ elite sim-funded traders. While these are firm-reported metrics (not independently audited), they provide scale context that matters when evaluating the model.
   </p>
 
   <div class="rounded-xl border-2 border-red-300 bg-red-50 p-4 mb-8 flex items-start gap-3">
@@ -1025,7 +1036,7 @@ const { section, fallbackBody } = Astro.props;
   <!-- Community -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Community</h3>
   <p class="mb-4">
-    ETF's Discord is the hub of its community activity, with nearly 16,000 members. It hosts daily support discussions, platform tips, and real user feedback. There's a dedicated testimonials section where users post payout confirmations and occasionally screenshots of denied requests. Social channels like Twitter and YouTube are also active.
+    ETF's Discord is the hub of its community activity, with 17,000+ Elite users. It hosts daily support discussions, platform tips, and real user feedback. There's a dedicated testimonials section where users post payout confirmations. Social channels like Twitter and YouTube are also active. The firm reports 53,000+ happy customers overall.
   </p>
 
   <!-- Trust signals -->
@@ -1053,7 +1064,7 @@ const { section, fallbackBody } = Astro.props;
       <span class="flex-shrink-0 w-5 h-5 rounded-full bg-amber-100 flex items-center justify-center">
         <svg class="h-3 w-3 text-amber-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.168 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
       </span>
-      <span class="text-sm text-slate-700">LIVE Elite funded through EdgeClear — but getting there is not guaranteed</span>
+      <span class="text-sm text-slate-700">LIVE Elite funded through EdgeClear — top performers invited based on performance, payout history, and risk profile</span>
     </div>
     <div class="flex items-center gap-2">
       <span class="flex-shrink-0 w-5 h-5 rounded-full bg-red-100 flex items-center justify-center">
@@ -1065,7 +1076,7 @@ const { section, fallbackBody } = Astro.props;
       <span class="flex-shrink-0 w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center">
         <svg class="h-3 w-3 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
       </span>
-      <span class="text-sm text-slate-700">Active 16,000+ member Discord with regular payout confirmations</span>
+      <span class="text-sm text-slate-700">Active 17,000+ Elite users Discord community with regular payout confirmations</span>
     </div>
   </div>
 
@@ -1073,7 +1084,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-red-500 bg-red-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-red-800 mb-1">Verdict on Trust and Community</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      Elite Trader Funding scores 4/10 for trust because while the firm is active, accessible, and runs a genuine community, clarity and consistency remain issues. Reviews are mixed, and while many traders get paid and stick around, the lack of third-party validation and reliance on Discord for updates leaves room for improvement. If you follow closely and know the rules, you'll likely be fine — but it's not fully hands-off.
+      Elite Trader Funding scores 4/10 for trust. The firm reports 53,000+ happy customers, $12M+ in total payouts, and 4+ years in business — meaningful scale indicators. The 17,000+ Elite user community is active and the firm engages publicly. However, these are self-reported metrics without independent verification. Reviews are mixed (3.8/5 Trustpilot, 24% one-star), and while many traders get paid, the evaluation and Sim-Funded stages are not regulated or broker-backed. LIVE Elite is available through EdgeClear for top performers, but getting there is not automatic. If you follow closely and know the rules, you'll likely be fine — but traders should do their own due diligence.
     </p>
   </div>
 

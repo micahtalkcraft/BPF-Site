@@ -8,62 +8,65 @@
   "evaluation": {
     "types": ["1-step"],
     "profitTargets": { "phase1": 6 },
-    "dailyDrawdown": 2,
-    "maxDrawdown": 6,
-    "minTradingDays": 15,
-    "scalingPlan": false
+    "dailyDrawdown": null,
+    "maxDrawdown": null,
+    "minTradingDays": 10,
+    "scalingPlan": true
   },
   "pricing": {
     "challengeFees": [
-      { "accountSize": 25000, "fee": 150, "model": "1-step", "label": "Gauntlet Mini $25K (monthly)" },
+      { "accountSize": 25000, "fee": 150, "model": "1-step", "label": "Trader Career Path $25K (monthly)" },
+      { "accountSize": 50000, "fee": 150, "model": "1-step", "label": "Trader Career Path $50K (monthly)" },
+      { "accountSize": 100000, "fee": 150, "model": "1-step", "label": "Trader Career Path $100K (monthly)" },
       { "accountSize": 50000, "fee": 170, "model": "1-step", "label": "Gauntlet Mini $50K (monthly)" },
       { "accountSize": 100000, "fee": 220, "model": "1-step", "label": "Gauntlet Mini $100K (monthly)" },
       { "accountSize": 150000, "fee": 330, "model": "1-step", "label": "Gauntlet Mini $150K (monthly)" },
-      { "accountSize": 200000, "fee": 410, "model": "1-step", "label": "Gauntlet Mini $200K (monthly)" },
-      { "accountSize": 400000, "fee": 550, "model": "1-step", "label": "Gauntlet Mini $400K (monthly)" }
+      { "accountSize": 200000, "fee": 410, "model": "1-step", "label": "Gauntlet Mini $200K (monthly)" }
     ],
     "resetFee": null,
-    "refundPolicy": null
+    "refundPolicy": "Monthly subscription billing continues until the trader passes, cancels, or changes plan. Trader Career Path includes one free reset at each renewal. Gauntlet Mini does not include free resets."
   },
   "payouts": {
     "splitMax": 80,
-    "schedule": "Monthly",
-    "processingTime": "3–5 business days",
-    "firstPayoutDays": 30,
-    "methods": ["bank transfer", "ACH"]
+    "schedule": "Withdrawals processed once a week on Wednesdays. Request due by 2pm on the prior Friday. $100 minimum net withdrawal. 80/20 profit split in trader's favour. Gauntlet Mini LiveSim payout cap: up to $4,000 after reaching $5,000 profit. TCP LiveSim withdrawal cap: profit target minus 20%. Withdrawal methods assigned by the firm, not optional.",
+    "processingTime": "Weekly (Wednesdays)",
+    "firstPayoutDays": null,
+    "methods": ["Rise", "Deel", "Bayzat", "Direct Crypto"]
   },
   "rules": {
-    "newsTrading": true,
+    "newsTrading": null,
     "weekendHolding": false,
     "copyTrading": false,
-    "expertAdvisors": true,
-    "consistencyRule": null,
-    "notes": "Three evaluation paths: Trade Career Path, The Gauntlet Mini, and Beginner Crash Course. $10 withdrawal fee on payouts under $500. Additional data fees apply. Monthly billing continues until cancelled."
+    "expertAdvisors": null,
+    "consistencyRule": "Consistency requirements apply during evaluation. Progression ladder violations block evaluation for the day but do not automatically require a reset.",
+    "notes": "Two one-step futures evaluations: Trader Career Path (TCP) and Gauntlet Mini. TCP account sizes: TCP25, TCP50, TCP100. Gauntlet Mini account sizes: GAU50, GAU100, GAU150, GAU200. $400K is part of TCP growth plan, not starting evaluation size. Minimum 10 trading days to pass. Approved trading times only — all positions must be closed by 15:50 CT. No overnight positions. No copytrading in TCP or Gauntlet Mini. EAs not clearly allowed — prohibited-conduct wording warns against software, AI, or ultra-fast data entry that could manipulate trading environment or give unfair advantage. Monthly billing continues until pass or cancellation. TCP includes one free reset at each renewal; Gauntlet Mini does not. Funded accounts: 80/20 profit split, progression ladder, LiveSim EOD drawdown or Live trailing drawdown, daily loss limits (dollar-based, not universal percentage), monthly data fees unless trader has own feed, five consecutive unscheduled trading-day absences result in termination. In 2025, 94.77% of passers traded LiveSim accounts, 5.23% traded Live accounts. LiveSim payout caps apply. Non-professional LiveSim users: no upfront activation fee, one-time $139 fee deducted from first withdrawal if profits are made. Professional users face monthly exchange charges. Futures only — CME, COMEX, NYMEX, CBOT. No ICE, no EUREX. No stocks, options, forex, crypto, or CFDs. Withdrawal methods assigned by firm, not optional. Withdrawal fees: Rise $50 (non-US) or 1.5% (US), Deel $50, Bayzat $5–$40, Direct Crypto 0.735%. 8.89% pass rate in 2025. Evaluations not suggested for people with little trading experience. US and Non-US operations — Non-US run through Bahia Education Services in Dubai for MENA region."
   },
   "markets": {
-    "platforms": ["NinjaTrader", "Finamark", "R Trader"],
-    "instruments": "Futures — CME (equity indices, commodities, currencies, and more)"
+    "platforms": ["NinjaTrader", "Finamark", "Rithmic"],
+    "instruments": "Futures only — CME, COMEX, NYMEX, CBOT. No ICE, no EUREX. No stocks, options, forex, crypto, or CFDs."
   },
   "trust": {
-    "trustpilotRating": 4.4,
-    "trustpilotCount": 1400,
-    "communitySize": "30,000+ traders",
-    "notableFlags": []
+    "trustpilotRating": 4.7,
+    "trustpilotCount": 4500,
+    "communitySize": "6,400+ traders funded in 2025, 4,500+ live trading accounts",
+    "notableFlags": ["Operating since 2016", "Named proprietary and brokerage partners", "Public pass-rate disclosures", "Published pledge", "Strong educational platform", "8.89% pass rate in 2025"]
   },
   "links": { "website": "https://www.earn2trade.com/?a_pid=Cfd2023" },
   "media": { "logo": "/images/logos/earn2trade-logo.png" },
   "availability": { "restrictedCountries": [] },
   "support": {
-    "hours": "Business hours",
-    "liveChat": true,
-    "email": true,
+    "hours": "Help Centre, support contact pages, customer support commitments",
+    "liveChat": false,
+    "email": false,
     "discord": false
   },
   "custom": {
-    "tags": ["High Monthly Fees", "80% Profit Split", "Restrictive Rules", "Educational Focus"]
+    "tags": ["Educational Focus", "Futures Only", "80% Profit Split", "Two Evaluation Products", "Monthly Subscription"],
+    "discountCode": null,
+    "discountPercent": null
   },
   "notes": null,
-  "lastVerifiedAt": "2026-02-24",
-  "lastUpdatedAt": "2026-02-24",
+  "lastVerifiedAt": "2026-03-12",
+  "lastUpdatedAt": "2026-03-12",
   "dataSources": ["https://earn2trade.com"]
 }

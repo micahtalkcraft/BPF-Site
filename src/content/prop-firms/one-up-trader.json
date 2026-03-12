@@ -8,7 +8,7 @@
     "types": ["1-step"],
     "profitTargets": { "phase1": 6 },
     "dailyDrawdown": null,
-    "maxDrawdown": 6,
+    "maxDrawdown": null,
     "minTradingDays": 10,
     "scalingPlan": true
   },
@@ -29,19 +29,19 @@
     "refundPolicy": "No refund on challenge fees. Monthly subscription model — pay 50% upfront, remaining 50% once funded. Account reset: $50 for 25K/50K accounts, $100 for all others."
   },
   "payouts": {
-    "splitMax": 90,
-    "schedule": "On demand (anytime)",
-    "processingTime": "1-2 business days",
+    "splitMax": 100,
+    "schedule": "On demand once withdrawal profit threshold is met ($1,500–$5,500 depending on account size)",
+    "processingTime": "Bank wire 1–3 business days; crypto up to 14 business days",
     "firstPayoutDays": null,
     "methods": ["bank wire", "crypto"]
   },
   "rules": {
-    "newsTrading": true,
+    "newsTrading": null,
     "weekendHolding": null,
-    "copyTrading": true,
-    "expertAdvisors": true,
-    "consistencyRule": "Three best other trading days must equal 80% or more of the largest day's net profit",
-    "notes": "Futures-only prop firm. News trading allowed during evaluation; funded traders must avoid trading 1 minute before/after major economic releases (FOMC, employment, inflation, GDP). Copy trading allowed only between accounts under the same name. High-frequency trading and trades under 10 seconds prohibited. Group/synchronized trading not allowed. Hedging across multiple funded accounts not allowed. Weekly trade execution must be at least 50% of average evaluation trades. Trailing drawdown stops at initial balance. No daily loss limits."
+    "copyTrading": null,
+    "expertAdvisors": null,
+    "consistencyRule": "The sum of the three other best trading days must equal 80% or more of the largest trading day's net profit.",
+    "notes": "Futures-only prop firm. News trading allowed during evaluation; funded traders must avoid trading 1 minute before/after major economic releases (FOMC, employment, inflation, GDP). Copy trading allowed only between accounts registered under the same name — cross-name or coordinated strategies prohibited. EAs supported by the platforms but firm-level trading permission for all EAs is not broadly confirmed. High-frequency trading and trades under 10 seconds prohibited. Group/synchronized trading not allowed. Hedging across multiple funded accounts not allowed. Weekly trade execution must be at least 50% of average evaluation trades. Trailing drawdown stops at initial balance. No daily loss limits. Express Funding is only available to traders who had a funded account and an FTA termination in the past 30 days — not open to all traders."
   },
   "markets": {
     "platforms": ["NinjaTrader", "R|Trader Pro", "Sierra Chart", "ScalpTool", "Volfix.net", "Agena Trader", "Bookmap", "Jigsaw Trading", "MultiCharts", "Medved Trader", "Track 'n Trade", "Trade Navigator", "MotiveWave", "InsideEDGE Trader", "Vetta", "iTrader", "Order Flow Trading", "Photon Trade"],
@@ -58,12 +58,13 @@
   "availability": { "restrictedCountries": [] },
   "support": {
     "liveChat": true,
-    "email": true
+    "email": true,
+    "hours": "24/7 via phone, live chat, and email"
   },
   "custom": {
     "tags": ["Monthly Subscription Fees", "Tight Trailing Drawdown", "Futures Trading Only", "20+ Platforms"]
   },
-  "lastVerifiedAt": "2026-02-27",
-  "lastUpdatedAt": "2026-02-27",
+  "lastVerifiedAt": "2026-03-11",
+  "lastUpdatedAt": "2026-03-11",
   "dataSources": ["https://oneuptrader.com"]
 }

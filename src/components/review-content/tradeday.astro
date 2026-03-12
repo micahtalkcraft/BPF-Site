@@ -1,0 +1,612 @@
+---
+// Static editorial content for TradeDay
+// Supports multiple sections via the `section` prop
+interface Props {
+  section: string;
+  fallbackBody?: string;
+}
+const { section, fallbackBody } = Astro.props;
+---
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* CHALLENGES SECTION                                                  */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "challenges" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <!-- Overview -->
+  <p class="mb-4">
+    TradeDay offers three <strong>one-step futures evaluations</strong>: <strong>Intraday</strong>, <strong>End of Day (EOD)</strong>, and <strong>Static</strong>. Each uses a different drawdown model. Account sizes available are <strong>$50K, $100K, and $150K</strong>.
+  </p>
+
+  <p class="mb-4">
+    To pass, traders must hit the profit target, trade for a <strong>minimum of 5 days</strong>, and keep any single day's profit at <strong>no more than 30% of total profit</strong>. TradeDay is strictly <strong>day-trading only</strong> — all positions must be closed before the market closes and at least <strong>10 minutes prior to the end of any session</strong>. No holding positions over <strong>tier 1 market data releases</strong>.
+  </p>
+
+  <!-- Drawdown model cards -->
+  <div class="space-y-3 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Intraday — Trailing Max Drawdown</p>
+      <p>Real-time trailing drawdown that follows your highest equity point during the session. Example: $50K has $2,000 trailing max, $100K has $3,000, $150K has $4,000.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">End of Day (EOD) — Trailing Max Drawdown</p>
+      <p>Trailing drawdown calculated at the end of each trading session rather than in real time. Provides more breathing room for intraday fluctuations.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Static — Fixed Drawdown</p>
+      <p>Fixed drawdown that does not trail. Static accounts use fixed drawdowns from <strong>$500 to $1,000</strong> depending on account size. Tightest drawdown but does not increase as profits grow.</p>
+    </div>
+  </div>
+
+  <!-- Key specs -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Evaluation Structure</h3>
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 mb-4">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Fee Type</p>
+      <p class="text-sm font-bold text-amber-600">Monthly Sub</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Duration</p>
+      <p class="text-sm font-bold text-slate-800">Until pass/cancel</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Trading Days</p>
+      <p class="text-sm font-bold text-amber-600">5 days</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Consistency</p>
+      <p class="text-sm font-bold text-amber-600">30% max/day</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Pass Rate</p>
+      <p class="text-sm font-bold text-slate-800">28.2%</p>
+    </div>
+  </div>
+
+  <!-- Drawdown comparison table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Drawdown by Account Size (Intraday)</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account Size</th>
+          <th class="px-4 py-3 text-center">Trailing Max Drawdown</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">$50K Intraday</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$2,000</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">$100K Intraday</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$3,000</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">$150K Intraday</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$4,000</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Static accounts</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$500–$1,000 (fixed)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Funded account path -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Funded Account Path</h3>
+  <p class="mb-3">
+    After passing the evaluation, traders may receive either a <strong>Funded Sim</strong> or <strong>Funded Live</strong> account. No activation fee applies. Monthly membership <strong>stops once funded</strong>.
+  </p>
+
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-4">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
+      <p class="text-sm font-bold text-teal-600">80%→95%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Activation Fee</p>
+      <p class="text-sm font-bold text-teal-600">None</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Commission</p>
+      <p class="text-sm font-bold text-teal-600">None (funded)</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-amber-500 bg-amber-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-amber-800 mb-1">Verdict on Challenges — 6/10</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Three drawdown models give traders genuine choice, and the 28.2% pass rate is above average for the industry. The 5-day minimum and 30% consistency rule are reasonable. However, the strict day-trading-only requirement, mandatory close 10 minutes before session end, and the tier 1 news restriction significantly limit trading style flexibility. The path to funded accounts is clear, with no activation fee and membership stopping once funded.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SPREADS / PRICING SECTION                                          */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "spreads" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-3">
+    TradeDay uses <strong>monthly subscription billing</strong> with separate pricing by drawdown type. Subscriptions continue until the trader passes or cancels. <strong>Purchases are non-refundable</strong>. Paid resets are available, and a <strong>free reset comes at subscription renewal</strong>.
+  </p>
+
+  <p class="mb-4">
+    Once funded, the <strong>monthly membership stops</strong> and funded traders <strong>do not pay additional commission</strong> on trading. There is <strong>no activation fee</strong>.
+  </p>
+
+  <!-- Pricing table -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Current Discounted Monthly Pricing</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm whitespace-nowrap">
+      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Account</th>
+          <th class="px-4 py-3 text-center">Intraday</th>
+          <th class="px-4 py-3 text-center">EOD</th>
+          <th class="px-4 py-3 text-center">Static</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">$50K</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$87/mo</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$122/mo</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$115/mo</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">$100K</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$137/mo</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$172/mo</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$165/mo</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">$150K</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$187/mo</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$222/mo</td>
+          <td class="px-4 py-3 text-center font-semibold text-slate-900">$215/mo</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Cost structure overview -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Billing</p>
+      <p class="text-sm font-bold text-amber-600">Monthly Recurring</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Activation Fee</p>
+      <p class="text-sm font-bold text-teal-600">None</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Funded Commission</p>
+      <p class="text-sm font-bold text-teal-600">None</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Refunds</p>
+      <p class="text-sm font-bold text-red-600">Non-refundable</p>
+    </div>
+  </div>
+
+  <!-- Reset info -->
+  <div class="rounded-xl border border-slate-200 bg-white p-4 mb-6">
+    <p class="font-bold text-slate-900 mb-1">Resets</p>
+    <p class="text-sm text-slate-700">If you fail the evaluation, paid resets are available at published prices by plan. Alternatively, you can wait for subscription renewal for a <strong>free reset</strong>.</p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-amber-500 bg-amber-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-amber-800 mb-1">Verdict on Pricing — 6/10</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Starting from $87/month for the $50K Intraday plan, TradeDay's pricing is competitive within the monthly subscription model. The key advantages are no activation fee, commission-free funded trading, and the monthly membership stopping once funded. The free reset at renewal is a helpful inclusion. However, recurring monthly billing with non-refundable purchases means costs accumulate the longer it takes to pass.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* MARKETS SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "markets" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    TradeDay is <strong>futures only</strong>. Only listed futures products on <strong>CME, CBOT, NYMEX, and COMEX</strong> are permitted. Stocks, options, forex, cryptocurrency, and CFDs are <strong>not permitted</strong>.
+  </p>
+
+  <!-- Market coverage -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+    <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900 mb-1">CME</p>
+      <p class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Equity & Currency</p>
+      <p class="text-xs text-slate-400 mt-1">ES, NQ, 6E + more</p>
+    </div>
+    <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900 mb-1">CBOT</p>
+      <p class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Agricultural & Bonds</p>
+      <p class="text-xs text-slate-400 mt-1">ZC, ZW, ZB + more</p>
+    </div>
+    <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900 mb-1">NYMEX</p>
+      <p class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Energy</p>
+      <p class="text-xs text-slate-400 mt-1">CL, NG, HO, RB</p>
+    </div>
+    <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 text-center">
+      <p class="text-2xl font-black text-slate-900 mb-1">COMEX</p>
+      <p class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Metals</p>
+      <p class="text-xs text-slate-400 mt-1">GC, SI, HG + more</p>
+    </div>
+  </div>
+
+  <!-- Restrictions -->
+  <div class="rounded-xl border border-red-200 bg-red-50 p-4 mb-6">
+    <p class="text-sm font-bold text-red-900 mb-1">Not Available</p>
+    <p class="text-sm text-red-800">
+      Stocks, options, forex, cryptocurrency, and CFDs are <strong>not permitted</strong>. ICE and EUREX exchanges are also not offered. TradeDay is exclusively for CME Group futures products.
+    </p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-amber-500 bg-amber-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-amber-800 mb-1">Verdict on Markets — 5/10</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      Coverage of the four core CME Group exchanges (CME, CBOT, NYMEX, COMEX) provides access to the major US futures markets including equities, currencies, agricultural, energy, and metals. However, the futures-only restriction and absence of ICE and EUREX limit the range compared to multi-asset competitors. Traders needing forex, crypto, stocks, or CFDs will need to look elsewhere.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PLATFORMS SECTION                                                   */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "platforms" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    TradeDay's verified platform stack includes <strong>NinjaTrader</strong> and <strong>Tradovate</strong>. The broader wording mentions the system works across iOS, macOS, Windows, and Android. <strong>TradingView is not verified</strong> in the uploaded source files.
+  </p>
+
+  <!-- Platform cards -->
+  <div class="space-y-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">NinjaTrader</p>
+      <p>Advanced charting, strategy automation, and custom indicators. Full-featured desktop platform with market depth, automated strategy execution, and backtesting capabilities.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Tradovate</p>
+      <p>Browser-based and mobile platform with multi-device access. Cloud-based with real-time data across iOS, macOS, Windows, and Android.</p>
+    </div>
+  </div>
+
+  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
+    <p class="text-sm font-bold text-amber-900 mb-1">TradingView Not Verified</p>
+    <p class="text-sm text-amber-800">
+      TradingView is <strong>not confirmed</strong> in the uploaded source files. Traders who require TradingView should confirm availability directly with TradeDay before purchasing.
+    </p>
+  </div>
+
+  <!-- Trading rules -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Rule</th>
+          <th class="px-4 py-3 text-center">Status</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Day Trading Only</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">Close before market close + 10 min prior to session end</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Tier 1 News</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">No holding over tier 1 market data releases</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Consistency Rule</td>
+          <td class="px-4 py-3 text-center"><span class="text-amber-600 font-semibold">No single day &gt; 30% of total profit</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Contract Limits</td>
+          <td class="px-4 py-3 text-center"><span class="text-slate-900 font-semibold">Max per evaluation tier</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Automated Systems / Bots</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">Third-party bots & ATS banned</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">AI / Manipulation Software</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">Banned if used to manipulate or gain unfair advantage</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">VPN / VPS</td>
+          <td class="px-4 py-3 text-center"><span class="text-red-500 font-semibold">Banned for masking location</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Copy Trading</td>
+          <td class="px-4 py-3 text-center"><span class="text-amber-600 font-semibold">Not confirmed in source data</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Platforms — 7/10</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      NinjaTrader and Tradovate are solid, well-established futures platforms with cross-device support. The platform offering itself is competitive. However, the strict day-trading-only rules, tier 1 news restriction, bot ban, and VPN ban constrain how traders can use these platforms. TradingView is not verified.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* PAYOUTS SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "payouts" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    TradeDay pays <strong>80% from day one</strong>, with the potential to reach <strong>95%</strong>. The firm advertises <strong>day one payouts</strong> with <strong>no restrictions on withdrawal frequency</strong>. Once funded, the <strong>monthly membership stops</strong> and traders <strong>do not pay additional commission</strong> on trading. <strong>No activation fee</strong> applies.
+  </p>
+
+  <!-- Payout overview grid -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Profit Split</p>
+      <p class="text-sm font-bold text-teal-600">80%→95%</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">First Payout</p>
+      <p class="text-sm font-bold text-teal-600">Day 1</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Frequency</p>
+      <p class="text-sm font-bold text-teal-600">No restrictions</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Activation Fee</p>
+      <p class="text-sm font-bold text-teal-600">None</p>
+    </div>
+  </div>
+
+  <!-- Payout details -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payout Details</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Feature</th>
+          <th class="px-4 py-3 text-right">Details</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Starting Split</td>
+          <td class="px-4 py-3 text-right font-semibold text-teal-600">80%</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Maximum Split</td>
+          <td class="px-4 py-3 text-right font-semibold text-teal-600">95%</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Day One Payout</td>
+          <td class="px-4 py-3 text-right font-semibold text-teal-600">Yes</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Withdrawal Frequency</td>
+          <td class="px-4 py-3 text-right font-semibold text-teal-600">No restrictions</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Funded Commission</td>
+          <td class="px-4 py-3 text-right font-semibold text-teal-600">None</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Monthly Fee Once Funded</td>
+          <td class="px-4 py-3 text-right font-semibold text-teal-600">Stops</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Funded Account Type</td>
+          <td class="px-4 py-3 text-right font-semibold text-slate-900">Funded Sim or Funded Live</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Payment methods -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payment Methods</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Crypto</p>
+      <p class="text-sm text-slate-700">Cryptocurrency payout option</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">ACH</p>
+      <p class="text-sm text-slate-700">Direct bank transfer</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Payouts — 7/10</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      TradeDay's payout structure is one of its stronger areas. Day one payouts with no restrictions on withdrawal frequency is a genuine advantage. The 80% starting split rising to 95% is competitive, and the combination of no activation fee, commission-free funded trading, and membership stopping once funded makes the funded path cleaner than many competitors. The split doesn't reach the 100% offered by some firms, but the overall payout package is well-structured.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* SUPPORT SECTION                                                     */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "support" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    TradeDay provides a strong <strong>educational and community package</strong> that goes beyond what many futures prop firms offer. The support infrastructure includes a Discord community and a comprehensive set of learning resources.
+  </p>
+
+  <!-- Educational resources -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Educational & Community Resources</h3>
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-6">
+    <div class="rounded-lg bg-teal-50 border border-teal-100 px-3 py-2 text-center">
+      <p class="text-sm font-bold text-teal-800">Webinars</p>
+      <p class="text-xs text-teal-600">Live learning sessions</p>
+    </div>
+    <div class="rounded-lg bg-teal-50 border border-teal-100 px-3 py-2 text-center">
+      <p class="text-sm font-bold text-teal-800">Research</p>
+      <p class="text-xs text-teal-600">Market analysis</p>
+    </div>
+    <div class="rounded-lg bg-teal-50 border border-teal-100 px-3 py-2 text-center">
+      <p class="text-sm font-bold text-teal-800">Live Squawk</p>
+      <p class="text-xs text-teal-600">Real-time audio feed</p>
+    </div>
+    <div class="rounded-lg bg-teal-50 border border-teal-100 px-3 py-2 text-center">
+      <p class="text-sm font-bold text-teal-800">Daily Commentary</p>
+      <p class="text-xs text-teal-600">Market updates</p>
+    </div>
+    <div class="rounded-lg bg-teal-50 border border-teal-100 px-3 py-2 text-center">
+      <p class="text-sm font-bold text-teal-800">Discord</p>
+      <p class="text-xs text-teal-600">Community + support</p>
+    </div>
+    <div class="rounded-lg bg-teal-50 border border-teal-100 px-3 py-2 text-center">
+      <p class="text-sm font-bold text-teal-800">Mentoring</p>
+      <p class="text-xs text-teal-600">One-on-one guidance</p>
+    </div>
+    <div class="rounded-lg bg-teal-50 border border-teal-100 px-3 py-2 text-center">
+      <p class="text-sm font-bold text-teal-800">Courses</p>
+      <p class="text-xs text-teal-600">Structured learning</p>
+    </div>
+    <div class="rounded-lg bg-teal-50 border border-teal-100 px-3 py-2 text-center">
+      <p class="text-sm font-bold text-teal-800">E-Books</p>
+      <p class="text-xs text-teal-600">Written guides</p>
+    </div>
+    <div class="rounded-lg bg-teal-50 border border-teal-100 px-3 py-2 text-center">
+      <p class="text-sm font-bold text-teal-800">Coaching</p>
+      <p class="text-xs text-teal-600">Direct access</p>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Support — 8/10</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      TradeDay's educational and community offering is one of its strongest areas. Webinars, research, live squawk, daily market commentary, Discord, mentoring, courses, e-books, and coaching give traders a comprehensive support ecosystem. This is a richer package than what most futures prop firms provide and adds genuine value beyond just the evaluation product itself.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* TRUST SECTION                                                       */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section === "trust" && (
+<div class="text-sm leading-relaxed text-slate-700">
+
+  <p class="mb-4">
+    TradeDay has operated since <strong>2020</strong>, making it a younger firm compared to established competitors like Topstep (2012) or Earn2Trade (2016). The firm publishes <strong>named leadership</strong>, <strong>office details</strong>, and a <strong>pass rate of 28.2%</strong> (October 2023 – March 2024).
+  </p>
+
+  <!-- Trust stats grid -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+    <div class="rounded-xl bg-slate-50 border border-slate-100 px-4 py-3 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-1">Operating Since</p>
+      <p class="text-lg font-black text-slate-900">2020</p>
+      <p class="text-[10px] text-slate-400">~6 years</p>
+    </div>
+    <div class="rounded-xl bg-slate-50 border border-slate-100 px-4 py-3 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-1">Pass Rate</p>
+      <p class="text-lg font-black text-slate-900">28.2%</p>
+      <p class="text-[10px] text-slate-400">Oct 2023 – Mar 2024</p>
+    </div>
+    <div class="rounded-xl bg-slate-50 border border-slate-100 px-4 py-3 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-1">Leadership</p>
+      <p class="text-lg font-black text-slate-900">Named</p>
+      <p class="text-[10px] text-slate-400">publicly listed</p>
+    </div>
+    <div class="rounded-xl bg-slate-50 border border-slate-100 px-4 py-3 text-center">
+      <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold mb-1">TrustPilot</p>
+      <p class="text-lg font-black text-slate-400">—</p>
+      <p class="text-[10px] text-slate-400">not available</p>
+    </div>
+  </div>
+
+  <!-- Trust signals -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Trust Signals</h3>
+  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+        <tr>
+          <th class="px-4 py-3 text-left">Signal</th>
+          <th class="px-4 py-3 text-center">Status</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Operating History</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Since 2020</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Named Leadership</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Publicly listed</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Office Details</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Published</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Pass Rate Published</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">28.2% (Oct 2023 – Mar 2024)</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">No Activation Fee</td>
+          <td class="px-4 py-3 text-center"><span class="text-emerald-600 font-semibold">Confirmed</span></td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">TrustPilot</td>
+          <td class="px-4 py-3 text-center"><span class="text-slate-400 font-semibold">Not available</span></td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-medium text-slate-600">Firm Age</td>
+          <td class="px-4 py-3 text-center"><span class="text-amber-600 font-semibold">Younger than established competitors</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Verdict -->
+  <div class="rounded-xl border-l-4 border-amber-500 bg-amber-50/60 px-5 py-4">
+    <p class="text-sm font-semibold text-amber-800 mb-1">Verdict on Trust — 6/10</p>
+    <p class="text-sm text-slate-700 leading-relaxed">
+      TradeDay shows reasonable transparency with named leadership, published office details, and a public pass rate of 28.2%. These are positive signals. However, the firm has only operated since 2020 — younger than established competitors — and has no TrustPilot presence for independent review verification. The trust profile is adequate but not yet at the level of firms with longer track records and larger independent review bases.
+    </p>
+  </div>
+
+</div>
+)}
+
+{/* ════════════════════════════════════════════════════════════════════ */}
+{/* FALLBACK                                                            */}
+{/* ════════════════════════════════════════════════════════════════════ */}
+{section !== "challenges" && section !== "spreads" && section !== "markets" && section !== "platforms" && section !== "payouts" && section !== "support" && section !== "trust" && fallbackBody && (
+  <div class="text-sm leading-relaxed text-slate-700 space-y-4">
+    {fallbackBody.split("\n\n").map((para) => (
+      <p set:html={para.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")} />
+    ))}
+  </div>
+)}

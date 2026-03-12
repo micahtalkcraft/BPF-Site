@@ -3,89 +3,89 @@
   "slug": "funded-elite",
   "name": "Funded Elite",
   "status": "active",
-  "hqCountry": "LC",
+  "hqCountry": "IT",
   "evaluation": {
     "types": ["1-step", "2-step", "instant"],
     "profitTargets": { "phase1": 12, "phase2": 5 },
-    "dailyDrawdown": 5,
-    "maxDrawdown": 10,
+    "dailyDrawdown": null,
+    "maxDrawdown": null,
     "minTradingDays": 3,
     "scalingPlan": true
   },
   "pricing": {
     "challengeFees": [
-      { "accountSize": 7000, "fee": 41, "model": "2-step", "label": "Standard Challenge" },
-      { "accountSize": 15000, "fee": 60, "model": "2-step", "label": "Standard Challenge" },
-      { "accountSize": 25000, "fee": 101, "model": "2-step", "label": "Standard Challenge" },
-      { "accountSize": 50000, "fee": 152, "model": "2-step", "label": "Standard Challenge" },
-      { "accountSize": 100000, "fee": 240, "model": "2-step", "label": "Standard Challenge" },
-      { "accountSize": 200000, "fee": 457, "model": "2-step", "label": "Standard Challenge" },
-      { "accountSize": 300000, "fee": 639, "model": "2-step", "label": "Standard Challenge" },
-      { "accountSize": 5000, "fee": 13, "model": "2-step", "label": "Lite Challenge" },
-      { "accountSize": 10000, "fee": 21, "model": "2-step", "label": "Lite Challenge" },
-      { "accountSize": 15000, "fee": 33, "model": "2-step", "label": "Lite Challenge" },
-      { "accountSize": 25000, "fee": 49, "model": "2-step", "label": "Lite Challenge" },
-      { "accountSize": 50000, "fee": 110, "model": "2-step", "label": "Lite Challenge" },
-      { "accountSize": 100000, "fee": 165, "model": "2-step", "label": "Lite Challenge" },
-      { "accountSize": 200000, "fee": 324, "model": "2-step", "label": "Lite Challenge" },
-      { "accountSize": 300000, "fee": 495, "model": "2-step", "label": "Lite Challenge" },
-      { "accountSize": 7000, "fee": 159, "model": "instant", "label": "Flash Challenge" },
-      { "accountSize": 15000, "fee": 319, "model": "instant", "label": "Flash Challenge" },
-      { "accountSize": 25000, "fee": 419, "model": "instant", "label": "Flash Challenge" },
-      { "accountSize": 50000, "fee": 819, "model": "instant", "label": "Flash Challenge" },
-      { "accountSize": 100000, "fee": 1489, "model": "instant", "label": "Flash Challenge" },
-      { "accountSize": 25000, "fee": 5, "model": "1-step", "label": "Flash Activation Challenge" },
-      { "accountSize": 50000, "fee": 5, "model": "1-step", "label": "Flash Activation Challenge" },
-      { "accountSize": 100000, "fee": 5, "model": "1-step", "label": "Flash Activation Challenge" },
-      { "accountSize": 200000, "fee": 5, "model": "1-step", "label": "Flash Activation Challenge" }
+      { "accountSize": 7000, "fee": 41, "model": "2-step", "label": "2-Step + Free Retry" },
+      { "accountSize": 15000, "fee": 60, "model": "2-step", "label": "2-Step + Free Retry" },
+      { "accountSize": 25000, "fee": 101, "model": "2-step", "label": "2-Step + Free Retry" },
+      { "accountSize": 50000, "fee": 152, "model": "2-step", "label": "2-Step + Free Retry" },
+      { "accountSize": 100000, "fee": 240, "model": "2-step", "label": "2-Step + Free Retry" },
+      { "accountSize": 200000, "fee": 457, "model": "2-step", "label": "2-Step + Free Retry" },
+      { "accountSize": 300000, "fee": 639, "model": "2-step", "label": "2-Step + Free Retry" },
+      { "accountSize": 5000, "fee": 13, "model": "2-step", "label": "LITE 2-Step" },
+      { "accountSize": 10000, "fee": 21, "model": "2-step", "label": "LITE 2-Step" },
+      { "accountSize": 15000, "fee": 33, "model": "2-step", "label": "LITE 2-Step" },
+      { "accountSize": 25000, "fee": 49, "model": "2-step", "label": "LITE 2-Step" },
+      { "accountSize": 50000, "fee": 110, "model": "2-step", "label": "LITE 2-Step" },
+      { "accountSize": 100000, "fee": 165, "model": "2-step", "label": "LITE 2-Step" },
+      { "accountSize": 200000, "fee": 324, "model": "2-step", "label": "LITE 2-Step" },
+      { "accountSize": 300000, "fee": 495, "model": "2-step", "label": "LITE 2-Step" },
+      { "accountSize": 7000, "fee": 159, "model": "instant", "label": "Instant" },
+      { "accountSize": 15000, "fee": 319, "model": "instant", "label": "Instant" },
+      { "accountSize": 25000, "fee": 419, "model": "instant", "label": "Instant" },
+      { "accountSize": 50000, "fee": 819, "model": "instant", "label": "Instant" },
+      { "accountSize": 100000, "fee": 1489, "model": "instant", "label": "Instant" },
+      { "accountSize": 25000, "fee": 5, "model": "1-step", "label": "Flash Activation" },
+      { "accountSize": 50000, "fee": 5, "model": "1-step", "label": "Flash Activation" },
+      { "accountSize": 100000, "fee": 5, "model": "1-step", "label": "Flash Activation" },
+      { "accountSize": 200000, "fee": 5, "model": "1-step", "label": "Flash Activation" }
     ],
     "resetFee": null,
-    "refundPolicy": "Second chance reset available on Standard Challenge only. No refunds after trading begins."
+    "refundPolicy": "Free retry available on 2-Step + Free Retry and 1-Step + Free Retry. If passed without using second chance or resets, the initial fee is refunded with the third payout. No refunds once trading begins."
   },
   "payouts": {
     "splitMax": 95,
-    "schedule": "3 to 21 days between payouts (adjustable via add-on)",
+    "schedule": "First payout always after 21 days. Subsequent payout interval selectable at checkout: 3, 7, 14, or 21 days. Instant model starts at 70% split on first payout, then switches to chosen split from second payout onward. If second chance is used, profit split permanently becomes 50%.",
     "processingTime": "Processed via Rise payment system",
     "firstPayoutDays": 21,
     "methods": ["bank-transfer", "crypto", "paypal"]
   },
   "rules": {
     "newsTrading": true,
-    "weekendHolding": false,
+    "weekendHolding": true,
     "copyTrading": true,
-    "expertAdvisors": true,
-    "consistencyRule": "3 profitable trading days required with profit/loss of 0.5% of account size (Flash Challenge). Risk limit of no more than half of daily loss limit on a single asset on the same day. Lot size changes monitored for consistency compliance.",
-    "notes": "News trading allowed but no opening or closing positions during high-impact news windows. Weekend holding available as paid add-on at challenge selection. Weekend trading only with add-on. Copy trading permitted only between your own accounts — no social platform mirroring. EAs and automated trading allowed on MT5 but HFT, latency arbitrage, hedging, and micro scalping banned. Martingale allowed but not with over-leveraging or shared EAs. Account sharing, account rolling, and IP sharing strictly forbidden. Switching accounts mid-challenge not allowed. Scalping allowed only with add-on (positions must be held 30+ seconds). Payments accepted via cards, PayPal, bank transfers, wire transfers, and crypto (max $500 via Confirmo.net). Registered in Saint Lucia. Broker connectivity through Purple Trading (CySEC-regulated). MT5 and TradeLocker restricted in US, Cuba, Iran, Iraq, Lebanon, Libya, North Korea, Syria, Somalia, Algeria, Crimea, Donetsk, and Luhansk regions."
+    "expertAdvisors": null,
+    "consistencyRule": "3 profitable trading days required with profit/loss of 0.5% of account size (Instant and Flash Activation funded stage). Flash Activation funded stage adds 30% daily consistency rule. All $300K accounts have 60% consistency rule plus 5 minimum trading days. Risk limit: no more than half of daily loss limit on a single asset on the same day (funded stage only). Lot size changes monitored for consistency compliance.",
+    "notes": "Six challenge models: 2-Step + Free Retry ($7K–$300K, fees from $41, 5% daily DD, 5–10% selectable max DD, static max DD + EOD daily DD, free retry available — but using it permanently cuts profit split to 50%), 1-Step + Free Retry (3% daily DD, selectable max DD 5%/6%/8%/9%/10%, free retry available — same 50% permanent split penalty), LITE 2-Step ($5K–$300K, fees from $13, 4% daily DD, 6–10% selectable max DD, no second chance), LITE 1-Step (3% daily DD, selectable max DD 5%/6%/7%/8%/10%, no second chance), Instant ($7K–$100K, fees from $159, 3% daily DD trailing, 6% max DD, no profit target, 3 profitable days with 0.5% P&L required for payout, first payout at 70% then chosen split from second payout onward), Flash Activation ($25K–$200K, $5 evaluation fee + activation fee $159–$989 within 29 days, evaluation uses 3% daily DD and 6% static max DD with 6% profit target; funded stage switches to trailing max DD and requires 3 profitable days with 0.5% positive P&L plus 30% daily consistency rule). Profit split selectable at checkout: 60%, 70%, 80%, or 95%. Payout interval selectable at checkout: 3, 7, 14, or 21 days — first payout is always after 21 days regardless of chosen interval. All $300K accounts have 60% consistency rule and 5 minimum trading days instead of 3. News trading is allowed with no restrictions. Weekend holding is allowed by default. Weekend trading (opening/closing positions on weekends) is not allowed unless the weekend trading add-on is purchased. Copy trading permitted between your own accounts only — no social platform mirroring. EAs allowed as support tools only — must not trade independently with hidden or fully automated strategies; hidden or non-communicated EA use can lead to termination. HFT, latency arbitrage, hedging, and micro scalping banned. Account sharing, account rolling, and IP sharing strictly forbidden. Scalping allowed only with add-on (positions must be held 30+ seconds). Risk limit of no more than half of daily loss limit on a single asset on the same day applies in funded stage only, not during evaluation. Some funded-stage rule violations are treated as soft breaches — these do not always result in instant closure and can lead to a reduced payout split or reset instead. Inactivity rule: accounts terminated after 29 days without a single trade. Maximum 50 active challenges at once; total live funded allocation capped at $400,000. Transition to a live account is not automatic — it is by private invitation after review. All capital in challenge and funded accounts is virtual, not real money; profits earned from successful trading are real and paid out. Payments accepted via cards, PayPal, bank transfers, wire transfers, and crypto (max $500 gross per payout cycle via Confirmo.net). Based in Latina, Italy. Platforms: MT5, TradeLocker, and Match-Trader. Restricted country lists differ by platform. MT5 and TradeLocker restricted in US, Cuba, Iran, Iraq, Lebanon, Libya, North Korea, Syria, Somalia, Algeria, Crimea, Donetsk, and Luhansk regions. Match-Trader has its own restricted country list per the FAQ."
   },
   "markets": {
-    "platforms": ["MetaTrader 5", "TradeLocker"],
-    "instruments": "Forex (50-70+ pairs, 1:30 base, 1:50 or 1:100 with add-ons), Indices (10-15+, 1:30 base), Metals (5-10+, 1:30 base), Commodities (5-15+, 1:30 base), Crypto CFDs (10-30+, 1:30 base), Stock CFDs (100-150+, 1:30 base), Futures CFDs (50-100+). All leverage adjustable to 1:50 (+10% fee) or 1:100 (+20% fee)."
+    "platforms": ["MetaTrader 5", "TradeLocker", "Match-Trader"],
+    "instruments": "Forex, Indices, Metals (Gold, Silver, Platinum, Palladium), Commodities (Oil, Natural Gas), Crypto CFDs, Stock CFDs, Futures CFDs. Leverage customisable for FX: 1:30 base, 1:50 (+10% fee), or 1:100 (+20% fee). Exact instrument counts not independently verified."
   },
   "trust": {
     "trustpilotRating": 4.5,
     "trustpilotCount": 562,
     "communitySize": null,
     "notableFlags": [
-      "Registered in Saint Lucia",
-      "Not backed by a regulated broker directly",
-      "Broker connectivity through Purple Trading (CySEC-regulated EU broker)",
+      "Based in Latina, Italy",
       "4.5/5 Trustpilot with 562 reviews",
-      "Mixed public perception — favorable Trustpilot but payout complaints on other platforms",
-      "Restricted in US, Canada, and several other countries"
+      "All capital is virtual — not real money; profits are real and paid out",
+      "Live account transition by invitation only after review",
+      "Mixed public perception — favourable Trustpilot but payout complaints on other platforms",
+      "Restricted in US, and several other countries (lists differ by platform)"
     ]
   },
   "links": { "website": "https://fundedelite.com" },
   "media": { "logo": "/images/logos/fundedlite.png" },
-  "availability": { "restrictedCountries": ["US", "CA", "DZ", "CU", "IR", "IQ", "LB", "LY", "KP", "SY", "SO"] },
+  "availability": { "restrictedCountries": ["US", "DZ", "CU", "IR", "IQ", "LB", "LY", "KP", "SY", "SO"] },
   "support": {
     "hours": "24/7 email support",
     "liveChat": false,
     "email": true
   },
   "custom": {
-    "tags": ["Multiple Challenge Models", "Customisable Add-Ons", "Instant Funding", "Pay Later Model", "300+ CFD Products"]
+    "tags": ["Multiple Challenge Models", "Customisable Add-Ons", "Instant Funding", "Pay Later Model", "Six Platforms"]
   },
-  "lastVerifiedAt": "2026-02-28",
-  "lastUpdatedAt": "2026-02-28",
+  "lastVerifiedAt": "2026-03-11",
+  "lastUpdatedAt": "2026-03-11",
   "dataSources": ["https://fundedelite.com"]
 }

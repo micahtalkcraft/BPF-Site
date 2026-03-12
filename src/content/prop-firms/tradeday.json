@@ -3,52 +3,72 @@
   "slug": "tradeday",
   "name": "TradeDay",
   "status": "active",
+  "foundedYear": 2020,
   "hqCountry": "US",
   "evaluation": {
     "types": ["1-step"],
     "profitTargets": { "phase1": 6 },
     "dailyDrawdown": null,
-    "maxDrawdown": 5,
-    "minTradingDays": 0,
+    "maxDrawdown": null,
+    "minTradingDays": 5,
     "scalingPlan": true
   },
   "pricing": {
-    "challengeFees": [],
+    "challengeFees": [
+      { "accountSize": 50000, "fee": 87, "model": "1-step", "label": "$50K Intraday (monthly, discounted)" },
+      { "accountSize": 100000, "fee": 137, "model": "1-step", "label": "$100K Intraday (monthly, discounted)" },
+      { "accountSize": 150000, "fee": 187, "model": "1-step", "label": "$150K Intraday (monthly, discounted)" },
+      { "accountSize": 50000, "fee": 122, "model": "1-step", "label": "$50K EOD (monthly, discounted)" },
+      { "accountSize": 100000, "fee": 172, "model": "1-step", "label": "$100K EOD (monthly, discounted)" },
+      { "accountSize": 150000, "fee": 222, "model": "1-step", "label": "$150K EOD (monthly, discounted)" },
+      { "accountSize": 50000, "fee": 115, "model": "1-step", "label": "$50K Static (monthly, discounted)" },
+      { "accountSize": 100000, "fee": 165, "model": "1-step", "label": "$100K Static (monthly, discounted)" },
+      { "accountSize": 150000, "fee": 215, "model": "1-step", "label": "$150K Static (monthly, discounted)" }
+    ],
     "resetFee": null,
-    "refundPolicy": null
+    "refundPolicy": "Monthly subscription. Can be cancelled but purchases are non-refundable. Paid resets available. Free reset at subscription renewal."
   },
   "payouts": {
-    "splitMax": 100,
-    "schedule": "On-demand",
+    "splitMax": 95,
+    "schedule": "Day one payouts. No restrictions on withdrawal frequency. 80% profit share from day one, up to 95%. Monthly membership stops once funded. Funded traders do not pay additional commission on trading.",
     "processingTime": null,
-    "firstPayoutDays": null,
+    "firstPayoutDays": 1,
     "methods": ["crypto", "ACH"]
   },
   "rules": {
-    "newsTrading": true,
+    "newsTrading": false,
     "weekendHolding": false,
-    "copyTrading": false,
+    "copyTrading": null,
     "expertAdvisors": false,
-    "consistencyRule": null,
-    "notes": null
+    "consistencyRule": "No single day's profit may exceed 30% of total profit.",
+    "notes": "Three one-step futures evaluations: Intraday, End of Day (EOD), and Static. Account sizes: $50K, $100K, $150K. Minimum 5 trading days to pass. Consistency rule: no single day's profit may exceed 30% of total profit. Day-trading only — all positions must be closed before market close and at least 10 minutes prior to end of any session. No holding positions over tier 1 market data releases. Maximum contract limit applies per evaluation tier. Third-party trading bots or automated trading systems are banned. Software or AI used to manipulate, abuse, or gain an unfair advantage is banned. VPN or VPS use to mask location is banned. Trading practices seen as exploiting the simulated environment are banned. Copy trading rule: DATA NOT FOUND. After passing, traders may receive Funded Sim or Funded Live account. No activation fee. Monthly membership stops once funded. Funded traders do not pay additional commission. Profit share starts at 80% from day one, up to 95%. Day one payouts with no restrictions on withdrawal frequency. Futures only — CME, CBOT, NYMEX, COMEX. No stocks, options, forex, cryptocurrency, or CFDs. Pass rate: 28.2% (October 2023 – March 2024). Purchases are non-refundable. Paid resets available; free reset at subscription renewal."
   },
   "markets": {
-    "platforms": ["NinjaTrader", "Tradovate", "TradingView"],
-    "instruments": "Futures (CME)"
+    "platforms": ["NinjaTrader", "Tradovate"],
+    "instruments": "Futures only — CME, CBOT, NYMEX, COMEX. No stocks, options, forex, cryptocurrency, or CFDs."
   },
   "trust": {
     "trustpilotRating": null,
     "trustpilotCount": null,
     "communitySize": null,
-    "notableFlags": []
+    "notableFlags": ["Operating since 2020", "28.2% pass rate published", "Named leadership and office details", "No activation fee", "Day one payouts", "Commission-free funded trading"]
   },
   "links": { "website": "https://tradeday.com" },
   "media": { "logo": "/images/logos/tradeday-logo.png" },
   "availability": { "restrictedCountries": [] },
-  "custom": {
-    "tags": ["Futures Trading Only", "250K Accounts"]
+  "support": {
+    "hours": "Webinars, research, live squawk, daily market commentary, Discord, mentoring, courses, e-books, coaching",
+    "liveChat": false,
+    "email": false,
+    "discord": true
   },
-  "lastVerifiedAt": "2026-02-26",
-  "lastUpdatedAt": "2026-02-26",
+  "custom": {
+    "tags": ["Futures Only", "Day One Payouts", "Up to 95% Split", "Three Drawdown Models", "No Activation Fee"],
+    "discountCode": null,
+    "discountPercent": null
+  },
+  "notes": null,
+  "lastVerifiedAt": "2026-03-12",
+  "lastUpdatedAt": "2026-03-12",
   "dataSources": ["https://tradeday.com"]
 }

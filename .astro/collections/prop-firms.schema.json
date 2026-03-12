@@ -39,10 +39,20 @@
               "items": {
                 "type": "string",
                 "enum": [
+                  "zero",
                   "1-step",
                   "2-step",
+                  "2-step-pro",
                   "3-step",
                   "instant",
+                  "direct-to-funded",
+                  "static",
+                  "diamond-hands",
+                  "eod",
+                  "fast-track",
+                  "guardian-x",
+                  "crypto",
+                  "mini",
                   "rapid",
                   "synthetic",
                   "other"

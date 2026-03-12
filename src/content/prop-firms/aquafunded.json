@@ -7,8 +7,8 @@
   "evaluation": {
     "types": ["1-step", "2-step", "3-step", "instant"],
     "profitTargets": { "phase1": 10, "phase2": 5, "phase3": 6 },
-    "dailyDrawdown": 5,
-    "maxDrawdown": 10,
+    "dailyDrawdown": null,
+    "maxDrawdown": null,
     "minTradingDays": 3,
     "scalingPlan": true
   },
@@ -32,26 +32,26 @@
       { "accountSize": 200000, "fee": 875, "model": "instant", "label": "Instant Pro" }
     ],
     "resetFee": null,
-    "refundPolicy": "No general refund policy. Refunds available only if KYC is refused. Optional add-ons available: 100% profit split upgrade and 7-day fast payout at additional cost."
+    "refundPolicy": "No general refund policy. Refunds available only if KYC is refused. Optional add-ons available: 100% profit split upgrade and first reward on demand at additional cost."
   },
   "payouts": {
-    "splitMax": 100,
-    "schedule": "Bi-weekly (14 days, or 7 days with add-on)",
+    "splitMax": 90,
+    "schedule": "Bi-weekly (14 days); first reward on demand available as upgrade; 100% profit split available via add-on",
     "processingTime": "1-3 business days",
     "firstPayoutDays": 14,
     "methods": ["crypto", "bank-transfer"]
   },
   "rules": {
-    "newsTrading": true,
+    "newsTrading": null,
     "weekendHolding": true,
-    "copyTrading": true,
+    "copyTrading": null,
     "expertAdvisors": true,
     "consistencyRule": "15-40% depending on model. Pro and Instant accounts enforce consistency rules post-funding. Standard evaluation accounts have no consistency rule.",
-    "notes": "News trading allowed during evaluation but restricted once funded — 10-minute no-trade window around red folder events, full block during FOMC news. Copy trading allowed between own AquaFunded accounts or legally linked personal accounts. EAs allowed on all platforms — no tick manipulation, latency arbitrage, or HFT strategies. Hedging and martingale strategies permitted. No forced stop losses or lot size limits. Risk per trade should stay within 1-2%, margin use should not exceed 80%. All accounts are demo/simulated trading environments. Payments processed by Paytiko (cards, Apple Pay, crypto)."
+    "notes": "News trading allowed during evaluation; on funded accounts, opening or closing trades is not allowed within 5 minutes before or after high-impact news including FOMC statements and speeches. Weekend holding allowed; crypto markets available 24/7 including weekends. Trade copiers permitted for managing your own accounts only — cross-user or social copy trading prohibited. EAs allowed on all platforms — no tick manipulation, latency arbitrage, or HFT strategies. Hedging allowed within the same account only — cross-account hedging prohibited. Martingale strategies permitted. No forced stop losses or lot size limits. Risk per trade should stay within 1-2%, margin use should not exceed 80%. Accounts breach after 30 days with no trade placed (inactivity rule). No arbitrage or tick scalping. All accounts are demo/simulated trading environments. Payments processed by Paytiko (cards, Apple Pay, crypto). AquaFunded also operates AquaFutures (futures trading) and AquaFunded Crypto (dedicated crypto product) as separate offerings."
   },
   "markets": {
-    "platforms": ["MT5", "TradeLocker", "Match Trader"],
-    "instruments": "Forex (28 pairs, up to 1:100 evaluation / 1:30-1:50 funded), Metals (2, 1:20 evaluation / 1:10 funded), Indices (7, 1:20 evaluation / 1:10 funded), Commodities (2, 1:20 evaluation / 1:10 funded), Crypto (4, 1:2 leverage)"
+    "platforms": ["MT5", "TradeLocker", "Match Trader", "cTrader"],
+    "instruments": "CFD: Forex (28 pairs, up to 1:100 evaluation / 1:50 funded standard / 1:50 funded pro), Metals (2, 1:20 evaluation / 1:10 funded), Indices (7, 1:20 evaluation / 1:10 funded), Commodities (2, 1:20 evaluation / 1:10 funded), Crypto (40+, up to 1:5 leverage). AquaFutures: futures via ProjectX and Volumetrica across $25K–$150K accounts (Instant Standard, Instant Pro, One Step Beginner, One Step Standard). AquaFunded Crypto: dedicated crypto product with Instant Funding, One Step, and AquaMan models."
   },
   "trust": {
     "trustpilotRating": null,
@@ -70,7 +70,7 @@
   "custom": {
     "tags": ["Multiple Evaluations", "Instant Funding", "Scaling Plan", "Trustpilot Flagged"]
   },
-  "lastVerifiedAt": "2026-02-27",
-  "lastUpdatedAt": "2026-02-27",
+  "lastVerifiedAt": "2026-03-11",
+  "lastUpdatedAt": "2026-03-11",
   "dataSources": ["https://aquafunded.com"]
 }

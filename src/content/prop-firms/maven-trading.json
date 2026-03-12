@@ -6,10 +6,10 @@
   "foundedYear": 2022,
   "hqCountry": "CA",
   "evaluation": {
-    "types": ["1-step", "2-step", "instant"],
+    "types": ["1-step", "2-step", "3-step", "instant", "mini"],
     "profitTargets": { "phase1": 8, "phase2": 5 },
-    "dailyDrawdown": 4,
-    "maxDrawdown": 8,
+    "dailyDrawdown": null,
+    "maxDrawdown": null,
     "minTradingDays": 0,
     "scalingPlan": true
   },
@@ -50,19 +50,19 @@
     "refundPolicy": "Fee refunded on third withdrawal"
   },
   "payouts": {
-    "splitMax": 100,
+    "splitMax": 80,
     "schedule": "Every 10 business days",
     "processingTime": "10 business days",
     "firstPayoutDays": 10,
     "methods": ["credit card", "bank transfer", "crypto"]
   },
   "rules": {
-    "newsTrading": false,
-    "weekendHolding": false,
+    "newsTrading": null,
+    "weekendHolding": null,
     "copyTrading": false,
-    "expertAdvisors": false,
-    "consistencyRule": "20% consistency score (Instant/Mini); no single trade or day >50% of total profit if profits exceed $5,000",
-    "notes": "HFT, toxic order flow, long/short arbitrage, reverse arbitrage, group hedging, and gamification prohibited. IP address changes flagged. Gambling-style trading (50%+ trades under 1 min hold) prohibited. Martingale now allowed as of January 2026."
+    "expertAdvisors": null,
+    "consistencyRule": "When profits exceed $5,000, no single trade or trading day may exceed 50% of total profits.",
+    "notes": "News trading restricted around a two-minute window before high-impact news events (ForexFactory Red Folder News) — trades opened or closed within this window are not counted. Weekend holding is not universally banned across all challenges. EAs are not automatically banned but require support approval before use. Copy trading is strictly prohibited. HFT, toxic order flow, long/short arbitrage, reverse arbitrage, group hedging, and gamification prohibited. IP address changes flagged. Gambling-style trading (50%+ trades under 1 min hold) prohibited. Martingale now allowed as of January 2026."
   },
   "markets": {
     "platforms": ["cTrader", "Match-Trader", "MT5"],
@@ -84,7 +84,7 @@
   "custom": {
     "tags": ["Low Fees", "5 Challenge Types", "MT5", "cTrader"]
   },
-  "lastVerifiedAt": "2026-02-24",
-  "lastUpdatedAt": "2026-02-24",
+  "lastVerifiedAt": "2026-03-11",
+  "lastUpdatedAt": "2026-03-11",
   "dataSources": ["https://maventrading.com"]
 }

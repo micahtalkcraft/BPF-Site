@@ -1,25 +1,27 @@
 {
   "id": "rev-alpha-capital",
   "propFirmId": "d0000024-0000-0000-0000-000000000024",
-  "summary": "With a score of 43/100, Alpha Capital offers multiple evaluation models and trading platforms but operates entirely in a simulated environment with no real-money execution. While it promotes an engaged Discord community and tools like Autochartist, its lack of transparency on spreads and execution raises concerns.\n\nTraders have reported payout denials, sudden account closures, and KYC enforcement only after passing challenges. Many claim risk interviews, IP bans, and changing rules prevent withdrawals, leading to doubts about the firm's legitimacy. The high number of detailed 1-star reviews suggests traders should approach with caution.",
+  "summary": "Alpha Capital scored 43/100 in our full review. The firm offers four evaluation models — Alpha One (1-step), Alpha Pro (2-step with 10%, 8%, and 6% variants), Swing (2-step), and Alpha Three (3-step) — with platform access via MT5, cTrader, DXTrade, and TradeLocker.\n\nProfit splits are 80% across all models. Payout schedules depend on the plan: Swing and Alpha One support on-demand payouts, while Alpha Pro and Alpha Three use bi-weekly payouts. On-demand payouts require compliance with the 40% Best Day Rule and at least 2% gross profit. Bi-weekly accounts need minimum $100 profit and 5 trading days for the first withdrawal.\n\nDrawdown and daily loss rules are model-specific. Alpha One uses 4% daily and 6% trailing max drawdown. Alpha Pro comes in three versions: Pro 10% (5% daily, 10% static), Pro 8% (4% daily, 8% static), and Pro 6% (3% daily, 6% static). Swing uses 5% daily and 10% static. Alpha Three uses 4% daily and 6% static. News trading is allowed during assessment but restricted on qualified accounts with plan-specific windows. Weekend holding is allowed on Swing, One, and Three qualified accounts but not on Pro.\n\nAlpha Capital also has a live progression route called Alpha Prime, where traders can qualify by achieving $40,000 profit on one simulated payout, five payouts from one qualified account, or $100,000 in lifetime payouts. The firm offers Standard and Raw assessment types — Standard has no commission while Raw charges $2.5 per lot each direction, with indices commission-free on both. US residents can use cTrader, DXTrade, and TradeLocker but cannot use MT5. Maximum allocation is $400,000 per household with $300,000 per strategy on qualified accounts.",
   "pros": [
-    "Multiple evaluation models (1-step, 2-step, 3-step)",
-    "Account sizes up to $200K",
-    "Scaling plan up to $2 million",
-    "MT5, cTrader, and DXTrade available",
+    "Four evaluation models (Alpha One, Alpha Pro with 3 variants, Swing, Alpha Three) covering different trading styles",
+    "Account sizes up to $200K with scaling plan up to $2 million",
+    "MT5, cTrader, DXTrade, and TradeLocker platform options",
     "Active Discord community with 106K+ members",
-    "Autochartist integration for market analysis"
+    "Alpha Prime live progression route for top performers",
+    "Standard and Raw assessment types with commission-free indices",
+    "Autochartist integration, academy section, blog content, and market analysis tools",
+    "0.25% performance fee bonus on fourth successful payout"
   ],
   "cons": [
-    "No real-money trading — fully simulated environment",
-    "No transparency on average spreads",
+    "No real-money trading — fully simulated environment until Alpha Prime",
+    "No transparency on average spreads per instrument",
     "Reports of payout denials and sudden account closures",
     "Strict KYC enforcement after passing challenges",
-    "US residents restricted to DXTrade only",
-    "40% Best Day Rule limits daily profit contribution"
+    "Rules vary significantly between plans — drawdown, news trading, weekend holding, and payout schedules are all plan-specific",
+    "40% Best Day Rule limits daily profit contribution on on-demand accounts"
   ],
-  "bestFor": "Traders who want multiple evaluation paths and scaling potential, and who understand the risks of simulated-only prop firms",
-  "notIdealFor": "Traders seeking transparent execution, reliable payouts, or real-money trading environments",
+  "bestFor": "Traders who want multiple evaluation paths with plan-specific flexibility, Standard or Raw pricing options, and a stated live progression route through Alpha Prime",
+  "notIdealFor": "Traders seeking consistent rules across all account types, transparent spread data, or those uncomfortable with a simulated environment where reports of payout denials and strict post-challenge KYC enforcement persist",
   "overallScore": 43,
   "categoryScores": {
     "challenges": 60,
@@ -40,35 +42,35 @@
   },
   "verdictBlocks": [
     {
-      "heading": "Alpha Capital Warning",
-      "body": "We do not recommend Alpha Capital due to payout denials, sudden account closures, and strict KYC enforcement after traders pass challenges. The firm operates in a simulated environment with no real-money execution, raising transparency concerns.\n\nOur testing scored Alpha Capital 43/100, and we only recommend firms scoring 50/100+. For better trust and pricing, consider IC Funded, Blueberry Funded, or BrightFunded for more reliable prop firms."
+      "heading": "Our Final Verdict On Alpha Capital",
+      "body": "Alpha Capital scored 43/100 overall. The firm offers four evaluation models — Alpha One (1-step), Alpha Pro (2-step in 10%, 8%, and 6% variants), Swing (2-step), and Alpha Three (3-step) — with competitive challenge fees from $50 and platform access across MT5, cTrader, DXTrade, and TradeLocker.\n\nDrawdown rules are plan-specific rather than firm-wide. Alpha One uses 4% daily and 6% trailing max drawdown. Alpha Pro comes in three versions: Pro 10% (5% daily, 10% static), Pro 8% (4% daily, 8% static), and Pro 6% (3% daily, 6% static). Swing uses 5% daily and 10% static. Alpha Three uses 8%/4%/4% targets with 4% daily and 6% static max drawdown. News trading is allowed during assessment but restricted on qualified accounts — Pro 8%/10% uses a 2-minute window, Pro 6%, One, and Three use 5 minutes, and Swing allows news trading but trades in the 4-minute window must last more than 2 minutes. Weekend holding is allowed on Swing, One, and Three qualified accounts but not on Pro.\n\nPayout schedules depend on the plan: Swing and Alpha One support on-demand payouts (requiring 40% Best Day Rule compliance and 2% gross profit), while Alpha Pro and Alpha Three use bi-weekly payouts (minimum $100 profit and 5 trading days for first withdrawal). On the fourth successful payout, Alpha adds a 0.25% performance fee bonus of 0.25% of initial account size.\n\nAlpha Capital now offers Standard and Raw assessment types — Standard has no commission while Raw charges $2.5 per lot each direction, with indices commission-free on both. The firm also has a live progression route called Alpha Prime, where traders qualify through $40,000 profit on one simulated payout, five payouts from one qualified account, or $100,000 lifetime payouts.\n\nMaximum allocation is $400,000 per household with $300,000 per strategy on qualified accounts. Only qualified accounts can be merged (same type, same platform, up to $300K, no scaling after merge). Additional rules include a 2-minute average trade duration requirement, 30-day inactivity limit, and hedging allowed within the same account but not across accounts.\n\nThe main concerns remain: all trading takes place in a simulated environment, reports of payout denials and sudden account closures persist, and strict KYC enforcement after challenges has drawn criticism. For traders who can navigate plan-specific rules and are comfortable with the simulated model, Alpha Capital offers genuine flexibility. But traders should closely review their chosen plan's terms before committing."
     }
   ],
   "faq": [
     {
       "q": "Are Alpha Capital legit?",
-      "a": "Alpha Capital Group is a proprietary trading firm that offers simulated funded accounts rather than real-money trading. While it provides multiple evaluation models and trading platforms, concerns over payout denials, sudden account closures, and strict KYC enforcement have been reported. With a mix of positive and negative reviews, traders should approach with caution and carefully review the terms before joining."
+      "a": "Alpha Capital Group is a proprietary trading firm that offers simulated funded accounts rather than real-money trading. It provides four evaluation models (Alpha One, Alpha Pro, Swing, Alpha Three) across MT5, cTrader, DXTrade, and TradeLocker. The firm has a stated live progression route through Alpha Prime. However, concerns over payout denials, sudden account closures, and strict KYC enforcement have been reported. Traders should approach with caution and carefully review the terms before joining."
     },
     {
       "q": "How does Alpha Capital work?",
-      "a": "Alpha Capital operates by offering traders a chance to pass evaluation challenges to qualify for a funded account. However, these accounts are simulated, meaning traders do not trade with real money. Traders can choose between different challenge types with set profit targets and drawdown limits, and if successful, they can earn a percentage of their simulated profits."
+      "a": "Alpha Capital offers four evaluation models with plan-specific rules. Alpha One is a 1-step evaluation. Alpha Pro is a 2-step with three variants (10%, 8%, 6%) offering different targets and drawdowns. Swing is a 2-step for overnight and weekend holding. Alpha Three is a 3-step. Traders pass assessments to qualify for funded accounts (simulated). Standard assessments have no commission, while Raw assessments charge $2.5 per lot each direction. Payout options are on-demand (Swing, One) or bi-weekly (Pro, Three). Top performers can progress to Alpha Prime for live capital."
     },
     {
       "q": "Is Alpha Capital Group accepting US clients?",
-      "a": "Alpha Capital Group accepts US clients but restricts them to using the DXTrade platform. Unlike other traders who can access MetaTrader 5 (MT5) and cTrader, U.S. residents must use DXTrade due to regulatory restrictions. Additionally, traders traveling to the US cannot access their MT5 or cTrader accounts while within the country."
+      "a": "Yes, Alpha Capital accepts US clients. US residents can use cTrader, DXTrade, and TradeLocker — they are not restricted to DXTrade only. The only restriction is that US residents cannot use MT5. Traders traveling to the US also cannot access their MT5 accounts while within the country."
     },
     {
       "q": "What broker does Alpha Capital use?",
-      "a": "Alpha Capital Group is broker-backed through ACG Markets, an FSA-regulated brokerage. While ACG Markets provides Prime-of-Prime liquidity and ultra-low latency execution, all trading within Alpha Capital remains in a simulated environment. This means funded traders do not have direct market access or real-money execution."
+      "a": "Alpha Capital Group is broker-backed through ACG Markets, an FSA-regulated brokerage. While ACG Markets provides Prime-of-Prime liquidity and ultra-low latency execution, all trading within Alpha Capital remains in a simulated environment until a trader qualifies for Alpha Prime, the firm's live progression route."
     },
     {
-      "q": "Why doesn't BestPropFirms recommend Alpha Capital Group?",
-      "a": "BestPropFirms does not recommend Alpha Capital Group due to multiple trader complaints regarding payout denials, sudden account closures, and strict KYC enforcement after passing challenges. Additionally, Alpha Capital operates entirely in a simulated environment with no real-money execution. With a trust score of 43/100, Alpha Capital falls below our recommended threshold of 50/100+."
+      "q": "What is Alpha Prime?",
+      "a": "Alpha Prime is Alpha Capital's stated live progression route where traders trade with real capital. Traders can qualify by achieving $40,000 profit on one simulated payout, five payouts from one qualified account, or $100,000 in lifetime payouts. This provides a clear path from simulated to live trading, though traders should verify current qualification criteria directly with the firm."
     }
   ],
   "verified": true,
   "flagged": true,
-  "flaggedWarning": "We do not recommend Alpha Capital due to payout denials, sudden account closures, and strict KYC enforcement after traders pass challenges. The firm operates in a simulated environment with no real-money execution, raising transparency concerns.\n\nOur testing scored Alpha Capital 43/100, and we only recommend firms scoring 50/100+. For better trust and pricing, consider [IC Funded](/reviews/ic-funded), [Blueberry Funded](/reviews/blueberry-funded), or [BrightFunded](/reviews/brightfunded) for more reliable prop firms.",
+  "flaggedWarning": "Alpha Capital operates in a **simulated environment** with no real-money execution until traders qualify for **Alpha Prime** (the firm's live progression route). Reports of **payout denials, sudden account closures, and strict KYC enforcement** after passing challenges persist. Rules — including drawdown, news trading, weekend holding, and payout schedules — **vary significantly between plans**.\n\nOur testing scored Alpha Capital 43/100, and we only recommend firms scoring 50/100+. For better trust and pricing, consider [IC Funded](/reviews/ic-funded), [Blueberry Funded](/reviews/blueberry-funded), or [BrightFunded](/reviews/brightfunded) for more reliable prop firms.",
   "methodologyVersion": "1.0",
-  "lastReviewedAt": "2026-02-24"
+  "lastReviewedAt": "2026-03-11"
 }

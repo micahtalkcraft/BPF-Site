@@ -6,43 +6,41 @@
   "foundedYear": 2023,
   "hqCountry": "US",
   "evaluation": {
-    "types": ["1-step", "instant"],
-    "profitTargets": { "phase1": 6 },
+    "types": ["other"],
+    "profitTargets": {},
     "dailyDrawdown": null,
-    "maxDrawdown": 4,
-    "minTradingDays": 1,
-    "scalingPlan": null
+    "maxDrawdown": null,
+    "minTradingDays": null,
+    "scalingPlan": null,
+    "notes": "Three current models: Growth (1-step, EOD trailing drawdown on balance, no activation fee, $85 reset), Lightning Funded (instant funding, EOD trailing, no reset option), and Select Challenge (1-step evaluation, after passing choose Select Flex or Select Daily funded policy — choice is permanent). Advanced Challenge is no longer available for new purchases as of December 2025; existing holders continue under legacy terms. After passing Select Challenge, traders must choose between Select Flex (no daily loss limit, 5 winning days per payout, 90% split, payout caps $3K/$4K/$5K by account size) or Select Daily (buffer system, $250 minimum payout, payouts on any trading day if Daily Continuity Rule is met). Growth, Lightning, Select Flex, and Select Daily are simulated funded accounts. Tradeify Elite Live is the real-capital live stage — traders may be assessed after 5 payouts, and automatic transition happens at $80,000 combined user payouts across sim funded accounts. Elite Live pays 90% on starting balance withdrawals and 80% on profits above starting balance. Select funded accounts have no consistency rule. Traders can hold up to 5 Simulated Funded Accounts total across all funded account types combined. No weekend trading on any model. Monthly billing continues until manually cancelled."
   },
   "pricing": {
     "challengeFees": [
-      { "accountSize": 50000, "fee": 69, "model": "1-step", "label": "Advanced (monthly)" },
-      { "accountSize": 100000, "fee": 109, "model": "1-step", "label": "Advanced (monthly)" },
-      { "accountSize": 150000, "fee": 129, "model": "1-step", "label": "Advanced (monthly)" },
       { "accountSize": 50000, "fee": 139, "model": "1-step", "label": "Growth (monthly)" },
       { "accountSize": 100000, "fee": 249, "model": "1-step", "label": "Growth (monthly)" },
       { "accountSize": 150000, "fee": 339, "model": "1-step", "label": "Growth (monthly)" },
-      { "accountSize": 25000, "fee": 349, "model": "instant", "label": "Lightning (one-time)" },
-      { "accountSize": 50000, "fee": 509, "model": "instant", "label": "Lightning (one-time)" },
-      { "accountSize": 100000, "fee": 629, "model": "instant", "label": "Lightning (one-time)" },
-      { "accountSize": 150000, "fee": 729, "model": "instant", "label": "Lightning (one-time)" }
+      { "accountSize": 25000, "fee": 349, "model": "instant", "label": "Lightning Funded (one-time)" },
+      { "accountSize": 50000, "fee": 509, "model": "instant", "label": "Lightning Funded (one-time)" },
+      { "accountSize": 100000, "fee": 629, "model": "instant", "label": "Lightning Funded (one-time)" },
+      { "accountSize": 150000, "fee": 729, "model": "instant", "label": "Lightning Funded (one-time)" }
     ],
-    "resetFee": 45,
+    "resetFee": 85,
     "refundPolicy": null
   },
   "payouts": {
     "splitMax": 90,
-    "schedule": "On-demand (after 10 trading days)",
+    "schedule": "Varies by funded type: Growth (5 profitable days), Select Flex (every 5 winning days), Select Daily (any trading day if eligible)",
     "processingTime": "24–72 hours",
-    "firstPayoutDays": 10,
+    "firstPayoutDays": null,
     "methods": ["Rise Pay", "Plane Payouts"]
   },
   "rules": {
     "newsTrading": true,
     "weekendHolding": false,
-    "copyTrading": false,
-    "expertAdvisors": false,
-    "consistencyRule": "35% daily profit cap (Advanced/Growth), 20% daily profit cap (Lightning). No more than that percentage of total profit can come from a single day before payout.",
-    "notes": "Three models: Advanced (1-step, intraday trailing drawdown on equity, $125 activation fee, $45 reset), Growth (1-step, EOD trailing drawdown on balance, no activation fee, $85 reset), Lightning (instant funding, EOD trailing, no reset option). No weekend trading on any model. No EAs or copy trading in funded phase. One account per person. Lightning requires 10 trading days and 5 profitable days over $200 before first withdrawal. Monthly billing continues until manually cancelled."
+    "copyTrading": null,
+    "expertAdvisors": null,
+    "consistencyRule": "Growth and Lightning have consistency rules (scaling by payout number for Lightning). Select Flex and Select Daily funded accounts have no consistency rule.",
+    "notes": "Three current models: Growth, Lightning Funded, Select Challenge. Advanced is legacy only for existing users (not available for new purchases since December 2025). After passing Select Challenge, traders must choose Select Flex or Select Daily — this choice is permanent and irrevocable. Growth, Lightning, Select Flex, and Select Daily are simulated funded accounts. Tradeify Elite Live is the real-capital live stage issued through NinjaTrader brokerage. Traders may be assessed for Elite Live after 5 payouts; automatic transition at $80,000 combined user payouts. Elite Live pays 90% on starting balance withdrawals and 80% on profits above starting balance. Traders can hold up to 5 Simulated Funded Accounts total. No weekend trading on any model. Monthly billing continues until manually cancelled."
   },
   "markets": {
     "platforms": ["Tradovate", "TradingView", "NinjaTrader"],
@@ -51,7 +49,7 @@
   "trust": {
     "trustpilotRating": 4.7,
     "trustpilotCount": 1800,
-    "communitySize": "~30,000 Discord members",
+    "communitySize": "80,000+ traders, $110M+ verified payouts",
     "notableFlags": []
   },
   "links": { "website": "https://tradeify.co" },
@@ -71,7 +69,7 @@
     "discountPercent": null
   },
   "notes": null,
-  "lastVerifiedAt": "2026-02-24",
-  "lastUpdatedAt": "2026-02-24",
+  "lastVerifiedAt": "2026-03-11",
+  "lastUpdatedAt": "2026-03-11",
   "dataSources": ["https://tradeify.co"]
 }

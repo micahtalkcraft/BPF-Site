@@ -475,12 +475,12 @@ const { section, fallbackBody } = Astro.props;
   <div class="mb-10">
     <h3 class="text-lg font-bold text-slate-900 mb-3">Account Add-Ons</h3>
     <p class="mb-4">
-      AquaFunded offers optional add-ons that unlock faster payouts (7 days instead of 14) and boost profit splits to 100%. These are available on most models, including evaluations and instant accounts. There are no recurring or hidden fees, but add-ons must be purchased upfront and can't be added mid-challenge.
+      AquaFunded offers optional add-ons that unlock first reward on demand and boost profit splits from 90% to 100%. These are available on most models, including evaluations and instant accounts. There are no recurring or hidden fees, but add-ons must be purchased upfront and can't be added mid-challenge.
     </p>
     <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-5">
       <p class="text-sm font-bold text-amber-900 mb-1">Add-On Details</p>
       <p class="text-sm text-amber-800">
-        <strong>Fast Payout:</strong> Reduces payout cycle from 14 days to 7 days.<br/>
+        <strong>First Reward On Demand:</strong> Allows you to request your first payout earlier than the standard bi-weekly cycle.<br/>
         <strong>100% Profit Split:</strong> Upgrades the profit split from the base rate (65-90%) to 100%.<br/>
         Both must be selected at checkout. No mid-challenge upgrades available.
       </p>
@@ -493,14 +493,14 @@ const { section, fallbackBody } = Astro.props;
   <div class="mb-10">
     <h3 class="text-lg font-bold text-slate-900 mb-3">Scaling Plan</h3>
     <p class="mb-3">
-      All models at AquaFunded include access to a scaling plan up to <strong>$2 million</strong>. You must achieve 12% profit in any 3-month window to qualify, at which point your account balance is increased by 25% of its original size.
+      All models at AquaFunded include access to a scaling plan up to <strong>$4 million</strong>. You must achieve 12% profit in any 3-month window to qualify, at which point your account balance is increased by 25% of its original size.
     </p>
     <p class="mb-3">
       For traders on instant accounts, AquaFunded also advertises a path to 95-100% profit split, provided you maintain 4% profit for four consecutive months.
     </p>
     <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
       <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Scaling Requirements</p>
-      <p class="text-sm text-teal-700">12% profit in any rolling 3-month window = 25% account size increase. Maximum scaling: up to $2 million. This is a solid structure, though less aggressive than firms offering 100% scale boosts.</p>
+      <p class="text-sm text-teal-700">12% profit in any rolling 3-month window = 25% account size increase. Maximum scaling: up to $4 million. This is a competitive cap that puts AquaFunded ahead of many competitors on scaling potential.</p>
     </div>
   </div>
 
@@ -627,7 +627,7 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-3">
-    AquaFunded gives you access to all major asset classes — forex, metals, indices, commodities, and crypto — but doesn't offer futures or stock markets. Forex offers the most depth with 28 currency pairs, while other markets are more limited, including just 2 instruments each for metals and commodities, and 4 for crypto.
+    AquaFunded gives you access to all major asset classes — forex, metals, indices, commodities, and crypto — through its core CFD product. Forex offers the most depth with 28 currency pairs, while other markets include 2 instruments each for metals and commodities, 7 indices, and 40+ cryptocurrencies. The brand also operates AquaFutures for futures trading (via ProjectX and Volumetrica) and AquaFunded Crypto as a dedicated crypto product with its own account models.
   </p>
   <p class="mb-4">
     Leverage is fixed by asset class and funding model, not tiered by account size. That makes it predictable, but also restrictive depending on which model you choose. Evaluation accounts get the highest leverage, but that's scaled back after funding.
@@ -640,15 +640,15 @@ const { section, fallbackBody } = Astro.props;
       <p class="text-sm font-bold text-slate-800">28</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Asset Classes</p>
-      <p class="text-sm font-bold text-slate-800">5</p>
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Crypto Instruments</p>
+      <p class="text-sm font-bold text-slate-800">40+</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
       <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Leverage (Eval)</p>
       <p class="text-sm font-bold text-emerald-600">1:100</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Leverage (Funded)</p>
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Leverage (Funded Forex)</p>
       <p class="text-sm font-bold text-slate-800">1:50</p>
     </div>
   </div>
@@ -673,7 +673,7 @@ const { section, fallbackBody } = Astro.props;
           <td class="px-4 py-3 text-center text-slate-700">28</td>
           <td class="px-4 py-3 text-center font-semibold text-teal-600">1:100</td>
           <td class="px-4 py-3 text-center text-slate-700">1:50</td>
-          <td class="px-4 py-3 text-center text-slate-700">1:30</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:50</td>
           <td class="px-4 py-3 text-center text-slate-700">1:50</td>
         </tr>
         <tr class="bg-slate-50">
@@ -702,36 +702,78 @@ const { section, fallbackBody } = Astro.props;
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-semibold text-slate-900">Crypto</td>
-          <td class="px-4 py-3 text-center text-slate-700">4</td>
-          <td class="px-4 py-3 text-center text-slate-700">1:2</td>
-          <td class="px-4 py-3 text-center text-slate-700">1:2</td>
-          <td class="px-4 py-3 text-center text-slate-700">1:2</td>
-          <td class="px-4 py-3 text-center text-slate-700">1:2</td>
+          <td class="px-4 py-3 text-center text-slate-700">40+</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:5</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:5</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:5</td>
+          <td class="px-4 py-3 text-center text-slate-700">1:5</td>
         </tr>
       </tbody>
     </table>
   </div>
 
   <p class="mb-3">
-    Leverage on forex drops as soon as you're funded, especially for standard accounts, which fall to 1:30. That impacts strategies reliant on higher margin efficiency. Crypto leverage is capped at 1:2 across all stages.
+    Leverage on forex drops from 1:100 during evaluation to 1:50 once funded. Crypto leverage is up to 1:5 on the dedicated AquaFunded Crypto product, a significant improvement over the earlier 1:2 cap.
   </p>
   <p class="mb-6">
     While you're not restricted by lot size, AquaFunded enforces risk limits indirectly — you're expected to keep individual trades within 1-2% risk and never use more than 80% of your margin.
   </p>
 
-  <!-- No stocks/futures warning -->
-  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-6">
-    <p class="text-sm font-bold text-amber-900 mb-1">No Stocks or Futures</p>
-    <p class="text-sm text-amber-800">
-      AquaFunded does not offer stock CFDs or futures trading. If you need access to equities or futures markets, you'll need to look at other prop firms.
-    </p>
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- AQUAFUTURES                                                      -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">AquaFutures — Futures Trading</h3>
+  <p class="mb-3">
+    AquaFunded operates a separate futures offering under the AquaFutures brand, using <strong>ProjectX</strong> and <strong>Volumetrica</strong> as trading platforms. Futures accounts are available in both Instant and One Step models across $25K, $50K, $100K, and $150K account sizes depending on the model. AquaFutures promotes <strong>100% of the first $15,000 in profit</strong>, then 90% after, plus weekly rewards.
+  </p>
+
+  <div class="space-y-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Futures Instant Standard</p>
+      <p>Available at $25K, $50K, and $100K. Uses EOD drawdown. Daily loss limits of 2.5% on $25K and $50K, 3% on $100K. Max drawdown of 4% on $25K and $50K, 3% on $100K. Contract limits: 1 / 3 / 6.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Futures Instant Pro</p>
+      <p>Available at $25K, $50K, and $100K. Uses trailing drawdown. No daily loss limit. Max drawdown of 4% on $25K and $50K, 3% on $100K. Contract limits: 1 / 3 / 6.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Futures One Step Beginner</p>
+      <p>Available at $25K, $50K, $100K, and $150K. 6% profit target with EOD drawdown. Daily loss limits: $625 / $1,250 / $2,500 / $3,750. Contract limits: 1 / 3 / 6 / 9.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Futures One Step Standard</p>
+      <p>Available at $25K, $50K, $100K, and $150K. 8% profit target with EOD drawdown. No daily loss limit. Max drawdown: $1,500 / $2,500 / $3,500 / $5,000. Contract limits: 2 / 5 / 10 / 15.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- AQUAFUNDED CRYPTO                                                -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">AquaFunded Crypto — Dedicated Crypto Product</h3>
+  <p class="mb-3">
+    AquaFunded also runs a dedicated crypto offering with 40+ cryptocurrencies and up to 1:5 leverage. The crypto product includes its own account models: <strong>Instant Funding</strong>, <strong>One Step</strong>, and <strong>AquaMan</strong>.
+  </p>
+
+  <div class="space-y-3 mb-6">
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Crypto Instant Funding</p>
+      <p>3% daily loss, 5% max loss, up to 1:5 leverage, bi-weekly rewards, and up to 100% profit split.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Crypto One Step</p>
+      <p>10% profit target, 3% daily loss, 6% max loss, up to 1:5 leverage, bi-weekly rewards, and up to 100% profit split.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Crypto AquaMan</p>
+      <p>Recurring limited-time crypto challenge following the same AquaMan format with crypto-specific rules and leverage.</p>
+    </div>
   </div>
 
   <!-- Verdict -->
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Financial Markets and Leverage</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      AquaFunded scores 6/10 in this category. You get access to the core asset classes and enough variety to run most common strategies, especially in forex. But the lack of support for stocks and futures, limited depth in non-forex markets, and a noticeable drop in leverage post-evaluation weigh down the flexibility. It's a decent setup, but not top-tier in scope or consistency.
+      AquaFunded scores 6/10 in this category. The core CFD product covers forex, metals, indices, commodities, and crypto with 40+ crypto instruments and up to 1:5 leverage. The addition of AquaFutures for futures trading and AquaFunded Crypto as a dedicated crypto product significantly broadens the offering. Funded forex leverage sits at 1:50 across all models. It's a solid setup that's improved over time, though stock CFDs remain unavailable and non-forex market depth is still limited.
     </p>
   </div>
 
@@ -745,7 +787,7 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-4">
-    AquaFunded gives you access to three trading platforms — MT5, TradeLocker, and Match Trader. Each platform supports live ECN pricing, and you can trade directly without additional platform or data fees. You're free to use EAs and trade copiers across accounts as long as you stick to their strategy rules.
+    AquaFunded gives you access to four trading platforms — MT5, TradeLocker, Match Trader, and cTrader (available with an added fee). Each platform supports live ECN pricing, and you can trade directly without additional platform or data fees. You're free to use EAs and trade copiers for your own account management as long as you stick to their strategy rules.
   </p>
 
   <!-- Platform cards -->
@@ -780,12 +822,22 @@ const { section, fallbackBody } = Astro.props;
         <span class="inline-block rounded-full bg-teal-100 px-2.5 py-0.5 text-[11px] font-semibold text-teal-800">Desktop Performance</span>
       </div>
     </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">cTrader</p>
+      <p class="mb-2">Available as an additional platform option with an added fee. cTrader is a professional-grade platform known for its advanced order types, Level II pricing, and robust algo trading (cBots). A strong choice for traders who want deeper market analysis tools.</p>
+      <div class="flex flex-wrap gap-1.5 mt-2">
+        <span class="inline-block rounded-full bg-teal-100 px-2.5 py-0.5 text-[11px] font-semibold text-teal-800">Level II Pricing</span>
+        <span class="inline-block rounded-full bg-teal-100 px-2.5 py-0.5 text-[11px] font-semibold text-teal-800">cBot Support</span>
+        <span class="inline-block rounded-full bg-teal-100 px-2.5 py-0.5 text-[11px] font-semibold text-teal-800">Advanced Orders</span>
+        <span class="inline-block rounded-full bg-amber-100 px-2.5 py-0.5 text-[11px] font-semibold text-amber-800">Added Fee</span>
+      </div>
+    </div>
   </div>
 
   <!-- Trading Rules -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules</h3>
   <p class="mb-4">
-    You can trade with a lot of freedom on AquaFunded — no forced stop losses, no lot size limits, and no weekend restrictions. You're allowed to hedge, use martingale strategies, and copy trades between AquaFunded accounts.
+    You can trade with a fair amount of freedom on AquaFunded — no forced stop losses, no lot size limits, and weekend holding is allowed (crypto markets are available 24/7 including weekends). You're allowed to hedge within the same account, use martingale strategies, and use trade copiers for your own account management. However, there are important restrictions on funded accounts that you should be aware of.
   </p>
 
   <div class="space-y-2 mb-6">
@@ -795,19 +847,19 @@ const { section, fallbackBody } = Astro.props;
     </div>
     <div class="flex items-start gap-2">
       <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold">&#10003;</span>
-      <p><strong>Hedging and Martingale:</strong> Both permitted across all account types.</p>
+      <p><strong>Hedging and Martingale:</strong> Both permitted, but hedging is allowed only within the same account — cross-account hedging is prohibited.</p>
     </div>
     <div class="flex items-start gap-2">
       <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold">&#10003;</span>
-      <p><strong>Weekend Holding:</strong> No restrictions — positions can be held over the weekend.</p>
+      <p><strong>Weekend Holding:</strong> Allowed — positions can be held over the weekend. Crypto markets are available 24/7 including weekends.</p>
     </div>
     <div class="flex items-start gap-2">
       <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold">&#10003;</span>
-      <p><strong>Copy Trading:</strong> Allowed between your own AquaFunded accounts or legally linked personal accounts.</p>
+      <p><strong>Copy Trading:</strong> Trade copiers permitted for managing your own accounts only — cross-user or social copy trading is prohibited.</p>
     </div>
     <div class="flex items-start gap-2">
       <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-xs font-bold">!</span>
-      <p><strong>News Trading:</strong> Allowed during evaluation, but <strong>restricted once funded</strong> — 10-minute no-trade window around red folder events and full block during FOMC news.</p>
+      <p><strong>News Trading:</strong> Allowed during evaluation, but <strong>restricted on funded accounts</strong> — opening or closing trades is not allowed within 5 minutes before or after high-impact news, including FOMC statements and speeches.</p>
     </div>
     <div class="flex items-start gap-2">
       <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-xs font-bold">!</span>
@@ -815,7 +867,11 @@ const { section, fallbackBody } = Astro.props;
     </div>
     <div class="flex items-start gap-2">
       <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-xs font-bold">&#10007;</span>
-      <p><strong>Prohibited:</strong> Tick manipulation, latency arbitrage, HFT, group trading, and copying from social platforms.</p>
+      <p><strong>Prohibited:</strong> Tick manipulation, latency arbitrage, HFT, arbitrage, tick scalping, cross-account hedging, cross-user copy trading, group trading, and copying from social platforms.</p>
+    </div>
+    <div class="flex items-start gap-2">
+      <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-xs font-bold">!</span>
+      <p><strong>Inactivity Rule:</strong> Accounts breach after 30 days with no trade placed. Make sure to maintain regular trading activity.</p>
     </div>
   </div>
 
@@ -823,7 +879,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trading Platforms and Rules</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      AquaFunded scores 7/10 for its platform setup and trading rules. You get strong platform variety — MT5 for pros, Match Trader for flexibility, and TradeLocker for simplicity. All three support raw pricing and automated trading. The trading rules are clearly defined and give you control, especially during evaluations. But restrictions on news trading once funded and the lack of advanced analytics tools hold it back from a perfect score.
+      AquaFunded scores 7/10 for its platform setup and trading rules. You get four platform options — MT5 for pros, Match Trader for flexibility, TradeLocker for simplicity, and cTrader for advanced order management (with added fee). All support raw pricing and automated trading. The trading rules give you control during evaluations, but funded accounts face restrictions: a 5-minute news trading window around high-impact events, hedging limited to the same account, no cross-user copy trading, and a 30-day inactivity breach rule. These are important to be aware of before committing.
     </p>
   </div>
 
@@ -837,22 +893,22 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-3">
-    AquaFunded uses a one-time fee model for its challenge and instant-funded accounts. Payouts are handled through a third-party service and are available on a fixed 14-day cycle, with optional 7-day access through an add-on. The overall structure is transparent, but delays and complaints on platforms like Trustpilot show that execution doesn't always match the policy.
+    AquaFunded uses a one-time fee model for its challenge and instant-funded accounts. The standard profit split is 90%, with 100% available via a paid add-on. Payouts are handled through a third-party service on a bi-weekly cycle, with a first reward on demand upgrade now available. The overall structure is transparent, but delays and complaints on platforms like Trustpilot show that execution doesn't always match the policy.
   </p>
 
   <!-- Payout structure summary -->
   <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Base Split (Eval)</p>
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Standard Split</p>
       <p class="text-sm font-bold text-teal-600">90%</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Split (Add-On)</p>
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">With Add-On</p>
       <p class="text-sm font-bold text-emerald-600">100%</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
       <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Payout Cycle</p>
-      <p class="text-sm font-bold text-slate-800">14 days (7 w/ add-on)</p>
+      <p class="text-sm font-bold text-slate-800">Bi-weekly (on-demand 1st available)</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
       <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Withdrawal</p>
@@ -897,7 +953,7 @@ const { section, fallbackBody } = Astro.props;
   <!-- Profit Payouts -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Profit Payouts and Withdrawals</h3>
   <p class="mb-3">
-    All funding models follow a bi-weekly payout schedule. Your first payout is available 14 days after your first funded trade, or 7 days if you purchase the fast-payout add-on. From there, you're paid every 14 days, provided you meet the minimum withdrawal amount of $100.
+    All funding models follow a bi-weekly payout schedule as standard. AquaFunded now promotes a first reward on demand upgrade, allowing you to request your first payout earlier than the standard 14-day cycle. From there, you're paid every 14 days, provided you meet the minimum withdrawal amount of $100.
   </p>
   <p class="mb-4">
     Payouts are handled by <strong>Riseworks.io</strong>, a third-party service that supports both bank and crypto withdrawals. This external processing adds legitimacy but has also been the focus of several complaints related to payout delays and enforcement of profit rules.

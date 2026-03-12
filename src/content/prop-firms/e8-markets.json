@@ -8,8 +8,8 @@
   "evaluation": {
     "types": ["1-step"],
     "profitTargets": { "phase1": 6 },
-    "dailyDrawdown": 3,
-    "maxDrawdown": 14,
+    "dailyDrawdown": null,
+    "maxDrawdown": null,
     "minTradingDays": 0,
     "scalingPlan": false
   },
@@ -38,18 +38,18 @@
   },
   "payouts": {
     "splitMax": 100,
-    "schedule": "On-demand (once consistency rules met)",
+    "schedule": "On-demand once consistency rules met. E8 One: best day ≤40% of total profits, payout must exceed 50% of daily DD value, no payout buffer, no payout caps. Signature: best day ≤35%, minimum 3 profitable days (0.3% closed profit each) for first payout, 5 profitable days between subsequent payouts, mandatory payout buffer equal to EOD trailing DD, progressive payout caps that increase with history.",
     "processingTime": "1-2 business days approval, 2-5 business days payment",
     "firstPayoutDays": null,
     "methods": ["bank-transfer", "crypto"]
   },
   "rules": {
-    "newsTrading": true,
-    "weekendHolding": false,
+    "newsTrading": null,
+    "weekendHolding": null,
     "copyTrading": false,
-    "expertAdvisors": true,
+    "expertAdvisors": null,
     "consistencyRule": "E8 One: best day cannot exceed 40% of total profits, payout must exceed 50% of daily DD value. Signature: best day cannot exceed 35%, minimum 3 profitable days for first payout, 5 profitable days between future payouts. A profitable day = 0.3% closed profit.",
-    "notes": "E8 One allows weekend holding and overnight positions — Signature accounts are intraday-only with no overnight or weekend holds. News trading allowed on all Signature accounts at all stages; restricted once funded on E8 One (high-impact news windows). EAs allowed on E8 One, Signature Forex, and Signature Crypto — not allowed on Signature Futures (manual only). Copy trading not permitted on any account. HFT and latency arbitrage prohibited. All trading is simulated — no broker-backed execution. Signature Futures positions auto-close at 15:10 CT. Payments accepted via cards, Apple Pay, Google Pay, crypto, or bank transfer."
+    "notes": "Four one-step models: E8 One (customisable 4%–14% real-time trailing drawdown, 80%–100% profit split depending on add-ons, $5K–$500K accounts, fees from $40), Signature Forex (3%–4% EOD trailing drawdown, 80% profit split, $50K–$150K, fees from $130), Signature Futures (3%–4% EOD trailing drawdown, 80% profit split, $50K–$150K, fees from $130, intraday only, positions auto-close at 15:10 CT, manual only — no EAs), Signature Crypto (3%–4% EOD trailing drawdown, 80% profit split, $50K–$150K, fees from $130, 40+ symbols, BTC/ETH 1:5, altcoins 1:2). E8 One daily DD scales with chosen drawdown (3%–9.2%); Signature accounts use a 2% daily pause rule once funded only. Weekend and overnight holding allowed on E8 One only — all Signature accounts are intraday-only with no overnight or weekend holds. News trading allowed in evaluation on all accounts; on E8 One funded accounts, high-impact news windows are restricted and trades during those periods may not count toward payouts; all Signature accounts allow news trading at all stages. EAs allowed on E8 One, Signature Forex, and Signature Crypto — not allowed on Signature Futures (manual only). Copy trading not permitted on any account. HFT and latency arbitrage prohibited. All trading is simulated — not broker-backed. Payouts are discretionary and tied to E8's acceptance and licensing of performance data. E8 One payouts: best day ≤40% of total profits, payout must exceed 50% of daily DD value, no payout buffer, no payout caps. Signature payouts: best day ≤35% of total profits, minimum 3 profitable days (0.3% closed profit each) for first payout, 5 profitable days between subsequent payouts, mandatory payout buffer equal to EOD trailing DD, progressive payout caps ($1,250–$5,250 depending on account size and payout history). No traditional scaling plan on current models — traders wanting more buying power use multiple funded accounts. Payments accepted via cards, Apple Pay, Google Pay, crypto, or bank transfer. Payouts via Plane (bank) or RiseWorks (crypto). Platform access varies by model: E8 One uses Match-Trader, cTrader, TradeLocker; Signature Forex uses MT5, Match-Trader, cTrader, TradeLocker; Signature Crypto uses MT5, Match-Trader, TradeLocker; Signature Futures uses E8 Futures Platform and Tradovate."
   },
   "markets": {
     "platforms": ["Match-Trader", "MT5", "cTrader", "TradeLocker", "E8 Futures Platform", "Tradovate"],
@@ -79,7 +79,7 @@
   "custom": {
     "tags": ["One-Step Only", "Futures Trading", "Crypto Trading", "Customisable Drawdown", "Six Platforms"]
   },
-  "lastVerifiedAt": "2026-02-28",
-  "lastUpdatedAt": "2026-02-28",
+  "lastVerifiedAt": "2026-03-11",
+  "lastUpdatedAt": "2026-03-11",
   "dataSources": ["https://e8markets.com"]
 }

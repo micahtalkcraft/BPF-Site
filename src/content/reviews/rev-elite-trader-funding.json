@@ -1,25 +1,27 @@
 {
   "id": "rev-elite-trader-funding",
   "propFirmId": "d0000033-0000-0000-0000-000000000033",
-  "summary": "Elite Trader Funding scored 47/100 in our review because while it offers wide instrument access, flexible platform support, and several unique challenge types, it falls short in key areas that matter to serious traders. The biggest issue is its vague path to live funding — you are required to pay for Sim-Funded access after passing, but there's no clear process for when or if real capital will follow.\n\nThe model is payout-friendly on the surface, but with unclear promotion rules, high ongoing costs, and strict trade rules, ETF feels more like a subscription-based payout system than a traditional prop firm. It may suit futures traders who want short-term payout opportunities, but anyone seeking predictable long-term capital should approach with caution.",
+  "summary": "Elite Trader Funding scored 47/100 in our review. It offers six distinct evaluation models — 1 Step, Direct to Funded, Static, Diamond Hands, End of Day, and Fast Track — with wide instrument access across major US futures exchanges and flexible platform support.\n\nThe firm highlights 53,000+ happy customers, $12M+ in total payouts, and 4+ years in business. Traders can keep up to 100% of the first $12,500, then 90% after, with up to $150,000 in lifetime sim-funded profit before further criteria apply. Same day payout approval is available, and minimum qualified days to first payout are 8 for most plans. Top performers are invited to LIVE Elite, where they trade real capital, can withdraw daily, and may receive performance bonuses — though this is not an automatic progression and remains at ETF's discretion.\n\nEvaluation fees start from $16.50 on promotional pricing, but traders should note that ETF uses discount-led promotional pricing that may not reflect permanent base rates. Max drawdown varies by plan and account size rather than a flat percentage. Rules around news trading, weekend holding, copy trading, and EAs are plan-specific rather than blanket policies. The 10-second rule prohibits entering and exiting within 10 seconds across all stages.",
   "pros": [
     "Full access to major US futures exchanges (CME, CBOT, COMEX, NYMEX)",
-    "Weekly profit payouts with 100% split on first $12,500",
-    "Active Discord community with nearly 16,000 members",
-    "Six evaluation models covering different trading styles",
+    "Six evaluation models covering different trading styles and risk profiles",
+    "Up to 100% profit split on first $12,500 with up to $150K lifetime sim-funded profit",
+    "Same day payout approval with 8 minimum qualified days to first payout on most plans",
     "Broad platform support with no vendor lock-in",
-    "Free real-time exchange data during evaluation phase"
+    "17,000+ Elite users community with active Discord",
+    "7-day first-purchase satisfaction guarantee (swap, refund, or credit)",
+    "Top performers invited to LIVE Elite with real capital, daily withdrawals, and performance bonuses"
   ],
   "cons": [
-    "No clear or guaranteed path to real funding after evaluation",
-    "Activation fees ($80/month or $150–$300) required for Sim-Funded access",
-    "Sim-Funded accounts are demo-based — not real capital",
+    "LIVE Elite progression is not automatic — invitation is at ETF's discretion based on performance",
+    "Activation fees vary by plan: monthly ($80/mo), one-time ($150–$300), or none for Direct to Funded",
+    "Sim-Funded accounts are demo-based — not real capital until LIVE Elite",
     "High monthly exchange data fees ($128/venue) on LIVE Elite accounts",
-    "24% of Trustpilot reviews are 1-star with payout disputes common",
-    "No live chat or phone support available"
+    "Max drawdown varies significantly by plan and account size — not a simple flat rule",
+    "Evaluation fees start from $16.50 on promotional pricing — may not reflect permanent base rates"
   ],
-  "bestFor": "Experienced futures traders who want short-term payout access with flexible platform options and are comfortable with a subscription-based model that may not lead to real funded capital",
-  "notIdealFor": "Traders seeking a transparent, guaranteed path to live funding, beginners who need structured guidance, or anyone uncomfortable with ongoing monthly costs and demo-based funded accounts",
+  "bestFor": "Experienced futures traders who want multiple evaluation options, same day payout approval, and are comfortable with a sim-funded model where LIVE Elite progression is performance-based and at the firm's discretion",
+  "notIdealFor": "Traders seeking automatic guaranteed progression to real capital, beginners who need structured guidance, or anyone uncomfortable with plan-specific rules that require close attention to individual model terms",
   "overallScore": 47,
   "categoryScores": {
     "challenges": 30,
@@ -42,30 +44,30 @@
   "verdictBlocks": [
     {
       "heading": "Our Final Verdict On Elite Trader Funding",
-      "body": "Elite Trader Funding is a mixed bag. On one hand, it provides full exchange access, several evaluation models, and flexible platform options. On paper, it caters well to futures traders who want variety and weekly payout potential. But when you dig deeper, the structure feels more like a recurring subscription system than a straightforward path to real capital.\n\nThe biggest red flag is the lack of transparency around real funding. Passing an evaluation just unlocks another simulated stage with added fees and stricter rules. There's no published path to LIVE Elite access, and approvals are entirely at ETF's discretion. Some traders are upgraded, others aren't, with no clear explanation. That's a risk many won't want to take.\n\nAdd in high monthly costs once live, strict contract limits, and mixed reviews around payouts, and the appeal starts to wear thin. Yes, ETF does pay out and maintain an active community, but the model leans heavily in the firm's favour. You pay to stay in, and real capital remains optional from their side.\n\nFor experienced traders looking for short-term payout access and who are comfortable trading futures in a controlled environment, ETF might be worth a trial. But if you're looking for a predictable, structured route to long-term funding, this probably isn't it."
+      "body": "Elite Trader Funding offers six evaluation models — 1 Step, Direct to Funded, Static, Diamond Hands, End of Day, and Fast Track — each with distinct rules, drawdown structures, and payout terms. The variety gives futures traders genuine flexibility in choosing a model that fits their style, and the broad platform support with no vendor lock-in is a meaningful strength.\n\nThe firm highlights strong metrics: 53,000+ happy customers, $12M+ in total payouts, 4+ years in business, $5M+ invested in live traders, and 13,000+ elite sim-funded traders. Profit splits are competitive at up to 100% on the first $12,500, and same day payout approval is available with minimum qualified days to first payout of 8 on most plans. First-time buyers also benefit from a 7-day satisfaction guarantee.\n\nThe main structural consideration is the path from Sim-Funded to LIVE Elite. After passing an evaluation, traders enter a Sim-Funded account (demo-based with payout eligibility). The firm now explicitly states that top performers are invited to LIVE Elite, where they trade real capital, can withdraw daily, and may receive performance bonuses. However, this progression is not automatic — it's based on Sim-Funded performance, payout history, and risk profile, and remains at ETF's discretion.\n\nActivation fees vary by plan: monthly ($80/mo) or one-time ($150–$300) for most models, with no activation fee on Direct to Funded. Max drawdown varies significantly by plan and account size — for example, 1 Step 50K has a $2,000 max loss while 250K has $6,500. Rules around news trading, weekend holding, copy trading, and EAs are plan-specific rather than blanket policies. The 10-second rule applies across all stages.\n\nFor experienced futures traders who are comfortable navigating plan-specific rules and understand that LIVE Elite is performance-based rather than guaranteed, ETF offers a competitive model with strong payout potential. But traders should closely review the specific terms of their chosen plan before committing."
     }
   ],
   "faq": [
     {
       "q": "Does Elite Trader Funding pay out?",
-      "a": "Yes, Elite Trader Funding does pay out, but only if you meet specific account conditions and payout buffers. After passing an evaluation, traders must activate a Sim-Funded account and follow strict rules before withdrawing. You need at least 10 active trading days and must exceed the drawdown buffer by a set amount. While many users report receiving payments, others have faced denials, so understanding payout rules is essential before signing up."
+      "a": "Yes, Elite Trader Funding does pay out. The firm reports $12M+ in total payouts and highlights same day payout approval. Most plans require a minimum of 8 qualified trading days before first payout. Traders must meet their plan's specific buffer requirements and complete KYC verification. Payouts are processed through Rise."
     },
     {
       "q": "What is the 10 second rule for Elite Trader Funding?",
-      "a": "The 10 second rule at Elite Trader Funding prohibits entering and exiting a trade within 10 seconds. This rule is meant to discourage scalping and ultra-short-term trades that violate their platform usage policies. Breaking the rule can lead to disqualification or loss of profits. It applies during both evaluation and funded account stages and is enforced automatically by their monitoring systems."
+      "a": "The 10 second rule at Elite Trader Funding prohibits entering and exiting a trade within 10 seconds. This rule applies across all evaluation models and funded account stages. It is designed to discourage ultra-short-term scalping and applies automatically through their monitoring systems. Breaking the rule can lead to disqualification."
     },
     {
       "q": "Is Elite Trader Funding regulated?",
-      "a": "No, Elite Trader Funding is not a regulated financial entity or a broker-backed prop firm. It operates as a futures prop trading firm using simulated accounts and does not require regulatory oversight for its core services. While live funding is offered through a broker partnership with EdgeClear, the evaluation and Sim-Funded phases are unregulated. This means there's limited external accountability."
+      "a": "No, Elite Trader Funding is not a regulated financial entity or a broker-backed prop firm during evaluation and Sim-Funded stages. It operates as a futures prop trading firm using simulated accounts. LIVE Elite accounts are funded through a broker partnership with EdgeClear, where traders trade real capital. The firm reports 4+ years in business and 53,000+ customers."
     },
     {
-      "q": "How many accounts can you have on Elite Trader Funding?",
-      "a": "Elite Trader Funding allows you to hold multiple accounts, with specific limits depending on the account type. You can run up to 20 active Sim-Funded accounts at once, including a maximum of three Fast Track accounts. However, each account must follow its own rules, and exceeding position limits across combined accounts can lead to disqualification."
+      "q": "What is the maximum drawdown on Elite Trader Funding?",
+      "a": "Max drawdown varies by plan and account size — it is not a flat percentage across all models. For example, 1 Step 50K has a $2,000 max loss, 100K has $3,000, 150K has $5,000, and 250K has $6,500. Static uses a fixed minimum balance that never trails. Diamond Hands uses EOD trailing drawdown of 3.5% with a 1.5% daily loss limit. End of Day uses EOD realised profit drawdown with a daily loss limit. Check your specific plan's terms."
     }
   ],
   "verified": true,
   "flagged": true,
-  "flaggedWarning": "Elite Trader Funding does not provide a clear, guaranteed path to real funding. After passing an evaluation, traders are placed into a **Sim-Funded account** (still demo-based) that requires additional activation fees ($80/month or $150–$300 one-time). Progression to a LIVE Elite account with real capital is entirely at the firm's discretion, with no published criteria.\n\nThe firm's model relies heavily on recurring fees, and payouts come from simulated trading performance rather than real market capital in most cases. We recommend traders research the full cost structure and funding pathway before committing.",
+  "flaggedWarning": "Elite Trader Funding uses a **Sim-Funded model** where passing an evaluation places you into a demo-based account with real payout eligibility. Activation fees vary by plan: monthly ($80/mo), one-time ($150–$300), or no activation fee for Direct to Funded.\n\nThe firm states that top performers are invited to **LIVE Elite**, where they trade real capital, can withdraw daily, and may receive performance bonuses. However, this progression is not automatic — it's based on Sim-Funded performance, payout history, and risk profile, and remains at the firm's discretion. We recommend traders review the full cost structure, plan-specific rules, and funding pathway before committing.",
   "methodologyVersion": "1.0",
-  "lastReviewedAt": "2026-02-28"
+  "lastReviewedAt": "2026-03-11"
 }

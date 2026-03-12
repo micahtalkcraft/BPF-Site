@@ -14,30 +14,36 @@ const { section, fallbackBody } = Astro.props;
 {section === "challenges" && (
 <div class="text-sm leading-relaxed text-slate-700">
 
+  <!-- Simulated environment notice -->
+  <div class="rounded-xl border border-blue-200 bg-blue-50 p-4 mb-6">
+    <p class="text-sm font-bold text-blue-900 mb-1">Simulated Trading Environment</p>
+    <p class="text-sm text-blue-800">
+      All accounts at The Trading Pit are demo accounts with virtual funds. All trading activity takes place in a <strong>simulated environment</strong>.
+    </p>
+  </div>
+
   <!-- Overview -->
   <p class="mb-4">
-    When you take a challenge with The Trading Pit, you can choose between CFD, futures, or stock trading. Only CFD challenges offer one or two step challenges, with both stocks and futures trading run on a one step challenge only.
+    The Trading Pit offers challenges across CFDs, Futures, and Stocks. Prime is the current active CFD model, available as a 1-Phase or 2-Phase challenge. Futures and Stocks each run as a one-step challenge. Daily drawdown, max drawdown, and payout rules depend on the specific product.
   </p>
 
   <!-- Per-challenge summaries -->
   <div class="space-y-3 mb-8">
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">CFD 1-Phase – One Step Challenge</p>
-      <p>Account sizes range from $10,000 to $100,000 with fees starting at $99 for a $10K account and going up to $999 for a $100K account. Requires a 10% profit target with a 4% daily drawdown.</p>
+      <p class="font-bold text-slate-900 mb-1">CFD 1-Phase (Prime) – One Step Challenge</p>
+      <p>Account sizes range from $10,000 to $100,000 with fees starting at $99 for a $10K account and going up to $999 for a $100K account. Requires a 10% profit target with a <strong>4% daily drawdown</strong> and <strong>7% max drawdown</strong>.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">CFD 2-Phase – Two Step Challenge</p>
-      <p>Account sizes range from $5,000 to $100,000 with fees starting at $49 for a $5K account and going up to $569 for a $100K account. Requires 8% profit in Phase 1 and 5% in Phase 2.</p>
+      <p class="font-bold text-slate-900 mb-1">CFD 2-Phase (Prime) – Two Step Challenge</p>
+      <p>Account sizes range from $5,000 to $100,000 with fees starting at $49 for a $5K account and going up to $569 for a $100K account. Requires 8% profit in Phase 1 and 5% in Phase 2 with a <strong>5% daily drawdown</strong> and <strong>10% max drawdown</strong>.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-      <p class="font-bold text-slate-900 mb-1">Futures – One Step Challenge</p>
-      <p>Account sizes of $50K, $100K, or $150K with fees from $99 to $289, plus a $129 activation fee. Profit target of around 6% with a daily pause mechanism instead of percentage-based drawdown.</p>
-      <p class="text-xs text-amber-600 font-semibold mt-1">Additional $129 activation fee required</p>
+      <p class="font-bold text-slate-900 mb-1">Futures Prime – One Step Challenge</p>
+      <p>Account sizes of $50K, $100K, or $150K with fees from $99 to $289, plus a $129 activation fee. Profit target around 6% with fixed dollar daily pause and max drawdown. Max drawdown trails on highest end-of-day balance until it reaches starting balance, then stays fixed. Daily pause is OFF for accounts created after March 6. Challenge duration is 30 days.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Stocks – One Step Challenge</p>
-      <p>Account sizes of $25K or $50K with fees from $99 to $249. Requires a 7% profit target with a 2% daily pause and 5% maximum drawdown. Profit share is 70%.</p>
-      <p class="text-xs text-amber-600 font-semibold mt-1">Lower 70% profit share compared to other challenge types</p>
+      <p>Account sizes of $25K or $50K with fees from $99 to $249. Requires a 7% profit target with a <strong>2% daily pause</strong> and <strong>5% max drawdown</strong>. Profit share is 70%. Unlimited challenge duration with 14-day inactivity limit. Stocks are forcibly liquidated 10 minutes before market close.</p>
     </div>
   </div>
 
@@ -50,7 +56,7 @@ const { section, fallbackBody } = Astro.props;
           <th class="px-4 py-3 text-left">Attribute</th>
           <th class="px-4 py-3 text-center">CFD 1-Phase</th>
           <th class="px-4 py-3 text-center">CFD 2-Phase</th>
-          <th class="px-4 py-3 text-center">Futures</th>
+          <th class="px-4 py-3 text-center">Futures Prime</th>
           <th class="px-4 py-3 text-center">Stocks</th>
         </tr>
       </thead>
@@ -94,22 +100,22 @@ const { section, fallbackBody } = Astro.props;
           <td class="px-4 py-3 font-medium text-slate-600">Daily Loss Control</td>
           <td class="px-4 py-3 text-center text-slate-900">4% daily DD</td>
           <td class="px-4 py-3 text-center text-slate-900">5% daily DD</td>
-          <td class="px-4 py-3 text-center text-slate-900">~2% daily pause</td>
+          <td class="px-4 py-3 text-center text-slate-900">Fixed $ pause (OFF after Mar 6)</td>
           <td class="px-4 py-3 text-center text-slate-900">2% daily pause</td>
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-600">Max Drawdown</td>
           <td class="px-4 py-3 text-center text-slate-900">7% static</td>
           <td class="px-4 py-3 text-center text-slate-900">10% static</td>
-          <td class="px-4 py-3 text-center text-slate-900">~4%</td>
+          <td class="px-4 py-3 text-center text-slate-900">Fixed $ trailing EOD → fixed at start balance</td>
           <td class="px-4 py-3 text-center text-slate-900">5%</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-medium text-slate-600">Consistency Rule</td>
-          <td class="px-4 py-3 text-center text-slate-900">40%</td>
-          <td class="px-4 py-3 text-center text-slate-900">40%</td>
-          <td class="px-4 py-3 text-center text-slate-900">40%</td>
-          <td class="px-4 py-3 text-center text-slate-900">40%</td>
+          <td class="px-4 py-3 text-center text-slate-900">40% (challenge phase)</td>
+          <td class="px-4 py-3 text-center text-slate-900">40% (challenge phase)</td>
+          <td class="px-4 py-3 text-center text-slate-900">40% (challenge phase)</td>
+          <td class="px-4 py-3 text-center text-slate-900">40% (challenge phase only)</td>
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-600">Min Profitable Days</td>
@@ -119,13 +125,20 @@ const { section, fallbackBody } = Astro.props;
           <td class="px-4 py-3 text-center text-slate-900">3</td>
         </tr>
         <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-medium text-slate-600">Challenge Duration</td>
+          <td class="px-4 py-3 text-center text-slate-900">Unlimited</td>
+          <td class="px-4 py-3 text-center text-slate-900">Unlimited</td>
+          <td class="px-4 py-3 text-center text-slate-900">30 days</td>
+          <td class="px-4 py-3 text-center text-slate-900">Unlimited (14-day inactivity)</td>
+        </tr>
+        <tr class="bg-white">
           <td class="px-4 py-3 font-medium text-slate-600">Profit Share</td>
           <td class="px-4 py-3 text-center font-semibold text-emerald-600">80%</td>
           <td class="px-4 py-3 text-center font-semibold text-emerald-600">80%</td>
           <td class="px-4 py-3 text-center font-semibold text-emerald-600">80%</td>
           <td class="px-4 py-3 text-center font-semibold text-amber-600">70%</td>
         </tr>
-        <tr class="bg-white">
+        <tr class="bg-slate-50">
           <td class="px-4 py-3 font-medium text-slate-600">Inactivity Limit</td>
           <td class="px-4 py-3 text-center text-slate-900">21 days</td>
           <td class="px-4 py-3 text-center text-slate-900">21 days</td>
@@ -142,11 +155,11 @@ const { section, fallbackBody } = Astro.props;
   <div class="mb-10">
     <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
       <span class="flex-shrink-0 w-7 h-7 rounded-full bg-emerald-500 text-white text-xs font-black flex items-center justify-center">1</span>
-      CFD 1-Phase Challenge
+      CFD 1-Phase Challenge (Prime)
     </h3>
 
     <p class="mb-3">
-      The one step CFD challenge comes with a higher profit target and tighter overall limits. It will suit if you prefer a shorter challenge but are comfortable operating close to drawdown thresholds.
+      The one-step CFD Prime challenge has a higher profit target and tighter overall limits. It suits traders who prefer a shorter evaluation but are comfortable operating close to drawdown thresholds.
     </p>
 
     <!-- Key specs -->
@@ -173,7 +186,7 @@ const { section, fallbackBody } = Astro.props;
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Payout Frequency</p>
-        <p class="text-sm font-bold text-slate-800">Bi-weekly</p>
+        <p class="text-sm font-bold text-slate-800">Every 14 days</p>
       </div>
     </div>
 
@@ -229,11 +242,11 @@ const { section, fallbackBody } = Astro.props;
   <div class="mb-10">
     <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
       <span class="flex-shrink-0 w-7 h-7 rounded-full bg-emerald-500 text-white text-xs font-black flex items-center justify-center">2</span>
-      CFD 2-Phase Challenge
+      CFD 2-Phase Challenge (Prime)
     </h3>
 
     <p class="mb-3">
-      The two step CFD challenge splits the evaluation into two stages with lower profit targets per phase. In exchange, the drawdown limits are wider, which can make managing risk easier if you prefer more room during the evaluation.
+      The two-step CFD Prime challenge splits the evaluation into two stages with lower profit targets per phase. In exchange, the drawdown limits are wider, which can make managing risk easier if you prefer more room during the evaluation.
     </p>
 
     <!-- Key specs -->
@@ -324,19 +337,19 @@ const { section, fallbackBody } = Astro.props;
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- 3. FUTURES CHALLENGE                                            -->
+  <!-- 3. FUTURES PRIME CHALLENGE                                      -->
   <!-- ═══════════════════════════════════════════════════════════════ -->
   <div class="mb-10">
     <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
       <span class="flex-shrink-0 w-7 h-7 rounded-full bg-emerald-500 text-white text-xs font-black flex items-center justify-center">3</span>
-      Futures Challenge
+      Futures Prime Challenge
     </h3>
 
     <p class="mb-3">
-      The Trading Pit offers a single Futures Challenge built around contract limits, a daily pause, and a maximum drawdown. Unlike CFDs, futures accounts do not use daily drawdown percentages but instead pause trading once daily losses hit a fixed dollar amount.
+      The Futures Prime challenge uses contract limits and fixed dollar drawdown controls rather than percentage-based limits. The max drawdown trails on the highest end-of-day balance until it reaches the starting balance, then stays fixed at that level.
     </p>
     <p class="mb-4">
-      This structure matters if you trade index or commodity futures and size positions by contracts rather than lot size.
+      Futures Prime has a <strong>30-day challenge duration</strong>. The daily pause is now <strong>OFF for accounts created after March 6</strong>.
     </p>
 
     <!-- Key specs -->
@@ -347,11 +360,11 @@ const { section, fallbackBody } = Astro.props;
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Daily Pause</p>
-        <p class="text-sm font-bold text-slate-800">~2%</p>
+        <p class="text-sm font-bold text-slate-800">OFF (after Mar 6)</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Drawdown</p>
-        <p class="text-sm font-bold text-slate-800">~4%</p>
+        <p class="text-sm font-bold text-slate-800">Fixed $ trailing EOD</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Duration</p>
@@ -367,6 +380,14 @@ const { section, fallbackBody } = Astro.props;
       </div>
     </div>
 
+    <!-- Max drawdown note -->
+    <div class="rounded-xl border border-blue-200 bg-blue-50 p-4 mb-4">
+      <p class="text-sm font-bold text-blue-900 mb-1">Futures Max Drawdown</p>
+      <p class="text-sm text-blue-800">
+        The max drawdown trails on the <strong>highest end-of-day balance</strong> until it reaches the starting balance, then stays fixed at that level. This is not a simple percentage-based drawdown.
+      </p>
+    </div>
+
     <!-- Fee table -->
     <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
       <table class="w-full text-sm">
@@ -376,7 +397,6 @@ const { section, fallbackBody } = Astro.props;
             <th class="px-4 py-3 text-right">One-Off Fee</th>
             <th class="px-4 py-3 text-right">Contracts</th>
             <th class="px-4 py-3 text-right">Profit Target</th>
-            <th class="px-4 py-3 text-right">Daily Pause</th>
             <th class="px-4 py-3 text-right">Max DD</th>
             <th class="px-4 py-3 text-right">Activation</th>
           </tr>
@@ -387,7 +407,6 @@ const { section, fallbackBody } = Astro.props;
             <td class="px-4 py-3 text-right text-slate-900">$99</td>
             <td class="px-4 py-3 text-right text-slate-700">5 / 50</td>
             <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
-            <td class="px-4 py-3 text-right text-slate-700">$1,000</td>
             <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
             <td class="px-4 py-3 text-right text-amber-600">$129</td>
           </tr>
@@ -396,7 +415,6 @@ const { section, fallbackBody } = Astro.props;
             <td class="px-4 py-3 text-right text-slate-900">$189</td>
             <td class="px-4 py-3 text-right text-slate-700">10 / 100</td>
             <td class="px-4 py-3 text-right text-slate-700">$6,000</td>
-            <td class="px-4 py-3 text-right text-slate-700">$2,000</td>
             <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
             <td class="px-4 py-3 text-right text-amber-600">$129</td>
           </tr>
@@ -405,7 +423,6 @@ const { section, fallbackBody } = Astro.props;
             <td class="px-4 py-3 text-right text-slate-900">$289</td>
             <td class="px-4 py-3 text-right text-slate-700">15 / 150</td>
             <td class="px-4 py-3 text-right text-slate-700">$9,000</td>
-            <td class="px-4 py-3 text-right text-slate-700">$3,000</td>
             <td class="px-4 py-3 text-right text-slate-700">$4,500</td>
             <td class="px-4 py-3 text-right text-amber-600">$129</td>
           </tr>
@@ -432,10 +449,10 @@ const { section, fallbackBody } = Astro.props;
     </h3>
 
     <p class="mb-3">
-      The Trading Pit's Stocks Challenge provides access to equity trading with a structure that sits between CFDs and futures. Risk is controlled through a daily pause and a maximum drawdown, rather than percentage-based daily limits.
+      The Stocks Challenge provides access to equity trading with risk controlled through a 2% daily pause and 5% maximum drawdown. Stocks are forcibly liquidated 10 minutes before market close.
     </p>
     <p class="mb-4">
-      The stock challenge has its own inactivity rule where you can't be inactive for more than 14 days, but overall there's no time limit.
+      The Stocks challenge has <strong>unlimited duration</strong> with a 14-day inactivity limit. Futures Prime, by contrast, has a 30-day challenge duration.
     </p>
 
     <!-- Key specs -->
@@ -501,7 +518,7 @@ const { section, fallbackBody } = Astro.props;
     <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-5">
       <p class="text-sm font-bold text-amber-900 mb-1">Lower Profit Share on Stocks</p>
       <p class="text-sm text-amber-800">
-        The Stocks Challenge has a <strong>70% profit share</strong>, which is lower than the 80% offered on CFD and Futures challenges. This is worth considering if maximizing your profit split is a priority.
+        The Stocks Challenge has a <strong>70% profit share</strong>, which is lower than the 80% offered on CFD and Futures challenges.
       </p>
     </div>
   </div>
@@ -512,25 +529,25 @@ const { section, fallbackBody } = Astro.props;
   <div class="mb-10">
     <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules</h3>
     <p class="mb-4">
-      The Trading Pit applies the same core trading rules across all challenge types, with enforcement handled through both system checks and manual review.
+      Trading rules vary by product. Key restrictions apply to news trading, automation, holding, and copy trading.
     </p>
 
     <div class="space-y-3 mb-6">
       <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
         <p class="font-bold text-slate-900 mb-1">News Trading</p>
-        <p>Two minute restricted window either side of major news events.</p>
+        <p>A <strong>2-minute restricted window</strong> applies before and after high-impact news events.</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
         <p class="font-bold text-slate-900 mb-1">Automation and EAs</p>
-        <p>Automated trading is allowed, but copy trading, latency arbitrage, and tick-scalping strategies are prohibited.</p>
+        <p>Certain EA behaviour is banned, and using third-party EAs can stop an account from passing or progressing. The rules restrict specific automated strategies rather than allowing EAs without limitation.</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
         <p class="font-bold text-slate-900 mb-1">Copy Trading</p>
-        <p>Not allowed across CFD challenges. Permitted on Futures only, with a limit of up to five linked accounts.</p>
+        <p>Trade coordination and copy trading with other traders or accounts are <strong>prohibited</strong>.</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
-        <p class="font-bold text-slate-900 mb-1">Overnight Holding</p>
-        <p>Allowed on CFD and Stocks challenges on weekdays. Futures overnight rules depend on contract specifications.</p>
+        <p class="font-bold text-slate-900 mb-1">Holding and Liquidation</p>
+        <p>CFDs and Stocks can hold on weekdays. Stocks are <strong>forcibly liquidated 10 minutes before market close</strong>.</p>
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
         <p class="font-bold text-slate-900 mb-1">Inactivity</p>
@@ -542,7 +559,7 @@ const { section, fallbackBody } = Astro.props;
     <h3 class="text-lg font-bold text-slate-900 mb-3">Consistency Rule</h3>
     <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-5">
       <p class="text-sm text-amber-800">
-        The Trading Pit enforces a <strong>40% consistency rule</strong> during the evaluation process. No single trading day can account for more than 40% of the total profit target. If a trading day exceeds that threshold, the excess is added to the remaining profit target instead of counting toward completion. This extends the evaluation rather than causing an immediate failure.
+        The Trading Pit enforces a <strong>40% consistency rule during the challenge phase</strong>. No single trading day can account for more than 40% of the total profit target. If a trading day exceeds that threshold, the excess is added to the remaining profit target instead of counting toward completion. Stocks specifically state the consistency rule applies during the challenge phase only.
       </p>
     </div>
   </div>
@@ -553,7 +570,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on The Trading Pit's Challenges</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      The Trading Pit scores 9/10 for challenges because you get a clearly structured multi-asset setup across CFDs, Futures, and Stocks. The trading rules are detailed and predictable, so you know exactly what's required at each stage of the evaluation. The score doesn't reach a perfect 10 because flexibility is limited — the 40% consistency rule, restricted news trading window, and tighter controls on automation and short-term strategies raise the difficulty compared to more relaxed firms.
+      The Trading Pit scores 9/10 for challenges because you get a clearly structured multi-asset setup across CFDs, Futures, and Stocks. Daily drawdown and max drawdown rules differ by product — CFD 1-Phase uses 4%/7%, CFD 2-Phase uses 5%/10%, Futures uses fixed dollar amounts with a trailing EOD mechanism, and Stocks uses 2%/5%. The 40% consistency rule, 2-minute news window, and restrictions on EAs and copy trading raise the difficulty compared to more relaxed firms.
     </p>
   </div>
 
@@ -570,7 +587,7 @@ const { section, fallbackBody } = Astro.props;
     The Trading Pit uses different pricing models for CFD and Futures trading. CFD traders pay a spread-plus-commission, with forex spreads as low as 0.0 pips but a <strong>$5 per lot commission</strong>.
   </p>
   <p class="mb-4">
-    Futures traders avoid spreads, instead trading on raw exchange pricing, with free Level 1 market data and optional paid upgrades for deeper market access.
+    Futures traders avoid spreads, instead trading on raw exchange pricing, with market data packages available at varying price points.
   </p>
 
   <!-- Forex Spreads Table -->
@@ -623,7 +640,7 @@ const { section, fallbackBody } = Astro.props;
   <!-- Futures Market Data Fees -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Futures Market Data Fees</h3>
   <p class="mb-4">
-    The Trading Pit provides free Level 1 market data, covering top-of-book pricing. Traders who need Level 2 depth-of-market data can upgrade for an additional fee, depending on the exchange.
+    Futures market data is not simply free. The current futures page shows Top of the Book comprehensive US futures packages and Level 2 upgrades at varying price points.
   </p>
 
   <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
@@ -636,8 +653,8 @@ const { section, fallbackBody } = Astro.props;
       </thead>
       <tbody class="divide-y divide-slate-100">
         <tr class="bg-white">
-          <td class="px-5 py-3 font-semibold text-slate-900">Level 1 (Top of the Book)</td>
-          <td class="px-5 py-3 text-right font-bold text-emerald-600">Free</td>
+          <td class="px-5 py-3 font-semibold text-slate-900">Top of the Book – Comprehensive US Futures</td>
+          <td class="px-5 py-3 text-right text-slate-900">$12/month</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-5 py-3 font-semibold text-slate-900">Level 2 (Chicago-based Exchange)</td>
@@ -648,8 +665,8 @@ const { section, fallbackBody } = Astro.props;
           <td class="px-5 py-3 text-right text-slate-900">$41/month</td>
         </tr>
         <tr class="bg-slate-50">
-          <td class="px-5 py-3 font-semibold text-slate-900">European Derivatives Exchange</td>
-          <td class="px-5 py-3 text-right text-slate-900">€23/month</td>
+          <td class="px-5 py-3 font-semibold text-slate-900">Eurex (European Derivatives Exchange)</td>
+          <td class="px-5 py-3 text-right text-slate-900">€25/month</td>
         </tr>
       </tbody>
     </table>
@@ -659,7 +676,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Spreads and Commissions</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      The Trading Pit provides tight forex spreads, making it an attractive option for currency traders. However commission fees and crypto trading costs are on the higher side compared to competitors. Futures traders benefit from free Level 1 market data, with optional Level 2 upgrades for those needing deeper market access.
+      The Trading Pit provides tight forex spreads, making it an attractive option for currency traders. However commission fees and crypto trading costs are on the higher side compared to competitors. Futures traders should note that market data packages start at $12/month for Top of the Book data, with Level 2 upgrades available at additional cost.
     </p>
   </div>
 
@@ -758,7 +775,7 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-4">
-    The Trading Pit offers a wide selection of platforms tailored to both CFD and Futures traders. Platform availability depends on the chosen challenge type, with MetaTrader and cTrader supporting CFDs, while Futures traders can choose from multiple specialized platforms.
+    Platform availability depends on the chosen challenge type. CFD challenges use MetaTrader and cTrader, Futures traders can choose from multiple specialized platforms, and Stocks use Volumetrica Web & Desktop.
   </p>
 
   <!-- CFD Platforms -->
@@ -810,7 +827,7 @@ const { section, fallbackBody } = Astro.props;
   <!-- Futures Platforms -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Futures Trading Platforms</h3>
   <p class="mb-4">
-    Futures traders can choose from a variety of platforms designed for low-latency execution, order flow analysis, and market depth visualization. Availability depends on the challenge type.
+    Futures traders can choose from a variety of platforms designed for low-latency execution, order flow analysis, and market depth visualization.
   </p>
 
   <div class="space-y-3 mb-8">
@@ -870,11 +887,24 @@ const { section, fallbackBody } = Astro.props;
     </div>
   </div>
 
+  <!-- Stocks Platform -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Stocks Trading Platform</h3>
+  <div class="space-y-3 mb-8">
+    <div class="rounded-xl border border-slate-200 overflow-hidden">
+      <div class="bg-slate-800 px-4 py-2">
+        <p class="font-bold text-white text-sm">Volumetrica Web & Desktop</p>
+      </div>
+      <div class="p-4">
+        <p>The Stocks challenge uses Volumetrica as its dedicated platform, available in both web and desktop versions.</p>
+      </div>
+    </div>
+  </div>
+
   <!-- Verdict -->
   <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Trading Platforms</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      The Trading Pit provides a strong lineup of platforms catering to both traditional and algorithmic traders. CFD traders will find MT4, MT5, and cTrader familiar and feature-rich, while Futures traders have access to specialized platforms like ATAS and Quantower, alongside popular options like NinjaTrader and TradingView.
+      The Trading Pit provides a strong lineup of platforms tailored by challenge type. CFD traders will find MT4, MT5, and cTrader familiar and feature-rich. Futures traders have access to specialized platforms like ATAS and Quantower, alongside Prime-only options like NinjaTrader and TradingView. Stocks use Volumetrica Web & Desktop.
     </p>
   </div>
 
@@ -888,7 +918,7 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-6">
-    Payouts are structured based on the trader's challenge type (CFD or Futures, Prime or Classic), with clear schedules and minimum withdrawal requirements.
+    Payout schedules and requirements vary by product type. All accounts are demo accounts with virtual funds — payouts are based on simulated trading performance.
   </p>
 
   <!-- Payout summary grid -->
@@ -898,8 +928,8 @@ const { section, fallbackBody } = Astro.props;
       <p class="text-sm font-bold text-emerald-600">80%</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
-      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Classic Starting Split</p>
-      <p class="text-sm font-bold text-amber-600">50%</p>
+      <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Stocks Profit Split</p>
+      <p class="text-sm font-bold text-amber-600">70%</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
       <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Processing Time</p>
@@ -907,14 +937,14 @@ const { section, fallbackBody } = Astro.props;
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
       <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Payout Schedule</p>
-      <p class="text-sm font-bold text-slate-800">Bi-weekly</p>
+      <p class="text-sm font-bold text-slate-800">Varies by product</p>
     </div>
   </div>
 
   <!-- Challenge Fee Payment Methods -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Fee Payment Methods</h3>
   <p class="mb-4">
-    The Trading Pit allows you to pay for challenge fees using credit/debit cards, cryptocurrencies, Binance Pay, Apple Pay, Google Pay, and region-specific bank transfers. Payments are processed securely, with crypto transactions offering faster processing times.
+    The Trading Pit allows you to pay for challenge fees using credit/debit cards, cryptocurrencies, Binance Pay, Apple Pay, Google Pay, and region-specific bank transfers.
   </p>
 
   <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-8">
@@ -939,14 +969,14 @@ const { section, fallbackBody } = Astro.props;
   </div>
 
   <!-- Payout structure by challenge type -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Payout Structure by Challenge Type</h3>
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Payout Structure by Product Type</h3>
   <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
     <table class="w-full text-sm whitespace-nowrap">
       <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
         <tr>
-          <th class="px-4 py-3 text-left">Challenge</th>
+          <th class="px-4 py-3 text-left">Product</th>
           <th class="px-4 py-3 text-center">Profit Split</th>
-          <th class="px-4 py-3 text-center">Min Trading Days</th>
+          <th class="px-4 py-3 text-center">Payout Requirements</th>
           <th class="px-4 py-3 text-center">Payout Schedule</th>
           <th class="px-4 py-3 text-center">Min Withdrawal</th>
           <th class="px-4 py-3 text-center">Processing</th>
@@ -962,38 +992,38 @@ const { section, fallbackBody } = Astro.props;
           <td class="px-4 py-3 text-center text-slate-700">1 business day</td>
         </tr>
         <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-semibold text-slate-900">Classic CFD</td>
-          <td class="px-4 py-3 text-center font-semibold text-amber-600">50–70%</td>
-          <td class="px-4 py-3 text-center text-slate-700">On target completion</td>
-          <td class="px-4 py-3 text-center text-slate-700">Every 14 days (Fridays)</td>
-          <td class="px-4 py-3 text-center text-slate-700">—</td>
-          <td class="px-4 py-3 text-center text-slate-700">1 business day</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-semibold text-slate-900">Prime Futures</td>
+          <td class="px-4 py-3 font-semibold text-slate-900">Futures Prime</td>
           <td class="px-4 py-3 text-center font-semibold text-emerald-600">80%</td>
-          <td class="px-4 py-3 text-center text-slate-700">10 winning days + $200</td>
-          <td class="px-4 py-3 text-center text-slate-700">Every 14 days (Fridays)</td>
+          <td class="px-4 py-3 text-center text-slate-700">5 profitable days + $200/day (first 2 payouts)</td>
+          <td class="px-4 py-3 text-center text-slate-700">Every 14 days → every 7 days after 2nd payout</td>
           <td class="px-4 py-3 text-center text-slate-700">$200</td>
           <td class="px-4 py-3 text-center text-slate-700">1 business day</td>
         </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-semibold text-slate-900">Classic Futures</td>
-          <td class="px-4 py-3 text-center font-semibold text-amber-600">Up to 70%</td>
-          <td class="px-4 py-3 text-center text-slate-700">3 trading days</td>
-          <td class="px-4 py-3 text-center text-slate-700">Every Friday</td>
-          <td class="px-4 py-3 text-center text-slate-700">$150</td>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Stocks</td>
+          <td class="px-4 py-3 text-center font-semibold text-amber-600">70%</td>
+          <td class="px-4 py-3 text-center text-slate-700">3 profitable days + $100/day (first payout)</td>
+          <td class="px-4 py-3 text-center text-slate-700">After meeting requirements</td>
+          <td class="px-4 py-3 text-center text-slate-700">$100</td>
           <td class="px-4 py-3 text-center text-slate-700">1 business day</td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <!-- Lower starting split warning -->
-  <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-5">
-    <p class="text-sm font-bold text-amber-900 mb-1">Classic Profit Split Warning</p>
-    <p class="text-sm text-amber-800">
-      Classic challenges start with a <strong>50% profit split</strong> that scales up to 70–80% based on performance levels. This is significantly lower than the Prime 80% fixed split and below many competitor offerings.
+  <!-- Futures payout detail -->
+  <div class="rounded-xl border border-blue-200 bg-blue-50 p-4 mb-5">
+    <p class="text-sm font-bold text-blue-900 mb-1">Futures Prime Payout Details</p>
+    <p class="text-sm text-blue-800">
+      The first two Futures Prime payouts require <strong>5 profitable trading days with at least $200 profit per day</strong>. After the second payout, payout requests can be made <strong>every 7 days</strong> if profit is over $200.
+    </p>
+  </div>
+
+  <!-- Stocks payout detail -->
+  <div class="rounded-xl border border-blue-200 bg-blue-50 p-4 mb-5">
+    <p class="text-sm font-bold text-blue-900 mb-1">Stocks First Payout</p>
+    <p class="text-sm text-blue-800">
+      For Stocks, the first payout requires <strong>3 profitable trading days with at least $100 profit per day</strong>.
     </p>
   </div>
 
@@ -1001,7 +1031,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Payments and Payouts</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      The Trading Pit offers flexible payment options for challenge fees, including crypto, bank cards, and digital wallets. Payout schedules are transparent, with bi-weekly withdrawals processed quickly. Prime challenges offer higher, fixed profit splits, while Classic challenges scale based on trader performance.
+      The Trading Pit offers flexible payment options for challenge fees. Payout schedules are transparent but vary by product — Prime CFD pays every 14 days, Futures Prime transitions from 14-day to 7-day payouts after the second payout, and Stocks requires 3 profitable days with $100+ each for the first payout. Prime challenges offer 80% profit splits while Stocks are at 70%.
     </p>
   </div>
 
@@ -1015,14 +1045,11 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-4">
-    The Trading Pit provides multiple support channels and a range of educational resources. Support is available via email, phone, live chat, and an online inquiry form, and while response times are generally fast, some traders report occasional delays during busy periods.
+    The Trading Pit provides multiple support channels and a strong range of educational resources.
   </p>
 
   <!-- Customer Support -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Customer Support</h3>
-  <p class="mb-4">
-    Feedback on customer service is mostly positive, with many traders reporting quick resolutions, though peak times may lead to slower response times.
-  </p>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
@@ -1046,7 +1073,7 @@ const { section, fallbackBody } = Astro.props;
   <!-- Educational Resources -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Educational Resources</h3>
   <p class="mb-4">
-    The Trading Pit provides a variety of free educational materials to help you develop your trading skills:
+    The Trading Pit offers a variety of free educational materials including blog content, ebooks, webinars, podcasts, videos, and infographics:
   </p>
 
   <div class="space-y-3 mb-8">
@@ -1076,7 +1103,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Customer Support and Education</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      The Trading Pit offers accessible customer support, with email, phone, and live chat options, though response times can vary. Its educational resources cover a broad range of topics, making them useful at different experience levels. However, if you are looking for personalized coaching or one-on-one mentorship, you may find the content more generalized compared to other prop firms.
+      The Trading Pit offers accessible customer support with email, phone, and live chat options. Educational resources are comprehensive, covering blog content, ebooks, webinars, podcasts, videos, and infographics across a broad range of topics and experience levels.
     </p>
   </div>
 
@@ -1090,16 +1117,16 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-3">
-    The Trading Pit operates as an independent proprietary trading firm, distinct from broker-backed prop firms like DNA Funded or FXIFY. However, it collaborates with established brokers for platform-specific liquidity and execution. For instance, cTrader users benefit from Tickmill's services.
+    The Trading Pit operates as an independent proprietary trading firm, partnering with established brokers for platform-specific liquidity and execution. For cTrader users, Tickmill provides liquidity services.
   </p>
   <p class="mb-6">
-    This approach offers a blend of independence and access to real market conditions, differing from firms that operate solely in simulated environments.
+    All accounts are demo accounts with virtual funds. All trading activity takes place in a <strong>simulated environment</strong>.
   </p>
 
   <!-- Trustpilot -->
   <h3 class="text-lg font-bold text-slate-900 mb-3">Trustpilot Score</h3>
 
-  <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 mb-4 flex items-center gap-4">
+  <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 mb-6 flex items-center gap-4">
     <div class="flex-shrink-0">
       <p class="text-3xl font-black text-slate-900">4.2<span class="text-lg text-slate-400">/5</span></p>
       <p class="text-xs text-slate-500 font-semibold">TrustScore</p>
@@ -1109,134 +1136,52 @@ const { section, fallbackBody } = Astro.props;
     </div>
   </div>
 
-  <p class="mb-6">
-    Some users mention technical issues during high market volatility and feel that profit splits could be more competitive for entry-level accounts.
-  </p>
-
-  <!-- Community -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Prop Trading Community</h3>
+  <!-- Official site stats -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">Community and Reach</h3>
   <p class="mb-4">
-    The Trading Pit has built a growing trader network, engaging with prop traders across multiple platforms:
+    The official site currently highlights the following metrics:
   </p>
 
   <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
-      <p class="text-2xl font-black text-slate-900">15,700+</p>
-      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Discord</p>
+      <p class="text-2xl font-black text-slate-900">10,000+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Active Monthly Accounts</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
-      <p class="text-2xl font-black text-slate-900">6,800+</p>
-      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Twitter (X)</p>
+      <p class="text-2xl font-black text-slate-900">$14M+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">In Rewards</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
-      <p class="text-2xl font-black text-slate-900">19,300+</p>
-      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Instagram</p>
+      <p class="text-2xl font-black text-slate-900">450K+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Monthly Trades</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
-      <p class="text-2xl font-black text-slate-900">2,100+</p>
-      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Telegram</p>
+      <p class="text-2xl font-black text-slate-900">180+</p>
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Supported Countries</p>
     </div>
   </div>
 
-  <!-- Popularity -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">How Popular Is The Trading Pit?</h3>
-  <p class="mb-4">
-    The Trading Pit ranks <strong>23rd globally</strong> in branded Google search volume among prop firms, with an average of <strong>18,100 monthly searches</strong> in early 2025. It also ranks <strong>24th in global website traffic</strong>, receiving <strong>201,706 visits</strong> in March 2025 according to Similarweb.
-  </p>
-  <p class="mb-4">
-    Interest is highest in Germany (2,900 monthly searches), followed by Spain, Italy, and the United States. The Trading Pit sees strong traction in both Western Europe and emerging Asian markets such as Malaysia and India, reflecting a globally distributed user base.
-  </p>
-
-  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
-      <p class="text-2xl font-black text-slate-900">18,100</p>
-      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Monthly Searches</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
-      <p class="text-2xl font-black text-slate-900">23rd</p>
-      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Search Rank</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
-      <p class="text-2xl font-black text-slate-900">201,706</p>
-      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Monthly Visits</p>
-    </div>
-    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4 text-center">
-      <p class="text-2xl font-black text-slate-900">24th</p>
-      <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Traffic Rank</p>
-    </div>
+  <!-- Scaling -->
+  <div class="rounded-xl border border-emerald-200 bg-emerald-50 p-4 mb-6">
+    <p class="text-sm font-bold text-emerald-900 mb-1">Scaling</p>
+    <p class="text-sm text-emerald-800">
+      The official site states traders can scale up to <strong>€5M</strong>.
+    </p>
   </div>
 
-  <!-- Top Countries Table -->
-  <h4 class="text-base font-bold text-slate-900 mb-3">Top Branded Searches by Country</h4>
-  <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
-    <table class="w-full text-sm">
-      <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
-        <tr>
-          <th class="px-4 py-3 text-left">Rank</th>
-          <th class="px-4 py-3 text-left">Country</th>
-          <th class="px-4 py-3 text-right">Monthly Searches</th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-slate-100">
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-bold text-emerald-600">1st</td>
-          <td class="px-4 py-3 font-semibold text-slate-900">Germany</td>
-          <td class="px-4 py-3 text-right font-semibold text-slate-900">2,900</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-bold text-slate-500">2nd</td>
-          <td class="px-4 py-3 font-semibold text-slate-900">Spain</td>
-          <td class="px-4 py-3 text-right text-slate-700">1,300</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-bold text-slate-500">3rd</td>
-          <td class="px-4 py-3 font-semibold text-slate-900">Italy</td>
-          <td class="px-4 py-3 text-right text-slate-700">880</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-bold text-slate-500">4th</td>
-          <td class="px-4 py-3 font-semibold text-slate-900">United States</td>
-          <td class="px-4 py-3 text-right text-slate-700">720</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-bold text-slate-500">5th</td>
-          <td class="px-4 py-3 font-semibold text-slate-900">Malaysia</td>
-          <td class="px-4 py-3 text-right text-slate-700">720</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-bold text-slate-500">6th</td>
-          <td class="px-4 py-3 font-semibold text-slate-900">India</td>
-          <td class="px-4 py-3 text-right text-slate-700">390</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-bold text-slate-500">7th</td>
-          <td class="px-4 py-3 font-semibold text-slate-900">Australia</td>
-          <td class="px-4 py-3 text-right text-slate-700">390</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-bold text-slate-500">8th</td>
-          <td class="px-4 py-3 font-semibold text-slate-900">Austria</td>
-          <td class="px-4 py-3 text-right text-slate-700">390</td>
-        </tr>
-        <tr class="bg-white">
-          <td class="px-4 py-3 font-bold text-slate-500">9th</td>
-          <td class="px-4 py-3 font-semibold text-slate-900">United Kingdom</td>
-          <td class="px-4 py-3 text-right text-slate-700">320</td>
-        </tr>
-        <tr class="bg-slate-50">
-          <td class="px-4 py-3 font-bold text-slate-500">10th</td>
-          <td class="px-4 py-3 font-semibold text-slate-900">Brazil</td>
-          <td class="px-4 py-3 text-right text-slate-700">320</td>
-        </tr>
-      </tbody>
-    </table>
+  <!-- US/Canada note -->
+  <div class="rounded-xl border border-slate-200 bg-slate-50 p-4 mb-6">
+    <p class="text-sm font-bold text-slate-900 mb-1">Product Availability Note</p>
+    <p class="text-sm text-slate-700">
+      US and Canadian residents can access Futures Challenges only. CFD, Crypto, and Stock Challenges are not currently offered to US or Canadian traders.
+    </p>
   </div>
 
   <!-- Verdict -->
   <div class="rounded-xl border-l-4 border-emerald-500 bg-emerald-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-emerald-800 mb-1">Verdict on Trust and Community</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      The Trading Pit is establishing itself as a respected prop firm, particularly with its CFD and Futures offerings. Its growing online presence and trader engagement are positives, especially on Discord. However, platform stability concerns and lower starting profit splits remain key areas for improvement.
+      The Trading Pit is an established prop firm with 10,000+ active monthly accounts, $14M+ in rewards, and coverage across 180+ countries. The ability to scale up to €5M is a notable differentiator. All accounts operate in a simulated environment with virtual funds. The 4.2/5 Trustpilot score from 700+ reviews reflects generally positive trader sentiment.
     </p>
   </div>
 

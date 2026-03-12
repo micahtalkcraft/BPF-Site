@@ -6,10 +6,10 @@
   "foundedYear": 2023,
   "hqCountry": "AE",
   "evaluation": {
-    "types": ["1-step", "2-step", "instant"],
+    "types": ["1-step", "2-step", "3-step", "instant"],
     "profitTargets": { "phase1": 10, "phase2": 5 },
-    "dailyDrawdown": 3,
-    "maxDrawdown": 10,
+    "dailyDrawdown": null,
+    "maxDrawdown": null,
     "minTradingDays": 0,
     "scalingPlan": true
   },
@@ -25,9 +25,9 @@
       { "accountSize": 100000, "fee": 298, "model": "2-step", "label": "Two-Step Goat $100K" },
       { "accountSize": 100000, "fee": 393, "model": "2-step", "label": "Two-Step Standard $100K" },
       { "accountSize": 200000, "fee": 730, "model": "2-step", "label": "Two-Step Standard $200K" },
-      { "accountSize": 10000, "fee": 48, "model": "2-step", "label": "Three-Step $10K" },
-      { "accountSize": 100000, "fee": 273, "model": "2-step", "label": "Three-Step $100K" },
-      { "accountSize": 200000, "fee": 498, "model": "2-step", "label": "Three-Step $200K" },
+      { "accountSize": 10000, "fee": 48, "model": "3-step", "label": "Three-Step $10K" },
+      { "accountSize": 100000, "fee": 273, "model": "3-step", "label": "Three-Step $100K" },
+      { "accountSize": 200000, "fee": 498, "model": "3-step", "label": "Three-Step $200K" },
       { "accountSize": 5000, "fee": 107, "model": "instant", "label": "Instant Goat $5K" },
       { "accountSize": 25000, "fee": 307, "model": "instant", "label": "Instant Goat $25K" },
       { "accountSize": 100000, "fee": 767, "model": "instant", "label": "Instant Goat $100K" },
@@ -35,49 +35,49 @@
       { "accountSize": 50000, "fee": 1434, "model": "instant", "label": "Instant Standard $50K" }
     ],
     "resetFee": null,
-    "refundPolicy": "Refundable fees on evaluation accounts only. Instant Funding accounts have no refund option."
+    "refundPolicy": "No refunds on services purchased per the legal refund policy. Specific promotional offers may vary."
   },
   "payouts": {
     "splitMax": 100,
-    "schedule": "Bi-weekly or every 30 days (model dependent)",
-    "processingTime": "2–3 business days",
-    "firstPayoutDays": 30,
-    "methods": ["Credit Card", "Crypto", "Bank Transfer"]
+    "schedule": "Varies by model. Bi-weekly payouts standard on many funded models. Instant Standard uses Triple Payday (5th, 15th, 25th). Reward on Demand available on eligible challenge models — requires 3% profit over at least 3 trading days with 0.5% profit on each day. First Reward on Demand payout paid at 40% split, then returns to usual split.",
+    "processingTime": "Within 2 business days",
+    "firstPayoutDays": null,
+    "methods": ["Rise", "Crypto", "Skrill"]
   },
   "rules": {
-    "newsTrading": true,
+    "newsTrading": null,
     "weekendHolding": true,
     "copyTrading": false,
-    "expertAdvisors": true,
+    "expertAdvisors": null,
     "consistencyRule": null,
-    "notes": "News trading allowed but profits capped at 1% of account balance for trades within 2 minutes of high-impact news. EAs allowed but must prove ownership with source code if requested. No hedging. No trade copying between accounts. No HFT (50%+ trades under 1 minute). No all-or-nothing trading. Weekend holding allowed but eval accounts may be reviewed by risk team. First two payouts capped at 6% of account balance. Daily profit withdrawals capped at $3,000. Min withdrawal $100."
+    "notes": "Challenge types include 1-Step, 2-Step (GOAT, Standard, PRO variants), 3-Step, Instant (GOAT, Standard), Goat Blitz, and Pay Later models. Daily drawdown varies by model: 1-Step 4%, 2-Step GOAT 4%, 2-Step Standard 5%, 3-Step 4%, Instant GOAT 3% trailing. Max drawdown varies: 1-Step 6%, 2-Step GOAT 10%, 2-Step Standard 10%, 3-Step 8%, Instant GOAT 6% trailing. News trading allowed but profits from trades opened or closed within 5 minutes before or after high-impact news are capped at 1% of initial balance — excess profit removed. Weekend holding allowed on main models but may be subject to risk review or model-specific conditions. Copy trading / mirroring between accounts is banned. EAs restricted — GFT can require proof of ownership / source code, bans third-party or commercial challenge-passing EAs, and bans HFT-style EA use. No hedging. No all-or-nothing / gambling-style trading — margin usage above 80% in a single position is prohibited. 2-minute minimum trade duration rule applies. Goat Guard: on funded accounts (excluding Instant), auto-closes trades when floating loss reaches 2% of account balance — first trigger cuts profit split to 50%, second trigger breaches the account. Funded accounts have a $3,000 daily profit limit — profit above that is deducted but is not a breach. First two reward requests capped at 6% of initial balance — restriction removed after that. Reward on Demand requires 3% profit over at least 3 trading days with at least 0.5% profit on each of those 3 days. First Reward on Demand payout is paid at 40% split, then later payouts return to usual split. Standard profit split is 80% with 100% available as add-on. Min withdrawal $100. KYC required before first withdrawal. Accounts are fully simulated using real market quotes. Forex leverage: Two-Step/Three-Step eval 1:100, One-Step eval 1:30, funded 1:50. Indices 1:10, Commodities 1:10, Crypto 1:2, Stocks 1:5. GFT states funded leverage can increase based on risk management."
   },
   "markets": {
-    "platforms": ["MT5", "TradeLocker", "MatchTrader"],
-    "instruments": "Forex, Indices, Commodities, Crypto"
+    "platforms": ["cTrader", "TradeLocker", "MatchTrader", "Volumetrica", "MT5"],
+    "instruments": "Forex, Indices, Metals, Commodities, Stocks, Crypto"
   },
   "trust": {
     "trustpilotRating": 3.4,
     "trustpilotCount": 3000,
-    "communitySize": "59,700+ Discord members",
-    "notableFlags": ["Payout complaints", "Transparency concerns", "23% 1-star reviews"]
+    "communitySize": "240,000+ traders",
+    "notableFlags": ["240,000+ traders (firm-reported)", "$14M+ paid in rewards (firm-reported)", "5,000+ verified reviews on site", "Payout complaints persist", "Simulated environment with real market quotes", "Goat Guard auto-close feature on funded accounts"]
   },
   "links": { "website": "https://goatfundedtrader.com" },
   "media": { "logo": "/images/logos/goat-funded-trader-menu-icon.png" },
   "availability": { "restrictedCountries": [] },
   "support": {
-    "hours": "Business hours",
+    "hours": "24/7",
     "liveChat": true,
     "email": true,
     "discord": true
   },
   "custom": {
-    "tags": ["Payout Delays", "Hidden Spreads", "Transparency Concerns", "Multiple Models"],
+    "tags": ["Multiple Models", "Goat Guard", "Reward on Demand", "5 Platforms", "Stocks Available", "Simulated Environment"],
     "discountCode": null,
     "discountPercent": null
   },
   "notes": null,
-  "lastVerifiedAt": "2026-02-24",
-  "lastUpdatedAt": "2026-02-24",
+  "lastVerifiedAt": "2026-03-12",
+  "lastUpdatedAt": "2026-03-12",
   "dataSources": ["https://goatfundedtrader.com"]
 }

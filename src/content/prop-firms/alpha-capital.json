@@ -6,11 +6,11 @@
   "foundedYear": 2021,
   "hqCountry": "GB",
   "evaluation": {
-    "types": ["1-step", "2-step"],
+    "types": ["1-step", "2-step", "3-step"],
     "profitTargets": { "phase1": 10, "phase2": 5 },
-    "dailyDrawdown": 5,
-    "maxDrawdown": 10,
-    "minTradingDays": 5,
+    "dailyDrawdown": null,
+    "maxDrawdown": null,
+    "minTradingDays": null,
     "scalingPlan": true
   },
   "pricing": {
@@ -33,39 +33,39 @@
       { "accountSize": 50000, "fee": 357, "model": "2-step", "label": "Swing $50K" },
       { "accountSize": 100000, "fee": 577, "model": "2-step", "label": "Swing $100K" },
       { "accountSize": 200000, "fee": 1097, "model": "2-step", "label": "Swing $200K" },
-      { "accountSize": 10000, "fee": 67, "model": "other", "label": "Alpha Three $10K" },
-      { "accountSize": 25000, "fee": 157, "model": "other", "label": "Alpha Three $25K" },
-      { "accountSize": 50000, "fee": 247, "model": "other", "label": "Alpha Three $50K" },
-      { "accountSize": 100000, "fee": 397, "model": "other", "label": "Alpha Three $100K" },
-      { "accountSize": 200000, "fee": 697, "model": "other", "label": "Alpha Three $200K" }
+      { "accountSize": 10000, "fee": 67, "model": "3-step", "label": "Alpha Three $10K" },
+      { "accountSize": 25000, "fee": 157, "model": "3-step", "label": "Alpha Three $25K" },
+      { "accountSize": 50000, "fee": 247, "model": "3-step", "label": "Alpha Three $50K" },
+      { "accountSize": 100000, "fee": 397, "model": "3-step", "label": "Alpha Three $100K" },
+      { "accountSize": 200000, "fee": 697, "model": "3-step", "label": "Alpha Three $200K" }
     ],
     "resetFee": null,
-    "refundPolicy": "No refund policy disclosed"
+    "refundPolicy": "No free retries — Alpha Capital uses unlimited trading days instead. No refund policy disclosed."
   },
   "payouts": {
     "splitMax": 80,
-    "schedule": "On-demand or Bi-weekly",
+    "schedule": "Varies by plan. Swing and Alpha One support on-demand payouts. Alpha Pro and Alpha Three use bi-weekly payouts. On-demand requires compliance with the 40% Best Day Rule and at least 2% gross profit. Bi-weekly requires minimum $100 profit and 5 trading days for first withdrawal.",
     "processingTime": "Within 2 business days",
-    "firstPayoutDays": 14,
-    "methods": ["Rise (Riseworks)", "Wise", "Bank Wire"]
+    "firstPayoutDays": null,
+    "methods": ["Rise (Riseworks)", "Wise", "Bank Transfer"]
   },
   "rules": {
-    "newsTrading": false,
-    "weekendHolding": true,
-    "copyTrading": false,
-    "expertAdvisors": true,
-    "consistencyRule": "40% Best Day Rule — no single trading day can contribute more than 40% of total profits",
-    "notes": "All trading takes place in a simulated environment. No real-money execution at the funded stage. EAs only available on MT5. US residents restricted to DXTrade only."
+    "newsTrading": null,
+    "weekendHolding": null,
+    "copyTrading": null,
+    "expertAdvisors": null,
+    "consistencyRule": "40% Best Day Rule — no single trading day can contribute more than 40% of total profits. Required on on-demand payout accounts.",
+    "notes": "All trading takes place in a simulated environment. News trading allowed during assessment. On qualified accounts: Pro 8%/10% has a 2-minute no-trade window around high-impact news, Pro 6%, One, and Three use a 5-minute window, Swing allows news trading but trades opened in the 4-minute window must last more than 2 minutes. Weekend holding on qualified accounts: Swing, One, and Three allow weekend holding. Pro does not allow weekend holding on qualified accounts (allowed during evaluation). Copy trading allowed only with approval and only from your own verified master account — copying other traders is prohibited. EAs allowed only on MT5, must be pre-approved, must be enabled at checkout, and cannot be used for HFT, latency arbitrage, or group-style trading. Standard assessments have no commission; Raw assessments charge $2.5 per lot each direction. Indices are commission-free on both Standard and Raw. 30-day inactivity rule applies to all accounts. Minimum trading days: 1 for Alpha One, 3 per phase for Pro, Swing, and Three. Average trade duration must exceed 2 minutes, and at least 50% of profits/target profits must come from trades longer than 2 minutes. Hedging and stacking allowed on the same account; hedging across two Alpha accounts is prohibited. Maximum allocation is $400,000 per household, with $300,000 maximum per strategy on qualified accounts. Only qualified accounts can be merged, only if same type and same platform, only up to $300K, and merged accounts cannot be scaled. KYC required after passing assessment and before receiving qualified credentials or payouts. Crypto withdrawals available only through Rise, not as a direct option. On the fourth successful payout, Alpha adds a 0.25% bonus of the initial account size. Alpha Pro has three variants: Pro 10% (10%/5% targets, 5% daily DD, 10% static max DD), Pro 8% (8%/5% targets, 4% daily DD, 8% static max DD), and Pro 6% (6%/6% targets, 3% daily DD, 6% static max DD). Alpha One: 10% target, 4% daily DD, 6% trailing max DD. Swing: 10%/5% targets, 5% daily DD, 10% static max DD. Alpha Three: 8%/4%/4% targets, 4% daily DD, 6% static max DD. Alpha Prime is the live progression route: traders can qualify by $40,000 profit on one simulated payout, five payouts from one qualified account, or $100,000 lifetime payouts."
   },
   "markets": {
-    "platforms": ["MetaTrader 5", "cTrader", "DXTrade"],
+    "platforms": ["MetaTrader 5", "cTrader", "DXTrade", "TradeLocker"],
     "instruments": "Forex, Indices, Commodities"
   },
   "trust": {
     "trustpilotRating": 4.7,
     "trustpilotCount": null,
     "communitySize": "106,500+ Discord members",
-    "notableFlags": ["Operates entirely in simulated environment", "Reports of payout denials and account closures", "Strict KYC enforcement post-challenge"]
+    "notableFlags": ["Operates entirely in simulated environment", "Reports of payout denials and account closures", "Strict KYC enforcement post-challenge", "Alpha Prime live progression route available"]
   },
   "links": { "website": "https://alphacapitalgroup.uk" },
   "media": { "logo": "/images/logos/alphacapital-1.png" },
@@ -77,11 +77,9 @@
     "discord": true
   },
   "custom": {
-    "tags": ["Simulated Environment Only", "Payout Denials Reported", "40% Best Day Rule", "Multiple Platforms"],
-    "discountCode": "ALPHA15",
-    "discountPercent": 15
+    "tags": ["Simulated Environment Only", "Payout Denials Reported", "40% Best Day Rule", "Multiple Platforms", "Alpha Prime Live Route", "Standard & Raw Accounts"]
   },
-  "lastVerifiedAt": "2026-02-24",
-  "lastUpdatedAt": "2026-02-24",
+  "lastVerifiedAt": "2026-03-11",
+  "lastUpdatedAt": "2026-03-11",
   "dataSources": ["https://alphacapitalgroup.uk"]
 }

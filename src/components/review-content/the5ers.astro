@@ -14,29 +14,43 @@ const { section, fallbackBody } = Astro.props;
 {section === "challenges" && (
 <div class="text-sm leading-relaxed text-slate-700">
 
+  <!-- Simulated Environment Notice -->
+  <div class="rounded-xl border border-blue-200 bg-blue-50 p-4 mb-6">
+    <p class="text-sm font-bold text-blue-900 mb-1">Simulated Trading Environment</p>
+    <p class="text-sm text-blue-800">All trading at The 5%ers takes place in a simulated environment. Becoming funded is not guaranteed. Both CFD and Futures accounts operate under simulated conditions.</p>
+  </div>
+
   <!-- Overview -->
   <p class="mb-4">
-    The 5%ers offer three distinct evaluation models. Unlike firms that offer a one-size-fits-all approach, these cater to different risk appetites and capital requirements. Each program has its own leverage, drawdown rules, and path to scaling &mdash; culminating in a potential <strong>$4 million account</strong> with a <strong>100% profit split</strong> and a <strong>monthly salary</strong>.
+    The 5%ers offer three CFD evaluation models — Bootcamp (3-step), High Stakes (2-step), and Hyper Growth (1-step) — plus a separate <strong>Futures</strong> offering with Basecamp and Rebate plans. Each programme has its own leverage, drawdown rules, and path to scaling. The CFD programmes can reach a potential <strong>$4 million account</strong> with a <strong>100% profit split</strong> and a <strong>monthly salary</strong>, while Futures accounts scale up to <strong>$500,000</strong>.
+  </p>
+
+  <p class="mb-6">
+    Rules vary significantly by programme. Bootcamp, High Stakes, Hyper Growth, and Futures all have different risk limits, news rules, and copy trading policies. Always check the specific rules for your chosen programme.
   </p>
 
   <!-- Program summaries -->
   <div class="space-y-3 mb-8">
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Bootcamp &mdash; 3 Step (Low-Cost Entry)</p>
-      <p>A three-step evaluation designed for traders who want to prove themselves without a large upfront investment. Fees start at just $95. 6% profit target per stage, 1:10 leverage, mandatory stop-loss on every position.</p>
+      <p>A three-step CFD evaluation designed for traders who want to prove themselves without a large upfront investment. Fees start at just $95. 6% profit target per stage, 5% max loss (tightens to 4% funded), 1:10 leverage, mandatory stop-loss on every position within 3 minutes. Starting profit split: 50%.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">High Stakes &mdash; 2 Step (The Professional Choice)</p>
-      <p>A two-step challenge designed for experienced traders seeking high leverage (1:100 on FX) and faster scaling. 8% then 5% profit targets, 10% max loss with 5% daily drawdown. Fees from $39.</p>
+      <p>A two-step CFD challenge designed for experienced traders seeking high leverage (1:100 on FX) and faster scaling. 8% then 5% profit targets, 10% max loss with 5% daily drawdown. 3 minimum profitable days of at least 0.5% each. Starting profit split: 80%. Fees from $39.</p>
     </div>
     <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
       <p class="font-bold text-slate-900 mb-1">Hyper Growth &mdash; 1 Step (Instant Expansion)</p>
-      <p>A one-step evaluation with aggressive scaling. Each time you hit a 10% profit target, your account size doubles &mdash; all the way up to $4 million. Fees from $260.</p>
+      <p>A one-step CFD evaluation with aggressive scaling. 10% profit target, 5% max loss (tightens to 4% funded), 1:30 leverage. Each time you hit the target your account size doubles &mdash; all the way up to $4 million. Starting profit split: 50%. Fees from $260.</p>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Futures &mdash; Basecamp &amp; Rebate Plans</p>
+      <p>A separate Futures product line with one-time fee structure and no monthly fees. Basecamp has a lower upfront fee plus activation fee on passing. Rebate has a higher upfront fee and no activation fee. 6% eval target, 4% funded target, 3% max loss (EOD), 30% per-position consistency rule. Scales up to $500,000.</p>
     </div>
   </div>
 
-  <!-- ─── Challenge Comparison Table ──────────────────────────────── -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Challenge Comparison</h3>
+  <!-- ─── CFD Challenge Comparison Table ──────────────────────────── -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">CFD Challenge Comparison</h3>
   <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
     <table class="w-full text-sm whitespace-nowrap">
       <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
@@ -118,14 +132,14 @@ const { section, fallbackBody } = Astro.props;
   <div class="mb-10">
     <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
       <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">1</span>
-      Bootcamp Program (3-Step)
+      Bootcamp Program (3-Step CFD)
     </h3>
 
     <p class="mb-3">
-      The Bootcamp is a three-step evaluation designed for traders who want to prove themselves without a large upfront investment. You pay a small entry fee and only pay the "final" fee once you pass. This is the most accessible entry point to The 5%ers.
+      The Bootcamp is a three-step CFD evaluation designed for traders who want to prove themselves without a large upfront investment. You pay a small entry fee and only pay the "final" fee once you pass. This is the most accessible entry point to The 5%ers.
     </p>
     <p class="mb-4">
-      Each stage requires a <strong>6% profit target</strong> with a <strong>5% max loss</strong> (which tightens to 4% once funded). Leverage is conservative at <strong>1:10</strong>, and there's a mandatory stop-loss requirement on every position.
+      Each stage requires a <strong>6% profit target</strong> with a <strong>5% max loss</strong> (which tightens to 4% once funded). Leverage is conservative at <strong>1:10</strong>, and there's a mandatory stop-loss requirement on every position within 3 minutes. The starting profit split is <strong>50%</strong>, scaling to 100%.
     </p>
 
     <!-- Key specs -->
@@ -200,14 +214,14 @@ const { section, fallbackBody } = Astro.props;
   <div class="mb-10">
     <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
       <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">2</span>
-      High Stakes Challenge (2-Step)
+      High Stakes Challenge (2-Step CFD)
     </h3>
 
     <p class="mb-3">
-      This is a two-step challenge designed for experienced traders seeking high leverage and faster scaling. With <strong>1:100 leverage on FX</strong>, an <strong>8% Step 1 target</strong> and <strong>5% Step 2 target</strong>, it's the professional choice for traders who are confident in their strategy.
+      This is a two-step CFD challenge designed for experienced traders seeking high leverage and faster scaling. With <strong>1:100 leverage on FX</strong>, an <strong>8% Step 1 target</strong> and <strong>5% Step 2 target</strong>, it's the professional choice for traders who are confident in their strategy.
     </p>
     <p class="mb-4">
-      The High Stakes program starts with an <strong>80% profit split</strong> &mdash; the highest starting split of all three programs &mdash; and scales up to 100%. A minimum of <strong>3 profitable days</strong> (at least 0.5% of initial balance each) is required.
+      The High Stakes program starts with an <strong>80% profit split</strong> &mdash; the highest starting split of all CFD programmes &mdash; and scales up to 100%. A minimum of <strong>3 profitable days</strong> (at least 0.5% of initial balance each) is required. Daily drawdown is <strong>5%</strong> &mdash; the only CFD programme with a daily drawdown rule.
     </p>
 
     <!-- Key specs -->
@@ -238,7 +252,7 @@ const { section, fallbackBody } = Astro.props;
       </div>
       <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
         <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Min Profitable Days</p>
-        <p class="text-sm font-bold text-slate-800">3</p>
+        <p class="text-sm font-bold text-slate-800">3 (0.5% each)</p>
       </div>
     </div>
 
@@ -313,14 +327,14 @@ const { section, fallbackBody } = Astro.props;
   <div class="mb-10">
     <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
       <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">3</span>
-      Hyper Growth Program (1-Step)
+      Hyper Growth Program (1-Step CFD)
     </h3>
 
     <p class="mb-3">
-      A one-step evaluation with aggressive scaling. Each time you hit a <strong>10% profit target</strong>, your account size <strong>doubles</strong> &mdash; all the way up to <strong>$4 million</strong>. This is the most ambitious program The 5%ers offer.
+      A one-step CFD evaluation with aggressive scaling. Each time you hit a <strong>10% profit target</strong>, your account size <strong>doubles</strong> &mdash; all the way up to <strong>$4 million</strong>. This is the most ambitious CFD programme The 5%ers offer.
     </p>
     <p class="mb-4">
-      Leverage is <strong>1:30 on FX</strong>, and the max loss is <strong>5%</strong> (tightening to 4% once funded). The profit split starts at 50% but scales to 100% as you progress through the scaling plan.
+      Leverage is <strong>1:30 on FX</strong>, and the max loss is <strong>5%</strong> (tightening to 4% once funded). The profit split starts at <strong>50%</strong> but scales to 100% as you progress through the scaling plan.
     </p>
 
     <!-- Key specs -->
@@ -385,12 +399,141 @@ const { section, fallbackBody } = Astro.props;
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- SCALING PLAN                                                    -->
+  <!-- 4. FUTURES                                                      -->
   <!-- ═══════════════════════════════════════════════════════════════ -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">The Scaling Plan &mdash; How to Earn a $10,000 Salary</h3>
+  <div class="mb-10">
+    <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-black flex items-center justify-center">4</span>
+      Futures &mdash; Basecamp &amp; Rebate Plans
+    </h3>
+
+    <p class="mb-3">
+      The 5%ers offer a separate Futures product line alongside their CFD programmes. Futures uses a <strong>one-time fee structure with no monthly fees</strong>. There are two plan types: <strong>Basecamp</strong> (lower upfront fee plus activation fee on passing) and <strong>Rebate</strong> (higher upfront fee, no activation fee).
+    </p>
+    <p class="mb-4">
+      All Futures plans use a <strong>6% eval target</strong>, <strong>4% funded target</strong>, <strong>3% max loss (EOD)</strong>, and a <strong>30% per-position consistency rule</strong>. Accounts scale at every 10% profit milestone up to <strong>$500,000</strong>.
+    </p>
+
+    <!-- Key specs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Eval Target</p>
+        <p class="text-sm font-bold text-slate-800">6%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Funded Target</p>
+        <p class="text-sm font-bold text-slate-800">4%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Loss (EOD)</p>
+        <p class="text-sm font-bold text-slate-800">3%</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Consistency Rule</p>
+        <p class="text-sm font-bold text-slate-800">30% per position</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Max Scaling</p>
+        <p class="text-sm font-bold text-teal-600">$500,000</p>
+      </div>
+      <div class="rounded-lg bg-slate-50 border border-slate-100 px-3 py-2">
+        <p class="text-[10px] text-slate-500 uppercase tracking-wide font-semibold">Monthly Fees</p>
+        <p class="text-sm font-bold text-teal-600">None</p>
+      </div>
+    </div>
+
+    <!-- Futures Account Table -->
+    <h4 class="text-base font-bold text-slate-900 mb-3">Futures Account Details</h4>
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-5">
+      <table class="w-full text-sm whitespace-nowrap">
+        <thead class="bg-slate-800 text-xs font-semibold text-white uppercase tracking-wide">
+          <tr>
+            <th class="px-4 py-3 text-left">Plan</th>
+            <th class="px-4 py-3 text-center">Eval Size</th>
+            <th class="px-4 py-3 text-center">Funded Size</th>
+            <th class="px-4 py-3 text-center">Eval Target</th>
+            <th class="px-4 py-3 text-center">Funded Target</th>
+            <th class="px-4 py-3 text-center">Max Loss (EOD)</th>
+            <th class="px-4 py-3 text-center">Contracts</th>
+            <th class="px-4 py-3 text-center">Price</th>
+            <th class="px-4 py-3 text-center">Activation Fee</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">Basecamp $25K</td>
+            <td class="px-4 py-3 text-center text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-center text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-center text-slate-700">6%</td>
+            <td class="px-4 py-3 text-center text-slate-700">4%</td>
+            <td class="px-4 py-3 text-center text-slate-700">3%</td>
+            <td class="px-4 py-3 text-center text-slate-700">2 mini / 20 micro</td>
+            <td class="px-4 py-3 text-center text-slate-900">$50</td>
+            <td class="px-4 py-3 text-center text-slate-900">$70</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">Basecamp $50K</td>
+            <td class="px-4 py-3 text-center text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-center text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-center text-slate-700">6%</td>
+            <td class="px-4 py-3 text-center text-slate-700">4%</td>
+            <td class="px-4 py-3 text-center text-slate-700">3%</td>
+            <td class="px-4 py-3 text-center text-slate-700">4 mini / 40 micro</td>
+            <td class="px-4 py-3 text-center text-slate-900">$100</td>
+            <td class="px-4 py-3 text-center text-slate-900">$140</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-3 font-semibold text-slate-900">Rebate $25K</td>
+            <td class="px-4 py-3 text-center text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-center text-slate-900">$25,000</td>
+            <td class="px-4 py-3 text-center text-slate-700">6%</td>
+            <td class="px-4 py-3 text-center text-slate-700">4%</td>
+            <td class="px-4 py-3 text-center text-slate-700">3%</td>
+            <td class="px-4 py-3 text-center text-slate-700">2 mini / 20 micro</td>
+            <td class="px-4 py-3 text-center text-slate-900">$150</td>
+            <td class="px-4 py-3 text-center text-slate-400">&mdash;</td>
+          </tr>
+          <tr class="bg-slate-50">
+            <td class="px-4 py-3 font-semibold text-slate-900">Rebate $50K</td>
+            <td class="px-4 py-3 text-center text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-center text-slate-900">$50,000</td>
+            <td class="px-4 py-3 text-center text-slate-700">6%</td>
+            <td class="px-4 py-3 text-center text-slate-700">4%</td>
+            <td class="px-4 py-3 text-center text-slate-700">3%</td>
+            <td class="px-4 py-3 text-center text-slate-700">4 mini / 40 micro</td>
+            <td class="px-4 py-3 text-center text-slate-900">$300</td>
+            <td class="px-4 py-3 text-center text-slate-400">&mdash;</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Futures pricing info -->
+    <div class="rounded-xl border border-blue-200 bg-blue-50 p-4 mb-5">
+      <p class="text-sm font-bold text-blue-900 mb-1">Futures Pricing Structure</p>
+      <p class="text-sm text-blue-800">Futures uses a one-time fee structure with no monthly fees. Basecamp plans have a lower upfront fee ($50/$100) plus an activation fee on passing ($70/$140). Rebate plans have a higher upfront fee ($150/$300) with no activation fee. All plans include full commission on Basecamp and full rebate on Rebate plans.</p>
+    </div>
+
+    <!-- Futures holding rules -->
+    <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-5">
+      <p class="text-sm font-bold text-amber-900 mb-1">Futures Holding &amp; Close Rules</p>
+      <p class="text-sm text-amber-800">Overnight holding is allowed up to <strong>1 mini or 10 micro contracts</strong>. All positions must be closed at least <strong>10 minutes before market close</strong>. News trading is allowed on the Futures plans.</p>
+    </div>
+
+    <!-- Futures scaling -->
+    <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-5">
+      <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">Futures Scaling</p>
+      <p class="text-sm text-teal-700">Futures accounts scale at every <strong>10% profit milestone</strong>, with a <strong>5% buying power increase</strong> and <strong>1 mini / 10 micro contract increase</strong> each time, up to <strong>$500,000</strong>.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- CFD SCALING PLAN                                                -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <h3 class="text-lg font-bold text-slate-900 mb-3">CFD Scaling Plan &mdash; How to Earn a $10,000 Salary</h3>
 
   <p class="mb-4">
-    The 5%ers have arguably the best scaling plan of any prop firm in 2026. They don't just increase your balance &mdash; they change your career trajectory. The "salary" component is a rare perk that provides a safety net most prop traders never get to experience.
+    The 5%ers have arguably the best CFD scaling plan of any prop firm in 2026. They don't just increase your balance &mdash; they change your career trajectory. The "salary" component is a rare perk that provides a safety net most prop traders never get to experience.
   </p>
 
   <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
@@ -432,7 +575,7 @@ const { section, fallbackBody } = Astro.props;
   <h3 class="text-lg font-bold text-slate-900 mb-3">Trading Rules &amp; "The Gotchas"</h3>
 
   <p class="mb-4">
-    While The 5%ers are highly rated, they have specific rules that can trip up the unwary. Rules vary between programs, so pay close attention to which apply to yours.
+    Rules vary significantly between programmes. Bootcamp, High Stakes, Hyper Growth, and Futures all have different risk and trading rules. Pay close attention to which rules apply to your chosen programme.
   </p>
 
   <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
@@ -446,15 +589,23 @@ const { section, fallbackBody } = Astro.props;
       <tbody class="divide-y divide-slate-100">
         <tr class="bg-white">
           <td class="px-4 py-3 font-semibold text-slate-900">News Trading</td>
-          <td class="px-4 py-3 text-slate-700">Hyper Growth &amp; Bootcamp: <span class="text-emerald-600 font-semibold">Allowed</span> (no bracket strategies). High Stakes: <span class="text-red-500 font-semibold">Prohibited</span> 2 min before/after high-impact news.</td>
+          <td class="px-4 py-3 text-slate-700">Bootcamp &amp; Hyper Growth: <span class="text-emerald-600 font-semibold">Allowed</span> with restrictions (no bracket strategies). High Stakes: <span class="text-red-500 font-semibold">Prohibited</span> 2 min before/after high-impact news. Futures: <span class="text-emerald-600 font-semibold">Allowed</span>.</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-semibold text-slate-900">Expert Advisors</td>
-          <td class="px-4 py-3 text-slate-700"><span class="text-emerald-600 font-semibold">Allowed</span> on all programs. Must set SL on every position. No tick scalping, no arbitrage, no emulators.</td>
+          <td class="px-4 py-3 text-slate-700"><span class="text-emerald-600 font-semibold">Allowed</span> on CFDs. Must not use arbitrage, tick scalping, emulators, or third-party signal copying. Bootcamp requires stop-loss compliance.</td>
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-semibold text-slate-900">Copy Trading</td>
-          <td class="px-4 py-3 text-slate-700">Allowed on High Stakes &amp; Hyper Growth with limitations. Not between Bootcamp accounts. Restricted above $500K. Third-party copy trading not allowed.</td>
+          <td class="px-4 py-3 text-slate-700"><span class="text-amber-600 font-semibold">Restricted</span> &mdash; allowed only on High Stakes &amp; Hyper Growth with limitations. Not between Bootcamp accounts. Third-party copy trading not allowed.</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Daily Drawdown</td>
+          <td class="px-4 py-3 text-slate-700">High Stakes only: <strong>5%</strong>. Bootcamp &amp; Hyper Growth: no daily drawdown. Futures: 3% max loss (EOD).</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Max Loss</td>
+          <td class="px-4 py-3 text-slate-700">Bootcamp: 5% (4% funded). High Stakes: 10%. Hyper Growth: 5% (4% funded). Futures: 3% (EOD).</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-semibold text-slate-900">Stop-Loss (Bootcamp)</td>
@@ -462,11 +613,19 @@ const { section, fallbackBody } = Astro.props;
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-semibold text-slate-900">Bracket Strategies</td>
-          <td class="px-4 py-3 text-slate-700"><span class="text-red-500 font-semibold">Prohibited</span> on all programs &mdash; no pending orders on both sides of news releases.</td>
+          <td class="px-4 py-3 text-slate-700"><span class="text-red-500 font-semibold">Prohibited</span> on all CFD programs &mdash; no pending orders on both sides of news releases.</td>
         </tr>
         <tr class="bg-slate-50">
           <td class="px-4 py-3 font-semibold text-slate-900">Weekend Holding</td>
-          <td class="px-4 py-3 text-slate-700"><span class="text-emerald-600 font-semibold">Allowed</span></td>
+          <td class="px-4 py-3 text-slate-700"><span class="text-emerald-600 font-semibold">Allowed</span> on CFDs</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="px-4 py-3 font-semibold text-slate-900">Futures Holding</td>
+          <td class="px-4 py-3 text-slate-700">Overnight up to 1 mini / 10 micro. All positions closed 10 min before market close.</td>
+        </tr>
+        <tr class="bg-slate-50">
+          <td class="px-4 py-3 font-semibold text-slate-900">Consistency Rule</td>
+          <td class="px-4 py-3 text-slate-700">CFDs: none. Futures: 30% per position.</td>
         </tr>
         <tr class="bg-white">
           <td class="px-4 py-3 font-semibold text-slate-900">Inactivity</td>
@@ -492,7 +651,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Challenges and Rules</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      The 5%ers offer genuine variety across their three programs, and the scaling plan is exceptional. The Bootcamp is perfect for cautious traders, High Stakes for professionals who want leverage, and Hyper Growth for ambitious traders chasing the $4M ceiling. The salary component at $350K and $500K is unique in the industry. Just be aware of the program-specific rules &mdash; especially the Bootcamp stop-loss requirements and High Stakes news restrictions.
+      The 5%ers offer genuine variety across their CFD programmes and Futures. The Bootcamp is perfect for cautious traders, High Stakes for professionals who want leverage, Hyper Growth for ambitious traders chasing the $4M ceiling, and Futures for those wanting exchange-based products with low entry fees. The salary component at $350K and $500K is unique in the industry. Rules vary a lot by programme &mdash; daily drawdown only applies to High Stakes (5%), copy trading is restricted (not broadly allowed), and news rules differ across each programme. All trading takes place in a simulated environment.
     </p>
   </div>
 
@@ -607,15 +766,15 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-4">
-    The 5%ers offer CFDs across five asset classes: <strong>FX, Metals, Indices, Crypto, and Other Commodities</strong>. While not the widest selection compared to firms offering 800+ instruments, it covers all the major categories most prop traders focus on.
+    The 5%ers offer CFDs across five asset classes: <strong>FX, Metals, Indices, Crypto, and Other Commodities</strong>, plus a separate <strong>Futures</strong> product line. While not the widest selection compared to firms offering 800+ instruments, it covers all the major categories most prop traders focus on.
   </p>
 
   <p class="mb-6">
-    Leverage varies <strong>significantly by program</strong>, which is an important consideration when choosing your challenge type. The High Stakes program stands out with 1:100 on FX &mdash; one of the highest leverage offerings in the prop firm industry.
+    Leverage varies <strong>significantly by programme</strong>, which is an important consideration when choosing your challenge type. The High Stakes program stands out with 1:100 on FX &mdash; one of the highest leverage offerings in the prop firm industry.
   </p>
 
   <!-- Leverage Table -->
-  <h3 class="text-lg font-bold text-slate-900 mb-3">Leverage by Program &amp; Asset Class</h3>
+  <h3 class="text-lg font-bold text-slate-900 mb-3">CFD Leverage by Program &amp; Asset Class</h3>
 
   <div class="overflow-x-auto rounded-xl border border-slate-200 mb-8">
     <table class="w-full text-sm whitespace-nowrap">
@@ -686,18 +845,22 @@ const { section, fallbackBody } = Astro.props;
       <p class="font-bold text-slate-900 mb-1">Other Commodities</p>
       <p>Oil, gas, and agricultural commodities. Consistent 1:5 leverage across all programs. Percentage-based commission.</p>
     </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-4">
+      <p class="font-bold text-slate-900 mb-1">Futures</p>
+      <p>Separate Futures product line with Basecamp and Rebate plans. Contract limits apply (2&ndash;4 mini / 20&ndash;40 micro depending on account size). Scales up to $500,000.</p>
+    </div>
   </div>
 
   <div class="rounded-xl bg-teal-50 border border-teal-200 p-4 mb-6">
-    <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">No Consistency Rules</p>
-    <p class="text-sm text-teal-700">The 5%ers do not apply any consistency rules, meaning there are no restrictions on how much profit can come from a single day or trade. This gives traders full flexibility in their approach.</p>
+    <p class="text-xs font-bold text-teal-800 uppercase tracking-wide mb-1">CFD Consistency Rules</p>
+    <p class="text-sm text-teal-700">The 5%ers do not apply consistency rules on CFD programmes, meaning there are no restrictions on how much profit can come from a single day or trade. Futures has a 30% per-position consistency rule.</p>
   </div>
 
   <!-- Verdict -->
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Financial Markets &amp; Leverage</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      The 5%ers cover all the essential asset classes for prop trading. The standout is the High Stakes program with 1:100 FX leverage and 1:25 on indices &mdash; giving professional traders serious firepower. Crypto leverage is limited across the board, but for FX and index traders, the conditions are among the best available.
+      The 5%ers cover all the essential asset classes for prop trading, plus a separate Futures offering. The standout is the High Stakes program with 1:100 FX leverage and 1:25 on indices &mdash; giving professional traders serious firepower. Crypto leverage is limited across the board, but for FX and index traders, the conditions are among the best available.
     </p>
   </div>
 
@@ -818,7 +981,7 @@ const { section, fallbackBody } = Astro.props;
 <div class="text-sm leading-relaxed text-slate-700">
 
   <p class="mb-6">
-    The 5%ers score an <strong>8/10 for payments</strong>. Their profit split structure rewards long-term consistency, scaling from 50% all the way to 100%. Unlike some firms that cap splits, The 5%ers provide a genuine path to keeping every dollar you earn.
+    The 5%ers score an <strong>8/10 for payments</strong>. Profit split depends on programme. Bootcamp and Hyper Growth start at 50%. High Stakes starts at 80%. All can scale to 100%. Minimum payout is <strong>$150</strong>, with <strong>bi-weekly</strong> payouts.
   </p>
 
   <!-- Payout Overview -->
@@ -922,7 +1085,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Payments &amp; Payouts</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      The payout structure rewards patience and consistency. The 50% starting split on Bootcamp/Hyper Growth is lower than some competitors, but the path to 100% is clear and achievable. High Stakes traders get a strong 80% starting split. The withdrawal commission (2&ndash;3%) is worth noting &mdash; HUB Credits are the only fee-free option. Bi-weekly payouts with a $150 minimum are reasonable.
+      The payout structure rewards patience and consistency. The 50% starting split on Bootcamp/Hyper Growth is lower than some competitors, but the path to 100% is clear and achievable. High Stakes traders get a strong 80% starting split. Minimum payout is $150, with bi-weekly payouts. The withdrawal commission (2&ndash;3%) is worth noting &mdash; HUB Credits are the only fee-free option.
     </p>
   </div>
 
@@ -992,8 +1155,14 @@ const { section, fallbackBody } = Astro.props;
 {section === "trust" && (
 <div class="text-sm leading-relaxed text-slate-700">
 
+  <!-- Simulated Environment Notice -->
+  <div class="rounded-xl border border-blue-200 bg-blue-50 p-4 mb-6">
+    <p class="text-sm font-bold text-blue-900 mb-1">Simulated Trading Environment</p>
+    <p class="text-sm text-blue-800">All trading at The 5%ers &mdash; both CFD and Futures &mdash; takes place in a simulated environment. Becoming funded is not guaranteed.</p>
+  </div>
+
   <p class="mb-6">
-    The 5%ers are one of the most established names in prop trading, <strong>founded in 2016</strong> and headquartered in Israel. With nearly a decade of operational history, they've built a strong reputation for reliable payouts and transparent conditions. Unlike retail brokers, they use <strong>commercial liquidity providers</strong>, which generally results in smoother fills and less "stop-hunting."
+    The 5%ers are one of the most established names in prop trading, <strong>founded in 2016</strong> and headquartered in Israel. With nearly a decade of operational history, they've built a strong reputation for reliable payouts and transparent conditions. They use <strong>commercial liquidity providers</strong>, which generally results in smoother fills and less "stop-hunting."
   </p>
 
   <!-- Trustpilot -->
@@ -1047,7 +1216,7 @@ const { section, fallbackBody } = Astro.props;
   <div class="rounded-xl border-l-4 border-teal-500 bg-teal-50/60 px-5 py-4">
     <p class="text-sm font-semibold text-teal-800 mb-1">Verdict on Trust &amp; Community</p>
     <p class="text-sm text-slate-700 leading-relaxed">
-      The 5%ers are one of the most trusted prop firms in the industry. A 4.9/5 TrustPilot score from 4,500+ reviews, nearly a decade of operations, commercial liquidity providers, and a 50,000+ trader community &mdash; these are all strong indicators of a firm that takes its reputation seriously. If trust and reliability are your top priorities, The 5%ers are hard to beat.
+      The 5%ers are one of the most trusted prop firms in the industry. A 4.9/5 TrustPilot score from 4,500+ reviews, nearly a decade of operations, commercial liquidity providers, and a 50,000+ trader community &mdash; these are all strong indicators of a firm that takes its reputation seriously. All trading takes place in a simulated environment. If trust and reliability are your top priorities, The 5%ers are hard to beat.
     </p>
   </div>
 

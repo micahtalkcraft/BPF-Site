@@ -10,70 +10,64 @@
     "profitTargets": { "phase1": 6 },
     "dailyDrawdown": null,
     "maxDrawdown": null,
-    "minTradingDays": 7,
-    "scalingPlan": false
+    "minTradingDays": 0,
+    "scalingPlan": true
   },
   "pricing": {
     "challengeFees": [
-      { "accountSize": 25000, "fee": 167, "model": "1-step", "label": "Tradovate 25K Full" },
-      { "accountSize": 50000, "fee": 187, "model": "1-step", "label": "Tradovate 50K Full" },
-      { "accountSize": 100000, "fee": 297, "model": "1-step", "label": "Tradovate 100K Full" },
-      { "accountSize": 100000, "fee": 157, "model": "1-step", "label": "Tradovate 100K Static" },
-      { "accountSize": 150000, "fee": 397, "model": "1-step", "label": "Tradovate 150K Full" },
-      { "accountSize": 250000, "fee": 497, "model": "1-step", "label": "Tradovate 250K Full" },
-      { "accountSize": 300000, "fee": 597, "model": "1-step", "label": "Tradovate 300K Full" },
-      { "accountSize": 25000, "fee": 157, "model": "1-step", "label": "Rithmic 25K Full" },
-      { "accountSize": 50000, "fee": 177, "model": "1-step", "label": "Rithmic 50K Full" },
-      { "accountSize": 100000, "fee": 297, "model": "1-step", "label": "Rithmic 100K Full" },
-      { "accountSize": 100000, "fee": 147, "model": "1-step", "label": "Rithmic 100K Static" },
-      { "accountSize": 150000, "fee": 397, "model": "1-step", "label": "Rithmic 150K Full" },
-      { "accountSize": 250000, "fee": 497, "model": "1-step", "label": "Rithmic 250K Full" },
-      { "accountSize": 300000, "fee": 597, "model": "1-step", "label": "Rithmic 300K Full" }
+      { "accountSize": 25000, "fee": 118, "model": "1-step", "label": "25K Rithmic Intraday" },
+      { "accountSize": 50000, "fee": 168, "model": "1-step", "label": "50K Rithmic Intraday" },
+      { "accountSize": 100000, "fee": 268, "model": "1-step", "label": "100K Rithmic Intraday" },
+      { "accountSize": 150000, "fee": 358, "model": "1-step", "label": "150K Rithmic Intraday" },
+      { "accountSize": 25000, "fee": 138, "model": "1-step", "label": "25K Rithmic EOD" },
+      { "accountSize": 50000, "fee": 188, "model": "1-step", "label": "50K Rithmic EOD" },
+      { "accountSize": 100000, "fee": 288, "model": "1-step", "label": "100K Rithmic EOD" },
+      { "accountSize": 150000, "fee": 378, "model": "1-step", "label": "150K Rithmic EOD" }
     ],
     "resetFee": null,
-    "refundPolicy": null
+    "refundPolicy": "One-time evaluation fee with 30-day access. No recurring billing. No resets on current products."
   },
   "payouts": {
     "splitMax": 100,
-    "schedule": "Every 8 trading days",
+    "schedule": "Payout requests available after 5 qualifying trading days. 100% approved payout split. $500 minimum withdrawal. 50% payout consistency rule — no single profitable day may account for 50%+ of total profit since last approved payout. Safety net required for life of PA. Maximum 6 payout requests per PA.",
     "processingTime": "3–4 business days",
     "firstPayoutDays": null,
-    "methods": ["Credit Card"]
+    "methods": ["ACH", "Plane"]
   },
   "rules": {
-    "newsTrading": true,
+    "newsTrading": null,
     "weekendHolding": false,
-    "copyTrading": false,
-    "expertAdvisors": false,
-    "consistencyRule": "Funded accounts require consistency in contract sizes and trading patterns. Large swings in contract size, frequent high-risk trades, and erratic patterns can trigger a review and potential account closure.",
-    "notes": "Minimum 7 trading days to pass evaluation. No maximum trading days. Trailing threshold follows profits on full accounts. Semi-automated systems acceptable if actively monitored. Fully automated systems and copy trading not allowed on funded accounts. News trading allowed but must maintain directional bias. No simultaneous long/short during high-volatility events."
+    "copyTrading": null,
+    "expertAdvisors": null,
+    "consistencyRule": "50% payout consistency rule: no single profitable day may account for 50% or more of total profit since the last approved payout.",
+    "notes": "Current products use one-time evaluation fees with 30-day access and no recurring billing. Legacy products (250K, 300K, Static accounts, monthly subscription evaluations) are no longer available for new purchases. Two drawdown models: EOD (trailing End-of-Day drawdown with a fixed Daily Loss Limit) and Intraday (trailing real-time drawdown with no Daily Loss Limit). Vendor options: Rithmic, Tradovate, WealthCharts. Current account sizes: 25K, 50K, 100K, 150K. No minimum trading days to pass evaluation — can be passed in 1 day. PA activation must be completed within 7 calendar days of qualifying. One-time PA activation fee (non-recurring). Tier-based contract scaling on funded Performance Accounts — max contracts and DLL increase by tier. Payout eligibility requires 5 qualifying trading days with minimum daily profit thresholds. Safety net required for life of PA — only profit above the safety net is eligible for withdrawal. Maximum 6 payout requests per PA. $500 minimum payout. 50% payout consistency rule. Purchases must use the trader's own card. US payouts via ACH, international payouts via Plane. Accepts traders from 100+ countries (not US-only) — restricted-country list applies. COMEX and all metals temporarily unavailable. Automated systems, copy trading, and news trading rules are not clearly confirmed in current product documentation."
   },
   "markets": {
-    "platforms": ["NinjaTrader 8", "Tradovate", "TradingView", "RTrader Pro"],
-    "instruments": "Futures — Currency, Equity, Agriculture, Energy, Metal, Crypto (46 markets)"
+    "platforms": ["Rithmic", "Tradovate", "WealthCharts", "NinjaTrader", "RTrader Pro"],
+    "instruments": "Futures — Equity, Currency, Agricultural, Energy, Crypto (micro only), EUREX. COMEX and all metals temporarily unavailable."
   },
   "trust": {
     "trustpilotRating": 4.4,
     "trustpilotCount": 16900,
     "communitySize": "59,000+ Discord members",
-    "notableFlags": ["High monthly fees", "Limited education", "Payout complaints"]
+    "notableFlags": ["One-time evaluation fees (current products)", "100% approved payout split", "Accepts traders from 100+ countries", "Tier-based scaling on funded accounts", "COMEX/metals temporarily unavailable", "Max 6 payouts per PA", "Legacy products retired"]
   },
   "links": { "website": "https://apextraderfunding.com/" },
   "media": { "logo": "/images/logos/apex-trader-funding-logo.png" },
   "availability": { "restrictedCountries": [] },
   "support": {
-    "hours": "24/7",
+    "hours": "Help Center, support tickets, FAQs, guides",
     "liveChat": false,
     "email": true,
     "discord": true
   },
   "custom": {
-    "tags": ["Monthly Fees", "Payout Complaints", "Futures Trading Only", "Accepts US Traders"],
+    "tags": ["One-Time Fees", "Futures Only", "100+ Countries", "Tier-Based Scaling", "100% Payout Split"],
     "discountCode": null,
     "discountPercent": null
   },
   "notes": null,
-  "lastVerifiedAt": "2026-02-24",
-  "lastUpdatedAt": "2026-02-24",
+  "lastVerifiedAt": "2026-03-12",
+  "lastUpdatedAt": "2026-03-12",
   "dataSources": ["https://apextraderfunding.com"]
 }

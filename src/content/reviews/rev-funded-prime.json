@@ -1,21 +1,57 @@
 {
   "id": "rev-funded-prime",
   "propFirmId": "d0000030-0000-0000-0000-000000000030",
-  "summary": "Funded Prime was established in Australia in 2023 and scores 80/100 in our evaluation, standing out as one of the few prop firms offering dedicated access to cryptocurrency and meme coin markets. With over 250 crypto pairs available and unique meme coin trading, it fills a niche that most prop firms overlook.",
-  "pros": ["250+ crypto pairs available", "Meme coin trading with 10:1 leverage", "Up to 90% profit split", "7-day payout with add-on"],
-  "cons": ["0.1% commission on crypto trades", "Weekend trading limited to meme coins only", "Limited platform options"],
-  "bestFor": "Crypto-focused traders who want extensive digital asset access and meme coin leverage",
-  "notIdealFor": "Forex-only traders or those who want commission-free crypto trading",
+  "summary": "Funded Prime scored 80/100 in our 2026 review, with big points for unique challenges, fair trading rules, and broker-backed pricing that tracks live markets closely. You can choose between One Phase, Two Phase, Stock Traders, Meme Coin, and Bitcoin Maxi challenges, with account sizes from $5K to $200K.\n\nThe simulated trading experiences are administered by Eightcap Services FZ-LLC in the UAE. All challenges lead to a funded account with an 80% profit split by default, with the Prime Split add-on available to increase it to 90%. TradeLocker is the official trading platform. Pricing is powered by Eightcap, meaning spreads and execution mirror live market conditions. Challenge fees range from $35 to $1,235 depending on account size and challenge type.",
+  "pros": [
+    "Meme Coin Challenge with 10:1 leverage on tokens like PEPE, WIF, TRUMP",
+    "Bitcoin Maxi challenge for dedicated BTC traders",
+    "Broker-backed pricing via Eightcap for live market conditions",
+    "Expert Advisors allowed on One Phase, Two Phase, Meme Coin, and Bitcoin Maxi",
+    "Five challenge types covering forex, stocks, crypto, and meme coins",
+    "Competitive commission of $5 per lot on forex, indices, and commodities",
+    "Low minimum account fees starting from $35 (Stock Traders)",
+    "Swing trading allowed"
+  ],
+  "cons": [
+    "TradeLocker is the only platform — no MT4, MT5, cTrader, or DXTrade",
+    "Crypto leverage limited to 1:1 on standard challenges",
+    "First 3 approved payouts capped at 5% of nominated bankroll",
+    "Daily profit distribution caps of 30% (40% for Meme Coin and Bitcoin Maxi)",
+    "Trade sizing must stay within +100% or -75% of previous positions",
+    "EAs not allowed on Stock Traders challenge",
+    "Newer firm with limited TrustPilot reviews",
+    "Non-refundable challenge fees",
+    "No live chat or phone support"
+  ],
+  "bestFor": "Traders who want broker-backed pricing, unique challenge types including meme coin and Bitcoin Maxi trading, and the flexibility to use EAs — provided they're comfortable with TradeLocker as the sole platform",
+  "notIdealFor": "Traders who need MT4/MT5/cTrader/DXTrade, want high crypto leverage, or prefer a well-established firm with a large community and extensive support infrastructure",
   "overallScore": 80,
-  "categoryScores": {
-    "challenges": 80,
-    "spreads": 80,
-    "markets": 100,
-    "payouts": 70,
-    "platforms": 70,
-    "trust": 80
+  "categoryScores": { "challenges": 80, "spreads": 80, "markets": 100, "payouts": 70, "platforms": 70, "support": 60, "trust": 80 },
+  "categorySections": {
+    "challenges": "custom",
+    "spreads": "custom",
+    "markets": "custom",
+    "platforms": "custom",
+    "payouts": "custom",
+    "support": "custom",
+    "trust": "custom"
   },
+  "verdictBlocks": [
+    {
+      "heading": "Our Final Verdict On Funded Prime",
+      "body": "Funded Prime scored 80/100 in our 2026 review and offers a mix of traditional challenges and innovative models like the Meme Coin and Bitcoin Maxi challenges. The use of broker-backed pricing from Eightcap means trading conditions feel close to live markets and pricing is competitive. The simulated trading experiences are administered by Eightcap Services FZ-LLC in the UAE.\n\nWith five challenge types — One Phase, Two Phase, Stock Traders, Meme Coin, and Bitcoin Maxi — and a default 80% profit split (bumped to 90% with the Prime Split add-on), Funded Prime provides traders with flexibility and clear paths to funded accounts. TradeLocker is the official trading platform across all challenges. Payout processing takes 1–2 days, though the first three approved payouts are capped at 5% of the nominated bankroll.\n\nDrawdown rules vary by challenge: One Phase, Two Phase, and Stock Traders use 5% daily drawdown and 10% max drawdown; Bitcoin Maxi uses 3% daily and 5% max; and Meme Coin has no daily drawdown with 6.5% trailing instead. Weekend trading is allowed on Meme Coin and Bitcoin Maxi only. EAs are permitted on all challenges except Stock Traders.\n\nThe main drawbacks are that TradeLocker is the only platform available, standard crypto leverage is capped at 1:1, and the first three payout cap limits early earnings. Prohibited strategies include martingale, hedging, HFT, scalping under 30 seconds, grid trading, tick scalping, gap trading, and arbitrage. That said, swing trading is allowed and the broker-backed model via Eightcap adds legitimacy."
+    }
+  ],
+  "faq": [
+    { "q": "Is Funded Prime legit?", "a": "Yes, Funded Prime is a legitimate prop firm offering simulated trading challenges powered by Eightcap pricing. The simulated trading experiences are administered by Eightcap Services FZ-LLC in the UAE. Our testing confirmed the platform uses clear rules, consistent payout conditions, and a structured evaluation system. All trading is via demo accounts and not placed in live markets." },
+    { "q": "What is Funded Prime's evaluation fee?", "a": "Funded Prime's evaluation fees range from $35 (Stock Traders $5K) to $1,235 (One Phase $200K). There are five challenge types: One Phase, Two Phase, Stock Traders, Meme Coin, and Bitcoin Maxi. Add-ons like Prime Split (80% to 90% profit share) and Prime Payout (faster payout timing) are available at additional cost." },
+    { "q": "What challenges does Funded Prime offer?", "a": "Funded Prime offers five challenges: One Phase (1-step), Two Phase (2-step), Stock Traders (equities only), Meme Coin (tokens like PEPE, WIF, TRUMP with 10:1 leverage), and Bitcoin Maxi. All require minimum 3 trading days and offer 80% profit split by default, upgradeable to 90% with Prime Split add-on. All challenges use TradeLocker as the trading platform." },
+    { "q": "Does Funded Prime offer 1:50 leverage?", "a": "Yes, Funded Prime offers maximum leverage of 1:50 on forex pairs for One Phase and Two Phase challenges. For meme coins it's 10:1, indices and commodities 1:10, stocks 1:5, and standard crypto is limited to 1:1." },
+    { "q": "Can you hold trades overnight or over the weekend with Funded Prime?", "a": "Weekend and out-of-hours trading is not allowed on One Phase, Two Phase, and Stock Traders challenges. It is allowed on Meme Coin and Bitcoin Maxi. Swing trading is allowed across all challenges." }
+  ],
   "verified": true,
+  "flagged": false,
+  "flaggedWarning": "",
   "methodologyVersion": "1.0",
-  "lastReviewedAt": "2026-02-27"
+  "lastReviewedAt": "2026-03-12"
 }

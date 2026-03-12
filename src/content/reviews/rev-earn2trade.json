@@ -1,22 +1,55 @@
 {
   "id": "rev-earn2trade",
   "propFirmId": "d0000025-0000-0000-0000-000000000025",
-  "summary": "Earn2Trade scored 35/100 in our assessment. While its educational resources stand out as a genuine strength for beginners wanting to learn futures trading, the firm falls short in almost every other area. Challenges are overly restrictive, monthly subscription fees are steep, trading rules are rigid, and the profit split sits well below the industry average at just 80%. Experienced traders will find far better options elsewhere.",
-  "pros": ["Good educational resources", "Multiple trading platforms"],
-  "cons": ["Strict trading rules and evaluations", "Monthly subscription fees", "Low profit split (80%)", "Vague funded account rules"],
-  "bestFor": "Beginners who want to learn futures trading with educational support included",
-  "notIdealFor": "Experienced traders who want competitive splits, flexible rules, or a fast path to payouts",
-  "overallScore": 35,
-  "categoryScores": { "challenges": 30, "pricing": 25, "platforms": 55, "trust": 45 },
+  "summary": "Earn2Trade scored 48/100 in our 2026 review. The firm offers two one-step futures evaluations — Trader Career Path (TCP) and Gauntlet Mini — with account sizes from TCP25 to GAU200 and a $400K growth plan through the TCP progression ladder. Education is a genuine strength, with full educational material during the evaluation, Journalytix access, webinars, articles, videos, and a separate Beginner Crash Course with 60 short lessons.\n\nFunded account rules are restrictive rather than vague. Verified funded rules include an 80/20 profit split, approved trading times and daily loss limits, progression ladder, LiveSim EOD drawdown or Live trailing drawdown, monthly data fees unless the trader has their own feed, and termination after five consecutive unscheduled trading-day absences. In 2025, 94.77% of passers traded LiveSim accounts. LiveSim payout caps apply — Gauntlet Mini LiveSim accounts can withdraw up to $4,000 after reaching $5,000 profit, while TCP LiveSim withdrawals are capped at the profit target minus 20%.\n\nWithdrawals are processed weekly on Wednesdays with a $100 minimum net withdrawal. Withdrawal methods are assigned by the firm and include Rise, Deel, Bayzat, and Direct Crypto. The firm operates on futures only across CME, COMEX, NYMEX, and CBOT — no ICE, no EUREX, and no stocks, options, forex, crypto, or CFDs. Platforms include NinjaTrader, Finamark, and Rithmic. The evaluations are not suggested for people with little trading experience, with an 8.89% pass rate in 2025.",
+  "pros": [
+    "Strong educational platform including Journalytix, webinars, articles, videos, and 60-lesson Beginner Crash Course",
+    "Multiple trading platforms: NinjaTrader, Finamark, Rithmic",
+    "Long operating history since 2016 with named proprietary and brokerage partners",
+    "Public pass-rate disclosures and published pledge",
+    "TCP includes one free reset at each renewal",
+    "TrustPilot 4.7/5 from 4,500+ reviews",
+    "US and Non-US availability including MENA region through Bahia Education Services"
+  ],
+  "cons": [
+    "Restrictive funded account rules: 80/20 split, approved times only, daily loss limits, no overnight positions",
+    "Monthly subscription fees from $150/month (TCP) and $170/month (Gauntlet Mini)",
+    "LiveSim payout caps limit withdrawable profit",
+    "Minimum 10 trading days to pass evaluation",
+    "Copytrading banned in both TCP and Gauntlet Mini",
+    "EAs not clearly allowed — prohibited-conduct wording warns against software that could manipulate trading environment",
+    "Five consecutive unscheduled trading-day absences result in account termination",
+    "Withdrawal methods assigned by firm, not optional"
+  ],
+  "bestFor": "Traders who value strong educational resources, structured progression, and a firm with a long operating history and public transparency — provided they are comfortable with restrictive funded-stage rules and an 80/20 split",
+  "notIdealFor": "Traders who want competitive profit splits, flexible trading rules, LiveSim-free funded accounts, or a fast path to payouts without caps and restrictions. Evaluations are not suggested for people with little trading experience.",
+  "overallScore": 48,
+  "categoryScores": { "challenges": 40, "spreads": 30, "markets": 50, "payouts": 40, "platforms": 70, "support": 70, "trust": 70 },
+  "categorySections": {
+    "challenges": "custom",
+    "spreads": "custom",
+    "markets": "custom",
+    "platforms": "custom",
+    "payouts": "custom",
+    "support": "custom",
+    "trust": "custom"
+  },
   "verdictBlocks": [
     {
-      "heading": "Our Verdict: 35/100",
-      "body": "Earn2Trade earnt a low overall score of 35/100, with its only strength being solid educational resources. For beginners wanting to learn more, Earn2Trade's resources are appealing. However, the challenge is far too limiting for experienced traders and rules are very rigid.\n\nEarn2Trade is one of the older prop firms, but that doesn't mean it's better. Although you can get accounts up to $400K — which is very large for futures trading — it comes with lower profit splits and vague rules. Evaluation fees are high, ranging from $150 to $550 per month, and data fees are charged on top. A $10 withdrawal fee applies to payouts under $500.\n\nThe firm provides customer support through email and live chat, but the overall experience doesn't justify the cost when compared to modern alternatives that offer higher splits, clearer rules, and faster payouts."
+      "heading": "Our Final Verdict On Earn2Trade",
+      "body": "Earn2Trade scored 48/100 in our 2026 review. The firm's clear strength is its educational platform — full material during evaluation, Journalytix access, webinars, articles, videos, and a 60-lesson Beginner Crash Course. Operating since 2016 with named partners, public pass-rate disclosures, and a 4.7/5 TrustPilot rating from 4,500+ reviews, the firm has a stronger trust profile than its overall score suggests.\n\nHowever, the funded structure is less trader-friendly than stronger competitors. The 80/20 profit split sits below the industry average. Funded rules include approved trading times only, dollar-based daily loss limits, no overnight positions (close by 15:50 CT), progression ladder, monthly data fees, and termination after five consecutive unscheduled absences. In 2025, 94.77% of passers traded LiveSim accounts with payout caps — Gauntlet Mini LiveSim capped at $4,000 until $5,000 profit, and TCP LiveSim withdrawals capped at profit target minus 20%.\n\nTwo evaluation products are available: Trader Career Path (from $150/month with free reset at each renewal) and Gauntlet Mini (from $170/month, no free resets). Both require minimum 10 trading days and are subscription-based. The 8.89% pass rate in 2025 and the firm's own warning that evaluations are not suggested for people with little trading experience underscore the difficulty level.\n\nFutures only on CME, COMEX, NYMEX, and CBOT — no ICE, no EUREX, and no stocks, options, forex, crypto, or CFDs. Withdrawals are processed weekly on Wednesdays with a $100 minimum. Methods are assigned by the firm and include Rise, Deel, Bayzat, and Direct Crypto."
     }
   ],
-  "verified": false,
+  "faq": [
+    { "q": "What evaluations does Earn2Trade offer?", "a": "Earn2Trade offers two one-step futures evaluations: Trader Career Path (TCP) and Gauntlet Mini. TCP account sizes are TCP25, TCP50, and TCP100. Gauntlet Mini sizes are GAU50, GAU100, GAU150, and GAU200. The $400K figure is part of the TCP growth plan, not a starting evaluation size. Both products require a minimum of 10 trading days and are monthly subscriptions that continue until the trader passes, cancels, or changes plan." },
+    { "q": "Does Earn2Trade pay out?", "a": "Yes. Withdrawals are processed once a week on Wednesdays, with the request due by 2pm on the prior Friday. The minimum net withdrawal is $100. The profit split is 80/20 in the trader's favour. However, LiveSim payout caps apply — Gauntlet Mini LiveSim accounts can withdraw up to $4,000 after reaching $5,000 profit, and TCP LiveSim withdrawals are capped at the profit target minus 20%. Withdrawal methods are assigned by the firm and include Rise, Deel, Bayzat, and Direct Crypto." },
+    { "q": "Is Earn2Trade legit?", "a": "Earn2Trade has operated since 2016 with a TrustPilot rating of 4.7/5 from over 4,500 reviews. The firm has named proprietary and brokerage partners, public pass-rate disclosures (8.89% in 2025), published operating metrics (6,400+ traders funded in 2025, 4,500+ live trading accounts), and office details. US and Non-US operations are available, with the Non-US operation run through Bahia Education Services in Dubai for the MENA region." },
+    { "q": "What are Earn2Trade's funded account rules?", "a": "Funded account rules are restrictive. They include an 80/20 profit split, approved trading times only (positions closed by 15:50 CT), dollar-based daily loss limits (e.g. TCP25 $550, TCP50 $1,100, TCP100 $2,200), progression ladder, LiveSim EOD drawdown or Live trailing drawdown, monthly data fees unless the trader has their own feed, and termination after five consecutive unscheduled trading-day absences. In 2025, 94.77% of passers traded LiveSim accounts." },
+    { "q": "Does Earn2Trade allow EAs or copy trading?", "a": "Copytrading is not allowed in either Trader Career Path or Gauntlet Mini evaluations. EAs are not clearly allowed — the prohibited-conduct wording warns against software, AI, or ultra-fast data entry techniques that could manipulate the trading environment or give an unfair advantage. Traders who rely on automation should confirm rules directly with support before purchasing." }
+  ],
+  "verified": true,
   "flagged": true,
-  "flaggedWarning": "We do not recommend Earn2Trade due to strict trading rules, high monthly subscription fees, and a below-average profit split of just 80%. The evaluation process is overly restrictive and funded account rules remain vague.\n\nOur testing scored Earn2Trade **35/100**, and we only recommend firms scoring 50/100+. For a better futures trading experience with clearer rules and higher splits, consider [Topstep](/reviews/topstep) or [FXIFY Futures](/reviews/fxify-futures).",
+  "flaggedWarning": "Earn2Trade's funded accounts use restrictive rules including an **80/20 profit split**, approved trading times only, dollar-based daily loss limits, and **LiveSim payout caps**. In 2025, **94.77% of passers** traded LiveSim accounts. The evaluations have an **8.89% pass rate** and are not suggested for people with little trading experience.\n\nOur testing scored Earn2Trade **48/100**, and we only recommend firms scoring 50/100+. For a better futures trading experience with higher splits and fewer restrictions, consider [Topstep](/reviews/topstep) or [Apex Trader Funding](/reviews/apex-trader-funding).",
   "methodologyVersion": "1.0",
-  "lastReviewedAt": "2026-02-24"
+  "lastReviewedAt": "2026-03-12"
 }

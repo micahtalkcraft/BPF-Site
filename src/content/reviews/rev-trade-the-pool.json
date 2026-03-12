@@ -1,25 +1,25 @@
 {
   "id": "rev-trade-the-pool",
   "propFirmId": "d0000034-0000-0000-0000-000000000034",
-  "summary": "Trade The Pool is a US stock prop firm offering access to 12,000+ real equities and ETFs using exchange data from NASDAQ, NYSE and CBOE. It scored 70/100 in testing thanks to clear rules and deep market coverage, but its strict volume limits and lack of automation during the evaluation won't suit every style.\n\nThe firm is operated by Five Percent Online Ltd (The 5%ers), but this branch focuses on US stock markets and exchange-traded funds only, rather than forex, crypto or commodity CFDs. You get four one-step challenges across day and swing accounts, giving you a choice between intraday rules or multi-day holding.\n\nIt isn't broker-backed, but you still get real exchange data, clear risk limits, and access to more than 12,000 tradeable symbols. The trading rules can feel strict at first, yet they're consistent, which helps anyone who prefers a straightforward evaluation without hidden conditions.",
+  "summary": "Trade The Pool scored 70/100 in our 2026 review. It's a US stock and ETF prop firm offering access to 12,000+ real equities and ETFs in regular trading using exchange data from NASDAQ, NYSE and CBOE, plus around 3,500 symbols via Blue Ocean for 24/5 overnight sessions. No futures, options, forex, crypto, or CFDs are available — it is equities and ETFs only, with spot-style stock trading.\n\nThe firm is operated by Five Percent Online Ltd (The 5%ers) and runs four one-step programmes: Day Flex, Day Max, Swing Flex, and Swing Max. Each has different daily pause limits, max loss thresholds, time limits, and consistency rules. Daily drawdown and max loss vary by programme — Day Flex uses 2%/4%, Day Max uses 1%/3%, and both Swing programmes use 3%/7%.\n\nEvaluation accounts are simulated. Funded accounts may be live and/or simulated depending on risk management decisions. Copy trading is allowed between a maximum of two of your own accounts — TraderEvolution's copy feature on evaluation accounts only, manual copy trading on both evaluation and funded accounts. Automated trading is restricted during evaluation, but SignalStack is being trialled in beta for funded accounts. Payouts are processed via wire transfer, cryptocurrency, Hub credits, or credit card on a 14-day cycle, with a minimum withdrawal of $300 ($150 for $5K accounts). Flex funded accounts need 3 separate profitable trading days (0.5%+ each) within a 14-day period to qualify for withdrawal.",
   "pros": [
-    "Access to 12,000+ US stocks and ETFs",
+    "Access to 12,000+ US stocks and ETFs in regular trading, plus ~3,500 via Blue Ocean overnight",
     "Direct exchange data from NASDAQ, NYSE and CBOE",
-    "Transparent risk management structure",
+    "Transparent risk management structure with four distinct programmes",
     "Overnight and weekend holds on swing accounts",
     "One-step evaluation across all challenge types",
-    "Scaling plan with proportional account growth"
+    "Copy trading allowed between up to 2 of your own accounts"
   ],
   "cons": [
-    "Volume limits restrict size on thin tickers",
-    "No automation allowed during evaluations",
-    "Simulated environment only with no broker backing",
-    "Consistency rule affects trade distribution",
-    "Single platform (TraderEvolution only)",
-    "No refund on challenge fees"
+    "Volume cap limits opening trades to 5% of the previous one-minute candle volume",
+    "Automated trading restricted in evaluation; SignalStack beta only for funded",
+    "Evaluation simulated, funded may be live/simulated — no guaranteed broker backing",
+    "Consistency rule affects trade distribution (30–50% depending on programme)",
+    "TraderEvolution desktop only (no Mac support); web terminal and iOS app available",
+    "No fee refund on challenge fees"
   ],
-  "bestFor": "Manual stock and ETF day traders who want real exchange data, deep US equity coverage, and a straightforward one-step evaluation",
-  "notIdealFor": "Scalpers, algorithmic traders, or multi-asset traders who need tighter costs, automation, or platform flexibility beyond TraderEvolution",
+  "bestFor": "Manual stock and ETF traders who want real exchange data, deep US equity coverage, and a straightforward one-step evaluation with clear programme options",
+  "notIdealFor": "Scalpers, algorithmic traders, or multi-asset traders who need automation support, Mac desktop compatibility, or markets beyond US equities and ETFs",
   "overallScore": 70,
   "categoryScores": {
     "challenges": 80,
@@ -42,29 +42,29 @@
   "verdictBlocks": [
     {
       "heading": "Our Final Verdict On Trade The Pool",
-      "body": "Trade The Pool ends up at 70/100 because it does a lot right, especially around stock access, real exchange data and simple one-step evaluations. Those strengths push up its overall score and make it a solid choice if you want a realistic US equities environment without the usual CFD limitations.\n\nIt doesn't score higher because trading costs add up on high-volume styles, payouts aren't the most flexible, and you're limited to a single platform with no automation during evaluations. Those factors pull down the Spreads, Platforms and Payouts categories.\n\nOverall, TTP suits manual stock and ETF traders who want depth, clarity and real data. It's less ideal for scalpers, algo traders or multi-asset traders who need tighter costs or more platform options. If you're focused on US equities and trade manually, pick the day or swing challenge that matches how long you like to hold positions and you'll settle in easily."
+      "body": "Trade The Pool ends up at 70/100 because it does a lot right, especially around stock access, real exchange data and straightforward one-step evaluations across four programmes (Day Flex, Day Max, Swing Flex, Swing Max). Those strengths push up its overall score and make it a solid choice if you want a realistic US equities environment without the usual CFD limitations.\n\nThe firm doesn't offer futures, options, forex, crypto, or CFDs — it's equities and ETFs only. Evaluation accounts are simulated, while funded accounts may be live and/or simulated depending on risk management decisions. Copy trading is allowed between up to two of your own accounts, and while automated trading is restricted during evaluation, SignalStack is being trialled in beta for funded accounts.\n\nDaily drawdown and max loss figures vary by programme: Day Flex uses 2%/4%, Day Max uses 1%/3%, and both Swing programmes use 3%/7%. Payouts are processed via wire transfer, crypto, Hub credits, or credit card — not limited to the same processors used for challenge fees. Flex funded accounts need 3 profitable days (0.5%+ each) within a 14-day period to qualify.\n\nOverall, TTP suits manual stock and ETF traders who want depth, clarity and real data. It's less ideal for algo traders, multi-asset traders, or anyone who needs Mac desktop support or tighter costs on high-volume strategies."
     }
   ],
   "faq": [
     {
       "q": "Is Trade the Pool legit?",
-      "a": "Yes, Trade The Pool is considered legitimate as a stock and ETF prop firm with a clear rule set and transparent risk management. It operates under Five Percent Online Ltd, the same company behind The 5%ers, and uses real exchange data from NASDAQ, NYSE and CBOE, which helps keep pricing and executions consistent with the underlying markets. The prop trading program runs entirely in a simulated environment, so it isn't a brokerage, but its rules, evaluation criteria and funded account structure are fully published and easy to verify."
+      "a": "Yes, Trade The Pool is considered legitimate as a stock and ETF prop firm with a clear rule set and transparent risk management. It operates under Five Percent Online Ltd, the same company behind The 5%ers, and uses real exchange data from NASDAQ, NYSE and CBOE. Evaluation accounts are simulated, while funded accounts may be live and/or simulated depending on risk management decisions. Its rules, evaluation criteria and funded account structure are fully published and easy to verify."
     },
     {
       "q": "Is there a prop firm with as much stock access as Trade the Pool?",
-      "a": "Very few prop firms offer the same stock and ETF access as Trade The Pool. Most stock prop trading firms rely on CFD-style feeds with a few hundred synthetic tickers, while TTP gives you more than 12,000 real US-listed stocks and ETFs with exchange data from NASDAQ, NYSE and CBOE. That includes penny stocks, small caps, sector ETFs and leveraged products, which is wider than what most prop firms offer."
+      "a": "Very few prop firms offer the same stock and ETF access as Trade The Pool. Most stock prop trading firms rely on CFD-style feeds with a few hundred synthetic tickers, while TTP gives you more than 12,000 real US-listed stocks and ETFs with exchange data from NASDAQ, NYSE and CBOE during regular trading, plus around 3,500 symbols via Blue Ocean for 24/5 overnight sessions. That includes penny stocks, small caps, sector ETFs and leveraged products."
     },
     {
       "q": "Does Trade the Pool pay out?",
-      "a": "Yes, Trade The Pool pays funded traders on a 14-day cycle once the account has at least $300 in profit. Payouts are processed after you close all open positions and the risk team completes a quick review. Payments are sent through the same processors used for initial challenge fee payments, including major credit cards, PayPal and regional methods like SEPA or iDeal."
+      "a": "Yes, Trade The Pool pays funded traders on a 14-day cycle. Withdrawals can be requested 14 days after account inception or 14 days after the previous withdrawal, provided you have at least $300 in profit ($150 for $5K accounts). Flex funded accounts also need 3 separate trading days with at least 0.5% profit each within a 14-day period. Payouts are processed via wire transfer, cryptocurrency, Hub credits, or credit card."
     },
     {
       "q": "Can I use Interactive Brokers with Trade the Pool?",
-      "a": "No, you cannot use the Interactive Brokers platform with Trade The Pool. Your only option is TraderEvolution, which is their in-house equities platform built around real exchange data. Even though Trade The Pool uses pricing from NASDAQ, NYSE and CBOE, all trading must happen inside their own environment because the evaluation and funded stages run on simulated accounts rather than a live brokerage."
+      "a": "No, you cannot use the Interactive Brokers platform with Trade The Pool. Your only option is TraderEvolution, which is their in-house equities platform built around real exchange data. TraderEvolution desktop does not support Mac, but a web terminal and iOS app are available. All trading must happen inside their own environment because the evaluation stages run on simulated accounts."
     }
   ],
   "verified": true,
   "flagged": false,
   "methodologyVersion": "1.0",
-  "lastReviewedAt": "2026-02-27"
+  "lastReviewedAt": "2026-03-11"
 }

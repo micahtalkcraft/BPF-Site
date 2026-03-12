@@ -6,12 +6,13 @@
   "foundedYear": 2016,
   "hqCountry": "IL",
   "evaluation": {
-    "types": ["1-step", "2-step"],
+    "types": ["1-step", "2-step", "3-step"],
     "profitTargets": { "phase1": 8, "phase2": 5 },
-    "dailyDrawdown": 5,
-    "maxDrawdown": 10,
+    "dailyDrawdown": null,
+    "maxDrawdown": null,
     "minTradingDays": 3,
-    "scalingPlan": true
+    "scalingPlan": true,
+    "notes": "Four product lines on CFDs: Bootcamp (3-step, 6% per stage, 5% max loss tightening to 4% funded, 1:10 leverage, mandatory stop-loss within 3 minutes, 50% starting split), High Stakes (2-step, 8% then 5% targets, 10% max loss, 5% daily drawdown, 1:100 FX leverage, 80% starting split, 3 minimum profitable days of at least 0.5% each), and Hyper Growth (1-step, 10% target, 5% max loss tightening to 4% funded, 1:30 leverage, 50% starting split, account doubling through scaling). Separate Futures offering with Basecamp (one-time fee + activation fee on passing) and Rebate (higher one-time fee, no activation fee) plans at $25K and $50K sizes. Futures uses 6% eval target, 4% funded target, 3% max loss (EOD), 30% per-position consistency rule, and scales at every 10% profit milestone with 5% buying power increase and 1 mini / 10 micro contract increase each time up to $500,000. CFD accounts can scale up to $4M with 100% profit split and monthly salary ($4K at $350K, $10K at $500K). All trading takes place in a simulated environment — becoming funded is not guaranteed."
   },
   "pricing": {
     "challengeFees": [
@@ -24,7 +25,11 @@
       { "accountSize": 100000, "fee": 545, "model": "2-step", "label": "High Stakes" },
       { "accountSize": 5000, "fee": 260, "model": "1-step", "label": "Hyper Growth" },
       { "accountSize": 10000, "fee": 450, "model": "1-step", "label": "Hyper Growth" },
-      { "accountSize": 20000, "fee": 850, "model": "1-step", "label": "Hyper Growth" }
+      { "accountSize": 20000, "fee": 850, "model": "1-step", "label": "Hyper Growth" },
+      { "accountSize": 25000, "fee": 50, "model": "other", "label": "Futures Basecamp (+ $70 activation)" },
+      { "accountSize": 50000, "fee": 100, "model": "other", "label": "Futures Basecamp (+ $140 activation)" },
+      { "accountSize": 25000, "fee": 150, "model": "other", "label": "Futures Rebate" },
+      { "accountSize": 50000, "fee": 300, "model": "other", "label": "Futures Rebate" }
     ],
     "resetFee": null,
     "refundPolicy": null
@@ -37,16 +42,16 @@
     "methods": ["Rise", "Crypto", "Bank Transfer", "HUB Credits"]
   },
   "rules": {
-    "newsTrading": true,
+    "newsTrading": null,
     "weekendHolding": true,
-    "copyTrading": true,
-    "expertAdvisors": true,
+    "copyTrading": null,
+    "expertAdvisors": null,
     "consistencyRule": null,
-    "notes": "Three programs: Bootcamp (3-step, 1:10 leverage), High Stakes (2-step, 1:100 leverage), and Hyper Growth (1-step, 1:30 leverage). Bootcamp requires mandatory stop-loss on every position (max 2% risk per trade, 5 violations = termination). High Stakes prohibits trading 2 min before/after high-impact news. Bracket strategies around news prohibited on all programs. Inactivity: accounts closed after 30 days without new orders. EAs allowed with restrictions (must set SL, no tick scalping, no arbitrage). Copy trading allowed with limitations — not between Bootcamp accounts, restricted above $500K. Salary component: $4,000/month at $350K funding, $10,000/month at $500K."
+    "notes": "CFD programmes: Bootcamp (3-step, 1:10 leverage), High Stakes (2-step, 1:100 leverage), Hyper Growth (1-step, 1:30 leverage). Futures: Basecamp and Rebate plans. Bootcamp requires mandatory stop-loss within 3 minutes (max 2% risk per trade, 5 violations = termination). High Stakes prohibits orders 2 min before/after high-impact news. Bracket strategies around news prohibited on all CFD programs. News trading allowed on Futures. Copy trading restricted — allowed only on High Stakes and Hyper Growth with limitations, not between Bootcamp accounts, third-party copy trading not allowed. EAs allowed on CFDs but must not use arbitrage, tick scalping, emulators, or third-party signal copying; Bootcamp requires stop-loss compliance. Futures allows overnight holding up to 1 mini or 10 micro contracts, but all positions must be closed at least 10 minutes before market close. Futures per-position consistency rule: 30%. Inactivity: accounts closed after 30 days without new orders. Salary component: $4,000/month at $350K funding, $10,000/month at $500K. All trading takes place in a simulated environment."
   },
   "markets": {
     "platforms": ["MT5", "MatchTrader"],
-    "instruments": "CFDs — FX, Metals, Indices, Crypto, Other Commodities"
+    "instruments": "CFDs — FX, Metals, Indices, Crypto, Other Commodities; Futures"
   },
   "trust": {
     "trustpilotRating": 4.9,
@@ -64,12 +69,12 @@
     "discord": true
   },
   "custom": {
-    "tags": ["Up to $4M Scaling", "Accepts US Traders", "100% Profit Split"],
+    "tags": ["Up to $4M Scaling", "Accepts US Traders", "100% Profit Split", "CFDs & Futures"],
     "discountCode": null,
     "discountPercent": null
   },
   "notes": null,
-  "lastVerifiedAt": "2026-02-24",
-  "lastUpdatedAt": "2026-02-24",
+  "lastVerifiedAt": "2026-03-11",
+  "lastUpdatedAt": "2026-03-11",
   "dataSources": ["https://the5ers.com", "https://propfirmmatch.com/prop-firms/the-5-ers"]
 }

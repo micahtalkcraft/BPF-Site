@@ -1,25 +1,25 @@
 {
   "id": "rev-e8-markets",
   "propFirmId": "d0000041-0000-0000-0000-000000000041",
-  "summary": "E8 Markets scored 64/100 overall. It offers a genuinely broad product range — Forex, Crypto, and CME Futures under one roof with six trading platforms — but the funded-stage conditions are significantly stricter than the evaluation, with best-day rules, profitable-day requirements, payout caps, and mandatory buffers creating friction for withdrawals.\n\nThe one-step challenge structure is straightforward, and E8 One provides good customisation options for drawdown and payout splits. But Signature accounts run on fixed rules, and the lack of broker-backed execution means all trading happens on simulated feeds without disclosed liquidity providers. E8 is best suited to experienced traders who can work inside tight risk and payout rules rather than beginners looking for something simple.",
+  "summary": "E8 Markets scored 64/100 in our 2026 review. The firm offers four distinct one-step models — E8 One, Signature Forex, Signature Futures, and Signature Crypto — each with different drawdown systems, platform options, leverage, and payout rules. E8 One is the most flexible, with customisable drawdown (4%–14% real-time trailing), payout splits upgradeable from 80% to 100% via add-ons, and account sizes from $5K to $500K starting at $40. Signature accounts use fixed rules with 3%–4% EOD trailing drawdown, an 80% profit split, and account sizes of $50K–$150K starting at $130.\n\nAll trading is simulated — E8 is not broker-backed, and the official site states that payouts are discretionary and tied to E8's acceptance and licensing of performance data. Weekend and overnight holding are allowed on E8 One only; all Signature accounts are intraday-only. News trading is allowed in evaluation on all accounts but restricted once funded on E8 One; Signature accounts allow news trading at all stages. EAs are allowed on E8 One, Signature Forex, and Signature Crypto, but not on Signature Futures, which is manual and intraday only with positions auto-closing at 15:10 CT.\n\nPayout rules differ significantly by model. E8 One has no payout buffer and no payout caps, but requires the best day to be ≤40% of total profits and the payout to exceed 50% of the daily DD value. Signature accounts are more restrictive: best day ≤35%, minimum 3 profitable days (0.3% closed profit each) for the first payout, 5 profitable days between subsequent payouts, a mandatory payout buffer equal to the EOD trailing drawdown, and progressive payout caps that only increase with payout history. There is no traditional scaling plan — traders wanting more capital use multiple funded accounts.",
   "pros": [
-    "Wide market access including Forex, Crypto, and CME Futures",
-    "Six trading platforms across CFD and Futures",
-    "Customisable drawdown and payout splits on E8 One",
-    "No minimum trading days on any account",
-    "Account sizes up to $500K on E8 One",
+    "Four distinct models covering Forex, Crypto, and CME Futures under one firm",
+    "Six trading platforms with platform access varying by model",
+    "E8 One offers customisable drawdown (4%–14%) and payout splits (80%–100%)",
+    "No minimum trading days on any account type",
+    "E8 One has no payout buffer and no payout caps",
     "Strong Trustpilot rating of 4.4/5 with ~3,000 reviews"
   ],
   "cons": [
-    "Strict funded-stage consistency rules (best-day limits, profitable-day counts)",
-    "Payout caps on Signature accounts that only increase gradually",
-    "Simulated execution only — not broker-backed",
-    "No traditional scaling plan available",
-    "Intraday-only rules on Signature Futures",
-    "News trading restricted once funded on E8 One"
+    "Signature payout rules are restrictive: buffers, caps, profitable-day requirements, and best-day limits",
+    "Simulated execution only — not broker-backed, payouts are discretionary",
+    "No traditional scaling plan on current models",
+    "Signature Futures is manual only, intraday only, positions auto-close at 15:10 CT",
+    "News trading restricted once funded on E8 One",
+    "Weekend and overnight holding only allowed on E8 One — all Signature accounts are intraday-only"
   ],
-  "bestFor": "Experienced traders who want broad market access across Forex, Crypto, and Futures with multiple platform options, and are comfortable managing strict funded-stage consistency and payout rules",
-  "notIdealFor": "Beginners, swing traders who need overnight holding on Signature accounts, traders who prefer broker-backed execution, or those who want simple payout rules without caps and buffers",
+  "bestFor": "Experienced traders who want broad market access across Forex, Crypto, and Futures with multiple platform options, and are comfortable managing strict funded-stage consistency and payout rules that vary significantly by model",
+  "notIdealFor": "Beginners, swing traders who need overnight holding on Signature accounts, traders who prefer broker-backed execution, or those who want simple payout rules without caps, buffers, and profitable-day requirements",
   "overallScore": 64,
   "categoryScores": {
     "challenges": 50,
@@ -42,29 +42,29 @@
   "verdictBlocks": [
     {
       "heading": "Our Final Verdict On E8 Markets",
-      "body": "E8 scored 64/100 overall because the proprietary trading firm does a lot right on products and platforms, but loses ground on payout friction, strict risk rules, and only mid-range transparency. The one-step structure, flexible sizing, and strong platform lineup are genuine positives, yet the real-time trailing drawdown on E8 One and the funded-stage consistency rules make long-term retention harder than at many rivals.\n\nFrom a markets perspective, E8 is strong, with wide CFD coverage, a dedicated crypto product, and a separate CME-style futures offering, which is why it scored higher in the markets and platforms categories. But the advantages here are balanced out by conservative CFD leverage, intraday-only futures rules, and a complex payout framework built around buffers, best-day limits, profitable-day counts, and caps that start low and only scale with history.\n\nTrust and transparency sit in the middle. A positive Trustpilot score and plenty of verified payouts support E8's legitimacy, but the fully simulated setup, lack of disclosed liquidity providers, and recurring complaints about execution and risk enforcement prevent it from scoring higher. Taken together, E8 is best suited to experienced traders who can work inside tight risk and payout rules, rather than beginners looking for something simple and forgiving."
+      "body": "E8 scored 64/100 overall because the firm does a lot right on products and platforms, but loses ground on payout friction, strict funded-stage rules, and a fully simulated environment where payouts are discretionary.\n\nE8 offers four one-step models rather than a single generic challenge. E8 One is the most flexible, with customisable drawdown (4%–14%), payout splits up to 100% via add-ons, and account sizes from $5K to $500K. Signature Forex, Signature Futures, and Signature Crypto use fixed rules with 3%–4% EOD trailing drawdown and an 80% profit split. Signature Futures is the strictest — manual only, intraday only, with positions auto-closing at 15:10 CT.\n\nThe profit split is not universally 100%. E8 One ranges from 80% to 100% depending on add-ons purchased, while all Signature accounts are fixed at 80%. The $40 starting fee applies to the smallest E8 One configuration only — Signature accounts start at $130.\n\nPayout rules vary sharply. E8 One has no payout buffer, no payout caps, and simpler consistency requirements. Signature accounts impose buffers equal to the EOD trailing drawdown, progressive payout caps, minimum profitable-day counts, and tighter best-day rules — creating significantly more friction for withdrawals. There is no traditional scaling plan on current models; traders use multiple funded accounts for more capital.\n\nAll trading is simulated. E8 is not broker-backed and does not disclose liquidity providers. The official site notes that payouts are discretionary and tied to E8's acceptance and licensing of performance data. A positive Trustpilot score (4.4/5 from ~3,000 reviews) and verified payout reports support credibility, but recurring complaints about execution quality and risk enforcement prevent a higher trust score.\n\nE8 is best suited to experienced traders who can work inside tight funded-stage rules. It is less ideal for beginners, swing traders who need overnight holding on Signature accounts, or those who expect simple, frictionless payouts."
     }
   ],
   "faq": [
     {
       "q": "Does E8 Markets actually pay out?",
-      "a": "Yes, E8 Markets does pay out funded traders who meet the payout rules and pass KYC, and there is a large volume of verified payout reports confirming this. Withdrawals are processed through bank transfer or crypto, with approvals typically taking 1–2 business days and funds arriving within a few days after. Most payout disputes come from traders failing consistency, buffer, or risk requirements rather than non-payment."
+      "a": "Yes, E8 Markets does pay out funded traders who meet the payout rules and pass KYC, and there is a large volume of verified payout reports. However, all trading is simulated and E8's own site states that payouts are discretionary, tied to their acceptance and licensing of performance data. Withdrawals are processed through Plane (bank transfer) or RiseWorks (crypto), with approvals typically taking 1–2 business days and funds arriving within 2–5 business days. Most payout disputes come from traders failing consistency, buffer, or profitable-day requirements rather than outright non-payment. Signature account payouts are subject to mandatory buffers and progressive caps that limit withdrawal amounts per cycle."
     },
     {
       "q": "Can you trade news with E8 Markets?",
-      "a": "Yes, news trading is allowed on E8, but the rules change once you are funded and depend on the account type. During the challenge phase, news trading is permitted on all accounts. On E8 One funded accounts, certain high-impact news windows are restricted and trades placed during those periods may not count toward payouts. Signature Forex, Signature Crypto, and Signature Futures allow news trading at all stages, subject to drawdown rules."
+      "a": "News trading rules depend on the account type and stage. During the evaluation phase, news trading is permitted on all accounts. On E8 One funded accounts, certain high-impact news windows are restricted and trades placed during those periods may not count toward payouts. Signature Forex, Signature Crypto, and Signature Futures allow news trading at all stages, subject to drawdown rules."
     },
     {
       "q": "Does E8 allow automated trading with Expert Advisors?",
-      "a": "Yes, E8 allows automated trading strategies with Expert Advisors on most accounts, provided the trading strategy follows their rules. EAs are permitted on E8 One, Signature Forex, and Signature Crypto, as long as they are not high-frequency trading (HFT), latency arbitrage, or copy trading systems. Automated trading is not allowed on Signature Futures, which is strictly manual and intraday trading only."
+      "a": "EAs are allowed on E8 One, Signature Forex, and Signature Crypto, as long as they are not high-frequency trading (HFT), latency arbitrage, or copy trading systems. Automated trading is not allowed on Signature Futures, which is strictly manual and intraday only with positions auto-closing at 15:10 CT. If automation is part of your strategy, confirm the specific account type supports it before purchasing."
     },
     {
       "q": "What is the best forex prop firm?",
-      "a": "The best forex prop firms in our rankings score 90/100 or higher, with FundedNext, DNA Funded, and BrightFunded leading the list due to flexible challenge structures, clearer payout rules, and stronger long-term scaling. While E8 is a legitimate firm, it does not make our top 10 forex prop firms for traders worldwide shortlist, mainly because its funded-stage consistency rules, payout caps, and simulated execution reduce overall flexibility compared to the highest-rated forex-focused competitors."
+      "a": "The best forex prop firms in our rankings score 90/100 or higher, with FundedNext, DNA Funded, and BrightFunded leading the list due to flexible challenge structures, clearer payout rules, and stronger long-term scaling. While E8 is a legitimate firm, it does not make our top 10 forex prop firms for traders worldwide shortlist, mainly because its funded-stage consistency rules, payout caps on Signature accounts, and simulated execution reduce overall flexibility compared to the highest-rated forex-focused competitors."
     }
   ],
   "verified": true,
   "flagged": false,
   "methodologyVersion": "1.0",
-  "lastReviewedAt": "2026-02-28"
+  "lastReviewedAt": "2026-03-11"
 }

@@ -1,22 +1,22 @@
 {
   "id": "rev-city-traders-imperium",
   "propFirmId": "d0000031-0000-0000-0000-000000000031",
-  "summary": "City Traders Imperium (CTI) is an established prop firm founded in 2018 that focuses on structured funding models rather than aggressive growth. You can choose between One Step and Two Step challenges or Instant Funding programs, all of which run on simulated accounts with no time limits and balance-based drawdown rules. Scaling is available, but meaningful growth mainly applies to Instant Funding accounts rather than evaluation challenges.\n\nCompared to newer prop firms, CTI is more restrictive \u2013 account sizes are smaller, leverage is low across all account types, and market coverage is limited, with no stocks and fewer instruments than competitors like DNA Funded or Blueberry Funded. Profit splits can reach 100%, but they start lower on Instant Funding and only improve after hitting multiple profit milestones, which slows early earnings.\n\nCTI is best suited to traders who prefer slower progression, strict risk controls, and long-term consistency over flexibility or fast payouts. If you\u2019re looking for higher leverage, larger starting capital, or broader markets, there are stronger options available in 2026.",
+  "summary": "City Traders Imperium (CTI) scored 72/100 in our 2026 review. Founded in 2018, CTI offers four routes to funding: One Step and Two Step evaluation challenges, plus Instant Funding and Instant Funding Pro. All accounts operate in a simulated environment. Evaluation challenges use balance-based (static) drawdown, while Instant Funding accounts use trailing drawdown tied to the account balance.\n\nProfit splits on evaluation challenges start at 80% and can scale to 100%. Instant Funding starts around 50% and increases through scaling milestones. The $4M scaling potential only applies to Instant Funding accounts across multiple accounts — evaluation challenges are effectively capped at $200K per account. Instant Funding traders start with half the advertised balance and unlock the full amount after hitting the first profit milestone.\n\nCommissions are $5 round-turn per lot for forex and commodities, $0.50 round-turn for indices, and zero commission for crypto. The platform lists around 50 instruments across forex, indices, commodities, and crypto, though exact counts can change. MT5 is available outside the US only — US traders must use MatchTrader. CTI is best suited to traders who prefer structured progression and strict risk controls over flexibility or aggressive exposure.",
   "pros": [
-    "Scaling up to $4 million across multiple accounts",
+    "Scaling up to $4 million across multiple Instant Funding accounts",
     "Instant Funding accounts with no evaluation required",
-    "Monthly salary payments for consistent funded traders",
+    "Salary payments available for traders meeting long-term consistency criteria",
     "No time limits on any challenge type",
     "Balance-based (static) drawdown on evaluation challenges",
-    "Competitive $5 roundturn forex commissions"
+    "$5 round-turn forex and commodities commissions, $0.50 for indices, zero for crypto"
   ],
   "cons": [
     "US clients restricted to MatchTrader platform only",
     "No stock or share trading available",
     "Maximum $100,000 individual account size",
     "Low leverage compared to competitors (1:30 forex challenges)",
-    "Profit splits start at 50% on Instant Funding",
-    "Only 50 tradeable instruments"
+    "Profit splits start around 50% on Instant Funding",
+    "Around 50 tradeable instruments — exact counts may vary"
   ],
   "bestFor": "Traders who prefer slower progression, strict risk controls, and long-term consistency over flexibility or fast payouts",
   "notIdealFor": "Traders looking for higher leverage, larger starting capital, broader markets, or firms with stock trading and higher starting profit splits",
@@ -41,7 +41,7 @@
   "verdictBlocks": [
     {
       "heading": "Our Final Verdict On City Traders Imperium",
-      "body": "City Traders Imperium is a viable option if you want multiple routes to funding, including One Step, Two Step, and Instant Funding programs, all with no time limits and balance-based drawdown rules. You trade on simulated funded accounts and can scale capital by hitting fixed profit milestones, with profit splits that increase over time and can reach 100% under the VIP structure.\n\nThat said, account sizes, leverage, and market coverage are more limited than many competitors, so CTI makes more sense if you prioritise clear rules and long-term progression over higher risk or aggressive exposure."
+      "body": "City Traders Imperium is a viable option if you want multiple routes to funding, including One Step, Two Step, and Instant Funding programs, all with no time limits. All accounts operate in a simulated environment. Evaluation challenges use balance-based (static) drawdown, while Instant Funding accounts use trailing drawdown tied to the account balance.\n\nProfit splits on evaluation challenges start at 80% and can reach 100%, while Instant Funding starts around 50% and scales through milestones. The $4M scaling headline applies only to Instant Funding across multiple accounts — evaluation challenges are capped at $200K per account. Funded trader salary payments require meeting specific long-term consistency criteria. Account sizes, leverage, and market coverage are more limited than many competitors, so CTI makes more sense if you prioritise structured rules and long-term progression over higher risk or aggressive exposure."
     }
   ],
   "faq": [
@@ -55,7 +55,7 @@
     },
     {
       "q": "How much do you get paid in CTI funding?",
-      "a": "Your profit share at CTI depends on the program you choose and how consistently you perform, starting lower and increasing as you scale. On challenge-funded accounts, you typically earn 80% and can increase up to 100%, while Instant Funding starts at 50%, then increases to 70%\u2013100% as you progress through profit milestones and VIP levels. If you trade consistently, you can also qualify for CTI's VIP Program, which unlocks higher profit shares, faster payouts, and potential monthly salary payments."
+      "a": "Your profit share at CTI depends on the program you choose and how consistently you perform. On evaluation challenge-funded accounts, you start at 80% and can increase up to 100%. Instant Funding starts around 50% and increases through scaling milestones up to 100% as you progress through profit targets and VIP levels. Funded trader salary payments are available only to traders who meet specific long-term consistency criteria — they are not standard for all funded accounts."
     },
     {
       "q": "What are proprietary trading firms?",
@@ -65,5 +65,5 @@
   "verified": true,
   "flagged": false,
   "methodologyVersion": "1.0",
-  "lastReviewedAt": "2026-02-27"
+  "lastReviewedAt": "2026-03-11"
 }

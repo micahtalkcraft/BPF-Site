@@ -19,12 +19,13 @@ const allOffers = propFirms
     const percent = (f.data.custom as any)?.discountPercent as number | undefined;
     const desc = ((f.data.custom as any)?.discountDesc as string | undefined) ??
       (percent ? `${percent}% off on all challenge fees` : undefined);
+    const savingNote = (f.data.custom as any)?.discountSavingNote as string | undefined;
     const review = reviewMap[f.data.id];
     const hasReview = !!review;
     const verified = review?.verified !== false;
     const flagged = review?.flagged === true;
     const isAwardWinner = awardWinnerSlugs.has(f.data.slug);
-    return { firm: f.data, code, percent, desc, hasReview, verified, flagged, isAwardWinner };
+    return { firm: f.data, code, percent, desc, savingNote, hasReview, verified, flagged, isAwardWinner };
   })
   .filter((x) => x.code && (x.percent || x.desc))
   .sort((a, b) => (b.percent ?? 0) - (a.percent ?? 0));
@@ -42,7 +43,7 @@ const featuredGrid = featuredSlugs.map((s) => offerMap[s]).filter(Boolean);
 
 // Challenge fee data for the "Challenges" tab — $100K fees with discount applied
 const challengeRows = allOffers
-  .map(({ firm, code, percent, hasReview, verified, flagged, isAwardWinner }) => {
+  .map(({ firm, code, percent, savingNote, hasReview, verified, flagged, isAwardWinner }) => {
     const fees = (firm.pricing?.challengeFees ?? []) as Array<{ accountSize: number; fee: number; model?: string; label?: string }>;
     const oneStep100K = fees.find((f) => f.accountSize === 100000 && (f.model === "1-step" || f.model === "one-step"));
     const any100K = fees.find((f) => f.accountSize === 100000);
@@ -61,6 +62,7 @@ const challengeRows = allOffers
       saving,
       model: (fee100K.model === "one-step" ? "1-step" : fee100K.model) ?? "challenge",
       label: fee100K.label,
+      savingNote,
       hasReview,
       verified,
       flagged,
@@ -122,7 +124,11 @@ const challengeRows = allOffers
                       )}
                     </div>
                     {firm.trust.trustpilotRating && (
-                      <p class="text-[10px] text-slate-400">{firm.trust.trustpilotRating} ★ Trustpilot</p>
+                      <div class="flex items-center gap-1 mt-0.5 flex-wrap">
+                        <span class="text-[10px] text-slate-400">{firm.trust.trustpilotRating} ★ Trustpilot</span>
+                        <span class="text-[10px] text-slate-300">·</span>
+                        <span class="text-[10px] text-slate-400 inline-flex items-center gap-0.5"><svg class="h-2.5 w-2.5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>Verified Mar 12, 2026</span>
+                      </div>
                     )}
                   </div>
                 </div>
@@ -169,8 +175,10 @@ const challengeRows = allOffers
         </button>
       </div>
 
+      <!-- ── Panel container with slide animation ── -->
+      <div class="relative overflow-hidden">
       <!-- ── SAVINGS PANEL ── -->
-      <div id="panel-savings">
+      <div id="panel-savings" class="transition-[transform,opacity] duration-300 ease-in-out">
 
       <!-- Filter bar -->
       <div class="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center mb-6">
@@ -247,9 +255,11 @@ const challengeRows = allOffers
                       )}
                     </div>
                     {firm.trust.trustpilotRating && (
-                      <div class="flex items-center gap-1 mt-0.5">
+                      <div class="flex items-center gap-1 mt-0.5 flex-wrap">
                         <span class="text-amber-400 text-xs">{'★'.repeat(Math.round(firm.trust.trustpilotRating))}</span>
-                        <span class="text-[11px] text-slate-400">{firm.trust.trustpilotRating} · {firm.trust.trustpilotCount?.toLocaleString()} reviews</span>
+                        <span class="text-[11px] text-slate-400">{firm.trust.trustpilotRating}</span>
+                        <span class="text-[11px] text-slate-300">·</span>
+                        <span class="text-[11px] text-slate-400 inline-flex items-center gap-0.5"><svg class="h-3 w-3 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>Verified Mar 12, 2026</span>
                       </div>
                     )}
                   </div>
@@ -275,6 +285,7 @@ const challengeRows = allOffers
                     <svg class="h-3 w-3 flex-shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
                     <span class="copy-label">{code}</span>
                   </button>
+
                 </div>
               </div>
 
@@ -338,9 +349,11 @@ const challengeRows = allOffers
                         )}
                       </div>
                       {firm.trust.trustpilotRating && (
-                        <div class="flex items-center gap-1 mt-0.5">
+                        <div class="flex items-center gap-1 mt-0.5 flex-wrap">
                           <span class="text-amber-400 text-xs">{'★'.repeat(Math.round(firm.trust.trustpilotRating))}</span>
                           <span class="text-[11px] text-slate-400">{firm.trust.trustpilotRating}</span>
+                          <span class="text-[11px] text-slate-300">·</span>
+                          <span class="text-[11px] text-slate-400 inline-flex items-center gap-0.5"><svg class="h-3 w-3 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>Verified Mar 12, 2026</span>
                         </div>
                       )}
                     </div>
@@ -368,6 +381,7 @@ const challengeRows = allOffers
                     <svg class="h-3 w-3 flex-shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
                     <span class="copy-label-m">{code}</span>
                   </button>
+
                 </div>
                 <a
                   href={firm.links?.website ?? '#'}
@@ -396,7 +410,7 @@ const challengeRows = allOffers
       </div><!-- end panel-savings -->
 
       <!-- ── SAVINGS PANEL (Challenges) ── -->
-      <div id="panel-challenges" class="hidden">
+      <div id="panel-challenges" class="hidden transition-[transform,opacity] duration-300 ease-in-out">
         <!-- Filter bar -->
         <div class="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center mb-6">
           <div class="relative flex-1 max-w-sm">
@@ -421,7 +435,7 @@ const challengeRows = allOffers
 
         <!-- Discount toggle + description -->
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
-          <p class="text-sm text-slate-500">Comparing <strong class="text-slate-700">$100K challenge fees</strong> across prop firms with active discount codes</p>
+          <p class="text-sm text-slate-500">Comparing <strong class="text-slate-700">$100K 1-step challenge fees</strong> across prop firms with active discount codes</p>
           <label class="inline-flex items-center gap-2.5 cursor-pointer select-none flex-shrink-0">
             <span id="toggle-label" class="text-sm font-semibold text-teal-700">Discounts Applied</span>
             <button
@@ -491,9 +505,11 @@ const challengeRows = allOffers
                       )}
                     </div>
                     {row.firm.trust.trustpilotRating && (
-                      <div class="flex items-center gap-1 mt-0.5">
+                      <div class="flex items-center gap-1 mt-0.5 flex-wrap">
                         <span class="text-amber-400 text-xs">{'★'.repeat(Math.round(row.firm.trust.trustpilotRating))}</span>
                         <span class="text-[11px] text-slate-400">{row.firm.trust.trustpilotRating}</span>
+                        <span class="text-[11px] text-slate-300">·</span>
+                        <span class="text-[11px] text-slate-400 inline-flex items-center gap-0.5"><svg class="h-3 w-3 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>Verified Mar 12, 2026</span>
                       </div>
                     )}
                   </div>
@@ -512,6 +528,9 @@ const challengeRows = allOffers
                   {row.saving > 0 && (
                     <span class="challenge-saving text-[11px] font-semibold text-emerald-600 mt-0.5">You save ${row.saving}</span>
                   )}
+                  {row.saving === 0 && row.savingNote && (
+                    <span class="challenge-saving text-[11px] font-semibold text-emerald-600 mt-0.5 truncate max-w-[140px]">{row.savingNote}</span>
+                  )}
                 </div>
 
                 <!-- Coupon block (desktop) — homepage style -->
@@ -528,6 +547,7 @@ const challengeRows = allOffers
                       <svg class="h-3 w-3 flex-shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
                       <span class="c-copy">{row.code}</span>
                     </button>
+  
                   </div>
                 </div>
 
@@ -593,9 +613,11 @@ const challengeRows = allOffers
                           )}
                         </div>
                         {row.firm.trust.trustpilotRating && (
-                          <div class="flex items-center gap-1 mt-0.5">
+                          <div class="flex items-center gap-1 mt-0.5 flex-wrap">
                             <span class="text-amber-400 text-xs">{'★'.repeat(Math.round(row.firm.trust.trustpilotRating))}</span>
                             <span class="text-[11px] text-slate-400">{row.firm.trust.trustpilotRating}</span>
+                            <span class="text-[11px] text-slate-300">·</span>
+                            <span class="text-[11px] text-slate-400 inline-flex items-center gap-0.5"><svg class="h-3 w-3 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>Verified Mar 12, 2026</span>
                           </div>
                         )}
                       </div>
@@ -609,6 +631,9 @@ const challengeRows = allOffers
                     <span class="challenge-price-discounted">$100K Challenge — <span class="text-slate-400 line-through">${row.normalPrice}</span> <strong class="text-teal-600">${row.discountedPrice}</strong></span>
                     {row.saving > 0 && (
                       <span class="challenge-saving text-emerald-600 font-semibold ml-1">· Save ${row.saving}</span>
+                    )}
+                    {row.saving === 0 && row.savingNote && (
+                      <span class="challenge-saving text-emerald-600 font-semibold ml-1">· {row.savingNote}</span>
                     )}
                   </p>
                 </div>
@@ -627,6 +652,7 @@ const challengeRows = allOffers
                       <svg class="h-3 w-3 flex-shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
                       <span class="mc-copy">{row.code}</span>
                     </button>
+  
                   </div>
                   <a
                     href={row.firm.links?.website ?? '#'}
@@ -652,6 +678,7 @@ const challengeRows = allOffers
           ))}
         </div>
       </div><!-- end panel-challenges -->
+      </div><!-- end panel container -->
 
     </section>
   </div>
@@ -730,10 +757,30 @@ const challengeRows = allOffers
     const panelSavings = document.getElementById("panel-savings");
     const panelChallenges = document.getElementById("panel-challenges");
 
+    let currentTab: "savings" | "challenges" = "savings";
+
     function setActiveTab(tab: "savings" | "challenges") {
+      if (tab === currentTab) return;
       const isSavings = tab === "savings";
-      panelSavings?.classList.toggle("hidden", !isSavings);
-      panelChallenges?.classList.toggle("hidden", isSavings);
+      const outgoing = isSavings ? panelChallenges : panelSavings;
+      const incoming = isSavings ? panelSavings : panelChallenges;
+      const slideOut = isSavings ? "translate-x-full" : "-translate-x-full";
+      const slideIn = isSavings ? "-translate-x-full" : "translate-x-full";
+
+      // Slide out current panel
+      outgoing?.classList.add(slideOut, "opacity-0");
+      setTimeout(() => {
+        outgoing?.classList.add("hidden");
+        outgoing?.classList.remove(slideOut, "opacity-0");
+
+        // Prepare incoming off-screen, then slide in
+        incoming?.classList.add(slideIn, "opacity-0");
+        incoming?.classList.remove("hidden");
+        // Force reflow so the browser registers the start position
+        incoming?.offsetHeight;
+        incoming?.classList.remove(slideIn, "opacity-0");
+      }, 200);
+
       [tabSavings, tabChallenges].forEach((btn, i) => {
         const isActive = (i === 0 && isSavings) || (i === 1 && !isSavings);
         btn?.classList.toggle("bg-teal-500", isActive);
@@ -741,8 +788,8 @@ const challengeRows = allOffers
         btn?.classList.toggle("shadow-md", isActive);
         btn?.classList.toggle("shadow-teal-500/20", isActive);
         btn?.classList.toggle("text-slate-500", !isActive);
-        btn?.classList.toggle("bg-teal-500", isActive);
       });
+      currentTab = tab;
     }
 
     tabSavings?.addEventListener("click", () => setActiveTab("savings"));
@@ -1143,6 +1190,18 @@ const challengeRows = allOffers
           {
             q: "Which prop firm actually pays?",
             a: "Best Prop Firms only lists prop firms that we assess thoroughly for real payouts, reliable support, and trust factors. Firms like FundedNext Futures offer payout guarantees within 24 hours, while others like DNA Funded and IC Funded have verified payout histories. Our methodology for ranking prop firms looks at factors like trust scores, user reviews, payment speed, and transparency, before we make recommendations."
+          },
+          {
+            q: "Do prop firm discount codes expire?",
+            a: "Most prop firm discount codes listed on Best Prop Firms do not have a set expiration date and remain active for extended periods. However, promotional codes tied to seasonal events like Black Friday, Cyber Monday, or Valentine's Day are typically time-limited and will expire once the promotion ends. To make sure a code is still valid before you use it, check the \"Last verified\" date displayed next to each coupon on this page. We regularly verify every code so you can shop with confidence knowing the discount will apply at checkout."
+          },
+          {
+            q: "Can you stack multiple prop firm discount codes?",
+            a: "Whether you can combine multiple discount codes on a single purchase depends entirely on the prop firm. Some firms allow you to apply a promo code on top of an existing sale or bundle offer, while others restrict usage to one code per transaction. The best way to find out is to check the terms and conditions on the prop firm's website or try applying both codes at checkout. If stacking is not permitted, we recommend using whichever single code gives you the largest overall saving on your challenge fee."
+          },
+          {
+            q: "Which prop firm has the biggest discount right now?",
+            a: "The best way to find the biggest prop firm discount is to browse the full list of verified coupon codes above. You can compare percentage savings across every firm at a glance, and our Savings tab lets you see exactly how much you will pay for a $100K challenge after each discount is applied. Best Prop Firms negotiates industry-exclusive codes that are not available anywhere else, so the deals you see on this page often beat what you will find on the prop firm's own website. We update and verify codes regularly to make sure you always have access to the best possible price."
           },
         ].map((faq) => (
           <details class="group rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-200 hover:border-slate-300">
