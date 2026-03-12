@@ -1,12 +1,33 @@
 ---
 import Base from "../../layouts/Base.astro";
+import { getAuthorProfileSchema, getBreadcrumbSchema, SITE_URL } from "../../helpers/schema";
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "@id": `${SITE_URL}/about/noam-korbl/`,
+    url: `${SITE_URL}/about/noam-korbl/`,
+    name: "Noam Korbl — COO & Co-Founder",
+    description: "Noam Korbl is the COO and Co-Founder of BestPropFirms.com. He holds a Bachelor of Business Administration from Monash University and an RG146 qualification.",
+    dateModified: "2026-03-12",
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    mainEntity: getAuthorProfileSchema("noam-korbl"),
+  },
+  getBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "About Us", url: "/about/" },
+    { name: "Noam Korbl" },
+  ]),
+];
 ---
 
 <Base
   title="Noam Korbl — Co-Founder & Managing Director | BestPropFirms.com"
   description="Learn about Noam Korbl, co-founder of BestPropFirms.com. With expertise in finance and digital marketing, Noam drives strategic growth for the platform."
+  jsonLd={jsonLd}
 >
   <!-- Hero -->
   <section class="relative bg-[#0d1b2a] text-white py-16 sm:py-20 px-4 overflow-hidden">

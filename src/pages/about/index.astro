@@ -1,7 +1,26 @@
 ---
 import Base from "../../layouts/Base.astro";
+import { getOrganizationSchema, getBreadcrumbSchema, SITE_URL } from "../../helpers/schema";
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": `${SITE_URL}/about/`,
+    url: `${SITE_URL}/about/`,
+    name: "About BestPropFirms.com",
+    description: "Meet the team behind BestPropFirms.com. Independent prop firm reviews and rankings by experienced traders and financial services professionals.",
+    mainEntity: { "@id": `${SITE_URL}/#organization` },
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+  },
+  getOrganizationSchema(),
+  getBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "About Us" },
+  ]),
+];
 
 const offerings = [
   {
@@ -146,6 +165,7 @@ const socials = [
 <Base
   title="About Us — BestPropFirms.com | Independent Prop Firm Reviews"
   description="Learn about BestPropFirms.com — founded in 2023 by Justin Grossbard and Noam Korbl to provide transparent, data-driven prop firm reviews for traders worldwide."
+  jsonLd={jsonLd}
 >
   <!-- Hero with gradient overlay -->
   <section class="relative bg-[#0d1b2a] text-white py-20 px-4 overflow-hidden">

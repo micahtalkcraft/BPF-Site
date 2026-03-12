@@ -1,10 +1,27 @@
 ---
 import Base from "../layouts/Base.astro";
+import { getBreadcrumbSchema, SITE_URL } from "../helpers/schema";
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    url: `${SITE_URL}/privacy/`,
+    name: "Privacy Policy",
+    description: "Privacy Policy for BestPropFirms.com — how we collect, use, and protect your personal information.",
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+  },
+  getBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Privacy Policy" },
+  ]),
+];
 ---
 
 <Base
   title="Privacy Policy | BestPropFirms.com"
   description="Privacy Policy for BestPropFirms.com — how we collect, use, and protect your personal information."
+  jsonLd={jsonLd}
 >
   <!-- Hero -->
   <section class="bg-[#0d1b2a] text-white py-16 px-4">

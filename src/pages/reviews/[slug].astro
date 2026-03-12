@@ -6,6 +6,7 @@ import PropFirmBadges from "../../components/shared/PropFirmBadges.astro";
 import FirmAvatar from "../../components/shared/FirmAvatar.astro";
 import type { PropFirm, Review } from "../../content/config";
 import * as flags from "country-flag-icons/string/3x2";
+import { getAuthorSchema, getPublisherSchema, getBreadcrumbSchema, getFaqSchema, SITE_URL } from "../../helpers/schema";
 
 export async function getStaticPaths() {
   const propFirms = await getCollection("prop-firms");
@@ -47,37 +48,70 @@ if (!review) {
   return Astro.redirect(`${base}/reviews`);
 }
 
+// Lowest challenge fee for Product offers
+const lowestChallengeeFee = firm.pricing.challengeFees.length > 0
+  ? firm.pricing.challengeFees.reduce((min, f) => f.fee < min.fee ? f : min).fee
+  : null;
+
+// Strip affiliate tracking from website URL for schema brand.url
+const officialWebsite = firm.links?.website?.replace(/\?.*$/, "") ?? undefined;
+
 const jsonLd = [
   {
     "@context": "https://schema.org",
-    "@type": "Review",
-    itemReviewed: {
-      "@type": "Organization",
-      name: firm.name,
-      foundingDate: firm.foundedYear?.toString(),
-      url: firm.links?.website,
-    },
-    reviewRating: review.overallScore
-      ? {
-          "@type": "Rating",
-          ratingValue: review.overallScore,
-          worstRating: 0,
-          bestRating: 100,
-        }
-      : undefined,
-    author: { "@type": "Organization", name: "BestPropFirms.com" },
+    "@type": "CriticReview",
+    "@id": `${siteUrl}/reviews/${firm.slug}/#criticreview`,
+    url: `${siteUrl}/reviews/${firm.slug}/`,
+    headline: `${firm.name} Review 2026`,
+    description: review.overallScore
+      ? `Independent review of ${firm.name} scoring ${review.overallScore}/100 across challenges, spreads, markets, payouts, platforms, and trust.`
+      : `Independent review of ${firm.name} covering challenges, spreads, markets, payouts, platforms, and trust.`,
+    image: firm.media?.logo ? `${siteUrl}${firm.media.logo}` : undefined,
     datePublished: review.lastReviewedAt,
+    dateModified: review.lastReviewedAt,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/reviews/${firm.slug}/`,
+    },
+    itemReviewed: {
+      "@type": "Product",
+      name: firm.name,
+      description: `${firm.name} proprietary trading challenge and funded account program.`,
+      ...(firm.media?.logo && { image: `${siteUrl}${firm.media.logo}` }),
+      brand: {
+        "@type": "Organization",
+        name: firm.name,
+        ...(officialWebsite && { url: officialWebsite }),
+        ...(firm.foundedYear && { foundingDate: String(firm.foundedYear) }),
+      },
+      ...(lowestChallengeeFee && {
+        offers: {
+          "@type": "Offer",
+          price: String(lowestChallengeeFee),
+          priceCurrency: "USD",
+          availability: "https://schema.org/OnlineOnly",
+          description: `Prop trading challenge starting from $${lowestChallengeeFee}. No recurring fees.`,
+        },
+      }),
+    },
+    ...(review.overallScore && {
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: String(review.overallScore),
+        bestRating: "100",
+        worstRating: "0",
+      },
+    }),
     reviewBody: review.summary,
+    author: getAuthorSchema("noam-korbl"),
+    publisher: getPublisherSchema(),
   },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
-      { "@type": "ListItem", position: 2, name: "Reviews", item: `${siteUrl}/reviews` },
-      { "@type": "ListItem", position: 3, name: `${firm.name} Review`, item: `${siteUrl}/reviews/${firm.slug}` },
-    ],
-  },
+  getBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Reviews", url: "/reviews/" },
+    { name: `${firm.name} Review` },
+  ]),
+  ...(review.faq && review.faq.length > 0 ? [getFaqSchema(review.faq)] : []),
 ];
 
 const categoryLabels: Record<string, string> = {

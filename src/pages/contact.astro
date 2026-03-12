@@ -1,7 +1,23 @@
 ---
 import Base from "../layouts/Base.astro";
+import { getBreadcrumbSchema, SITE_URL } from "../helpers/schema";
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    url: `${SITE_URL}/contact/`,
+    name: "Contact Us",
+    description: "Get in touch with the BestPropFirms.com team.",
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+  },
+  getBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Contact Us" },
+  ]),
+];
 
 const faqs = [
   {
@@ -22,6 +38,7 @@ const faqs = [
 <Base
   title="Contact Us | BestPropFirms.com"
   description="Get in touch with BestPropFirms.com for general enquiries, media requests, partnership opportunities, or advertising."
+  jsonLd={jsonLd}
 >
   <!-- Page header -->
   <section class="bg-[#0d1b2a] text-white py-14 px-4">

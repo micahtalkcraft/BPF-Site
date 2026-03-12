@@ -1,11 +1,28 @@
 ---
 import Base from "../layouts/Base.astro";
+import { getBreadcrumbSchema, SITE_URL } from "../helpers/schema";
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    url: `${SITE_URL}/terms/`,
+    name: "Terms and Conditions",
+    description: "Terms and Conditions for BestPropFirms.com — rules governing the use of our site and services.",
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+  },
+  getBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Terms and Conditions" },
+  ]),
+];
 ---
 
 <Base
   title="Terms and Conditions | BestPropFirms.com"
   description="Terms and Conditions for BestPropFirms.com — rules governing the use of our site and services."
+  jsonLd={jsonLd}
 >
   <!-- Hero -->
   <section class="bg-[#0d1b2a] text-white py-16 px-4">

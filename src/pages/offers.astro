@@ -2,6 +2,7 @@
 import Base from "../layouts/Base.astro";
 import { getCollection } from "astro:content";
 import FirmAvatar from "../components/shared/FirmAvatar.astro";
+import { getPublisherSchema, getBreadcrumbSchema, SITE_URL } from "../helpers/schema";
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
@@ -71,19 +72,75 @@ const challengeRows = allOffers
   })
   .filter((x): x is NonNullable<typeof x> => x !== null)
   .sort((a, b) => a.discountedPrice - b.discountedPrice);
+
+const faqs = [
+  { q: "What is a prop trading code?", a: "A prop trading code is a discount code that reduces the cost of your prop firm challenge, helping you save money upfront. At Best Prop Firms, we offer exclusive codes that you won't find elsewhere, giving you access to the best deals in the industry. Our codes cover trusted firms like FundedNext Futures, FXIFY, and DNA Funded, with savings of up to 26%. Check this page often for the latest working promo codes." },
+  { q: "How to get a free prop firm account?", a: "To get a free prop firm account, follow Best Prop Firms on social media for a chance to enter exclusive giveaways and draws. We regularly host promotions where traders can win funded accounts from firms like BrightFunded and FXIFY. By staying connected on platforms like X and Facebook, you'll never miss an opportunity to save on challenge fees or even secure a fully funded trading account for free." },
+  { q: "Is prop trading worth it?", a: "Prop trading is worth it if you want to trade large capital without risking your own funds, and at Best Prop Firms, we help you find the best opportunities. With access to scaling programs, payout guarantees, and refund offers from leading prop firms, traders can build sustainable income streams. However, success in prop trading depends on sticking to the firm's rules, managing risk carefully, and choosing the right firm that matches your trading style." },
+  { q: "Which prop firm actually pays?", a: "Best Prop Firms only lists prop firms that we assess thoroughly for real payouts, reliable support, and trust factors. Firms like FundedNext Futures offer payout guarantees within 24 hours, while others like DNA Funded and IC Funded have verified payout histories. Our methodology for ranking prop firms looks at factors like trust scores, user reviews, payment speed, and transparency, before we make recommendations." },
+  { q: "Do prop firm discount codes expire?", a: "Most prop firm discount codes listed on Best Prop Firms do not have a set expiration date and remain active for extended periods. However, promotional codes tied to seasonal events like Black Friday, Cyber Monday, or Valentine's Day are typically time-limited and will expire once the promotion ends. To make sure a code is still valid before you use it, check the \"Last verified\" date displayed next to each coupon on this page. We regularly verify every code so you can shop with confidence knowing the discount will apply at checkout." },
+  { q: "Can you stack multiple prop firm discount codes?", a: "Whether you can combine multiple discount codes on a single purchase depends entirely on the prop firm. Some firms allow you to apply a promo code on top of an existing sale or bundle offer, while others restrict usage to one code per transaction. The best way to find out is to check the terms and conditions on the prop firm's website or try applying both codes at checkout. If stacking is not permitted, we recommend using whichever single code gives you the largest overall saving on your challenge fee." },
+  { q: "Which prop firm has the biggest discount right now?", a: "The best way to find the biggest prop firm discount is to browse the full list of verified coupon codes above. You can compare percentage savings across every firm at a glance, and our Savings tab lets you see exactly how much you will pay for a $100K challenge after each discount is applied. Best Prop Firms negotiates industry-exclusive codes that are not available anywhere else, so the deals you see on this page often beat what you will find on the prop firm's own website. We update and verify codes regularly to make sure you always have access to the best possible price." },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/offers/#webpage`,
+    url: `${SITE_URL}/offers/`,
+    name: "Prop Firm Promo Codes & Discount Codes 2026 | BestPropFirms.com",
+    description: "Find verified prop firm discount codes for 2026. Save up to 25% on DNA Funded, FXIFY, BrightFunded & more — updated monthly.",
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    datePublished: "2025-01-01",
+    dateModified: "2026-03-12",
+  },
+  ...allOffers.map((offer) => ({
+    "@context": "https://schema.org" as const,
+    "@type": "Offer" as const,
+    name: `${offer.firm.name} Discount Code${offer.percent ? ` — ${offer.percent}% Off` : ""}`,
+    description: offer.desc ?? `Discount code for ${offer.firm.name} prop trading challenges`,
+    priceCurrency: "USD",
+    availability: "https://schema.org/InStock",
+    url: offer.firm.links?.website ?? `${SITE_URL}/offers/`,
+    offeredBy: {
+      "@type": "Organization" as const,
+      name: offer.firm.name,
+    },
+    ...(offer.percent && { discount: `${offer.percent}%` }),
+  })),
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question" as const,
+      name: faq.q,
+      acceptedAnswer: {
+        "@type": "Answer" as const,
+        text: faq.a,
+      },
+    })),
+  },
+  getBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Prop Firm Promo Codes & Discounts" },
+  ]),
+];
 ---
 
 <Base
-  title="Best Prop Firm Discount Codes & Offers 2026 | BestPropFirms.com"
-  description="Exclusive discount codes and limited-time offers on prop firm challenge fees. Save up to 90% with verified coupon codes."
+  title="Prop Firm Promo Codes & Discount Codes 2026 | BestPropFirms.com"
+  description="Find verified prop firm discount codes for 2026. Save up to 25% on DNA Funded, FXIFY, BrightFunded & more — updated monthly."
+  jsonLd={jsonLd}
 >
   <!-- Page header -->
   <section class="bg-[#0d1b2a] text-white py-14 px-4">
     <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
       <p class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-2">Exclusive Deals</p>
-      <h1 class="text-4xl font-black mb-3">Prop Firm Offers & Discounts</h1>
-      <p class="text-slate-300 text-lg max-w-2xl">
-        Verified discount codes and exclusive offers — updated monthly. Never pay full price on a challenge.
+      <h1 class="text-4xl font-black mb-3">Prop Firm Promo Codes & Discount Codes 2026</h1>
+      <p class="text-slate-300 text-sm max-w-2xl leading-relaxed">
+        Find the best prop firm promo codes and discount codes for 2026, verified and updated monthly. We've negotiated exclusive codes across the top-rated prop firms, including DNA Funded, FXIFY, BrightFunded, and FundedNext, so you never pay full price on a challenge. Each code is manually tested before listing.
       </p>
     </div>
   </section>
@@ -901,6 +958,53 @@ const challengeRows = allOffers
     });
   </script>
 
+  <!-- ── Discord Banner ────────────────────────────────────────────────────── -->
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+    <div class="relative overflow-hidden rounded-2xl border border-[#5865F2]/20 shadow-xl">
+      <div class="absolute inset-0 bg-gradient-to-br from-[#5865F2] via-[#4752C4] to-[#3C45A5]"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_80%_-10%,rgba(255,255,255,0.12),transparent)]"></div>
+      <div class="pointer-events-none absolute -right-12 -bottom-12 h-56 w-56 rounded-full bg-white/5 blur-3xl"></div>
+
+      <div class="relative px-6 py-8 sm:px-10 sm:py-10 flex flex-col items-center text-center md:flex-row md:items-center md:text-left gap-6 md:gap-10">
+        <div class="flex-shrink-0">
+          <div class="flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-2xl bg-white/15 backdrop-blur-sm shadow-lg">
+            <svg class="h-10 w-10 sm:h-12 sm:w-12 text-white" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03z" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="flex-1 min-w-0">
+          <div class="mb-2 inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-[11px] font-bold text-white/90 uppercase tracking-widest">
+            <span class="h-2 w-2 rounded-full bg-green-400 animate-pulse"></span>
+            3,800+ Members Online
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-black text-white mb-2">
+            Join The Trading Desk
+          </h2>
+          <p class="text-sm text-white/70 leading-relaxed max-w-lg md:max-w-lg mx-auto md:mx-0">
+            Connect with thousands of prop firm traders. Get real-time deal alerts, payout proof, firm updates, and trading discussion — all in one place.
+          </p>
+        </div>
+
+        <div class="flex-shrink-0">
+          <a
+            href="https://discord.gg/cKDj3pBUjb"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group inline-flex items-center gap-2.5 rounded-xl bg-white px-6 py-3.5 font-bold text-[#5865F2] shadow-lg transition-all duration-200 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
+          >
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03z" />
+            </svg>
+            Join Discord Server
+            <svg class="h-4 w-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ══════════════════════════════════════════════════════════════════════
        SEO CONTENT
        ══════════════════════════════════════════════════════════════════════ -->
@@ -1063,27 +1167,27 @@ const challengeRows = allOffers
 
       <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 max-w-2xl mx-auto">
         <!-- X (Twitter) -->
-        <a href="https://x.com/bestpropfirms" target="_blank" rel="noopener noreferrer" class="group flex flex-col items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-5 transition-all duration-200 hover:bg-white/10 hover:border-white/20">
+        <a href="https://x.com/Prop_Firms" target="_blank" rel="noopener noreferrer" class="group flex flex-col items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-5 transition-all duration-200 hover:bg-white/10 hover:border-white/20">
           <svg class="h-6 w-6 text-slate-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           <span class="text-[11px] font-semibold text-slate-400 group-hover:text-white transition-colors">X</span>
         </a>
         <!-- Facebook -->
-        <a href="https://www.facebook.com/bestpropfirms/" target="_blank" rel="noopener noreferrer" class="group flex flex-col items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-5 transition-all duration-200 hover:bg-blue-500/10 hover:border-blue-500/30">
+        <a href="https://www.facebook.com/bestpropfirmscom/" target="_blank" rel="noopener noreferrer" class="group flex flex-col items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-5 transition-all duration-200 hover:bg-blue-500/10 hover:border-blue-500/30">
           <svg class="h-6 w-6 text-slate-400 group-hover:text-blue-400 transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
           <span class="text-[11px] font-semibold text-slate-400 group-hover:text-blue-400 transition-colors">Facebook</span>
         </a>
         <!-- Instagram -->
-        <a href="https://www.instagram.com/bestpropfirms/" target="_blank" rel="noopener noreferrer" class="group flex flex-col items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-5 transition-all duration-200 hover:bg-pink-500/10 hover:border-pink-500/30">
+        <a href="https://www.instagram.com/prop_firms_/" target="_blank" rel="noopener noreferrer" class="group flex flex-col items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-5 transition-all duration-200 hover:bg-pink-500/10 hover:border-pink-500/30">
           <svg class="h-6 w-6 text-slate-400 group-hover:text-pink-400 transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
           <span class="text-[11px] font-semibold text-slate-400 group-hover:text-pink-400 transition-colors">Instagram</span>
         </a>
         <!-- YouTube -->
-        <a href="https://www.youtube.com/@BestPropFirms" target="_blank" rel="noopener noreferrer" class="group flex flex-col items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-5 transition-all duration-200 hover:bg-red-500/10 hover:border-red-500/30">
+        <a href="https://www.youtube.com/@propfirms" target="_blank" rel="noopener noreferrer" class="group flex flex-col items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-5 transition-all duration-200 hover:bg-red-500/10 hover:border-red-500/30">
           <svg class="h-6 w-6 text-slate-400 group-hover:text-red-400 transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
           <span class="text-[11px] font-semibold text-slate-400 group-hover:text-red-400 transition-colors">YouTube</span>
         </a>
         <!-- Discord -->
-        <a href="https://discord.gg/bestpropfirms" target="_blank" rel="noopener noreferrer" class="group flex flex-col items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-5 transition-all duration-200 hover:bg-[#5865F2]/10 hover:border-[#5865F2]/30 col-span-2 sm:col-span-1">
+        <a href="https://discord.gg/cKDj3pBUjb" target="_blank" rel="noopener noreferrer" class="group flex flex-col items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-5 transition-all duration-200 hover:bg-[#5865F2]/10 hover:border-[#5865F2]/30 col-span-2 sm:col-span-1">
           <svg class="h-6 w-6 text-slate-400 group-hover:text-[#5865F2] transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03z"/></svg>
           <span class="text-[11px] font-semibold text-slate-400 group-hover:text-[#5865F2] transition-colors">Discord</span>
         </a>
@@ -1174,36 +1278,7 @@ const challengeRows = allOffers
       </div>
 
       <div class="space-y-3">
-        {[
-          {
-            q: "What is a prop trading code?",
-            a: "A prop trading code is a discount code that reduces the cost of your prop firm challenge, helping you save money upfront. At Best Prop Firms, we offer exclusive codes that you won't find elsewhere, giving you access to the best deals in the industry. Our codes cover trusted firms like FundedNext Futures, FXIFY, and DNA Funded, with savings of up to 26%. Check this page often for the latest working promo codes."
-          },
-          {
-            q: "How to get a free prop firm account?",
-            a: "To get a free prop firm account, follow Best Prop Firms on social media for a chance to enter exclusive giveaways and draws. We regularly host promotions where traders can win funded accounts from firms like BrightFunded and FXIFY. By staying connected on platforms like X and Facebook, you'll never miss an opportunity to save on challenge fees or even secure a fully funded trading account for free."
-          },
-          {
-            q: "Is prop trading worth it?",
-            a: "Prop trading is worth it if you want to trade large capital without risking your own funds, and at Best Prop Firms, we help you find the best opportunities. With access to scaling programs, payout guarantees, and refund offers from leading prop firms, traders can build sustainable income streams. However, success in prop trading depends on sticking to the firm's rules, managing risk carefully, and choosing the right firm that matches your trading style."
-          },
-          {
-            q: "Which prop firm actually pays?",
-            a: "Best Prop Firms only lists prop firms that we assess thoroughly for real payouts, reliable support, and trust factors. Firms like FundedNext Futures offer payout guarantees within 24 hours, while others like DNA Funded and IC Funded have verified payout histories. Our methodology for ranking prop firms looks at factors like trust scores, user reviews, payment speed, and transparency, before we make recommendations."
-          },
-          {
-            q: "Do prop firm discount codes expire?",
-            a: "Most prop firm discount codes listed on Best Prop Firms do not have a set expiration date and remain active for extended periods. However, promotional codes tied to seasonal events like Black Friday, Cyber Monday, or Valentine's Day are typically time-limited and will expire once the promotion ends. To make sure a code is still valid before you use it, check the \"Last verified\" date displayed next to each coupon on this page. We regularly verify every code so you can shop with confidence knowing the discount will apply at checkout."
-          },
-          {
-            q: "Can you stack multiple prop firm discount codes?",
-            a: "Whether you can combine multiple discount codes on a single purchase depends entirely on the prop firm. Some firms allow you to apply a promo code on top of an existing sale or bundle offer, while others restrict usage to one code per transaction. The best way to find out is to check the terms and conditions on the prop firm's website or try applying both codes at checkout. If stacking is not permitted, we recommend using whichever single code gives you the largest overall saving on your challenge fee."
-          },
-          {
-            q: "Which prop firm has the biggest discount right now?",
-            a: "The best way to find the biggest prop firm discount is to browse the full list of verified coupon codes above. You can compare percentage savings across every firm at a glance, and our Savings tab lets you see exactly how much you will pay for a $100K challenge after each discount is applied. Best Prop Firms negotiates industry-exclusive codes that are not available anywhere else, so the deals you see on this page often beat what you will find on the prop firm's own website. We update and verify codes regularly to make sure you always have access to the best possible price."
-          },
-        ].map((faq) => (
+        {faqs.map((faq) => (
           <details class="group rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-200 hover:border-slate-300">
             <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left text-sm font-bold text-slate-900 select-none [&::-webkit-details-marker]:hidden">
               {faq.q}

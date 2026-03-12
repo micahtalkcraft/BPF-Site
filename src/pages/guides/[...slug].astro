@@ -2,6 +2,7 @@
 import Base from "../../layouts/Base.astro";
 import { getCollection } from "astro:content";
 import ScoreBadge from "../../components/shared/ScoreBadge.astro";
+import { getAuthorSchema, getPublisherSchema, getBreadcrumbSchema, SITE_URL } from "../../helpers/schema";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -45,23 +46,51 @@ const morePosts = allPosts
 
 const siteUrl = "https://www.bestpropfirms.com";
 
-const articleJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  headline: post.data.title,
-  description: post.data.excerpt,
-  datePublished: post.data.publishedAt,
-  author: post.data.author
-    ? { "@type": "Person", name: post.data.author, ...(post.data.authorImage && { image: post.data.authorImage }) }
-    : { "@type": "Organization", name: "BestPropFirms.com" },
-  publisher: {
-    "@type": "Organization",
-    name: "BestPropFirms.com",
-    url: siteUrl,
-  },
-  ...(post.data.coverImage && { image: post.data.coverImage }),
-  mainEntityOfPage: `${siteUrl}/guides/${post.id.replace(/\.md$/, "")}`,
+const guideSlug = post.id.replace(/\.md$/, "");
+const pageUrl = `${siteUrl}/guides/${guideSlug}/`;
+
+// Map author display name to schema slug
+const authorSlugMap: Record<string, string> = {
+  "Noam Korbl": "noam-korbl",
+  "Justin Grossbard": "justin-grossbard",
+  "Tegan Miller": "tegan-miller",
 };
+const authorSlug = authorSlugMap[post.data.author] ?? "noam-korbl";
+
+const articleJsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": pageUrl,
+    url: pageUrl,
+    name: post.data.title,
+    description: post.data.excerpt,
+    about: {
+      "@type": "Thing",
+      name: "Proprietary trading",
+      sameAs: "https://en.wikipedia.org/wiki/Proprietary_trading",
+    },
+    isPartOf: { "@id": `${siteUrl}/#website` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `${pageUrl}#article`,
+    headline: post.data.title,
+    description: post.data.excerpt,
+    ...(post.data.coverImage && { image: post.data.coverImage }),
+    datePublished: post.data.publishedAt,
+    dateModified: post.data.publishedAt,
+    mainEntityOfPage: { "@id": pageUrl },
+    author: getAuthorSchema(authorSlug),
+    publisher: getPublisherSchema(),
+  },
+  getBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Guides", url: "/guides/" },
+    { name: post.data.title },
+  ]),
+];
 
 // Load prop firm + review data for featured firms (if any)
 const propFirms = await getCollection("prop-firms");

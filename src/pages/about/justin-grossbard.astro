@@ -1,7 +1,27 @@
 ---
 import Base from "../../layouts/Base.astro";
+import { getAuthorProfileSchema, getBreadcrumbSchema, SITE_URL } from "../../helpers/schema";
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "@id": `${SITE_URL}/about/justin-grossbard/`,
+    url: `${SITE_URL}/about/justin-grossbard/`,
+    name: "Justin Grossbard — CEO & Co-Founder",
+    description: "Justin Grossbard is the CEO and Co-Founder of BestPropFirms.com. He holds a Masters Degree from Monash University and an RG146 qualification.",
+    dateModified: "2026-03-12",
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    mainEntity: getAuthorProfileSchema("justin-grossbard"),
+  },
+  getBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "About Us", url: "/about/" },
+    { name: "Justin Grossbard" },
+  ]),
+];
 
 const publications = [
   {
@@ -43,6 +63,7 @@ const mediaLogos = [
 <Base
   title="Justin Grossbard — Co-Founder & Strategic Head of Research | BestPropFirms.com"
   description="Learn about Justin Grossbard, co-founder of BestPropFirms.com. With decades of expertise in digital marketing and online trading, Justin leads strategic research for the platform."
+  jsonLd={jsonLd}
 >
   <!-- Hero -->
   <section class="relative bg-[#0d1b2a] text-white py-16 sm:py-20 px-4 overflow-hidden">
