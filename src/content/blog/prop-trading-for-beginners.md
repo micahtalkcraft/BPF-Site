@@ -7,7 +7,7 @@ author: "Noam Korbl"
 authorImage: "/images/team/noam-korbl-300x280-1.png"
 publishedAt: "2026-02-27"
 featured: false
-coverImage: "/images/guides/beginners.png"
+coverImage: "/images/blog/bet for beginners.png"
 readingTimeMinutes: 25
 ---
 

@@ -107,7 +107,10 @@
       "Bash(grep -A5 '\"\"custom\"\"' src/content/prop-firms/fundednext.json)",
       "Bash(grep -A5 '\"\"custom\"\"' src/content/prop-firms/fundednext-futures.json)",
       "Bash(grep '\"\"trustpilotRating\"\"' src/content/prop-firms/fundednext-futures.json)",
-      "Bash(grep '\"\"overallScore\"\"' src/content/reviews/rev-fundednext-futures.json)"
+      "Bash(grep '\"\"overallScore\"\"' src/content/reviews/rev-fundednext-futures.json)",
+      "Bash(gh auth:*)",
+      "Bash(for f:*)",
+      "Bash(do head:*)"
     ]
   }
 }

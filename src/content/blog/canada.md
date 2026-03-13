@@ -7,7 +7,7 @@ author: "Noam Korbl"
 authorImage: "https://www.bestpropfirms.com/wp-content/uploads/2023/08/noam-korbl-300x280-1.png"
 publishedAt: "2026-02-26"
 featured: false
-coverImage: "/images/blog/Canada brokers.png"
+coverImage: "/images/blog/canada article.png"
 readingTimeMinutes: 14
 youtubeVideoId: "QHPnbIvv2qA"
 featuredFirms:

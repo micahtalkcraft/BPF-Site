@@ -7,6 +7,7 @@ author: "Noam Korbl"
 authorImage: "https://www.bestpropfirms.com/wp-content/uploads/2023/08/noam-korbl-300x280-1.png"
 publishedAt: "2026-03-10"
 featured: false
+coverImage: "/images/blog/forex prop trading guide.png"
 readingTimeMinutes: 18
 featuredFirms:
   - slug: "ftmo"

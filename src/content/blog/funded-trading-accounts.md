@@ -7,7 +7,7 @@ author: "Noam Korbl"
 authorImage: "https://www.bestpropfirms.com/wp-content/uploads/2023/08/noam-korbl-300x280-1.png"
 publishedAt: "2026-02-27"
 featured: false
-coverImage: "/images/blog/funded.png"
+coverImage: "/images/blog/funded trading accounts.png"
 readingTimeMinutes: 20
 youtubeVideoId: "dZ7gorgnMvU"
 featuredFirms:
