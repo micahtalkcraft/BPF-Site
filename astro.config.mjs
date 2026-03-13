@@ -13,7 +13,7 @@ const siteBase = isGitHubPages ? '/BPF-Site' : '/';
 export default defineConfig({
   site: isGitHubPages
     ? 'https://micahtalkcraft.github.io'
-    : 'https://www.bestpropfirms.com',
+    : 'https://reviews.bestpropfirms.com',
   base: siteBase,
   output: 'static',
   integrations: [react(), sitemap()],

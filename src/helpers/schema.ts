@@ -3,7 +3,7 @@
  * Single source of truth for author data, publisher blocks, breadcrumbs, and FAQ schema.
  */
 
-export const SITE_URL = "https://www.bestpropfirms.com";
+export const SITE_URL = "https://reviews.bestpropfirms.com";
 export const SITE_LOGO = `${SITE_URL}/images/brand/best-prop-firms-site-logo.png`;
 
 // Author data store

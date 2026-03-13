@@ -44,7 +44,7 @@ const morePosts = allPosts
   .sort((a, b) => new Date(b.data.publishedAt).getTime() - new Date(a.data.publishedAt).getTime())
   .slice(0, 3);
 
-const siteUrl = "https://www.bestpropfirms.com";
+const siteUrl = "https://reviews.bestpropfirms.com";
 
 const guideSlug = post.id.replace(/\.md$/, "");
 const pageUrl = `${siteUrl}/guides/${guideSlug}/`;
