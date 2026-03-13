@@ -9,7 +9,6 @@ publishedAt: "2026-02-26"
 featured: false
 coverImage: "/images/blog/best stock trading.png"
 readingTimeMinutes: 20
-youtubeVideoId: "dZ7gorgnMvU"
 featuredFirms:
   - slug: "blueberry-funded"
     descriptor: "Best Stock Prop Firm"

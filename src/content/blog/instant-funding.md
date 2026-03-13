@@ -9,7 +9,6 @@ publishedAt: "2026-02-26"
 featured: false
 coverImage: "/images/blog/best instant funding.png"
 readingTimeMinutes: 18
-youtubeVideoId: "dZ7gorgnMvU"
 featuredFirms:
   - slug: "blueberry-funded"
     descriptor: "Best Instant Funding Prop Firm Overall"

@@ -9,7 +9,6 @@ publishedAt: "2026-02-15"
 featured: true
 coverImage: "/images/blog/UK article.png"
 readingTimeMinutes: 14
-youtubeVideoId: "QHPnbIvv2qA"
 featuredFirms:
   - slug: "fundednext"
     descriptor: "Best Prop Firm for UK Traders"

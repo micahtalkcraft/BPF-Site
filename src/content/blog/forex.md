@@ -9,7 +9,6 @@ publishedAt: "2026-02-26"
 featured: false
 coverImage: "/images/blog/forex prop firms.png"
 readingTimeMinutes: 22
-youtubeVideoId: "dZ7gorgnMvU"
 featuredFirms:
   - slug: "fundednext"
     descriptor: "Best Forex Prop Firm Overall"

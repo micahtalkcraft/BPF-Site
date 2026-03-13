@@ -9,7 +9,6 @@ publishedAt: "2026-02-26"
 featured: false
 coverImage: "/images/blog/best crypto firms.png"
 readingTimeMinutes: 18
-youtubeVideoId: "dZ7gorgnMvU"
 featuredFirms:
   - slug: "brightfunded"
     descriptor: "Best Crypto Prop Trading Firm Overall"

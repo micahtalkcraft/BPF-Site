@@ -9,7 +9,6 @@ publishedAt: "2026-02-26"
 featured: false
 coverImage: "/images/blog/australia article.png"
 readingTimeMinutes: 14
-youtubeVideoId: "dZ7gorgnMvU"
 featuredFirms:
   - slug: "dna-funded"
     descriptor: "Best Prop Firm For Australian Traders"
