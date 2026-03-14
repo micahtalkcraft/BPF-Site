@@ -2,6 +2,7 @@
 import Base from "../../layouts/Base.astro";
 import { getCollection } from "astro:content";
 import ScoreBadge from "../../components/shared/ScoreBadge.astro";
+import Breadcrumbs from "../../components/shared/Breadcrumbs.astro";
 import { getAuthorSchema, getPublisherSchema, getBreadcrumbSchema, SITE_URL } from "../../helpers/schema";
 
 export async function getStaticPaths() {
@@ -205,6 +206,10 @@ const featuredFirmCards: FeaturedFirmCard[] = (post.data.featuredFirms ?? []).ma
       </div>
     </div>
   </section>
+
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-4">
+    <Breadcrumbs crumbs={[{ name: "Home", url: "/" }, { name: "Guides", url: "/guides/" }, { name: post.data.title }]} />
+  </div>
 
   <!-- Cover image (only when no video AND no featured firms sidebar) -->
   {post.data.coverImage && !post.data.youtubeVideoId && featuredFirmCards.length === 0 && (

@@ -1,5 +1,6 @@
 ---
 import Base from "../../layouts/Base.astro";
+import Breadcrumbs from "../../components/shared/Breadcrumbs.astro";
 import { getAuthorProfileSchema, getBreadcrumbSchema, SITE_URL } from "../../helpers/schema";
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
@@ -93,6 +94,10 @@ const mediaLogos = [
       </div>
     </div>
   </section>
+
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pt-4">
+    <Breadcrumbs crumbs={[{ name: "Home", url: "/" }, { name: "About Us", url: "/about/" }, { name: "Tegan Miller" }]} />
+  </div>
 
   <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pt-16 pb-12">
 
