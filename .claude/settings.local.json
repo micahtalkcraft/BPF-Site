@@ -127,7 +127,10 @@
       "Bash(mv instant-funding.md instant.md)",
       "Bash(grep -o 'youtube[^ \"\"\"\"<]*' dist/guides/funded-accounts/index.html)",
       "Bash(rm -rf .astro/collections)",
-      "Bash(rm -rf node_modules/.astro)"
+      "Bash(rm -rf node_modules/.astro)",
+      "Bash(for page:*)",
+      "Bash(do echo:*)",
+      "Read(//c/Users/Admin/OneDrive/Documents/BPF Site/dist/guides/$page/**)"
     ]
   }
 }

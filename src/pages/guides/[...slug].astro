@@ -58,22 +58,90 @@ const authorSlugMap: Record<string, string> = {
 };
 const authorSlug = authorSlugMap[post.data.author] ?? "noam-korbl";
 
-const articleJsonLd = [
-  {
+// Comparison/ranking pages get ItemList schema; educational pages keep Article schema
+const comparisonSlugs = new Set([
+  "australia", "uk", "canada", "india",
+  "forex", "futures", "crypto", "stocks", "etf",
+  "instant", "funded-accounts", "test",
+]);
+const isComparisonPage = comparisonSlugs.has(guideSlug);
+
+// Load prop firm + review data early (needed for ItemList schema on comparison pages)
+const propFirms = await getCollection("prop-firms");
+const reviews = await getCollection("reviews");
+const reviewMap = Object.fromEntries(reviews.map((r) => [r.data.propFirmId, r.data]));
+const firmMap = Object.fromEntries(propFirms.map((f) => [f.data.slug, f.data]));
+
+// Build WebPage block — includes author on comparison pages (moved from Article)
+const webPageBlock: Record<string, unknown> = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": pageUrl,
+  url: pageUrl,
+  name: post.data.title,
+  description: post.data.excerpt,
+  about: {
+    "@type": "Thing",
+    name: "Proprietary trading",
+    sameAs: "https://en.wikipedia.org/wiki/Proprietary_trading",
+  },
+  isPartOf: { "@id": `${siteUrl}/#website` },
+};
+
+if (isComparisonPage) {
+  webPageBlock.datePublished = post.data.publishedAt;
+  webPageBlock.dateModified = post.data.publishedAt;
+  webPageBlock.author = getAuthorSchema(authorSlug);
+}
+
+// Build ItemList or Article block
+let contentSchemaBlock: Record<string, unknown>;
+
+if (isComparisonPage && post.data.featuredFirms && post.data.featuredFirms.length > 0) {
+  // ItemList schema for comparison/ranking pages
+  contentSchemaBlock = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": pageUrl,
-    url: pageUrl,
+    "@type": "ItemList",
+    "@id": `${pageUrl}#firmlist`,
     name: post.data.title,
     description: post.data.excerpt,
-    about: {
-      "@type": "Thing",
-      name: "Proprietary trading",
-      sameAs: "https://en.wikipedia.org/wiki/Proprietary_trading",
-    },
-    isPartOf: { "@id": `${siteUrl}/#website` },
-  },
-  {
+    numberOfItems: post.data.featuredFirms.length,
+    itemListOrder: "https://schema.org/ItemListOrderDescending",
+    itemListElement: post.data.featuredFirms.map((ff: { slug: string; descriptor: string }, i: number) => {
+      const firm = firmMap[ff.slug];
+      const review = firm ? reviewMap[firm.id] : undefined;
+      const score = review?.overallScore;
+      const listItem: Record<string, unknown> = {
+        "@type": "ListItem",
+        position: i + 1,
+        item: {
+          "@type": "Product",
+          name: firm?.name ?? ff.slug,
+          url: `${siteUrl}/reviews/${ff.slug}/`,
+          brand: {
+            "@type": "Brand",
+            name: firm?.name ?? ff.slug,
+          },
+        },
+      };
+      if (score && score > 0) {
+        (listItem.item as Record<string, unknown>).review = {
+          "@type": "Review",
+          reviewRating: {
+            "@type": "Rating",
+            ratingValue: String(score),
+            bestRating: "100",
+            worstRating: "0",
+          },
+          author: { "@id": `${siteUrl}/#organization` },
+        };
+      }
+      return listItem;
+    }),
+  };
+} else {
+  // Article schema for educational pages
+  contentSchemaBlock = {
     "@context": "https://schema.org",
     "@type": "Article",
     "@id": `${pageUrl}#article`,
@@ -85,19 +153,18 @@ const articleJsonLd = [
     mainEntityOfPage: { "@id": pageUrl },
     author: getAuthorSchema(authorSlug),
     publisher: getPublisherSchema(),
-  },
+  };
+}
+
+const articleJsonLd = [
+  webPageBlock,
+  contentSchemaBlock,
   getBreadcrumbSchema([
     { name: "Home", url: "/" },
     { name: "Guides", url: "/guides/" },
     { name: post.data.title },
   ]),
 ];
-
-// Load prop firm + review data for featured firms (if any)
-const propFirms = await getCollection("prop-firms");
-const reviews = await getCollection("reviews");
-const reviewMap = Object.fromEntries(reviews.map((r) => [r.data.propFirmId, r.data]));
-const firmMap = Object.fromEntries(propFirms.map((f) => [f.data.slug, f.data]));
 
 // Determine region flag from tags
 const tags = post.data.tags.map((t: string) => t.toLowerCase());
