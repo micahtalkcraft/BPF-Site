@@ -9,7 +9,6 @@ publishedAt: "2026-02-27"
 featured: false
 coverImage: "/images/blog/funded-trading-accounts.webp"
 readingTimeMinutes: 20
-youtubeVideoId: "dZ7gorgnMvU"
 featuredFirms:
   - slug: "fundednext"
     descriptor: "Best Funded Account Overall"
@@ -23,7 +22,7 @@ featuredFirms:
     descriptor: "Prop Firm Paying Trader Salaries"
   - slug: "ftmo"
     descriptor: "Best Funded Account for Stocks"
-  - slug: "thinkcapital"
+  - slug: "think-capital"
     descriptor: "High Leverage Funded Accounts"
   - slug: "ic-funded"
     descriptor: "Funded Accounts with Low Spreads"

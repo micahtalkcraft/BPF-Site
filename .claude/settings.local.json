@@ -124,7 +124,10 @@
       "Bash(mv funded-trading-accounts.md funded-accounts.md)",
       "Bash(mv forex-trading.md forex-guide.md)",
       "Bash(mv crypto-trading.md crypto-guide.md)",
-      "Bash(mv instant-funding.md instant.md)"
+      "Bash(mv instant-funding.md instant.md)",
+      "Bash(grep -o 'youtube[^ \"\"\"\"<]*' dist/guides/funded-accounts/index.html)",
+      "Bash(rm -rf .astro/collections)",
+      "Bash(rm -rf node_modules/.astro)"
     ]
   }
 }

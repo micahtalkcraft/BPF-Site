@@ -9,7 +9,6 @@ publishedAt: "2026-02-27"
 featured: false
 coverImage: "/images/blog/etf-prop-firms.webp"
 readingTimeMinutes: 18
-youtubeVideoId: "oIPQPwGXGac"
 featuredFirms:
   - slug: "eightcap"
     descriptor: "Best ETF Prop Challenges"

@@ -213,7 +213,7 @@ const featuredFirmCards: FeaturedFirmCard[] = (post.data.featuredFirms ?? []).ma
 
   <!-- Cover image (only when no video AND no featured firms sidebar) -->
   {post.data.coverImage && !post.data.youtubeVideoId && featuredFirmCards.length === 0 && (
-    <div class="mx-auto max-w-3xl px-4 -mt-6 mb-8 relative z-10">
+    <div class="mx-auto max-w-3xl px-4 mt-4 mb-8">
       <img
         src={assetUrl(post.data.coverImage)}
         alt={post.data.title}
