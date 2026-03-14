@@ -1,13 +1,13 @@
 ---
 title: "Best Prop Firms for Canadian Traders"
-excerpt: "Our list of the best prop firms in Canada offer a range of popular features like low fee challenges, high profit splits, scaling plans, instant funding, and more. To determine which prop firms are best for Canadian traders, we opened challenge accounts with each to test their trading conditions and platforms."
+excerpt: "Ranked prop firms for Canadian traders in 2026. Compare challenge fees, profit splits, scaling plans, and platform options."
 category: "Regional"
 tags: ["Canada", "forex", "funded accounts"]
 author: "Noam Korbl"
 authorImage: "https://www.bestpropfirms.com/wp-content/uploads/2023/08/noam-korbl-300x280-1.png"
 publishedAt: "2026-02-26"
 featured: false
-coverImage: "/images/blog/canada article.png"
+coverImage: "/images/blog/canada-article.webp"
 readingTimeMinutes: 14
 youtubeVideoId: "QHPnbIvv2qA"
 featuredFirms:
@@ -902,7 +902,7 @@ The most legit prop firm is DNA Funded, backed by the ASIC-regulated broker DNA 
 
 DNA Funded offers access to over 800 markets, including forex, indices, and commodities, along with solid platforms like TradeLocker. This firm's strong regulatory ties and clear trading rules make it a top choice for legitimacy and trust.
 
-To find out more about who is the most trusted in the prop trading space, read about the [best prop trading firms](/prop-firms).
+To find out more about who is the most trusted in the prop trading space, read about the [best prop trading firms](/reviews/).
 
 ### Which prop firm is the best for futures?
 

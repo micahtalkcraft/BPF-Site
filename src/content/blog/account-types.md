@@ -1,13 +1,13 @@
 ---
 title: "Prop Trading Account Types: One-Step, Two-Step, Instant Funding & More"
-excerpt: "Prop trading firms give traders access to capital without risking personal funds. Account types vary from quick one-step challenges to multi-step evaluations and instant funding options."
+excerpt: "Prop trading account types explained - one-step, two-step, instant funding, and more. Compare evaluation structures."
 category: "Education"
 tags: ["prop trading", "account types", "evaluations", "instant funding", "funded accounts"]
 author: "Noam Korbl"
 authorImage: "/images/team/noam-korbl-300x280-1.png"
 publishedAt: "2026-02-27"
 featured: false
-coverImage: "/images/blog/propfirm account types.png"
+coverImage: "/images/blog/propfirm-account-types.webp"
 readingTimeMinutes: 20
 ---
 

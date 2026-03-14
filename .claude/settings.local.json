@@ -110,7 +110,21 @@
       "Bash(grep '\"\"overallScore\"\"' src/content/reviews/rev-fundednext-futures.json)",
       "Bash(gh auth:*)",
       "Bash(for f:*)",
-      "Bash(do head:*)"
+      "Bash(do head:*)",
+      "Bash(mv pros-and-cons-of-prop-trading.md pros-cons.md)",
+      "Bash(mv prop-firms.md test.md)",
+      "Bash(mv how-do-prop-firms-pay-you.md how-pay-you.md)",
+      "Bash(mv what-is-a-prop-firm.md what-is.md)",
+      "Bash(mv how-prop-firms-make-money.md how-make-money.md)",
+      "Bash(mv how-prop-trading-challenges-work.md how-challenges-work.md)",
+      "Bash(mv prop-trading-for-beginners.md beginners.md)",
+      "Bash(mv prop-trading-account-types.md account-types.md)",
+      "Bash(mv prop-trading-strategies.md strategies.md)",
+      "Bash(mv risk-management-prop-trading.md risk-management.md)",
+      "Bash(mv funded-trading-accounts.md funded-accounts.md)",
+      "Bash(mv forex-trading.md forex-guide.md)",
+      "Bash(mv crypto-trading.md crypto-guide.md)",
+      "Bash(mv instant-funding.md instant.md)"
     ]
   }
 }

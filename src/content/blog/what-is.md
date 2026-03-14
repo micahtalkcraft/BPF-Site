@@ -1,13 +1,13 @@
 ---
 title: "What is a Prop Trading Firm? A Complete Guide for 2026"
-excerpt: "Everything you need to know about proprietary trading firms — how they work, the different types, how they compare to forex brokers, the pros and cons, and how to choose the right one for you."
+excerpt: "What is a prop trading firm? How they work, the types available, and how to choose the right one. Complete guide for 2026."
 category: "Education"
 tags: ["beginner", "explained", "evaluation", "funded accounts", "prop trading"]
 author: "Noam Korbl"
 authorImage: "/images/team/noam-korbl-300x280-1.png"
 publishedAt: "2026-02-27"
 featured: false
-coverImage: "/images/blog/what is a prop firm.png"
+coverImage: "/images/blog/what-is-a-prop-firm.webp"
 readingTimeMinutes: 18
 ---
 

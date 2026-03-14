@@ -102,7 +102,7 @@ const jsonLd = [
         item: {
           "@type": "Product",
           name: f.data.name,
-          url: `${siteUrl}/reviews/${f.data.slug}`,
+          url: `${siteUrl}/reviews/${f.data.slug}/`,
           brand: {
             "@type": "Brand",
             name: f.data.name,
@@ -212,10 +212,10 @@ const firmItems: FirmItem[] = sortedFirms.map((f, idx) => {
         Every ranking is built from a single verified data record. Transparent scores across <span class="font-bold text-white">{totalFirms} evaluated firms</span> with no guesswork, no paid placements.
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-        <a href={`${base}/reviews`} class="w-full sm:w-auto rounded-lg bg-teal-500 px-6 py-3 font-semibold text-white hover:bg-teal-400 transition-colors shadow-lg shadow-teal-500/20">
+        <a href={`${base}/reviews/`} class="w-full sm:w-auto rounded-lg bg-teal-500 px-6 py-3 font-semibold text-white hover:bg-teal-400 transition-colors shadow-lg shadow-teal-500/20">
           See All Rankings
         </a>
-        <a href={`${base}/offers`} class="w-full sm:w-auto rounded-lg border border-white/20 px-6 py-3 font-semibold text-white hover:bg-white/10 transition-colors">
+        <a href={`${base}/offers/`} class="w-full sm:w-auto rounded-lg border border-white/20 px-6 py-3 font-semibold text-white hover:bg-white/10 transition-colors">
           View Exclusive Offers →
         </a>
       </div>
@@ -243,12 +243,26 @@ const firmItems: FirmItem[] = sortedFirms.map((f, idx) => {
         <h2 class="text-3xl font-black text-slate-900">All Prop Firms Ranked</h2>
         <p class="text-sm text-slate-500 mt-1">Sorted by our score, filter and search below</p>
       </div>
-      <a href={`${base}/reviews`} class="text-sm font-semibold text-teal-600 hover:text-teal-500 transition-colors whitespace-nowrap hidden sm:block">
+      <a href={`${base}/reviews/`} class="text-sm font-semibold text-teal-600 hover:text-teal-500 transition-colors whitespace-nowrap hidden sm:block">
         Detailed reviews →
       </a>
     </div>
 
     <FirmListIsland firms={firmItems} basePath={import.meta.env.BASE_URL.replace(/\/$/, '')} client:load />
+
+    <!-- Server-rendered links for crawlers — all firm review pages -->
+    <noscript>
+      <ul>
+        {sortedFirms.map((f) => (
+          <li><a href={`${base}/reviews/${f.data.slug}/`}>{f.data.name} Review</a></li>
+        ))}
+      </ul>
+    </noscript>
+    <div class="sr-only" aria-hidden="true">
+      {sortedFirms.map((f) => (
+        <a href={`${base}/reviews/${f.data.slug}/`}>{f.data.name}</a>
+      ))}
+    </div>
   </section>
 
   <!-- ── Latest Videos ──────────────────────────────────────────────────── -->
@@ -433,7 +447,7 @@ const firmItems: FirmItem[] = sortedFirms.map((f, idx) => {
         </div>
       </div>
       <div class="mt-10 text-center">
-        <a href={`${base}/methodology`} class="inline-flex items-center gap-2 rounded-lg border border-slate-200 px-5 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 transition-colors">
+        <a href={`${base}/methodology/`} class="inline-flex items-center gap-2 rounded-lg border border-slate-200 px-5 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 transition-colors">
           Read the full methodology →
         </a>
       </div>
@@ -593,7 +607,7 @@ const firmItems: FirmItem[] = sortedFirms.map((f, idx) => {
                 Join The Trading Desk
               </a>
               <a
-                href={`${base}/offers`}
+                href={`${base}/offers/`}
                 class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 hover:bg-white/10 px-6 py-3 font-bold text-white text-sm transition-colors"
               >
                 View All Offers

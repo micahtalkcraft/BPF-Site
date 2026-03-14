@@ -518,7 +518,7 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 flex-nowrap min-w-0">
                     <a
-                      href={`${basePath}/reviews/${firm.slug}`}
+                      href={`${basePath}/reviews/${firm.slug}/`}
                       className="text-lg font-extrabold text-slate-900 hover:text-teal-600 transition-colors truncate"
                     >
                       {firm.name}
@@ -591,7 +591,7 @@ export default function FirmListIsland({ firms, basePath = "" }: { firms: FirmIt
                   )}
                   <div className="hidden sm:flex flex-col gap-1.5">
                     <a
-                      href={`${basePath}/reviews/${firm.slug}`}
+                      href={`${basePath}/reviews/${firm.slug}/`}
                       className="inline-flex items-center justify-center gap-1 w-28 rounded-lg bg-teal-500 px-3 py-2.5 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap"
                     >
                       Read Review

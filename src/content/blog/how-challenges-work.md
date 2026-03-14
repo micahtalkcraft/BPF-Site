@@ -1,13 +1,13 @@
 ---
 title: "How Prop Trading Challenges Work: A Complete Guide"
-excerpt: "Prop firms fund skilled traders with significant capital in exchange for a share of profits. Learn how prop trading challenges work, what it takes to pass evaluations, stay funded, and build a long-term trading career."
+excerpt: "How prop trading challenges work - evaluation phases, profit targets, drawdown rules, and what it takes to get funded."
 category: "Guide"
 tags: ["prop trading", "challenges", "funded accounts", "evaluations", "risk management"]
 author: "Noam Korbl"
 authorImage: "https://www.bestpropfirms.com/wp-content/uploads/2023/08/noam-korbl-300x280-1.png"
 publishedAt: "2026-03-10"
 featured: false
-coverImage: "/images/blog/how prop trading works.png"
+coverImage: "/images/blog/how-prop-trading-works.webp"
 readingTimeMinutes: 18
 featuredFirms:
   - slug: "dna-funded"

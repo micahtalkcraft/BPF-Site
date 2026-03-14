@@ -1,13 +1,13 @@
 ---
 title: "Best Funded Trading Accounts (Verified Testing 2026)"
-excerpt: "We've reviewed the top funded trading accounts to compare profit splits, scaling opportunities, and challenge rules. This guide highlights the best proprietary trading firms and funded accounts for traders seeking capital growth, loyalty rewards, and fair evaluation processes."
+excerpt: "Compared funded trading accounts in 2026. See which prop firms offer the best profit splits, scaling, and challenge rules."
 category: "Guide"
 tags: ["funded accounts", "prop firms", "prop trading", "funded trading", "scaling"]
 author: "Noam Korbl"
 authorImage: "https://www.bestpropfirms.com/wp-content/uploads/2023/08/noam-korbl-300x280-1.png"
 publishedAt: "2026-02-27"
 featured: false
-coverImage: "/images/blog/funded trading accounts.png"
+coverImage: "/images/blog/funded-trading-accounts.webp"
 readingTimeMinutes: 20
 youtubeVideoId: "dZ7gorgnMvU"
 featuredFirms:

@@ -1,13 +1,13 @@
 ---
 title: "Best Futures Prop Firms (Verified Testing 2026)"
-excerpt: "We tested 16 futures prop firms firsthand in 2026 and ranked them based on funding options, profit splits, evaluation rules, and trading platform access. This shortlist of the 10 best futures prop firms looks at how each one scored and what you can expect in terms of trading conditions, fees, and payout models."
+excerpt: "We tested 16 futures prop firms in 2026 and ranked them by funding options, profit splits, evaluation rules, and platforms."
 category: "Guide"
 tags: ["futures", "prop firms", "funded accounts", "CME", "futures trading"]
 author: "Noam Korbl"
 authorImage: "https://www.bestpropfirms.com/wp-content/uploads/2023/08/noam-korbl-300x280-1.png"
 publishedAt: "2026-02-26"
 featured: false
-coverImage: "/images/blog/best futures.png"
+coverImage: "/images/blog/best-futures.webp"
 readingTimeMinutes: 22
 youtubeVideoId: "oIPQPwGXGac"
 featuredFirms:

@@ -1,13 +1,13 @@
 ---
 title: "How Do Prop Firms Pay You? Payouts, Profit Splits & Withdrawals"
-excerpt: "Getting paid as a funded trader depends on more than hitting profit targets. This guide outlines how prop firms handle payouts, including profit-sharing models, withdrawal methods, and the conditions that affect your ability to earn."
+excerpt: "How prop firms handle payouts - profit splits, withdrawal methods, payout schedules, and conditions explained for 2026."
 category: "Education"
 tags: ["payouts", "profit split", "withdrawals", "funded accounts", "prop trading"]
 author: "Noam Korbl"
 authorImage: "/images/team/noam-korbl-300x280-1.png"
 publishedAt: "2026-02-27"
 featured: false
-coverImage: "/images/blog/how do prop firms pay you.png"
+coverImage: "/images/blog/how-do-prop-firms-pay-you.webp"
 readingTimeMinutes: 22
 ---
 

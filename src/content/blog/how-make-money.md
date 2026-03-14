@@ -1,13 +1,13 @@
 ---
 title: "How Do Prop Firms Make Money? Revenue Streams Explained"
-excerpt: "Prop trading firms make money by sharing profits from funded traders and earning fees from challenges and educational resources. Learn how prop firms generate revenue and how their business model works."
+excerpt: "How prop firms generate revenue through challenge fees, profit splits, and educational products. Business model explained."
 category: "Guide"
 tags: ["prop trading", "funded accounts", "business model", "evaluations"]
 author: "Noam Korbl"
 authorImage: "https://www.bestpropfirms.com/wp-content/uploads/2023/08/noam-korbl-300x280-1.png"
 publishedAt: "2026-03-10"
 featured: false
-coverImage: "/images/blog/how prop pays you.png"
+coverImage: "/images/blog/how-prop-pays-you.webp"
 readingTimeMinutes: 16
 featuredFirms:
   - slug: "brightfunded"

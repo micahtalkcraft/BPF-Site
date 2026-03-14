@@ -1,13 +1,13 @@
 ---
 title: "Prop Trading for Beginners: How It Works, Challenges & Tips"
-excerpt: "A prop trading firm funds traders with its own capital, sharing profits while earning through fees and splits. Traders pass evaluations or join instant funding programs to access large capital without risking personal funds."
+excerpt: "New to prop trading? Learn how challenges work, what firms look for, and how to get funded without risking your own capital."
 category: "Education"
 tags: ["prop trading", "beginners", "evaluation", "funded accounts", "risk management"]
 author: "Noam Korbl"
 authorImage: "/images/team/noam-korbl-300x280-1.png"
 publishedAt: "2026-02-27"
 featured: false
-coverImage: "/images/blog/bet for beginners.png"
+coverImage: "/images/blog/bet-for-beginners.webp"
 readingTimeMinutes: 25
 ---
 
@@ -464,7 +464,7 @@ These rules exist to test two core trading skills — your profitability and ris
   </div>
 </div>
 
-To help you further with strategy development, you can read about [prop trading strategies](/guides/prop-trading-strategies) and [risk management techniques](/guides/risk-management-prop-trading).
+To help you further with strategy development, you can read about [prop trading strategies](/guides/strategies/) and [risk management techniques](/guides/risk-management/).
 
 ## The Prop Profit Sharing Model
 

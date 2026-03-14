@@ -16,6 +16,7 @@ export default defineConfig({
     : 'https://reviews.bestpropfirms.com',
   base: siteBase,
   output: 'static',
+  trailingSlash: 'always',
   integrations: [react(), sitemap()],
 
   markdown: {

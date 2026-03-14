@@ -1,13 +1,13 @@
 ---
 title: "Prop Trading Strategies: Scalping, Swing Trading, Arbitrage & More"
-excerpt: "Prop trading strategies are critical for managing risks and maximising profits with firm capital. Learn about scalping, swing trading, trend following, arbitrage, HFT, and how to choose the right approach."
+excerpt: "Key prop trading strategies including scalping, swing trading, and trend following. Practical guide for funded traders."
 category: "Education"
 tags: ["prop trading", "trading strategies", "scalping", "swing trading", "arbitrage", "risk management"]
 author: "Noam Korbl"
 authorImage: "/images/team/noam-korbl-300x280-1.png"
 publishedAt: "2026-02-27"
 featured: false
-coverImage: "/images/blog/strategies.png"
+coverImage: "/images/blog/strategies.webp"
 readingTimeMinutes: 22
 ---
 

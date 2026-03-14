@@ -1,13 +1,13 @@
 ---
 title: "Best Prop Firms for UK Traders"
-excerpt: "Our 2026 shortlist of the best prop firms for UK traders ranks firms with the best challenges and funded accounts for traders in the United Kingdom. Prop trading firms are ranked by spreads and fees, trading tools and platforms, trust and security, and more, all while accepting clients residing in the UK region."
+excerpt: "Ranked prop trading firms for UK traders in 2026. Compare challenges, funded accounts, spreads, and payout structures."
 category: "Regional"
 tags: ["UK", "forex", "regulation", "funded accounts"]
 author: "Noam Korbl"
 authorImage: "https://www.bestpropfirms.com/wp-content/uploads/2023/08/noam-korbl-300x280-1.png"
 publishedAt: "2026-02-15"
 featured: true
-coverImage: "/images/blog/UK article.png"
+coverImage: "/images/blog/uk-article.webp"
 readingTimeMinutes: 14
 featuredFirms:
   - slug: "fundednext"

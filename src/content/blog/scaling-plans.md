@@ -1,13 +1,13 @@
 ---
 title: "Prop Scaling Plans: How to Grow Your Funded Account"
-excerpt: "Scaling plans are a core feature of prop trading, rewarding consistent traders with more capital and better profit splits. Learn how they work, what firms offer the best programs, and how to scale up successfully."
+excerpt: "How prop firm scaling plans work - grow your funded account with more capital and higher profit splits. Guide for 2026."
 category: "Guide"
 tags: ["scaling plans", "prop trading", "funded accounts", "capital growth"]
 author: "Noam Korbl"
 authorImage: "https://www.bestpropfirms.com/wp-content/uploads/2023/08/noam-korbl-300x280-1.png"
 publishedAt: "2026-03-10"
 featured: false
-coverImage: "/images/blog/best scaling.png"
+coverImage: "/images/blog/best-scaling.webp"
 readingTimeMinutes: 20
 featuredFirms:
   - slug: "brightfunded"

@@ -1,13 +1,13 @@
 ---
 title: "Forex Prop Trading Explained: A Complete Guide"
-excerpt: "Forex prop trading lets you access larger trading accounts, keep a big chunk of the profits, and trade without risking personal funds. Our guide breaks down how it works, the benefits, and what to expect."
+excerpt: "How forex prop trading works in 2026. Access larger accounts, keep most of the profits, and trade without personal risk."
 category: "Guide"
 tags: ["forex", "prop trading", "funded accounts", "leverage"]
 author: "Noam Korbl"
 authorImage: "https://www.bestpropfirms.com/wp-content/uploads/2023/08/noam-korbl-300x280-1.png"
 publishedAt: "2026-03-10"
 featured: false
-coverImage: "/images/blog/forex prop trading guide.png"
+coverImage: "/images/blog/forex-prop-trading-guide.webp"
 readingTimeMinutes: 18
 featuredFirms:
   - slug: "ftmo"

@@ -1,13 +1,13 @@
 ---
 title: "Prop Firm Evaluations: How to Pass and Get Funded"
-excerpt: "Prop firm evaluations test traders on profitability and risk management before granting access to firm capital. Learn how evaluations work, the different challenge types, common rules, and how to pass the evaluation process."
+excerpt: "How prop firm evaluations work - challenge types, common rules, profit targets, and drawdown limits explained for 2026."
 category: "Guide"
 tags: ["evaluations", "prop trading", "funded accounts", "challenges"]
 author: "Noam Korbl"
 authorImage: "https://www.bestpropfirms.com/wp-content/uploads/2023/08/noam-korbl-300x280-1.png"
 publishedAt: "2026-03-10"
 featured: false
-coverImage: "/images/blog/how to pass.png"
+coverImage: "/images/blog/how-to-pass.webp"
 readingTimeMinutes: 18
 featuredFirms:
   - slug: "brightfunded"
@@ -221,7 +221,7 @@ Some prop firms offer instant funding, allowing traders to start with firm capit
   </ul>
 </div>
 
-Instant funding provides a faster route to trading firm capital, but traders should review fees, restrictions, and profit withdrawal policies before choosing a provider. You can read about the [best instant funding prop firms](/guides/instant-funding/) here.
+Instant funding provides a faster route to trading firm capital, but traders should review fees, restrictions, and profit withdrawal policies before choosing a provider. You can read about the [best instant funding prop firms](/guides/instant/) here.
 
 ---
 
@@ -546,24 +546,24 @@ Traders who lack disciplined risk management or struggle with drawdown limits ma
 
 ## Selecting the Best Prop Firm
 
-Choosing one of the best prop trading firms with competitive pricing and conditions is key to securing funding and avoiding unreliable firms. We outline which firms to avoid, along with leading broker-backed prop firms on our [broker reviews](/prop-firms/) page.
+Choosing one of the best prop trading firms with competitive pricing and conditions is key to securing funding and avoiding unreliable firms. We outline which firms to avoid, along with leading broker-backed prop firms on our [broker reviews](/reviews/) page.
 
 <div class="not-prose my-8 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
   <p class="text-sm font-bold text-slate-900 mb-3">Best Prop Firms by Region</p>
   <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-    <a href="/best/usa/" class="rounded-lg bg-slate-50 px-4 py-3 text-center hover:bg-teal-50 hover:border-teal-200 border border-transparent transition-colors">
+    <div class="rounded-lg bg-slate-50 px-4 py-3 text-center border border-transparent">
       <p class="text-sm font-bold text-slate-900">USA</p>
       <p class="text-xs text-slate-500">Top US firms</p>
-    </a>
-    <a href="/best/canada/" class="rounded-lg bg-slate-50 px-4 py-3 text-center hover:bg-teal-50 hover:border-teal-200 border border-transparent transition-colors">
+    </div>
+    <a href="/guides/canada/" class="rounded-lg bg-slate-50 px-4 py-3 text-center hover:bg-teal-50 hover:border-teal-200 border border-transparent transition-colors">
       <p class="text-sm font-bold text-slate-900">Canada</p>
       <p class="text-xs text-slate-500">Top CA firms</p>
     </a>
-    <a href="/best/uk/" class="rounded-lg bg-slate-50 px-4 py-3 text-center hover:bg-teal-50 hover:border-teal-200 border border-transparent transition-colors">
+    <a href="/guides/uk/" class="rounded-lg bg-slate-50 px-4 py-3 text-center hover:bg-teal-50 hover:border-teal-200 border border-transparent transition-colors">
       <p class="text-sm font-bold text-slate-900">UK</p>
       <p class="text-xs text-slate-500">Top UK firms</p>
     </a>
-    <a href="/best/india/" class="rounded-lg bg-slate-50 px-4 py-3 text-center hover:bg-teal-50 hover:border-teal-200 border border-transparent transition-colors">
+    <a href="/guides/india/" class="rounded-lg bg-slate-50 px-4 py-3 text-center hover:bg-teal-50 hover:border-teal-200 border border-transparent transition-colors">
       <p class="text-sm font-bold text-slate-900">India</p>
       <p class="text-xs text-slate-500">Top IN firms</p>
     </a>
@@ -735,6 +735,6 @@ FTMO is one of the most recognized names in prop trading, known for its transpar
   </div>
   <div class="rounded-xl border border-slate-200 bg-white p-5">
     <p class="text-sm font-bold text-slate-900 mb-2">What are the best prop firms for beginners?</p>
-    <p class="text-sm text-slate-600">The best prop firms for beginners offer fair evaluation processes, clear trading rules, and beginner-friendly account options. BrightFunded, FundedNext, and FTMO are top prop firms, providing structured challenges, reasonable profit targets, and strong trader support. These firms also offer flexible trading conditions, scaling plans, and educational resources to help new traders develop their skills. For the latest promotions, check out our <a href="/discount-codes/" class="text-teal-600 hover:text-teal-700 underline">prop firm discount codes</a> to save on challenge fees.</p>
+    <p class="text-sm text-slate-600">The best prop firms for beginners offer fair evaluation processes, clear trading rules, and beginner-friendly account options. BrightFunded, FundedNext, and FTMO are top prop firms, providing structured challenges, reasonable profit targets, and strong trader support. These firms also offer flexible trading conditions, scaling plans, and educational resources to help new traders develop their skills. For the latest promotions, check out our <a href="/offers/" class="text-teal-600 hover:text-teal-700 underline">prop firm discount codes</a> to save on challenge fees.</p>
   </div>
 </div>

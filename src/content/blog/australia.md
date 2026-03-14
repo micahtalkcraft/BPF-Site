@@ -1,13 +1,13 @@
 ---
 title: "Best Prop Firms in Australia"
-excerpt: "We tested dozens of the top prop trading firms to find the best challenges to become a funded trader in 2026. Our firsthand testing focuses on areas like challenges and rules, fees and spreads, profit splits and scaling, market access and leverage, and trading platform options. Here's our final list of the 10 best prop firms."
+excerpt: "Tested and ranked prop trading firms for Australian traders in 2026. Compare challenges, fees, profit splits, and platforms."
 category: "Regional"
 tags: ["Australia", "forex", "funded accounts"]
 author: "Noam Korbl"
 authorImage: "https://www.bestpropfirms.com/wp-content/uploads/2023/08/noam-korbl-300x280-1.png"
 publishedAt: "2026-02-26"
 featured: false
-coverImage: "/images/blog/australia article.png"
+coverImage: "/images/blog/australia-article.webp"
 readingTimeMinutes: 14
 featuredFirms:
   - slug: "dna-funded"
@@ -812,7 +812,7 @@ Prop trading comes with several risks. One key risk is drawdown limits: prop fir
   </div>
 </div>
 
-We developed a guide on our [risk management](/risk-management) page to explore this area further for those new to the industry.
+We developed a guide on our [risk management](/guides/risk-management/) page to explore this area further for those new to the industry.
 
 ---
 
@@ -832,7 +832,7 @@ Proprietary trading (prop trading) allows traders to use virtual funds in financ
 
 Many prop firms have ties to CFD brokers and use them as their providers for pricing and spreads. For example, DNA Funded is backed by Eightcap Challenges, a regulated CFD broker. However, when you're doing the challenge, you're in a simulated environment rather than live trading, so the prop firm itself isn't acting as a broker. Only after you pass the challenge and get funded do you start trading in real markets, often through their broker partners.
 
-View our full list of [broker backed prop firms](/prop-firms).
+View our full list of [broker backed prop firms](/reviews/).
 
 ### Why use a prop firm rather than a real account?
 
