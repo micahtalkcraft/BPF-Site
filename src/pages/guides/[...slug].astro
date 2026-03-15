@@ -830,7 +830,7 @@ const featuredFirmCards: FeaturedFirmCard[] = (post.data.featuredFirms ?? []).ma
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {morePosts.map((p) => (
             <a
-              href={`${base}/guides/${p.id.replace(/\.md$/, "")}`}
+              href={`${base}/guides/${p.id.replace(/\.md$/, "")}/`}
               class="group bg-white border border-slate-200 rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col"
             >
               {p.data.coverImage ? (

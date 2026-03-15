@@ -84,7 +84,7 @@ FundedNext is the best UK prop firm with profit splits up to 95%, three flexible
         <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
         <p class="text-sm font-bold text-slate-800">4.7 <span class="text-amber-500">★</span></p>
       </div>
-      <a href="/reviews/fundednext" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+      <a href="/reviews/fundednext/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
         Full Review →
       </a>
     </div>
@@ -186,7 +186,7 @@ BrightFunded provides a straightforward path to obtaining a funded account while
         <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
         <p class="text-sm font-bold text-slate-800">4.7 <span class="text-amber-500">★</span></p>
       </div>
-      <a href="/reviews/brightfunded" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+      <a href="/reviews/brightfunded/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
         Full Review →
       </a>
     </div>
@@ -288,7 +288,7 @@ DNA Funded is a newly launched prop trading firm that leverages DNA Markets as i
         <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
         <p class="text-sm font-bold text-slate-800">3.9 <span class="text-amber-500">★</span></p>
       </div>
-      <a href="/reviews/dna-funded" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+      <a href="/reviews/dna-funded/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
         Full Review →
       </a>
     </div>
@@ -408,7 +408,7 @@ Blueberry Funded balances accessibility with advanced opportunities for traders 
         <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
         <p class="text-sm font-bold text-slate-800">4.1 <span class="text-amber-500">★</span></p>
       </div>
-      <a href="/reviews/blueberry-funded" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+      <a href="/reviews/blueberry-funded/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
         Full Review →
       </a>
     </div>
@@ -519,7 +519,7 @@ FXIFY offers funded trading opportunities through a structured evaluation proces
         <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
         <p class="text-sm font-bold text-slate-800">4.1 <span class="text-amber-500">★</span></p>
       </div>
-      <a href="/reviews/fxify" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+      <a href="/reviews/fxify/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
         Full Review →
       </a>
     </div>

@@ -68,7 +68,7 @@ Use promo code PROPFIRMS to get a 120% refund after passing the challenge — yo
         <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
         <p class="text-sm font-bold text-slate-800">4.5 <span class="text-amber-500">★</span></p>
       </div>
-      <a href="/reviews/fundednext" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+      <a href="/reviews/fundednext/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
         Full Review →
       </a>
     </div>
@@ -223,7 +223,7 @@ You can choose between a simple one-step evaluation, a more structured two-step,
         <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
         <p class="text-sm font-bold text-slate-800">4.0 <span class="text-amber-500">★</span></p>
       </div>
-      <a href="/reviews/eightcap" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+      <a href="/reviews/eightcap/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
         Full Review →
       </a>
     </div>
@@ -376,7 +376,7 @@ Use promo code PROPFIRMS20 for 20% off challenge fees.
         <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
         <p class="text-sm font-bold text-slate-800">4.4 <span class="text-amber-500">★</span></p>
       </div>
-      <a href="/reviews/brightfunded" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+      <a href="/reviews/brightfunded/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
         Full Review →
       </a>
     </div>
@@ -513,7 +513,7 @@ Use promo code PROPFIRMS25 to get 25% off your challenge fee, so you can start t
         <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
         <p class="text-sm font-bold text-slate-800">4.9 <span class="text-amber-500">★</span></p>
       </div>
-      <a href="/reviews/dna-funded" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+      <a href="/reviews/dna-funded/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
         Full Review →
       </a>
     </div>
@@ -668,7 +668,7 @@ Use promo code PROPFIRMS20 to get 20% off your challenge fee.
         <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
         <p class="text-sm font-bold text-slate-800">3.8 <span class="text-amber-500">★</span></p>
       </div>
-      <a href="/reviews/blueberry-funded" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+      <a href="/reviews/blueberry-funded/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
         Full Review →
       </a>
     </div>

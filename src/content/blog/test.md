@@ -88,7 +88,7 @@ Use promo code PROPFIRMS25 to get 25% off your challenge fee, making it even che
         <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
         <p class="text-sm font-bold text-slate-800">4.9 <span class="text-amber-500">★</span></p>
       </div>
-      <a href="/reviews/dna-funded" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+      <a href="/reviews/dna-funded/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
         Full Review →
       </a>
     </div>
@@ -214,7 +214,7 @@ You can use the promo code PROPFIRMS20 for 20% off your evaluation fee.
         <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
         <p class="text-sm font-bold text-slate-800">4.4 <span class="text-amber-500">★</span></p>
       </div>
-      <a href="/reviews/brightfunded" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+      <a href="/reviews/brightfunded/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
         Full Review →
       </a>
     </div>
@@ -344,7 +344,7 @@ Use promo code PROPFIRMS20 to get 20% off your challenge, so you can get started
         <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
         <p class="text-sm font-bold text-slate-800">3.8 <span class="text-amber-500">★</span></p>
       </div>
-      <a href="/reviews/blueberry-funded" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+      <a href="/reviews/blueberry-funded/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
         Full Review →
       </a>
     </div>
@@ -464,7 +464,7 @@ Use promo code PROPFIRMS to get 120% of your challenge fee refunded — that's y
         <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
         <p class="text-sm font-bold text-slate-800">4.5 <span class="text-amber-500">★</span></p>
       </div>
-      <a href="/reviews/fundednext" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+      <a href="/reviews/fundednext/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
         Full Review →
       </a>
     </div>
@@ -596,7 +596,7 @@ You can also save 15% on all futures challenge fees by using the promo code PROP
         <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
         <p class="text-sm font-bold text-slate-800">3.9 <span class="text-amber-500">★</span></p>
       </div>
-      <a href="/reviews/fxify-futures" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+      <a href="/reviews/fxify-futures/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
         Full Review →
       </a>
     </div>

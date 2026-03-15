@@ -25,7 +25,7 @@ A prop trading firm funds traders with its own capital, sharing profits while ea
     </div>
     <div class="p-5 sm:p-6">
       <p class="text-sm text-slate-700 leading-relaxed mb-4">The way prop trading works is it allows you to trade financial markets using a firm's capital instead of your own money, keeping a share of the profits while they provide the funding, technology, and support. To get your funded account, you usually have to complete a challenge of sorts.</p>
-      <p class="text-sm text-slate-700 leading-relaxed mb-4">For example, with the popular prop firm <a href="/reviews/fxify" class="font-semibold text-teal-600 hover:underline">FXIFY</a>, their 50K one step challenge has a one off fee of <strong>$379</strong>, then your goal is to reach the <strong>10% profit target</strong> without losing more than 3% per day or 6% overall.</p>
+      <p class="text-sm text-slate-700 leading-relaxed mb-4">For example, with the popular prop firm <a href="/reviews/fxify/" class="font-semibold text-teal-600 hover:underline">FXIFY</a>, their 50K one step challenge has a one off fee of <strong>$379</strong>, then your goal is to reach the <strong>10% profit target</strong> without losing more than 3% per day or 6% overall.</p>
       <p class="text-sm text-slate-700 leading-relaxed mb-5">Targets are calculated based on the account size you choose, so for a 50K account it would be a target of $5K, a daily drawdown of $1.5K, and max drawdown of $3K.</p>
       <div class="flex items-center gap-3 sm:gap-4 flex-wrap mb-5">
         <div class="rounded-lg bg-white border border-slate-200 px-3 py-2 text-center min-w-[75px]">
@@ -82,7 +82,7 @@ The best prop firms for beginners we've reviewed are reputable or broker backed 
         </div>
         <div class="flex-1 min-w-0">
           <div class="flex items-center gap-2 flex-wrap">
-            <a href="/reviews/brightfunded" class="text-lg font-extrabold text-slate-900 hover:text-teal-600 transition-colors">BrightFunded</a>
+            <a href="/reviews/brightfunded/" class="text-lg font-extrabold text-slate-900 hover:text-teal-600 transition-colors">BrightFunded</a>
             <span class="inline-flex items-center text-[9px] font-bold uppercase tracking-wider bg-teal-50 text-teal-700 border border-teal-200 px-2 py-0.5 rounded-md">Loyalty Rewards</span>
           </div>
           <p class="text-xs text-slate-500 mt-0.5">Unique loyalty and rewards program with no time limits on evaluations</p>
@@ -122,7 +122,7 @@ The best prop firms for beginners we've reviewed are reputable or broker backed 
           </span>
         </div>
         <div class="flex items-center gap-2 flex-shrink-0">
-          <a href="/reviews/brightfunded" class="inline-flex items-center gap-1.5 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+          <a href="/reviews/brightfunded/" class="inline-flex items-center gap-1.5 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
             Read Review
             <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
           </a>
@@ -145,7 +145,7 @@ The best prop firms for beginners we've reviewed are reputable or broker backed 
         </div>
         <div class="flex-1 min-w-0">
           <div class="flex items-center gap-2 flex-wrap">
-            <a href="/reviews/fundednext" class="text-lg font-extrabold text-slate-900 hover:text-teal-600 transition-colors">FundedNext</a>
+            <a href="/reviews/fundednext/" class="text-lg font-extrabold text-slate-900 hover:text-teal-600 transition-colors">FundedNext</a>
             <span class="inline-flex items-center text-[9px] font-bold uppercase tracking-wider bg-teal-50 text-teal-700 border border-teal-200 px-2 py-0.5 rounded-md">Largest Community</span>
           </div>
           <p class="text-xs text-slate-500 mt-0.5">Great educational materials, top platforms, and both CFD and futures challenges</p>
@@ -185,7 +185,7 @@ The best prop firms for beginners we've reviewed are reputable or broker backed 
           </span>
         </div>
         <div class="flex items-center gap-2 flex-shrink-0">
-          <a href="/reviews/fundednext" class="inline-flex items-center gap-1.5 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+          <a href="/reviews/fundednext/" class="inline-flex items-center gap-1.5 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
             Read Review
             <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
           </a>
@@ -784,7 +784,7 @@ For day traders, two top prop firms are DNA Funded and Blueberry Funded. DNA Fun
           <img src="/images/logos/dna-funded-logo.png" alt="DNA Funded logo" class="w-full h-full object-contain p-1" loading="lazy"/>
         </div>
         <div class="flex-1 min-w-0">
-          <a href="/reviews/dna-funded" class="text-sm font-extrabold text-slate-900 hover:text-teal-600 transition-colors">DNA Funded</a>
+          <a href="/reviews/dna-funded/" class="text-sm font-extrabold text-slate-900 hover:text-teal-600 transition-colors">DNA Funded</a>
           <p class="text-[11px] text-slate-400">Fast evaluations · Flexible rules</p>
         </div>
         <div class="flex-shrink-0 rounded-xl bg-teal-500 w-11 h-11 flex flex-col items-center justify-center">
@@ -798,7 +798,7 @@ For day traders, two top prop firms are DNA Funded and Blueberry Funded. DNA Fun
         <span class="rounded-lg bg-slate-50 px-2 py-1 text-[10px] font-bold text-slate-600">4.9 ★</span>
       </div>
       <div class="flex items-center gap-2">
-        <a href="/reviews/dna-funded" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-3 py-1.5 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+        <a href="/reviews/dna-funded/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-3 py-1.5 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
           Read Review
           <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
         </a>
@@ -818,7 +818,7 @@ For day traders, two top prop firms are DNA Funded and Blueberry Funded. DNA Fun
           <img src="/images/logos/blueberry-funded-logo.png" alt="Blueberry Funded logo" class="w-full h-full object-contain p-1" loading="lazy"/>
         </div>
         <div class="flex-1 min-w-0">
-          <a href="/reviews/blueberry-funded" class="text-sm font-extrabold text-slate-900 hover:text-teal-600 transition-colors">Blueberry Funded</a>
+          <a href="/reviews/blueberry-funded/" class="text-sm font-extrabold text-slate-900 hover:text-teal-600 transition-colors">Blueberry Funded</a>
           <p class="text-[11px] text-slate-400">Low spreads · Solid tech</p>
         </div>
         <div class="flex-shrink-0 rounded-xl bg-teal-500 w-11 h-11 flex flex-col items-center justify-center">
@@ -832,7 +832,7 @@ For day traders, two top prop firms are DNA Funded and Blueberry Funded. DNA Fun
         <span class="rounded-lg bg-slate-50 px-2 py-1 text-[10px] font-bold text-slate-600">3.8 ★</span>
       </div>
       <div class="flex items-center gap-2">
-        <a href="/reviews/blueberry-funded" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-3 py-1.5 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+        <a href="/reviews/blueberry-funded/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-3 py-1.5 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
           Read Review
           <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
         </a>

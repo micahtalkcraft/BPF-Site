@@ -32,7 +32,7 @@ A prop trading firm funds traders with its own capital, sharing profits while ea
       <span class="text-right w-20">Score</span>
     </div>
     <div class="divide-y divide-slate-100">
-      <a href="/reviews/dna-funded" class="flex items-center px-5 py-3 hover:bg-teal-50/50 transition-colors group">
+      <a href="/reviews/dna-funded/" class="flex items-center px-5 py-3 hover:bg-teal-50/50 transition-colors group">
         <span class="w-8 flex-shrink-0 text-sm font-black text-amber-400">1.</span>
         <div class="flex items-center gap-3 flex-1 min-w-0">
           <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center overflow-hidden">
@@ -47,7 +47,7 @@ A prop trading firm funds traders with its own capital, sharing profits while ea
           <span class="text-sm font-black text-white">97</span>
         </div>
       </a>
-      <a href="/reviews/brightfunded" class="flex items-center px-5 py-3 hover:bg-teal-50/50 transition-colors group">
+      <a href="/reviews/brightfunded/" class="flex items-center px-5 py-3 hover:bg-teal-50/50 transition-colors group">
         <span class="w-8 flex-shrink-0 text-sm font-black text-slate-400">2.</span>
         <div class="flex items-center gap-3 flex-1 min-w-0">
           <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center overflow-hidden">
@@ -62,7 +62,7 @@ A prop trading firm funds traders with its own capital, sharing profits while ea
           <span class="text-sm font-black text-white">95</span>
         </div>
       </a>
-      <a href="/reviews/blueberry-funded" class="flex items-center px-5 py-3 hover:bg-teal-50/50 transition-colors group">
+      <a href="/reviews/blueberry-funded/" class="flex items-center px-5 py-3 hover:bg-teal-50/50 transition-colors group">
         <span class="w-8 flex-shrink-0 text-sm font-black text-amber-600">3.</span>
         <div class="flex items-center gap-3 flex-1 min-w-0">
           <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center overflow-hidden">
@@ -77,7 +77,7 @@ A prop trading firm funds traders with its own capital, sharing profits while ea
           <span class="text-sm font-black text-white">93</span>
         </div>
       </a>
-      <a href="/reviews/fundednext" class="flex items-center px-5 py-3 hover:bg-teal-50/50 transition-colors group">
+      <a href="/reviews/fundednext/" class="flex items-center px-5 py-3 hover:bg-teal-50/50 transition-colors group">
         <span class="w-8 flex-shrink-0 text-sm font-black text-slate-300">4.</span>
         <div class="flex items-center gap-3 flex-1 min-w-0">
           <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center overflow-hidden">
@@ -92,7 +92,7 @@ A prop trading firm funds traders with its own capital, sharing profits while ea
           <span class="text-sm font-black text-white">92</span>
         </div>
       </a>
-      <a href="/reviews/fxify-futures" class="flex items-center px-5 py-3 hover:bg-teal-50/50 transition-colors group">
+      <a href="/reviews/fxify-futures/" class="flex items-center px-5 py-3 hover:bg-teal-50/50 transition-colors group">
         <span class="w-8 flex-shrink-0 text-sm font-black text-slate-300">5.</span>
         <div class="flex items-center gap-3 flex-1 min-w-0">
           <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center overflow-hidden">
@@ -107,7 +107,7 @@ A prop trading firm funds traders with its own capital, sharing profits while ea
           <span class="text-sm font-black text-white">88</span>
         </div>
       </a>
-      <a href="/reviews/fundednext-futures" class="flex items-center px-5 py-3 hover:bg-teal-50/50 transition-colors group">
+      <a href="/reviews/fundednext-futures/" class="flex items-center px-5 py-3 hover:bg-teal-50/50 transition-colors group">
         <span class="w-8 flex-shrink-0 text-sm font-black text-slate-300">6.</span>
         <div class="flex items-center gap-3 flex-1 min-w-0">
           <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center overflow-hidden">
@@ -122,7 +122,7 @@ A prop trading firm funds traders with its own capital, sharing profits while ea
           <span class="text-sm font-black text-white">83</span>
         </div>
       </a>
-      <a href="/reviews/fxify" class="flex items-center px-5 py-3 hover:bg-teal-50/50 transition-colors group">
+      <a href="/reviews/fxify/" class="flex items-center px-5 py-3 hover:bg-teal-50/50 transition-colors group">
         <span class="w-8 flex-shrink-0 text-sm font-black text-slate-300">7.</span>
         <div class="flex items-center gap-3 flex-1 min-w-0">
           <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center overflow-hidden">
@@ -137,7 +137,7 @@ A prop trading firm funds traders with its own capital, sharing profits while ea
           <span class="text-sm font-black text-white">83</span>
         </div>
       </a>
-      <a href="/reviews/tradeify" class="flex items-center px-5 py-3 hover:bg-teal-50/50 transition-colors group">
+      <a href="/reviews/tradeify/" class="flex items-center px-5 py-3 hover:bg-teal-50/50 transition-colors group">
         <span class="w-8 flex-shrink-0 text-sm font-black text-slate-300">8.</span>
         <div class="flex items-center gap-3 flex-1 min-w-0">
           <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center overflow-hidden">
@@ -152,7 +152,7 @@ A prop trading firm funds traders with its own capital, sharing profits while ea
           <span class="text-sm font-black text-white">82</span>
         </div>
       </a>
-      <a href="/reviews/funded-prime" class="flex items-center px-5 py-3 hover:bg-teal-50/50 transition-colors group">
+      <a href="/reviews/funded-prime/" class="flex items-center px-5 py-3 hover:bg-teal-50/50 transition-colors group">
         <span class="w-8 flex-shrink-0 text-sm font-black text-slate-300">9.</span>
         <div class="flex items-center gap-3 flex-1 min-w-0">
           <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center overflow-hidden">
@@ -167,7 +167,7 @@ A prop trading firm funds traders with its own capital, sharing profits while ea
           <span class="text-sm font-black text-white">80</span>
         </div>
       </a>
-      <a href="/reviews/topstep" class="flex items-center px-5 py-3 hover:bg-teal-50/50 transition-colors group">
+      <a href="/reviews/topstep/" class="flex items-center px-5 py-3 hover:bg-teal-50/50 transition-colors group">
         <span class="w-8 flex-shrink-0 text-sm font-black text-slate-300">10.</span>
         <div class="flex items-center gap-3 flex-1 min-w-0">
           <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center overflow-hidden">
@@ -184,7 +184,7 @@ A prop trading firm funds traders with its own capital, sharing profits while ea
       </a>
     </div>
     <div class="px-5 py-3 border-t border-slate-100 bg-slate-50/50">
-      <p class="text-[10px] text-slate-400 leading-relaxed">Rankings based on our <a href="/methodology" class="text-teal-600 font-semibold hover:underline">independent methodology</a> covering spreads, fees, platforms, trust, and payout reliability.</p>
+      <p class="text-[10px] text-slate-400 leading-relaxed">Rankings based on our <a href="/methodology/" class="text-teal-600 font-semibold hover:underline">independent methodology</a> covering spreads, fees, platforms, trust, and payout reliability.</p>
     </div>
   </div>
 </div>

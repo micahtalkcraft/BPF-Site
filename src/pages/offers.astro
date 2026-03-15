@@ -103,13 +103,13 @@ const jsonLd = [
     name: `${offer.firm.name} Discount Code${offer.percent ? ` — ${offer.percent}% Off` : ""}`,
     description: offer.desc ?? `Discount code for ${offer.firm.name} prop trading challenges`,
     priceCurrency: "USD",
+    price: "0",
     availability: "https://schema.org/InStock",
     url: offer.firm.links?.website ?? `${SITE_URL}/offers/`,
     offeredBy: {
       "@type": "Organization" as const,
       name: offer.firm.name,
     },
-    ...(offer.percent && { discount: `${offer.percent}%` }),
   })),
   {
     "@context": "https://schema.org",

@@ -83,7 +83,7 @@ Blueberry Funded is the best stock prop firm we've tested, scoring 93/100 overal
         <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
         <p class="text-sm font-bold text-slate-800">3.8 <span class="text-amber-500">★</span></p>
       </div>
-      <a href="/reviews/blueberry-funded" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+      <a href="/reviews/blueberry-funded/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
         Full Review →
       </a>
     </div>
@@ -212,7 +212,7 @@ Stocks sit inside the Day Trader challenge only, which is a timed model rather t
         <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
         <p class="text-sm font-bold text-slate-800">4.0 <span class="text-amber-500">★</span></p>
       </div>
-      <a href="/reviews/eightcap" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+      <a href="/reviews/eightcap/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
         Full Review →
       </a>
     </div>
@@ -353,7 +353,7 @@ DNA Funded is rated the 3rd best stock prop firm due to its low fees, flexible c
         <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
         <p class="text-sm font-bold text-slate-800">4.9 <span class="text-amber-500">★</span></p>
       </div>
-      <a href="/reviews/dna-funded" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+      <a href="/reviews/dna-funded/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
         Full Review →
       </a>
     </div>
@@ -474,7 +474,7 @@ FXIFY offers a balanced approach to prop trading with flexible evaluation option
         <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
         <p class="text-sm font-bold text-slate-800">4.4 <span class="text-amber-500">★</span></p>
       </div>
-      <a href="/reviews/fxify" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+      <a href="/reviews/fxify/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
         Full Review →
       </a>
     </div>
@@ -586,7 +586,7 @@ Trade The Pool gives you a very large choice of US stocks and ETFs, plus pre mar
         <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">From</p>
         <p class="text-sm font-bold text-slate-800">12K+ Stocks</p>
       </div>
-      <a href="/reviews/trade-the-pool" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+      <a href="/reviews/trade-the-pool/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
         Full Review →
       </a>
     </div>
@@ -694,7 +694,7 @@ FTMO is one of the most established prop firms in the industry, offering stock C
         <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
         <p class="text-sm font-bold text-slate-800">4.8 <span class="text-amber-500">★</span></p>
       </div>
-      <a href="/reviews/ftmo" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+      <a href="/reviews/ftmo/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
         Full Review →
       </a>
     </div>
@@ -736,7 +736,7 @@ The Trading Pit offers dedicated stock challenges alongside CFD and futures trad
         <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
         <p class="text-sm font-bold text-slate-800">4.2 <span class="text-amber-500">★</span></p>
       </div>
-      <a href="/reviews/the-trading-pit" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+      <a href="/reviews/the-trading-pit/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
         Full Review →
       </a>
     </div>
@@ -778,7 +778,7 @@ MyFundedFutures provides access to equity futures including CME Equity Index con
         <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
         <p class="text-sm font-bold text-slate-800">4.9 <span class="text-amber-500">★</span></p>
       </div>
-      <a href="/reviews/myfundedfutures" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+      <a href="/reviews/myfundedfutures/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
         Full Review →
       </a>
     </div>
@@ -820,7 +820,7 @@ Lark Funding offers multiple evaluation processes including instant funding, one
         <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">From</p>
         <p class="text-sm font-bold text-slate-800">Multi-Asset</p>
       </div>
-      <a href="/reviews/lark-funding" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+      <a href="/reviews/lark-funding/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
         Full Review →
       </a>
     </div>
@@ -861,7 +861,7 @@ Apex Trader Funding provides access to equity index futures across CME markets, 
         <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
         <p class="text-sm font-bold text-slate-800">4.4 <span class="text-amber-500">★</span></p>
       </div>
-      <a href="/reviews/apex-trader-funding" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+      <a href="/reviews/apex-trader-funding/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
         Full Review →
       </a>
     </div>

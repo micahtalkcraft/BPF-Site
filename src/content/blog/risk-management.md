@@ -1,5 +1,5 @@
 ---
-title: "Risk Management in Prop Trading: Strategies, Tools & Common Mistakes"
+title: "Risk Management in Prop Trading (2026)"
 excerpt: "Risk management strategies for prop traders - drawdown limits, stop-losses, position sizing, and staying funded long-term."
 category: "Education"
 tags: ["prop trading", "risk management", "trading strategies", "stop-loss", "position sizing", "drawdown"]

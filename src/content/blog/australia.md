@@ -20,7 +20,7 @@ featuredFirms:
     descriptor: "Instant Funding Prop Firm"
   - slug: "fundednext"
     descriptor: "Good TradingView Prop Firm"
-  - slug: "thinkcapital"
+  - slug: "think-capital"
     descriptor: "Low Challenge Fees"
   - slug: "ic-funded"
     descriptor: "Top Forex Prop Firm"
@@ -62,7 +62,7 @@ DNA Funded ranked 1st place in our list of the best prop firms, earning a top sc
         <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
         <p class="text-sm font-bold text-slate-800">4.9 <span class="text-amber-500">★</span></p>
       </div>
-      <a href="/reviews/dna-funded" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+      <a href="/reviews/dna-funded/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
         Full Review →
       </a>
     </div>
@@ -191,7 +191,7 @@ BrightFunded earned our #2 spot with a score of 95/100, thanks to its industry-l
         <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
         <p class="text-sm font-bold text-slate-800">4.7 <span class="text-amber-500">★</span></p>
       </div>
-      <a href="/reviews/brightfunded" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+      <a href="/reviews/brightfunded/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
         Full Review →
       </a>
     </div>
@@ -318,7 +318,7 @@ Blueberry Funded ranks as the 3rd best prop firm thanks to its range of challeng
         <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
         <p class="text-sm font-bold text-slate-800">3.8 <span class="text-amber-500">★</span></p>
       </div>
-      <a href="/reviews/blueberry-funded" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+      <a href="/reviews/blueberry-funded/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
         Full Review →
       </a>
     </div>
@@ -443,7 +443,7 @@ Backed by FXPIG, FXIFY combines tight pricing, fast execution, and an active Dis
         <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
         <p class="text-sm font-bold text-slate-800">4.2 <span class="text-amber-500">★</span></p>
       </div>
-      <a href="/reviews/fxify" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+      <a href="/reviews/fxify/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
         Full Review →
       </a>
     </div>
@@ -559,7 +559,7 @@ FundedNext came in 5th place, offering funded accounts with profit splits up to 
         <p class="text-[10px] text-slate-400 uppercase tracking-wide font-medium">Trustpilot</p>
         <p class="text-sm font-bold text-slate-800">4.6 <span class="text-amber-500">★</span></p>
       </div>
-      <a href="/reviews/fundednext" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
+      <a href="/reviews/fundednext/" class="inline-flex items-center gap-1 rounded-lg bg-teal-500 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-600 transition-colors whitespace-nowrap">
         Full Review →
       </a>
     </div>

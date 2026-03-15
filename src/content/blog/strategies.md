@@ -1,5 +1,5 @@
 ---
-title: "Prop Trading Strategies: Scalping, Swing Trading, Arbitrage & More"
+title: "Prop Trading Strategies Guide (2026)"
 excerpt: "Key prop trading strategies including scalping, swing trading, and trend following. Practical guide for funded traders."
 category: "Education"
 tags: ["prop trading", "trading strategies", "scalping", "swing trading", "arbitrage", "risk management"]
